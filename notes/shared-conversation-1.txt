@@ -1,0 +1,1721 @@
+Share
+This is a copy of a shared ChatGPT chat. It won't be added to memory.
+Report conversation
+You said:
+
+can u find as much as u can about the judges from this post, to then find out if our idea is good or what would they be looking for exactly ?
+
+ Easy to keep things fresh when 
+SpaceXAI, 
+Cursor ship so damn much 🤌
+
+Rollout dropped this week, a further token efficient 
+Cursor, and Projects now on mobile. That’s month(s) long project at the tip of ur finger omgawd :)
+
+You know what also dropped? This Saturday’s hack judges:
+🤌 
+Josh @ 
+Wassist
+🤌 
+Alex @ 
+Fleek
+🤌 
+Nuan @ 
+Episode 1 Ventures
+🤌 
+Maria @ 
+Entrepreneurs First
+🤌 
+Jim @ 
+Huge
+
+Stalk ‘em (digitally) and figure out their biggest problems during their day to day are  - as they decide whether u win or not.
+
+2 / 3 Days after event going live and we already oversubbed making 
+Alex sweat heh
+
+Still the 
+#london community surprises me. These are peeps taking a weekend day to solve real probs and judges giving their time to pick the bangers. 
+
+ps if you guess who is who among these cuties - I get u in.
+
+It is-a go-go time 🤌
+
+…
+Show more
+Worked for 2m 5s
+ChatGPT said:
+
+I dug into all five. The useful part is that they cover very different lenses, so trying to appeal to one judge specifically would be a mistake. The published rubric is still the safest thing to optimise for: technical execution, product thinking, AI leverage/autonomy, commerce innovation, real-world usefulness, UX, and demo quality, with no published weights. 
+Luma
+
+The good news is that Roamer can hit basically every one of those, but only if you demo it as a commerce agent that actually shops, not an AI that makes itineraries.
+
+Josh Warwick — Wassist
+
+This is probably the judge whose background is most directly aligned with what you're building.
+
+Josh founded Wassist, an agentic-commerce company that puts AI sales agents into WhatsApp. He originally built its core himself across weekend hackathons; it now handles 80,000+ customer conversations across ecommerce brands and recently raised a $1.1M pre-seed. The product is specifically about letting an AI understand what a shopper wants, recommend products, interact conversationally and move the customer towards an actual transaction. 
+LinkedIn
++1
+
+Even better, he recently posted his own advice for a previous Cursor hackathon:
+
+start small and get something working end to end;
+make something judges can actually interact with;
+get it into production rather than leaving it on localhost;
+use current technology;
+stay on the brief. 
+LinkedIn
+
+So for Josh, I would assume a demo like this is much stronger:
+
+“I asked for a £1k holiday. It searched actual travel inventory, found three purchasable trips, used my logged-in discounts, I changed my mind halfway through, it adapted, and now it's waiting for me to approve checkout.”
+
+than:
+
+“Here is a beautiful AI-generated itinerary.”
+
+Wassist itself came from Josh wanting to replicate the experience of messaging a Prada salesperson who could walk around, recommend products and send a payment link. His thesis is essentially personal sales assistance made scalable by agents. 
+LinkedIn
+
+Roamer is almost the inverse:
+
+personal buying assistance made scalable by agents.
+
+That is a very clean fit.
+
+What I think he'd probably challenge: does it actually do the commerce, or is it just a chatbot around search results?
+
+Alex Nikityuk — Fleek
+
+Alex is probably your real-world complexity / execution judge.
+
+He's currently Fleek's Head of AI & Automation. Before that he founded YC-backed Maroo, a business/payments platform that ultimately processed hundreds of millions in transaction volume and was acquired. Maroo evolved from wedding BNPL into a system covering lead management, contracts, invoicing, payments, contractor payouts and accounting. 
+Y Combinator
++1
+
+At Fleek he's gone very hard on internal AI. Public posts describe Fleek moving a 100+ person company onto AI tooling, creating an internal skills/plugin marketplace, building FleekOS and shipping 30+ internal tools in two weeks. 
+LinkedIn
+
+The line from him that I'd care about most is his description of Fleek's advantage as “heavy ops”: real logistics, supply-chain problems and messy operational complexity that can't simply be vibe-coded away. 
+LinkedIn
+
+That maps surprisingly well to Roamer.
+
+Travel sounds simple until you're actually trying to buy something:
+
+Plain text
+different dates
+different airports
+logged-in rates
+baggage
+hotel taxes
+cancellation policies
+packages
+transfers
+activities
+currency conversion
+availability changing
+CAPTCHAs
+room types not matching
+flight + stay dates disagreeing
+
+That's your equivalent of “heavy ops.”
+
+Alex also just hosted/judged a Fleek × a16z AI hackathon. The winning project wasn't a generic chatbot: it used live video to guide warehouse workers to capture the right garment regions and created a FashionCLIP fingerprint to re-identify garments downstream. Other standout projects included an AI auctioneer and an AI-native matching/recruitment system. 
+LinkedIn
+
+That's useful evidence of the type of project he has publicly highlighted:
+
+AI applied to a very concrete, messy workflow with an obvious operational result.
+
+So I would make sure your demo contains one messy travel problem that Roamer solves properly.
+
+For example:
+
+£370 Expedia hotel appears cheaper than £418 Booking hotel → Roamer discovers they're different room/cancellation terms → refuses to falsely compare them.
+
+Or:
+
+cheap mountain stay → Roamer realises the flight lands after the last bus and the taxi destroys the budget → candidate gets rejected.
+
+That would show much more depth than having 20 integrations.
+
+What I think he'd probably challenge: what difficult problem did the agent genuinely solve that a few API calls + an LLM couldn't?
+
+Nuan Zhang — Episode 1 Ventures
+
+She's the judge I'd prepare the “why does this need to exist?” answer for.
+
+Nuan went consulting → startup operator → founder → VC and is now an investor at Episode 1. She's also heavily involved in the AI Pilled community around AI-native organisations. She's publicly talked about building context infrastructure so agents can improve Episode 1's workflows, and her events focus on human-agent collaboration, context, guardrails, maintenance and evaluation rather than just prompting. 
+LinkedIn
++1
+
+At a recent AI VC panel where she was one of three investors, the published takeaways were unusually relevant to you:
+
+early traction is easy to manufacture in the AI era, so look for a real burning pain;
+does the product become part of someone's workflow?
+what's the “right to win”?
+what proprietary data, insight or domain depth does the company accumulate?
+don't assume every AI product needs VC. 
+LinkedIn
+
+Episode 1 itself focuses on pre-seed/seed B2B software and AI/infrastructure, particularly defensible software solving technical problems. 
+Episode 1
++1
+
+Obviously Roamer is consumer, so don't pitch to her as though you're fundraising.
+
+But she may mentally ask:
+
+Why is this not just ChatGPT + Skyscanner?
+
+You should have an extremely crisp answer.
+
+Something like:
+
+Existing travel search starts with structured inputs: destination, dates, airport. Roamer starts with an objective. It searches multiple types of inventory concurrently, can use the user's authenticated accounts and discounts, learns trade-offs through conversation, verifies actual purchasable combinations and continues acting until the purchase needs human approval.
+
+And if she asks about defensibility, don't make up some ridiculous “AI moat.”
+
+Say something sensible:
+
+Initially there isn't a giant moat. The compounding advantage would come from the user's travel preference graph, actual acceptance/rejection behaviour, account-specific availability/discounts, and eventually data about which combinations people considered versus actually booked. But today we're proving that the agent workflow itself is useful.
+
+I think she'd respect that answer much more than:
+
+“Our proprietary AI algorithm will disrupt travel.”
+
+What I think she'd probably challenge: why this, why now, why agents, and what gets better with repeated use?
+
+Maria Luque Anguita — Entrepreneurs First
+
+Maria is interesting because she's both technical and founder-focused.
+
+She has an AI/ML background, did an AI Master's at Edinburgh with Google DeepMind scholarship backing, worked in tech, published ML-related research, built side projects, then went through EF herself before becoming a Talent Investor there. 
+LinkedIn
++1
+
+Her side projects are also revealing. One was myan.uk, built over a few days, which simply took 2–5 starting locations and found a useful central meeting point in London. That's the kind of small, understandable utility that solves something real instead of trying to be an enormous platform on day one. 
+LinkedIn
++1
+
+She has also judged another AI-agent hackathon. Its published judging criteria were:
+
+originality;
+technical execution;
+applicability;
+fit to brief. 
+Empathetic Agents
+
+And EF's Talent Investor role is explicitly about finding unusually capable builders early, forming hypotheses about talent, and backing people before the company exists. Maria herself talks a lot about ambitious technical builders and people actually shipping things. 
+LinkedIn
++1
+
+So I don't think you need to impress her with:
+
+27 websites + 9 subagents + enormous architecture diagram.
+
+Something polished, technically interesting and obviously useful within ten seconds is probably much better.
+
+Roamer has a good human problem:
+
+“I know what kind of holiday I want, but I don't know where, so existing travel search makes me manually search destination after destination.”
+
+That's very easy to understand.
+
+Then the technical ambition appears behind it.
+
+What I think she'd probably challenge: is this genuinely original/useful, and did you actually get the hard part working?
+
+Jim Tattersall — Huge
+
+Jim is the commerce/product/UX/ROI judge I'd pay attention to.
+
+He founded Rotate°, spent around 13 years specialising in ecommerce and composable architecture, and Rotate was acquired by Huge this year. He's now SVP of Product there. 
+Huge
++1
+
+His recent interview is almost a cheat sheet for what he values.
+
+He repeatedly talks about:
+
+understanding the client's actual problem;
+measurable commercial impact rather than shipping features;
+cross-functional product engineers;
+composable systems rather than being tied to one platform;
+AI removing mechanical work so humans can focus on higher-value decisions;
+building tools that empower clients rather than make them dependent on you. 
+Huge
+
+Rotate/Huge even measures ecommerce work in terms of revenue impact and split-tests changes over time. 
+Huge
+
+This is another reason I think your architecture of:
+
+Plain text
+fast APIs
++
+Apify
++
+Grok browser agents
++
+personal authenticated accounts
++
+Supabase
++
+a proper frontend
+
+is conceptually stronger than:
+
+everything is one Grok prompt.
+
+It's composable.
+
+Different tools do what they're good at.
+
+And for Jim, I'd make the economic benefit visible:
+
+Plain text
+Original likely option       £994
+Roamer alternative           £812
+
+Saved                         £182
+
+or
+
+£38 more
+→ much better hotel
+→ direct flight
+→ 2h less travel
+
+That makes the product value immediately concrete.
+
+He also comes from an agency/product world where craft matters, so this is probably the judge where your Roamer frontend actually matters most. A polished, comprehensible interface is not wasted time.
+
+What I think he'd probably challenge: what measurable value did the agent create for this user, and is the UI actually better than searching manually?
+
+Put all five together and the pattern becomes pretty obvious
+Judge	Public background suggests they'll notice
+Josh	real end-to-end autonomous commerce + interactive demo
+Alex	hard operational complexity actually handled
+Nuan	pain point, right-to-win, context, guardrails, defensibility
+Maria	originality, ambition, technical execution, usefulness
+Jim	product/UX, ecommerce architecture, measurable value
+
+And compare that with the actual judging criteria:
+
+technical execution
+→ APIs + parallel Grok Bots + state + verification
+
+product thinking
+→ only ask useful questions, progressive results, preference learning
+
+AI leverage & autonomy
+→ workers actually search/compare/verify while you talk
+
+commerce innovation
+→ agent starts from intent and assembles an actual transaction across merchants
+
+real-world usefulness
+→ genuine prices, account discounts, transport, taxes, availability
+
+UX
+→ Roamer rather than a giant agent transcript
+
+demo quality
+→ clear three-minute end-to-end story
+
+That's extremely aligned. 
+Luma
+
+I would slightly change how you describe Roamer tomorrow
+
+Don't lead with:
+
+“Roamer is an AI travel planner.”
+
+That's dangerously close to something everyone has already seen.
+
+I'd say:
+
+“Travel sites assume you already know where you're going. Roamer shops the travel market from your intent instead.”
+
+Then:
+
+“Tell it what kind of trip you want. While you're still talking to it, agents search flights, stays and things to do across different sources and your own logged-in accounts. Roamer assembles actual purchasable trips, lets you refine them conversationally, and keeps going until you need to approve the transaction.”
+
+That sounds much more like this hackathon.
+
+The official hackathon literally asks:
+
+what happens when bots decide which products to show?
+how should humans authorise autonomous purchases?
+how do we make autonomous commerce trustworthy and observable?
+what new businesses become possible when bots are active participants in commerce? 
+Luma
+
+Your demo can answer all four.
+
+Your biggest danger is scope, not idea quality
+
+The concept itself fits extremely well.
+
+What could kill it is trying to prove all of this tomorrow:
+
+Plain text
+voice
+social profile
+saved TikToks
+Instagram
+20 travel sites
+maps
+itinerary
+price tracking
+bookings
+profile learning
+parallel Grok Bots
+packages
+flights
+hotels
+activities
+cruises
+full checkout
+
+and ending up with nothing reliable.
+
+Especially given Josh's explicit advice to start small and get something working end-to-end. 
+LinkedIn
+
+For those judges, I think this single flow is much stronger:
+
+1. vague request
+
+“£1k, me and my girlfriend, five days, Europe, hiking, nice food, somewhere cozy.”
+
+2. immediate action
+
+Three workers start while Roamer asks one useful question.
+
+3. progressive results
+
+Actual prices begin appearing.
+
+4. demonstrate something normal travel sites struggle with
+
+For example:
+
+Booking public: £442
+your Genius account: £389
+
+or:
+
+apparently cheap hotel rejected because transport makes total trip £130 more.
+
+5. user changes their mind
+
+“Actually scenery matters more than weather.”
+
+Roamer updates rather than restarting.
+
+6. actual trip
+
+Real flights + real stay + actual total + source evidence + maybe simple map.
+
+7. commerce
+
+“Book this.”
+
+Agent gets to the correct checkout flow and hands control to the user.
+
+That one sequence gives Josh real commerce, Alex operational complexity, Nuan agent orchestration/guardrails, Maria a useful ambitious product, and Jim a polished user experience with measurable value.
+
+And you've got a brilliant final line available:
+
+“We didn't build another website where you search for travel. We built the customer that searches the travel websites for you.”
+
+That is much closer to the core idea of this hackathon.
+
+Saturday 10:56 AM
+You said:
+
+they said that travel is a bit outside the scope cuz theyre looking in from a store's pov? not sure
+
+but also they want something that just chatgpt, or just grok bot on its own can do, so like connected with all the hackathon tools i think and a product on its own
+
+https://gb-ecommerce-hackathon-09-2026.teamdeel.workers.dev/hackathon?referrer=luma&utm_source=luma
+
+Worked for 56s
+ChatGPT said:
+
+Yeah — if the organisers told you in person that they’re leaning merchant/store-side, I’d treat that as more important than the older public wording. The public page still says Shopping, Merchants, Marketplaces and Infrastructure, and explicitly asks things like “how does a merchant sell to a bot?” and “what happens to search when bots decide what products to show?” 
+Luma
+
+So I wouldn’t bin your travel work, but I would pivot the core idea away from “consumer travel planner” and toward a merchant-side product that helps stores understand and improve how AI shopping agents see them.
+
+The strongest pivot is basically your earlier second idea
+
+Call it something like Agent Shelf, BotRank, Agent Commerce Lab, whatever.
+
+Merchant connects their store.
+
+Then your system launches multiple Grok Bot shoppers with different intents/personas:
+
+“I need a black waterproof hiking jacket under £120”
+“I’m 168cm, slim build, want straight-leg trousers under £50”
+“I need a gift for someone who likes hiking”
+“I care about free returns more than price”
+
+The bots shop the merchant’s store and optionally competitors.
+
+Your product records:
+
+was the merchant’s product found?
+how quickly?
+was it shortlisted?
+what beat it?
+why was it rejected?
+missing size/fit info?
+unclear shipping?
+poor product title?
+no structured attributes?
+price issue?
+weak imagery?
+returns policy hard to find?
+outcompeted by another product?
+
+That is much more obviously merchant-side.
+
+And it maps almost perfectly to the hackathon’s core questions about stores selling to bots and bots deciding what products users see. 
+Luma
+
+The product should go beyond “ask Grok Bot”
+
+This is the important bit.
+
+A single Grok Bot can already:
+
+search a store and tell you what it thinks.
+
+So your product needs to add the stuff Grok Bot alone doesn’t give the merchant:
+
+persistent experiments + repeatable shopper personas + structured results + competitor comparisons + before/after testing + actual merchant actions.
+
+Something like:
+
+Plain text
+Merchant store
+     │
+     ▼
+Shopify/catalog import
+     │
+     ▼
+Experiment definition
+     │
+     ├── Shopper Bot A
+     ├── Shopper Bot B
+     ├── Shopper Bot C
+     └── Shopper Bot D
+            │
+            ▼
+        Supabase
+            │
+   ┌────────┴────────┐
+   ▼                 ▼
+dashboard        recommendations
+   │                 │
+   │           change product data
+   │                 │
+   └────── rerun test ┘
+
+That’s a real product, not just a prompt.
+
+And merchant-side agent commerce is becoming increasingly structured around things like product feeds and checkout APIs, so helping a merchant make its catalogue legible and purchasable by agents is a real direction rather than a made-up hackathon problem. 
+OpenAI Developers
++1
+
+The killer demo is before → change → after
+
+This is much better for a 3-minute presentation than Roamer.
+
+Say you have a demo Shopify store with 8–12 products.
+
+One product is deliberately badly represented:
+
+“Storm Pants V2”
+
+But important details are buried in the description:
+
+waterproof
+straight leg
+29" inseam available
+free UK returns
+£46
+
+Run 5 shopper bots.
+
+Before
+Plain text
+Prompt:
+"Find straight-leg waterproof trousers under £50
+for someone short, around 29 inch inseam."
+
+5 shopper agents
+
+Found product       2 / 5
+Shortlisted         1 / 5
+
+Common rejection reasons
+• inseam not obvious
+• straight-leg fit unclear
+• waterproof info buried
+• return policy not surfaced
+
+Your dashboard shows competitors being chosen instead.
+
+Then your app proposes:
+
+Plain text
+Product title:
+Storm V2 Waterproof Straight-Leg Trousers
+
+Structured attributes:
+fit = straight
+waterproof = true
+inseams = 27, 29, 31
+returns = free UK returns
+
+Apply that to your test store.
+
+Rerun the same exact shopper experiments.
+
+After
+Plain text
+Found product       5 / 5
+Shortlisted         4 / 5
+
+That is a fantastic demo.
+
+You’re not saying:
+
+“We can manipulate ChatGPT search rankings.”
+
+You’re saying:
+
+“In our controlled shopper-agent tests, product discoverability improved after the merchant fixed specific missing information.”
+
+That distinction matters.
+
+Then use all the hackathon tech naturally
+
+Not “we used everything because sponsors”.
+
+Grok Bot
+
+Actual autonomous shoppers.
+
+Different Bots can browse independently and behave like different customers.
+
+Supabase
+
+Store:
+
+experiment runs
+personas
+product IDs
+bot decisions
+reasons
+competitor results
+before/after metrics
+Shopify
+
+Real merchant catalog + product updates + maybe sandbox checkout.
+
+Cursor
+
+Build everything.
+
+Origin
+
+Could simply host the repo / development workflow. Origin is Cursor’s code forge, so you don’t need to force it into the commerce logic. 
+Cursor
+
+That's much cleaner than pretending Origin is some store API.
+
+I’d add one extra thing if there’s time: agent-ready checkout
+
+Once the merchant fixes discovery, show one shopper Bot actually proceeding.
+
+For example:
+
+“Find me the best jacket under £100 with free returns.”
+
+Bot chooses merchant product.
+
+Then:
+
+Plain text
+Agent
+ ↓
+merchant checkout API
+ ↓
+cart
+ ↓
+shipping option
+ ↓
+human approval
+
+Modern agentic commerce specs explicitly define merchant-side checkout sessions where the merchant remains responsible for prices, tax, fulfillment and payment while the agent orchestrates the transaction. 
+Agentic Commerce Protocol
++1
+
+Now your story becomes:
+
+We help merchants become discoverable, understandable and buyable by AI shoppers.
+
+That is extremely on-theme.
+
+Another version: dynamic merchant agent
+
+If you want something more ambitious:
+
+A shopper Bot comes in saying:
+
+“I need a hiking jacket under £100 but this one is £109.”
+
+The merchant agent has rules:
+
+Plain text
+margin > 30%
+inventory > 20 units
+customer is new
+maximum discount = 12%
+
+It can autonomously offer:
+
+“£99 if you buy today.”
+
+Or:
+
+jacket + socks bundle for £105.
+
+Now you have bot-to-bot commerce/negotiation.
+
+The public hackathon page literally asks whether bots can negotiate purchases and transact with other bots. 
+Luma
+
+That would be very cool, but I’d only add it after the merchant audit flow works.
+
+I think the best idea for today is
+Merchant AI Shopper Lab
+
+“As shopping moves from humans browsing stores to agents deciding what to buy, merchants currently have no idea what those agents see, why they reject products, or how changes affect their chances of being selected.”
+
+Then:
+
+“Our product continuously sends realistic AI shoppers through your store, measures how your products perform, shows exactly why competitors are selected instead, and lets you test changes before and after.”
+
+That’s a much sharper problem.
+
+And importantly, it isn't:
+
+“Ask ChatGPT how my Shopify page looks.”
+
+Because ChatGPT alone doesn't provide:
+
+controlled repeatable experiments
+multiple autonomous browser shoppers
+persistent longitudinal data
+competitor comparisons
+catalog integrations
+before/after experiments
+merchant dashboards
+automated recommendations
+actual product edits
+commerce actions
+
+That answers their “this should be its own product” concern.
+
+Your 3-minute demo basically writes itself
+
+0:00–0:20
+
+“More purchases are going to start with an AI shopper rather than someone scrolling your storefront. Merchants currently have no idea how those agents see their products.”
+
+0:20–0:50
+
+Open merchant dashboard.
+
+Run:
+
+“Waterproof straight-leg trousers under £50 for a short customer.”
+
+Show 5 Grok shopper agents launching simultaneously.
+
+0:50–1:20
+
+Results come back:
+
+4/5 chose competitors.
+
+Click “Why?”
+
+Show actual evidence.
+
+1:20–1:50
+
+Your product recommends fixing specific attributes.
+
+Apply to Shopify/demo store.
+
+1:50–2:30
+
+Rerun same experiment.
+
+Now the merchant product gets found/selected significantly more often in your controlled test.
+
+2:30–2:50
+
+One agent continues to checkout / merchant agent offers something.
+
+2:50–3:00
+
+“We give merchants analytics and infrastructure for customers that aren't human anymore.”
+
+That is much more aligned with what they seem to be asking for.
+
+And the nice part is: you already thought of this idea before the travel one.
+
+The database/moat thing you described earlier also makes more sense here: over time you collect repeated agent-shopping experiments across product categories, changes and outcomes. I still wouldn't pitch “our data moat” as established today, but it’s a believable direction.
+
+If you have only the remaining hackathon hours, I’d build this, and reduce the scope to:
+
+Shopify/test catalog → 3–5 Grok shopper Bots → Supabase results → merchant dashboard → one product change → rerun experiment.
+
+Everything else is optional.
+
+You said:
+
+so could this idea work ?
+
+so as a direct result of tools like grok bot, a lot of e commerce sites and listing will start be viewed and analysed by ai before getting recommended to people, so these businesses may wanna know how their specific product may rank against others, a few grok bot instances can try to act like customers, with different prompts and requirements, and then it'd test how difficult it is to find that specific product, and what competitor products get ranked before theirs and why showing a score, and since would directly help making the e-commerce more sales they'd find it valuable. now, it's not a bad idea but anyone could replicate it easily, which means it doesn't have a strong 'moat'. if you wanna take this a step further, you can possibly make this free or be very cheap at the beginning (just explain the strategy to the judges), people may get their score, and maybe pay more for ongoing analysis and A/B testing for ai ranking, but after each analysis we'd collect the ranking details and the store's info in our database, and since the initial analysis would be cheap, we'd collect a lot of this data quickly and do analysis on top of it, understand what ranks better compared to each other, and as the database grows bigger, we would be able to give a much better analysis compared to other stuff in our database, that people won't be able to replicate easily. if you explain this well during the presentation, and have a good demo, we'd def do well 
+
+it can also integrate to open-seo github opensource and make a ranking from there and use the metric together
+
+u can also analyse this chat i had about the idea 
+https://chatgpt.com/share/6ab79f2d-e964-83ed-ae5a-0d4e0466755f
+
+…
+Show more
+ChatGPT said:
+
+Yes. The idea can work, but I’d position it as an agentic shopper testing lab for merchants, not just “AI SEO” or “AI ranking.”
+
+The weak version is:
+
+“We test whether ChatGPT/Grok recommends your product and give you an AI ranking score.”
+
+That category already exists. There are commercial tools that monitor whether products appear in ChatGPT/Gemini/AI shopping results, plus an open-source ecommerce AI-visibility engine that is very close to your original concept. 
+GitHub
++1
+
+The stronger hackathon version is:
+
+“We let merchants test how autonomous AI shoppers actually browse, compare, reject and choose products. Then the merchant changes the catalogue and reruns the exact same benchmark to see whether agent discoverability and purchaseability improve.”
+
+That maps directly to the hackathon’s questions around “what happens to search when bots decide what products to show?” and “how does a merchant sell to a bot rather than a person?” 
+Luma
++1
+
+Your long-term data idea is directionally good, but the raw store/product database is not much of a moat because competitors can crawl public listings too. The valuable dataset would be:
+
+shopper intent → agent behaviour → products discovered → products shortlisted → why rejected → what was selected → merchant change → same benchmark rerun → measured outcome
+
+The before/after intervention history is the interesting part. Over time, with merchant consent and aggregation, you could learn things like “agents frequently reject products when fit information is only inside images” or benchmark one merchant against similar products. I’d pitch that as a future data flywheel, not claim it’s already a moat.
+
+OpenSEO fits nicely as an input rather than something you need to rebuild. It already provides keyword research, rank tracking, competitor insights, site audits and AI Visibility, plus MCP/agent skills. 
+GitHub
++1
+
+I would keep OpenSEO and your Grok-Bot metrics separate instead of averaging unrelated scores blindly:
+
+Dimension	What it measures
+Search visibility	OpenSEO / traditional SEO
+Agent discovery	How often shopper Bots actually find the product
+Agent consideration	How often it survives into a shortlist
+Agent selection	How often it is chosen
+Commerce readiness	Whether variants, price, shipping, returns, availability etc. are clear enough to transact
+
+You can optionally show a transparent Agent Commerce Readiness score, but the individual measurements should be visible.
+
+That distinction is also grounded in current agentic-commerce infrastructure. OpenAI’s product-feed docs explicitly tell merchants to provide structured titles, descriptions, variants, prices, availability, media, shipping, returns and seller context so products can be surfaced accurately. 
+OpenAI Developers
++1
+ Shopify also has an agentic-commerce flow from product discovery through cart and checkout. 
+Shopify
+
+What I’d actually build
+
+Merchant enters a store/product URL. Your app generates maybe 4 realistic buying intents, for example:
+
+Plain text
+1. waterproof straight-leg trousers under £60,
+   short inseam, easy UK returns
+
+2. cheap hiking trousers that don't look too technical
+
+3. trousers for someone around 168cm,
+   preferably not tapered
+
+4. black waterproof trousers under £70,
+   delivery this week
+
+Run maybe 3 Grok shopper Bots per scenario = 12 controlled shopping attempts.
+
+Store in Supabase:
+
+Plain text
+scenario
+bot run
+products discovered
+merchant product discovered?
+shortlisted?
+selected?
+reason selected
+reason rejected
+competitors selected
+pages visited
+evidence
+timestamp
+
+Then show something like:
+
+Plain text
+Found your product      5 / 12
+Shortlisted             3 / 12
+Selected                1 / 12
+
+Main rejection reasons
+8/12  inseam unclear
+6/12  fit not stated explicitly
+5/12  returns difficult to find
+4/12  waterproof rating ambiguous
+
+Then change the test Shopify store:
+
+Plain text
+Before:
+Storm V2
+"Built for every adventure..."
+
+After:
+Storm V2 Waterproof Straight-Leg Trousers
+
+fit = straight
+waterproof = true
+inseam = 27, 29, 31
+returns = free UK returns
+
+Press Rerun benchmark.
+
+Plain text
+                 BEFORE   AFTER
+
+Found             5/12    11/12
+Shortlisted       3/12     9/12
+Selected          1/12     7/12
+
+That is a very strong three-minute demo.
+
+Just phrase it accurately:
+
+“Selection improved from 1/12 to 7/12 in our controlled Grok shopper benchmark.”
+
+Not “we increased your AI ranking by 600%.”
+
+I’d also avoid treating “AI rank” as a universal stable number. Agent results can depend on prompt, model/version, geography, account state, context, price and availability. Better metrics are discovery rate, consideration rate, selection rate, relative position when a ranked list exists, and consistency across repeated runs.
+
+If you still want one visual score, make the formula explicit, e.g.:
+
+Plain text
+Agent Visibility Score
+35% discovery
+30% consideration
+25% selection
+10% consistency
+
+and label that as your benchmark design, not an industry standard.
+
+The strongest answer to “couldn’t I just ask Grok Bot this?” is that Grok alone doesn’t give merchants:
+
+repeatable standardized test suites
+multiple shopper personas
+persistent measurements/history
+competitor comparison
+A/B replay
+Shopify/catalog integrations
+OpenSEO context
+before/after measurements
+longitudinal benchmarks
+
+Grok Bot is your synthetic customer population. Your product is the testing/analytics layer.
+
+That’s much more aligned with the event than Roamer. The hackathon explicitly asks about agents deciding what products to show and merchants selling to bots, and judges score technical execution, product thinking, autonomy, commerce innovation, usefulness, UX and demo quality. 
+Hackalendar
++1
+
+One important caveat: the category is already validated, but not empty. There are now tools tracking ecommerce AI visibility, so don’t pitch “we invented SEO for AI.” 
+Perform.AI
++2
+
+Pitch the differentiator as:
+
+“Existing AI visibility products monitor answers. We run autonomous shopper experiments: real agents browse, compare, reject and try to transact with your store. Then we change the merchant and replay the same benchmark.”
+
+I also tried opening the shared ChatGPT conversation, but the share URL isn’t retrievable through my web access, so I can’t honestly analyse that extra chat. If you paste its text here, I can merge its useful ideas into this version.
+
+You said:
+can you give me 10 different prompts to run with chatgpt to see what chatgpt can actually search in pro mode, like giving a store link and then see how it would tell the e commerce how to improve it
+ChatGPT said:
+
+Yeah. I’d test ChatGPT with prompts that force it to behave like a real shopping agent, not just critique the homepage from a marketing perspective.
+
+Use the same store for most of them so you can compare what it manages to find. Replace [STORE_URL], [PRODUCT_URL], etc.
+
+Basic agent-discoverability audit
+
+Browse this store as if you were an AI shopping agent: [STORE_URL].
+
+Start from the homepage and actually navigate the site. Do not rely only on search snippets.
+
+Tell me:
+
+what products/categories you can discover
+what information is easy vs difficult to extract
+whether prices, variants, sizing, stock, shipping, returns and product attributes are clear
+what information is buried in images, scripts or unclear copy
+what would make it easier for an AI shopping agent to understand and recommend products from this store
+
+For every important claim, show the exact page you found it on.
+
+If something is inaccessible or you cannot verify it, say so rather than guessing.
+
+Tests: how deeply ChatGPT can navigate and understand the store at all.
+
+Can it find a product from a vague customer request?
+
+Browse [STORE_URL].
+
+Pretend I am a customer saying:
+
+“I want [CUSTOMER_REQUIREMENT].”
+
+Do not use a direct product URL. Start from the store and find the best matching products yourself.
+
+Rank the top 5 products you would recommend and explain:
+
+why each one matches
+why you ranked one above another
+what information influenced the decision
+what information you wanted but could not find
+
+Then tell the merchant exactly what could be changed so its relevant products are more likely to be discovered and confidently recommended for this request.
+
+Example requirement:
+
+“straight-leg waterproof trousers under £60 for someone around 168 cm, with easy UK returns”
+
+This is probably one of your most important tests.
+
+Target-product findability test
+
+I own this product: [PRODUCT_URL].
+
+Do not start from the product page.
+
+Start from [STORE_URL] and browse the website like a shopper looking for:
+
+[SHOPPER_PROMPT]
+
+Tell me:
+
+whether you found my target product naturally
+how many other products you considered first
+where my product appeared in your decision process
+whether you would shortlist it
+whether you would ultimately recommend it
+what caused it to win or lose
+
+Then inspect [PRODUCT_URL] directly and tell me what information on that page would need changing to improve its chances in this exact shopping scenario.
+
+Separate things you actually observed from your recommendations.
+
+Tests: exactly the problem your hackathon product is trying to automate.
+
+Multiple shopper personas
+
+Browse [STORE_URL].
+
+Run these 5 shopper scenarios independently:
+
+[PROMPT A]
+[PROMPT B]
+[PROMPT C]
+[PROMPT D]
+[PROMPT E]
+
+For each scenario:
+
+find the products you would consider
+choose one winner if possible
+explain why
+record whether [TARGET_PRODUCT] was discovered, shortlisted or selected
+
+At the end, create a merchant summary showing:
+
+discovery rate
+shortlist rate
+selection rate
+recurring reasons for rejection
+recurring missing information
+
+Do not pretend these 5 runs are statistically representative. Treat them only as a small controlled test.
+
+This gives you something close to the output your app could eventually generate.
+
+Product-data completeness test
+
+Inspect this product page carefully: [PRODUCT_URL].
+
+Extract everything an AI commerce agent could reasonably need to decide whether to recommend or purchase it:
+
+product name
+category
+price
+sale price
+currency
+variants
+sizes
+colour
+dimensions / measurements
+fit
+materials
+features
+stock / availability
+shipping
+delivery estimate
+returns
+warranty
+reviews
+review count
+ratings
+images
+image-derived information
+intended use
+
+For each field label it:
+
+clearly available / available but difficult to find / ambiguous / missing / inaccessible
+
+Then tell me which missing or unclear fields are most likely to stop an AI shopping agent from confidently recommending this product.
+
+Really useful because your product could essentially automate this audit.
+
+Image-understanding test
+
+Analyse [PRODUCT_URL] as a shopping agent.
+
+Inspect the product images if you can access them.
+
+Tell me what useful product information you can infer from the images that is not clearly present in the text, such as:
+
+fit
+shape
+proportions
+texture
+colour
+pockets
+closures
+how it fits the model
+relevant dimensions or visual characteristics
+
+Then identify information that is only available visually and should probably also exist as structured/text information for AI agents.
+
+Clearly distinguish:
+
+information explicitly stated by the merchant
+information visible in an image
+uncertain visual inference
+
+Do not guess if an image is unavailable.
+
+This directly tests your theory that product imagery may become machine-consumed commerce data.
+
+Compare the same need across competing stores
+
+I want you to act like a neutral AI shopping agent.
+
+Search these stores:
+
+[STORE_A]
+[STORE_B]
+[STORE_C]
+
+Customer requirement:
+
+[SHOPPER_REQUIREMENT]
+
+Find the best products across all three.
+
+Explain exactly why one product/store wins over another.
+
+For each merchant, identify:
+
+whether relevant products were easy to discover
+whether the product information was sufficient
+whether price was clear
+whether sizing/variants were understandable
+whether shipping and returns were easy to verify
+anything that caused you to lose confidence
+
+Then give each merchant specific changes that could have made its product more competitive for this particular request.
+
+Cite the actual pages used.
+
+This is probably the closest manual simulation of your competitor benchmarking feature.
+
+Checkout / agent-commerce readiness
+
+Browse [STORE_URL] as if you were an autonomous shopping agent trying to buy [PRODUCT].
+
+Do not actually place an order.
+
+Go as far through the public purchase flow as you safely can without submitting personal information or payment.
+
+Evaluate:
+
+whether the correct variant can be identified
+whether availability is clear
+whether the cart can be created reliably
+when shipping costs become visible
+when tax becomes visible
+whether delivery choices are understandable
+whether discounts are machine-understandable
+where login is required
+where human confirmation is necessary
+anything that would make autonomous checkout unreliable
+
+Tell me where an AI agent would need to hand control back to a human.
+
+Do not purchase anything.
+
+That moves your product beyond AI SEO into agentic-commerce readiness.
+
+Try to break the product understanding
+
+Inspect [PRODUCT_URL], but assume you are a very cautious shopping agent.
+
+Try to find contradictions, ambiguity or missing information that could cause you to recommend the wrong item.
+
+Specifically test:
+
+product title vs description
+size chart vs variant names
+sale price vs normal price
+images vs written colour
+product claims vs specifications
+delivery information
+returns information
+stock status
+reviews mentioning things inconsistent with the listing
+
+For every issue, tell me:
+
+what the agent might misunderstand
+how serious the error could be
+what exact merchant change would remove the ambiguity
+
+If you cannot verify something, mark it unknown.
+
+This is good because agent reliability could be a much stronger merchant value proposition than simply “rank higher.”
+
+Full merchant audit + simulated improvement
+
+Treat [STORE_URL] as an ecommerce merchant preparing for a future where AI shopping agents browse and recommend its products.
+
+First, actually browse the store and run this shopper request:
+
+[SHOPPER_PROMPT]
+
+Record:
+
+products discovered
+order considered
+products shortlisted
+final choice
+reasons for rejecting other products
+
+Then inspect the merchant's relevant product pages and propose the 5 highest-impact changes that would make them easier for an AI shopping agent to discover, understand, compare and confidently purchase.
+
+For each recommendation tell me:
+
+the observed problem
+evidence from the current site
+suggested change
+what agent behaviour you expect it to affect
+how I could test the change in a controlled before/after experiment
+
+Do not claim the recommendation will improve ChatGPT ranking generally. Only explain what we could measure by rerunning the same shopper test after making the change.
+
+This last one is almost your hackathon product manually performed by ChatGPT.
+
+And that’s useful rather than a problem.
+
+If ChatGPT can do #10 once manually, your pitch becomes:
+
+“Yes, an individual merchant could spend 20 minutes asking ChatGPT this manually. We turn it into a repeatable testing system: hundreds of controlled shopper runs, multiple agents, competitor benchmarks, persistent measurements, automatic A/B reruns and longitudinal data.”
+
+That is exactly the distinction you need to establish.
+
+For hackathon testing, I’d run #2, #3, #7 and #10 first. Those will tell you very quickly how much value ChatGPT itself already provides and therefore what your product has to add on top.
+
+You said:
+compare the ai seo one against the travelling commerce idea, it can actually be built apparently
+Worked for 25s
+ChatGPT said:
+
+I’d compare them like this:
+
+	AI SEO / agent-shopping benchmark	Roamer / travel commerce agent
+Hackathon fit	Excellent	Good, but scope-risk
+Merchant/store POV	Directly merchant-side	Mostly consumer-side
+3-minute demo	Very easy to understand	More visually impressive, harder to finish
+Grok Bot necessity	Strong: synthetic shoppers	Strong: autonomous researchers/bookers
+Supabase usefulness	Strong: runs/history/A-B data	Strong: candidates/profile/results
+Shopify usefulness	Very natural	Weak unless forced
+Technical risk today	Moderate	High
+External-site/API risk	Low–medium	High
+“ChatGPT could just do this” risk	Medium unless you build repeatability/A-B	Medium unless orchestration really works
+Commercial customer	Clear: merchants/brands/agencies	Clear: traveller, but harder monetisation story
+Measurable result in demo	Very strong	Strong if everything returns fast enough
+Wow factor	Good	Very high
+Long-term data advantage	Potentially strong	Preference/profile data, but less obviously defensible
+Chance of demo failure	Lower	Much higher
+
+The event itself explicitly asks “what happens to search when bots decide what products to show?” and “how does a merchant sell to a bot rather than a person?”, alongside a Merchant track. That is almost the exact thesis behind the agent-shopping benchmark. Travel fits the Shopping track — “bots that shop, discover and buy on behalf of users” — but what the organisers told you in person about preferring the store perspective is a meaningful signal. 
+Luma
++1
+
+I think the AI-shopping audit is the stronger hackathon choice now
+
+Not because Roamer is a worse product idea. Roamer is arguably the more exciting consumer demo.
+
+But today you have roughly seven hours of hacking and then potentially three minutes on stage. The agent-shopping product gives you a much cleaner loop:
+
+merchant → run AI shoppers → see why products lose → improve product → rerun identical shoppers → measurable improvement
+
+That can fit on one screen and one demo.
+
+Roamer's equivalent is:
+
+vague request → questions → flight API → three destinations → three Grok Bots → hotels → activities → photos → maps → pricing → reranking → change preference → re-search → booking.
+
+It's great when everything works. There are just far more opportunities for the demo to stall.
+
+The judging covers technical execution, product thinking, AI autonomy, commerce innovation, usefulness, UX and demo quality. A smaller working loop can score better across those than a grander system where half the workflow is simulated. 
+UK Hackathons
++1
+
+Compare their actual three-minute demos
+Roamer
+
+You say:
+
+“Me and my girlfriend want five days somewhere pretty under £1k.”
+
+Then you have to wait.
+
+Hopefully:
+
+flight API returns quickly;
+Grok doesn't get blocked;
+hotel search finishes;
+accommodation pricing matches dates;
+activities load;
+UI receives everything;
+map works.
+
+Maybe you get a killer moment:
+
+“Slovenia, £827. Here's the actual hotel and flight. Want me to prepare checkout?”
+
+That's extremely impressive.
+
+But if one thing hangs for 45 seconds, a quarter of your entire final presentation is gone.
+
+Agent shopping benchmark
+
+You open with:
+
+“AI agents increasingly decide what products customers see. Merchants currently don't know why their product gets ignored.”
+
+Hit:
+
+Run 5 AI shoppers
+
+You can make the test small enough that they complete reliably.
+
+Plain text
+"waterproof straight-leg trousers
+under £60 for a short customer"
+
+Five Grok Bots browse.
+
+Your dashboard:
+
+Plain text
+Your product
+
+DISCOVERED       2/5
+SHORTLISTED      1/5
+SELECTED         0/5
+
+Competitor:
+
+Plain text
+Competitor A
+
+DISCOVERED       5/5
+SELECTED         4/5
+
+Click Why?
+
+Plain text
+Your listing
+
+× inseam isn't machine-readable
+× straight fit is buried in description
+× return terms difficult to locate
+× waterproof claim ambiguous
+
+Competitor
+
+✓ explicit 29" inseam
+✓ fit: straight
+✓ free returns
+✓ waterproof rating listed
+
+Then:
+
+Apply suggested changes
+
+Could update a Shopify test product, or simply update your controlled merchant catalogue.
+
+Hit:
+
+Rerun same benchmark
+
+Plain text
+                 BEFORE   AFTER
+
+Discovery          2/5      5/5
+Shortlist          1/5      4/5
+Selection          0/5      3/5
+
+Then:
+
+“We're not promising a universal ChatGPT ranking. We give merchants a reproducible benchmark of how autonomous shoppers actually see their store.”
+
+That's basically the entire concept demonstrated in 90 seconds.
+
+You have another 90 seconds for architecture + why it matters.
+
+The AI SEO idea also answers their “can't ChatGPT just do this?” problem better
+
+This is important.
+
+Yes, I can manually give ChatGPT a store and ask:
+
+“Why wouldn't you recommend this?”
+
+That's not enough of a product.
+
+Your system isn't the analysis itself.
+
+The system is:
+
+Plain text
+                    merchant
+                       │
+                       ▼
+                  test suite
+                       │
+         ┌─────────────┼─────────────┐
+         ▼             ▼             ▼
+    shopper A      shopper B      shopper C
+    budget user    fit-focused     gift buyer
+         │             │             │
+         └─────────────┼─────────────┘
+                       ▼
+                 structured runs
+                       │
+                       ▼
+                    Supabase
+                       │
+          ┌────────────┴────────────┐
+          ▼                         ▼
+      analytics               recommendations
+          │                         │
+          └────────────┬────────────┘
+                       ▼
+               update merchant
+                       │
+                       ▼
+                replay same test
+
+ChatGPT can perform one analysis.
+
+Your product does:
+
+standardized scenarios;
+repeatable tests;
+multiple autonomous buyers;
+competitor analysis;
+history;
+before/after experiments;
+product-level metrics;
+persistent benchmarking;
+merchant integrations;
+potentially scheduled monitoring.
+
+That's the product.
+
+Where OpenSEO fits
+
+I like it, but don't turn this into:
+
+50% OpenSEO + 50% Grok = 83/100.
+
+Those aren't measuring the same thing.
+
+Instead show:
+
+Traditional discoverability
+
+Powered partly by OpenSEO:
+
+Plain text
+Search readiness             78
+Technical SEO                91
+Structured data              64
+Content coverage             72
+Agent discoverability
+
+Your novel layer:
+
+Plain text
+Agent discovery              41%
+Agent shortlist              25%
+Agent selection              8%
+
+Top problems
+• variant information unclear
+• fit attributes absent
+• delivery policy buried
+
+Then perhaps one aggregate Agent Commerce Readiness score that's explicitly your metric.
+
+That makes OpenSEO a useful input while Grok shopper experiments remain your core differentiation.
+
+Where Roamer is genuinely better
+
+There are three areas.
+
+1. It's more emotionally impressive
+
+Everyone understands:
+
+“Tell it where you want to go, and it books your trip.”
+
+It looks futuristic immediately.
+
+2. Grok Bot autonomy is much more visible
+
+Watching three agents simultaneously find flights, stays and activities is an obvious demo of Grok Bot.
+
+With agent-SEO, you have to make sure the synthetic shoppers visibly do real shopping rather than just send LLM prompts.
+
+3. Much nicer UX possibilities
+
+Images, maps, live cards, spoken interaction.
+
+Roamer could be the prettier project.
+
+But AI SEO has a better business story for these judges
+
+Especially after the organisers' merchant comment.
+
+Merchant sees:
+
+Plain text
+"We sell £4m/year online.
+
+AI shoppers increasingly choose products.
+
+We don't know whether they can understand ours."
+
+That's straightforward B2B pain.
+
+Your pitch:
+
+“SEO tells you how your website performs for search engines. We test how your products perform when the customer is an autonomous shopping agent.”
+
+Very simple.
+
+Then the monetisation naturally follows:
+
+Free
+Plain text
+1 product
+5 shopper tests
+basic score
+
+Useful acquisition tool.
+
+Pro
+Plain text
+whole catalogue
+competitor benchmarking
+scheduled testing
+AI-shopping monitoring
+recommendations
+Higher tier
+Plain text
+A/B testing
+catalogue integrations
+automated fixes
+longitudinal benchmarks
+
+And only after that mention the data flywheel.
+
+I would modify your moat pitch slightly
+
+Don't say:
+
+“We'll scrape loads of stores and then nobody can replicate our database.”
+
+A judge like Nuan is likely to poke holes in that instantly.
+
+Most public store information is replicable.
+
+The valuable proprietary dataset would instead be:
+
+Plain text
+shopper intent
+     ↓
+merchant/catalogue state
+     ↓
+specific agent/version
+     ↓
+agent browsing behaviour
+     ↓
+products discovered
+     ↓
+products considered
+     ↓
+selection/rejection reasons
+     ↓
+merchant intervention
+     ↓
+same experiment replayed
+     ↓
+measured change
+
+Across thousands/millions of runs.
+
+Then eventually you could answer:
+
+“For apparel products like yours, listings that expose inseam as a structured attribute are discovered 28% more consistently in this class of shopper test.”
+
+That is harder to recreate.
+
+It's behavioural/intervention data, rather than just crawled website data.
+
+For tomorrow I'd simply say:
+
+“Long term, the interesting dataset isn't merchant pages. It's the relationship between product changes and how autonomous shoppers subsequently behave.”
+
+That's credible without overselling it.
+
+There's also a clever way to keep a piece of Roamer
+
+You could use travel as one example vertical later, rather than build Roamer.
+
+Your product isn't only:
+
+Shopify clothes.
+
+It is:
+
+agent-facing commerce testing.
+
+Today demonstrate apparel because it's much easier.
+
+Eventually:
+
+Plain text
+retail products
+hotels
+travel inventory
+restaurants
+marketplaces
+financial products
+
+Any merchant whose products/services will increasingly be interpreted by agents.
+
+So your travel exploration wasn't wasted. It helped you realise that the broader phenomenon is:
+
+businesses increasingly have an AI agent between themselves and the customer.
+
+Your product is for the business side of that relationship.
+
+My scoring for this particular hackathon
+
+These aren't the judges' scores — just how I'd assess the two against their published categories.
+
+Criterion	Agent-shopping benchmark	Roamer
+Technical execution potential	4.5/5	5/5
+Likelihood technical demo actually works	4.5/5	2.5/5
+Product thinking	5/5	4/5
+AI autonomy	4/5	5/5
+Commerce innovation	5/5	4/5
+Real-world usefulness	5/5	4.5/5
+UX opportunity	4/5	5/5
+3-minute demo	5/5	3/5
+Merchant-track fit	5/5	1.5/5
+Shopping-track fit	3/5	5/5
+Can finish something convincing today	4.5/5	2.5/5
+
+Given the verbal merchant/store guidance you got at the event, I would personally switch to the agent-shopping benchmark.
+
+Not because Roamer isn't in the published scope — the event explicitly supports shopping bots. 
+Luma
+
+I'd switch because the merchant product directly answers one of the organisers' headline questions:
+
+“What happens to search when bots decide what products to show?” 
+Hackalendar
++1
+
+And you can show a complete problem → autonomous action → insight → merchant action → measurable result loop before your three minutes are up.
+
+That's a very hard demo structure to beat.
+
+ChatGPT can make mistakes. Check important info.
+Latest response
+
+
+
+
+Extra High

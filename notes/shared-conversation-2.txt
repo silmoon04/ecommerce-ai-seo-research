@@ -1,0 +1,1137 @@
+Share
+This is a copy of a shared ChatGPT chat. It won't be added to memory.
+Report conversation
+Tue, Sep 15 at 2:10 PM
+You said:
+tell me why this idea is bad or not profitable:
+
+a paid shopify extension or add on for some other e commerce platform that evaluates your website by how easy or difficult it is for ai to find the website, especially looking at the items, evaluating, easily accessible pictures, how it ranks in different chatbots, or different computer use agents, if it's a clothing brand how clear and easy it is to find that specific item and take the measurements as necessary to compare with user, how, good the pics are and what can improve to rank higher
+Worked for 51s
+ChatGPT said:
+
+The idea is not inherently bad, but the obvious version of it is in danger of becoming a low-priced, high-churn Shopify app rather than a strong business.
+
+The biggest issue is that Shopify itself is moving directly into the layer you're proposing. Eligible Shopify products are already automatically included in Shopify Catalog, which feeds structured product data into AI shopping channels. Shopify explicitly says merchants don't need to do anything extra for their products to be discoverable by ChatGPT through Shopify Catalog. 
+Shopify Help Center
++1
+ OpenAI likewise says Shopify product data is already integrated into ChatGPT through Shopify Catalog. 
+OpenAI
++1
+
+Even worse for a basic audit product, Shopify now literally has its own free AI product-page readiness scanner. 
+Shopify
+
+So I'd score the versions like this:
+
+Product	My view
+"AI SEO score for Shopify"	🔴 3/10
+"Make llms.txt/schema/alt text for Shopify"	🔴 2/10
+"Track whether ChatGPT mentions my brand"	🟠 5/10
+"Test how AI shopping agents understand my catalogue"	🟢 7/10
+"Simulate real buyer queries and show exactly why competitors beat me"	🟢 8/10
+Vertical AI-shopping QA/optimization, e.g. fashion sizing/fit	🟢 9/10
+The strongest arguments against it
+
+1. You're potentially optimizing the wrong thing.
+
+The mental model of:
+
+AI crawler → website → parses product page → decides ranking
+
+is becoming less accurate for Shopify.
+
+It's increasingly:
+
+Shopify database → Shopify Catalog → AI shopping platform → recommendation system
+
+with normal crawling as an additional source.
+
+Shopify Catalog already exposes things such as titles, descriptions, images, pricing, variants and availability. 
+Shopify
++1
+
+So a tool that says:
+
+"Your page is only 67% AI crawlable!"
+
+might sound valuable while having almost no effect on whether that particular product gets selected.
+
+2. The obvious product already exists. A lot.
+
+For example, IndexGPT on the Shopify App Store
+ already offers:
+
+AI SEO score
+action plans
+AI traffic tracking
+llms.txt
+brand signals
+prompt tracking
+content generation
+schema
+
+and currently has a 4.9 rating from 144 reviews. 
+Shopify App Store
+
+Other competitors are doing essentially the same thing:
+
+Catalyst: catalogue audit + AI visibility tracker + JSON-LD + product enrichment: $19–$49/month. 
+Shopify App Store
+Agentic Commerce: scores every product for AI discovery and auto-fills attributes: $19/month. 
+Shopify App Store
+StoreRank: AI schema, crawler setup, product optimizer, mention tracking and revenue analytics: $29–$289/month. 
+Shopify App Store
+Burnish: tracks thousands of AI answers, competitors and product optimization: $149–$649/month. 
+Shopify App Store
+
+So "GEO for Shopify" isn't an empty market anymore.
+
+That's not necessarily bad—it proves willingness to pay—but you need a considerably better wedge.
+
+3. "Rank higher in ChatGPT" is extremely difficult to prove.
+
+Suppose your app says:
+
+Before: 47/100
+After: 89/100
+
+Cool.
+
+Merchant asks:
+
+"Okay, where are my extra sales?"
+
+That's harder.
+
+AI answers can change because of:
+
+the exact prompt;
+conversation history;
+user preferences;
+location;
+availability;
+price;
+competing products;
+personalization;
+model version;
+product feed updates;
+retrieval source;
+randomness.
+
+OpenAI says merchant selection considers things such as availability, price, quality and whether the merchant is the primary seller, and expects the ranking system to evolve. 
+OpenAI Help Center
+
+Shopify itself warns that optimizing information only increases the chances of showing up; platform-specific factors still affect results. 
+Shopify Help Center
+
+Therefore you absolutely should not build your value proposition around a magical universal "ChatGPT Ranking Score."
+
+It'll eventually look like SEO snake oil.
+
+4. Your "score" has a prompt-distribution problem.
+
+What exactly does it mean for Nike to rank #4 in ChatGPT?
+
+Rank #4 for:
+
+running shoes
+
+or:
+
+men's waterproof trail shoes under £110 for wide feet
+
+or:
+
+shoe for someone with plantar fasciitis walking 20k steps a day
+
+?
+
+Those are essentially different markets.
+
+A generic visibility score destroys the most interesting information.
+
+5. Fixing the problems is increasingly trivial.
+
+You might identify:
+
+❌ Missing alt text
+❌ Product title isn't descriptive
+❌ Missing material
+❌ Missing JSON-LD
+❌ Description isn't detailed enough
+
+But an LLM can fix all five almost instantly.
+
+And Shopify itself tells merchants to optimize titles, descriptions, images, variants, sizing, attributes, reviews and FAQs. 
+Shopify Help Center
++1
+
+So merely finding these problems doesn't provide much moat.
+
+Your value has to come from knowing which missing information actually prevented a sale/recommendation.
+
+6. It's dangerously close to being a one-time utility.
+
+This is a major SaaS problem.
+
+Merchant installs it.
+
+You say:
+
+36 issues detected.
+
+They press:
+
+Fix All.
+
+You modify everything.
+
+Now what?
+
+Why are they paying you £49 next month?
+
+And the month after that?
+
+A good recurring Shopify app needs a recurring problem:
+
+new products;
+competitor changes;
+changing buyer demand;
+new AI models;
+lost rankings;
+inaccurate AI answers;
+new search queries;
+referral/conversion changes.
+
+Without this, churn will be brutal.
+
+Your clothing example is actually where the interesting business starts
+
+You said:
+
+if it's a clothing brand how clear and easy it is to find that specific item and take the measurements as necessary to compare with user
+
+That's substantially more interesting than generic GEO.
+
+Imagine I tell an AI:
+
+"I'm 168 cm, 65 kg, 30-inch waist, and want trousers that don't taper at the ankle. I want roughly a 29-inch inseam and don't want alterations."
+
+The AI needs considerably more than:
+
+Product: Relaxed Trousers
+Price: £65
+Colour: black
+
+It needs things like:
+
+Garment measurements
+
+waist
+rise
+thigh width
+knee width
+hem opening
+inseam
+outseam
+
+Fit characteristics
+
+slim / straight / wide
+actual taper ratio
+stretch
+intended ease
+model measurements
+model size
+how the fabric drapes
+
+Variant-level information
+
+30×28 might be excellent while 30×30 isn't.
+
+And then:
+
+Can the AI confidently conclude that this trouser fits this particular person?
+
+Shopify itself is now telling merchants that agentic shopping benefits from precise measurements, sizing charts, conversions and compatibility rules. 
+Shopify
+
+That makes your clothing example much more than "SEO."
+
+It becomes machine-readable product intelligence.
+
+The product I'd build instead
+
+I'd position it more like:
+
+"See your store through the eyes of an AI shopper."
+
+Not:
+
+Optimize your Shopify store for ChatGPT.
+
+Merchant connects their store.
+
+Your system creates hundreds or thousands of realistic buyer requests automatically.
+
+For a fashion store:
+
+"5'4 woman looking for petite wide-leg trousers."
+
+"Male, 168 cm, 30 waist, wants straight trousers with no taper."
+
+"Black wedding guest dress, under £120, not bodycon."
+
+"Linen shirt for humid weather, oversized but not long."
+
+"Jeans for large thighs but narrow waist."
+
+Then you test whether an agent can:
+
+1. Discover the correct product
+
+2. Extract the necessary facts
+
+3. Determine whether it satisfies the request
+
+4. Compare it with alternatives
+
+5. Recommend it confidently
+
+That lets you produce something much more persuasive:
+
+Zara-style Linen Trouser — AI Purchase Readiness: 41%
+
+87% discovery rate
+
+34% recommendation rate
+
+Agents successfully identify:
+
+✓ material
+✓ colour
+✓ waist sizes
+
+But frequently fail to determine:
+
+✕ hem width
+✕ actual inseam
+✕ model's waist measurement
+✕ degree of taper
+✕ garment vs body measurement
+
+Lost 38/100 synthetic purchase scenarios because agents couldn't verify fit.
+
+That is much more valuable than:
+
+Your GEO score is 71.
+
+Then add the killer feature: competitors
+
+Imagine the dashboard saying:
+
+"Men's straight black trousers under £80"
+
+Your product recommended: 18%
+
+Competitor A: 42%
+
+Competitor B: 29%
+
+Other: 11%
+
+Why Competitor A wins
+
+Their product specifies:
+
+hem opening
+actual garment waist
+model measurements
+fabric weight
+stretch
+inseam by size
+
+In 61% of failed queries, the agent could not confidently verify your fit.
+
+Now you've got something that could make someone pay.
+
+And images can genuinely be part of it
+
+Your image idea is valid too.
+
+Shopify specifically recommends that AI-shopping product galleries have things such as:
+
+high-resolution images;
+multiple angles;
+variant-specific photographs;
+scale/context shots;
+close-ups;
+recognizable silhouettes;
+clean crops;
+useful contrast.
+
+They specifically say this gives agents more context to assess products. 
+Shopify
+
+So you can do multimodal analysis:
+
+Front-view coverage: ✅
+Rear view: ❌
+Fabric texture visible: ❌
+Scale/model context: ✅
+Variant correspondence: ⚠️
+Product segmentation confidence: 96%
+Dark-mode thumbnail contrast: poor
+Agent can distinguish straight vs tapered leg: 43%
+
+Then suggest the exact missing photograph:
+
+"Add a full-length straight-on rear photograph and close-up of trouser hem."
+
+That's useful.
+
+Where the actual moat could come from
+
+Not an LLM wrapper.
+
+The moat is your evaluation dataset.
+
+Suppose you eventually have:
+
+20 million synthetic shopping scenarios
+
+across:
+
+apparel;
+skincare;
+furniture;
+electronics;
+supplements;
+sports equipment;
+tools.
+
+And you observe:
+
+these product attributes correlate with successful agent recommendations for these buyer intents.
+
+Now you've accumulated something difficult to clone.
+
+You might discover, for instance:
+
+For trousers, providing hem width increases agent confidence substantially for "non-tapered" prompts.
+
+or:
+
+For sofas, doorway clearance measurements cause far more successful recommendations.
+
+or:
+
+For skincare, concentration percentages + skin-type compatibility outperform generic marketing descriptions.
+
+That becomes valuable intelligence.
+
+An even better business model
+
+I'd probably make the audit free.
+
+Enter:
+
+mystore.com
+
+Get:
+
+AI Shopping Readiness: 54/100
+
+Free report identifies several issues.
+
+Then connect Shopify.
+
+£29–49/month
+
+Continuous product monitoring + fixes.
+
+£99–199/month
+
+Synthetic shopper tests + competitors + multiple AI ecosystems + revenue attribution.
+
+£300–1,000+/month
+
+Brands/agencies:
+
+thousands of prompts;
+catalogue-wide testing;
+competitor benchmarking;
+API;
+historical trends;
+automatic optimization;
+A/B experimentation.
+
+The existing market already has apps charging anywhere from about $10 to $649/month, so price isn't intrinsically the problem. 
+Shopify App Store
++1
+
+The question is whether you produce information worth paying for.
+
+One feature I think would make this genuinely compelling
+
+Don't just say:
+
+"Improve this description."
+
+Run a counterfactual test.
+
+Current:
+
+recommendation rate: 17%
+
+Your system generates a proposed improvement but doesn't publish it.
+
+Rerun identical synthetic buyers against the modified catalogue representation:
+
+predicted recommendation rate: 39%
+
+Then show:
+
++22pp simulated lift
+
+Merchant clicks:
+
+Apply changes
+
+Then continue monitoring real AI referral traffic and conversions.
+
+Now you're effectively creating:
+
+A/B testing for AI shoppers.
+
+That's considerably less commoditized.
+
+Your largest technical problem
+
+You can't necessarily faithfully reproduce the consumer versions of:
+
+ChatGPT Shopping
+Gemini
+Google AI Mode
+Copilot
+Perplexity
+Claude
+future shopping agents
+
+just by hitting their normal model APIs.
+
+Their production retrieval/catalog/ranking infrastructure is different.
+
+That's probably the hardest part of the entire company.
+
+If you falsely claim:
+
+"You rank #3 on ChatGPT"
+
+when you're merely asking the OpenAI API a prompt, the product isn't very meaningful.
+
+You'd need to distinguish between:
+
+Actual-channel observations
+
+we genuinely observed your product in consumer search.
+
+and:
+
+Simulation
+
+our agent predicts that this information is insufficient.
+
+That distinction would give the product credibility.
+
+There's another strategic issue: Shopify can eat you
+
+This is a genuine concern.
+
+Shopify already has:
+
+Shopify Catalog;
+Agentic Storefronts;
+Storefront MCP;
+structured product feeds;
+AI-channel analytics;
+Knowledge Base;
+product optimization guidance;
+its own AI-readiness scanner. 
+Shopify
++2
+
+They could eventually add:
+
+AI Product Score: 82
+Here's what to fix.
+
+basically for free.
+
+So your moat should sit above Shopify, not inside it.
+
+I'd architect it eventually for:
+
+Shopify + WooCommerce + Magento/Adobe Commerce + BigCommerce + custom ecommerce
+
+and treat Shopify as your first acquisition channel.
+
+The version I think fails
+
+"AI SEO Shopify App"
+
+Scan site → score → generate llms.txt → improve schema → write alt text → monitor ChatGPT mentions.
+
+There are already a pile of these.
+
+Easy to copy.
+
+Shopify is absorbing the functionality.
+
+Hard to prove ROI.
+
+Likely ends up $15–30/month with high churn.
+
+The version I think could work
+AI Shopping Agent Observatory
+
+We continuously send realistic AI shoppers through your catalogue and show you exactly which customers AI agents can and cannot match to your products, why competitors are being selected instead, and what product information/images you need to fix.
+
+Then clothing can be the first vertical:
+
+AI Fit Intelligence for fashion ecommerce.
+
+That is much more differentiated because the fundamental question becomes:
+
+"Can an AI confidently sell this exact item to this exact person?"
+
+rather than:
+
+"Did you install llms.txt?"
+
+And there's already a strong underlying market signal: Shopify says AI-referred orders grew nearly 13× year over year in Q1 2026. 
+Shopify
+
+So my conclusion is: the market is probably early enough to be attractive, but your initial framing is approximately one abstraction layer too low. The money isn't in making websites "AI readable." Shopify and the big AI platforms are rapidly solving that infrastructure problem. The potentially valuable layer is testing, measurement, competitive intelligence and improving an AI agent's ability to actually choose the product for a specific buyer.
+
+If I were trying to turn this into a business quickly, I'd start with clothing/fashion rather than generic ecommerce, because fit and measurement gives you a very obvious evaluation problem that Shopify's generic "AI readiness" tooling doesn't solve particularly deeply.
+
+You said:
+absolutely try to kill the idea, research very well every single competitor, their revenue, business model, churn rate, issues, reviews, and shopify ai strategies itself with possible other issues that this product may face
+ChatGPT said:
+My verdict: I would reject this business as currently proposed
+
+My previous answer was too optimistic. In particular, I should not have presented fashion-specific testing, synthetic shoppers, or “test → improve → re-test” as though those were relatively unoccupied opportunities. Competitors already advertise all three. SKAW sells an agent-query simulator for $19.99/month; Burnish advertises the continuous optimisation loop; True Fit already markets fit-aware shopping agents. 
+Shopify App Store
++2
+
+The strongest argument against your idea is not that AI shopping is irrelevant. It is this:
+
+You would be entering a market where basic diagnosis is free, increasingly sophisticated features are inexpensive, larger competitors already sell the advanced version, and proving that your intervention generates incremental merchant profit is substantially harder than building the app.
+
+I researched 39 third-party offerings and four Shopify-native substitutes. The full evidence register includes pricing, advertised features, financial-disclosure status, review evidence, limitations and source links:
+
+This is a broad market map, not a claim to have found every vendor worldwide. I inspected public evidence, not paid accounts or competitors’ internal finances. For most competitors, revenue and churn are not publicly verifiable. I have not manufactured estimates from their review counts, fundraising or marketing screenshots.
+
+Research checked on 15 September 2026. Prices below are in US dollars unless stated otherwise.
+
+1. Your original product is already heavily represented
+
+These are the closest Shopify-app competitors.
+
+For every app in this table, I could not verify public product-specific revenue, paid-customer counts or churn. “Unknown” does not mean unsuccessful; it means the public evidence cannot establish its business quality.
+
+Competitor	Advertised pricing	Public review snapshot	Overlap with your idea
+IndexGPT	Free; $16 / $45 monthly	4.9, 144 reviews	AI visibility scores, recommended actions, content and structured-data tools. 
+Shopify App Store
+
+Burnish	$149 / $299 / $649 monthly	5.0, 2 reviews	Tests AI answers, diagnoses missing recommendations, rewrites content, re-measures and estimates attributed revenue. 
+Shopify App Store
+
+StoreRank	$29 / $79 / $149 / $289 monthly	5.0, 28 reviews	Schema, content, AI mentions, optimisation and revenue analytics. 
+Shopify App Store
+
+Shop Rank AI	Free installation; paid tier $9.99 per 100 products/month	4.8, 28 reviews	Product scoring, image optimisation, content and competitive tracking. Different company from StoreRank. 
+Shopify App Store
+
+Catalyst	Free; $19 / $49, with enrichment overages	5.0, 1 review	Catalogue auditing, enrichment, structured data and visibility. 
+Shopify App Store
+
+Agentic Commerce	$19 monthly	No reviews	Product-readiness scores and attribute enrichment, including coffee-specific attributes. 
+Shopify App Store
+
+AI ranking: AEO, AI Visibility	$9.99 / $24.99 monthly	5.0, 2 reviews	Audits, ranking, traffic, conversion tracking and descriptions. 
+Shopify App Store
+
+SKAW	Free; $19.99 monthly	5.0, 2 reviews	Catalogue readiness, missing attributes, metafields and Agent Query Simulator. 
+Shopify App Store
+
+ShelfScore	Free; $49 / $149 / $349 monthly	No reviews	Product-fact, access and schema audits; recurring and agency reporting. 
+Shopify App Store
+
+StoreHQ AI Readiness	Free	No reviews	Read-only catalogue and technical-readiness diagnosis. 
+Shopify App Store
+
+AIStoreAudit	Free	5.0, 4 reviews	46 checks across eight categories, including catalogue and images. 
+Shopify App Store
+
+AnswerAtlas	Free; $9 / $29 monthly	No reviews	Product, schema and FAQ auditing, plus traffic tracking. 
+Shopify App Store
+
+AI Commerce Ready	Free	No reviews	Crawler and catalogue checks with prioritised fixes. 
+Shopify App Store
+
+AIR RISE	Free; $9.99 / $19.99 / $39.99 monthly	No reviews	Feeds, structured data, product FAQs and AI traffic/conversion tools. 
+Shopify App Store
+
+URLAudit	Free; $29.99 / $99.99 monthly	5.0, 22 reviews	Broader recurring website, accessibility, speed and catalogue audits. 
+Shopify App Store
+What this actually establishes
+
+It establishes feature competition and low price anchors, not that all these products work well.
+
+That distinction matters. A dozen weak competitors would not automatically kill your opportunity. But their existence does kill the argument:
+
+“Nobody is really building this yet, so I can charge for being early.”
+
+Your customer would already encounter free audits, sub-$20 subscriptions and apps promising much more than auditing.
+
+A better interface or a more detailed score would therefore need to overcome a difficult question:
+
+Why is your recommendation demonstrably more useful—not merely more impressive—than the existing options?
+
+2. The “better version” I suggested already has competitors too
+
+These are more strategically important than the cheapest apps.
+
+Competitor	Business model / pricing	Why it threatens the differentiated version
+Naridon	Free; $49 / $249 / $899+ monthly, with credits	Advertises product-level AI visibility, competitors, recommended fixes and verification before publishing. Its homepage labels a testimonial as illustrative, so that is not independent outcome evidence. 
+naridon.com
+
+Lantern — lantern.is	Flex displayed at $99/month; credits and enterprise quotes	Advertises predictive visibility, proposed changes, competitive analysis and attribution. This directly overlaps the counterfactual-optimisation concept. 
+Lantern
++1
+
+Azoma	Enterprise SaaS; usage/category-based charging	Uses synthetic customer profiles and large-scale prompting, alongside ecommerce content optimisation. This is particularly close to the synthetic-shopper thesis. 
+Business Insider
+
+Profound	$99 / $399 displayed; billing terms matter; enterprise custom	AI visibility, agents, analytics and a dedicated shopping offering. Importantly, ChatGPT Shopping is enterprise-only in its current comparison table. 
+Profound
+
+Peec AI	$95 / $245 / $495 monthly, with coverage quotas	Already offers shopping analytics and product comparisons; introduced AI-referral analysis on 11 September 2026. 
+Peec AI
++2
+
+True Fit	Enterprise quote	Markets fit-aware shopping agents and an interface for supplying fit intelligence to other agents. 
+True Fit
+
+Lily AI / LilyMax	Catalogue/ad-spend-based commercial model	Advertises product-data gap analysis, enrichment and controlled testing—not just descriptive audits. 
+Lily
++1
+
+The important correction: “Send agents through your catalogue, find why they cannot recommend products, fix the missing information and measure again” is a competitive category, not a defensible product thesis by itself.
+
+The remaining alternatives matter because they can bundle your functionality
+
+They do not all solve the exact same problem. Some compete for the same budget; others already own the catalogue, content or analytics workflow into which your feature would fit.
+
+Competitor or group	Commercial model and competitive relevance
+Scrunch / Sitecore	$300 / $500 month-to-month, versus $250 / $417 on annual billing. Prompt/persona monitoring, auditing and AI-oriented content delivery. Sitecore completed its acquisition on 3 June 2026. 
+Scrunch
++1
+
+OtterlyAI; AthenaHQ	Otterly lists $29 / $189 / $489 monthly. Athena lists a free credit allowance and $295/month Starter. Both put prompt/engine coverage behind usage limits. 
+Otterly
++1
+
+Writesonic; SEO.AI	Content creation and execution alternatives. Writesonic displays $79 / $199 / $399 per month billed annually; I did not establish SEO.AI’s exact current price. 
+Writesonic
++1
+
+Evertune; Brandlight; Bluefish AI	Enterprise AI-visibility/marketing platforms. I did not verify current public numerical pricing, product revenue or churn. 
+Evertune
++2
+
+Goodie; Gumshoe	Goodie displays $399 / $999 tiers with billing-cycle qualifications and commerce/action features. Gumshoe offers a free audit followed by $99 / $299 plans, including personas and buyer criteria. 
+higoodie
++1
+
+Ahrefs Brand Radar	$199 per index/month or $699 for all indexes; existing search-data and analytics distribution. 
+Ahrefs Help Center
+
+Semrush; Adobe LLM Optimizer	Existing SEO and enterprise optimisation products can bundle AI visibility. Adobe completed its Semrush acquisition on 28 April 2026. 
+Adobe Newsroom
++1
+
+Elmo	Advertises free self-hosted monitoring software and managed service from $29/month. Self-hosting still incurs infrastructure/API costs. 
+Elmo
+
+Kiwi Size Chart & Recommender	Free; $7.99 / $14.99 / $26.99 base monthly tiers, with relevant order-volume add-ons. Established adjacent sizing competitor. 
+Shopify App Store
+
+Feedonomics; DataFeedWatch	Feed/catalogue management businesses, respectively quote-led and tiered. They already operate the product-data workflow that can supply additional shopping destinations. 
+Commerce
++1
+
+The danger is not that you must beat every company in this table. It is that each direction you might move to escape commoditisation already has an incumbent with a relevant advantage.
+
+3. Revenue: there is real money here, but very little evidence about the small-app economics
+
+Here is the financial evidence I would actually use.
+
+Company	What is supportable	What it does not establish
+Peec	TechCrunch reported $10 million in annualized revenue for Peec on 23 May 2026. 
+TechCrunch
+	Realised annual revenue, profitability, current September revenue or churn.
+Azoma	The company reports seven-figure revenue over ten months and profitability in 2025. Exact figures and audited accounts were not established. 
+azoma.ai
+	A current revenue run rate, margins, or retention.
+Profound	Officially announced a $96 million Series C at a $1 billion valuation in February 2026. 
+Profound
+	Revenue. Funding and valuation are not customer receipts.
+Lantern	Reporting describes a $3.1 million seed round in 2025. 
+Business Insider
+	Revenue, profitability or renewals.
+Scrunch	Its acquisition by Sitecore is confirmed. 
+Sitecore
+	Publicly verified product revenue or churn.
+Direct Shopify apps above	Public prices, feature descriptions and varying amounts of review evidence.	Paid installs, recurring revenue, profitability or cohort retention.
+
+I would not multiply review counts by an assumed review rate and subscription price. That would stack unknowns: free versus paid users, historical versus active users, discounts, cancellations and tier mix.
+
+Nor would I treat revenue shown inside a product’s marketing dashboard as the software company’s revenue. It may represent example merchant attribution, not the vendor’s sales.
+
+The financial conclusion is therefore narrower than “the market is bad”: the market can support businesses, but the public evidence does not validate the economics of your proposed low-cost Shopify entrant.
+
+4. Reviews: the headline ratings are much less convincing than they look
+IndexGPT shows the exact customer-expectation problem you would inherit
+
+A one-star review dated 23 March 2026, after approximately four months’ use, reported only four AI visits. The developer responded that identified issues had previously been explained but the merchant had not implemented the necessary changes. 
+Shopify App Store
+
+That does not prove the app failed. It exposes a business problem:
+
+The merchant buys a growth outcome. The software delivers diagnosis. Implementation remains somebody else’s responsibility.
+
+When results disappoint, you may be technically correct and still lose the customer.
+
+Several perfect ratings are based on almost no elapsed time
+
+Catalyst’s sole review was posted after six minutes. Burnish’s two reviews were posted after seven and eight days. Those reviews can credibly describe onboarding, usefulness or support; they cannot demonstrate long-term incremental profit or renewal behaviour. 
+Shopify App Store
++1
+
+I am not alleging fabricated reviews. I am saying the evidence answers a much easier question than the one you need answered.
+
+Larger tools have a different problem: customers pay for analysis they struggle to act on
+
+Public Profound reviews include praise for reporting and visibility alongside concerns about cost, annual commitment and converting metrics into clear actions. One May 2026 review described a client being unable to afford an annual commitment after its initial month. Some reviews are labelled incentivised, which is relevant context—not proof they are invalid. 
+G2
+
+This creates a difficult choice for your product: remain inexpensive and largely self-service, or become more actionable by providing substantial human assistance.
+
+Fashion software brings operational work, not just interesting AI
+
+Kiwi has a much larger review base: 4.7 from 1,211 reviews. Examples include support praise, billing complaints and frustration about order-volume-related charges. In one September billing complaint, the developer said the issue was resolved with an app credit. 
+Shopify App Store
+
+The lesson is not “Kiwi is bad.” It is that sizing products involve implementation, pricing disputes, migration and support—the less glamorous work your fashion-focused version would also inherit.
+
+For several enterprise competitors, review-page access or the available sample was insufficient for a balanced assessment. Those limitations are recorded in the dossier rather than replaced with invented complaints.
+
+5. Shopify is not merely a future threat. It already weakens several reasons to buy your app
+A. The basic audit already has a zero-price substitute
+
+Shopify offers its own AI product-readiness scanner. Its existence does not prove the scanner is excellent, but it means your free lead-generation audit would be competing against the platform’s own free lead-generation and education tool. 
+Shopify
+
+B. Basic product discovery is increasingly native infrastructure
+
+Shopify’s current documentation says merchants do not need additional action for eligible products to be discovered through Shopify Catalog by ChatGPT. OpenAI likewise documents the existing Shopify product-data integration. Discovery eligibility is not a promise of recommendation or ranking. 
+Shopify Help Center
++1
+
+That distinction damages the pitch “pay us so AI can find your products.” The remaining paid claim must be more specific and harder to prove.
+
+C. Store knowledge and AI-question analysis are also being absorbed
+
+Shopify’s free Knowledge Base app provides FAQs, answers and analytics about questions AI systems ask. Its current rating is only 3.6 from 29 reviews, with examples raising language and inaccurate-store-information issues. It is not perfect—but you are still competing against a native, free alternative. 
+Shopify App Store
+
+D. Moving to WooCommerce or another platform is not a complete escape
+
+Shopify’s Agentic Plan is explicitly available without running a Shopify online storefront. It advertises no monthly fee, with payment when selling, and connects external commerce infrastructure to agentic channels. 
+Shopify
+
+Therefore, “Shopify will absorb this, so I will support other platforms” is not sufficient differentiation.
+
+E. Shopify is helping define the underlying commerce protocols
+
+Shopify and Google announced work on the Universal Commerce Protocol in January 2026. That points towards more structured commerce interactions, rather than requiring every agent to navigate every merchant’s website visually. 
+Shopify
+
+My inference: Shopify benefits when more commerce flows through its infrastructure. It can justify subsidising catalogue readiness and connectivity in ways a standalone audit subscription cannot.
+
+F. Eligibility and checkout details complicate your promises
+
+The current Shopify ChatGPT channel requires merchants to sell to US customers, although the merchant can be based elsewhere. It currently redirects buyers to the merchant’s checkout; it is not a Shopify-admin toggle for native ChatGPT checkout. Standard payment-processing fees remain, but there is no additional ChatGPT selling fee. 
+Shopify Help Center
+
+A UK-focused app must distinguish a fixable product-data issue from channel eligibility, geographic availability or a checkout flow that simply works differently from the marketing story.
+
+6. The hardest technical problem is whether your measurements mean anything
+
+Your proposed product mixes several different outcomes:
+
+Outcome	What measuring it would establish
+A crawler can access the page	Technical accessibility
+A product exists in a feed/catalogue	Distribution eligibility
+A model can extract the correct attributes	Information quality
+A product appears for sampled prompts	Visibility within that sample
+A product is selected for a particular buyer	Recommendation suitability
+A merchant receives an order	Attributed commerce
+Your changes caused an otherwise absent profitable order	Incremental economic value
+
+The dangerous product is one that measures the first four and sells the last one.
+
+A. There is no single “ChatGPT rank”
+
+OpenAI describes shopping results as influenced by the user’s request and context, including memory/custom instructions where applicable, alongside product information and factors such as price and availability. 
+OpenAI Help Center
+
+So “your visibility improved from 34 to 61” is incomplete without explaining the prompts, locations, context, dates, engine surfaces and weighting.
+
+A merchant-specific prompt generator creates an additional problem: you can accidentally generate questions tailored to the catalogue you already know. That may produce reassuring scores without resembling actual buyer demand.
+
+B. A homemade agent is not the production shopping system
+
+An API model with web search, your own browser agent and the consumer shopping interface are different test environments. A result in one should not be represented as an observation in another.
+
+There is a concrete example: Ahrefs explicitly says its Claude coverage uses the official Claude API with web search, and that increased costs restricted that coverage to custom prompts rather than its full dataset. 
+Ahrefs
+
+That is not an accusation against Ahrefs; it illustrates why methodology needs to be disclosed. Your software must say exactly what it tested.
+
+C. The model’s explanation is not a causal diagnosis
+
+Imagine an agent chooses a competitor, then tells you:
+
+“Their product had clearer sizing information.”
+
+That is a useful hypothesis. It does not establish that adding sizing information would change the production recommendation.
+
+The actual difference could be availability, price, retrieval coverage, reputation or the sampled prompt. A persuasive generated explanation can be much easier to produce than a correct diagnosis.
+
+D. My earlier counterfactual suggestion was overstated
+
+I previously suggested improving an unpublished catalogue representation, re-running synthetic shoppers and showing predicted recommendation lift.
+
+That is a simulation experiment—not a real-world A/B test.
+
+It can tell you that your test system behaves differently when given different information. It cannot, by itself, establish that the real shopping platform will ingest the change, retrieve the product differently or generate additional purchases.
+
+Without validation against live outcomes, the product risks becoming a system that writes content to impress its own evaluator.
+
+E. More synthetic data is not automatically a moat
+
+Twenty million synthetic shopping scenarios could still be cheap for a competitor to reproduce.
+
+The harder assets would be representative real shopping intents, accurate product ground truth, linked purchase/return outcomes, and evidence that particular interventions improve those outcomes. Their value comes from validity and access—not merely volume.
+
+F. Actual-channel monitoring has access and maintenance risks
+
+Automated extraction from consumer interfaces cannot simply be assumed permissible or dependable. OpenAI’s consumer terms restrict automated/programmatic extraction, while business/API use is governed separately; the appropriate access arrangement needs checking for each channel. 
+OpenAI
++1
+
+This does not establish that competitors violate terms. It means “we will just automate every chatbot” is not a settled operating model.
+
+7. Fashion makes the problem more valuable—but also much harder
+
+This is where I most need to correct the previous enthusiasm.
+
+True Fit already markets agents that understand detailed fit attributes and can supply fit intelligence to other agents. Its claimed advantage includes years of fit and purchase/return feedback. Lily already positions catalogue enrichment alongside testing. 
+True Fit
++1
+
+Your proposed fashion audit faces a fundamental issue:
+
+Finding missing measurements is cheap. Obtaining reliable missing measurements is not.
+
+A model cannot honestly fill in an unknown hem opening, garment waist or inseam because the merchant forgot to publish it.
+
+There is also a distinction between body measurements and garment measurements. A waistband measurement is not automatically the intended wearer’s waist measurement; fit depends on ease, stretch, cut and preferences. A photograph without reliable scale and geometry does not uniquely determine physical dimensions.
+
+Therefore, your app may produce a very accurate report whose action item is:
+
+“Measure these hundreds of variants, resolve inconsistent supplier charts and photograph the missing views.”
+
+That is potentially useful—but it transfers a sizeable operational task to the merchant.
+
+The adversarial question becomes:
+
+Will they pay you every month to repeatedly identify work they lack the resources to perform?
+
+And when you move from “information completeness” to “this item will fit this person,” you take on a much more consequential accuracy problem. You would need evidence about actual fit and returns, not merely higher agent confidence.
+
+8. Even genuinely useful recommendations might not justify the subscription
+
+Here is an illustrative merchant scenario, not an estimate of current market averages.
+
+Assumption	Value
+Monthly store sessions	50,000
+Assumed AI-referred share	0.5%
+AI-referred sessions	250
+Conversion rate on those visits	4%
+Existing AI-referred orders	10
+Additional orders caused by your app, assuming 20% lift	2
+Contribution profit per incremental order	£25
+Incremental monthly contribution	£50
+
+A £99/month app would not pay for itself in this scenario—even though it genuinely improved the channel by 20%.
+
+At £25 contribution per additional order, a £99 subscription needs roughly four genuinely incremental orders, before implementation effort. A £199 subscription needs roughly eight.
+
+The relevant quantity is contribution after product cost, fulfilment, processing and expected returns—not gross sales.
+
+Attribution makes this particularly easy to misunderstand
+
+A dashboard saying “£2,000 revenue from ChatGPT” does not mean your app created £2,000.
+
+Those orders might have arrived through Shopify’s native integration anyway. Or an unrelated promotion, price reduction, stock change or wider growth in AI shopping could explain the increase.
+
+You need evidence separating:
+
+“The channel produced sales” from “our intervention produced additional profitable sales.”
+
+The channel itself should not be dismissed: Reuters reported Adobe data showing AI-referred visits generated 41% higher revenue per visit in June 2026. That supports the importance of AI shopping, not the effectiveness of any particular optimisation app. 
+Reuters
+
+9. Your own costs can rise much faster than the subscription price
+
+Consider a deliberately broad monitoring package:
+
+100 prompts × 5 engines × 3 repetitions × 30 days = 45,000 runs per merchant per month.
+
+These are hypothetical cost sensitivities, not quoted API prices:
+
+Assumed fully loaded cost per run	Monthly testing cost
+£0.002	£90
+£0.01	£450
+£0.05	£2,250
+
+Not every customer needs this coverage. You can reduce frequency, repetitions or engines; cache results; or share some benchmark queries.
+
+But those choices reduce the breadth or freshness of what you can honestly promise.
+
+The existing usage limits are revealing: Burnish sells 1,500–7,500 analysed answers monthly, while other competitors meter prompts, engines or credits. Unlimited high-quality measurement is not the default offer. 
+Shopify App Store
++1
+
+There is a second cost trap: support.
+
+If merchants need help interpreting reports, fixing themes, reconciling supplier information and understanding why sales have not increased, a low-priced software product starts behaving like a consulting service.
+
+That can still be a business—but it is not the same economics as a largely self-service extension.
+
+10. Churn is the biggest missing financial variable
+What I could not establish
+
+I found no credible public product-level churn disclosure for the competitors examined.
+
+For recently launched apps, there is also little elapsed time from which to establish long-term retention. Review counts and free-trial conversions cannot fill that gap.
+
+What broader evidence suggests—and does not suggest
+
+ChartMogul’s December 2025 analysis examined approximately 3,500 software businesses, including roughly 200 AI-native companies. Its annualized 2025 findings for AI-native products included:
+
+Monthly price segment	Gross revenue retention	Net revenue retention
+Under $50	23%	32%
+$50–$249	45%	61%
+Above $250	70%	85%
+
+These are not Shopify-app benchmarks or competitor-specific churn rates. The dataset mixes business types, and revenue retention is not customer retention: a 23% gross revenue-retention figure does not mean exactly 77% of customers cancelled. 
+ChartMogul
+
+Still, it is a warning against assuming that low-priced AI experimentation naturally becomes durable recurring revenue.
+
+What churn would do to your economics
+
+Another hypothetical scenario: £49/month, 80% gross margin, constant monthly customer churn and no expansion.
+
+Monthly customer churn	Original customers remaining after 12 months	Simplified gross-profit lifetime value
+3%	69%	£1,307
+7%	42%	£560
+12%	22%	£327
+
+The simplified lifetime-value calculation is monthly gross profit divided by churn; it excludes discounting, cohort variation and expansion.
+
+At £49/month, approximately 205 paying customers gets you to £10,000 monthly recurring revenue. At 7% monthly churn, you need approximately 14 replacement customers every month just to remain flat.
+
+That is before growth—and before paying yourself.
+
+Your product has a plausible cancellation sequence:
+
+Install → repair obvious issues → monitor for a while → see no clearly attributable improvement → cancel.
+
+New catalogue items and changing engines could create recurring work. But you would need evidence that merchants value that recurring work enough to keep paying.
+
+11. Other ways the business can fail even when the software works
+
+The real bottleneck may be outside your control. Better product information cannot fix an uncompetitive price, unavailable stock or an unsuitable product. Google also explicitly says its AI search features do not require special AI text files or special schema beyond normal eligibility requirements. A proprietary checklist must not turn optional practices into invented necessities. 
+OpenAI Help Center
++1
+
+Free auditing may attract curiosity rather than buyers. A merchant checking a score is not necessarily willing to pay, implement changes or renew. Free scans also consume resources before there is demonstrated demand.
+
+Automation can increase the downside. An erroneous measurement, material claim or shipping statement is more consequential than a slightly worse title. A responsible product needs evidence, approval and rollback—not simply a “fix everything” button.
+
+Expanding platform support increases maintenance before proving demand. Supporting multiple catalogue structures, themes, languages and integrations does not resolve whether anyone values the result. It can simply multiply the implementation burden.
+
+Moving upmarket is not a pricing toggle. Enterprise customers may support larger contracts, but you would then be selling against established providers and integrating with existing operational systems. The software, sales process and support expectations change together.
+
+Agencies are a possible channel, but not a free acquisition strategy. Several competitors already offer agency or white-label functionality. An agency may want to reuse one licence across clients while expecting customised reporting and support. 
+Shopify App Store
++1
+
+These are business-model risks, not proof of inevitable failure. Collectively, however, they make “build a useful extension and charge monthly” an insufficient plan.
+
+12. What would have to be true before I would stop rejecting it?
+
+I would require four pieces of evidence—not another feature list.
+
+1. Merchants pay after being shown the alternatives.
+A pilot customer should know Shopify has native tools and that inexpensive competitors exist. Payment secured through ignorance of alternatives is weak validation.
+
+2. You identify a consequential failure the alternatives miss.
+Not a different score or more suggestions: a reproducible problem affecting real product selection, factual accuracy or profitable conversion.
+
+3. Your intervention improves an external outcome.
+Use live-channel observations and a credible experimental or comparison design. Do not use the same synthetic evaluator as both the optimiser and the sole judge of success.
+
+4. Customers renew after the initial repair work.
+Measure retained paying cohorts at 90 and 180 days, alongside actual testing and support costs. Renewal should reflect ongoing value, not merely an annual commitment that prevents immediate cancellation.
+
+Until those conditions are demonstrated, I would not invest in a broad subscription product.
+
+Bottom line
+
+The original AI-readiness audit is commoditised. The more sophisticated version is already contested. The fashion version requires real product and fit data that a clever evaluator cannot manufacture.
+
+The likely failure is not that you cannot build it. It is that you build something technically impressive which merchants enjoy trying, struggle to implement, cannot connect to incremental profit, and eventually cancel.
+
+Your missing advantage is not another AI feature. It is credible evidence that you can produce a recurring, economically meaningful outcome better than the native tools and existing competitors.
+
+That is the case I would try to disprove before writing the app.
+
+Would a monthly watch for competitor launches, pricing changes and Shopify’s native features be useful?
+
+ai_commerce_competitor_dossier.html
+HTML
+ChatGPT can make mistakes. Check important info.
+Latest response
+
+
+
+
+Extra High
