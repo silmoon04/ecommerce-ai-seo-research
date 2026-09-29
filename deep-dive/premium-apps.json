@@ -1,0 +1,86 @@
+[
+  {
+    "id": "burnish",
+    "name": "Burnish",
+    "group": "Shopify AI apps",
+    "priceSummary": "$149/$299/$649 per month; annual discounts; 7/14-day trials on lower plans, no trial on Omnipresence. Limits scale from 1,500 to 7,500 answer reads and 300 to 2,000 monthly product optimizations.",
+    "financialEvidence": "Two App Store reviews (7-8 days) praise visibility/content structure and support; neither proves paid conversion or renewal. Vendor calls its attribution directional and explicitly says it is not a controlled trial. Actual profit unknown.",
+    "strengths": ["End-to-end monitoring, diagnosis, edits and remeasurement", "Detailed approval gates, dependency checks, before-state records and rollback", "Explicitly labels commercial measurement directional"],
+    "limitations": ["High entry price relative to unproven incremental contribution", "AI readiness and answer movement do not equal profitable lift", "Only two short-duration public reviews in captured listing"],
+    "merchantEvidence": ["OWN THE TREND reports better AEO structure after 8 days", "DAXUEN reports content optimization and helpful team after 7 days"],
+    "profitPressure": ["At $149+ monthly, renewal depends on ongoing value exceeding subscription and review-work costs; no vendor profit disclosed."],
+    "improvements": ["Offer a smaller paid catalog pilot", "Show denominators, uncertainty and distinct operational versus commercial outcomes", "Use randomized or matched product holdouts where feasible"],
+    "borrow": ["Earned autonomy", "Approval queue and rollback", "Dependency checks and audit trail", "Clear distinction between attribution and controlled proof"],
+    "avoid": ["Treating readiness score or attributed revenue as causal ROI", "Autonomous rewrites of already-good fields"],
+    "opportunity": "Product-level experiments connecting approved edits to contribution margin and durable query visibility.",
+    "test": "Pre-register sample size and outcomes; falsified if changes fail to beat unchanged controls on contribution or meaningful visibility while review burden remains high.",
+    "sources": [
+      {"label": "Shopify listing, plans and reviews", "url": "https://apps.shopify.com/burnish"},
+      {"label": "Burnish pricing", "url": "https://useburnish.com/pricing/"},
+      {"label": "How it works and measurement caveat", "url": "https://useburnish.com/what-it-does/"},
+      {"label": "Catalog actions and rollback", "url": "https://useburnish.com/features/catalog/"}
+    ]
+  },
+  {
+    "id": "storerank-ai",
+    "name": "StoreRank AI",
+    "group": "Shopify AI apps",
+    "priceSummary": "$29/$79/$149/$289 monthly Starter/Pro/Growth/Scale on vendor comparison and prior listing; current App Store extraction directly shows $29 Starter and $79 Pro. 14-day trial.",
+    "financialEvidence": "Shopify listing shows 28-29 five-star reviews in current snapshots. Some merchants praise usability, support or content; one says after about two months revenue impact was too early to measure. This does not establish paid retention or efficacy. Actual profit unknown.",
+    "strengths": ["Broad recurring suite spanning optimization, articles, monitoring and attribution", "Docs explain field-level drafts, previews, approval and default protection for passing fields", "Documents that recommendations cannot control external authority or model behavior"],
+    "limitations": ["First-touch attribution within 30 days associates orders with an AI source but does not prove causality", "Recurring content production may create maintenance/review load", "Vendor price boxes render $0 while comparison rows and Shopify show tiers"],
+    "merchantEvidence": ["One review reports five months using the app", "Several describe days/weeks; Magnum Bikes says revenue effect was too early to measure", "Reviewers praise support and editable brand-voice content"],
+    "profitPressure": ["Merchants may cancel when initial catalog backlog is fixed or attributed revenue fails to translate into incremental margin; no vendor profit disclosed."],
+    "improvements": ["Show attribution rules and uncertainty beside revenue", "Make recurring catalog maintenance and controlled tests visible", "Resolve pricing presentation and disclose actual scan cadence"],
+    "borrow": ["Needs-work triage", "Field-level editable drafts and previews", "Brand-voice controls", "Plain-language limits"],
+    "avoid": ["Equating llms.txt/schema with discoverability", "Promising AI sales from attributed orders"],
+    "opportunity": "Recurring catalog maintenance measured against holdout contribution margin rather than readiness scores alone.",
+    "test": "Falsified if stores cannot identify recurring work or controlled incremental gain after setup and renewal stops once initial fixes are complete.",
+    "sources": [
+      {"label": "Shopify listing, pricing and reviews", "url": "https://apps.shopify.com/storerank-ai"},
+      {"label": "Vendor pricing", "url": "https://www.storerank.ai/pricing/"},
+      {"label": "Product optimizer workflow and limits", "url": "https://help.storerank.ai/articles/9105371-how-to-use-the-ai-product-optimizer"},
+      {"label": "First-touch attribution method", "url": "https://help.storerank.ai/en/help/articles/0709433-how-to-use-the-ai-traffic-and-revenue-analytics"}
+    ]
+  },
+  {
+    "id": "geoffy",
+    "name": "Geoffy",
+    "group": "Shopify AI apps",
+    "priceSummary": "Vendor site says from £199/month; Shopify listing starts at $249/month, with $649 and $1,949 tiers. Currency and plan availability should be confirmed; Monitor and Influence are described as early access on vendor site.",
+    "financialEvidence": "PadelDogs and Shakeup report five months of use; PadelDogs reports traffic and sales rising. Reviews do not specify payment, plan, order values, margins or counterfactual. Self-reported association, not causal profit evidence. Actual profit unknown.",
+    "strengths": ["Visible product-page answers paired with matching structured data", "Claims checked against catalog data; unverified claims held", "Drift control and deliberate avoidance of stale duplicate price/availability data", "Pathway diagnosis distinguishes on-site and off-site gaps"],
+    "limitations": ["Price and availability differ between vendor site and Shopify listing", "Monitoring and Influence roll out in early access per vendor site", "Strong outcome statements exceed evidence from small review sample"],
+    "merchantEvidence": ["PadelDogs, small UK retailer, reports five months and higher traffic and sales", "Shakeup reports five months and more manageable AI-discovery preparation", "Ultimate Leather says ChatGPT named its wallet after guides were published; three days' use"],
+    "profitPressure": ["£199/$249 entry pricing needs repeat value beyond a one-time cleanup; merchants must maintain accurate product facts. No vendor profit disclosed."],
+    "improvements": ["Align pricing, currency and availability across channels", "Document sampling, geography and monitoring methodology", "Publish holdout results with margin outcomes and caveats"],
+    "borrow": ["Fact verification and refusal to invent vague claims", "Drift control", "Visible server-rendered page content", "Routing gaps to on-site fixes or off-site sources"],
+    "avoid": ["Guaranteeing products will be named", "Calling a holdout proof without randomization, power and commercial outcomes"],
+    "opportunity": "Fact-safe product enrichment plus off-site source acquisition guidance with controlled measurement.",
+    "test": "Falsified if verified edits fail to improve durable relevant answer inclusion or incremental contribution versus matched/held-out products, or merchants will not sustain the price.",
+    "sources": [
+      {"label": "Official product, pricing range and rollout status", "url": "https://geoffy.ai/"},
+      {"label": "Shopify plans and merchant reviews", "url": "https://apps.shopify.com/geoffy"},
+      {"label": "FAQ on data and implementation", "url": "https://geoffy.ai/docs/faq"}
+    ]
+  },
+  {
+    "id": "appearai",
+    "name": "AppearAI",
+    "group": "Shopify AI apps",
+    "priceSummary": "Free audit; $19.90 one-time for full 20-question audit, full competitor snapshots and content tips. No recurring paid tier shown.",
+    "financialEvidence": "One App Store reviewer explicitly says they paid $19.90 and reports 23 AI-attributed orders after 15 days. This confirms one reported purchase, not renewal or causal ROI; no baseline, margin, verification or control is provided. Actual profit unknown.",
+    "strengths": ["Low-friction price for a nontechnical merchant", "Copy/paste recommendations specify what to add and where", "Free preview supports evaluation before purchase"],
+    "limitations": ["One-time report offers limited recurring revenue absent follow-on value", "No ongoing paid monitoring tier shown", "Single review cannot establish broader satisfaction or efficacy"],
+    "merchantEvidence": ["AULA Official Store reports purchase and 23 AI-attributed orders after 15 days; no vendor response visible in extracted listing"],
+    "profitPressure": ["Low one-time ARPU means repeat purchases or service expansion would be needed for recurring revenue; buyer may implement once and leave. No vendor profit disclosed."],
+    "improvements": ["Add re-scan and change history after implementation", "Provide rationale/source for each recommendation", "Add recurring monitoring only where ongoing signal is demonstrated"],
+    "borrow": ["Free preview to paid full-report ladder", "Low one-time price", "Copy-paste implementation tips"],
+    "avoid": ["Treating AI-attributed orders as caused by the report", "Forcing subscription before recurring value exists"],
+    "opportunity": "Post-fix verification for small stores, including simple control comparison and contribution-margin capture.",
+    "test": "Falsified if buyers do not implement tips, return for a re-scan, or distinguish meaningful changes from answer variation.",
+    "sources": [
+      {"label": "Shopify plan and review", "url": "https://apps.shopify.com/appearai"}
+    ]
+  }
+]

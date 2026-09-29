@@ -1,0 +1,93 @@
+[
+  {
+    "id": "simprosys",
+    "name": "Simprosys Google Shopping Feed",
+    "group": "Feed and catalogue tools",
+    "priceSummary": "Shopify listing: from $4.99/month; tiered by catalog size (up to 500, 1,000, 5,000, 10,000 products) and 21-day trial. AI feed optimization add-on: $1 per 25 products, one-time. Variant inclusion in the product meter should be confirmed before direct SKU comparison. Snapshot 2026-09-29.",
+    "financialEvidence": "Private vendor financials (revenue, profit, CAC, churn, margin) not established in reviewed public sources. App Store rating/reviews and product age do not prove profitability.",
+    "strengths": ["Shopify-native feed setup and broad paid/social channel coverage", "Automated feed rules, metafield mapping, bulk edits, variant and market sync", "Error validation, scheduled and real-time updates, GTIN and performance tools", "Low entry plan and substantial public Shopify review footprint"],
+    "limitations": ["Public price is only a partial comparison because AI is a one-time add-on and tiers meter catalog size", "Reviewed public materials do not settle source lineage, approval, rollback and alert semantics; feature absence is unproven", "Product surfaces feed correctness and channel performance rather than query-level AI recommendation diagnosis"],
+    "merchantEvidence": ["Shopify App Store shows 4.9/5 and 4,898 reviews on snapshot date; strong public adoption/sentiment signal, not retention or efficacy evidence", "Recent positive reviews describe feed reliability and responsive support", "One Sep 2026 negative review reports consent-mode confusion and tracking/ad-spend impact; anecdote only, not incidence or independently verified causality"],
+    "profitPressure": ["Very low recurring entry price pressures generic Shopify feed QA monetization", "Deep app distribution and reviews raise customer acquisition/trust hurdle for newcomers", "One-time AI add-on monetizes optimization separately; economics unknown"],
+    "improvements": ["Expose source-to-output lineage, explicit approval state and reversible field-level edits if user interviews confirm these are missing in current workflow", "Make downstream propagation status and last observed channel state easy to audit", "Tie tracking/configuration changes to clear consent impact explanations"],
+    "borrow": ["Fast native Shopify onboarding", "Variant and market-aware sync", "Concrete rule and bulk edit controls", "Support as a visible product capability"],
+    "avoid": ["Competing on basic connection, mapping, validation or generic AI enrichment alone", "Treating a feed-health score as proof of AI visibility or profit lift"],
+    "opportunity": "Test whether merchants using this app need cross-channel, variant-level reconciliation of conflicting product facts, linked to a real buyer-query failure and verified propagation. This is a hypothesis, not proof of a product gap.",
+    "test": "Recruit current Simprosys users, screen-share a recent variant/data issue from detection through destination correction, record time, approvals, evidence, rollback and final shopper-facing state. Compare the existing workflow with a provenance-linked repair prototype; ask for paid pilot commitment only after demonstrating the unresolved case.",
+    "sources": [
+      {"label": "Shopify App Store price, rating, features and current reviews", "url": "https://apps.shopify.com/google-shopping-feed"},
+      {"label": "Simprosys support/help center and documentation index", "url": "https://support.simprosys.com/"},
+      {"label": "Simprosys product page", "url": "https://simprosys.com/product-feed-app-for-shopify"},
+      {"label": "Simprosys customer reviews collection (vendor-curated)", "url": "https://simprosys.com/customer-reviews"}
+    ]
+  },
+  {
+    "id": "datafeedwatch",
+    "name": "DataFeedWatch",
+    "group": "Feed and catalogue tools",
+    "priceSummary": "Vendor monthly USD: Shop $64 (1,000 SKUs, 3 feeds, 1 shop, daily sync); Merchant $84 (5,000 SKUs, 10 feeds, 2 shops, twice daily); Agency $239 (30,000 SKUs, 150 feeds, unlimited shops, five syncs/day); Enterprise custom. 15-day trial. Managed feed service starts at $750/month; coaching listed at $450/month. Match service and metering before comparison.",
+    "financialEvidence": "DataFeedWatch is part of Cart.com; reviewed sources do not disclose product-level or company profit, CAC, churn or contribution margin. Pricing and stated brand count do not establish profitability.",
+    "strengths": ["2,000+ channel integrations and Shopify Markets support", "Feed review checks correctness, missing data and GTIN validity", "Rules, previews, product/variant exclusions and uploaded product-ID lists", "AI title/description, category and attribute extraction with option to use source, rules or generated value", "A/B test support for AI titles, plus managed service and tiered support"],
+    "limitations": ["Plan price scales across SKUs, feeds, shops, sync cadence and service; a simple monthly number omits important scope", "Vendor’s performance and customer scale claims are not independent evidence", "Public material reviewed does not fully settle all history/rollback behavior; absence is not proven"],
+    "merchantEvidence": ["Vendor pricing page says 18,497+ brands worldwide; this is vendor-stated, not an audited active-customer count", "Shopify App Store snapshot showed 4.7/5 across 340 reviews", "The reviewed public pages do not provide a controlled merchant outcomes study; do not infer that a feature reliably causes profitable growth"],
+    "profitPressure": ["AI feed editing, QA, preview and exclusions are all monetized in an established paid product", "Expert service starts far above app pricing, indicating a separate high-touch segment and scope", "The public tier ladder anchors entry cost at $64/month for 1,000 SKUs, but financial performance is unknown"],
+    "improvements": ["Potentially make cross-source factual conflict resolution more explicit, if workflow research verifies the need", "Show a durable change/evidence trail linking source field, channel output and reviewed result", "Offer outcome verification for a specific buyer-intent failure rather than another generic feed score"],
+    "borrow": ["Let merchant choose source value, own rule or AI value", "Preview generated values before export", "Apply fixes selectively by product/channel and exclude variants deliberately", "Use feed checks with actionable resolution steps; give merchants a structured A/B test"],
+    "avoid": ["Rule-editor-first product positioning", "Claiming missing-attribute generation, AI titles or error checks as novel", "Comparing price without setup, feeds, update cadence, channel scope and human service"],
+    "opportunity": "Investigate whether shops still face costly unresolved truth conflicts across source catalog, Shopify Markets and destination feeds after using DataFeedWatch. A query-to-root-cause-to-approved-change loop is plausible but unproven as unmet demand.",
+    "test": "Observe 5-10 DataFeedWatch operators resolve the same class of catalog failure; record source choice, preview, approval, time and downstream state. Compare prototype results and seek paid pilot evidence. Stop if existing rules/AI/managed service already resolve the cases at acceptable cost.",
+    "sources": [
+      {"label": "Current pricing, AI controls, support tiers and services", "url": "https://www.datafeedwatch.com/pricing"},
+      {"label": "DataFeedWatch product page: feed QA and include/exclude capabilities", "url": "https://www.datafeedwatch.com/"},
+      {"label": "DataFeedWatch Google Shopping workflow and sync", "url": "https://www.datafeedwatch.com/integrations/google-shopping"},
+      {"label": "DataFeedWatch rules and exclusions article", "url": "https://www.datafeedwatch.com/blog/apply-rules-exclude-products-from-data-feed"}
+    ]
+  },
+  {
+    "id": "channable",
+    "name": "Channable",
+    "group": "Feed and catalogue tools",
+    "priceSummary": "Meter includes imported items, projects and channels, plus Core plan and modules; every unique variant, including size/color/language variants, counts as an item. Current 5K-item/2-project/6-channel package product page lists €59 Standard, €79 Plus, €89 Pro; prior USD snapshot had $69/$89/$104, so re-check selector/currency before quoting. Unlimited-time free trial cannot activate channel publishing; paid required.",
+    "financialEvidence": "Reviewed primary sources show public pricing but no P&L, CAC, churn, contribution margin or product-level profitability. Ratings and subscription tiers cannot determine whether the product is profitable.",
+    "strengths": ["Explicit tiered rules and quality checks with AI field mapping and suggested rule generation", "Plus AI generation of missing attributes, keywords and translation", "Bulk review/application of AI fixes", "Pro notifications, roles, version history/restore, activity log and up to 24 daily syncs", "2,500+ templates listed; page references over 3,000 channels"],
+    "limitations": ["Variant-inclusive item plus project/channel and add-on metering complicates cost forecasting", "Trial lets users configure but requires payment before exports activate", "Shopify listing snapshot and G2 review sentiment differ by population and timing; neither is a representative controlled sample", "Real-time, AI accuracy and claimed setup savings are vendor assertions"],
+    "merchantEvidence": ["G2 snapshot showed 54 reviews and 4.5/5; users praise integration, automation and support, while some report initial learning curve and cost concerns", "Shopify App Store snapshot showed 3.8/5 across 37 reviews and a displayed from-$104 price; scope and currency should not be assumed identical to current selector", "These platform-hosted reviews show reviewer sentiment, not overall satisfaction, retention or causal business outcomes"],
+    "profitPressure": ["Directly overlaps proposed AI-assisted QA, attribute mapping, bulk approval and restore workflow", "Count-by-variant and multi-axis package charges can increase cost with assortment complexity; customer margin impact unknown", "No public financial disclosures reviewed, so profitability cannot be assessed"],
+    "improvements": ["Make total price transparent against exact imported variants, projects, channels and modules", "Guide new users through rule and mapping setup with a safe first publish", "If users identify residual need, connect source-fact evidence to an observed external discovery failure"],
+    "borrow": ["AI suggestions that operators can review before applying", "Field and rule versioning with restore", "Clear plan meter and package examples", "Activity logs and proactive data checks"],
+    "avoid": ["Broad AI feed QA/fix claims", "Opaque auto-generation without review", "SKU pricing that obscures variants, projects or channels"],
+    "opportunity": "Potential differentiation is factual provenance and diagnosis of ambiguous cross-source/variant truth tied to an actual buyer-intent outcome. Docs establish Channable’s remediation workflow; they do not prove or disprove this adjacent use case.",
+    "test": "Ask Channable merchants to screen-share a recent conflict between source values and channel requirements. Measure existing resolution time, false fixes, approvals and history/restore use; test if an evidence-linked discrepancy report saves enough time or risk to support paid use.",
+    "sources": [
+      {"label": "Current product capabilities, 5K package pricing, error and AI workflow", "url": "https://www.channable.com/products/product-feed-management-tool"},
+      {"label": "Channable pricing mechanics, item variant count and trial limits", "url": "https://www.channable.com/pricing?currency=usd"},
+      {"label": "AI attribute review and approval workflow", "url": "https://www.channable.com/products/ai-product-listing/attributes"},
+      {"label": "G2 customer review page", "url": "https://www.g2.com/products/channable/reviews"},
+      {"label": "Shopify App Store listing and reviews", "url": "https://apps.shopify.com/channable"}
+    ]
+  },
+  {
+    "id": "feedonomics",
+    "name": "Feedonomics",
+    "group": "Feed and catalogue tools",
+    "priceSummary": "Custom quote based on SKU count, channel type/count and service level; vendor says it does not take a percentage of revenue. Quote-led full-service/enterprise positioning is not directly comparable with low-cost Shopify app subscriptions.",
+    "financialEvidence": "No reviewed source discloses company/product revenue, profit, CAC, churn or margins. Feedonomics being part of Commerce/BigCommerce and publishing enterprise case studies does not prove it is profitable or unprofitable.",
+    "strengths": ["Ingest from ecommerce, PIM, database, API, SFTP, URL and common file types", "Normalization, required-field validation, rule/AI enrichment and channel-specific mappings", "Scheduled, delta and on-demand exports across 2,000+ destinations", "Advertised anomaly alerts, hard stops, inventory buffers, retry conditions, sampling QA, governance/error dashboard", "Full-service feed managers and AI/AEO/agentic commerce positioning"],
+    "limitations": ["Quote-led price prevents public cost comparison without matching scope and service", "Higher operational breadth/enterprise workflows are not the same buyer segment as small Shopify self-serve", "Reviewed docs do not fully specify per-field lineage, human approval gates, rollback guarantees or query-level outcome measurement; unverified is not missing", "Case study outcomes are vendor-published and not independently validated here"],
+    "merchantEvidence": ["Euro Car Parts vendor case reports GMC eligibility +20% at onboarding and GTIN coverage rising 58% to 74% in six months; attributed customer story, no independent causal verification", "APG & Co vendor case reports ROI +86% and CPC -48% after feed/campaign segmentation; not a controlled study reviewed here", "G2 snapshot showed 376 reviews and 4.4/5; sampled users praise flexibility/support and mention learning curve or support timing concerns", "Case metrics and G2 ratings show proof points and reviewer sentiment, not population-wide outcomes or profitability"],
+    "profitPressure": ["Deep product/data operations, QA and human services make generic catalog repair a poor standalone wedge", "Custom service-level quote spans substantially different deployments, so price pressure cannot be inferred from app tiers", "Vendor’s claimed customer-level ROAS/time-saving metrics are not company financials"],
+    "improvements": ["Test whether smaller teams need an affordable, self-serve subset of provenance-linked diagnosis and safe repair", "Expose evidence, approval, propagation status and exact destination observation clearly if operators say these steps are opaque", "Validate query-level discovery measurement instead of relying solely on feed/ad metrics"],
+    "borrow": ["Ingest-normalize-enrich-syndicate-protect operating model", "Hard stops and anomaly alerts before export", "Channel-specific transformations and human expert support", "Delta syncs, inventory buffers and QA sampling"],
+    "avoid": ["Enterprise connector-count competition", "Promising causal revenue lift from curated case studies", "Assuming Feedonomics lacks controls not spelled out on reviewed public pages"],
+    "opportunity": "A lighter product may help teams bridge observed buyer-query failures to conflicting canonical product facts and approved corrections, then verify destination propagation and repeated outcomes. This is a hypothesis; Feedonomics already covers a broad portion of data operations.",
+    "test": "Interview midmarket/small merchants and operators who have evaluated or use Feedonomics. Collect a real failure, prove the existing stack cannot resolve it efficiently, compare prototype workflow and outcome trace, and request a paid pilot. Include holdout products/queries and do not promise profitability lift without contribution-margin evidence.",
+    "sources": [
+      {"label": "Current quote-led pricing and pricing variables", "url": "https://feedonomics.com/pricing/"},
+      {"label": "Platform ingest, validation, alerts, hard stops, AI enrichment and sync docs", "url": "https://feedonomics.com/product/how-it-works/"},
+      {"label": "Product feed optimization and testing claims", "url": "https://feedonomics.com/product/how-it-works/optimization/"},
+      {"label": "Euro Car Parts customer case", "url": "https://feedonomics.com/success-stories/euro-car-parts/"},
+      {"label": "APG & Co customer case", "url": "https://feedonomics.com/success-stories/apg-and-co/"},
+      {"label": "G2 customer review page", "url": "https://www.g2.com/products/feedonomics/reviews"}
+    ]
+  }
+]

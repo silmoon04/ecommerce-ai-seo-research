@@ -1,0 +1,68 @@
+[
+  {
+    "id": "kedra-ai-index",
+    "name": "Kedra AI Index",
+    "group": "Shopify AI apps",
+    "priceSummary": "Free; Grow $25/month; Pro $79/month; Scale $199/month. Scans, tracked questions, fixes, markets and competitors vary by tier.",
+    "financialEvidence": "No public financial statements, profit, CAC, churn, or paid-retention data located. Shopify reviews are not financial evidence.",
+    "strengths": ["Approved drafted fixes are explicitly advertised.", "Combines prompts and competitor tracking, catalog recommendations, crawler checks, structured data/feed claims, and AI-referred sales analytics.", "Shopify listing has 47 reviews and 4.9 stars as accessed 2026-09-29; individual review claims remain unverified."],
+    "limitations": ["Public plan limits constrain tracked questions, markets and fixes.", "Checked public pages do not explain rollback, exact source provenance, repeatable sampling, or post-change propagation guarantees; these details remain unknown.", "A review reports a 100/100 readiness score within hours, raising a product-design risk of score saturation."],
+    "merchantEvidence": ["A July 20, 2026 reviewer said product title, variant and schema fixes moved their score from the low 70s to 91 and described monthly use after about two months; anecdotal, not independent.", "A May 27, 2026 reviewer reported 100/100 after about four hours; not proof of recommendations or sales lift."],
+    "profitPressure": ["Inference only: free access and $25 entry constrain revenue per small store while broad scanning and support may cost money. Higher tiers and limits can support expansion. Profitability is unknown."],
+    "improvements": ["Diagnose which conflicting value across canonical Shopify fields, variants, markets and feeds is authoritative.", "Source provenance, approval, rollback and propagation verification are existing competitive controls; improve by applying them to target-specific conflicts."],
+    "borrow": ["Approval before changes, ranked fixes, and live crawler fetch checks."],
+    "avoid": ["Do not treat readiness scores, crawler visits or attributed orders as causal lift."],
+    "opportunity": "Potential gap: determine which store-specific value is authoritative when Shopify, a variant/market and destination feed disagree. Provenance, approval, rollback and propagation are controls, not unique whitespace.",
+    "test": "Falsified if merchants can already resolve cross-field and cross-feed conflicts with Kedra or existing feed tools and will not pay beyond those plans for a target-specific audit.",
+    "sources": [
+      {"label": "Kedra Shopify App Store listing and reviews", "url": "https://apps.shopify.com/kedra-ai-index"},
+      {"label": "Kedra AI Index product page", "url": "https://kedra.io/apps/kedra-ai-index/"},
+      {"label": "Burnish workflow: fact sources, approval, rollback and audit trail", "url": "https://useburnish.com/what-it-does/"},
+      {"label": "Geoffy FAQ: server HTML verification and commerce-owned price/availability", "url": "https://geoffy.ai/docs/faq"}
+    ]
+  },
+  {
+    "id": "catalyst-ai-seo",
+    "name": "Catalyst: AI SEO & ChatGPT",
+    "group": "Shopify AI apps",
+    "priceSummary": "Free diagnostics; Starter $19/month with 50 enrichments; Growth $49/month with 500. Extra enrichments listed at $0.05 and $0.03 respectively.",
+    "financialEvidence": "No public financial statements, profit, CAC, churn, or paid-retention evidence located.",
+    "strengths": ["Advertises product audits, generated descriptions/FAQs/JSON-LD, Google Merchant Center feed, AI visibility tracking and MCP endpoint.", "Screenshots show product-level scores and enrichment history; listing claims 17 readiness criteria.", "Visible per-enrichment overage pricing and monthly re-enrichment support operational use."],
+    "limitations": ["Enrichment volume and extra-product charges constrain or raise cost at catalog scale.", "Public pages do not specify approval, rollback, source provenance, feed propagation verification, or tracker prompt sampling; unknown rather than absent.", "Only one public review as accessed 2026-09-29; reviewer used the app six minutes, which does not establish durable value."],
+    "merchantEvidence": ["A July 15, 2026 reviewer called it simple and useful for agent traffic after six minutes; subjective, brief, no measured lift."],
+    "profitPressure": ["Inference only: enrichment and external tracking can consume model/query resources at $19/$49, while overages could cover some marginal costs or deter larger catalogs. Actual unit costs and profitability are unknown."],
+    "improvements": ["Distinguish target-specific conflicts across canonical records and destination feeds, then name the authoritative system.", "Source evidence, approval, rollback and post-sync checks are already competitive controls; connect them to the unresolved conflict."],
+    "borrow": ["Connect diagnosis to channel feed enrichment and make enrichment history visible."],
+    "avoid": ["Do not equate a readiness score, generated FAQs or mentions with causal recommendation lift."],
+    "opportunity": "Potential gap: identify which store-specific field conflict caused downstream disagreement and which system owns the correct value. Existing verification controls are not unique differentiation.",
+    "test": "Falsified if Catalyst or a feed tool already traces the same conflicts to canonical fields and verifies corrected destination state, with no incremental paid demand.",
+    "sources": [
+      {"label": "Catalyst Shopify App Store listing, pricing and review", "url": "https://apps.shopify.com/catalyst-public"},
+      {"label": "Catalyst FAQ", "url": "https://retail-solutions-ai.com/"},
+      {"label": "Burnish workflow: fact sources, approval, rollback and audit trail", "url": "https://useburnish.com/what-it-does/"},
+      {"label": "Geoffy FAQ: server HTML verification and commerce-owned price/availability", "url": "https://geoffy.ai/docs/faq"}
+    ]
+  },
+  {
+    "id": "aivisible",
+    "name": "AIVisible: GEO/AEO for ChatGPT",
+    "group": "Shopify AI apps",
+    "priceSummary": "Basic $10/month (20 checks, 1 product audit); Pro $29 (40 checks, 20 audits); Advanced $64 (150 checks, 50 audits); $0.25 per extra check/audit.",
+    "financialEvidence": "No public financial statements, profit, CAC, churn, cohort retention, or independent incremental-sales evidence located.",
+    "strengths": ["Combines query/answer mentions, bot access checks, product suggestions, llms.txt, and AI-attributed sessions/orders/revenue.", "Published quotas and metered overages make the cost ladder clear.", "Reviews provide setup feedback and one longer-use attributed-sales claim."],
+    "limitations": ["Basic provides one product audit per month; broader use is quota-bound and metered.", "Public pages do not clarify product write approval, rollback, source provenance, feed correction, or post-fix representation checks; unknown.", "AI-attributed revenue is not proof of incremental sales."],
+    "merchantEvidence": ["A June 8, 2026 reviewer with five months of use reported steady AI-attributed sales growth; self-reported correlation.", "March 31 and April 16, 2026 reviews praised automatic llms.txt generation and fast setup; neither demonstrates commercial lift."],
+    "profitPressure": ["Inference only: low price and small included quotas can limit revenue or perceived value; expanding query tracking and analytics can add variable costs. Overages may monetize use or discourage it. Profit unknown."],
+    "improvements": ["Expose sampled prompt, locale, timestamp, observed URL and answer variance; identify which conflicting merchant-owned fact is authoritative.", "Treat provenance, approval, rollback and destination checks as existing controls rather than novelty."],
+    "borrow": ["Query-level observations, recurring bot-access checks, per-assistant attribution and explicit metering."],
+    "avoid": ["Do not describe attributed sales as incremental revenue or assert llms.txt guarantees indexing."],
+    "opportunity": "Potential gap: identify and resolve a specific merchant's conflicting canonical, variant, market and feed values, then verify which destination accepted the authoritative value.",
+    "test": "Falsified if AIVisible or an existing feed product resolves the same conflicts across the merchant's markets and destinations, and merchants will not pay for a separate workflow.",
+    "sources": [
+      {"label": "AIVisible Shopify App Store listing, pricing and reviews", "url": "https://apps.shopify.com/aivisible-ai-geo-aeo"},
+      {"label": "DigitalSuits website", "url": "https://digitalsuits.co/"},
+      {"label": "Burnish workflow: fact sources, approval, rollback and audit trail", "url": "https://useburnish.com/what-it-does/"},
+      {"label": "Geoffy FAQ: server HTML verification and commerce-owned price/availability", "url": "https://geoffy.ai/docs/faq"}
+    ]
+  }
+]

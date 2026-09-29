@@ -1,0 +1,163 @@
+[
+  {
+    "id": "indexgpt",
+    "name": "IndexGPT",
+    "group": "Shopify AI apps",
+    "priceSummary": "Free; Essentials $16/month or $128/year; Premium $45/month or $432/year. Three-day trial on paid plans.",
+    "financialEvidence": "No public company-level profitability disclosure found in reviewed sources. Public subscription prices do not establish conversion, retention, cost or margin.",
+    "strengths": [
+      "Free entry tier with paid indexing, robots and llms.txt features, then prompt/content tools on Premium.",
+      "Established Shopify listing with Built for Shopify and 144 reviews at the snapshot.",
+      "Reviewers describe an intuitive dashboard and useful source visibility; merchant-reported outcomes are not causal evidence."
+    ],
+    "limitations": [
+      "Plan pages do not specify prompt counts, model coverage, sampling cadence or the precise definition of AI growth.",
+      "The product spans technical indexing, analytics and content generation, which can make the recurring job less focused.",
+      "Shopify Catalog and default discovery support weaken the standalone value of file generation and indexing as outcomes."
+    ],
+    "merchantEvidence": [
+      "Shopify listing snapshot: 4.9/5 from 144 reviews, with a generated summary mentioning ease of use and reported visibility, traffic and sales gains.",
+      "A merchant review described seeing which content AI systems use as sources. No controlled lift measurement was presented."
+    ],
+    "profitPressure": [
+      "If free usage is broad and monitoring/content generation consume recurring compute or support, low plan prices could pressure contribution; actual costs and margins are not public."
+    ],
+    "improvements": [
+      "Define tracked engines, query counts, cadence and score meanings.",
+      "Tie each recommended catalog fix to reversible changes and a dated before/after outcome record."
+    ],
+    "borrow": [
+      "Low-friction free entry and an upgrade path from audit to recurring monitoring."
+    ],
+    "avoid": [
+      "Do not imply that crawl notification or llms.txt files cause ranking or sales."
+    ],
+    "opportunity": "Test whether sourced product-fact fixes change inclusion in real shopping queries and produce incremental orders.",
+    "test": "Run merchant-approved fixes with a matched product holdout; falsified if users do not renew after baseline cleanup or holdouts show no useful downstream difference.",
+    "sources": [
+      {"label": "IndexGPT official product and pricing", "url": "https://indexgpt.app/"},
+      {"label": "Shopify App Store listing and reviews", "url": "https://apps.shopify.com/index-gpt?surface_detail=store-management-operations-analytics&surface_inter_position=1&surface_intra_position=3&surface_type=category&surface_version=redesign"},
+      {"label": "Shopify Catalog documentation", "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/products"}
+    ]
+  },
+  {
+    "id": "skaw",
+    "name": "SKAW: AI SEO & Agent Readiness",
+    "group": "Shopify AI apps",
+    "priceSummary": "Free; paid plan $19.99/month or $199.99/year. The same Shopify listing says both 14-day and 7-day free trial, an unresolved inconsistency.",
+    "financialEvidence": "No public profitability or financial disclosure found. No inference about actual profitability is justified.",
+    "strengths": [
+      "Links catalog audit findings to observed AI-agent visits and product URLs fetched.",
+      "Offers Sidekick briefs for applying catalog fixes and a query simulator for product-page testing on the paid plan.",
+      "Free tier exposes the score, real-time activity tracking, top 12 issues and suggested metafield definitions."
+    ],
+    "limitations": [
+      "Free plan shows only the top 12 product issues; one reviewer says they quickly used the allocation.",
+      "Reviewed listing does not specify event retention, bot verification method, telemetry coverage or simulator query volume.",
+      "Only two App Store reviews were visible in the snapshot, limiting public evidence about support and retention."
+    ],
+    "merchantEvidence": [
+      "Two reviewers valued seeing agent visits; one reported finding missing product categories and thin product specifications, then using Sidekick to implement changes.",
+      "StewArt Media reports two client sites had revenue and crawl activity rise after fixes, while acknowledging concurrent changes and the need for careful scheduling. This does not prove causality."
+    ],
+    "profitPressure": [
+      "If event ingestion, bot classification and repeated audits are high volume, a sub-$20 plan could face variable cost pressure; usage and cost are undisclosed."
+    ],
+    "improvements": [
+      "Distinguish verified crawlers from spoofable user agents and disclose event retention and coverage.",
+      "Version fixes and measure changes in query-level answerability after catalog edits."
+    ],
+    "borrow": [
+      "Connect first-party crawl telemetry to affected product records and actionable Sidekick briefs."
+    ],
+    "avoid": [
+      "Do not equate bot visits or score gains with shopper demand or revenue."
+    ],
+    "opportunity": "Join trustworthy catalog attributes with query-level answerability and outcomes merchants can verify.",
+    "test": "Interview and observe stores using the telemetry for prioritization; falsified if logs rarely change actions or willingness to pay ends once initial catalog issues are fixed.",
+    "sources": [
+      {"label": "SKAW Shopify listing, pricing and reviews", "url": "https://apps.shopify.com/skaw"},
+      {"label": "StewArt Media case commentary", "url": "https://stewartmedia.com.au/the-agentic-first-web-is-already-here/"}
+    ]
+  },
+  {
+    "id": "wprobo-ai-search-visibility",
+    "name": "WPRobo AI Search Visibility",
+    "group": "Shopify AI apps",
+    "priceSummary": "Free up to 25 products; Starter $9.99/month up to 500; Growth $29.99/month up to 2,000; Pro $79.99/month up to 5,000. USD, recurring every 30 days.",
+    "financialEvidence": "No public financial or profitability disclosure found. Product pricing and one review do not establish business performance.",
+    "strengths": [
+      "Describes a complete scan, prioritized fixes, merchant approval, structured data/files, citation tracking and reports workflow.",
+      "Privacy notice describes AI providers, deletion after uninstall, and approval before generated drafts publish.",
+      "Hallucination Guard is positioned to check incorrect AI claims against catalog and policy facts."
+    ],
+    "limitations": [
+      "Vendor page documents weekly Perplexity citation checks; other AI visibility claims are broader than the clearly described tracking surface.",
+      "The reviewed sources do not explain score formula, answer sampling, geography, citation attribution or API/scan quotas.",
+      "One review and a June 2026 launch mean little public evidence about support quality or retention."
+    ],
+    "merchantEvidence": [
+      "One Shopify reviewer says schema fixes were followed by category-answer appearances within about three weeks and setup took an afternoon. This is an uncontrolled merchant report; vendor replied with thanks."
+    ],
+    "profitPressure": [
+      "If flat plans include frequent multi-provider scans and image generation, API and support costs could pressure contribution; actual usage, cost, churn and margin are unknown."
+    ],
+    "improvements": [
+      "Publish scan cadence and coverage for each plan, with source URLs and repeatable evidence.",
+      "Connect approved edits to dated outcome records while separating citations, visits and orders."
+    ],
+    "borrow": [
+      "Approval before publication, catalog-grounded hallucination checks and weekly next-action reporting."
+    ],
+    "avoid": [
+      "Do not present an unexplained score or one citation as evidence of broad discoverability."
+    ],
+    "opportunity": "Provide a trusted validation loop that distinguishes accurate product facts, crawler access, citations, visits and attributable orders.",
+    "test": "Measure paid renewal after initial cleanup; falsified if merchants do not value QA and reporting enough to maintain the subscription.",
+    "sources": [
+      {"label": "WPRobo Shopify listing and review", "url": "https://apps.shopify.com/ai-search-visibility"},
+      {"label": "WPRobo official product page", "url": "https://aisearchvisibility.wprobo.com/"},
+      {"label": "WPRobo privacy policy", "url": "https://aisearchvisibility.wprobo.com/privacy-policy"}
+    ]
+  },
+  {
+    "id": "shop-rank-ai",
+    "name": "Shop Rank AI",
+    "group": "Shopify AI apps",
+    "priceSummary": "Free to install up to 50 products; Scale $9.99/month, described as $9.99 per 100 products, up to 3,000 products.",
+    "financialEvidence": "No public company-level profitability disclosure found. Prices, review counts and feature claims cannot establish profit or loss.",
+    "strengths": [
+      "Product-level audit and bulk fixes cover titles, descriptions, images, alt text and JSON-LD.",
+      "Free tier includes readiness report, three tracked searches, one competitor, one bulk AI fix and an AI-attributed revenue dashboard.",
+      "Zipify help material clarifies when product data is sent to OpenAI and PageSpeed Insights."
+    ],
+    "limitations": [
+      "The public listing does not explain the AI-attributed revenue method or whether it measures incrementality.",
+      "Reviewed pages do not explain weighting for the 17+ readiness factors or how ranks and query outcomes are sampled.",
+      "Recent brief positive reviews establish usability feedback, not sales impact."
+    ],
+    "merchantEvidence": [
+      "Shopify listing snapshot showed 4.8/5 across 29 reviews; recent visible reviews include short usability praise. No merchant-controlled causal evaluation was visible."
+    ],
+    "profitPressure": [
+      "Per-product pricing creates a clear scaling lever, but if image/model calls or support are generous at low rates they could pressure contribution; quotas, costs and margins are not public."
+    ],
+    "improvements": [
+      "Explain the revenue attribution window and signals, separating observed referral orders from causal lift.",
+      "Add bulk-change history, approval and rollback, then report engine/query evidence with timestamps."
+    ],
+    "borrow": [
+      "Product-level issue lists, one-click fixes and clear product-count pricing."
+    ],
+    "avoid": [
+      "Do not market AI-attributed revenue as causal proof or image quality as an AI-search outcome."
+    ],
+    "opportunity": "Offer independent repeatable tests across engines, recording query, timestamp, cited product URL and holdout outcome.",
+    "test": "Compare treated products to matched holdouts; falsified if merchants see no decision value beyond conventional SEO cleanup and do not renew after fixing the backlog.",
+    "sources": [
+      {"label": "Shop Rank AI Shopify listing and reviews", "url": "https://apps.shopify.com/shoprank-ai"},
+      {"label": "Zipify Help Center data disclosure", "url": "https://help.zipify.com/en/articles/14754086-is-my-product-data-sent-to-third-parties"},
+      {"label": "Zipify AI official product page", "url": "https://zipify.com/zipify-ai/"}
+    ]
+  }
+]

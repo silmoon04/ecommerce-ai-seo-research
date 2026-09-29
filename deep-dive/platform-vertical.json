@@ -1,0 +1,213 @@
+[
+  {
+    "id": "shopify-native-commerce-ai",
+    "name": "Shopify Catalog, Knowledge Base, Sidekick and Agentic readiness",
+    "group": "Platforms and vertical tools",
+    "priceSummary": "Catalog and native readiness functions are embedded in Shopify; Sidekick is included with the merchant's Shopify plan. Knowledge Base is a Shopify app. No separate price for the cited readiness tools is stated in the sources.",
+    "financialEvidence": "Shopify's official Sidekick page says it is included with a Shopify plan. No product-level revenue or profitability is disclosed for Catalog, Knowledge Base, readiness search preview, or Sidekick. Merchant-free features may support retention, platform differentiation and GMV/payment economics; that is a plausible inference, not a reported margin fact.",
+    "strengths": [
+      "Automatic eligible catalog syndication with continually updated catalog facts",
+      "Actionable product listing quality factors and search preview in the merchant admin",
+      "Sidekick can analyze store data and draft product content with merchant review",
+      "Merchant can map custom product data and manage channel access"
+    ],
+    "limitations": [
+      "Eligibility does not ensure inclusion, ranking or display in a particular AI answer",
+      "Connected channels control final ranking and can re-rank Shopify preview results",
+      "Product quality signals do not capture popularity, engagement or brand recognition",
+      "Merchant still has to supply facts, fix data gaps and approve changes"
+    ],
+    "merchantEvidence": [
+      "Official catalog guidance names titles, descriptions, images, categories, variants, options, prices and inventory as merchant-maintained inputs",
+      "Search preview calls out descriptions, image coverage, verified reviews, variant/option completeness and store policies",
+      "Shopify provides catalog mapping for custom fields and grouping logic"
+    ],
+    "profitPressure": [
+      "A Shopify-only basic AI readiness checker competes with native no-separate-charge features",
+      "Free merchant access is not evidence of an unprofitable product; product-level economics are undisclosed",
+      "External placement and outcomes are outside Shopify preview's control"
+    ],
+    "improvements": [
+      "Focus on independent cross-platform QA and source-backed validation",
+      "Measure whether merchants need help completing tasks after applying Shopify's own recommendations",
+      "Report data completeness separately from observed discovery and sales outcomes"
+    ],
+    "borrow": [
+      "Per-product findings tied to specific editable fields",
+      "Directional query preview with explicit uncertainty",
+      "Human review before publishing generated changes"
+    ],
+    "avoid": [
+      "Selling a generic Shopify-only readiness score as differentiated functionality",
+      "Promising ranking, citation or appearance in AI answers"
+    ],
+    "opportunity": "Serve mixed-platform merchants or provide evidence-backed remediation workflows beyond Shopify's catalog preview, with outcome attribution kept distinct from readiness metrics.",
+    "test": "On Shopify stores, compare an independent cross-platform audit against native recommendations, then measure paid conversion, resolved issues, merchant minutes and repeat usage.",
+    "sources": [
+      { "label": "Shopify Catalog", "url": "https://help.shopify.com/en/manual/shopify-catalog" },
+      { "label": "Agentic storefront management and search preview", "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/agentic-home" },
+      { "label": "Sidekick", "url": "https://help.shopify.com/en/manual/ai-powered-tools/sidekick" },
+      { "label": "Sidekick pricing", "url": "https://www.shopify.com/sidekick" },
+      { "label": "Knowledge Base and AI optimization guidance", "url": "https://help.shopify.com/en/manual/promoting-marketing/seo/optimizing-store-for-ai" }
+    ]
+  },
+  {
+    "id": "google-merchant-center-product-studio",
+    "name": "Google Merchant Center and Product Studio",
+    "group": "Platforms and vertical tools",
+    "priceSummary": "Free listings and Product Studio are explicitly free of charge; Merchant Center can be created without charge. No subscription price is listed for these tools.",
+    "financialEvidence": "Google's official help says Product Studio is free of charge and free listings show products at no cost. The cited product docs disclose no unit economics or standalone profitability. Support of product-data coverage and the advertising ecosystem is a plausible adjacent value inference, not a disclosed financial result.",
+    "strengths": [
+      "Product issue diagnostics and attribute guidance inside Merchant Center",
+      "Free exposure eligibility across Google surfaces including Gemini, Search and Shopping",
+      "Product Studio creates or edits product images and videos",
+      "New saved media can propagate through channels that use Merchant Center feed data"
+    ],
+    "limitations": [
+      "Eligibility and free-listing activation do not guarantee impressions or display",
+      "Product Studio may produce inaccurate or unexpected content and works better for some product types",
+      "Google excludes regulated goods from Product Studio generation",
+      "Product feed quality does not provide prompt-level answer testing"
+    ],
+    "merchantEvidence": [
+      "Merchant must provide product ID, title, link, image and price plus applicable data specification attributes",
+      "Shipping, return information, policy compliance and issue resolution remain merchant tasks",
+      "Generated product imagery needs SKU-level review for fidelity before use"
+    ],
+    "profitPressure": [
+      "A generic feed-checking or low-cost image-generation product faces no-charge native substitutes",
+      "Zero merchant price does not establish negative profitability; standalone economics are undisclosed",
+      "Generated imagery introduces review cost and risk of product misrepresentation"
+    ],
+    "improvements": [
+      "Reconcile discrepancies across feeds and storefronts, not just one Google destination",
+      "Tie each suggested fix to authoritative SKU source data",
+      "Measure merchant time saved and incremental impact after native issue resolution"
+    ],
+    "borrow": [
+      "Actionable diagnostics with links to specific correction guidance",
+      "An inexpensive one-product workflow for smaller catalogs",
+      "Review-before-publish safeguards for generated assets"
+    ],
+    "avoid": [
+      "Positioning generic product feed validation or generated lifestyle imagery as a durable moat",
+      "Claiming free-listing eligibility means actual AI recommendation visibility",
+      "Using generated visuals that change real product attributes"
+    ],
+    "opportunity": "Cross-channel catalog reconciliation, source-grounded factual validation and measurable workflow completion can complement Merchant Center's single-platform diagnostics.",
+    "test": "Select one category and compare proposed fixes with Merchant Center's Needs attention workflow; track incremental valid corrections, time per SKU, image error rate and paid pilot conversion.",
+    "sources": [
+      { "label": "Google free listings", "url": "https://support.google.com/merchants/answer/13889434?hl=en-A" },
+      { "label": "Product Studio", "url": "https://support.google.com/merchants/answer/13708167?hl=en-IE" },
+      { "label": "Merchant Center product editor", "url": "https://support.google.com/merchants/answer/12158381?hl=en" },
+      { "label": "Google AI features and ecommerce", "url": "https://developers.google.com/search/docs/appearance/ai-features" }
+    ]
+  },
+  {
+    "id": "lily-ai-max",
+    "name": "Lily AI / Lily Max",
+    "group": "Platforms and vertical tools",
+    "priceSummary": "Quote-based pricing varies with catalog size, chosen use cases, surfaces, markets and ad spend. Lily advertises a scoped trial on 500 products; its current pages also describe paid pilots. No fixed public rate card is provided.",
+    "financialEvidence": "Lily is monetized through tailored catalog/channel contracts and claims measured customer lifts. Its website cites vendor-reported examples including 28% Google Shopping revenue lift and 21.4% Meta ROAS lift. Public pages do not disclose customer-level gross margin, retention, implementation cost or a complete experiment protocol; the examples are not independent profitability evidence.",
+    "strengths": [
+      "Catalog gap analysis and shopper-language attribute enrichment",
+      "Integrations and outputs aimed at existing feeds and commerce tools",
+      "Controlled-test positioning with matched spend, holdouts or difference-in-differences",
+      "Business outcome framing extends beyond AI answer visibility to ads and onsite search"
+    ],
+    "limitations": [
+      "Custom pricing limits self-serve price comparison and adds procurement effort",
+      "Marketing case studies require diligence on sample size, protocol and confounders",
+      "Enrichment can hallucinate subjective or physical product details unless grounded",
+      "The company says its input-quality work cannot guarantee AI placement, ranking or citation"
+    ],
+    "merchantEvidence": [
+      "Merchant must authorize catalog and destination connections and choose products/surfaces",
+      "Generated content needs source checking and activation approval",
+      "Valid controls and sufficient traffic are needed to test incremental impact",
+      "Seasonality, promotion, stock and feed changes can confound catalog experiments"
+    ],
+    "profitPressure": [
+      "Enterprise integrations, operator review and controlled testing may be service intensive",
+      "Small brands may not justify a broad omnichannel contract",
+      "Vendor lift claims do not alone show Lily's margins or a new entrant's economics"
+    ],
+    "improvements": [
+      "Offer source-cited field-level diffs and provenance for every enrichment",
+      "Prioritize high-impact changes merchants can implement from existing authoritative sources",
+      "Make trial success criteria and test design explicit before measuring uplift"
+    ],
+    "borrow": [
+      "A baseline, control group and measured business outcome",
+      "Scaling only changes that outperform the control",
+      "Treating catalog data as an ongoing operational workflow"
+    ],
+    "avoid": [
+      "Broad omnichannel promises without reliable integrations and sufficient test volume",
+      "Inventing SKU facts while optimizing for search language",
+      "Using an AI readiness score as a substitute for merchant outcomes"
+    ],
+    "opportunity": "A smaller source-verification and remediation product could support merchants below the economics of Lily's tailored enterprise offer, if it substantially reduces review time.",
+    "test": "Run a paid, limited-catalog pilot with source-verified fields, a pre-agreed control and operator-hour accounting; test renewal intent at a price covering delivery costs.",
+    "sources": [
+      { "label": "Lily Max", "url": "https://www.lily.ai/" },
+      { "label": "Lily pricing", "url": "https://www.lily.ai/pricing" },
+      { "label": "Lily pricing FAQ", "url": "https://www.lily.ai/faqs/how-is-lily-priced" },
+      { "label": "Lily product and measurement overview", "url": "https://www.lily.ai/faqs/what-does-lily-do" }
+    ]
+  },
+  {
+    "id": "true-fit",
+    "name": "True Fit",
+    "group": "Platforms and vertical tools",
+    "priceSummary": "True Fit's Shopify page says pricing starts at $1,000 per month. Optional typography/color customization is listed at $5 per month. Public page says to contact True Fit for package details.",
+    "financialEvidence": "A published starting price and commercial retailer integrations demonstrate monetization, but public sources do not disclose enterprise contract values, gross margin, data costs, retention or profitability. Vendor-reported conversion and return metrics require validation against a merchant-specific control. Reduced bracketing alone does not establish net contribution profit.",
+    "strengths": [
+      "Fashion-specific fit recommendations based on cross-brand product and purchase/return data",
+      "Shopify app plus enterprise/API/MCP integration paths",
+      "Clear category-specific value proposition around sizing confidence and returns",
+      "Public Shopify offer states scope limitations, starting price and certain customization pricing"
+    ],
+    "limitations": [
+      "Public product scope excludes some accessories such as belts, hats, gloves and pet clothing",
+      "Outcome claims are vendor-reported and depend on adoption and category",
+      "Full implementation and enterprise economics are not public",
+      "A population-level fit model is not equivalent to source verification for individual product facts"
+    ],
+    "merchantEvidence": [
+      "Integration needs product catalog and sizing data; technical materials also identify shopper and historical purchase/return inputs for full functionality",
+      "Merchants should verify product/size mapping and widget behavior",
+      "Profile collection, data retention and privacy roles require contract-level review",
+      "Public sources do not establish image requirements or justify invented photo dimensions"
+    ],
+    "profitPressure": [
+      "Starting price may put the product beyond small merchants, but does not prove vendor profitability",
+      "Implementation, support, data rights and shopper adoption can affect economics",
+      "Fashion catalog QA cannot quickly reproduce an established cross-brand outcome graph"
+    ],
+    "improvements": [
+      "For smaller entrants, limit initial scope to source-cited product-data QA rather than biometric or fit inference",
+      "Separate fit-recommendation evidence from physical product truth",
+      "Track kept orders, size-related returns, adoption and service costs together"
+    ],
+    "borrow": [
+      "Solving a high-cost decision with category-specific boundaries",
+      "Explicit unsupported-category disclosures",
+      "Merchant control group measurement for outcome claims"
+    ],
+    "avoid": [
+      "Claiming fit prediction from photos or synthetic shopper tests",
+      "Presenting inferred measurements or construction as product truth",
+      "Equating catalog completeness checks with proprietary purchase/return intelligence"
+    ],
+    "opportunity": "A safe entry point is fashion catalog QA grounded in existing tech packs, size charts and approved merchant facts, without collecting shopper body profiles.",
+    "test": "Use merchant-supplied authoritative files to audit a sample catalog, count source-verifiable errors and review minutes, then validate only shopper outcomes with a separate consented test and adequate volume.",
+    "sources": [
+      { "label": "True Fit for Shopify and pricing", "url": "https://www.truefit.com/shopify" },
+      { "label": "True Fit technical specification", "url": "https://www.truefit.com/fit-intelligence-spec" },
+      { "label": "True Fit merchant platform details", "url": "https://www.truefit.com/resources/calling-all-merchants" },
+      { "label": "True Fit privacy information", "url": "https://www.truefit.com/privacy-policy-and-choices" }
+    ]
+  }
+]
+

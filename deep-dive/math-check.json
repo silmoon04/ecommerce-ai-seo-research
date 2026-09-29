@@ -1,0 +1,201 @@
+{
+  "title": "Independent arithmetic check for profitability-scenarios.json",
+  "checkedOn": "2026-09-29",
+  "method": "Recomputed all 15 combinations from JSON assumptions using price*0.029 fee; monthlyLogoChurnRate*allInCACUSD replacement allowance; price-fee-delivery-replacement contribution before support; and price*0.30-fee-delivery-replacement target support headroom. Minutes = headroom/30*60.",
+  "toleranceUSD": 0.00001,
+  "toleranceMinutes": 0.00001,
+  "result": "All 15 stored payment fees, replacement CAC amounts, support budgets and support minutes match recomputation within stated tolerances.",
+  "rows": [
+    {
+      "scenarioId": "self_serve_shopify_app",
+      "priceUSD": 9.99,
+      "recomputed": {
+        "paymentFeeUSD": 0.28971,
+        "replacementCACUSD": 1.6,
+        "contributionBeforeSupportAfterListedCostsUSD": 7.85029,
+        "supportBudgetAtTargetUSD": 0.85729,
+        "supportMinutesAtTarget": 1.71458
+      },
+      "matchesPublishedValues": true
+    },
+    {
+      "scenarioId": "self_serve_shopify_app",
+      "priceUSD": 19.99,
+      "recomputed": {
+        "paymentFeeUSD": 0.57971,
+        "replacementCACUSD": 1.6,
+        "contributionBeforeSupportAfterListedCostsUSD": 17.56029,
+        "supportBudgetAtTargetUSD": 3.56729,
+        "supportMinutesAtTarget": 7.13458
+      },
+      "matchesPublishedValues": true
+    },
+    {
+      "scenarioId": "self_serve_shopify_app",
+      "priceUSD": 49,
+      "recomputed": {
+        "paymentFeeUSD": 1.421,
+        "replacementCACUSD": 1.6,
+        "contributionBeforeSupportAfterListedCostsUSD": 45.729,
+        "supportBudgetAtTargetUSD": 11.429,
+        "supportMinutesAtTarget": 22.858
+      },
+      "matchesPublishedValues": true
+    },
+    {
+      "scenarioId": "self_serve_shopify_app",
+      "priceUSD": 99,
+      "recomputed": {
+        "paymentFeeUSD": 2.871,
+        "replacementCACUSD": 1.6,
+        "contributionBeforeSupportAfterListedCostsUSD": 94.279,
+        "supportBudgetAtTargetUSD": 24.979,
+        "supportMinutesAtTarget": 49.958
+      },
+      "matchesPublishedValues": true
+    },
+    {
+      "scenarioId": "self_serve_shopify_app",
+      "priceUSD": 149,
+      "recomputed": {
+        "paymentFeeUSD": 4.321,
+        "replacementCACUSD": 1.6,
+        "contributionBeforeSupportAfterListedCostsUSD": 142.829,
+        "supportBudgetAtTargetUSD": 38.529,
+        "supportMinutesAtTarget": 77.058
+      },
+      "matchesPublishedValues": true
+    },
+    {
+      "scenarioId": "bounded_recurring_monitor",
+      "priceUSD": 9.99,
+      "recomputed": {
+        "paymentFeeUSD": 0.28971,
+        "replacementCACUSD": 5,
+        "contributionBeforeSupportAfterListedCostsUSD": 1.70029,
+        "supportBudgetAtTargetUSD": -5.29271,
+        "supportMinutesAtTarget": -10.58542
+      },
+      "matchesPublishedValues": true
+    },
+    {
+      "scenarioId": "bounded_recurring_monitor",
+      "priceUSD": 19.99,
+      "recomputed": {
+        "paymentFeeUSD": 0.57971,
+        "replacementCACUSD": 5,
+        "contributionBeforeSupportAfterListedCostsUSD": 11.41029,
+        "supportBudgetAtTargetUSD": -2.58271,
+        "supportMinutesAtTarget": -5.16542
+      },
+      "matchesPublishedValues": true
+    },
+    {
+      "scenarioId": "bounded_recurring_monitor",
+      "priceUSD": 49,
+      "recomputed": {
+        "paymentFeeUSD": 1.421,
+        "replacementCACUSD": 5,
+        "contributionBeforeSupportAfterListedCostsUSD": 39.579,
+        "supportBudgetAtTargetUSD": 5.279,
+        "supportMinutesAtTarget": 10.558
+      },
+      "matchesPublishedValues": true
+    },
+    {
+      "scenarioId": "bounded_recurring_monitor",
+      "priceUSD": 99,
+      "recomputed": {
+        "paymentFeeUSD": 2.871,
+        "replacementCACUSD": 5,
+        "contributionBeforeSupportAfterListedCostsUSD": 88.129,
+        "supportBudgetAtTargetUSD": 18.829,
+        "supportMinutesAtTarget": 37.658
+      },
+      "matchesPublishedValues": true
+    },
+    {
+      "scenarioId": "bounded_recurring_monitor",
+      "priceUSD": 149,
+      "recomputed": {
+        "paymentFeeUSD": 4.321,
+        "replacementCACUSD": 5,
+        "contributionBeforeSupportAfterListedCostsUSD": 136.679,
+        "supportBudgetAtTargetUSD": 32.379,
+        "supportMinutesAtTarget": 64.758
+      },
+      "matchesPublishedValues": true
+    },
+    {
+      "scenarioId": "managed_catalog_repair",
+      "priceUSD": 9.99,
+      "recomputed": {
+        "paymentFeeUSD": 0.28971,
+        "replacementCACUSD": 7.5,
+        "contributionBeforeSupportAfterListedCostsUSD": -12.79971,
+        "supportBudgetAtTargetUSD": -19.79271,
+        "supportMinutesAtTarget": -39.58542
+      },
+      "matchesPublishedValues": true
+    },
+    {
+      "scenarioId": "managed_catalog_repair",
+      "priceUSD": 19.99,
+      "recomputed": {
+        "paymentFeeUSD": 0.57971,
+        "replacementCACUSD": 7.5,
+        "contributionBeforeSupportAfterListedCostsUSD": -3.08971,
+        "supportBudgetAtTargetUSD": -17.08271,
+        "supportMinutesAtTarget": -34.16542
+      },
+      "matchesPublishedValues": true
+    },
+    {
+      "scenarioId": "managed_catalog_repair",
+      "priceUSD": 49,
+      "recomputed": {
+        "paymentFeeUSD": 1.421,
+        "replacementCACUSD": 7.5,
+        "contributionBeforeSupportAfterListedCostsUSD": 25.079,
+        "supportBudgetAtTargetUSD": -9.221,
+        "supportMinutesAtTarget": -18.442
+      },
+      "matchesPublishedValues": true
+    },
+    {
+      "scenarioId": "managed_catalog_repair",
+      "priceUSD": 99,
+      "recomputed": {
+        "paymentFeeUSD": 2.871,
+        "replacementCACUSD": 7.5,
+        "contributionBeforeSupportAfterListedCostsUSD": 73.629,
+        "supportBudgetAtTargetUSD": 4.329,
+        "supportMinutesAtTarget": 8.658
+      },
+      "matchesPublishedValues": true
+    },
+    {
+      "scenarioId": "managed_catalog_repair",
+      "priceUSD": 149,
+      "recomputed": {
+        "paymentFeeUSD": 4.321,
+        "replacementCACUSD": 7.5,
+        "contributionBeforeSupportAfterListedCostsUSD": 122.179,
+        "supportBudgetAtTargetUSD": 17.879,
+        "supportMinutesAtTarget": 35.758
+      },
+      "matchesPublishedValues": true
+    }
+  ],
+  "counterexample": {
+    "scenarioId": "managed_catalog_repair",
+    "priceUSD": 49,
+    "paymentFeeUSD": 1.421,
+    "deliveryCostUSD": 15,
+    "replacementCACUSD": 7.5,
+    "contributionBeforeSupportAfterListedCostsUSD": 25.079,
+    "contributionMarginBeforeSupportAfterListedCosts": 0.5118163265,
+    "supportBudgetAt70PercentTargetUSD": -9.221,
+    "note": "Positive contribution before support, but below the selected 70% target. The negative target headroom does not imply a loss."
+  }
+}

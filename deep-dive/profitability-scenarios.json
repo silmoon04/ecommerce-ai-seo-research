@@ -1,0 +1,73 @@
+{
+  "title": "Illustrative monthly unit-economics sensitivities",
+  "snapshotDate": "2026-09-29",
+  "currency": "USD",
+  "status": "hypothetical editable scenarios, not forecasts or observed vendor economics",
+  "targetContributionMargin": 0.70,
+  "laborCostPerHour": 30,
+  "shopifyProcessingRate": 0.029,
+  "shopifyRevenueShareRateAssumed": 0,
+  "shopifyRevenueShareNote": "0% assumes developer is eligible and within the first $1,000,000 USD qualifying gross App Store revenue; otherwise add applicable share (commonly 15%, or 15% from dollar one for certain larger developers).",
+  "formula": {
+    "paymentFeeUSD": "priceUSD * shopifyProcessingRate",
+    "replacementCACUSD": "monthlyLogoChurnRate * allInCACUSD",
+    "supportBudgetAtTargetUSD": "priceUSD * (1 - targetContributionMargin) - paymentFeeUSD - deliveryCostUSD - replacementCACUSD - priceUSD * shopifyRevenueShareRateAssumed",
+    "supportMinutesAtTarget": "supportBudgetAtTargetUSD / laborCostPerHour * 60",
+    "interpretation": "Negative support budget means the target margin is missed before support labor. Positive supportMinutesAtTarget is the maximum support time affordable at the target margin."
+  },
+  "excludedCosts": [
+    "fixed overhead and shared infrastructure allocation",
+    "founder salary, product development and tax",
+    "refunds, chargebacks, failed payments and annual discounts",
+    "initial net-growth acquisition spending",
+    "onboarding or implementation except amounts explicitly included in deliveryCostUSD",
+    "collection usage above the category delivery allowance"
+  ],
+  "scenarios": [
+    {
+      "id": "self_serve_shopify_app",
+      "label": "Low-priced self-serve Shopify app",
+      "monthlyLogoChurnRate": 0.08,
+      "allInCACUSD": 20,
+      "deliveryCostUSD": 0.25,
+      "assumptionsNote": "Hypothetical low-cost automated app; $0.25 direct monthly delivery reserve; $20 replacement CAC; 8% monthly churn.",
+      "plans": [
+        {"priceUSD": 9.99, "paymentFeeUSD": 0.28971, "replacementCACUSD": 1.6, "supportBudgetAtTargetUSD": 0.85729, "supportMinutesAtTarget": 1.71458},
+        {"priceUSD": 19.99, "paymentFeeUSD": 0.57971, "replacementCACUSD": 1.6, "supportBudgetAtTargetUSD": 3.56729, "supportMinutesAtTarget": 7.13458},
+        {"priceUSD": 49, "paymentFeeUSD": 1.421, "replacementCACUSD": 1.6, "supportBudgetAtTargetUSD": 11.429, "supportMinutesAtTarget": 22.858},
+        {"priceUSD": 99, "paymentFeeUSD": 2.871, "replacementCACUSD": 1.6, "supportBudgetAtTargetUSD": 24.979, "supportMinutesAtTarget": 49.958},
+        {"priceUSD": 149, "paymentFeeUSD": 4.321, "replacementCACUSD": 1.6, "supportBudgetAtTargetUSD": 38.529, "supportMinutesAtTarget": 77.058}
+      ]
+    },
+    {
+      "id": "bounded_recurring_monitor",
+      "label": "Bounded recurring monitor",
+      "monthlyLogoChurnRate": 0.05,
+      "allInCACUSD": 100,
+      "deliveryCostUSD": 3,
+      "assumptionsNote": "Hypothetical fixed-scope prompt/engine/cadence plan; $3 direct monthly delivery allowance; $100 replacement CAC; 5% monthly churn.",
+      "plans": [
+        {"priceUSD": 9.99, "paymentFeeUSD": 0.28971, "replacementCACUSD": 5, "supportBudgetAtTargetUSD": -5.29271, "supportMinutesAtTarget": -10.58542},
+        {"priceUSD": 19.99, "paymentFeeUSD": 0.57971, "replacementCACUSD": 5, "supportBudgetAtTargetUSD": -2.58271, "supportMinutesAtTarget": -5.16542},
+        {"priceUSD": 49, "paymentFeeUSD": 1.421, "replacementCACUSD": 5, "supportBudgetAtTargetUSD": 5.279, "supportMinutesAtTarget": 10.558},
+        {"priceUSD": 99, "paymentFeeUSD": 2.871, "replacementCACUSD": 5, "supportBudgetAtTargetUSD": 18.829, "supportMinutesAtTarget": 37.658},
+        {"priceUSD": 149, "paymentFeeUSD": 4.321, "replacementCACUSD": 5, "supportBudgetAtTargetUSD": 32.379, "supportMinutesAtTarget": 64.758}
+      ]
+    },
+    {
+      "id": "managed_catalog_repair",
+      "label": "Managed catalog repair",
+      "monthlyLogoChurnRate": 0.03,
+      "allInCACUSD": 250,
+      "deliveryCostUSD": 15,
+      "assumptionsNote": "Hypothetical recurring service with $15 monthly direct delivery reserve (equivalent to 30 minutes at $30/hour); $250 replacement CAC; 3% monthly churn. Additional labor is support and is constrained by the formula.",
+      "plans": [
+        {"priceUSD": 9.99, "paymentFeeUSD": 0.28971, "replacementCACUSD": 7.5, "supportBudgetAtTargetUSD": -19.79271, "supportMinutesAtTarget": -39.58542},
+        {"priceUSD": 19.99, "paymentFeeUSD": 0.57971, "replacementCACUSD": 7.5, "supportBudgetAtTargetUSD": -17.08271, "supportMinutesAtTarget": -34.16542},
+        {"priceUSD": 49, "paymentFeeUSD": 1.421, "replacementCACUSD": 7.5, "supportBudgetAtTargetUSD": -9.221, "supportMinutesAtTarget": -18.442},
+        {"priceUSD": 99, "paymentFeeUSD": 2.871, "replacementCACUSD": 7.5, "supportBudgetAtTargetUSD": 4.329, "supportMinutesAtTarget": 8.658},
+        {"priceUSD": 149, "paymentFeeUSD": 4.321, "replacementCACUSD": 7.5, "supportBudgetAtTargetUSD": 17.879, "supportMinutesAtTarget": 35.758}
+      ]
+    }
+  ]
+}

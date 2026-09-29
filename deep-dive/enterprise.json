@@ -1,0 +1,160 @@
+[
+  {
+    "id": "profound",
+    "name": "Profound",
+    "group": "Monitoring platforms",
+    "priceSummary": "Current Brands tab: free seven-day trial (50 prompts daily, ChatGPT/Gemini/Google AI Overviews, fixed recommended prompts, limited AI Marketer credits) plus custom Enterprise for ongoing tracking; both show unlimited seats. Separate Agency Growth is documented at 400 Agent credits per client workspace and a vendor agency launch post prices each workspace at /month. Older/alternate vendor pricing content lists brand Starter  and Growth , but that appears to be an earlier or alternate plan presentation; it does not contradict the current Brands tab or establish current  brand Growth availability. Confirm eligibility with vendor.",
+    "financialEvidence": "Company announced Sep 15, 2026 a  Series D at .8B valuation; combined with its earlier + funding disclosure implies at least  publicly disclosed funding. It claims 1,000+ enterprise brands and service to over one third of the Fortune 100. No public ARR, profitability, gross margin, CAC, or churn found. Funding, valuation, and customer count do not establish profit.",
+    "strengths": [
+      "Wide answer-engine coverage and enterprise prompt, market, security, and support controls.",
+      "Consumer-facing interface collection is positioned to reflect rendered answers rather than API outputs.",
+      "Agents link visibility data, research, generation, and CMS publishing in a configurable node workflow.",
+      "Prompts, personas, regions, cadence, and agent credit use are configurable and documented."
+    ],
+    "limitations": [
+      "Current public pricing and plan availability conflict on the vendor page; enterprise terms remain opaque.",
+      "Prompt-panel data is not a representative sample of real customer conversations; sampling choices and session context matter.",
+      "More engines, personas, regions, and daily runs expand data and operating cost without proving incremental sales.",
+      "Agent-generated or published content needs human review, provenance, versioning, and outcome checks."
+    ],
+    "merchantEvidence": [
+      "Vendor reports serving 700+ enterprises and more than 10% of the Fortune 500; retail/ecommerce is among its claimed verticals.",
+      "Pricing FAQ recommends custom Enterprise for teams with more than three people, signaling a staffed marketing-team ICP.",
+      "No public evidence found of a Shopify merchant plan or product/variant-level correction and outcome workflow."
+    ],
+    "profitPressure": [
+      "Hypotheses only: multi-engine interface collection and daily processing costs.",
+      "Hypotheses only: broad product surface, integrations, model usage, and high-touch customer support.",
+      "No disclosed CAC, churn, gross margin, or operating result supports a unit-economics claim."
+    ],
+    "improvements": [
+      "Publish one dated plan matrix and reconcile contradictory trial versus $99/$399 self-serve offers.",
+      "Disclose sampling design, session/region controls, repeat variance, and attribution definitions in each report.",
+      "Make agent publishing approval-first with diff, source provenance, rollback, and measured downstream outcomes.",
+      "Reduce onboarding/support cost with self-serve diagnostics and simpler use-case templates."
+    ],
+    "borrow": [
+      "Disclosed prompt samples linked to citations and prioritized changes.",
+      "Credit estimates, actual usage visibility, configurable pauses/overages.",
+      "An insight-to-action loop with tracked approval and publishing status."
+    ],
+    "avoid": [
+      "Enterprise-scale dashboards and broad engine coverage before merchant demand is validated.",
+      "Opaque, contradictory plan and credit limits.",
+      "Treating share-of-voice or attributed traffic as causal incremental profit."
+    ],
+    "opportunity": "Shopify product/variant/market audit that connects a buyer query and observed answer to the exact canonical fact or destination eligibility issue, then verifies an approved correction after propagation.",
+    "test": "With a small merchant sample, freeze a disclosed prompt set and baseline product facts; test whether merchants pay for source-grounded diagnosis and approved fixes, then compare observed answer/citation shifts, AI visits, attributed orders, and a holdout where feasible.",
+    "sources": [
+      {
+        "label": "Profound pricing",
+        "url": "https://www.tryprofound.com/pricing"
+      },
+      {
+        "label": "Series C announcement",
+        "url": "https://www.tryprofound.com/newsroom/profound-raises-series-c-at-1b-valuation-to-lead-a-new-category-of-marketing"
+      },
+      {
+        "label": "Prompt Designer documentation",
+        "url": "https://help.tryprofound.com/articles/3730240593-create-manage-and-tag-prompts"
+      },
+      {
+        "label": "Prompt set documentation",
+        "url": "https://help.tryprofound.com/articles/4881350168-how-to-create-topics-prompts-to-track-in-profound"
+      },
+      {
+        "label": "Agents overview",
+        "url": "https://help.tryprofound.com/articles/9762251986-agents-overview"
+      },
+      {
+        "label": "Series D announcement",
+        "url": "https://www.tryprofound.com/newsroom/profound-raises-usd180m-series-d-at-usd1-8b-valuation-to-build-the-ai-platform-for-marketing-teams"
+      },
+      {
+        "label": "Agency Growth offer",
+        "url": "https://www.tryprofound.com/blog/agencies-launch-your-aeo-practice-with-profound"
+      },
+      {
+        "label": "Agent credits documentation",
+        "url": "https://help.tryprofound.com/articles/9359511602-profound-agents-credits"
+      }
+    ]
+  },
+  {
+    "id": "scrunch",
+    "name": "Scrunch",
+    "group": "Monitoring platforms",
+    "priceSummary": "Current page rendering: Starter $250/month annual or $300 month-to-month (3 seats, 350 custom prompts, 1,000 industry prompts, 3 personas, 5 audits); Growth $417/month annual or $500 month-to-month (5 seats, 700 custom prompts, 2,500 industry prompts, 5 personas, 10 audits); Enterprise custom. Seven-day Starter trial. Page says all plans cover ChatGPT, Claude, Gemini, Perplexity, Google AI Mode/Overviews, and Meta. Older indexed Core/Enterprise matrix for same URL shows different limits (e.g. Core $250, 125 prompts, 4 engines); use the currently rendered direct offer as latest observed, avoid combining matrix versions, and reconfirm at signup.",
+    "financialEvidence": "Scrunch says it raised $26M before Sitecore acquired it on June 3, 2026; Scrunch claims 500+ brands/agencies. Sitecore confirms acquisition; price and Scrunch standalone financials are undisclosed. No Scrunch ARR, profitability, gross margin, CAC, or churn found. Sitecore's >$500M ARR is parent-company claim and does not describe Scrunch.",
+    "strengths": [
+      "Combines prompt visibility, site audits, on-site agent traffic, and content optimization/delivery.",
+      "AXP docs describe actual CDN routing, server-rendered bot HTML, approved content input, deployment logs, version history, and rollback.",
+      "Public Core offer sets concrete prompt, seat, workspace, engine, audit, market, and page limits.",
+      "Sitecore ownership may provide adjacent content management distribution and integration opportunities."
+    ],
+    "limitations": [
+      "AXP requires CDN routing and content freshness governance; cached or stale price/availability can misrepresent a store.",
+      "Some stored AXP content needs manual refresh after CMS updates; product docs warn that help content can lag recent changes.",
+      "No independent controlled evidence reviewed isolates AXP as the cause of visibility or sales lift.",
+      "$250/month plus enterprise implementation friction is mismatched to many small merchants."
+    ],
+    "merchantEvidence": [
+      "Scrunch claims 500+ customers and names enterprise/agency customers; acquisition by Sitecore signals strategic enterprise value, not proven SMB demand.",
+      "Core pricing offers 5 seats but one brand workspace, 1 country, 25 sitemap pages, and one monthly page optimization.",
+      "Enterprise AXP and complete audits are custom-plan capabilities; no low-cost Shopify-native integration was found."
+    ],
+    "profitPressure": [
+      "Hypotheses only: enterprise sales, security review, CDN integration, onboarding, and ongoing customer success.",
+      "Hypotheses only: multi-engine collection, analysis, and AXP infrastructure/support.",
+      "Acquisition provides a potential distribution route but no public standalone unit economics."
+    ],
+    "improvements": [
+      "Publish a qualification checklist for CDN compatibility, cache behavior, bot routing, CMS freshness, and rollback.",
+      "Offer an AXP sandbox and response diff that validates bot versus human delivery before production.",
+      "Report crawl access separately from citations, mentions, referrals, orders, and causal lift.",
+      "State onboarding effort, plan overages, page limits, and integration fees before sales handoff."
+    ],
+    "borrow": [
+      "Versioned, approval-based alternative content with visible deployment history and rollback.",
+      "Clear product limits, seats, markets, competitors, and prompt counts.",
+      "Observation-to-diagnosis-to-action framing across off-site answers and on-site bot access."
+    ],
+    "avoid": [
+      "CDN and proxy complexity for merchants whose product facts are already available in native feeds.",
+      "Bot-specific content without freshness checks, parity rules, and audit logs.",
+      "Assuming improved retrieval means better recommendations, revenue, or profit."
+    ],
+    "opportunity": "A low-friction Shopify audit that first proves an AI answer or channel feed cannot resolve a product fact, then maps it to source data and measures the corrected result without requiring CDN changes.",
+    "test": "Run a small controlled pilot on a few Shopify stores: record bot access and baseline product/variant answers, apply only sourced fixes, verify propagation and parity, then track repeated answers, AI referral orders, support effort, and a comparable untreated set.",
+    "sources": [
+      {
+        "label": "Scrunch pricing",
+        "url": "https://scrunch.com/pricing/"
+      },
+      {
+        "label": "Scrunch about and company history",
+        "url": "https://scrunch.com/about/"
+      },
+      {
+        "label": "Sitecore acquisition announcement",
+        "url": "https://www.sitecore.com/company/newsroom/press-releases/2026/06/sitecore-acquires-scrunch-to-help-brands-influence-discovery--and-buying-decisions"
+      },
+      {
+        "label": "AXP setup how-to",
+        "url": "https://scrunch.com/how-tos/how-to-serve-ai-optimized-content-directly-to-llms/"
+      },
+      {
+        "label": "AXP delivery FAQ",
+        "url": "https://scrunch.com/faqs/how-does-scrunch-serve-bot-friendly-html-and-pre-rendered-pages-to-ai-crawlers/"
+      },
+      {
+        "label": "AXP freshness and CMS FAQ",
+        "url": "https://scrunch.com/faqs/how-does-scrunchs-axp-approach-compare-to-publishing-ai-friendly-content-directly-in-the-cms"
+      },
+      {
+        "label": "Current Scrunch pricing page",
+        "url": "https://scrunch.com/pricing/"
+      }
+    ]
+  }
+]

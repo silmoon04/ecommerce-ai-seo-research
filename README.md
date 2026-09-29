@@ -6,6 +6,8 @@ The report includes eight original conceptual illustrations, three editable calc
 
 Research snapshot: 28 September 2026. Published evidence is distinguished from hypothetical business scenarios. The report is desk research, not a merchant survey or live product trial.
 
+The 29 September follow-up, `competitive-deep-dive.html`, adds 30 product profiles, 13 research notes, a support-capacity calculator, documented competing features, and five opportunities with explicit tests and stopping conditions. It corrects the assumption that private vendors are unprofitable and narrows the original catalogue-repair hypothesis against stronger existing competitors. Structured data and the 15 independently checked economic scenarios are in `deep-dive/`.
+
 ## Run locally
 
 Open `index.html` in a browser, or serve this directory with a local HTTP server. All presentation assets and dependencies are bundled. No API keys or build step are required.

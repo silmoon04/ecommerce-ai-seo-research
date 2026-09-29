@@ -1,0 +1,158 @@
+[
+  {
+    "id": "tapita",
+    "name": "Tapita AI SEO Optimizer, Speed",
+    "group": "Established SEO apps",
+    "priceSummary": "Current Shopify listing snapshot: free; Basic $9.99/month; Pro $39.99/month. Shopify plan surcharges and extra audit-page or AI-credit usage can increase costs; verify listing for current terms.",
+    "financialEvidence": "Public reviews show adoption and examples of retained use, including one review reporting four months and others praising hands-on help. They do not disclose vendor revenue, paid-plan mix, churn, acquisition costs, support costs, or profit. Merchant outcome statements are unverified.",
+    "strengths": [
+      "Broad SEO, speed, schema, metadata, image and LLMs.txt feature bundle.",
+      "Low-cost entry plan and free option lower adoption friction.",
+      "Recent merchants report direct human help resolving SEO and performance issues.",
+      "Strong current listing rating and review count indicate adoption, not financial health."
+    ],
+    "limitations": [
+      "Price can rise with Shopify plan surcharges, usage and service scope.",
+      "Reviews show confusion about included versus paid service work and what audits actually complete.",
+      "Some complaints and vendor replies conflict; public evidence does not adjudicate billing or work completion.",
+      "High-touch support could be expensive to deliver; this is a hypothesis, not disclosed unit economics."
+    ],
+    "merchantEvidence": [
+      "Caris & Co. said in August 2026 that support reviewed its store and helped resolve SEO/performance issues; four months of use reported.",
+      "Legacy Coalition Store reported one day of use in September 2026, learning about metafields and getting issues fixed, while deferring judgment on results.",
+      "Bazar91 alleged in May 2026 that a paid service bypassed issues; Tapita replied that no payment had been received for the cited services and said tasks were completed with a dated work log. Disputed and unresolved.",
+      "A one-star review alleged successive fees for fixing more issues. This is a merchant account, not proof of the pricing process."
+    ],
+    "profitPressure": [
+      "Small or low-margin stores may find add-ons, plan surcharges and support time exceed the value of a one-time cleanup.",
+      "If audits require staff help to interpret or execute, human support load may pressure margins; no actual profit data is public.",
+      "Stores without a measurable change after setup may not see recurring value."
+    ],
+    "improvements": [
+      "Label findings as detected, recommended, changed, or verified.",
+      "Show service fees, plan limits, credits and Shopify surcharges before scans or onboarding.",
+      "Use approval gates, before/after diffs, rollback and exportable change logs.",
+      "Separate technical and visibility metrics from sales or ranking claims; report baselines and dates."
+    ],
+    "borrow": [
+      "Broad free-to-paid feature ladder.",
+      "Cross-functional bundle covering routine store optimization.",
+      "Responsive human troubleshooting and implementation help."
+    ],
+    "avoid": [
+      "Using audit scores as shorthand for business outcomes.",
+      "Leaving the boundary between included fixes and paid services unclear.",
+      "Treating allegations or testimonials as independently verified results."
+    ],
+    "opportunity": "Make safe, customer-controlled implementation and verification the durable paid value, while keeping costs and completion criteria explicit.",
+    "test": "Run a fixed-scope, paid remediation pilot with explicit deliverables, merchant approvals and optional monitoring; measure completion, support hours, reversals and renewal.",
+    "sources": [
+      {"label": "Shopify App Store listing and current pricing", "url": "https://apps.shopify.com/google-seo-schema-meta-data"},
+      {"label": "Tapita App Store reviews, including vendor reply to disputed service allegation", "url": "https://apps.shopify.com/google-seo-schema-meta-data/reviews?page=1&ratings%5B%5D=1"}
+    ]
+  },
+  {
+    "id": "booster-seo",
+    "name": "Booster AI SEO + AEO Optimizer",
+    "group": "Established SEO apps",
+    "priceSummary": "Current Shopify listing snapshot: free; Pro $39/month; Premium $69/month; 14-day trials and annual options. Verify listing for current billing terms.",
+    "financialEvidence": "The large review base and multi-year customer reviews establish examples of adoption and retention, not paid-plan mix, revenue, profitability, support economics, or causally attributable outcomes.",
+    "strengths": [
+      "Consolidates audits, metadata, autopilot, structured data, broken links, image optimization and AI-search positioning.",
+      "Free plan and broad utility support exploration.",
+      "Recent multi-year users publicly praise accessible support and issue resolution."
+    ],
+    "limitations": [
+      "Automation may alter metadata and live theme assets merchants consider valuable.",
+      "A 2026 Shopify Markets review alleged theme residue and commented-out native titles after uninstall; Booster acknowledged the remaining commented tags but disputed the effect of a cached Translate & Adapt entry and said Shopify API restrictions limit restoration.",
+      "A merchant alleged autopilot indexing damage and trial billing; Booster said the noindex issue was an audit-display problem and attributed some problems to a recent update. The claims remain disputed.",
+      "Billing responsibility and trial/cancellation timing are not always clear to merchants."
+    ],
+    "merchantEvidence": [
+      "Helene Clarkson Design praised support in July 2026 and reported over five years using the app; plan and business outcomes were not stated.",
+      "SoulCurryArt alleged in April 2026 that autopilot replaced good metadata with generic text and that trial cancellation still resulted in a charge. Booster replies later said the noindex concern was display-only and that a recent update affected a small number of stores.",
+      "FOLIGAIN UK reported a Shopify Markets conflict and remaining theme edits in September 2026. Booster replied that native title tags remained commented after uninstall due to Shopify API limitations, characterized a Translate & Adapt entry as inactive cached data, and said it had updated integration behavior.",
+      "Merchants report charges after uninstall/trial cancellation; Booster says Shopify handles billing and charges may apply if the app remains active at cycle start. Individual timelines remain unverified."
+    ],
+    "profitPressure": [
+      "Stores with strong existing copy or multi-market setups may incur review and cleanup time that offsets automation savings.",
+      "Support demand and defect remediation may pressure costs, but no internal cost or profit data is available.",
+      "Stores that distrust automated edits or complete a one-time cleanup may see limited recurring value."
+    ],
+    "improvements": [
+      "Make autopilot preview-first, reversible and approval-based, especially for URLs and indexing directives.",
+      "Snapshot theme state and provide tested uninstall cleanup and localized-market compatibility checks.",
+      "Show generated text, source rationale, billing state and trial end date clearly.",
+      "Separate app audit warnings from verified storefront output and commercial outcomes."
+    ],
+    "borrow": [
+      "Useful free tier and consolidated toolbox.",
+      "Accessible live support.",
+      "Routine automation where changes are safe and reversible."
+    ],
+    "avoid": [
+      "Unreviewed destructive automation.",
+      "Ambiguous trial and cancellation state.",
+      "Presenting completed audits as proof of better traffic or sales."
+    ],
+    "opportunity": "Safe SEO automation with versioned diffs, rollback and continuous compatibility checks across Shopify Markets.",
+    "test": "A/B test user enablement and retention for preview-plus-rollback automation against current onboarding; track approved edits, reversals, support contacts and merchant-confirmed outcomes.",
+    "sources": [
+      {"label": "Shopify App Store listing, features and current pricing", "url": "https://apps.shopify.com/booster-apps-seo-optimizer"},
+      {"label": "Booster reviews and vendor reply about Shopify Markets/theme cleanup", "url": "https://apps.shopify.com/booster-apps-seo-optimizer/reviews?ratings%5B%5D=1"},
+      {"label": "Booster review listing with vendor reply on disputed noindex report", "url": "https://apps.shopify.com/booster-apps-seo-optimizer/reviews?page=1&ratings%5B%5D=1"},
+      {"label": "Booster retained customer examples", "url": "https://apps.shopify.com/booster-apps-seo-optimizer/reviews?page=2"}
+    ]
+  },
+  {
+    "id": "plug-in-seo",
+    "name": "Plug in SEO",
+    "group": "Established SEO apps",
+    "priceSummary": "Current Shopify listing snapshot: Lite $29.99/month, Standard $49.99/month, Premium $79.99/month, each with a seven-day trial. Tier limits and included expert calls vary.",
+    "financialEvidence": "Reviews provide examples of multi-year use and explicit paid support purchases, but do not establish current plan, overall retention, profit, or causal SEO lift.",
+    "strengths": [
+      "Pairs audits and management tools with keyword guidance, expert calls and support.",
+      "Quick Start and annual support provide examples of willingness to pay for human interpretation and implementation.",
+      "Merchant reviews report knowledge transfer and clear prioritization, including from a startup that compared service with an agency."
+    ],
+    "limitations": [
+      "Some reviewers report unclear instructions, automatic page-name changes, or leftover code after uninstall.",
+      "Vendor replies conflict with reviewers over response time and access to offered consultation; public evidence does not resolve all accounts.",
+      "A completed audit may still require paid expert work or merchant implementation to produce a fix."
+    ],
+    "merchantEvidence": [
+      "Satya reported over four years using the app and praised Quick Start for addressing issues and clarifying a keyword plan in March 2026.",
+      "Bliss Lau’s review update in April 2025 said the small shop continued using the app and bought an annual support plan.",
+      "Barbeques and More reported in April 2026 that code remained and caused conflicts after uninstall; Plug in Useful replied in July that it had followed up and offered a call, which was not scheduled.",
+      "Open Waters Solar alleged in November 2024 unclear guidance, automatic page-name changes and a week without response; the vendor said email was answered within an hour, a consultation offered, and support resources existed. Disputed account."
+    ],
+    "profitPressure": [
+      "Stores with few pages or a completed one-off cleanup may not need recurring audits at $29.99 to $79.99 monthly.",
+      "If merchants need frequent expert interpretation or implementation, support delivery can raise costs; actual unit economics are not public.",
+      "A warning-only workflow can make the paid service feel necessary to complete tasks, risking trust and churn."
+    ],
+    "improvements": [
+      "Make scan/page limits visible during onboarding and prioritize issues by risk and expected effort.",
+      "Show which findings the merchant can fix directly and which require theme or expert work.",
+      "Add approval, rollback and post-uninstall verification for edits.",
+      "Expose support case state and response expectations, and separate one-time remediation from recurring monitoring."
+    ],
+    "borrow": [
+      "Expert guidance that explains what matters and builds merchant capability.",
+      "A paid implementation option for stores without in-house SEO staff.",
+      "Knowledge transfer alongside completed fixes."
+    ],
+    "avoid": [
+      "Unprioritized dashboards that leave the merchant with unresolved work.",
+      "Opaque gating of task completion behind services.",
+      "Assuming a long subscription or reported ranking change proves profitability or causality."
+    ],
+    "opportunity": "Recurring technical monitoring with transparent completion states and a small number of customer-approved fixes, plus optional scoped expert setup.",
+    "test": "Compare a finite paid setup package plus optional low-cost monitoring against a tiered recurring plan; measure completion, merchant implementation time, support load and renewal.",
+    "sources": [
+      {"label": "Shopify App Store listing and current pricing", "url": "https://apps.shopify.com/plug-in-seo"},
+      {"label": "Plug in SEO reviews, retained customers and vendor replies", "url": "https://apps.shopify.com/plug-in-seo/reviews"},
+      {"label": "Plug in SEO review with annual support plan update", "url": "https://apps.shopify.com/plug-in-seo/reviews?ratings%5B%5D=5"}
+    ]
+  }
+]

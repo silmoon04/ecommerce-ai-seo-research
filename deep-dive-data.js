@@ -1,0 +1,2171 @@
+window.deepDiveData = {
+  "snapshotDate": "2026-09-29",
+  "products": [
+    {
+      "id": "indexgpt",
+      "name": "IndexGPT",
+      "group": "Shopify AI apps",
+      "priceSummary": "Free; Essentials $16/month or $128/year; Premium $45/month or $432/year. Three-day trial on paid plans.",
+      "financialEvidence": "No public company-level profitability disclosure found in reviewed sources. Public subscription prices do not establish conversion, retention, cost or margin.",
+      "strengths": [
+        "Free entry tier with paid indexing, robots and llms.txt features, then prompt/content tools on Premium.",
+        "Established Shopify listing with Built for Shopify and 144 reviews at the snapshot.",
+        "Reviewers describe an intuitive dashboard and useful source visibility; merchant-reported outcomes are not causal evidence."
+      ],
+      "limitations": [
+        "Plan pages do not specify prompt counts, model coverage, sampling cadence or the precise definition of AI growth.",
+        "The product spans technical indexing, analytics and content generation, which can make the recurring job less focused.",
+        "Shopify Catalog and default discovery support weaken the standalone value of file generation and indexing as outcomes."
+      ],
+      "merchantEvidence": [
+        "Shopify listing snapshot: 4.9/5 from 144 reviews, with a generated summary mentioning ease of use and reported visibility, traffic and sales gains.",
+        "A merchant review described seeing which content AI systems use as sources. No controlled lift measurement was presented."
+      ],
+      "profitPressure": [
+        "If free usage is broad and monitoring/content generation consume recurring compute or support, low plan prices could pressure contribution; actual costs and margins are not public."
+      ],
+      "improvements": [
+        "Define tracked engines, query counts, cadence and score meanings.",
+        "Tie each recommended catalog fix to reversible changes and a dated before/after outcome record."
+      ],
+      "borrow": [
+        "Low-friction free entry and an upgrade path from audit to recurring monitoring."
+      ],
+      "avoid": [
+        "Do not imply that crawl notification or llms.txt files cause ranking or sales."
+      ],
+      "opportunity": "Test whether sourced product-fact fixes change inclusion in real shopping queries and produce incremental orders.",
+      "test": "Run merchant-approved fixes with a matched product holdout; falsified if users do not renew after baseline cleanup or holdouts show no useful downstream difference.",
+      "sources": [
+        {
+          "label": "IndexGPT official product and pricing",
+          "url": "https://indexgpt.app/"
+        },
+        {
+          "label": "Shopify App Store listing and reviews",
+          "url": "https://apps.shopify.com/index-gpt?surface_detail=store-management-operations-analytics&surface_inter_position=1&surface_intra_position=3&surface_type=category&surface_version=redesign"
+        },
+        {
+          "label": "Shopify Catalog documentation",
+          "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/products"
+        }
+      ]
+    },
+    {
+      "id": "skaw",
+      "name": "SKAW: AI SEO & Agent Readiness",
+      "group": "Shopify AI apps",
+      "priceSummary": "Free; paid plan $19.99/month or $199.99/year. The same Shopify listing says both 14-day and 7-day free trial, an unresolved inconsistency.",
+      "financialEvidence": "No public profitability or financial disclosure found. No inference about actual profitability is justified.",
+      "strengths": [
+        "Links catalog audit findings to observed AI-agent visits and product URLs fetched.",
+        "Offers Sidekick briefs for applying catalog fixes and a query simulator for product-page testing on the paid plan.",
+        "Free tier exposes the score, real-time activity tracking, top 12 issues and suggested metafield definitions."
+      ],
+      "limitations": [
+        "Free plan shows only the top 12 product issues; one reviewer says they quickly used the allocation.",
+        "Reviewed listing does not specify event retention, bot verification method, telemetry coverage or simulator query volume.",
+        "Only two App Store reviews were visible in the snapshot, limiting public evidence about support and retention."
+      ],
+      "merchantEvidence": [
+        "Two reviewers valued seeing agent visits; one reported finding missing product categories and thin product specifications, then using Sidekick to implement changes.",
+        "StewArt Media reports two client sites had revenue and crawl activity rise after fixes, while acknowledging concurrent changes and the need for careful scheduling. This does not prove causality."
+      ],
+      "profitPressure": [
+        "If event ingestion, bot classification and repeated audits are high volume, a sub-$20 plan could face variable cost pressure; usage and cost are undisclosed."
+      ],
+      "improvements": [
+        "Distinguish verified crawlers from spoofable user agents and disclose event retention and coverage.",
+        "Version fixes and measure changes in query-level answerability after catalog edits."
+      ],
+      "borrow": [
+        "Connect first-party crawl telemetry to affected product records and actionable Sidekick briefs."
+      ],
+      "avoid": [
+        "Do not equate bot visits or score gains with shopper demand or revenue."
+      ],
+      "opportunity": "Join trustworthy catalog attributes with query-level answerability and outcomes merchants can verify.",
+      "test": "Interview and observe stores using the telemetry for prioritization; falsified if logs rarely change actions or willingness to pay ends once initial catalog issues are fixed.",
+      "sources": [
+        {
+          "label": "SKAW Shopify listing, pricing and reviews",
+          "url": "https://apps.shopify.com/skaw"
+        },
+        {
+          "label": "StewArt Media case commentary",
+          "url": "https://stewartmedia.com.au/the-agentic-first-web-is-already-here/"
+        }
+      ]
+    },
+    {
+      "id": "wprobo-ai-search-visibility",
+      "name": "WPRobo AI Search Visibility",
+      "group": "Shopify AI apps",
+      "priceSummary": "Free up to 25 products; Starter $9.99/month up to 500; Growth $29.99/month up to 2,000; Pro $79.99/month up to 5,000. USD, recurring every 30 days.",
+      "financialEvidence": "No public financial or profitability disclosure found. Product pricing and one review do not establish business performance.",
+      "strengths": [
+        "Describes a complete scan, prioritized fixes, merchant approval, structured data/files, citation tracking and reports workflow.",
+        "Privacy notice describes AI providers, deletion after uninstall, and approval before generated drafts publish.",
+        "Hallucination Guard is positioned to check incorrect AI claims against catalog and policy facts."
+      ],
+      "limitations": [
+        "Vendor page documents weekly Perplexity citation checks; other AI visibility claims are broader than the clearly described tracking surface.",
+        "The reviewed sources do not explain score formula, answer sampling, geography, citation attribution or API/scan quotas.",
+        "One review and a June 2026 launch mean little public evidence about support quality or retention."
+      ],
+      "merchantEvidence": [
+        "One Shopify reviewer says schema fixes were followed by category-answer appearances within about three weeks and setup took an afternoon. This is an uncontrolled merchant report; vendor replied with thanks."
+      ],
+      "profitPressure": [
+        "If flat plans include frequent multi-provider scans and image generation, API and support costs could pressure contribution; actual usage, cost, churn and margin are unknown."
+      ],
+      "improvements": [
+        "Publish scan cadence and coverage for each plan, with source URLs and repeatable evidence.",
+        "Connect approved edits to dated outcome records while separating citations, visits and orders."
+      ],
+      "borrow": [
+        "Approval before publication, catalog-grounded hallucination checks and weekly next-action reporting."
+      ],
+      "avoid": [
+        "Do not present an unexplained score or one citation as evidence of broad discoverability."
+      ],
+      "opportunity": "Provide a trusted validation loop that distinguishes accurate product facts, crawler access, citations, visits and attributable orders.",
+      "test": "Measure paid renewal after initial cleanup; falsified if merchants do not value QA and reporting enough to maintain the subscription.",
+      "sources": [
+        {
+          "label": "WPRobo Shopify listing and review",
+          "url": "https://apps.shopify.com/ai-search-visibility"
+        },
+        {
+          "label": "WPRobo official product page",
+          "url": "https://aisearchvisibility.wprobo.com/"
+        },
+        {
+          "label": "WPRobo privacy policy",
+          "url": "https://aisearchvisibility.wprobo.com/privacy-policy"
+        }
+      ]
+    },
+    {
+      "id": "shop-rank-ai",
+      "name": "Shop Rank AI",
+      "group": "Shopify AI apps",
+      "priceSummary": "Free to install up to 50 products; Scale $9.99/month, described as $9.99 per 100 products, up to 3,000 products.",
+      "financialEvidence": "No public company-level profitability disclosure found. Prices, review counts and feature claims cannot establish profit or loss.",
+      "strengths": [
+        "Product-level audit and bulk fixes cover titles, descriptions, images, alt text and JSON-LD.",
+        "Free tier includes readiness report, three tracked searches, one competitor, one bulk AI fix and an AI-attributed revenue dashboard.",
+        "Zipify help material clarifies when product data is sent to OpenAI and PageSpeed Insights."
+      ],
+      "limitations": [
+        "The public listing does not explain the AI-attributed revenue method or whether it measures incrementality.",
+        "Reviewed pages do not explain weighting for the 17+ readiness factors or how ranks and query outcomes are sampled.",
+        "Recent brief positive reviews establish usability feedback, not sales impact."
+      ],
+      "merchantEvidence": [
+        "Shopify listing snapshot showed 4.8/5 across 29 reviews; recent visible reviews include short usability praise. No merchant-controlled causal evaluation was visible."
+      ],
+      "profitPressure": [
+        "Per-product pricing creates a clear scaling lever, but if image/model calls or support are generous at low rates they could pressure contribution; quotas, costs and margins are not public."
+      ],
+      "improvements": [
+        "Explain the revenue attribution window and signals, separating observed referral orders from causal lift.",
+        "Add bulk-change history, approval and rollback, then report engine/query evidence with timestamps."
+      ],
+      "borrow": [
+        "Product-level issue lists, one-click fixes and clear product-count pricing."
+      ],
+      "avoid": [
+        "Do not market AI-attributed revenue as causal proof or image quality as an AI-search outcome."
+      ],
+      "opportunity": "Offer independent repeatable tests across engines, recording query, timestamp, cited product URL and holdout outcome.",
+      "test": "Compare treated products to matched holdouts; falsified if merchants see no decision value beyond conventional SEO cleanup and do not renew after fixing the backlog.",
+      "sources": [
+        {
+          "label": "Shop Rank AI Shopify listing and reviews",
+          "url": "https://apps.shopify.com/shoprank-ai"
+        },
+        {
+          "label": "Zipify Help Center data disclosure",
+          "url": "https://help.zipify.com/en/articles/14754086-is-my-product-data-sent-to-third-parties"
+        },
+        {
+          "label": "Zipify AI official product page",
+          "url": "https://zipify.com/zipify-ai/"
+        }
+      ]
+    },
+    {
+      "id": "kedra-ai-index",
+      "name": "Kedra AI Index",
+      "group": "Shopify AI apps",
+      "priceSummary": "Free; Grow $25/month; Pro $79/month; Scale $199/month. Scans, tracked questions, fixes, markets and competitors vary by tier.",
+      "financialEvidence": "No public financial statements, profit, CAC, churn, or paid-retention data located. Shopify reviews are not financial evidence.",
+      "strengths": [
+        "Approved drafted fixes are explicitly advertised.",
+        "Combines prompts and competitor tracking, catalog recommendations, crawler checks, structured data/feed claims, and AI-referred sales analytics.",
+        "Shopify listing has 47 reviews and 4.9 stars as accessed 2026-09-29; individual review claims remain unverified."
+      ],
+      "limitations": [
+        "Public plan limits constrain tracked questions, markets and fixes.",
+        "Checked public pages do not explain rollback, exact source provenance, repeatable sampling, or post-change propagation guarantees; these details remain unknown.",
+        "A review reports a 100/100 readiness score within hours, raising a product-design risk of score saturation."
+      ],
+      "merchantEvidence": [
+        "A July 20, 2026 reviewer said product title, variant and schema fixes moved their score from the low 70s to 91 and described monthly use after about two months; anecdotal, not independent.",
+        "A May 27, 2026 reviewer reported 100/100 after about four hours; not proof of recommendations or sales lift."
+      ],
+      "profitPressure": [
+        "Inference only: free access and $25 entry constrain revenue per small store while broad scanning and support may cost money. Higher tiers and limits can support expansion. Profitability is unknown."
+      ],
+      "improvements": [
+        "Diagnose which conflicting value across canonical Shopify fields, variants, markets and feeds is authoritative.",
+        "Source provenance, approval, rollback and propagation verification are existing competitive controls; improve by applying them to target-specific conflicts."
+      ],
+      "borrow": [
+        "Approval before changes, ranked fixes, and live crawler fetch checks."
+      ],
+      "avoid": [
+        "Do not treat readiness scores, crawler visits or attributed orders as causal lift."
+      ],
+      "opportunity": "Potential gap: determine which store-specific value is authoritative when Shopify, a variant/market and destination feed disagree. Provenance, approval, rollback and propagation are controls, not unique whitespace.",
+      "test": "Falsified if merchants can already resolve cross-field and cross-feed conflicts with Kedra or existing feed tools and will not pay beyond those plans for a target-specific audit.",
+      "sources": [
+        {
+          "label": "Kedra Shopify App Store listing and reviews",
+          "url": "https://apps.shopify.com/kedra-ai-index"
+        },
+        {
+          "label": "Kedra AI Index product page",
+          "url": "https://kedra.io/apps/kedra-ai-index/"
+        },
+        {
+          "label": "Burnish workflow: fact sources, approval, rollback and audit trail",
+          "url": "https://useburnish.com/what-it-does/"
+        },
+        {
+          "label": "Geoffy FAQ: server HTML verification and commerce-owned price/availability",
+          "url": "https://geoffy.ai/docs/faq"
+        }
+      ]
+    },
+    {
+      "id": "catalyst-ai-seo",
+      "name": "Catalyst: AI SEO & ChatGPT",
+      "group": "Shopify AI apps",
+      "priceSummary": "Free diagnostics; Starter $19/month with 50 enrichments; Growth $49/month with 500. Extra enrichments listed at $0.05 and $0.03 respectively.",
+      "financialEvidence": "No public financial statements, profit, CAC, churn, or paid-retention evidence located.",
+      "strengths": [
+        "Advertises product audits, generated descriptions/FAQs/JSON-LD, Google Merchant Center feed, AI visibility tracking and MCP endpoint.",
+        "Screenshots show product-level scores and enrichment history; listing claims 17 readiness criteria.",
+        "Visible per-enrichment overage pricing and monthly re-enrichment support operational use."
+      ],
+      "limitations": [
+        "Enrichment volume and extra-product charges constrain or raise cost at catalog scale.",
+        "Public pages do not specify approval, rollback, source provenance, feed propagation verification, or tracker prompt sampling; unknown rather than absent.",
+        "Only one public review as accessed 2026-09-29; reviewer used the app six minutes, which does not establish durable value."
+      ],
+      "merchantEvidence": [
+        "A July 15, 2026 reviewer called it simple and useful for agent traffic after six minutes; subjective, brief, no measured lift."
+      ],
+      "profitPressure": [
+        "Inference only: enrichment and external tracking can consume model/query resources at $19/$49, while overages could cover some marginal costs or deter larger catalogs. Actual unit costs and profitability are unknown."
+      ],
+      "improvements": [
+        "Distinguish target-specific conflicts across canonical records and destination feeds, then name the authoritative system.",
+        "Source evidence, approval, rollback and post-sync checks are already competitive controls; connect them to the unresolved conflict."
+      ],
+      "borrow": [
+        "Connect diagnosis to channel feed enrichment and make enrichment history visible."
+      ],
+      "avoid": [
+        "Do not equate a readiness score, generated FAQs or mentions with causal recommendation lift."
+      ],
+      "opportunity": "Potential gap: identify which store-specific field conflict caused downstream disagreement and which system owns the correct value. Existing verification controls are not unique differentiation.",
+      "test": "Falsified if Catalyst or a feed tool already traces the same conflicts to canonical fields and verifies corrected destination state, with no incremental paid demand.",
+      "sources": [
+        {
+          "label": "Catalyst Shopify App Store listing, pricing and review",
+          "url": "https://apps.shopify.com/catalyst-public"
+        },
+        {
+          "label": "Catalyst FAQ",
+          "url": "https://retail-solutions-ai.com/"
+        },
+        {
+          "label": "Burnish workflow: fact sources, approval, rollback and audit trail",
+          "url": "https://useburnish.com/what-it-does/"
+        },
+        {
+          "label": "Geoffy FAQ: server HTML verification and commerce-owned price/availability",
+          "url": "https://geoffy.ai/docs/faq"
+        }
+      ]
+    },
+    {
+      "id": "aivisible",
+      "name": "AIVisible: GEO/AEO for ChatGPT",
+      "group": "Shopify AI apps",
+      "priceSummary": "Basic $10/month (20 checks, 1 product audit); Pro $29 (40 checks, 20 audits); Advanced $64 (150 checks, 50 audits); $0.25 per extra check/audit.",
+      "financialEvidence": "No public financial statements, profit, CAC, churn, cohort retention, or independent incremental-sales evidence located.",
+      "strengths": [
+        "Combines query/answer mentions, bot access checks, product suggestions, llms.txt, and AI-attributed sessions/orders/revenue.",
+        "Published quotas and metered overages make the cost ladder clear.",
+        "Reviews provide setup feedback and one longer-use attributed-sales claim."
+      ],
+      "limitations": [
+        "Basic provides one product audit per month; broader use is quota-bound and metered.",
+        "Public pages do not clarify product write approval, rollback, source provenance, feed correction, or post-fix representation checks; unknown.",
+        "AI-attributed revenue is not proof of incremental sales."
+      ],
+      "merchantEvidence": [
+        "A June 8, 2026 reviewer with five months of use reported steady AI-attributed sales growth; self-reported correlation.",
+        "March 31 and April 16, 2026 reviews praised automatic llms.txt generation and fast setup; neither demonstrates commercial lift."
+      ],
+      "profitPressure": [
+        "Inference only: low price and small included quotas can limit revenue or perceived value; expanding query tracking and analytics can add variable costs. Overages may monetize use or discourage it. Profit unknown."
+      ],
+      "improvements": [
+        "Expose sampled prompt, locale, timestamp, observed URL and answer variance; identify which conflicting merchant-owned fact is authoritative.",
+        "Treat provenance, approval, rollback and destination checks as existing controls rather than novelty."
+      ],
+      "borrow": [
+        "Query-level observations, recurring bot-access checks, per-assistant attribution and explicit metering."
+      ],
+      "avoid": [
+        "Do not describe attributed sales as incremental revenue or assert llms.txt guarantees indexing."
+      ],
+      "opportunity": "Potential gap: identify and resolve a specific merchant's conflicting canonical, variant, market and feed values, then verify which destination accepted the authoritative value.",
+      "test": "Falsified if AIVisible or an existing feed product resolves the same conflicts across the merchant's markets and destinations, and merchants will not pay for a separate workflow.",
+      "sources": [
+        {
+          "label": "AIVisible Shopify App Store listing, pricing and reviews",
+          "url": "https://apps.shopify.com/aivisible-ai-geo-aeo"
+        },
+        {
+          "label": "DigitalSuits website",
+          "url": "https://digitalsuits.co/"
+        },
+        {
+          "label": "Burnish workflow: fact sources, approval, rollback and audit trail",
+          "url": "https://useburnish.com/what-it-does/"
+        },
+        {
+          "label": "Geoffy FAQ: server HTML verification and commerce-owned price/availability",
+          "url": "https://geoffy.ai/docs/faq"
+        }
+      ]
+    },
+    {
+      "id": "burnish",
+      "name": "Burnish",
+      "group": "Shopify AI apps",
+      "priceSummary": "$149/$299/$649 per month; annual discounts; 7/14-day trials on lower plans, no trial on Omnipresence. Limits scale from 1,500 to 7,500 answer reads and 300 to 2,000 monthly product optimizations.",
+      "financialEvidence": "Two App Store reviews (7-8 days) praise visibility/content structure and support; neither proves paid conversion or renewal. Vendor calls its attribution directional and explicitly says it is not a controlled trial. Actual profit unknown.",
+      "strengths": [
+        "End-to-end monitoring, diagnosis, edits and remeasurement",
+        "Detailed approval gates, dependency checks, before-state records and rollback",
+        "Explicitly labels commercial measurement directional"
+      ],
+      "limitations": [
+        "High entry price relative to unproven incremental contribution",
+        "AI readiness and answer movement do not equal profitable lift",
+        "Only two short-duration public reviews in captured listing"
+      ],
+      "merchantEvidence": [
+        "OWN THE TREND reports better AEO structure after 8 days",
+        "DAXUEN reports content optimization and helpful team after 7 days"
+      ],
+      "profitPressure": [
+        "At $149+ monthly, renewal depends on ongoing value exceeding subscription and review-work costs; no vendor profit disclosed."
+      ],
+      "improvements": [
+        "Offer a smaller paid catalog pilot",
+        "Show denominators, uncertainty and distinct operational versus commercial outcomes",
+        "Use randomized or matched product holdouts where feasible"
+      ],
+      "borrow": [
+        "Earned autonomy",
+        "Approval queue and rollback",
+        "Dependency checks and audit trail",
+        "Clear distinction between attribution and controlled proof"
+      ],
+      "avoid": [
+        "Treating readiness score or attributed revenue as causal ROI",
+        "Autonomous rewrites of already-good fields"
+      ],
+      "opportunity": "Product-level experiments connecting approved edits to contribution margin and durable query visibility.",
+      "test": "Pre-register sample size and outcomes; falsified if changes fail to beat unchanged controls on contribution or meaningful visibility while review burden remains high.",
+      "sources": [
+        {
+          "label": "Shopify listing, plans and reviews",
+          "url": "https://apps.shopify.com/burnish"
+        },
+        {
+          "label": "Burnish pricing",
+          "url": "https://useburnish.com/pricing/"
+        },
+        {
+          "label": "How it works and measurement caveat",
+          "url": "https://useburnish.com/what-it-does/"
+        },
+        {
+          "label": "Catalog actions and rollback",
+          "url": "https://useburnish.com/features/catalog/"
+        }
+      ]
+    },
+    {
+      "id": "storerank-ai",
+      "name": "StoreRank AI",
+      "group": "Shopify AI apps",
+      "priceSummary": "$29/$79/$149/$289 monthly Starter/Pro/Growth/Scale on vendor comparison and prior listing; current App Store extraction directly shows $29 Starter and $79 Pro. 14-day trial.",
+      "financialEvidence": "Shopify listing shows 28-29 five-star reviews in current snapshots. Some merchants praise usability, support or content; one says after about two months revenue impact was too early to measure. This does not establish paid retention or efficacy. Actual profit unknown.",
+      "strengths": [
+        "Broad recurring suite spanning optimization, articles, monitoring and attribution",
+        "Docs explain field-level drafts, previews, approval and default protection for passing fields",
+        "Documents that recommendations cannot control external authority or model behavior"
+      ],
+      "limitations": [
+        "First-touch attribution within 30 days associates orders with an AI source but does not prove causality",
+        "Recurring content production may create maintenance/review load",
+        "Vendor price boxes render $0 while comparison rows and Shopify show tiers"
+      ],
+      "merchantEvidence": [
+        "One review reports five months using the app",
+        "Several describe days/weeks; Magnum Bikes says revenue effect was too early to measure",
+        "Reviewers praise support and editable brand-voice content"
+      ],
+      "profitPressure": [
+        "Merchants may cancel when initial catalog backlog is fixed or attributed revenue fails to translate into incremental margin; no vendor profit disclosed."
+      ],
+      "improvements": [
+        "Show attribution rules and uncertainty beside revenue",
+        "Make recurring catalog maintenance and controlled tests visible",
+        "Resolve pricing presentation and disclose actual scan cadence"
+      ],
+      "borrow": [
+        "Needs-work triage",
+        "Field-level editable drafts and previews",
+        "Brand-voice controls",
+        "Plain-language limits"
+      ],
+      "avoid": [
+        "Equating llms.txt/schema with discoverability",
+        "Promising AI sales from attributed orders"
+      ],
+      "opportunity": "Recurring catalog maintenance measured against holdout contribution margin rather than readiness scores alone.",
+      "test": "Falsified if stores cannot identify recurring work or controlled incremental gain after setup and renewal stops once initial fixes are complete.",
+      "sources": [
+        {
+          "label": "Shopify listing, pricing and reviews",
+          "url": "https://apps.shopify.com/storerank-ai"
+        },
+        {
+          "label": "Vendor pricing",
+          "url": "https://www.storerank.ai/pricing/"
+        },
+        {
+          "label": "Product optimizer workflow and limits",
+          "url": "https://help.storerank.ai/articles/9105371-how-to-use-the-ai-product-optimizer"
+        },
+        {
+          "label": "First-touch attribution method",
+          "url": "https://help.storerank.ai/en/help/articles/0709433-how-to-use-the-ai-traffic-and-revenue-analytics"
+        }
+      ]
+    },
+    {
+      "id": "geoffy",
+      "name": "Geoffy",
+      "group": "Shopify AI apps",
+      "priceSummary": "Vendor site says from £199/month; Shopify listing starts at $249/month, with $649 and $1,949 tiers. Currency and plan availability should be confirmed; Monitor and Influence are described as early access on vendor site.",
+      "financialEvidence": "PadelDogs and Shakeup report five months of use; PadelDogs reports traffic and sales rising. Reviews do not specify payment, plan, order values, margins or counterfactual. Self-reported association, not causal profit evidence. Actual profit unknown.",
+      "strengths": [
+        "Visible product-page answers paired with matching structured data",
+        "Claims checked against catalog data; unverified claims held",
+        "Drift control and deliberate avoidance of stale duplicate price/availability data",
+        "Pathway diagnosis distinguishes on-site and off-site gaps"
+      ],
+      "limitations": [
+        "Price and availability differ between vendor site and Shopify listing",
+        "Monitoring and Influence roll out in early access per vendor site",
+        "Strong outcome statements exceed evidence from small review sample"
+      ],
+      "merchantEvidence": [
+        "PadelDogs, small UK retailer, reports five months and higher traffic and sales",
+        "Shakeup reports five months and more manageable AI-discovery preparation",
+        "Ultimate Leather says ChatGPT named its wallet after guides were published; three days' use"
+      ],
+      "profitPressure": [
+        "£199/$249 entry pricing needs repeat value beyond a one-time cleanup; merchants must maintain accurate product facts. No vendor profit disclosed."
+      ],
+      "improvements": [
+        "Align pricing, currency and availability across channels",
+        "Document sampling, geography and monitoring methodology",
+        "Publish holdout results with margin outcomes and caveats"
+      ],
+      "borrow": [
+        "Fact verification and refusal to invent vague claims",
+        "Drift control",
+        "Visible server-rendered page content",
+        "Routing gaps to on-site fixes or off-site sources"
+      ],
+      "avoid": [
+        "Guaranteeing products will be named",
+        "Calling a holdout proof without randomization, power and commercial outcomes"
+      ],
+      "opportunity": "Fact-safe product enrichment plus off-site source acquisition guidance with controlled measurement.",
+      "test": "Falsified if verified edits fail to improve durable relevant answer inclusion or incremental contribution versus matched/held-out products, or merchants will not sustain the price.",
+      "sources": [
+        {
+          "label": "Official product, pricing range and rollout status",
+          "url": "https://geoffy.ai/"
+        },
+        {
+          "label": "Shopify plans and merchant reviews",
+          "url": "https://apps.shopify.com/geoffy"
+        },
+        {
+          "label": "FAQ on data and implementation",
+          "url": "https://geoffy.ai/docs/faq"
+        }
+      ]
+    },
+    {
+      "id": "appearai",
+      "name": "AppearAI",
+      "group": "Shopify AI apps",
+      "priceSummary": "Free audit; $19.90 one-time for full 20-question audit, full competitor snapshots and content tips. No recurring paid tier shown.",
+      "financialEvidence": "One App Store reviewer explicitly says they paid $19.90 and reports 23 AI-attributed orders after 15 days. This confirms one reported purchase, not renewal or causal ROI; no baseline, margin, verification or control is provided. Actual profit unknown.",
+      "strengths": [
+        "Low-friction price for a nontechnical merchant",
+        "Copy/paste recommendations specify what to add and where",
+        "Free preview supports evaluation before purchase"
+      ],
+      "limitations": [
+        "One-time report offers limited recurring revenue absent follow-on value",
+        "No ongoing paid monitoring tier shown",
+        "Single review cannot establish broader satisfaction or efficacy"
+      ],
+      "merchantEvidence": [
+        "AULA Official Store reports purchase and 23 AI-attributed orders after 15 days; no vendor response visible in extracted listing"
+      ],
+      "profitPressure": [
+        "Low one-time ARPU means repeat purchases or service expansion would be needed for recurring revenue; buyer may implement once and leave. No vendor profit disclosed."
+      ],
+      "improvements": [
+        "Add re-scan and change history after implementation",
+        "Provide rationale/source for each recommendation",
+        "Add recurring monitoring only where ongoing signal is demonstrated"
+      ],
+      "borrow": [
+        "Free preview to paid full-report ladder",
+        "Low one-time price",
+        "Copy-paste implementation tips"
+      ],
+      "avoid": [
+        "Treating AI-attributed orders as caused by the report",
+        "Forcing subscription before recurring value exists"
+      ],
+      "opportunity": "Post-fix verification for small stores, including simple control comparison and contribution-margin capture.",
+      "test": "Falsified if buyers do not implement tips, return for a re-scan, or distinguish meaningful changes from answer variation.",
+      "sources": [
+        {
+          "label": "Shopify plan and review",
+          "url": "https://apps.shopify.com/appearai"
+        }
+      ]
+    },
+    {
+      "id": "otterly-ai",
+      "name": "OtterlyAI",
+      "group": "Monitoring platforms",
+      "priceSummary": "Lite $29/mo for 15 prompts; Standard $189 for 100; Premium $489 for 400; Enterprise custom from 1,000. Annual $25/$160/$422 monthly equivalent. Extra engines cost by tier; Standard/Premium +100 prompts $99/mo. Prices are vendor-published snapshot; recheck before quoting.",
+      "financialEvidence": "No primary-source ARR, funding, margin, net income, or profitability disclosure identified in reviewed sources. Do not infer losses or profit.",
+      "strengths": [
+        "Simple plan ladder and free trial, with country support, unlimited team members, exports, reports, and daily checks.",
+        "Brand prompt, competitor, citation, domain and visibility reporting paired with GEO audits and recommendations.",
+        "Standard/Premium add API, MCP and agent analytics quotas for agency reporting and workflow reuse."
+      ],
+      "limitations": [
+        "Pricing page presents brand/prompt monitoring and URL audits; no Shopify catalog ingestion or SKU shopping analytics is described there.",
+        "Daily tracking runs at no user-selected time and cannot be manually triggered or tuned by cadence, per vendor help page.",
+        "Answer visibility and crawler visits do not establish an incremental profitable order. Merchant diagnosis, editing and revalidation still require work."
+      ],
+      "merchantEvidence": [
+        "No independently attributable public buyer review was included in the reviewed primary-source set; this is not evidence that no reviews exist.",
+        "Vendor says its customers include marketing teams and agencies; logos and marketing claims are not outcome verification."
+      ],
+      "profitPressure": [
+        "Illustrative volume: 15 prompts × 4 included engines × 30 daily runs is about 1,800 answers/month; 100 prompts is about 12,000 and 400 is about 48,000, before paid engines/retries.",
+        "Answer volume is not actual provider calls or COGS: caching, automation, vendor access charges, support and data quality may change unit economics.",
+        "Human prompt selection, source interpretation, ecommerce field mapping, approval and merchant support may dominate low-tier revenue."
+      ],
+      "improvements": [
+        "Import Shopify data read-only; test a small set of high-intent shopper prompts and link answer mismatches to exact SKU/variant fields.",
+        "Show timestamp, market, model, sample counts and confidence; separate mentions, crawls, referrals, orders and causal lift.",
+        "Provide sourced proposed field edits, approval/rollback history and propagation rechecks; reserve daily cadence for valuable queries."
+      ],
+      "borrow": [
+        "Legible plan ladder, trial, report/export workflow, country coverage and explicit cadence quotas.",
+        "Separate answer monitoring from site bot-log analytics."
+      ],
+      "avoid": [
+        "Do not clone branding, interface, score labels or proprietary collection methods.",
+        "Do not promise rank, sales lift, or causal results from mentions or last-click attribution alone."
+      ],
+      "opportunity": "Shopify catalog answerability and evidence: connect a tested buyer query to exact product facts, approved reversible fixes, and post-propagation verification.",
+      "test": "Run a bounded merchant cohort; measure willingness to pay, support/operator minutes per store, time to verified correction, referral/order signal, and renewal after cleanup.",
+      "sources": [
+        {
+          "label": "OtterlyAI pricing",
+          "url": "https://otterly.ai/pricing"
+        },
+        {
+          "label": "OtterlyAI monitoring cadence",
+          "url": "https://help.otterly.ai/monitoring-interval"
+        },
+        {
+          "label": "OtterlyAI help center",
+          "url": "https://help.otterly.ai/"
+        }
+      ]
+    },
+    {
+      "id": "peec-ai",
+      "name": "Peec AI",
+      "group": "Monitoring platforms",
+      "priceSummary": "Current brand page lists Starter 50 prompts/3 models, Pro 150/3, Advanced 350/3 and custom Enterprise; G2 and Peec-authored page instructions report $95/$245/$495 monthly, but numeric cards were not exposed by the live crawler-readable pricing page on this snapshot. Verify checkout. Annual billing is stated to save 15%.",
+      "financialEvidence": "Peec's Nov 18, 2025 announcement reported $4M+ ARR and $29M total funding; May 28, 2026 company-issued announcement reported $10M ARR and $29M funding. Latest disclosed ARR is $10M, company-reported, not audited revenue or profit. No margin, net income, or profitability evidence identified. ARR figures are date-specific and do not establish actual profitability.",
+      "strengths": [
+        "Daily visibility, source, competitor and prompt analytics with flexible models/cadence at Enterprise and explicit answer-volume arithmetic.",
+        "AI Shopping supports Shopify/public-feed or CSV catalog, SKU-level visibility/position/win rate, query fanouts and shopping-source URLs.",
+        "AI Referrals joins GA4 referral sessions, engagement, conversions and revenue; My website can connect GA4, server/CDN logs and prompt retrieval/citations.",
+        "Product updates demonstrate rapid expansion from general monitoring into ecommerce and downstream traffic measurement."
+      ],
+      "limitations": [
+        "A live plan crawler did not expose numeric price cards; reported prices should be rechecked against checkout.",
+        "AI referral attribution can miss or misclassify AI Mode/Overviews, mobile-app visits and no-referrer traffic; vendor documents these caveats.",
+        "GA4 plus server/CDN logs are required for the full crawl-to-traffic view; integrations and exports still demand analyst setup.",
+        "SKU monitoring and visibility are not proof that edits caused profitable incremental sales."
+      ],
+      "merchantEvidence": [
+        "G2 showed 11 reviews at 4.9/5 when indexed; reviewers dated Mar-Apr 2026 praised UI, support and setup, while some noted manual exports/filtering, onboarding help needs, source extraction needs and higher cost for extra models.",
+        "This small self-selected sample is not ecommerce-specific or representative retention/ROI evidence.",
+        "Peec's May 2026 Mint Position case study claims 16% ChatGPT visibility lift in 90 days for Duckfund and 20% agency YoY revenue growth; vendor-published case study and not causal ecommerce ROI."
+      ],
+      "profitPressure": [
+        "Peec defines an answer as one prompt × one model × one run. Starter 50 × 3 × ~30 daily runs is about 4,500 answers/month; Pro ~13,500; Advanced ~31,500.",
+        "Answer counts are not provider calls or COGS. Retries, model access, parsing, logs, storage, support and onboarding can add cost; caching can reduce it.",
+        "Catalog mapping, interpretation, GA4/log integration and repeated reporting create human service burden. No actual unit cost or profit data is public in reviewed sources."
+      ],
+      "improvements": [
+        "Differentiate on variant-level fact provenance and reconciliation between Shopify and destination feeds, with query/market evidence for each issue.",
+        "Separate eligibility, retrieval, answer recommendation, click, order and causal lift; show a sourced, approved reversible edit and recheck.",
+        "Make GA4/log integrations optional depth; deliver an initial catalog diagnosis with read-only Shopify or CSV. Prioritize actions to reduce manual export work."
+      ],
+      "borrow": [
+        "Transparent answer-volume math and project-level model/cadence allocation.",
+        "SKU granularity, product query fanouts, source URLs, fact checking, and crawl-to-referral measurement.",
+        "Bounded pilot structure and explicit integration requirements."
+      ],
+      "avoid": [
+        "Do not claim Peec is unprofitable; disclosures establish funding and ARR claims, not actual net profit.",
+        "Do not clone its visual identity, taxonomy, scores or proprietary data pipeline.",
+        "Do not claim tracked revenue proves causal impact."
+      ],
+      "opportunity": "A merchant-facing correction loop for product truth: exact variant field, evidence and tested query, merchant approval, reversible edit and verified propagation.",
+      "test": "Pilot on a limited SKU cohort; compare correction completion, external answer accuracy, conversion/contribution against a holdout where feasible, human minutes, willingness to pay and post-cleanup renewal.",
+      "sources": [
+        {
+          "label": "Peec AI brand pricing",
+          "url": "https://peec.ai/pricing"
+        },
+        {
+          "label": "Peec AI pricing update",
+          "url": "https://peec.ai/blog/pricing-update"
+        },
+        {
+          "label": "Peec AI Series A / $4M+ ARR announcement",
+          "url": "https://peec.ai/blog/we-raised-21m-series-a-to-help-brands-win-in-ai-search"
+        },
+        {
+          "label": "Peec AI $10M ARR announcement",
+          "url": "https://www.globenewswire.com/news-release/2026/05/28/3303009/0/en/Peec-AI-hits-10M-ARR-16-months-after-launch-as-brands-race-to-optimize-for-AI-search.html"
+        },
+        {
+          "label": "Peec AI Shopping launch",
+          "url": "https://peec.ai/blog/ai-shopping-analytics"
+        },
+        {
+          "label": "Peec AI Referrals launch",
+          "url": "https://peec.ai/blog/introducing-ai-referrals"
+        },
+        {
+          "label": "G2 Peec AI reviews",
+          "url": "https://www.g2.com/products/peec-ai/reviews"
+        },
+        {
+          "label": "Mint Position case study",
+          "url": "https://peec.ai/blog/how-mint-position-helps-fintech-clients-unlock-16-more-ai-search-visibility-and-secure-1-search-positions-with-peec-ai"
+        }
+      ]
+    },
+    {
+      "id": "profound",
+      "name": "Profound",
+      "group": "Monitoring platforms",
+      "priceSummary": "Current Brands tab: free seven-day trial (50 prompts daily, ChatGPT/Gemini/Google AI Overviews, fixed recommended prompts, limited AI Marketer credits) plus custom Enterprise for ongoing tracking; both show unlimited seats. Separate Agency Growth is documented at 400 Agent credits per client workspace and a vendor agency launch post prices each workspace at /month. Older/alternate vendor pricing content lists brand Starter  and Growth , but that appears to be an earlier or alternate plan presentation; it does not contradict the current Brands tab or establish current  brand Growth availability. Confirm eligibility with vendor.",
+      "financialEvidence": "Company announced Sep 15, 2026 a  Series D at .8B valuation; combined with its earlier + funding disclosure implies at least  publicly disclosed funding. It claims 1,000+ enterprise brands and service to over one third of the Fortune 100. No public ARR, profitability, gross margin, CAC, or churn found. Funding, valuation, and customer count do not establish profit.",
+      "strengths": [
+        "Wide answer-engine coverage and enterprise prompt, market, security, and support controls.",
+        "Consumer-facing interface collection is positioned to reflect rendered answers rather than API outputs.",
+        "Agents link visibility data, research, generation, and CMS publishing in a configurable node workflow.",
+        "Prompts, personas, regions, cadence, and agent credit use are configurable and documented."
+      ],
+      "limitations": [
+        "Current public pricing and plan availability conflict on the vendor page; enterprise terms remain opaque.",
+        "Prompt-panel data is not a representative sample of real customer conversations; sampling choices and session context matter.",
+        "More engines, personas, regions, and daily runs expand data and operating cost without proving incremental sales.",
+        "Agent-generated or published content needs human review, provenance, versioning, and outcome checks."
+      ],
+      "merchantEvidence": [
+        "Vendor reports serving 700+ enterprises and more than 10% of the Fortune 500; retail/ecommerce is among its claimed verticals.",
+        "Pricing FAQ recommends custom Enterprise for teams with more than three people, signaling a staffed marketing-team ICP.",
+        "No public evidence found of a Shopify merchant plan or product/variant-level correction and outcome workflow."
+      ],
+      "profitPressure": [
+        "Hypotheses only: multi-engine interface collection and daily processing costs.",
+        "Hypotheses only: broad product surface, integrations, model usage, and high-touch customer support.",
+        "No disclosed CAC, churn, gross margin, or operating result supports a unit-economics claim."
+      ],
+      "improvements": [
+        "Publish one dated plan matrix and reconcile contradictory trial versus $99/$399 self-serve offers.",
+        "Disclose sampling design, session/region controls, repeat variance, and attribution definitions in each report.",
+        "Make agent publishing approval-first with diff, source provenance, rollback, and measured downstream outcomes.",
+        "Reduce onboarding/support cost with self-serve diagnostics and simpler use-case templates."
+      ],
+      "borrow": [
+        "Disclosed prompt samples linked to citations and prioritized changes.",
+        "Credit estimates, actual usage visibility, configurable pauses/overages.",
+        "An insight-to-action loop with tracked approval and publishing status."
+      ],
+      "avoid": [
+        "Enterprise-scale dashboards and broad engine coverage before merchant demand is validated.",
+        "Opaque, contradictory plan and credit limits.",
+        "Treating share-of-voice or attributed traffic as causal incremental profit."
+      ],
+      "opportunity": "Shopify product/variant/market audit that connects a buyer query and observed answer to the exact canonical fact or destination eligibility issue, then verifies an approved correction after propagation.",
+      "test": "With a small merchant sample, freeze a disclosed prompt set and baseline product facts; test whether merchants pay for source-grounded diagnosis and approved fixes, then compare observed answer/citation shifts, AI visits, attributed orders, and a holdout where feasible.",
+      "sources": [
+        {
+          "label": "Profound pricing",
+          "url": "https://www.tryprofound.com/pricing"
+        },
+        {
+          "label": "Series C announcement",
+          "url": "https://www.tryprofound.com/newsroom/profound-raises-series-c-at-1b-valuation-to-lead-a-new-category-of-marketing"
+        },
+        {
+          "label": "Prompt Designer documentation",
+          "url": "https://help.tryprofound.com/articles/3730240593-create-manage-and-tag-prompts"
+        },
+        {
+          "label": "Prompt set documentation",
+          "url": "https://help.tryprofound.com/articles/4881350168-how-to-create-topics-prompts-to-track-in-profound"
+        },
+        {
+          "label": "Agents overview",
+          "url": "https://help.tryprofound.com/articles/9762251986-agents-overview"
+        },
+        {
+          "label": "Series D announcement",
+          "url": "https://www.tryprofound.com/newsroom/profound-raises-usd180m-series-d-at-usd1-8b-valuation-to-build-the-ai-platform-for-marketing-teams"
+        },
+        {
+          "label": "Agency Growth offer",
+          "url": "https://www.tryprofound.com/blog/agencies-launch-your-aeo-practice-with-profound"
+        },
+        {
+          "label": "Agent credits documentation",
+          "url": "https://help.tryprofound.com/articles/9359511602-profound-agents-credits"
+        }
+      ]
+    },
+    {
+      "id": "scrunch",
+      "name": "Scrunch",
+      "group": "Monitoring platforms",
+      "priceSummary": "Current page rendering: Starter $250/month annual or $300 month-to-month (3 seats, 350 custom prompts, 1,000 industry prompts, 3 personas, 5 audits); Growth $417/month annual or $500 month-to-month (5 seats, 700 custom prompts, 2,500 industry prompts, 5 personas, 10 audits); Enterprise custom. Seven-day Starter trial. Page says all plans cover ChatGPT, Claude, Gemini, Perplexity, Google AI Mode/Overviews, and Meta. Older indexed Core/Enterprise matrix for same URL shows different limits (e.g. Core $250, 125 prompts, 4 engines); use the currently rendered direct offer as latest observed, avoid combining matrix versions, and reconfirm at signup.",
+      "financialEvidence": "Scrunch says it raised $26M before Sitecore acquired it on June 3, 2026; Scrunch claims 500+ brands/agencies. Sitecore confirms acquisition; price and Scrunch standalone financials are undisclosed. No Scrunch ARR, profitability, gross margin, CAC, or churn found. Sitecore's >$500M ARR is parent-company claim and does not describe Scrunch.",
+      "strengths": [
+        "Combines prompt visibility, site audits, on-site agent traffic, and content optimization/delivery.",
+        "AXP docs describe actual CDN routing, server-rendered bot HTML, approved content input, deployment logs, version history, and rollback.",
+        "Public Core offer sets concrete prompt, seat, workspace, engine, audit, market, and page limits.",
+        "Sitecore ownership may provide adjacent content management distribution and integration opportunities."
+      ],
+      "limitations": [
+        "AXP requires CDN routing and content freshness governance; cached or stale price/availability can misrepresent a store.",
+        "Some stored AXP content needs manual refresh after CMS updates; product docs warn that help content can lag recent changes.",
+        "No independent controlled evidence reviewed isolates AXP as the cause of visibility or sales lift.",
+        "$250/month plus enterprise implementation friction is mismatched to many small merchants."
+      ],
+      "merchantEvidence": [
+        "Scrunch claims 500+ customers and names enterprise/agency customers; acquisition by Sitecore signals strategic enterprise value, not proven SMB demand.",
+        "Core pricing offers 5 seats but one brand workspace, 1 country, 25 sitemap pages, and one monthly page optimization.",
+        "Enterprise AXP and complete audits are custom-plan capabilities; no low-cost Shopify-native integration was found."
+      ],
+      "profitPressure": [
+        "Hypotheses only: enterprise sales, security review, CDN integration, onboarding, and ongoing customer success.",
+        "Hypotheses only: multi-engine collection, analysis, and AXP infrastructure/support.",
+        "Acquisition provides a potential distribution route but no public standalone unit economics."
+      ],
+      "improvements": [
+        "Publish a qualification checklist for CDN compatibility, cache behavior, bot routing, CMS freshness, and rollback.",
+        "Offer an AXP sandbox and response diff that validates bot versus human delivery before production.",
+        "Report crawl access separately from citations, mentions, referrals, orders, and causal lift.",
+        "State onboarding effort, plan overages, page limits, and integration fees before sales handoff."
+      ],
+      "borrow": [
+        "Versioned, approval-based alternative content with visible deployment history and rollback.",
+        "Clear product limits, seats, markets, competitors, and prompt counts.",
+        "Observation-to-diagnosis-to-action framing across off-site answers and on-site bot access."
+      ],
+      "avoid": [
+        "CDN and proxy complexity for merchants whose product facts are already available in native feeds.",
+        "Bot-specific content without freshness checks, parity rules, and audit logs.",
+        "Assuming improved retrieval means better recommendations, revenue, or profit."
+      ],
+      "opportunity": "A low-friction Shopify audit that first proves an AI answer or channel feed cannot resolve a product fact, then maps it to source data and measures the corrected result without requiring CDN changes.",
+      "test": "Run a small controlled pilot on a few Shopify stores: record bot access and baseline product/variant answers, apply only sourced fixes, verify propagation and parity, then track repeated answers, AI referral orders, support effort, and a comparable untreated set.",
+      "sources": [
+        {
+          "label": "Scrunch pricing",
+          "url": "https://scrunch.com/pricing/"
+        },
+        {
+          "label": "Scrunch about and company history",
+          "url": "https://scrunch.com/about/"
+        },
+        {
+          "label": "Sitecore acquisition announcement",
+          "url": "https://www.sitecore.com/company/newsroom/press-releases/2026/06/sitecore-acquires-scrunch-to-help-brands-influence-discovery--and-buying-decisions"
+        },
+        {
+          "label": "AXP setup how-to",
+          "url": "https://scrunch.com/how-tos/how-to-serve-ai-optimized-content-directly-to-llms/"
+        },
+        {
+          "label": "AXP delivery FAQ",
+          "url": "https://scrunch.com/faqs/how-does-scrunch-serve-bot-friendly-html-and-pre-rendered-pages-to-ai-crawlers/"
+        },
+        {
+          "label": "AXP freshness and CMS FAQ",
+          "url": "https://scrunch.com/faqs/how-does-scrunchs-axp-approach-compare-to-publishing-ai-friendly-content-directly-in-the-cms"
+        },
+        {
+          "label": "Current Scrunch pricing page",
+          "url": "https://scrunch.com/pricing/"
+        }
+      ]
+    },
+    {
+      "id": "smart-seo",
+      "name": "Smart SEO",
+      "group": "Established SEO apps",
+      "priceSummary": "Free; Pro $14.99/mo; Business $24.99/mo; Premium $49.99/mo; 7-day paid trials. Quotas rise by tier; multilingual at Business, unlimited audit/own-key generation at Premium.",
+      "financialEvidence": "No public P&L or app unit economics found. Review count and longevity do not establish profitability.",
+      "strengths": [
+        "Bulk metadata and image changes plus audits, link checks, schema, indexing and GSC integration.",
+        "Multilingual JSON-LD, LLM/agent catalogs, MCP/Sidekick; live schema-conflict help is a reported differentiator."
+      ],
+      "limitations": [
+        "AI generations, audited page counts, images and language features are tier-gated.",
+        "One merchant wished for more JavaScript control (Adrenaline, US, 22 Jun 2026; 9 days)."
+      ],
+      "merchantEvidence": [
+        "Positive: The Card Collective (Australia), 17 Sep 2026, ~2 hours, says support fixed duplicate Product JSON-LD from theme/Judge.me after checking Rich Results. Merchant report.",
+        "Positive: JOERIAKNITS (Canada), 30 Jun 2026, 10 months, says support removed stale code from a prior app that filled meta descriptions from product copy. Merchant report."
+      ],
+      "profitPressure": [
+        "Inference: support-heavy, theme-specific debugging and AI generation could raise service/API costs.",
+        "Inference: metadata backlog completion can trigger natural churn; ongoing multilingual/catalog changes may support renewal."
+      ],
+      "improvements": [
+        "Show exact before/after writes, data source, language, schema owner and rendered validation; make rollback easy."
+      ],
+      "borrow": [
+        "Multilingual JSON-LD, quota-based plans, bulk fixes, audit-to-action flow and escalation to a human who validates live output."
+      ],
+      "avoid": [
+        "Claiming AI discovery from LLM files alone or auto-publishing without previews."
+      ],
+      "opportunity": "Build trust in catalog changes through source-linked recommendations, duplicate-schema detection, validation and rollback.",
+      "test": "Measure paid renewal after cleanup, distinguishing merchants with recurring SKU/language changes from static catalogs.",
+      "sources": [
+        {
+          "label": "Shopify listing, prices and features",
+          "url": "https://apps.shopify.com/smart-seo"
+        },
+        {
+          "label": "dated merchant reviews",
+          "url": "https://apps.shopify.com/smart-seo/reviews"
+        },
+        {
+          "label": "vendor site",
+          "url": "https://www.seo.do/"
+        }
+      ]
+    },
+    {
+      "id": "storeseo",
+      "name": "StoreSEO",
+      "group": "Established SEO apps",
+      "priceSummary": "Free (25 products); Lite $14.99/mo (100); Essential $39.99/mo (250); Advanced $249.99/mo (10,000, multilingual); 7-day paid trials. Credit and image limits rise by tier; extra AI-credit bundles available.",
+      "financialEvidence": "No public P&L or unit economics found; ratings/reviews are not financial evidence.",
+      "strengths": [
+        "Product, collection, blog, images, JSON-LD, sitemap/indexing, GSC/GA, LLM files and rank tracking in one workflow.",
+        "Per-language SEO fields and MCP/API interfaces; approachable support walkthroughs appear in merchant reports."
+      ],
+      "limitations": [
+        "Broad scope and tiered product/credit caps complicate choosing the right plan.",
+        "AI visibility claims may exceed the directly measurable features such as catalog edits and audits."
+      ],
+      "merchantEvidence": [
+        "Positive: ERLY (US), 9 Sep 2026, over 1 year, says a support call clarified product/page improvement areas and scores. Merchant report.",
+        "Positive: fhair (India), 2 Sep 2026, ~4 hours, says tools were easy to understand and saved time. Merchant report.",
+        "Positive: SECEAD (US), 30 Aug 2026, ~1 month, reports easier indexing and perceived visibility gains within days; self-attributed, not causal evidence."
+      ],
+      "profitPressure": [
+        "Inference: large language-model credit allowances, support and high-volume image processing may pressure gross margin.",
+        "Inference: completing initial metadata backlog creates churn unless new SKUs, translation changes or monitoring create repeat work."
+      ],
+      "improvements": [
+        "Link every issue to its source and safe staged fix; detect schema collisions and report indexing/result status separately from scores."
+      ],
+      "borrow": [
+        "Per-language fields, visible credit requirements, agent interfaces, support walkthroughs and tier transparency."
+      ],
+      "avoid": [
+        "Treating an audit score as proof of rankings, citations, or sales lift."
+      ],
+      "opportunity": "Tie actionable work to catalog changes and validate rendered theme output, keeping readiness metrics separate from channel outcomes.",
+      "test": "Offer renewal cohort comparison after first backlog remediation for stores with and without ongoing catalog/translation churn.",
+      "sources": [
+        {
+          "label": "Shopify listing, offers and dated reviews",
+          "url": "https://apps.shopify.com/storeseo"
+        },
+        {
+          "label": "AI credit bundle documentation",
+          "url": "https://storeseo.com/docs/increase-ai-content-credit-limit-in-storeseo/"
+        },
+        {
+          "label": "multilingual workflow",
+          "url": "https://storeseo.com/use-cases/international-stores"
+        }
+      ]
+    },
+    {
+      "id": "tinyseo",
+      "name": "TinySEO",
+      "group": "Established SEO apps",
+      "priceSummary": "Free to install (50 image optimizations/mo, then 3¢ each); $14/mo (1,500, then 2¢), $23/mo (5,000, then 1¢), $49/mo (15,000, then 0.8¢). Recurring/usage charges every 30 days.",
+      "financialEvidence": "No public P&L or app unit economics found. Large review volume does not establish revenue or profit.",
+      "strengths": [
+        "Deep image optimization/speed toolkit plus alt text, AI metadata/blogs, schema, redirects, indexing, audits, GSC and LLM files.",
+        "Merchants report useful human help resolving schema and code issues; backup/restore is a valuable safety feature."
+      ],
+      "limitations": [
+        "Image optimization may yield little if files are already optimized; one merchant reported this and vendor explained quality-preserving behavior.",
+        "A merchant says alt text was overwritten without a sufficiently visible warning; vendor cites onboarding and restore messaging."
+      ],
+      "merchantEvidence": [
+        "Positive: Vault Furniture (US), 22 Sep 2026, almost 4 years, reports support resolving duplicate JSON-LD. Merchant report.",
+        "Positive: ongoing-product store, 11 Sep 2026, says one-time setup plus automatic updates matters because new products arrive daily. Merchant report.",
+        "Negative: BE Artistic Designs (US), 28 Jul 2026, 7 days, says selected optimization replaced carefully written alt text; TinyIMG replied that warnings existed and said it would improve visibility."
+      ],
+      "profitPressure": [
+        "Inference: image processing is metered and recurring support/schema cleanup may carry cost.",
+        "Inference: one-off optimization volume creates idle-month churn; new catalog images offer a recurring trigger."
+      ],
+      "improvements": [
+        "Warn per field before writes, preview a sample, preserve original values, and estimate expected byte reduction before bulk optimization."
+      ],
+      "borrow": [
+        "Image backups, usage-based limits, per-unit pricing, live support and hands-on schema cleanup."
+      ],
+      "avoid": [
+        "Equating image counts processed with merchant value or overwriting descriptive text without an explicit preview."
+      ],
+      "opportunity": "Make each operation conditional on likely benefit and reversible, preserving merchant-authored copy by default.",
+      "test": "Compare renewal for image-heavy catalogs with frequent new uploads versus stores that finish a one-time optimization backlog.",
+      "sources": [
+        {
+          "label": "Shopify listing and current offer",
+          "url": "https://apps.shopify.com/smart-image-optimizer"
+        },
+        {
+          "label": "dated reviews and vendor replies",
+          "url": "https://apps.shopify.com/smart-image-optimizer/reviews"
+        },
+        {
+          "label": "vendor feature site",
+          "url": "https://tiny-img.com/"
+        }
+      ]
+    },
+    {
+      "id": "searchpie",
+      "name": "SearchPie",
+      "group": "Established SEO apps",
+      "priceSummary": "Free Starter; Premium $39/mo or $374.40/year; Enterprise $99/mo or $950.40/year. Paid tiers have 7-day trials. Free includes 50 image compressions and 50 AI tags; higher tiers expand schema, image, tracking and AEO/LLM features.",
+      "financialEvidence": "No public P&L or app-level unit economics found. A long operating history and many reviews are not proof of profitability.",
+      "strengths": [
+        "Broad SEO, speed, image, schema, link, indexing and support toolkit with a real free floor.",
+        "Human onboarding/fix assistance helps translate technical reports into work for non-specialists."
+      ],
+      "limitations": [
+        "Feature breadth can overwhelm users; a merchant says speed reports were unclear until support offered fixes.",
+        "Single reviewer alleges default templates duplicated metadata and extra $300 services were needed; vendor replied. Disputed anecdote."
+      ],
+      "merchantEvidence": [
+        "Positive: Boutique One Kaftan (Canada), 9 Sep 2026, almost 2 years, reports automation saved daily effort but dashboard was overwhelming; support helped with setup.",
+        "Positive: Pixi Daisy (UK), 9 Sep 2026, almost 7 years, says speed report initially lacked clarity and support offered to arrange technical fixes.",
+        "Negative: Meme Gifts (US), 2 Sep 2025, 14 days, alleges $100/month template duplicated metadata and remediation required a $300 service; vendor replied."
+      ],
+      "profitPressure": [
+        "Inference: breadth, expert services, onboarding and support can create high service costs.",
+        "Inference: one-time technical cleanup creates natural churn; recurring catalog changes and continued issue monitoring may sustain value."
+      ],
+      "improvements": [
+        "Prioritize a short issue queue, detect duplicate copy, preview/revert edits, verify rendered pages, and disclose service prices beside recommendations."
+      ],
+      "borrow": [
+        "Free entry, support-guided setup, progressive limits, and escalation for technical store-specific fixes."
+      ],
+      "avoid": [
+        "Score inflation, template-only metadata writes, or implying AEO labels establish sales impact."
+      ],
+      "opportunity": "Make prioritized fixes verifiable and reversible, and distinguish implementation cost from subscription features.",
+      "test": "Track whether issue resolution and recurring catalog changes support renewal after the initial cleanup phase.",
+      "sources": [
+        {
+          "label": "Shopify listing, prices and features",
+          "url": "https://apps.shopify.com/seo-booster"
+        },
+        {
+          "label": "reviews including merchant reports and response",
+          "url": "https://apps.shopify.com/seo-booster/reviews"
+        },
+        {
+          "label": "vendor app support listing",
+          "url": "https://apps.shopify.com/seo-booster"
+        }
+      ]
+    },
+    {
+      "id": "tapita",
+      "name": "Tapita AI SEO Optimizer, Speed",
+      "group": "Established SEO apps",
+      "priceSummary": "Current Shopify listing snapshot: free; Basic $9.99/month; Pro $39.99/month. Shopify plan surcharges and extra audit-page or AI-credit usage can increase costs; verify listing for current terms.",
+      "financialEvidence": "Public reviews show adoption and examples of retained use, including one review reporting four months and others praising hands-on help. They do not disclose vendor revenue, paid-plan mix, churn, acquisition costs, support costs, or profit. Merchant outcome statements are unverified.",
+      "strengths": [
+        "Broad SEO, speed, schema, metadata, image and LLMs.txt feature bundle.",
+        "Low-cost entry plan and free option lower adoption friction.",
+        "Recent merchants report direct human help resolving SEO and performance issues.",
+        "Strong current listing rating and review count indicate adoption, not financial health."
+      ],
+      "limitations": [
+        "Price can rise with Shopify plan surcharges, usage and service scope.",
+        "Reviews show confusion about included versus paid service work and what audits actually complete.",
+        "Some complaints and vendor replies conflict; public evidence does not adjudicate billing or work completion.",
+        "High-touch support could be expensive to deliver; this is a hypothesis, not disclosed unit economics."
+      ],
+      "merchantEvidence": [
+        "Caris & Co. said in August 2026 that support reviewed its store and helped resolve SEO/performance issues; four months of use reported.",
+        "Legacy Coalition Store reported one day of use in September 2026, learning about metafields and getting issues fixed, while deferring judgment on results.",
+        "Bazar91 alleged in May 2026 that a paid service bypassed issues; Tapita replied that no payment had been received for the cited services and said tasks were completed with a dated work log. Disputed and unresolved.",
+        "A one-star review alleged successive fees for fixing more issues. This is a merchant account, not proof of the pricing process."
+      ],
+      "profitPressure": [
+        "Small or low-margin stores may find add-ons, plan surcharges and support time exceed the value of a one-time cleanup.",
+        "If audits require staff help to interpret or execute, human support load may pressure margins; no actual profit data is public.",
+        "Stores without a measurable change after setup may not see recurring value."
+      ],
+      "improvements": [
+        "Label findings as detected, recommended, changed, or verified.",
+        "Show service fees, plan limits, credits and Shopify surcharges before scans or onboarding.",
+        "Use approval gates, before/after diffs, rollback and exportable change logs.",
+        "Separate technical and visibility metrics from sales or ranking claims; report baselines and dates."
+      ],
+      "borrow": [
+        "Broad free-to-paid feature ladder.",
+        "Cross-functional bundle covering routine store optimization.",
+        "Responsive human troubleshooting and implementation help."
+      ],
+      "avoid": [
+        "Using audit scores as shorthand for business outcomes.",
+        "Leaving the boundary between included fixes and paid services unclear.",
+        "Treating allegations or testimonials as independently verified results."
+      ],
+      "opportunity": "Make safe, customer-controlled implementation and verification the durable paid value, while keeping costs and completion criteria explicit.",
+      "test": "Run a fixed-scope, paid remediation pilot with explicit deliverables, merchant approvals and optional monitoring; measure completion, support hours, reversals and renewal.",
+      "sources": [
+        {
+          "label": "Shopify App Store listing and current pricing",
+          "url": "https://apps.shopify.com/google-seo-schema-meta-data"
+        },
+        {
+          "label": "Tapita App Store reviews, including vendor reply to disputed service allegation",
+          "url": "https://apps.shopify.com/google-seo-schema-meta-data/reviews?page=1&ratings%5B%5D=1"
+        }
+      ]
+    },
+    {
+      "id": "booster-seo",
+      "name": "Booster AI SEO + AEO Optimizer",
+      "group": "Established SEO apps",
+      "priceSummary": "Current Shopify listing snapshot: free; Pro $39/month; Premium $69/month; 14-day trials and annual options. Verify listing for current billing terms.",
+      "financialEvidence": "The large review base and multi-year customer reviews establish examples of adoption and retention, not paid-plan mix, revenue, profitability, support economics, or causally attributable outcomes.",
+      "strengths": [
+        "Consolidates audits, metadata, autopilot, structured data, broken links, image optimization and AI-search positioning.",
+        "Free plan and broad utility support exploration.",
+        "Recent multi-year users publicly praise accessible support and issue resolution."
+      ],
+      "limitations": [
+        "Automation may alter metadata and live theme assets merchants consider valuable.",
+        "A 2026 Shopify Markets review alleged theme residue and commented-out native titles after uninstall; Booster acknowledged the remaining commented tags but disputed the effect of a cached Translate & Adapt entry and said Shopify API restrictions limit restoration.",
+        "A merchant alleged autopilot indexing damage and trial billing; Booster said the noindex issue was an audit-display problem and attributed some problems to a recent update. The claims remain disputed.",
+        "Billing responsibility and trial/cancellation timing are not always clear to merchants."
+      ],
+      "merchantEvidence": [
+        "Helene Clarkson Design praised support in July 2026 and reported over five years using the app; plan and business outcomes were not stated.",
+        "SoulCurryArt alleged in April 2026 that autopilot replaced good metadata with generic text and that trial cancellation still resulted in a charge. Booster replies later said the noindex concern was display-only and that a recent update affected a small number of stores.",
+        "FOLIGAIN UK reported a Shopify Markets conflict and remaining theme edits in September 2026. Booster replied that native title tags remained commented after uninstall due to Shopify API limitations, characterized a Translate & Adapt entry as inactive cached data, and said it had updated integration behavior.",
+        "Merchants report charges after uninstall/trial cancellation; Booster says Shopify handles billing and charges may apply if the app remains active at cycle start. Individual timelines remain unverified."
+      ],
+      "profitPressure": [
+        "Stores with strong existing copy or multi-market setups may incur review and cleanup time that offsets automation savings.",
+        "Support demand and defect remediation may pressure costs, but no internal cost or profit data is available.",
+        "Stores that distrust automated edits or complete a one-time cleanup may see limited recurring value."
+      ],
+      "improvements": [
+        "Make autopilot preview-first, reversible and approval-based, especially for URLs and indexing directives.",
+        "Snapshot theme state and provide tested uninstall cleanup and localized-market compatibility checks.",
+        "Show generated text, source rationale, billing state and trial end date clearly.",
+        "Separate app audit warnings from verified storefront output and commercial outcomes."
+      ],
+      "borrow": [
+        "Useful free tier and consolidated toolbox.",
+        "Accessible live support.",
+        "Routine automation where changes are safe and reversible."
+      ],
+      "avoid": [
+        "Unreviewed destructive automation.",
+        "Ambiguous trial and cancellation state.",
+        "Presenting completed audits as proof of better traffic or sales."
+      ],
+      "opportunity": "Safe SEO automation with versioned diffs, rollback and continuous compatibility checks across Shopify Markets.",
+      "test": "A/B test user enablement and retention for preview-plus-rollback automation against current onboarding; track approved edits, reversals, support contacts and merchant-confirmed outcomes.",
+      "sources": [
+        {
+          "label": "Shopify App Store listing, features and current pricing",
+          "url": "https://apps.shopify.com/booster-apps-seo-optimizer"
+        },
+        {
+          "label": "Booster reviews and vendor reply about Shopify Markets/theme cleanup",
+          "url": "https://apps.shopify.com/booster-apps-seo-optimizer/reviews?ratings%5B%5D=1"
+        },
+        {
+          "label": "Booster review listing with vendor reply on disputed noindex report",
+          "url": "https://apps.shopify.com/booster-apps-seo-optimizer/reviews?page=1&ratings%5B%5D=1"
+        },
+        {
+          "label": "Booster retained customer examples",
+          "url": "https://apps.shopify.com/booster-apps-seo-optimizer/reviews?page=2"
+        }
+      ]
+    },
+    {
+      "id": "plug-in-seo",
+      "name": "Plug in SEO",
+      "group": "Established SEO apps",
+      "priceSummary": "Current Shopify listing snapshot: Lite $29.99/month, Standard $49.99/month, Premium $79.99/month, each with a seven-day trial. Tier limits and included expert calls vary.",
+      "financialEvidence": "Reviews provide examples of multi-year use and explicit paid support purchases, but do not establish current plan, overall retention, profit, or causal SEO lift.",
+      "strengths": [
+        "Pairs audits and management tools with keyword guidance, expert calls and support.",
+        "Quick Start and annual support provide examples of willingness to pay for human interpretation and implementation.",
+        "Merchant reviews report knowledge transfer and clear prioritization, including from a startup that compared service with an agency."
+      ],
+      "limitations": [
+        "Some reviewers report unclear instructions, automatic page-name changes, or leftover code after uninstall.",
+        "Vendor replies conflict with reviewers over response time and access to offered consultation; public evidence does not resolve all accounts.",
+        "A completed audit may still require paid expert work or merchant implementation to produce a fix."
+      ],
+      "merchantEvidence": [
+        "Satya reported over four years using the app and praised Quick Start for addressing issues and clarifying a keyword plan in March 2026.",
+        "Bliss Lau’s review update in April 2025 said the small shop continued using the app and bought an annual support plan.",
+        "Barbeques and More reported in April 2026 that code remained and caused conflicts after uninstall; Plug in Useful replied in July that it had followed up and offered a call, which was not scheduled.",
+        "Open Waters Solar alleged in November 2024 unclear guidance, automatic page-name changes and a week without response; the vendor said email was answered within an hour, a consultation offered, and support resources existed. Disputed account."
+      ],
+      "profitPressure": [
+        "Stores with few pages or a completed one-off cleanup may not need recurring audits at $29.99 to $79.99 monthly.",
+        "If merchants need frequent expert interpretation or implementation, support delivery can raise costs; actual unit economics are not public.",
+        "A warning-only workflow can make the paid service feel necessary to complete tasks, risking trust and churn."
+      ],
+      "improvements": [
+        "Make scan/page limits visible during onboarding and prioritize issues by risk and expected effort.",
+        "Show which findings the merchant can fix directly and which require theme or expert work.",
+        "Add approval, rollback and post-uninstall verification for edits.",
+        "Expose support case state and response expectations, and separate one-time remediation from recurring monitoring."
+      ],
+      "borrow": [
+        "Expert guidance that explains what matters and builds merchant capability.",
+        "A paid implementation option for stores without in-house SEO staff.",
+        "Knowledge transfer alongside completed fixes."
+      ],
+      "avoid": [
+        "Unprioritized dashboards that leave the merchant with unresolved work.",
+        "Opaque gating of task completion behind services.",
+        "Assuming a long subscription or reported ranking change proves profitability or causality."
+      ],
+      "opportunity": "Recurring technical monitoring with transparent completion states and a small number of customer-approved fixes, plus optional scoped expert setup.",
+      "test": "Compare a finite paid setup package plus optional low-cost monitoring against a tiered recurring plan; measure completion, merchant implementation time, support load and renewal.",
+      "sources": [
+        {
+          "label": "Shopify App Store listing and current pricing",
+          "url": "https://apps.shopify.com/plug-in-seo"
+        },
+        {
+          "label": "Plug in SEO reviews, retained customers and vendor replies",
+          "url": "https://apps.shopify.com/plug-in-seo/reviews"
+        },
+        {
+          "label": "Plug in SEO review with annual support plan update",
+          "url": "https://apps.shopify.com/plug-in-seo/reviews?ratings%5B%5D=5"
+        }
+      ]
+    },
+    {
+      "id": "simprosys",
+      "name": "Simprosys Google Shopping Feed",
+      "group": "Feed and catalogue tools",
+      "priceSummary": "Shopify listing: from $4.99/month; tiered by catalog size (up to 500, 1,000, 5,000, 10,000 products) and 21-day trial. AI feed optimization add-on: $1 per 25 products, one-time. Variant inclusion in the product meter should be confirmed before direct SKU comparison. Snapshot 2026-09-29.",
+      "financialEvidence": "Private vendor financials (revenue, profit, CAC, churn, margin) not established in reviewed public sources. App Store rating/reviews and product age do not prove profitability.",
+      "strengths": [
+        "Shopify-native feed setup and broad paid/social channel coverage",
+        "Automated feed rules, metafield mapping, bulk edits, variant and market sync",
+        "Error validation, scheduled and real-time updates, GTIN and performance tools",
+        "Low entry plan and substantial public Shopify review footprint"
+      ],
+      "limitations": [
+        "Public price is only a partial comparison because AI is a one-time add-on and tiers meter catalog size",
+        "Reviewed public materials do not settle source lineage, approval, rollback and alert semantics; feature absence is unproven",
+        "Product surfaces feed correctness and channel performance rather than query-level AI recommendation diagnosis"
+      ],
+      "merchantEvidence": [
+        "Shopify App Store shows 4.9/5 and 4,898 reviews on snapshot date; strong public adoption/sentiment signal, not retention or efficacy evidence",
+        "Recent positive reviews describe feed reliability and responsive support",
+        "One Sep 2026 negative review reports consent-mode confusion and tracking/ad-spend impact; anecdote only, not incidence or independently verified causality"
+      ],
+      "profitPressure": [
+        "Very low recurring entry price pressures generic Shopify feed QA monetization",
+        "Deep app distribution and reviews raise customer acquisition/trust hurdle for newcomers",
+        "One-time AI add-on monetizes optimization separately; economics unknown"
+      ],
+      "improvements": [
+        "Expose source-to-output lineage, explicit approval state and reversible field-level edits if user interviews confirm these are missing in current workflow",
+        "Make downstream propagation status and last observed channel state easy to audit",
+        "Tie tracking/configuration changes to clear consent impact explanations"
+      ],
+      "borrow": [
+        "Fast native Shopify onboarding",
+        "Variant and market-aware sync",
+        "Concrete rule and bulk edit controls",
+        "Support as a visible product capability"
+      ],
+      "avoid": [
+        "Competing on basic connection, mapping, validation or generic AI enrichment alone",
+        "Treating a feed-health score as proof of AI visibility or profit lift"
+      ],
+      "opportunity": "Test whether merchants using this app need cross-channel, variant-level reconciliation of conflicting product facts, linked to a real buyer-query failure and verified propagation. This is a hypothesis, not proof of a product gap.",
+      "test": "Recruit current Simprosys users, screen-share a recent variant/data issue from detection through destination correction, record time, approvals, evidence, rollback and final shopper-facing state. Compare the existing workflow with a provenance-linked repair prototype; ask for paid pilot commitment only after demonstrating the unresolved case.",
+      "sources": [
+        {
+          "label": "Shopify App Store price, rating, features and current reviews",
+          "url": "https://apps.shopify.com/google-shopping-feed"
+        },
+        {
+          "label": "Simprosys support/help center and documentation index",
+          "url": "https://support.simprosys.com/"
+        },
+        {
+          "label": "Simprosys product page",
+          "url": "https://simprosys.com/product-feed-app-for-shopify"
+        },
+        {
+          "label": "Simprosys customer reviews collection (vendor-curated)",
+          "url": "https://simprosys.com/customer-reviews"
+        }
+      ]
+    },
+    {
+      "id": "datafeedwatch",
+      "name": "DataFeedWatch",
+      "group": "Feed and catalogue tools",
+      "priceSummary": "Vendor monthly USD: Shop $64 (1,000 SKUs, 3 feeds, 1 shop, daily sync); Merchant $84 (5,000 SKUs, 10 feeds, 2 shops, twice daily); Agency $239 (30,000 SKUs, 150 feeds, unlimited shops, five syncs/day); Enterprise custom. 15-day trial. Managed feed service starts at $750/month; coaching listed at $450/month. Match service and metering before comparison.",
+      "financialEvidence": "DataFeedWatch is part of Cart.com; reviewed sources do not disclose product-level or company profit, CAC, churn or contribution margin. Pricing and stated brand count do not establish profitability.",
+      "strengths": [
+        "2,000+ channel integrations and Shopify Markets support",
+        "Feed review checks correctness, missing data and GTIN validity",
+        "Rules, previews, product/variant exclusions and uploaded product-ID lists",
+        "AI title/description, category and attribute extraction with option to use source, rules or generated value",
+        "A/B test support for AI titles, plus managed service and tiered support"
+      ],
+      "limitations": [
+        "Plan price scales across SKUs, feeds, shops, sync cadence and service; a simple monthly number omits important scope",
+        "Vendor’s performance and customer scale claims are not independent evidence",
+        "Public material reviewed does not fully settle all history/rollback behavior; absence is not proven"
+      ],
+      "merchantEvidence": [
+        "Vendor pricing page says 18,497+ brands worldwide; this is vendor-stated, not an audited active-customer count",
+        "Shopify App Store snapshot showed 4.7/5 across 340 reviews",
+        "The reviewed public pages do not provide a controlled merchant outcomes study; do not infer that a feature reliably causes profitable growth"
+      ],
+      "profitPressure": [
+        "AI feed editing, QA, preview and exclusions are all monetized in an established paid product",
+        "Expert service starts far above app pricing, indicating a separate high-touch segment and scope",
+        "The public tier ladder anchors entry cost at $64/month for 1,000 SKUs, but financial performance is unknown"
+      ],
+      "improvements": [
+        "Potentially make cross-source factual conflict resolution more explicit, if workflow research verifies the need",
+        "Show a durable change/evidence trail linking source field, channel output and reviewed result",
+        "Offer outcome verification for a specific buyer-intent failure rather than another generic feed score"
+      ],
+      "borrow": [
+        "Let merchant choose source value, own rule or AI value",
+        "Preview generated values before export",
+        "Apply fixes selectively by product/channel and exclude variants deliberately",
+        "Use feed checks with actionable resolution steps; give merchants a structured A/B test"
+      ],
+      "avoid": [
+        "Rule-editor-first product positioning",
+        "Claiming missing-attribute generation, AI titles or error checks as novel",
+        "Comparing price without setup, feeds, update cadence, channel scope and human service"
+      ],
+      "opportunity": "Investigate whether shops still face costly unresolved truth conflicts across source catalog, Shopify Markets and destination feeds after using DataFeedWatch. A query-to-root-cause-to-approved-change loop is plausible but unproven as unmet demand.",
+      "test": "Observe 5-10 DataFeedWatch operators resolve the same class of catalog failure; record source choice, preview, approval, time and downstream state. Compare prototype results and seek paid pilot evidence. Stop if existing rules/AI/managed service already resolve the cases at acceptable cost.",
+      "sources": [
+        {
+          "label": "Current pricing, AI controls, support tiers and services",
+          "url": "https://www.datafeedwatch.com/pricing"
+        },
+        {
+          "label": "DataFeedWatch product page: feed QA and include/exclude capabilities",
+          "url": "https://www.datafeedwatch.com/"
+        },
+        {
+          "label": "DataFeedWatch Google Shopping workflow and sync",
+          "url": "https://www.datafeedwatch.com/integrations/google-shopping"
+        },
+        {
+          "label": "DataFeedWatch rules and exclusions article",
+          "url": "https://www.datafeedwatch.com/blog/apply-rules-exclude-products-from-data-feed"
+        }
+      ]
+    },
+    {
+      "id": "channable",
+      "name": "Channable",
+      "group": "Feed and catalogue tools",
+      "priceSummary": "Meter includes imported items, projects and channels, plus Core plan and modules; every unique variant, including size/color/language variants, counts as an item. Current 5K-item/2-project/6-channel package product page lists €59 Standard, €79 Plus, €89 Pro; prior USD snapshot had $69/$89/$104, so re-check selector/currency before quoting. Unlimited-time free trial cannot activate channel publishing; paid required.",
+      "financialEvidence": "Reviewed primary sources show public pricing but no P&L, CAC, churn, contribution margin or product-level profitability. Ratings and subscription tiers cannot determine whether the product is profitable.",
+      "strengths": [
+        "Explicit tiered rules and quality checks with AI field mapping and suggested rule generation",
+        "Plus AI generation of missing attributes, keywords and translation",
+        "Bulk review/application of AI fixes",
+        "Pro notifications, roles, version history/restore, activity log and up to 24 daily syncs",
+        "2,500+ templates listed; page references over 3,000 channels"
+      ],
+      "limitations": [
+        "Variant-inclusive item plus project/channel and add-on metering complicates cost forecasting",
+        "Trial lets users configure but requires payment before exports activate",
+        "Shopify listing snapshot and G2 review sentiment differ by population and timing; neither is a representative controlled sample",
+        "Real-time, AI accuracy and claimed setup savings are vendor assertions"
+      ],
+      "merchantEvidence": [
+        "G2 snapshot showed 54 reviews and 4.5/5; users praise integration, automation and support, while some report initial learning curve and cost concerns",
+        "Shopify App Store snapshot showed 3.8/5 across 37 reviews and a displayed from-$104 price; scope and currency should not be assumed identical to current selector",
+        "These platform-hosted reviews show reviewer sentiment, not overall satisfaction, retention or causal business outcomes"
+      ],
+      "profitPressure": [
+        "Directly overlaps proposed AI-assisted QA, attribute mapping, bulk approval and restore workflow",
+        "Count-by-variant and multi-axis package charges can increase cost with assortment complexity; customer margin impact unknown",
+        "No public financial disclosures reviewed, so profitability cannot be assessed"
+      ],
+      "improvements": [
+        "Make total price transparent against exact imported variants, projects, channels and modules",
+        "Guide new users through rule and mapping setup with a safe first publish",
+        "If users identify residual need, connect source-fact evidence to an observed external discovery failure"
+      ],
+      "borrow": [
+        "AI suggestions that operators can review before applying",
+        "Field and rule versioning with restore",
+        "Clear plan meter and package examples",
+        "Activity logs and proactive data checks"
+      ],
+      "avoid": [
+        "Broad AI feed QA/fix claims",
+        "Opaque auto-generation without review",
+        "SKU pricing that obscures variants, projects or channels"
+      ],
+      "opportunity": "Potential differentiation is factual provenance and diagnosis of ambiguous cross-source/variant truth tied to an actual buyer-intent outcome. Docs establish Channable’s remediation workflow; they do not prove or disprove this adjacent use case.",
+      "test": "Ask Channable merchants to screen-share a recent conflict between source values and channel requirements. Measure existing resolution time, false fixes, approvals and history/restore use; test if an evidence-linked discrepancy report saves enough time or risk to support paid use.",
+      "sources": [
+        {
+          "label": "Current product capabilities, 5K package pricing, error and AI workflow",
+          "url": "https://www.channable.com/products/product-feed-management-tool"
+        },
+        {
+          "label": "Channable pricing mechanics, item variant count and trial limits",
+          "url": "https://www.channable.com/pricing?currency=usd"
+        },
+        {
+          "label": "AI attribute review and approval workflow",
+          "url": "https://www.channable.com/products/ai-product-listing/attributes"
+        },
+        {
+          "label": "G2 customer review page",
+          "url": "https://www.g2.com/products/channable/reviews"
+        },
+        {
+          "label": "Shopify App Store listing and reviews",
+          "url": "https://apps.shopify.com/channable"
+        }
+      ]
+    },
+    {
+      "id": "feedonomics",
+      "name": "Feedonomics",
+      "group": "Feed and catalogue tools",
+      "priceSummary": "Custom quote based on SKU count, channel type/count and service level; vendor says it does not take a percentage of revenue. Quote-led full-service/enterprise positioning is not directly comparable with low-cost Shopify app subscriptions.",
+      "financialEvidence": "No reviewed source discloses company/product revenue, profit, CAC, churn or margins. Feedonomics being part of Commerce/BigCommerce and publishing enterprise case studies does not prove it is profitable or unprofitable.",
+      "strengths": [
+        "Ingest from ecommerce, PIM, database, API, SFTP, URL and common file types",
+        "Normalization, required-field validation, rule/AI enrichment and channel-specific mappings",
+        "Scheduled, delta and on-demand exports across 2,000+ destinations",
+        "Advertised anomaly alerts, hard stops, inventory buffers, retry conditions, sampling QA, governance/error dashboard",
+        "Full-service feed managers and AI/AEO/agentic commerce positioning"
+      ],
+      "limitations": [
+        "Quote-led price prevents public cost comparison without matching scope and service",
+        "Higher operational breadth/enterprise workflows are not the same buyer segment as small Shopify self-serve",
+        "Reviewed docs do not fully specify per-field lineage, human approval gates, rollback guarantees or query-level outcome measurement; unverified is not missing",
+        "Case study outcomes are vendor-published and not independently validated here"
+      ],
+      "merchantEvidence": [
+        "Euro Car Parts vendor case reports GMC eligibility +20% at onboarding and GTIN coverage rising 58% to 74% in six months; attributed customer story, no independent causal verification",
+        "APG & Co vendor case reports ROI +86% and CPC -48% after feed/campaign segmentation; not a controlled study reviewed here",
+        "G2 snapshot showed 376 reviews and 4.4/5; sampled users praise flexibility/support and mention learning curve or support timing concerns",
+        "Case metrics and G2 ratings show proof points and reviewer sentiment, not population-wide outcomes or profitability"
+      ],
+      "profitPressure": [
+        "Deep product/data operations, QA and human services make generic catalog repair a poor standalone wedge",
+        "Custom service-level quote spans substantially different deployments, so price pressure cannot be inferred from app tiers",
+        "Vendor’s claimed customer-level ROAS/time-saving metrics are not company financials"
+      ],
+      "improvements": [
+        "Test whether smaller teams need an affordable, self-serve subset of provenance-linked diagnosis and safe repair",
+        "Expose evidence, approval, propagation status and exact destination observation clearly if operators say these steps are opaque",
+        "Validate query-level discovery measurement instead of relying solely on feed/ad metrics"
+      ],
+      "borrow": [
+        "Ingest-normalize-enrich-syndicate-protect operating model",
+        "Hard stops and anomaly alerts before export",
+        "Channel-specific transformations and human expert support",
+        "Delta syncs, inventory buffers and QA sampling"
+      ],
+      "avoid": [
+        "Enterprise connector-count competition",
+        "Promising causal revenue lift from curated case studies",
+        "Assuming Feedonomics lacks controls not spelled out on reviewed public pages"
+      ],
+      "opportunity": "A lighter product may help teams bridge observed buyer-query failures to conflicting canonical product facts and approved corrections, then verify destination propagation and repeated outcomes. This is a hypothesis; Feedonomics already covers a broad portion of data operations.",
+      "test": "Interview midmarket/small merchants and operators who have evaluated or use Feedonomics. Collect a real failure, prove the existing stack cannot resolve it efficiently, compare prototype workflow and outcome trace, and request a paid pilot. Include holdout products/queries and do not promise profitability lift without contribution-margin evidence.",
+      "sources": [
+        {
+          "label": "Current quote-led pricing and pricing variables",
+          "url": "https://feedonomics.com/pricing/"
+        },
+        {
+          "label": "Platform ingest, validation, alerts, hard stops, AI enrichment and sync docs",
+          "url": "https://feedonomics.com/product/how-it-works/"
+        },
+        {
+          "label": "Product feed optimization and testing claims",
+          "url": "https://feedonomics.com/product/how-it-works/optimization/"
+        },
+        {
+          "label": "Euro Car Parts customer case",
+          "url": "https://feedonomics.com/success-stories/euro-car-parts/"
+        },
+        {
+          "label": "APG & Co customer case",
+          "url": "https://feedonomics.com/success-stories/apg-and-co/"
+        },
+        {
+          "label": "G2 customer review page",
+          "url": "https://www.g2.com/products/feedonomics/reviews"
+        }
+      ]
+    },
+    {
+      "id": "shopify-native-commerce-ai",
+      "name": "Shopify Catalog, Knowledge Base, Sidekick and Agentic readiness",
+      "group": "Platforms and vertical tools",
+      "priceSummary": "Catalog and native readiness functions are embedded in Shopify; Sidekick is included with the merchant's Shopify plan. Knowledge Base is a Shopify app. No separate price for the cited readiness tools is stated in the sources.",
+      "financialEvidence": "Shopify's official Sidekick page says it is included with a Shopify plan. No product-level revenue or profitability is disclosed for Catalog, Knowledge Base, readiness search preview, or Sidekick. Merchant-free features may support retention, platform differentiation and GMV/payment economics; that is a plausible inference, not a reported margin fact.",
+      "strengths": [
+        "Automatic eligible catalog syndication with continually updated catalog facts",
+        "Actionable product listing quality factors and search preview in the merchant admin",
+        "Sidekick can analyze store data and draft product content with merchant review",
+        "Merchant can map custom product data and manage channel access"
+      ],
+      "limitations": [
+        "Eligibility does not ensure inclusion, ranking or display in a particular AI answer",
+        "Connected channels control final ranking and can re-rank Shopify preview results",
+        "Product quality signals do not capture popularity, engagement or brand recognition",
+        "Merchant still has to supply facts, fix data gaps and approve changes"
+      ],
+      "merchantEvidence": [
+        "Official catalog guidance names titles, descriptions, images, categories, variants, options, prices and inventory as merchant-maintained inputs",
+        "Search preview calls out descriptions, image coverage, verified reviews, variant/option completeness and store policies",
+        "Shopify provides catalog mapping for custom fields and grouping logic"
+      ],
+      "profitPressure": [
+        "A Shopify-only basic AI readiness checker competes with native no-separate-charge features",
+        "Free merchant access is not evidence of an unprofitable product; product-level economics are undisclosed",
+        "External placement and outcomes are outside Shopify preview's control"
+      ],
+      "improvements": [
+        "Focus on independent cross-platform QA and source-backed validation",
+        "Measure whether merchants need help completing tasks after applying Shopify's own recommendations",
+        "Report data completeness separately from observed discovery and sales outcomes"
+      ],
+      "borrow": [
+        "Per-product findings tied to specific editable fields",
+        "Directional query preview with explicit uncertainty",
+        "Human review before publishing generated changes"
+      ],
+      "avoid": [
+        "Selling a generic Shopify-only readiness score as differentiated functionality",
+        "Promising ranking, citation or appearance in AI answers"
+      ],
+      "opportunity": "Serve mixed-platform merchants or provide evidence-backed remediation workflows beyond Shopify's catalog preview, with outcome attribution kept distinct from readiness metrics.",
+      "test": "On Shopify stores, compare an independent cross-platform audit against native recommendations, then measure paid conversion, resolved issues, merchant minutes and repeat usage.",
+      "sources": [
+        {
+          "label": "Shopify Catalog",
+          "url": "https://help.shopify.com/en/manual/shopify-catalog"
+        },
+        {
+          "label": "Agentic storefront management and search preview",
+          "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/agentic-home"
+        },
+        {
+          "label": "Sidekick",
+          "url": "https://help.shopify.com/en/manual/ai-powered-tools/sidekick"
+        },
+        {
+          "label": "Sidekick pricing",
+          "url": "https://www.shopify.com/sidekick"
+        },
+        {
+          "label": "Knowledge Base and AI optimization guidance",
+          "url": "https://help.shopify.com/en/manual/promoting-marketing/seo/optimizing-store-for-ai"
+        }
+      ]
+    },
+    {
+      "id": "google-merchant-center-product-studio",
+      "name": "Google Merchant Center and Product Studio",
+      "group": "Platforms and vertical tools",
+      "priceSummary": "Free listings and Product Studio are explicitly free of charge; Merchant Center can be created without charge. No subscription price is listed for these tools.",
+      "financialEvidence": "Google's official help says Product Studio is free of charge and free listings show products at no cost. The cited product docs disclose no unit economics or standalone profitability. Support of product-data coverage and the advertising ecosystem is a plausible adjacent value inference, not a disclosed financial result.",
+      "strengths": [
+        "Product issue diagnostics and attribute guidance inside Merchant Center",
+        "Free exposure eligibility across Google surfaces including Gemini, Search and Shopping",
+        "Product Studio creates or edits product images and videos",
+        "New saved media can propagate through channels that use Merchant Center feed data"
+      ],
+      "limitations": [
+        "Eligibility and free-listing activation do not guarantee impressions or display",
+        "Product Studio may produce inaccurate or unexpected content and works better for some product types",
+        "Google excludes regulated goods from Product Studio generation",
+        "Product feed quality does not provide prompt-level answer testing"
+      ],
+      "merchantEvidence": [
+        "Merchant must provide product ID, title, link, image and price plus applicable data specification attributes",
+        "Shipping, return information, policy compliance and issue resolution remain merchant tasks",
+        "Generated product imagery needs SKU-level review for fidelity before use"
+      ],
+      "profitPressure": [
+        "A generic feed-checking or low-cost image-generation product faces no-charge native substitutes",
+        "Zero merchant price does not establish negative profitability; standalone economics are undisclosed",
+        "Generated imagery introduces review cost and risk of product misrepresentation"
+      ],
+      "improvements": [
+        "Reconcile discrepancies across feeds and storefronts, not just one Google destination",
+        "Tie each suggested fix to authoritative SKU source data",
+        "Measure merchant time saved and incremental impact after native issue resolution"
+      ],
+      "borrow": [
+        "Actionable diagnostics with links to specific correction guidance",
+        "An inexpensive one-product workflow for smaller catalogs",
+        "Review-before-publish safeguards for generated assets"
+      ],
+      "avoid": [
+        "Positioning generic product feed validation or generated lifestyle imagery as a durable moat",
+        "Claiming free-listing eligibility means actual AI recommendation visibility",
+        "Using generated visuals that change real product attributes"
+      ],
+      "opportunity": "Cross-channel catalog reconciliation, source-grounded factual validation and measurable workflow completion can complement Merchant Center's single-platform diagnostics.",
+      "test": "Select one category and compare proposed fixes with Merchant Center's Needs attention workflow; track incremental valid corrections, time per SKU, image error rate and paid pilot conversion.",
+      "sources": [
+        {
+          "label": "Google free listings",
+          "url": "https://support.google.com/merchants/answer/13889434?hl=en-A"
+        },
+        {
+          "label": "Product Studio",
+          "url": "https://support.google.com/merchants/answer/13708167?hl=en-IE"
+        },
+        {
+          "label": "Merchant Center product editor",
+          "url": "https://support.google.com/merchants/answer/12158381?hl=en"
+        },
+        {
+          "label": "Google AI features and ecommerce",
+          "url": "https://developers.google.com/search/docs/appearance/ai-features"
+        }
+      ]
+    },
+    {
+      "id": "lily-ai-max",
+      "name": "Lily AI / Lily Max",
+      "group": "Platforms and vertical tools",
+      "priceSummary": "Quote-based pricing varies with catalog size, chosen use cases, surfaces, markets and ad spend. Lily advertises a scoped trial on 500 products; its current pages also describe paid pilots. No fixed public rate card is provided.",
+      "financialEvidence": "Lily is monetized through tailored catalog/channel contracts and claims measured customer lifts. Its website cites vendor-reported examples including 28% Google Shopping revenue lift and 21.4% Meta ROAS lift. Public pages do not disclose customer-level gross margin, retention, implementation cost or a complete experiment protocol; the examples are not independent profitability evidence.",
+      "strengths": [
+        "Catalog gap analysis and shopper-language attribute enrichment",
+        "Integrations and outputs aimed at existing feeds and commerce tools",
+        "Controlled-test positioning with matched spend, holdouts or difference-in-differences",
+        "Business outcome framing extends beyond AI answer visibility to ads and onsite search"
+      ],
+      "limitations": [
+        "Custom pricing limits self-serve price comparison and adds procurement effort",
+        "Marketing case studies require diligence on sample size, protocol and confounders",
+        "Enrichment can hallucinate subjective or physical product details unless grounded",
+        "The company says its input-quality work cannot guarantee AI placement, ranking or citation"
+      ],
+      "merchantEvidence": [
+        "Merchant must authorize catalog and destination connections and choose products/surfaces",
+        "Generated content needs source checking and activation approval",
+        "Valid controls and sufficient traffic are needed to test incremental impact",
+        "Seasonality, promotion, stock and feed changes can confound catalog experiments"
+      ],
+      "profitPressure": [
+        "Enterprise integrations, operator review and controlled testing may be service intensive",
+        "Small brands may not justify a broad omnichannel contract",
+        "Vendor lift claims do not alone show Lily's margins or a new entrant's economics"
+      ],
+      "improvements": [
+        "Offer source-cited field-level diffs and provenance for every enrichment",
+        "Prioritize high-impact changes merchants can implement from existing authoritative sources",
+        "Make trial success criteria and test design explicit before measuring uplift"
+      ],
+      "borrow": [
+        "A baseline, control group and measured business outcome",
+        "Scaling only changes that outperform the control",
+        "Treating catalog data as an ongoing operational workflow"
+      ],
+      "avoid": [
+        "Broad omnichannel promises without reliable integrations and sufficient test volume",
+        "Inventing SKU facts while optimizing for search language",
+        "Using an AI readiness score as a substitute for merchant outcomes"
+      ],
+      "opportunity": "A smaller source-verification and remediation product could support merchants below the economics of Lily's tailored enterprise offer, if it substantially reduces review time.",
+      "test": "Run a paid, limited-catalog pilot with source-verified fields, a pre-agreed control and operator-hour accounting; test renewal intent at a price covering delivery costs.",
+      "sources": [
+        {
+          "label": "Lily Max",
+          "url": "https://www.lily.ai/"
+        },
+        {
+          "label": "Lily pricing",
+          "url": "https://www.lily.ai/pricing"
+        },
+        {
+          "label": "Lily pricing FAQ",
+          "url": "https://www.lily.ai/faqs/how-is-lily-priced"
+        },
+        {
+          "label": "Lily product and measurement overview",
+          "url": "https://www.lily.ai/faqs/what-does-lily-do"
+        }
+      ]
+    },
+    {
+      "id": "true-fit",
+      "name": "True Fit",
+      "group": "Platforms and vertical tools",
+      "priceSummary": "True Fit's Shopify page says pricing starts at $1,000 per month. Optional typography/color customization is listed at $5 per month. Public page says to contact True Fit for package details.",
+      "financialEvidence": "A published starting price and commercial retailer integrations demonstrate monetization, but public sources do not disclose enterprise contract values, gross margin, data costs, retention or profitability. Vendor-reported conversion and return metrics require validation against a merchant-specific control. Reduced bracketing alone does not establish net contribution profit.",
+      "strengths": [
+        "Fashion-specific fit recommendations based on cross-brand product and purchase/return data",
+        "Shopify app plus enterprise/API/MCP integration paths",
+        "Clear category-specific value proposition around sizing confidence and returns",
+        "Public Shopify offer states scope limitations, starting price and certain customization pricing"
+      ],
+      "limitations": [
+        "Public product scope excludes some accessories such as belts, hats, gloves and pet clothing",
+        "Outcome claims are vendor-reported and depend on adoption and category",
+        "Full implementation and enterprise economics are not public",
+        "A population-level fit model is not equivalent to source verification for individual product facts"
+      ],
+      "merchantEvidence": [
+        "Integration needs product catalog and sizing data; technical materials also identify shopper and historical purchase/return inputs for full functionality",
+        "Merchants should verify product/size mapping and widget behavior",
+        "Profile collection, data retention and privacy roles require contract-level review",
+        "Public sources do not establish image requirements or justify invented photo dimensions"
+      ],
+      "profitPressure": [
+        "Starting price may put the product beyond small merchants, but does not prove vendor profitability",
+        "Implementation, support, data rights and shopper adoption can affect economics",
+        "Fashion catalog QA cannot quickly reproduce an established cross-brand outcome graph"
+      ],
+      "improvements": [
+        "For smaller entrants, limit initial scope to source-cited product-data QA rather than biometric or fit inference",
+        "Separate fit-recommendation evidence from physical product truth",
+        "Track kept orders, size-related returns, adoption and service costs together"
+      ],
+      "borrow": [
+        "Solving a high-cost decision with category-specific boundaries",
+        "Explicit unsupported-category disclosures",
+        "Merchant control group measurement for outcome claims"
+      ],
+      "avoid": [
+        "Claiming fit prediction from photos or synthetic shopper tests",
+        "Presenting inferred measurements or construction as product truth",
+        "Equating catalog completeness checks with proprietary purchase/return intelligence"
+      ],
+      "opportunity": "A safe entry point is fashion catalog QA grounded in existing tech packs, size charts and approved merchant facts, without collecting shopper body profiles.",
+      "test": "Use merchant-supplied authoritative files to audit a sample catalog, count source-verifiable errors and review minutes, then validate only shopper outcomes with a separate consented test and adequate volume.",
+      "sources": [
+        {
+          "label": "True Fit for Shopify and pricing",
+          "url": "https://www.truefit.com/shopify"
+        },
+        {
+          "label": "True Fit technical specification",
+          "url": "https://www.truefit.com/fit-intelligence-spec"
+        },
+        {
+          "label": "True Fit merchant platform details",
+          "url": "https://www.truefit.com/resources/calling-all-merchants"
+        },
+        {
+          "label": "True Fit privacy information",
+          "url": "https://www.truefit.com/privacy-policy-and-choices"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "variant-source-conflict",
+      "title": "Variant/source conflict and repair verification",
+      "buyer": "Shopify catalog or ecommerce operations manager at a brand with custom metafields, complex variants, feeds, or multiple channels",
+      "trigger": "Catalog migration, launch, feed warning, or product misrepresentation/disappearance in a channel",
+      "workflow": "Compare Shopify/PIM/feed sources to rendered page, variant URL, schema and destination representation; explain conflicts; suggest authoritative source; require approval for uncertain facts; apply approved change and re-fetch verification evidence.",
+      "alternatives": [
+        "Shopify Catalog Mapping",
+        "Google Merchant Center diagnostics",
+        "Feedonomics",
+        "Shopify bulk editor",
+        "manual spreadsheets",
+        "Burnish",
+        "Geoffy"
+      ],
+      "gap": "Hypothesis: no single cross-layer view reliably shows which source won, what rendered, and whether the destination ingested it; must be proven against native and incumbent tools.",
+      "recurringValue": "Launches, catalog changes and new channels recur; if only migration cleanup sells, price it as a project.",
+      "borrow": [
+        "field provenance",
+        "diff and preview",
+        "approval gates",
+        "reversible edits",
+        "verification receipts"
+      ],
+      "risks": [
+        "Shopify native mapping improves",
+        "limited channel/API visibility",
+        "data corruption",
+        "feature parity with free tools"
+      ],
+      "experiment": "Run a concierge audit on real stores. Compare the current Shopify Catalog Mapping, Google Merchant Center diagnostics and the merchant's feed stack; where applicable, include Burnish and Geoffy in the comparison. Require payment for fixes.",
+      "stop": "Stop if no material source, variant or destination ingestion discrepancy remains after the merchant's repair and storefront checks; also stop if there is no authorized source owner or only one-off cleanup budgets appear.",
+      "priority": "Test first"
+    },
+    {
+      "id": "catalogue-regression-monitor",
+      "title": "Catalogue change-regression monitoring",
+      "buyer": "Ecommerce operations lead or agency responsible for frequent product launches, promotions and imports",
+      "trigger": "Bulk import, app/theme change, sale or variant restructuring",
+      "workflow": "Track permitted product changes against baselines for canonical fields, variant URLs, structured data and channel feeds; alert only on prioritized cross-surface regressions; show actionable diffs and recheck recovery.",
+      "alternatives": [
+        "Shopify admin and Flow",
+        "Shopify bulk editor",
+        "Google automatic item updates",
+        "feed-platform sync alerts"
+      ],
+      "gap": "Hypothesis: native tools monitor individual fields but miss cross-surface variant grouping, selected-option URL and schema regressions.",
+      "recurringValue": "Product changes recur, but native price/availability safeguards reduce the remaining scope.",
+      "borrow": [
+        "event-to-impact triage",
+        "owner routing",
+        "baselines and snapshots"
+      ],
+      "risks": [
+        "alert noise",
+        "incomplete event/API coverage",
+        "native platform expansion"
+      ],
+      "experiment": "Replay 30-90 days of merchant changes and compare actionable misses to native alerts; measure precision and owner response.",
+      "stop": "No high-severity miss appears, false positives exceed prevented review effort, or shadow-mode users will not pay.",
+      "priority": "Later"
+    },
+    {
+      "id": "feed-disapproval-agency-workbench",
+      "title": "Feed disapproval repair agency workbench",
+      "buyer": "Feed or ecommerce agency specialist managing multiple Shopify clients",
+      "trigger": "Merchant Center warning or disapproval burst with an account-review deadline",
+      "workflow": "Group product diagnostics by root cause; separate source errors from account/policy issues; assign client tasks; record approvals/evidence; link or apply repairs and recheck after channel review.",
+      "alternatives": [
+        "Google Merchant Center diagnostics",
+        "Feed Doctor",
+        "Feedonomics",
+        "agency spreadsheets and ticket tools"
+      ],
+      "gap": "Possible multi-client triage and approval evidence gap; direct product competition already exists and must be tested.",
+      "recurringValue": "New products and policy changes recur across accounts; incidents on one store may be episodic.",
+      "borrow": [
+        "Google issue taxonomy",
+        "per-product examples",
+        "recheck evidence"
+      ],
+      "risks": [
+        "Feed Doctor competition",
+        "API permissions",
+        "review delays outside control",
+        "account issues need experts"
+      ],
+      "experiment": "Use redacted recent agency tickets; compare workflow beside current stack and require paid use across clients plus a second incident.",
+      "stop": "Incumbents resolve the same cases more cheaply or payment is limited to occasional emergencies.",
+      "priority": "Avoid initially"
+    },
+    {
+      "id": "source-backed-fashion-attributes",
+      "title": "Source-backed fashion attributes",
+      "buyer": "Apparel or equipment catalog lead onboarding seasonal products or migrating supplier data",
+      "trigger": "Fit-related returns, new channel requirements, or incomplete catalog data",
+      "workflow": "Ingest merchant-authorized tech packs and supplier sheets; match style, color and size; extract candidate fabric and actual measurements with provenance; flag ambiguity/conflicts; require sign-off; write to metafields/feed and verify variant mapping.",
+      "alternatives": [
+        "PIM systems",
+        "Feedonomics enrichment",
+        "supplier spreadsheets",
+        "copy-generation tools",
+        "manual fit teams"
+      ],
+      "gap": "Hypothesis: evidence normalization and provenance for real attributes saves time; demand for this exact workflow remains unknown.",
+      "recurringValue": "Seasonal assortment onboarding and supplier refresh can recur; catalog cleanup may be project work.",
+      "borrow": [
+        "no-fabrication policy",
+        "source/output separation",
+        "human review"
+      ],
+      "risks": [
+        "supplier data permission",
+        "extraction mistakes",
+        "measurement ambiguity",
+        "legal/returns impact",
+        "source gaps"
+      ],
+      "experiment": "Paid authorized-source batch against a human-entered gold set; measure corrections and seek a funded next-season commitment.",
+      "stop": "Poor source coverage, review removes time savings, reuse rights are unavailable, or no next-season budget exists.",
+      "priority": "Test second"
+    },
+    {
+      "id": "question-demand-measurement",
+      "title": "Question-demand to catalog and channel measurement",
+      "buyer": "Growth lead already paying for GEO monitoring or SEO research",
+      "trigger": "Need to justify AI discovery spend or repeated shopper questions expose missing product facts",
+      "workflow": "Cluster authorized support/search questions; map to missing source attributes and products; suggest approved edits; test against held-out question sets; report synthetic answerability, visibility, visits, orders and gross profit as distinct stages.",
+      "alternatives": [
+        "Shopify Knowledge Base",
+        "Shopify Catalog Mapping",
+        "Kedra",
+        "AIVisible",
+        "Catalyst",
+        "analytics and support platforms"
+      ],
+      "gap": "Hypothesis: question-to-field prioritization with credible experiments adds value beyond existing GEO dashboards and native Q&A; attribution remains hard.",
+      "recurringValue": "Questions and outputs drift, but monitoring without a decision or action creates churn risk.",
+      "borrow": [
+        "evidence chain",
+        "held-out tests",
+        "separation of association and causal lift"
+      ],
+      "risks": [
+        "sampling variance/cost",
+        "privacy and rights",
+        "crowded tools",
+        "native feature expansion"
+      ],
+      "experiment": "Sell a one-off decision audit, compare recommendations and decision time to incumbents, then seek a paid follow-on experiment.",
+      "stop": "No existing monitoring budget, recommendations duplicate current tools, or causal measurement is infeasible.",
+      "priority": "Avoid initially"
+    }
+  ],
+  "economics": {
+    "title": "Illustrative monthly unit-economics sensitivities",
+    "snapshotDate": "2026-09-29",
+    "currency": "USD",
+    "status": "hypothetical editable scenarios, not forecasts or observed vendor economics",
+    "targetContributionMargin": 0.7,
+    "laborCostPerHour": 30,
+    "shopifyProcessingRate": 0.029,
+    "shopifyRevenueShareRateAssumed": 0,
+    "shopifyRevenueShareNote": "0% assumes developer is eligible and within the first $1,000,000 USD qualifying gross App Store revenue; otherwise add applicable share (commonly 15%, or 15% from dollar one for certain larger developers).",
+    "formula": {
+      "paymentFeeUSD": "priceUSD * shopifyProcessingRate",
+      "replacementCACUSD": "monthlyLogoChurnRate * allInCACUSD",
+      "supportBudgetAtTargetUSD": "priceUSD * (1 - targetContributionMargin) - paymentFeeUSD - deliveryCostUSD - replacementCACUSD - priceUSD * shopifyRevenueShareRateAssumed",
+      "supportMinutesAtTarget": "supportBudgetAtTargetUSD / laborCostPerHour * 60",
+      "interpretation": "Negative support budget means the target margin is missed before support labor. Positive supportMinutesAtTarget is the maximum support time affordable at the target margin."
+    },
+    "excludedCosts": [
+      "fixed overhead and shared infrastructure allocation",
+      "founder salary, product development and tax",
+      "refunds, chargebacks, failed payments and annual discounts",
+      "initial net-growth acquisition spending",
+      "onboarding or implementation except amounts explicitly included in deliveryCostUSD",
+      "collection usage above the category delivery allowance"
+    ],
+    "scenarios": [
+      {
+        "id": "self_serve_shopify_app",
+        "label": "Low-priced self-serve Shopify app",
+        "monthlyLogoChurnRate": 0.08,
+        "allInCACUSD": 20,
+        "deliveryCostUSD": 0.25,
+        "assumptionsNote": "Hypothetical low-cost automated app; $0.25 direct monthly delivery reserve; $20 replacement CAC; 8% monthly churn.",
+        "plans": [
+          {
+            "priceUSD": 9.99,
+            "paymentFeeUSD": 0.28971,
+            "replacementCACUSD": 1.6,
+            "supportBudgetAtTargetUSD": 0.85729,
+            "supportMinutesAtTarget": 1.71458
+          },
+          {
+            "priceUSD": 19.99,
+            "paymentFeeUSD": 0.57971,
+            "replacementCACUSD": 1.6,
+            "supportBudgetAtTargetUSD": 3.56729,
+            "supportMinutesAtTarget": 7.13458
+          },
+          {
+            "priceUSD": 49,
+            "paymentFeeUSD": 1.421,
+            "replacementCACUSD": 1.6,
+            "supportBudgetAtTargetUSD": 11.429,
+            "supportMinutesAtTarget": 22.858
+          },
+          {
+            "priceUSD": 99,
+            "paymentFeeUSD": 2.871,
+            "replacementCACUSD": 1.6,
+            "supportBudgetAtTargetUSD": 24.979,
+            "supportMinutesAtTarget": 49.958
+          },
+          {
+            "priceUSD": 149,
+            "paymentFeeUSD": 4.321,
+            "replacementCACUSD": 1.6,
+            "supportBudgetAtTargetUSD": 38.529,
+            "supportMinutesAtTarget": 77.058
+          }
+        ]
+      },
+      {
+        "id": "bounded_recurring_monitor",
+        "label": "Bounded recurring monitor",
+        "monthlyLogoChurnRate": 0.05,
+        "allInCACUSD": 100,
+        "deliveryCostUSD": 3,
+        "assumptionsNote": "Hypothetical fixed-scope prompt/engine/cadence plan; $3 direct monthly delivery allowance; $100 replacement CAC; 5% monthly churn.",
+        "plans": [
+          {
+            "priceUSD": 9.99,
+            "paymentFeeUSD": 0.28971,
+            "replacementCACUSD": 5,
+            "supportBudgetAtTargetUSD": -5.29271,
+            "supportMinutesAtTarget": -10.58542
+          },
+          {
+            "priceUSD": 19.99,
+            "paymentFeeUSD": 0.57971,
+            "replacementCACUSD": 5,
+            "supportBudgetAtTargetUSD": -2.58271,
+            "supportMinutesAtTarget": -5.16542
+          },
+          {
+            "priceUSD": 49,
+            "paymentFeeUSD": 1.421,
+            "replacementCACUSD": 5,
+            "supportBudgetAtTargetUSD": 5.279,
+            "supportMinutesAtTarget": 10.558
+          },
+          {
+            "priceUSD": 99,
+            "paymentFeeUSD": 2.871,
+            "replacementCACUSD": 5,
+            "supportBudgetAtTargetUSD": 18.829,
+            "supportMinutesAtTarget": 37.658
+          },
+          {
+            "priceUSD": 149,
+            "paymentFeeUSD": 4.321,
+            "replacementCACUSD": 5,
+            "supportBudgetAtTargetUSD": 32.379,
+            "supportMinutesAtTarget": 64.758
+          }
+        ]
+      },
+      {
+        "id": "managed_catalog_repair",
+        "label": "Managed catalog repair",
+        "monthlyLogoChurnRate": 0.03,
+        "allInCACUSD": 250,
+        "deliveryCostUSD": 15,
+        "assumptionsNote": "Hypothetical recurring service with $15 monthly direct delivery reserve (equivalent to 30 minutes at $30/hour); $250 replacement CAC; 3% monthly churn. Additional labor is support and is constrained by the formula.",
+        "plans": [
+          {
+            "priceUSD": 9.99,
+            "paymentFeeUSD": 0.28971,
+            "replacementCACUSD": 7.5,
+            "supportBudgetAtTargetUSD": -19.79271,
+            "supportMinutesAtTarget": -39.58542
+          },
+          {
+            "priceUSD": 19.99,
+            "paymentFeeUSD": 0.57971,
+            "replacementCACUSD": 7.5,
+            "supportBudgetAtTargetUSD": -17.08271,
+            "supportMinutesAtTarget": -34.16542
+          },
+          {
+            "priceUSD": 49,
+            "paymentFeeUSD": 1.421,
+            "replacementCACUSD": 7.5,
+            "supportBudgetAtTargetUSD": -9.221,
+            "supportMinutesAtTarget": -18.442
+          },
+          {
+            "priceUSD": 99,
+            "paymentFeeUSD": 2.871,
+            "replacementCACUSD": 7.5,
+            "supportBudgetAtTargetUSD": 4.329,
+            "supportMinutesAtTarget": 8.658
+          },
+          {
+            "priceUSD": 149,
+            "paymentFeeUSD": 4.321,
+            "replacementCACUSD": 7.5,
+            "supportBudgetAtTargetUSD": 17.879,
+            "supportMinutesAtTarget": 35.758
+          }
+        ]
+      }
+    ]
+  },
+  "notes": [
+    {
+      "id": "assessment",
+      "title": "The written assessment",
+      "file": "deep-dive/assessment.md"
+    },
+    {
+      "id": "budget-apps",
+      "title": "Budget AI SEO apps",
+      "file": "deep-dive/budget-apps.md"
+    },
+    {
+      "id": "catalog-apps",
+      "title": "Catalogue enrichment apps",
+      "file": "deep-dive/catalog-apps.md"
+    },
+    {
+      "id": "premium-apps",
+      "title": "Advanced repair and content apps",
+      "file": "deep-dive/premium-apps.md"
+    },
+    {
+      "id": "monitoring",
+      "title": "AI visibility monitoring",
+      "file": "deep-dive/monitoring.md"
+    },
+    {
+      "id": "enterprise",
+      "title": "Enterprise platforms",
+      "file": "deep-dive/enterprise.md"
+    },
+    {
+      "id": "mature-seo",
+      "title": "Established Shopify SEO apps",
+      "file": "deep-dive/mature-seo.md"
+    },
+    {
+      "id": "merchant-failures",
+      "title": "Merchant complaints and vendor replies",
+      "file": "deep-dive/merchant-failures.md"
+    },
+    {
+      "id": "feed-ops",
+      "title": "Feed operations and managed services",
+      "file": "deep-dive/feed-ops.md"
+    },
+    {
+      "id": "platform-vertical",
+      "title": "Native platforms, fashion and fit",
+      "file": "deep-dive/platform-vertical.md"
+    },
+    {
+      "id": "profitability-mechanisms",
+      "title": "Where contribution gets squeezed",
+      "file": "deep-dive/profitability-mechanisms.md"
+    },
+    {
+      "id": "opportunity-design",
+      "title": "Five offers to test or avoid",
+      "file": "deep-dive/opportunity-design.md"
+    },
+    {
+      "id": "evidence-review",
+      "title": "Independent evidence review",
+      "file": "deep-dive/evidence-review.md"
+    }
+  ]
+};

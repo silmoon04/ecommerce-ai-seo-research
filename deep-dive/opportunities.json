@@ -1,0 +1,155 @@
+[
+  {
+    "id": "variant-source-conflict",
+    "title": "Variant/source conflict and repair verification",
+    "buyer": "Shopify catalog or ecommerce operations manager at a brand with custom metafields, complex variants, feeds, or multiple channels",
+    "trigger": "Catalog migration, launch, feed warning, or product misrepresentation/disappearance in a channel",
+    "workflow": "Compare Shopify/PIM/feed sources to rendered page, variant URL, schema and destination representation; explain conflicts; suggest authoritative source; require approval for uncertain facts; apply approved change and re-fetch verification evidence.",
+    "alternatives": [
+      "Shopify Catalog Mapping",
+      "Google Merchant Center diagnostics",
+      "Feedonomics",
+      "Shopify bulk editor",
+      "manual spreadsheets",
+      "Burnish",
+      "Geoffy"
+    ],
+    "gap": "Hypothesis: no single cross-layer view reliably shows which source won, what rendered, and whether the destination ingested it; must be proven against native and incumbent tools.",
+    "recurringValue": "Launches, catalog changes and new channels recur; if only migration cleanup sells, price it as a project.",
+    "borrow": [
+      "field provenance",
+      "diff and preview",
+      "approval gates",
+      "reversible edits",
+      "verification receipts"
+    ],
+    "risks": [
+      "Shopify native mapping improves",
+      "limited channel/API visibility",
+      "data corruption",
+      "feature parity with free tools"
+    ],
+    "experiment": "Run a concierge audit on real stores. Compare the current Shopify Catalog Mapping, Google Merchant Center diagnostics and the merchant's feed stack; where applicable, include Burnish and Geoffy in the comparison. Require payment for fixes.",
+    "stop": "Stop if no material source, variant or destination ingestion discrepancy remains after the merchant's repair and storefront checks; also stop if there is no authorized source owner or only one-off cleanup budgets appear.",
+    "priority": "Test first"
+  },
+  {
+    "id": "catalogue-regression-monitor",
+    "title": "Catalogue change-regression monitoring",
+    "buyer": "Ecommerce operations lead or agency responsible for frequent product launches, promotions and imports",
+    "trigger": "Bulk import, app/theme change, sale or variant restructuring",
+    "workflow": "Track permitted product changes against baselines for canonical fields, variant URLs, structured data and channel feeds; alert only on prioritized cross-surface regressions; show actionable diffs and recheck recovery.",
+    "alternatives": [
+      "Shopify admin and Flow",
+      "Shopify bulk editor",
+      "Google automatic item updates",
+      "feed-platform sync alerts"
+    ],
+    "gap": "Hypothesis: native tools monitor individual fields but miss cross-surface variant grouping, selected-option URL and schema regressions.",
+    "recurringValue": "Product changes recur, but native price/availability safeguards reduce the remaining scope.",
+    "borrow": [
+      "event-to-impact triage",
+      "owner routing",
+      "baselines and snapshots"
+    ],
+    "risks": [
+      "alert noise",
+      "incomplete event/API coverage",
+      "native platform expansion"
+    ],
+    "experiment": "Replay 30-90 days of merchant changes and compare actionable misses to native alerts; measure precision and owner response.",
+    "stop": "No high-severity miss appears, false positives exceed prevented review effort, or shadow-mode users will not pay.",
+    "priority": "Later"
+  },
+  {
+    "id": "feed-disapproval-agency-workbench",
+    "title": "Feed disapproval repair agency workbench",
+    "buyer": "Feed or ecommerce agency specialist managing multiple Shopify clients",
+    "trigger": "Merchant Center warning or disapproval burst with an account-review deadline",
+    "workflow": "Group product diagnostics by root cause; separate source errors from account/policy issues; assign client tasks; record approvals/evidence; link or apply repairs and recheck after channel review.",
+    "alternatives": [
+      "Google Merchant Center diagnostics",
+      "Feed Doctor",
+      "Feedonomics",
+      "agency spreadsheets and ticket tools"
+    ],
+    "gap": "Possible multi-client triage and approval evidence gap; direct product competition already exists and must be tested.",
+    "recurringValue": "New products and policy changes recur across accounts; incidents on one store may be episodic.",
+    "borrow": [
+      "Google issue taxonomy",
+      "per-product examples",
+      "recheck evidence"
+    ],
+    "risks": [
+      "Feed Doctor competition",
+      "API permissions",
+      "review delays outside control",
+      "account issues need experts"
+    ],
+    "experiment": "Use redacted recent agency tickets; compare workflow beside current stack and require paid use across clients plus a second incident.",
+    "stop": "Incumbents resolve the same cases more cheaply or payment is limited to occasional emergencies.",
+    "priority": "Avoid initially"
+  },
+  {
+    "id": "source-backed-fashion-attributes",
+    "title": "Source-backed fashion attributes",
+    "buyer": "Apparel or equipment catalog lead onboarding seasonal products or migrating supplier data",
+    "trigger": "Fit-related returns, new channel requirements, or incomplete catalog data",
+    "workflow": "Ingest merchant-authorized tech packs and supplier sheets; match style, color and size; extract candidate fabric and actual measurements with provenance; flag ambiguity/conflicts; require sign-off; write to metafields/feed and verify variant mapping.",
+    "alternatives": [
+      "PIM systems",
+      "Feedonomics enrichment",
+      "supplier spreadsheets",
+      "copy-generation tools",
+      "manual fit teams"
+    ],
+    "gap": "Hypothesis: evidence normalization and provenance for real attributes saves time; demand for this exact workflow remains unknown.",
+    "recurringValue": "Seasonal assortment onboarding and supplier refresh can recur; catalog cleanup may be project work.",
+    "borrow": [
+      "no-fabrication policy",
+      "source/output separation",
+      "human review"
+    ],
+    "risks": [
+      "supplier data permission",
+      "extraction mistakes",
+      "measurement ambiguity",
+      "legal/returns impact",
+      "source gaps"
+    ],
+    "experiment": "Paid authorized-source batch against a human-entered gold set; measure corrections and seek a funded next-season commitment.",
+    "stop": "Poor source coverage, review removes time savings, reuse rights are unavailable, or no next-season budget exists.",
+    "priority": "Test second"
+  },
+  {
+    "id": "question-demand-measurement",
+    "title": "Question-demand to catalog and channel measurement",
+    "buyer": "Growth lead already paying for GEO monitoring or SEO research",
+    "trigger": "Need to justify AI discovery spend or repeated shopper questions expose missing product facts",
+    "workflow": "Cluster authorized support/search questions; map to missing source attributes and products; suggest approved edits; test against held-out question sets; report synthetic answerability, visibility, visits, orders and gross profit as distinct stages.",
+    "alternatives": [
+      "Shopify Knowledge Base",
+      "Shopify Catalog Mapping",
+      "Kedra",
+      "AIVisible",
+      "Catalyst",
+      "analytics and support platforms"
+    ],
+    "gap": "Hypothesis: question-to-field prioritization with credible experiments adds value beyond existing GEO dashboards and native Q&A; attribution remains hard.",
+    "recurringValue": "Questions and outputs drift, but monitoring without a decision or action creates churn risk.",
+    "borrow": [
+      "evidence chain",
+      "held-out tests",
+      "separation of association and causal lift"
+    ],
+    "risks": [
+      "sampling variance/cost",
+      "privacy and rights",
+      "crowded tools",
+      "native feature expansion"
+    ],
+    "experiment": "Sell a one-off decision audit, compare recommendations and decision time to incumbents, then seek a paid follow-on experiment.",
+    "stop": "No existing monitoring budget, recommendations duplicate current tools, or causal measurement is infeasible.",
+    "priority": "Avoid initially"
+  }
+]

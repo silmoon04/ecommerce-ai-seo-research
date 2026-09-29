@@ -1,0 +1,104 @@
+[
+  {
+    "id": "otterly-ai",
+    "name": "OtterlyAI",
+    "group": "Monitoring platforms",
+    "priceSummary": "Lite $29/mo for 15 prompts; Standard $189 for 100; Premium $489 for 400; Enterprise custom from 1,000. Annual $25/$160/$422 monthly equivalent. Extra engines cost by tier; Standard/Premium +100 prompts $99/mo. Prices are vendor-published snapshot; recheck before quoting.",
+    "financialEvidence": "No primary-source ARR, funding, margin, net income, or profitability disclosure identified in reviewed sources. Do not infer losses or profit.",
+    "strengths": [
+      "Simple plan ladder and free trial, with country support, unlimited team members, exports, reports, and daily checks.",
+      "Brand prompt, competitor, citation, domain and visibility reporting paired with GEO audits and recommendations.",
+      "Standard/Premium add API, MCP and agent analytics quotas for agency reporting and workflow reuse."
+    ],
+    "limitations": [
+      "Pricing page presents brand/prompt monitoring and URL audits; no Shopify catalog ingestion or SKU shopping analytics is described there.",
+      "Daily tracking runs at no user-selected time and cannot be manually triggered or tuned by cadence, per vendor help page.",
+      "Answer visibility and crawler visits do not establish an incremental profitable order. Merchant diagnosis, editing and revalidation still require work."
+    ],
+    "merchantEvidence": [
+      "No independently attributable public buyer review was included in the reviewed primary-source set; this is not evidence that no reviews exist.",
+      "Vendor says its customers include marketing teams and agencies; logos and marketing claims are not outcome verification."
+    ],
+    "profitPressure": [
+      "Illustrative volume: 15 prompts × 4 included engines × 30 daily runs is about 1,800 answers/month; 100 prompts is about 12,000 and 400 is about 48,000, before paid engines/retries.",
+      "Answer volume is not actual provider calls or COGS: caching, automation, vendor access charges, support and data quality may change unit economics.",
+      "Human prompt selection, source interpretation, ecommerce field mapping, approval and merchant support may dominate low-tier revenue."
+    ],
+    "improvements": [
+      "Import Shopify data read-only; test a small set of high-intent shopper prompts and link answer mismatches to exact SKU/variant fields.",
+      "Show timestamp, market, model, sample counts and confidence; separate mentions, crawls, referrals, orders and causal lift.",
+      "Provide sourced proposed field edits, approval/rollback history and propagation rechecks; reserve daily cadence for valuable queries."
+    ],
+    "borrow": [
+      "Legible plan ladder, trial, report/export workflow, country coverage and explicit cadence quotas.",
+      "Separate answer monitoring from site bot-log analytics."
+    ],
+    "avoid": [
+      "Do not clone branding, interface, score labels or proprietary collection methods.",
+      "Do not promise rank, sales lift, or causal results from mentions or last-click attribution alone."
+    ],
+    "opportunity": "Shopify catalog answerability and evidence: connect a tested buyer query to exact product facts, approved reversible fixes, and post-propagation verification.",
+    "test": "Run a bounded merchant cohort; measure willingness to pay, support/operator minutes per store, time to verified correction, referral/order signal, and renewal after cleanup.",
+    "sources": [
+      { "label": "OtterlyAI pricing", "url": "https://otterly.ai/pricing" },
+      { "label": "OtterlyAI monitoring cadence", "url": "https://help.otterly.ai/monitoring-interval" },
+      { "label": "OtterlyAI help center", "url": "https://help.otterly.ai/" }
+    ]
+  },
+  {
+    "id": "peec-ai",
+    "name": "Peec AI",
+    "group": "Monitoring platforms",
+    "priceSummary": "Current brand page lists Starter 50 prompts/3 models, Pro 150/3, Advanced 350/3 and custom Enterprise; G2 and Peec-authored page instructions report $95/$245/$495 monthly, but numeric cards were not exposed by the live crawler-readable pricing page on this snapshot. Verify checkout. Annual billing is stated to save 15%.",
+    "financialEvidence": "Peec's Nov 18, 2025 announcement reported $4M+ ARR and $29M total funding; May 28, 2026 company-issued announcement reported $10M ARR and $29M funding. Latest disclosed ARR is $10M, company-reported, not audited revenue or profit. No margin, net income, or profitability evidence identified. ARR figures are date-specific and do not establish actual profitability.",
+    "strengths": [
+      "Daily visibility, source, competitor and prompt analytics with flexible models/cadence at Enterprise and explicit answer-volume arithmetic.",
+      "AI Shopping supports Shopify/public-feed or CSV catalog, SKU-level visibility/position/win rate, query fanouts and shopping-source URLs.",
+      "AI Referrals joins GA4 referral sessions, engagement, conversions and revenue; My website can connect GA4, server/CDN logs and prompt retrieval/citations.",
+      "Product updates demonstrate rapid expansion from general monitoring into ecommerce and downstream traffic measurement."
+    ],
+    "limitations": [
+      "A live plan crawler did not expose numeric price cards; reported prices should be rechecked against checkout.",
+      "AI referral attribution can miss or misclassify AI Mode/Overviews, mobile-app visits and no-referrer traffic; vendor documents these caveats.",
+      "GA4 plus server/CDN logs are required for the full crawl-to-traffic view; integrations and exports still demand analyst setup.",
+      "SKU monitoring and visibility are not proof that edits caused profitable incremental sales."
+    ],
+    "merchantEvidence": [
+      "G2 showed 11 reviews at 4.9/5 when indexed; reviewers dated Mar-Apr 2026 praised UI, support and setup, while some noted manual exports/filtering, onboarding help needs, source extraction needs and higher cost for extra models.",
+      "This small self-selected sample is not ecommerce-specific or representative retention/ROI evidence.",
+      "Peec's May 2026 Mint Position case study claims 16% ChatGPT visibility lift in 90 days for Duckfund and 20% agency YoY revenue growth; vendor-published case study and not causal ecommerce ROI."
+    ],
+    "profitPressure": [
+      "Peec defines an answer as one prompt × one model × one run. Starter 50 × 3 × ~30 daily runs is about 4,500 answers/month; Pro ~13,500; Advanced ~31,500.",
+      "Answer counts are not provider calls or COGS. Retries, model access, parsing, logs, storage, support and onboarding can add cost; caching can reduce it.",
+      "Catalog mapping, interpretation, GA4/log integration and repeated reporting create human service burden. No actual unit cost or profit data is public in reviewed sources."
+    ],
+    "improvements": [
+      "Differentiate on variant-level fact provenance and reconciliation between Shopify and destination feeds, with query/market evidence for each issue.",
+      "Separate eligibility, retrieval, answer recommendation, click, order and causal lift; show a sourced, approved reversible edit and recheck.",
+      "Make GA4/log integrations optional depth; deliver an initial catalog diagnosis with read-only Shopify or CSV. Prioritize actions to reduce manual export work."
+    ],
+    "borrow": [
+      "Transparent answer-volume math and project-level model/cadence allocation.",
+      "SKU granularity, product query fanouts, source URLs, fact checking, and crawl-to-referral measurement.",
+      "Bounded pilot structure and explicit integration requirements."
+    ],
+    "avoid": [
+      "Do not claim Peec is unprofitable; disclosures establish funding and ARR claims, not actual net profit.",
+      "Do not clone its visual identity, taxonomy, scores or proprietary data pipeline.",
+      "Do not claim tracked revenue proves causal impact."
+    ],
+    "opportunity": "A merchant-facing correction loop for product truth: exact variant field, evidence and tested query, merchant approval, reversible edit and verified propagation.",
+    "test": "Pilot on a limited SKU cohort; compare correction completion, external answer accuracy, conversion/contribution against a holdout where feasible, human minutes, willingness to pay and post-cleanup renewal.",
+    "sources": [
+      { "label": "Peec AI brand pricing", "url": "https://peec.ai/pricing" },
+      { "label": "Peec AI pricing update", "url": "https://peec.ai/blog/pricing-update" },
+      { "label": "Peec AI Series A / $4M+ ARR announcement", "url": "https://peec.ai/blog/we-raised-21m-series-a-to-help-brands-win-in-ai-search" },
+      { "label": "Peec AI $10M ARR announcement", "url": "https://www.globenewswire.com/news-release/2026/05/28/3303009/0/en/Peec-AI-hits-10M-ARR-16-months-after-launch-as-brands-race-to-optimize-for-AI-search.html" },
+      { "label": "Peec AI Shopping launch", "url": "https://peec.ai/blog/ai-shopping-analytics" },
+      { "label": "Peec AI Referrals launch", "url": "https://peec.ai/blog/introducing-ai-referrals" },
+      { "label": "G2 Peec AI reviews", "url": "https://www.g2.com/products/peec-ai/reviews" },
+      { "label": "Mint Position case study", "url": "https://peec.ai/blog/how-mint-position-helps-fintech-clients-unlock-16-more-ai-search-visibility-and-secure-1-search-positions-with-peec-ai" }
+    ]
+  }
+]
