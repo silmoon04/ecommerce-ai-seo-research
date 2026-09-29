@@ -71,6 +71,101 @@
 .cash-method { font-size: 11px; line-height: 1.9; color: var(--muted); margin-top: 20px; }
 .cash-method summary { cursor: pointer; color: var(--ink); font-weight: 650; }
 .cash-method p { margin: 14px 0 0; }
+.fandom-hero-visual { margin-top: 31px; }
+.concept-pair { display: flex; flex-direction: column; gap: 23px; min-width: 0; }
+.media-figure { min-width: 0; margin: 0; }
+.media-frame { position: relative; width: 100%; aspect-ratio: var(--media-ratio, 3 / 2); background: #f1f0ec; border-radius: 12px; overflow: hidden; }
+.media-trigger { position: absolute; inset: 0; display: block; width: 100%; height: 100%; padding: 0; border: 0; border-radius: inherit; background: transparent; color: var(--ink); cursor: zoom-in; text-align: left; font: inherit; }
+.media-trigger img { display: block; width: 100%; height: 100%; object-fit: contain; opacity: 0; }
+.media-trigger img.is-loaded { opacity: 1; }
+.media-trigger:focus-visible { outline-offset: -5px !important; }
+.media-enlarge { position: absolute; right: 13px; bottom: 13px; padding: 7px 10px; background: #fffffff2; border-radius: 4px; font-size: 10px; font-weight: 650; line-height: 1.6; }
+.media-trigger:hover .media-enlarge { background: var(--teal); color: #fff; }
+.media-figure figcaption { padding: 14px 0 0; }
+.media-figure figcaption h3 { font-size: 17px; line-height: 1.45; letter-spacing: -.02em; font-weight: 600; margin: 0 0 8px; }
+.media-figure figcaption p { color: var(--muted); font-size: 12px; line-height: 1.8; margin: 0 0 9px; max-width: 75ch; }
+.media-figure figcaption .media-subtitle { color: var(--teal); font-size: 11px; font-weight: 650; margin-bottom: 7px; }
+.media-figure figcaption .media-disclosure { font-size: 10px; line-height: 1.7; margin: 0; }
+.media-figure figcaption .media-credit { font-size: 10px; margin: 3px 0 0; }
+.media-source { display: inline-block; margin-top: 6px; color: var(--teal); font-size: 11px; text-underline-offset: 3px; line-height: 1.7; }
+.media-board figcaption h3 { font-size: 23px; }
+.media-board .media-frame { aspect-ratio: 3 / 2; }
+.media-lookbook .media-frame { aspect-ratio: 2 / 3; }
+.media-lookbook .media-disclosure { color: var(--teal); }
+.fandom-hero-visual .media-frame { aspect-ratio: var(--media-ratio, 16 / 9); }
+.fandom-hero-visual figcaption { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; column-gap: 35px; }
+.fandom-hero-visual figcaption h3 { display: none; }
+.fandom-hero-visual figcaption .media-disclosure { text-align: right; margin-top: 2px; }
+.media-error { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; padding: 24px; text-align: center; }
+.media-error p { font-size: 12px; color: var(--muted); margin: 0; line-height: 1.8; }
+.media-error a { color: var(--teal); font-size: 12px; text-underline-offset: 3px; }
+.media-group { margin: 28px 0 34px; }
+.media-group > .media-group-note { font-size: 12px; color: var(--teal); line-height: 1.85; margin: 0 0 22px; max-width: 75ch; }
+.media-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px; }
+.media-grid-references { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 29px 21px; }
+.media-grid-references .media-frame { aspect-ratio: 4 / 5; background: #f5f3ef; }
+.media-grid-references figcaption h3 { font-size: 15px; }
+.media-grid-references figcaption p { font-size: 11px; }
+.media-grid-references .media-disclosure { color: var(--teal); }
+.media-grid-blanks .media-frame { aspect-ratio: 1 / 1; background: #f5f3ef; }
+.media-grid-materials .media-frame { aspect-ratio: 4 / 3; }
+.media-grid-single { grid-template-columns: minmax(0, 1fr); }
+.media-grid-single .media-frame { aspect-ratio: var(--media-ratio, 3 / 2); }
+.media-styling .media-frame { aspect-ratio: var(--media-ratio, 2 / 1); }
+.quiet-fandom-page.media-viewer-open { overflow: hidden; }
+dialog.media-viewer { width: min(1220px, calc(100% - 40px)); max-width: none; max-height: 94vh; padding: 0; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: #fff; box-shadow: 0 20px 80px #17231b33; overflow: auto; }
+dialog.media-viewer[open] { display: flex; flex-direction: column; }
+.media-viewer-heading { display: flex; align-items: start; justify-content: space-between; gap: 25px; padding: 20px 25px 17px; flex-shrink: 0; }
+.media-viewer-position { color: var(--teal); font-size: 10px; font-variant-numeric: tabular-nums; line-height: 1.7; margin: 0 0 5px; }
+.media-viewer-heading h2 { font-size: 22px; line-height: 1.35; letter-spacing: -.02em; margin: 0; }
+.media-viewer-close, .media-viewer-controls button { font: inherit; font-size: 12px; color: var(--teal); border: 1px solid #b8c1b9; background: #fff; border-radius: 5px; padding: 10px 14px; min-height: 44px; cursor: pointer; }
+.media-viewer-close { flex-shrink: 0; }
+.media-viewer-close:hover, .media-viewer-controls button:hover:not(:disabled) { background: var(--store-teal-soft); }
+.media-viewer-controls button:disabled { cursor: default; color: var(--muted); opacity: .5; }
+.media-viewer-stage { min-height: 220px; height: min(61vh, 730px); flex-shrink: 0; position: relative; background: #f1f0ec; }
+.media-viewer-stage > img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.media-viewer-loading, .media-viewer-fallback { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; padding: 25px; text-align: center; color: var(--muted); font-size: 13px; margin: 0; }
+.media-viewer-fallback p { margin: 0; }
+.media-viewer-fallback a { color: var(--teal); text-underline-offset: 3px; }
+.media-viewer-details { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 35px; padding: 20px 25px 24px; }
+.media-viewer-details p { font-size: 12px; color: var(--muted); line-height: 1.85; max-width: 75ch; margin: 0 0 7px; }
+.media-viewer-details #media-viewer-disclosure { font-size: 11px; color: var(--teal); }
+.media-viewer-details #media-viewer-credit { font-size: 11px; }
+.media-viewer-details > div > a { color: var(--teal); text-underline-offset: 3px; font-size: 11px; }
+.media-viewer-controls { display: flex; align-items: start; gap: 10px; }
+.quiet-fandom-page [hidden] { display: none !important; }
+.media-enlarge, .media-figure figcaption .media-disclosure, .media-figure figcaption .media-credit, .media-viewer-position { font-size: 11px; }
+dialog.media-viewer { border: 0; }
+.quiet-fandom-page .fandom-hero { padding-top: 30px; }
+.fandom-hero .hero-heading { margin-top: 24px; margin-bottom: 30px; }
+.fandom-hero h1 { font-size: clamp(60px, 6.4vw, 90px); }
+.media-grid-materials .media-frame { aspect-ratio: 3 / 2; }
+@media (max-width: 800px) {
+  .media-grid-references { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fandom-hero-visual figcaption { display: block; }
+  .fandom-hero-visual figcaption .media-disclosure { text-align: left; }
+  .media-viewer-details { grid-template-columns: 1fr; gap: 15px; }
+}
+@media (max-width: 600px) {
+  .media-grid { grid-template-columns: 1fr; gap: 28px; }
+  .media-grid-references { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; }
+  .media-grid-references figcaption h3 { font-size: 14px; }
+  .media-grid-references figcaption p { font-size: 11px; }
+  .media-grid-blanks { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .concept-pair { gap: 19px; }
+  dialog.media-viewer { width: calc(100% - 20px); max-height: 96dvh; }
+  .media-viewer-heading { padding: 15px; gap: 12px; }
+  .media-viewer-heading h2 { font-size: 18px; }
+  .media-viewer-stage { height: 51dvh; min-height: 180px; }
+  .media-viewer-details { padding: 15px; }
+  .media-viewer-controls { justify-content: space-between; }
+}
+@media print {
+  .media-trigger img { opacity: 1; }
+  .media-enlarge, dialog.media-viewer { display: none !important; }
+  .media-figure { break-inside: avoid; }
+  .media-viewer-open { overflow: visible; }
+}
 @media (min-width: 1550px) {
   .fandom-hero .hero-heading { grid-template-columns: 1fr 350px; }
   .fandom-hero h1 { font-size: 112px; }

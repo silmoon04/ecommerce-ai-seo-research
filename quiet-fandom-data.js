@@ -41,31 +41,245 @@ window.quietFandomResearch = {
     {
       "title": "Complete assessment as Markdown",
       "file": "quiet-fandom/assessment.md"
+    },
+    {
+      "title": "New visual studies: prompts and provenance",
+      "file": "quiet-fandom/visual-expansion-prompts.md"
+    },
+    {
+      "title": "Official product photographs and source credits",
+      "file": "quiet-fandom/visual-references.md"
     }
   ],
   "concepts": [
     {
       "title": "Second passage",
       "subtitle": "01 / Quiet dark fantasy",
-      "image": "assets/quiet-fandom/second-passage.png",
+      "image": "assets/quiet-fandom/second-passage.webp",
       "alt": "AI-generated concept board: charcoal and bone tees and a slate crewneck with small original returning-path motifs, front and back views and enlarged thread detail.",
-      "description": "Tonal returning paths, squared turns and one clay-coloured connection. The first direction I would sample."
+      "description": "Tonal returning paths, squared turns and one clay-coloured connection. The first direction I would sample.",
+      "width": 1536,
+      "height": 1024,
+      "original": "assets/quiet-fandom/second-passage.png"
     },
     {
       "title": "Held frame",
       "subtitle": "02 / Motion and composition",
-      "image": "assets/quiet-fandom/held-frame.png",
+      "image": "assets/quiet-fandom/held-frame.webp",
       "alt": "AI-generated concept board: navy and chalk tees and a blue-grey crewneck with staggered corner motifs, front and back views and enlarged thread detail.",
-      "description": "Offset corners suggest successive animation frames. Midnight navy, chalk and a restrained violet accent."
+      "description": "Offset corners suggest successive animation frames. Midnight navy, chalk and a restrained violet accent.",
+      "width": 1536,
+      "height": 1024,
+      "original": "assets/quiet-fandom/held-frame.png"
     },
     {
       "title": "Mending hour",
       "subtitle": "03 / Repair and everyday ritual",
-      "image": "assets/quiet-fandom/mending-hour.png",
+      "image": "assets/quiet-fandom/mending-hour.webp",
       "alt": "AI-generated concept board: oat and charcoal tees and a moss crewneck, a small stitched bridge motif and original repaired-pouch drawing, with enlarged thread detail.",
-      "description": "Joined forms and repaired objects give this direction a warmer character. Oat, faded moss and charcoal."
+      "description": "Joined forms and repaired objects give this direction a warmer character. Oat, faded moss and charcoal.",
+      "width": 1536,
+      "height": 1024,
+      "original": "assets/quiet-fandom/mending-hour.png"
     }
   ],
+  "visuals": {
+    "hero": {
+      "id": "everyday-fandom",
+      "title": "Clothes for the everyday part of your life",
+      "image": "assets/quiet-fandom/visual-hero.webp",
+      "alt": "Two fictional adults wearing understated charcoal and slate clothing beside pale stone architecture.",
+      "caption": "The styling goal: an ordinary outfit with a small detail worth noticing. This scene explores the direction; it does not show manufactured products.",
+      "kind": "concept",
+      "width": 1536,
+      "height": 1024,
+      "original": "assets/quiet-fandom/visual-hero.png"
+    },
+    "lookbook": [
+      {
+        "id": "wear-second-passage",
+        "title": "Second passage, worn outside",
+        "image": "assets/quiet-fandom/lookbook-second-passage.webp",
+        "alt": "A fictional adult wearing the charcoal Second passage tee with relaxed trousers in a stone architectural setting.",
+        "caption": "Charcoal and stone, a relaxed silhouette, and a small original path motif.",
+        "kind": "concept",
+        "width": 1024,
+        "height": 1536,
+        "original": "assets/quiet-fandom/lookbook-second-passage.png"
+      },
+      {
+        "id": "wear-held-frame",
+        "title": "Held frame, in the city",
+        "image": "assets/quiet-fandom/lookbook-held-frame.webp",
+        "alt": "A fictional adult wearing a Held frame garment with a small offset-corner motif in a quiet urban setting.",
+        "caption": "Animation expressed through a small geometric detail and an everyday outfit.",
+        "kind": "concept",
+        "width": 1024,
+        "height": 1536,
+        "original": "assets/quiet-fandom/lookbook-held-frame.png"
+      },
+      {
+        "id": "wear-mending-hour",
+        "title": "Mending hour, off duty",
+        "image": "assets/quiet-fandom/lookbook-mending-hour.webp",
+        "alt": "A fictional adult wearing a faded moss Mending hour crewneck near a quiet garden.",
+        "caption": "Moss and warm neutrals give the repair motif a softer setting.",
+        "kind": "concept",
+        "width": 1024,
+        "height": 1536,
+        "original": "assets/quiet-fandom/lookbook-mending-hour.png"
+      }
+    ],
+    "materials": [
+      {
+        "id": "fabric-possibilities",
+        "title": "Look beyond fabric weight",
+        "image": "assets/quiet-fandom/material-study.webp",
+        "alt": "Illustrated fabric study with bone jersey, textured charcoal jersey and slate fleece, including folded collar and reverse-side details.",
+        "caption": "A visual guide to the surfaces worth comparing. These textures are illustrative, not photographs of the named supplier blanks.",
+        "kind": "illustration",
+        "width": 1536,
+        "height": 1024,
+        "original": "assets/quiet-fandom/material-study.png"
+      },
+      {
+        "id": "print-or-thread",
+        "title": "The same idea, two finishes",
+        "image": "assets/quiet-fandom/decoration-study.webp",
+        "alt": "Illustrated close-up comparison of a small original path motif in tonal embroidery and flat ink print on charcoal fabric.",
+        "caption": "Thread adds texture; print changes the surface differently. Physical proofs will establish how the actual design behaves.",
+        "kind": "illustration",
+        "width": 1536,
+        "height": 1024,
+        "original": "assets/quiet-fandom/decoration-study.png"
+      }
+    ],
+    "quality": {
+      "id": "sample-inspection",
+      "title": "What the first sample session is for",
+      "image": "assets/quiet-fandom/sample-workbench.webp",
+      "alt": "Illustrated workbench with plain clothing samples, measuring tools and hands inspecting a collar.",
+      "caption": "Measure the garment, inspect its construction and record the result before washing. This is a proposed process, not a completed test.",
+      "kind": "illustration",
+      "width": 1536,
+      "height": 1024,
+      "original": "assets/quiet-fandom/sample-workbench.png"
+    },
+    "acquisition": {
+      "id": "phone-content",
+      "title": "A useful shoot can be this small",
+      "image": "assets/quiet-fandom/creator-shoot.webp",
+      "alt": "Illustrated behind-the-scenes scene of an adult filming a friend's understated outfit on a smartphone beside a pale wall.",
+      "caption": "One real sample, a friend and daylight can provide the starting material for outfit and fit content. This scene is illustrative.",
+      "kind": "illustration",
+      "width": 1536,
+      "height": 1024,
+      "original": "assets/quiet-fandom/creator-shoot.png"
+    },
+    "styling": {
+      "id": "three-ways-to-wear",
+      "title": "One tee, three wearing occasions",
+      "image": "assets/quiet-fandom/visual-styling.webp",
+      "alt": "AI styling triptych showing an understated charcoal tee in casual, evening and weekend outfits.",
+      "caption": "Test whether the garment belongs in an existing wardrobe. The different outfits are styling ideas, not tested customer preferences.",
+      "kind": "concept",
+      "width": 1536,
+      "height": 1024,
+      "original": "assets/quiet-fandom/visual-styling.png"
+    },
+    "references": [
+      {
+        "id": "torch-torch-mensis-cage",
+        "title": "TORCH TORCH Mensis Cage sweat cardigan",
+        "category": "reference",
+        "image": "https://www.torchtorch.jp/wp-content/uploads//600__0000_1_Memsis_Cage_Brack.jpg",
+        "source": "https://torchtorch.jp/en/product/bloodborne_mensis_cage_sweat_cardigan/",
+        "alt": "TORCH TORCH product photograph of the black Mensis Cage sweat cardigan",
+        "caption": "A cardigan reference for comparing fandom clothing beyond the standard printed tee.",
+        "credit": "TORCH TORCH",
+        "kind": "reference"
+      },
+      {
+        "id": "insert-coin-very-important-bots",
+        "title": "Insert Coin Very Important Bots hoodie",
+        "category": "reference",
+        "image": "https://www.insertcoinclothing.com/media/images/products/scale610x1002/1703_1.jpg?c=1731067286",
+        "source": "https://www.insertcoinclothing.com/hoodies/very-important-bots-hoodie.html",
+        "alt": "Insert Coin product photograph of the Very Important Bots hoodie",
+        "caption": "An Astro Bot hoodie reference for comparing recognisable game cues on everyday clothing.",
+        "credit": "Insert Coin",
+        "kind": "reference"
+      },
+      {
+        "id": "imouri-oc-tee",
+        "title": "IMOURI OC T-shirt",
+        "category": "reference",
+        "image": "https://cdn.shopify.com/s/files/1/1155/1758/products/IMOURIOCTSHIRT1.jpg?v=1759467045",
+        "source": "https://imouri.com/products/oc-t-shirt",
+        "alt": "IMOURI product photograph of the OC T-shirt",
+        "caption": "Its 10-inch-wide, three-colour front embroidery offers a bolder comparison for judging our motif scale.",
+        "credit": "IMOURI",
+        "kind": "reference"
+      },
+      {
+        "id": "fangamer-elite-knight",
+        "title": "Fangamer Elite Knight hoodie",
+        "category": "reference",
+        "image": "https://cdn.shopify.com/s/files/1/0014/1962/files/product_DS_elite_hoodie_itemview_7cfa04d6-7919-4ec0-a33b-51f80d1c2e0c_new.png?v=1691625531",
+        "source": "https://www.fangamer.com/products/dark-souls-hoodie",
+        "alt": "Fangamer product photograph of the Dark Souls Elite Knight hoodie",
+        "caption": "A Dark Souls reference for comparing how game identity translates into a hoodie.",
+        "credit": "Fangamer",
+        "kind": "reference"
+      },
+      {
+        "id": "steady-hands-see-you",
+        "title": "Steady Hands See You tee",
+        "category": "reference",
+        "image": "https://www.steady-hands.com/cdn/shop/files/See_You_Tee_1_1f5c260f-454c-4030-8cf9-01d94af9c31e.jpg?v=1784553331&width=1080",
+        "source": "https://www.steady-hands.com/collections/subtle-anime/products/see-you-tee",
+        "alt": "Steady Hands product photograph of the See You tee",
+        "caption": "A reference from the brand's subtle anime collection for testing our own definition of subtle.",
+        "credit": "Steady Hands",
+        "kind": "reference"
+      },
+      {
+        "id": "omocat-something",
+        "title": "OMOCAT SOMETHING hoodie",
+        "category": "reference",
+        "image": "https://www.omocat-shop.com/cdn/shop/products/210320_Omocat_4526copy_1000x.jpg?v=1616717187",
+        "source": "https://www.omocat-shop.com/products/something-hoodie",
+        "alt": "OMOCAT product photograph of the SOMETHING hoodie",
+        "caption": "A hoodie reference for discussing how clearly a design should signal its fandom to other fans.",
+        "credit": "OMOCAT",
+        "kind": "reference"
+      }
+    ],
+    "blanks": [
+      {
+        "id": "inkthreadable-creator-2",
+        "title": "Inkthreadable Creator 2.0 blank",
+        "category": "blank",
+        "image": "https://www.inkthreadable.co.uk/images/pictures/2026/product-images/sttu169-1.jpg",
+        "source": "https://www.inkthreadable.co.uk/organic-products",
+        "alt": "Inkthreadable supplier photograph of the Creator 2.0 blank T-shirt",
+        "caption": "A supplier blank reference for comparing the undecorated garment before adding artwork.",
+        "credit": "Inkthreadable",
+        "kind": "reference"
+      },
+      {
+        "id": "inkthreadable-freestyler",
+        "title": "Inkthreadable Freestyler blank",
+        "category": "blank",
+        "image": "https://www.inkthreadable.co.uk/images/pictures/1-2021/2021-product-images/ssaw21-photos/freestyler.png",
+        "source": "https://www.inkthreadable.co.uk/freestyler",
+        "alt": "Inkthreadable supplier photograph of the Freestyler blank T-shirt",
+        "caption": "A second blank reference for comparing garment shape before choosing a sample.",
+        "credit": "Inkthreadable",
+        "kind": "reference"
+      }
+    ]
+  },
   "economics": {
     "price": 41.95,
     "production": 21.2,

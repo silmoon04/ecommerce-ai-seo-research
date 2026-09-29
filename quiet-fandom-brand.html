@@ -12,6 +12,7 @@
   <script defer src="vendor/marked.umd.js"></script>
   <script defer src="quiet-fandom-data.js"></script>
   <script defer src="quiet-fandom-brand.js"></script>
+  <script defer src="quiet-fandom-visuals.js"></script>
 </head>
 <body class="owned-store-page quiet-fandom-page">
 <a class="skip" href="#assessment">Skip to the research</a>
@@ -38,10 +39,11 @@
       </div>
     </div>
     <div class="store-scope"><p><strong>A proposed brand.</strong> The concepts, pricing and launch plan need testing with samples and real customers.</p><a href="#economics">Explore the order economics</a></div>
+    <div id="fandom-hero-visual" class="fandom-hero-visual" hidden></div>
   </section>
 
   <section class="fandom-concepts wrap" id="concepts" aria-labelledby="concepts-title">
-    <div class="fandom-section-heading"><div><p class="store-kicker">The visual starting point</p><h2 id="concepts-title">Three directions to test.</h2></div><p>Compare the visual ideas here. Assess fit, fabric, decoration and durability with physical samples.</p></div>
+    <div class="fandom-section-heading"><div><p class="store-kicker">The visual starting point</p><h2 id="concepts-title">Three directions to test.</h2></div><p>Outfit ideas beside the design boards. Enlarge any image to inspect it; fit, fabric and durability still need physical samples.</p></div>
     <div id="concept-gallery" class="concept-gallery"><p class="data-pending" role="status">The concept images are loading.</p></div>
   </section>
 
@@ -132,5 +134,11 @@
   <div class="footer-top"><a class="wordmark" href="index.html">fieldnotes</a><p>Independent commerce research. Sources and uncertainty kept in view.</p><a href="#top">Back to top</a></div>
   <div class="footer-bottom"><p>This is research for a proposed clothing brand. AI concept images are not manufactured samples, and modelled contribution is not evidence of demand.</p><p><a href="index.html">Original report</a> &nbsp; / &nbsp; <a href="conversion-lab.html">Conversion research</a> &nbsp; / &nbsp; <a href="owned-store-lab.html">The store experiment</a></p></div>
 </footer>
+
+<dialog id="media-viewer" class="media-viewer" aria-labelledby="media-viewer-title" aria-describedby="media-viewer-caption media-viewer-disclosure">
+  <div class="media-viewer-heading"><div><p id="media-viewer-position" class="media-viewer-position" role="status" aria-live="polite" aria-atomic="true"></p><h2 id="media-viewer-title">Image detail</h2></div><button type="button" id="media-viewer-close" class="media-viewer-close" autofocus>Close</button></div>
+  <div id="media-viewer-stage" class="media-viewer-stage" aria-busy="false"><img id="media-viewer-image" alt="" width="1600" height="1200" decoding="async" hidden><p id="media-viewer-loading" class="media-viewer-loading" hidden>Loading image.</p><div id="media-viewer-fallback" class="media-viewer-fallback" hidden><p>This image could not load.</p><a id="media-viewer-fallback-link" href="#" hidden>View the source</a></div></div>
+  <div class="media-viewer-details"><div><p id="media-viewer-caption"></p><p id="media-viewer-disclosure"></p><p id="media-viewer-credit"></p><a id="media-viewer-source" href="#" target="_blank" rel="noopener noreferrer" hidden>View the source</a></div><nav class="media-viewer-controls" aria-label="Image navigation"><button type="button" id="media-viewer-previous">Previous image</button><button type="button" id="media-viewer-next">Next image</button></nav></div>
+</dialog>
 </body>
 </html>

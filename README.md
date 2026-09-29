@@ -18,9 +18,11 @@ The owned-store report now also includes a bootstrap follow-up with three furthe
 
 The fifth report, `quiet-fandom-brand.html`, researches a minimal anime and dark-fantasy clothing brand as a business in its own right. Eight GPT-6 Astra Max studies cover competitors, market evidence, sourcing, unit economics, design directions, affordable distribution, intellectual property and validation. It includes three AI-generated concept boards, a sourced assessment, an editable contribution model, all eight notes and exact image prompts. Source documents and scenario data are under `quiet-fandom/`. UK sourcing is a working assumption. Supplier prices are observed; proposed retail prices, refunds, acquisition costs and budgets remain assumptions. The study does not establish garment quality, demand or competitor profitability.
 
+The clothing report now has 20 images: the three original concept boards, nine additional AI-generated styling and process studies, and eight official brand/supplier photographs. Images can be enlarged in a keyboard-accessible viewer. Generated images are labelled and served as lightweight WebP copies, with original PNGs retained. Official photographs are linked from their source sites, credited beside each image, and require network access. The new prompt record and photo sources are linked from the report.
+
 ## Run locally
 
-Open `index.html` in a browser, or serve this directory with a local HTTP server. All presentation assets and dependencies are bundled. No API keys or build step are required.
+Open `index.html` in a browser, or serve this directory with a local HTTP server. The presentation code, fonts and generated images are bundled; the clothing report's credited third-party photographs load from their source sites. No API keys or build step are required.
 
 ## Hosting
 
