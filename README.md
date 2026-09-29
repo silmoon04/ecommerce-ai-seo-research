@@ -12,6 +12,8 @@ The third report, `conversion-lab.html`, examines the shared controlled-replay p
 
 The complete selected set is downloadable as Markdown, JSON and CSV under `conversion-research/`. That folder also contains all 260 candidates, every selection decision, source-linked notes and the economics assumptions. The newer report updates earlier coverage of native simulation, feed experiments and purchase testing; links to it appear in both preceding reports.
 
+The fourth report, `owned-store-lab.html`, evaluates a proposed owned Shopify store as a research laboratory. Four GPT-6 Astra Max studies cover product niches and suppliers, realistic costs and cash flow, experimental design, and order-level instrumentation. It includes a proposed twelve-week sequence and distinguishes replay results, live discovery, actual purchases and software demand. The budget is a chosen domestic print-on-demand scenario, not a quote for the recommended hobby-storage range. No store has been launched. Source notes and the assessment are in `owned-store/`.
+
 ## Run locally
 
 Open `index.html` in a browser, or serve this directory with a local HTTP server. All presentation assets and dependencies are bundled. No API keys or build step are required.
