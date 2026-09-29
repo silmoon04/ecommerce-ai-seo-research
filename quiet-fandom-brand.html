@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Research for a subtle anime and soulslike inspired clothing brand: original style, garment quality, affordable acquisition, launch experiments and the cash contribution from each order.">
+  <title>Fandom, worn quietly. | Fieldnotes</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="owned-store-lab.css">
+  <link rel="stylesheet" href="quiet-fandom-brand.css">
+  <script defer src="vendor/marked.umd.js"></script>
+  <script defer src="quiet-fandom-data.js"></script>
+  <script defer src="quiet-fandom-brand.js"></script>
+</head>
+<body class="owned-store-page quiet-fandom-page">
+<a class="skip" href="#assessment">Skip to the research</a>
+<header class="site-header wrap">
+  <a class="wordmark" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>fieldnotes<span class="wordmark-sub">COMMERCE RESEARCH</span></span></a>
+  <nav aria-label="Research reports">
+    <a href="index.html">Original report</a>
+    <a href="competitive-deep-dive.html">Competitors</a>
+    <a href="conversion-lab.html">Conversion research</a>
+    <a href="owned-store-lab.html">The store experiment</a>
+    <a href="quiet-fandom-brand.html" aria-current="page">The clothing brand</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero store-hero fandom-hero wrap" aria-labelledby="page-title">
+    <div class="store-dateline"><span><span class="orange-dot" aria-hidden="true"></span> The clothing-brand research</span><time id="research-date" datetime="2026-09-29">29 September 2026</time></div>
+    <div class="hero-heading">
+      <h1 id="page-title">Fandom,<br>worn quietly.</h1>
+      <div class="hero-deck">
+        <p>Original style, good garments, and a clothing brand built with a small launch budget.</p>
+        <p class="muted">A practical look at subtle anime and soulslike influences, finding customers, and what remains from each sale.</p>
+        <a class="text-link" href="#assessment">Read the research</a>
+      </div>
+    </div>
+    <div class="store-scope"><p><strong>A proposed brand.</strong> The concepts, pricing and launch plan need testing with samples and real customers.</p><a href="#economics">Explore the order economics</a></div>
+  </section>
+
+  <section class="fandom-concepts wrap" id="concepts" aria-labelledby="concepts-title">
+    <div class="fandom-section-heading"><div><p class="store-kicker">The visual starting point</p><h2 id="concepts-title">Three directions to test.</h2></div><p>Compare the visual ideas here. Assess fit, fabric, decoration and durability with physical samples.</p></div>
+    <div id="concept-gallery" class="concept-gallery"><p class="data-pending" role="status">The concept images are loading.</p></div>
+  </section>
+
+  <div class="report-layout wrap store-layout fandom-layout">
+    <aside class="chapter-rail store-rail">
+      <details id="chapter-menu" open>
+        <summary>Inside this report</summary>
+        <nav id="chapter-links" aria-label="Report chapters"><a href="#concepts">The visual directions</a><a href="#assessment">The research</a><a href="#economics">The order economics</a><a href="#notes">Full research notes</a></nav>
+      </details>
+      <div class="rail-bottom">
+        <p>Test the garment, the customer response and the economics before committing to a larger run.</p>
+        <a href="owned-store-lab.html">The owned-store experiment</a>
+        <button class="quiet-button" id="print-report" type="button">Print this report</button>
+      </div>
+    </aside>
+
+    <div class="store-reading-column">
+      <article id="assessment" class="store-markdown" aria-label="Quiet fandom clothing-brand research"><p class="data-pending" role="status">The research is loading.</p></article>
+      <noscript><p class="store-fallback">Enable JavaScript to display the research, concept images and contribution calculator.</p></noscript>
+
+      <section class="fandom-economics" id="economics" aria-labelledby="economics-title">
+        <p class="store-kicker">Put the assumptions under pressure</p>
+        <h2 id="economics-title">What remains from one order?</h2>
+        <p class="economics-deck">Change the customer payment and the costs to see the contribution per order, then the number of orders needed to cover monthly fixed costs.</p>
+
+        <div class="cash-model">
+          <div class="cash-model-heading"><div><h3>Your order assumptions</h3><p>Illustrative UK cash model. GBP. Non-VAT-registered business.</p></div><button type="button" id="reset-economics" class="quiet-button">Reset assumptions</button></div>
+          <p class="cash-basis" id="cash-basis">Supplier costs include irrecoverable taxes. The model excludes founder labour. These figures are assumptions, not expected profit.</p>
+          <form id="economics-form" aria-describedby="cash-basis fee-assumptions" novalidate>
+            <div class="cash-inputs">
+              <label for="cash-price">Customer payment, £<input id="cash-price" name="price" type="number" min="0" max="1000000" step="0.01" inputmode="decimal" required aria-describedby="price-help"></label>
+              <label for="cash-production">Production and decoration, £<input id="cash-production" name="production" type="number" min="0" max="1000000" step="0.01" inputmode="decimal" required></label>
+              <label for="cash-shipping">Outbound shipping cost, £<input id="cash-shipping" name="shipping" type="number" min="0" max="1000000" step="0.01" inputmode="decimal" required></label>
+              <label for="cash-reserve">Returns reserve per order, £<input id="cash-reserve" name="reserve" type="number" min="0" max="1000000" step="0.01" inputmode="decimal" required aria-describedby="reserve-help"></label>
+              <label for="cash-acquisition">Acquisition cash per order, £<input id="cash-acquisition" name="acquisition" type="number" min="0" max="1000000" step="0.01" inputmode="decimal" required aria-describedby="acquisition-help"></label>
+              <label for="cash-fixed">Monthly fixed costs, £<input id="cash-fixed" name="fixed" type="number" min="0" max="1000000" step="0.01" inputmode="decimal" required aria-describedby="fixed-help"></label>
+            </div>
+            <p class="cash-help" id="price-help">Use the total customer payment, including any shipping charged. Enter the actual outbound shipping cost separately.</p>
+            <p class="cash-help" id="reserve-help">The returns reserve is the average cash loss allowed for refunds, return handling and unrecovered costs across all orders.</p>
+            <p class="cash-help" id="acquisition-help">Acquisition is cash spent to win one order. Zero cash spend still leaves the founder's time outside this model.</p>
+            <p class="cash-help" id="fixed-help">The default £30 is a planning allowance: the published £25 Shopify price plus £5 tax headroom. It is not a confirmed tax-inclusive invoice. The break-even result covers only the fixed costs entered here.</p>
+            <p class="fee-assumptions" id="fee-assumptions">Payment fee assumptions are loading.</p>
+          </form>
+          <dl class="cash-results" aria-label="Illustrative cash contribution">
+            <div><dt>Contribution per order</dt><dd><output id="result-contribution" for="cash-price cash-production cash-shipping cash-reserve cash-acquisition">Enter assumptions</output></dd><p>After the variable costs shown above.</p></div>
+            <div><dt>Orders to cover monthly fixed costs</dt><dd class="cash-break-even"><output id="result-break-even" for="cash-price cash-production cash-shipping cash-reserve cash-acquisition cash-fixed">Enter assumptions</output></dd><p>Rounded up to whole orders, before founder labour.</p></div>
+          </dl>
+          <p id="economics-status" class="cash-status" role="status" aria-live="polite" aria-atomic="true"></p>
+          <figure class="cash-composition" id="cash-composition" aria-labelledby="cash-composition-title" hidden>
+            <div class="cash-composition-heading"><h4 id="cash-composition-title">Order cash breakdown</h4><span id="cash-composition-totals"></span></div>
+            <div class="cash-composition-track" id="cash-composition-track" role="img" aria-label="Cost breakdown">
+              <span class="cash-segment cash-production" data-cost-segment="production" aria-hidden="true"></span>
+              <span class="cash-segment cash-shipping" data-cost-segment="shipping" aria-hidden="true"></span>
+              <span class="cash-segment cash-payment" data-cost-segment="paymentFee" aria-hidden="true"></span>
+              <span class="cash-segment cash-reserve" data-cost-segment="reserve" aria-hidden="true"></span>
+              <span class="cash-segment cash-acquisition" data-cost-segment="acquisition" aria-hidden="true"></span>
+              <span class="cash-segment cash-contribution" data-cost-segment="contribution" aria-hidden="true"></span>
+              <span class="cash-loss-range" id="cash-loss-range" aria-hidden="true" hidden></span>
+              <span class="cash-payment-marker" id="cash-payment-marker" aria-hidden="true"></span>
+            </div>
+            <figcaption id="cash-composition-caption">The line marks customer payment. The bar scales to the larger of payment or variable costs.</figcaption>
+            <dl class="cash-composition-legend">
+              <div><dt><span class="cash-swatch cash-production" aria-hidden="true"></span>Production</dt><dd data-cost-value="production"></dd></div>
+              <div><dt><span class="cash-swatch cash-shipping" aria-hidden="true"></span>Outbound shipping</dt><dd data-cost-value="shipping"></dd></div>
+              <div><dt><span class="cash-swatch cash-payment" aria-hidden="true"></span>Payment fee</dt><dd data-cost-value="paymentFee"></dd></div>
+              <div><dt><span class="cash-swatch cash-reserve" aria-hidden="true"></span>Loss reserve</dt><dd data-cost-value="reserve"></dd></div>
+              <div><dt><span class="cash-swatch cash-acquisition" aria-hidden="true"></span>Acquisition</dt><dd data-cost-value="acquisition"></dd></div>
+              <div><dt><span class="cash-swatch cash-contribution" aria-hidden="true"></span>Positive contribution</dt><dd data-cost-value="contribution"></dd></div>
+            </dl>
+          </figure>
+          <details class="cash-method"><summary>How this is calculated</summary><p>Contribution per order = customer payment − production and decoration − outbound shipping − payment fees − returns reserve − acquisition cash.</p><p>Payment fees = customer payment × the percentage fee + the fixed fee. Orders to cover monthly fixed costs = monthly fixed costs ÷ positive contribution per order, rounded up. A zero or negative contribution cannot cover fixed costs in this model.</p><p>This is a per-order cash contribution model. Founder labour, taxes on business income, upfront development costs and any costs omitted from your inputs still need funding.</p></details>
+        </div>
+      </section>
+
+      <section class="store-notes" id="notes" aria-labelledby="notes-title">
+        <p class="store-kicker">The sources and working detail</p>
+        <h2 id="notes-title">Full research notes.</h2>
+        <p>Read the source links, supplier assumptions, acquisition ideas and experiment plans behind the assessment.</p>
+        <ul id="note-list" class="store-note-list"><li class="data-pending">The research notes are loading.</li></ul>
+        <div class="fandom-downloads"><a href="quiet-fandom/economics-scenarios.json" download>Download scenario data, JSON</a><a href="quiet-fandom/report-data.json" download>Download report data, JSON</a></div>
+        <div class="store-related"><div><strong>Use the store as a learning environment.</strong><p>The companion report examines what an owned store can reveal about AI discovery, controlled tests and real purchases.</p></div><a href="owned-store-lab.html">Read the store experiment</a></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="wrap store-footer">
+  <div class="footer-top"><a class="wordmark" href="index.html">fieldnotes</a><p>Independent commerce research. Sources and uncertainty kept in view.</p><a href="#top">Back to top</a></div>
+  <div class="footer-bottom"><p>This is research for a proposed clothing brand. AI concept images are not manufactured samples, and modelled contribution is not evidence of demand.</p><p><a href="index.html">Original report</a> &nbsp; / &nbsp; <a href="conversion-lab.html">Conversion research</a> &nbsp; / &nbsp; <a href="owned-store-lab.html">The store experiment</a></p></div>
+</footer>
+</body>
+</html>

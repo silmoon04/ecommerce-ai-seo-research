@@ -1,0 +1,428 @@
+{
+  "title": "Illustrative UK original clothing label economics",
+  "as_of": "2026-09-29",
+  "currency": "GBP",
+  "status": "research scenario, not a sales forecast, supplier commitment or permission to spend",
+  "jurisdiction_assumption": "UK-established seller fulfilling from UK to UK adult clothing customers; user's location and legal status unconfirmed",
+  "base_vat_basis": "Seller not VAT registered. VAT-inclusive supplier cash costs retained; no output VAT deducted from customer receipts.",
+  "observed_inputs": {
+    "pod_tee_product": {
+      "value": 19.69,
+      "source": "ink_catalogue"
+    },
+    "pod_hoodie_product": {
+      "value": 36.42,
+      "source": "ink_catalogue"
+    },
+    "tee_neck_label": {
+      "value": 1.51,
+      "source": "ink_pricing"
+    },
+    "extra_print_location": {
+      "value": 5.04,
+      "source": "ink_pricing"
+    },
+    "pod_tee_shipping": {
+      "value": 2.88,
+      "source": "ink_shipping"
+    },
+    "pod_hoodie_shipping": {
+      "value": 3.78,
+      "source": "ink_shipping"
+    },
+    "batch_outbound_postage": {
+      "value": 3.65,
+      "source": "royal_mail"
+    },
+    "shopify_basic_monthly": {
+      "value": 25,
+      "source": "shopify_pricing"
+    },
+    "shopify_standard_card_percentage": {
+      "value": 2,
+      "source": "shopify_pricing"
+    },
+    "shopify_standard_card_fixed": {
+      "value": 0.25,
+      "source": "shopify_pricing"
+    }
+  },
+  "assumptions": {
+    "one_garment_per_order": true,
+    "checkout_shipping_charge_gbp": 3.95,
+    "full_refund_probability": 0.08,
+    "separate_replacement_probability": 0.02,
+    "return_assumptions": "Full product and standard-delivery refund; zero returned-stock recovery; zero supplier reimbursement assumed; original card fee retained; customer-paid non-fault return postage assumed and must be reflected in disclosed terms.",
+    "reserve_formula": "refund_probability * checkout_receipts + replacement_probability * original_fulfilment_cost",
+    "contribution_formula": "checkout_receipts - fulfilment_cost - (0.02 * checkout_receipts + 0.25) - reserve",
+    "labour_value_per_hour_gbp": 15,
+    "labour_value_status": "Opportunity-cost assumption, not a claim about statutory or market pay",
+    "store_budget_allowance_monthly_gbp": 30,
+    "store_allowance_note": "GBP25 published monthly price plus GBP5 tax headroom. Not a verified tax-inclusive invoice. Three months budgeted; promotion excluded.",
+    "batch_tee_production_ceiling_gbp": 17,
+    "batch_hoodie_production_ceiling_gbp": 31,
+    "batch_ceilings_status": "Proposed maximum quote targets including one decoration and agreed branding. Not verified quotations; cannot infer same quality or savings.",
+    "batch_inbound_per_unit_gbp": 0.5,
+    "batch_mailer_per_unit_gbp": 0.5,
+    "batch_fixed_print_setup_gbp": 60,
+    "founder_original_art_cash_cost_gbp": 0,
+    "art_cash_note": "Founder-made original artwork only; commissioned artwork must receive a separate quote.",
+    "excluded_or_quote_required": [
+      "commissioned artwork",
+      "paid video-reuse licences",
+      "external legal or accounting work",
+      "insurance",
+      "storage rental",
+      "profit taxes",
+      "international charges",
+      "non-standard payment methods",
+      "further operating months",
+      "alternative hoodie relabelling"
+    ]
+  },
+  "unit_scenarios": [
+    {
+      "id": "pod_tee",
+      "status": "catalogue prices observed; variant checkout and sample approval required",
+      "pricing": {
+        "garment_price_gbp": 38,
+        "customer_shipping_gbp": 3.95,
+        "checkout_receipts_gbp": 41.95,
+        "retail_price_status": "proposed; willingness to pay untested"
+      },
+      "fulfilment": {
+        "garment_and_one_decoration_gbp": 19.69,
+        "tee_printed_neck_label_gbp": 1.51,
+        "outbound_shipping_gbp": 2.88,
+        "packaging_gbp": 0,
+        "inbound_shipping_allocation_gbp": 0,
+        "total_gbp": 24.08,
+        "batch_note": "POD packing is included in service price; no extra packaging purchase modelled.",
+        "hoodie_label_note": null
+      },
+      "payment_fee_gbp": 1.089,
+      "reserve": {
+        "full_refund_gbp": 3.356,
+        "replacement_fulfilment_gbp": 0.4816,
+        "total_gbp": 3.8376
+      },
+      "contribution_before_cac_fixed_and_founder_gbp": 12.9434,
+      "founder_minutes_per_order": 10,
+      "founder_variable_value_gbp": 2.5,
+      "contribution_after_variable_founder_before_cac_fixed_gbp": 10.4434,
+      "contribution_after_variable_founder_and_8_gbp_cac_gbp": 2.4434,
+      "vat_registered_same_customer_price_contribution_before_founder_cac_fixed_gbp": 10.6047
+    },
+    {
+      "id": "pod_hoodie",
+      "status": "catalogue prices observed; variant checkout and sample approval required",
+      "pricing": {
+        "garment_price_gbp": 72,
+        "customer_shipping_gbp": 3.95,
+        "checkout_receipts_gbp": 75.95,
+        "retail_price_status": "proposed; willingness to pay untested"
+      },
+      "fulfilment": {
+        "garment_and_one_decoration_gbp": 36.42,
+        "tee_printed_neck_label_gbp": 0,
+        "outbound_shipping_gbp": 3.78,
+        "packaging_gbp": 0,
+        "inbound_shipping_allocation_gbp": 0,
+        "total_gbp": 40.2,
+        "batch_note": "POD packing is included in service price; no extra packaging purchase modelled.",
+        "hoodie_label_note": "POD hoodie printed neck labels unavailable; no price assumed for alternative relabelling. Batch branding is subject to written quote."
+      },
+      "payment_fee_gbp": 1.769,
+      "reserve": {
+        "full_refund_gbp": 6.076,
+        "replacement_fulfilment_gbp": 0.804,
+        "total_gbp": 6.88
+      },
+      "contribution_before_cac_fixed_and_founder_gbp": 27.101,
+      "founder_minutes_per_order": 10,
+      "founder_variable_value_gbp": 2.5,
+      "contribution_after_variable_founder_before_cac_fixed_gbp": 24.601,
+      "contribution_after_variable_founder_and_8_gbp_cac_gbp": 16.601,
+      "vat_registered_same_customer_price_contribution_before_founder_cac_fixed_gbp": 22.2893
+    },
+    {
+      "id": "batch_tee",
+      "status": "conditional quote ceiling; not an obtained decorated-garment quote",
+      "pricing": {
+        "garment_price_gbp": 38,
+        "customer_shipping_gbp": 3.95,
+        "checkout_receipts_gbp": 41.95,
+        "retail_price_status": "proposed; willingness to pay untested"
+      },
+      "fulfilment": {
+        "garment_and_one_decoration_gbp": 17,
+        "tee_printed_neck_label_gbp": 0,
+        "outbound_shipping_gbp": 3.65,
+        "packaging_gbp": 0.5,
+        "inbound_shipping_allocation_gbp": 0.5,
+        "total_gbp": 21.65,
+        "batch_note": "Production ceiling includes agreed decoration and branding. Separate fixed print setup allowance is not included in unit contribution.",
+        "hoodie_label_note": null
+      },
+      "payment_fee_gbp": 1.089,
+      "reserve": {
+        "full_refund_gbp": 3.356,
+        "replacement_fulfilment_gbp": 0.433,
+        "total_gbp": 3.789
+      },
+      "contribution_before_cac_fixed_and_founder_gbp": 15.422,
+      "founder_minutes_per_order": 12,
+      "founder_variable_value_gbp": 3,
+      "contribution_after_variable_founder_before_cac_fixed_gbp": 12.422,
+      "contribution_after_variable_founder_and_8_gbp_cac_gbp": 4.422,
+      "vat_registered_same_customer_price_contribution_before_founder_cac_fixed_gbp": 12.6702
+    },
+    {
+      "id": "batch_hoodie",
+      "status": "conditional quote ceiling; not an obtained decorated-garment quote",
+      "pricing": {
+        "garment_price_gbp": 72,
+        "customer_shipping_gbp": 3.95,
+        "checkout_receipts_gbp": 75.95,
+        "retail_price_status": "proposed; willingness to pay untested"
+      },
+      "fulfilment": {
+        "garment_and_one_decoration_gbp": 31,
+        "tee_printed_neck_label_gbp": 0,
+        "outbound_shipping_gbp": 3.65,
+        "packaging_gbp": 0.5,
+        "inbound_shipping_allocation_gbp": 0.5,
+        "total_gbp": 35.65,
+        "batch_note": "Production ceiling includes agreed decoration and branding. Separate fixed print setup allowance is not included in unit contribution.",
+        "hoodie_label_note": "POD hoodie printed neck labels unavailable; no price assumed for alternative relabelling. Batch branding is subject to written quote."
+      },
+      "payment_fee_gbp": 1.769,
+      "reserve": {
+        "full_refund_gbp": 6.076,
+        "replacement_fulfilment_gbp": 0.713,
+        "total_gbp": 6.789
+      },
+      "contribution_before_cac_fixed_and_founder_gbp": 31.742,
+      "founder_minutes_per_order": 12,
+      "founder_variable_value_gbp": 3,
+      "contribution_after_variable_founder_before_cac_fixed_gbp": 28.742,
+      "contribution_after_variable_founder_and_8_gbp_cac_gbp": 20.742,
+      "vat_registered_same_customer_price_contribution_before_founder_cac_fixed_gbp": 26.1568
+    }
+  ],
+  "sensitivities": {
+    "pod_tee_extra_print_location_contribution_gbp": 7.8026,
+    "pod_tee_free_delivery_at_38_gbp_item_price_contribution_gbp": 9.3884,
+    "pod_tee_refund_probability_15_percent_contribution_gbp": 10.0069,
+    "batch_tee_20_gbp_decorated_production_contribution_gbp": 12.362,
+    "creator_commission_example": {
+      "rate": 0.1,
+      "basis": "Retained garment receipts excluding shipping and refunded sales; unregistered seller model",
+      "tee_cost_gbp": 3.496,
+      "hoodie_cost_gbp": 6.624,
+      "status": "proposed example, not an observed creator rate"
+    },
+    "gifted_tee_example": {
+      "count": 3,
+      "cost_each_gbp": 24.08,
+      "total_gbp": 72.24,
+      "attributable_customers_example": 5,
+      "cost_per_customer_gbp": 14.448,
+      "status": "Arithmetic example only; no expected conversions"
+    },
+    "video_reuse": {
+      "price_gbp": null,
+      "status": "No verified quote; record creator/owner permissions, usage scope and agreed fee. Treat fee as fixed cost."
+    }
+  },
+  "launch_budgets": [
+    {
+      "id": "pod",
+      "items_gbp": {
+        "samples_wash": 120,
+        "store_and_domain": 105,
+        "photo_and_creator_seeding": 72.24,
+        "stock_setup_inbound_mailers": 0,
+        "paid_test": 0,
+        "working_float": 200,
+        "contingency": 75
+      },
+      "total_gbp": 572.24,
+      "status": "proposed cash allowance, not quoted launch package",
+      "notes": "Three gifted POD tees; DIY photos. GBP200 float and GBP75 contingency separated from GBP297.24 cash expenses."
+    },
+    {
+      "id": "batch",
+      "items_gbp": {
+        "samples_wash": 120,
+        "store_and_domain": 105,
+        "photo_and_creator_seeding": 60.95,
+        "stock_setup_inbound_mailers": 960,
+        "paid_test": 150,
+        "working_float": 200,
+        "contingency": 200
+      },
+      "total_gbp": 1795.95,
+      "status": "proposed cash allowance, not quoted launch package",
+      "notes": "50 tees at conditional GBP17 ceiling; GBP60 setup, GBP25 inbound and GBP25 mailers total GBP960. Three gifted units drawn from stock leave47 sellable. Photos GBP50 plus gift postage GBP10.95."
+    },
+    {
+      "id": "preorder",
+      "items_gbp": {
+        "samples_wash": 120,
+        "store_and_domain": 105,
+        "photo_and_creator_seeding": 122.24,
+        "stock_setup_inbound_mailers": 0,
+        "paid_test": 150,
+        "working_float": 275,
+        "contingency": 150
+      },
+      "total_gbp": 922.24,
+      "status": "proposed cash allowance, not quoted launch package",
+      "notes": "No speculative production purchase in launch budget. Photos GBP50 plus3 POD gifts GBP72.24. GBP275 float includes GBP75 fee headroom on cancelled campaign; manufacturing funded only after quote and accepted threshold."
+    }
+  ],
+  "preorder_50_tee_example": {
+    "receipts_gbp": 2097.5,
+    "payment_gbp": 54.45,
+    "refund_gbp": 167.8,
+    "production_gbp": 850,
+    "inbound_gbp": 25,
+    "mailers_gbp": 25,
+    "outbound_gbp": 182.5,
+    "setup_gbp": 60,
+    "replacement_gbp": 21.65,
+    "remaining_before_campaign_overhead_and_founder_gbp": 711.1,
+    "quantity": 50,
+    "status": "Conditional arithmetic using GBP17 production ceiling; not a supplier offer or demand prediction",
+    "conditions": [
+      "Approved physical sample",
+      "Accepted written quote and supplier minimum compatible with ordered sizes",
+      "Published closing date, threshold and agreed delivery date",
+      "Refund plan if threshold not met",
+      "Keep receipts available pending manufacturing decision",
+      "Ring-fence fulfilment costs and reserves after committing"
+    ]
+  },
+  "break_even": {
+    "cashFixed": 297.24,
+    "fixedFounderHours": 108,
+    "hourlyRate": 15,
+    "economicFixed": 1917.24,
+    "teeCash": 23,
+    "hoodieCash": 11,
+    "teeEconomic": 184,
+    "hoodieEconomic": 78,
+    "teeCAC8": 785,
+    "hoodieCAC8": 116
+  },
+  "break_even_notes": {
+    "fixed_cash_basis": "POD samples GBP120 + shop3months GBP90 + domain GBP15 +3 gifted tees GBP72.24 =GBP297.24. Excludes reusable float and unspent contingency.",
+    "fixed_founder_hours": "60 setup hours +4 hours/week for12weeks =108hours. Extra10min per order is deducted from contribution.",
+    "fixed_economic_gbp": 1917.24,
+    "unit_basis": "Separate all-tee and all-hoodie cases, not a sales mix or sales forecast",
+    "formula": "ceil((fixed_cash + fixed_founder_hours * hourly_value) / (contribution - CAC - variable_minutes * hourly_value / 60))",
+    "zero_or_negative_denominator": "No finite break-even under those assumptions",
+    "profit_tax_note": "Thresholds before profit taxes; actual additional overhead and time increase them."
+  },
+  "sources": [
+    {
+      "id": "ink_catalogue",
+      "url": "https://www.inkthreadable.co.uk/organic-products",
+      "facts": "Freestyler 240gsm GBP19.69 incl VAT; Cruiser 2.0 350gsm GBP36.42 incl VAT",
+      "checked_on": "2026-09-29",
+      "type": "primary"
+    },
+    {
+      "id": "ink_freestyler",
+      "url": "https://www.inkthreadable.co.uk/freestyler",
+      "facts": "240gsm open-end organic cotton; current displayed product price GBP19.69",
+      "checked_on": "2026-09-29",
+      "type": "primary"
+    },
+    {
+      "id": "ink_pricing",
+      "url": "https://help.inkthreadable.co.uk/en/articles/15452531-product-pricing-reward-tiers",
+      "facts": "First decoration location included; extra location GBP5.04 incl VAT; tee printed neck label GBP1.51 incl VAT",
+      "checked_on": "2026-09-29",
+      "type": "primary"
+    },
+    {
+      "id": "ink_labels",
+      "url": "https://help.inkthreadable.co.uk/en/articles/455795-relabelling-your-garments",
+      "facts": "Printed neck labels not available on hoodie/sweatshirt lining",
+      "checked_on": "2026-09-29",
+      "type": "primary"
+    },
+    {
+      "id": "ink_shipping",
+      "url": "https://www.inkthreadable.co.uk/shipping-costs",
+      "facts": "Supplier shipping weights 100g tee and 200g hoodie; UK Royal Mail48 GBP2.88 and GBP3.78 incl VAT",
+      "checked_on": "2026-09-29",
+      "type": "primary"
+    },
+    {
+      "id": "shopify_pricing",
+      "url": "https://www.shopify.com/uk/pricing",
+      "facts": "Basic GBP25/month monthly or GBP19/month yearly; standard online cards 2%+GBP0.25",
+      "checked_on": "2026-09-29",
+      "type": "primary"
+    },
+    {
+      "id": "shopify_refunds",
+      "url": "https://help.shopify.com/en/manual/payments/shopify-payments/payouts/refunds",
+      "facts": "Original card processing fees not refunded",
+      "checked_on": "2026-09-29",
+      "type": "primary"
+    },
+    {
+      "id": "royal_mail",
+      "url": "https://www.royalmail.com/sending/uk/tracked-48",
+      "facts": "Online small parcel Tracked48 GBP3.65 incl VAT; qualifies by size/weight; drop-off assumed",
+      "checked_on": "2026-09-29",
+      "type": "primary"
+    },
+    {
+      "id": "ascolour",
+      "url": "https://ascolour.co.uk/heavy-tee-5080/",
+      "facts": "Public 50-plus Heavy Tee5080 blank GBP15.60 incl VAT; 280gsm; decoration and shipping additional",
+      "checked_on": "2026-09-29",
+      "type": "primary"
+    },
+    {
+      "id": "vat_registration",
+      "url": "https://www.gov.uk/register-for-vat",
+      "facts": "UK taxable turnover threshold above GBP90000 trailing12months or expected next30days",
+      "checked_on": "2026-09-29",
+      "type": "primary"
+    },
+    {
+      "id": "vat_rates",
+      "url": "https://www.gov.uk/vat-rates",
+      "facts": "Standard VAT20%",
+      "checked_on": "2026-09-29",
+      "type": "primary"
+    },
+    {
+      "id": "vat_recovery",
+      "url": "https://www.gov.uk/charge-reclaim-record-vat/reclaim-vat-business-expenses",
+      "facts": "Eligible registered business input VAT requires valid records/invoices",
+      "checked_on": "2026-09-29",
+      "type": "primary"
+    },
+    {
+      "id": "uk_returns",
+      "url": "https://www.gov.uk/accepting-returns-and-giving-refunds",
+      "facts": "Ordinary online cancellation rights include standard delivery refunds",
+      "checked_on": "2026-09-29",
+      "type": "primary"
+    },
+    {
+      "id": "uk_online_selling",
+      "url": "https://www.gov.uk/online-and-distance-selling-for-businesses/online-selling",
+      "facts": "Goods delivery within30days unless otherwise agreed",
+      "checked_on": "2026-09-29",
+      "type": "primary"
+    }
+  ]
+}

@@ -16,6 +16,8 @@ The fourth report, `owned-store-lab.html`, evaluates a proposed owned Shopify st
 
 The owned-store report now also includes a bootstrap follow-up with three further studies: low-cost POD clothing and Pop-Up storefronts, a two-week organic distribution attempt, and alternative store types including existing products through Shopify Collective. Notes are in `bootstrap-store/`. The earlier £750 example is explicitly a chosen budget, not a minimum cost or a prerequisite for early learning.
 
+The fifth report, `quiet-fandom-brand.html`, researches a minimal anime and dark-fantasy clothing brand as a business in its own right. Eight GPT-6 Astra Max studies cover competitors, market evidence, sourcing, unit economics, design directions, affordable distribution, intellectual property and validation. It includes three AI-generated concept boards, a sourced assessment, an editable contribution model, all eight notes and exact image prompts. Source documents and scenario data are under `quiet-fandom/`. UK sourcing is a working assumption. Supplier prices are observed; proposed retail prices, refunds, acquisition costs and budgets remain assumptions. The study does not establish garment quality, demand or competitor profitability.
+
 ## Run locally
 
 Open `index.html` in a browser, or serve this directory with a local HTTP server. All presentation assets and dependencies are bundled. No API keys or build step are required.
