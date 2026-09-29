@@ -1,0 +1,674 @@
+{
+  "id": "gorgias",
+  "name": "Gorgias Shopping Assistant / AI Agent",
+  "benchmarkType": "commercial",
+  "winningEvidence": [
+    "Named merchant deployments make it a commercial benchmark, not proof of category leadership or profitability. Pepper reports 19% assisted-conversation conversion and 18% higher AOV; the public case omits a randomized protocol.",
+    "Gorgias's June 2026 observational benchmark reports 14% conversation-to-order, 47% larger assisted AOV and 1.9% influenced web GMV. These describe attributed commerce, not incremental purchases.",
+    "A public executive post describes a 30-day 50% visitor Shopping Assistant A/B offer and claims average sales improvement, but sample, assignment and uncertainty are not disclosed."
+  ],
+  "currentOffer": "Shopify-focused pre-purchase Shopping Assistant within AI Agent, alongside post-purchase support, for merchant CX/ecommerce teams. Uses store product information and onsite behavior to answer, recommend and offer discounts. Checked 2026-09-29: the May 28, 2026 official pricing explainer publishes USD 0.90 per AI-resolved interaction on most plans, Starter from USD 1, and Support + Shopping Assistant overage USD 1.50. Current billing docs specify Helpdesk ticket fees plus AI automation fees for fully AI-resolved tickets; legacy exceptions exist. These unit prices are a published proxy, not total contract cost. Source IDs: g-overview, g-price, g-bill, g-usd.",
+  "conversionMechanism": "After a shopper reaches the merchant, immediate product and policy clarification can remove selection and checkout friction; recommendations may redirect to a viable item. External AI-origin conversion requires a separate verified referral cohort. Onsite AI interaction is not evidence of external AI discovery. Merchant-side Gorgias MCP access is also not a consumer-search integration. No evidence here proves ranking gains or a causal net-purchase percentage.",
+  "harness": {
+    "offlineSimulation": "documented",
+    "liveMonitoring": "documented",
+    "randomizedExperiment": "unclear",
+    "purchaseMeasurement": "documented",
+    "details": "Playground offers free test conversations, existing-ticket re-simulation and draft substitution; it is not a replica of consumer search. Production conversation/report monitoring and attributed orders are documented, not external-engine visibility monitoring. Convert has even traffic-split message tests; an executive advertises Shopping Assistant A/B trials. Sticky random assignment, sample size and independent purchase methodology were not established, so randomizedExperiment is unclear rather than not_found. Purchase/report attribution uses a three-day window, metric-specific human-handover rules and current refund handling. These definitions differ from the June benchmark's lack of order-level refund status. No reviewed source supplies an auditable external-AI-origin randomized retained-purchase study."
+  },
+  "strengths": [
+    "Merchant product knowledge, onsite context and cart-linked assistance target actual purchase objections.",
+    "Product cards and regional availability checks reduce steps to a feasible order.",
+    "Existing discounts, proactive FAQs, search prompts, Playground and Gaia make generic chatbot optimization a crowded proposition.",
+    "Direct competitors and native Shopify infrastructure provide realistic comparators instead of a no-assistance straw man."
+  ],
+  "limits": [
+    "Self-selection into chat and short attribution windows cannot identify incremental purchases.",
+    "Some metrics void human-handover attribution while keeping handovers in denominator; custom experiment accounting must not reproduce outcome-dependent exclusions.",
+    "Documented gaps include segment-targeted automatic discounts/headless detection and regional availability exceptions; these are scoped limitations, not blanket claims of absent integrations.",
+    "Website knowledge resync is manual and restricted to once per 24 hours; do not infer that Shopify inventory sync has the same cadence.",
+    "External shopping referrals, consumer AI transcripts and production engine ranking cannot be inferred from onsite chat or merchant MCP."
+  ],
+  "improve": [
+    "Identify external AI arrivals before treatment, keep uncertain origin separate, and measure all assigned shoppers through paid orders, returns and human assistance.",
+    "Test concrete remaining decisions against the merchant's existing Gorgias/native stack, rather than selling another generic chatbot or attributed-revenue dashboard.",
+    "Promote a policy only after real purchase evidence; use replay to find factual and workflow failures, and live engine monitoring only to measure external observations.",
+    "Prefer interventions that improve retained order count and contribution; optimize labor/model costs after establishing purchase benefit."
+  ],
+  "ideas": [
+    {
+      "id": "gorgias-01",
+      "title": "Continue the shopper's chosen AI shortlist after the referral",
+      "lens": "identity",
+      "buyer": "Shopify CX and ecommerce teams with measurable external AI referral traffic",
+      "problem": "Landing/selection: a shopper may already have selected products and constraints in an external assistant, but a store conversation starts discovery again.",
+      "mechanism": "Carrying only the shopper-approved shortlist and unresolved question across the referral removes repeated explanation and redirects help to the last purchase blocker. It can raise purchase completion among existing AI-origin arrivals; it does not increase external recommendation rank.",
+      "intervention": "Offer an optional continuation panel accepting a shopper-pasted brief or an explicitly shared, signed context payload from an integrated assistant. Resolve product/variant IDs, show the imported constraints for correction, and ask only what remains unknown. Provide ordinary shopping without import.",
+      "competitorOverlap": "Gorgias observes onsite context; Constructor retains its own conversation thread; Alhena accepts SDK metadata; Shopify already supports persistent carts. Cross-provider buyer-approved shortlist translation is the hypothesis, not shared-cart invention.",
+      "edgeHypothesis": "For referred shoppers who have done substantial comparison, a reviewed shortlist is more useful than another generic welcome or search prompt.",
+      "dataNeeded": [
+        "Reliable external-AI referral or signed origin event recorded before treatment",
+        "Optional consented brief and explicit exclusions",
+        "Variant identity mapping and live price/availability",
+        "Purchase, cancellation and return events"
+      ],
+      "experiment": "Primary cohort: verified external-AI-origin arrivals; report self-declared and unknown origin separately. Randomize eligible shoppers before the continuation invitation, persist assignment by consented first-party ID, compare ordinary Gorgias entry with optional continuation. Primary: paid purchase within 7 days per assigned shopper; mature retained-purchase result after the category's return window. Run 6-8 weeks subject to preregistered power from actual referral volume. Guardrails: import refusal, privacy complaints, wrong variants, latency and margins.",
+      "metric": "Intention-to-treat purchase-rate difference over every assigned AI-origin shopper, including those who decline import or use a human. Report acceptance as a diagnostic, not the denominator.",
+      "impactEvidence": "Hypothesized; existing context mechanisms are documented in g-recommend, alhena-context, constructor and shopify-cart. No direct measured external-AI handoff lift found.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Hypothetical merchant: 10000 eligible, verified external-AI-origin shoppers per month; 3% buy and retain at least one item; USD 40 contribution per additional retained purchase after merchandise, fulfillment and expected returns. These are chosen assumptions, not observations.",
+        "calculation": "Monthly incremental contribution = 10000 * (p_treatment - p_control) * USD 40 - additional operating costs - USD 400 fee. Ignoring additional operating costs, covering the fee requires 10 additional retained purchases (0.100 percentage points). Include all human, API, discount and integration costs before a buying decision.",
+        "range": "No supported uplift range. Zero or negative purchase effects are possible; break-even is a decision threshold, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD 400/month, conditional on retained-purchase contribution above total cost; native capabilities set a low willingness to pay for mere context storage.",
+      "costControl": "Parse imported context once, store only approved fields with short retention, and reuse native carts and existing chat infrastructure.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Buyer consent and optional import UX",
+        "Participating assistant integration for automatic handoff; manual paste works sooner",
+        "Product ID resolver and first-party experiment tracking"
+      ],
+      "failureMode": "Very few users share a brief, import adds work, or incorrect constraints make the recommendation worse.",
+      "falsifier": "No purchase-rate improvement at the prespecified useful effect despite substantial correct imports, or privacy/latency harms outweigh saved steps.",
+      "sourceIds": [
+        "g-recommend",
+        "alhena-context",
+        "constructor",
+        "shopify-cart"
+      ]
+    },
+    {
+      "id": "gorgias-02",
+      "title": "Repair the exact mistaken claim that brought the shopper",
+      "lens": "algorithmic",
+      "buyer": "Specification-heavy merchants receiving shoppers who cite external AI advice",
+      "problem": "Understanding/selection: an external assistant may recommend a product on an unsupported compatibility, ingredient, material or capability claim. A generic product answer may leave the contradiction unresolved.",
+      "mechanism": "Verify the shopper's actual claimed requirement, explain a precise discrepancy, and propose an honest compatible alternative. Some mistaken purchases should be prevented; the conversion objective is additional suitable purchases that survive returns, not persuading every shopper to buy.",
+      "intervention": "Add an optional 'check this recommendation' flow. Parse a volunteered external recommendation as untrusted data, compare each decisive claim with approved product evidence, and show supported, contradicted and unknown conclusions with a matching substitute or expert handoff.",
+      "competitorOverlap": "Gorgias already checks response quality and accepts product guidance; Gaia audits knowledge. The narrower change validates an incoming external claim against a product requirement before selling, rather than adding another answer grader. Competitor private implementations are unknown.",
+      "edgeHypothesis": "Explicitly resolving an external recommendation's contradiction recovers suitable alternative orders more effectively than either silently repeating it or rejecting the conversation.",
+      "dataNeeded": [
+        "External-AI referral/origin recorded before treatment; self-declared origin kept separate",
+        "User-supplied claim and requirement",
+        "Authoritative compatibility/evidence records with effective dates",
+        "Alternative products and total price",
+        "Wrong-item return reasons and orders"
+      ],
+      "experiment": "Primary cohort: verified external-AI-origin arrivals; report self-declared and unknown origin separately. Within shoppers who voluntarily supply a recommendation, assign shopper-level standard assistant versus structured claim repair before either answer. Primary: any paid purchase in 14 days; mature retained-purchase endpoint after returns. Enroll 8 weeks or the powered sample, whichever is longer. Never knowingly leave a harmful false claim uncorrected in control; compare normal correction with structured evidence and substitution. Guardrail unsupported claims and unsuitable sales.",
+      "metric": "Purchase and retained-purchase differences per assigned eligible shopper; separately report prevented wrong purchases. A lower raw purchase count without a compensating retained-purchase benefit does not meet the growth claim.",
+      "impactEvidence": "Hypothesized. g-quality documents existing native grounding; g-sync establishes a knowledge-freshness limitation, not an observed external-AI error rate.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Hypothetical merchant: 5000 eligible, verified external-AI-origin shoppers per month; 3% buy and retain at least one item; USD 40 contribution per additional retained purchase after merchandise, fulfillment and expected returns. These are chosen assumptions, not observations.",
+        "calculation": "Monthly incremental contribution = 5000 * (p_treatment - p_control) * USD 40 - additional operating costs - USD 500 fee. Ignoring additional operating costs, covering the fee requires 13 additional retained purchases (0.260 percentage points). Include all human, API, discount and integration costs before a buying decision.",
+        "range": "No supported uplift range. Zero or negative purchase effects are possible; break-even is a decision threshold, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD 500/month for merchants with documented compatibility errors and enough recoverable demand; no charge premised on invented AI mistake prevalence.",
+      "costControl": "Use deterministic compatibility lookups first; reserve model extraction and expert review for genuinely ambiguous claims.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Verified product evidence",
+        "Approved alternative mapping",
+        "Safe comparison cases and merchant expert review",
+        "Optional shopper-provided external claim"
+      ],
+      "failureMode": "The source evidence is wrong, correction causes distrust, or no suitable substitute exists.",
+      "falsifier": "Corrected claims do not increase suitable retained purchases versus ordinary truthful correction, or false negatives reject compatible products.",
+      "sourceIds": [
+        "g-quality",
+        "g-sync",
+        "g-gaia"
+      ]
+    },
+    {
+      "id": "gorgias-03",
+      "title": "Ask the one question that changes the purchase decision",
+      "lens": "behavioral",
+      "buyer": "Merchants with close substitutes and repeated pre-purchase clarification loops",
+      "problem": "Selection: an AI-referred shopper arrives with two plausible products, but broad assistant discovery questions prolong a nearly finished decision.",
+      "mechanism": "A question earns its place only if plausible answers select a different viable product. Resolving that uncertainty should shorten the path to a suitable order and avoid unnecessary conversational effort.",
+      "intervention": "Build a decision graph from verified differentiating requirements. Given the existing shortlist, choose the lowest-effort discriminating question, render answer chips with 'not sure', and stop asking once the remaining options are equivalent for the shopper's constraints.",
+      "competitorOverlap": "Gorgias already varies questions with intent and educational selling style; Constructor refines natural-language needs. Novelty is unproven: compare explicit question utility and stopping rules with these existing behaviors.",
+      "edgeHypothesis": "One question tied to a real product distinction converts better than open-ended discovery for already-shortlisted AI referrals.",
+      "dataNeeded": [
+        "External-AI referral/origin recorded before treatment; self-declared origin kept separate",
+        "Two-or-more viable product shortlist",
+        "Verified attribute differences and use constraints",
+        "Question abandonment and response times",
+        "Purchase and return outcomes"
+      ],
+      "experiment": "Primary cohort: verified external-AI-origin arrivals; report self-declared and unknown origin separately. Assign shoppers with an unresolved two-product decision to current assistant versus decision-graph questioning. Stratify by source and category, keep recommendations and discounts otherwise equal. Primary: 7-day paid purchase per assigned shopper; guardrails retained purchases, unanswered questions and product mismatch. Run 6-8 weeks with sample size calculated from measured base conversion and the chosen minimum useful effect.",
+      "metric": "All-assigned shopper purchase-rate difference; median decision time and number of questions are secondary. Do not condition analysis on shoppers who answered.",
+      "impactEvidence": "Hypothesized; g-overview and constructor establish a strong existing comparator. No direct evidence that this stopping rule lifts external-AI-origin purchases.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Hypothetical merchant: 10000 eligible, verified external-AI-origin shoppers per month; 3% buy and retain at least one item; USD 40 contribution per additional retained purchase after merchandise, fulfillment and expected returns. These are chosen assumptions, not observations.",
+        "calculation": "Monthly incremental contribution = 10000 * (p_treatment - p_control) * USD 40 - additional operating costs - USD 300 fee. Ignoring additional operating costs, covering the fee requires 8 additional retained purchases (0.080 percentage points). Include all human, API, discount and integration costs before a buying decision.",
+        "range": "No supported uplift range. Zero or negative purchase effects are possible; break-even is a decision threshold, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD 300/month after a paid pilot demonstrates extra retained purchases, not just shorter chats.",
+      "costControl": "Precompute category decision graphs and use compact scoring instead of repeated full-catalog retrieval.",
+      "feasibility": "now",
+      "dependencies": [
+        "Merchant-verified category decision graph",
+        "Shortlist detection",
+        "Stable experiment assignment"
+      ],
+      "failureMode": "The supposedly decisive attribute is not what matters to the buyer, or the chips feel restrictive.",
+      "falsifier": "Fewer questions without more retained purchases, or increased mismatch returns, kills the claimed purchase benefit.",
+      "sourceIds": [
+        "g-overview",
+        "constructor",
+        "g-pepper"
+      ]
+    },
+    {
+      "id": "gorgias-04",
+      "title": "Resolve the shopper's actual offer eligibility before quoting savings",
+      "lens": "identity",
+      "buyer": "Loyalty-heavy or headless Shopify merchants with segment-specific promotions",
+      "problem": "Price/checkout: a shopper arriving from AI shopping sees an advertised offer but cannot establish whether it applies to their account and cart.",
+      "mechanism": "An authenticated, authoritative eligibility result prevents surprise pricing and resolves a concrete checkout objection. Any lift must exceed discount cannibalization and login friction.",
+      "intervention": "Read the merchant's promotion evaluator with shopper permission, return the exact eligible cart total and exclusions, and offer guest checkout when no identity-based benefit exists. Compare an applied eligible offer against the same offer discovered later at checkout; do not create a new discount by default.",
+      "competitorOverlap": "Gorgias already creates coupons and detects automatic promotions, but its docs exclude segment-targeted automatic discounts and headless detection. Alhena has authenticated custom tools, so API-based eligibility is an implementation edge, not a new category.",
+      "edgeHypothesis": "Showing a verified applicable existing offer closes more AI-origin purchases than generic discount language that is incomplete for these segments.",
+      "dataNeeded": [
+        "External-AI referral/origin recorded before treatment; self-declared origin kept separate",
+        "Verified identity or eligibility token",
+        "Promotion rules and authoritative cart evaluator",
+        "Actual applied discount and net order margin",
+        "Login abandonment and order outcomes"
+      ],
+      "experiment": "Primary cohort: verified external-AI-origin arrivals; report self-declared and unknown origin separately. Randomize eligible AI-origin shoppers before the offer-verification invitation; compare standard promotion messaging with optional verified eligibility. Primary: 7-day paid purchase per assigned shopper, with retained margin and total discount cost as guardrails. Enroll through 4-8 weeks including a complete promotion cycle and power analysis; stratify existing members and guests.",
+      "metric": "Purchase-rate difference per assigned shopper, not per authenticated member. Count failed authentication and rejected offers. Track contribution after actual discounts.",
+      "impactEvidence": "Hypothesized, supported by a documented coverage boundary in g-discount and adjacent authenticated tooling in alhena-context. No measured gain transferred.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Hypothetical merchant: 10000 eligible, verified external-AI-origin shoppers per month; 3% buy and retain at least one item; USD 40 contribution per additional retained purchase after merchandise, fulfillment and expected returns. These are chosen assumptions, not observations.",
+        "calculation": "Monthly incremental contribution = 10000 * (p_treatment - p_control) * USD 40 - additional operating costs - USD 400 fee. Ignoring additional operating costs, covering the fee requires 10 additional retained purchases (0.100 percentage points). Include all human, API, discount and integration costs before a buying decision.",
+        "range": "No supported uplift range. Zero or negative purchase effects are possible; break-even is a decision threshold, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD 400/month where promotion confusion is observed; merchant must value resolved orders above integration and discount costs.",
+      "costControl": "Use the existing promotion engine and short-lived cached eligibility, invalidated on cart/account changes; avoid discretionary coupons.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant promotion API",
+        "Consent and secure identity handling",
+        "Headless or loyalty integration",
+        "Reliable final checkout totals"
+      ],
+      "failureMode": "Authentication friction exceeds benefit, exclusions disappoint shoppers, or stale eligibility produces a checkout mismatch.",
+      "falsifier": "Verified offers do not improve purchases or produce lower retained contribution than the existing promotion experience.",
+      "sourceIds": [
+        "g-discount",
+        "alhena-context",
+        "shopify-cart"
+      ]
+    },
+    {
+      "id": "gorgias-05",
+      "title": "Recover unavailable AI recommendations without losing the original constraints",
+      "lens": "infrastructural",
+      "buyer": "Multi-region merchants with stock-sensitive variants and chat/email/SMS shopping",
+      "problem": "Availability/selection: an AI-origin shopper asks about an unavailable product in email or SMS, or before the assistant knows region; a merely similar alternative can violate the reason they chose it.",
+      "mechanism": "Check exact sellable variant and region, preserve the user's non-negotiable constraints, and offer only feasible substitutes. Recoverable unavailable-item demand becomes a real purchasable alternative.",
+      "intervention": "Add a region-confirmed availability check to every substitute decision across channels. Maintain a small constraint ledger, verify alternatives against it, and produce one live checkout link. If no alternative qualifies, explain the failed constraint and offer an optional restock alert with no false urgency.",
+      "competitorOverlap": "Gorgias already filters region-unavailable products in chat with documented exceptions; similar recommendations and Shopify carts exist. The experiment targets cross-channel exceptions and constraint preservation, not generic stock filtering.",
+      "edgeHypothesis": "Constraint-preserving substitutes recover more retained orders than normal similarity suggestions for the documented exception paths.",
+      "dataNeeded": [
+        "External-AI referral/origin recorded before treatment; self-declared origin kept separate",
+        "Region provided by shopper",
+        "Authoritative sellable inventory at variant level",
+        "Original requirement and substitution permissions",
+        "Orders, stock failures and return reasons"
+      ],
+      "experiment": "Primary cohort: verified external-AI-origin arrivals; report self-declared and unknown origin separately. Randomize shopper-level eligible unavailable-item conversations to ordinary truthful availability assistance or the checked substitute flow. Primary: 14-day paid purchase from any qualifying substitute. Run at least 8 weeks if required for enough stockout cases; precompute power from observed fault prevalence. Guardrails wrong variants, backorders, return rate and latency.",
+      "metric": "Any qualifying purchase per all assigned stockout shoppers; do not count multiple alternative clicks as wins. Report sitewide contribution as this effect times independently measured eligible prevalence, without overlapping other recovery cohorts.",
+      "impactEvidence": "Hypothesized; g-recommend documents the triggering limitations. shopify-cart supplies existing checkout infrastructure, not an uplift claim.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Hypothetical merchant: 5000 eligible, verified external-AI-origin shoppers per month; 3% buy and retain at least one item; USD 40 contribution per additional retained purchase after merchandise, fulfillment and expected returns. These are chosen assumptions, not observations.",
+        "calculation": "Monthly incremental contribution = 5000 * (p_treatment - p_control) * USD 40 - additional operating costs - USD 450 fee. Ignoring additional operating costs, covering the fee requires 12 additional retained purchases (0.240 percentage points). Include all human, API, discount and integration costs before a buying decision.",
+        "range": "No supported uplift range. Zero or negative purchase effects are possible; break-even is a decision threshold, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD 450/month for a merchant with enough actual exception-path demand; test against existing Gorgias setup before selling.",
+      "costControl": "Fetch inventory only for the original variant and a bounded substitute set; short cache with inventory-event invalidation.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Variant/region inventory API",
+        "Cross-channel identity continuity with consent",
+        "Verified substitution rules",
+        "Checkout link generation"
+      ],
+      "failureMode": "No substitutes satisfy the requirement, stock changes during handoff, or preserving every constraint makes recovery impossible.",
+      "falsifier": "Qualified substitute purchases fail to improve, or gains are offset by cancellations and incompatible-item returns.",
+      "sourceIds": [
+        "g-recommend",
+        "shopify-cart"
+      ]
+    },
+    {
+      "id": "gorgias-06",
+      "title": "Turn the shopper's real deadline into a feasible delivery choice",
+      "lens": "temporal",
+      "buyer": "Gift, events, furniture, parts and outdoor merchants with time-sensitive AI referrals",
+      "problem": "Fulfillment/checkout: an externally recommended product fits the need but may not reach the shopper before an event or repair deadline.",
+      "mechanism": "Translate the actual need-by date into authoritative shipping and stock options. A feasible variant, pickup location or service resolves a buying blocker; disclosing uncertainty avoids a false sale.",
+      "intervention": "After an optional destination and deadline, evaluate carrier cutoff, warehouse stock and fulfillment promise for the chosen basket. Offer a factual comparison of feasible choices with cost and confidence, and revalidate immediately before checkout. Never invent a guarantee or countdown.",
+      "competitorOverlap": "Narvar already offers delivery predictions, Shopify checkout handles fulfillment, and Gorgias answers shipping questions. The proposed edge is constraint-based rescue of an AI-referred shopping mission using those systems.",
+      "edgeHypothesis": "A verified feasible alternative converts more deadline-constrained shoppers than a generic delivery FAQ or an unqualified estimated date.",
+      "dataNeeded": [
+        "External-AI referral/origin recorded before treatment; self-declared origin kept separate",
+        "Shopper-supplied deadline and destination",
+        "Carrier/warehouse cutoff and promise data",
+        "Feasible stock/service options",
+        "Delivery actuals, cancellations and purchase outcomes"
+      ],
+      "experiment": "Primary cohort: verified external-AI-origin arrivals; report self-declared and unknown origin separately. Randomize eligible deadline inquiries by shopper to normal shipping assistance versus deadline-feasibility comparison. Primary: paid purchase within 7 days that arrives by the stated deadline; report all paid purchases separately. Run across 6-8 weeks and relevant cutoff periods, with power determined by deadline-inquiry volume. Guardrails failed promises, excess shipping cost and refunds.",
+      "metric": "On-time completed purchases per all assigned deadline shoppers, plus the intention-to-treat paid-purchase difference. A sale that misses the deadline is not a successful rescue.",
+      "impactEvidence": "Hypothesized; narvar documents commercial delivery-promise infrastructure. No Narvar marketing percentage is used as expected lift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Hypothetical merchant: 5000 eligible, verified external-AI-origin shoppers per month; 3% buy and retain at least one item; USD 40 contribution per additional retained purchase after merchandise, fulfillment and expected returns. These are chosen assumptions, not observations.",
+        "calculation": "Monthly incremental contribution = 5000 * (p_treatment - p_control) * USD 40 - additional operating costs - USD 600 fee. Ignoring additional operating costs, covering the fee requires 15 additional retained purchases (0.300 percentage points). Include all human, API, discount and integration costs before a buying decision.",
+        "range": "No supported uplift range. Zero or negative purchase effects are possible; break-even is a decision threshold, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD 600/month plus existing carrier/promise fees; justify against extra on-time retained purchases.",
+      "costControl": "Reuse merchant promise APIs, evaluate a bounded set of fulfillment options, and avoid a model call for deterministic cutoff arithmetic.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable fulfillment estimates",
+        "Merchant pickup/ship options",
+        "Destination consent",
+        "Delivery-confirmation data"
+      ],
+      "failureMode": "Promise accuracy is poor, cutoff data lags, or extra shipping charges reduce completion more than certainty helps.",
+      "falsifier": "No gain in on-time retained purchases, or more missed-deadline complaints than the existing experience.",
+      "sourceIds": [
+        "narvar",
+        "shopify-cart",
+        "g-overview"
+      ]
+    },
+    {
+      "id": "gorgias-07",
+      "title": "Build the minimum complete basket for the shopper's task",
+      "lens": "algorithmic",
+      "buyer": "Parts, electronics, hobby and equipment merchants with dependent products",
+      "problem": "Selection/cart: an AI-generated recommendation names the main item but omits a required adapter, consumable or size match; uncertainty about completeness stalls the order.",
+      "mechanism": "Prove which required components are already owned, included or missing, then create the smallest compatible basket within the declared budget. The aim is more complete successful purchases, not merely a larger basket.",
+      "intervention": "Create merchant-reviewed compatibility and dependency rules. Let the shopper confirm what they already own, distinguish required from optional items, check basket-wide constraints, and show one editable compatible cart with evidence for every required addition.",
+      "competitorOverlap": "Constructor already recommends products across categories, Gorgias suggests complements, and Rebuy sells cart upsells. The edge is verifiable dependency completeness and minimal cost against the existing recommendation experience; generic bundling is crowded.",
+      "edgeHypothesis": "A minimal complete basket reduces uncertainty and incompatible orders better than affinity-based cross-sells.",
+      "dataNeeded": [
+        "External-AI referral/origin recorded before treatment; self-declared origin kept separate",
+        "Product dependency/compatibility graph",
+        "Included components and shopper-declared possessions",
+        "Variant stock and total-price constraints",
+        "Complete-task purchase and return outcomes"
+      ],
+      "experiment": "Primary cohort: verified external-AI-origin arrivals; report self-declared and unknown origin separately. Assign AI-origin shoppers with a declared multi-item task to ordinary complementary recommendations or the completeness checker. Primary: 14-day paid order satisfying all necessary dependencies, adjudicated from frozen rules; guardrail overall purchases, total cost and retained orders. Run 8 weeks or powered sample; never suppress known required safety information in control.",
+      "metric": "Complete, compatible paid orders per assigned task shopper, followed through returns. Revenue and AOV are secondary; optional accessory attachment is not a purchase outcome.",
+      "impactEvidence": "Hypothesized. constructor, g-recommend and rebuy-cart establish adjacent working products, not causal support for the completeness policy.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Hypothetical merchant: 10000 eligible, verified external-AI-origin shoppers per month; 3% buy and retain at least one item; USD 40 contribution per additional retained purchase after merchandise, fulfillment and expected returns. These are chosen assumptions, not observations.",
+        "calculation": "Monthly incremental contribution = 10000 * (p_treatment - p_control) * USD 40 - additional operating costs - USD 700 fee. Ignoring additional operating costs, covering the fee requires 18 additional retained purchases (0.180 percentage points). Include all human, API, discount and integration costs before a buying decision.",
+        "range": "No supported uplift range. Zero or negative purchase effects are possible; break-even is a decision threshold, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD 700/month plus initial graph setup for high-volume dependent catalogs; sell only where missed components are measured.",
+      "costControl": "Use deterministic dependency checks, cache reviewed rules, and restrict generative work to translating shopper language into verified constraints.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant-reviewed dependency graph",
+        "Ownership confirmation UX",
+        "Authoritative cart and inventory tools",
+        "Outcome rule validation"
+      ],
+      "failureMode": "The graph misses a dependency, unnecessary extras make the order unaffordable, or users do not know what they own.",
+      "falsifier": "No increase in retained complete-task orders versus current cross-sells, or higher incomplete-kit complaints.",
+      "sourceIds": [
+        "constructor",
+        "g-recommend",
+        "rebuy-cart",
+        "shopify-cart"
+      ]
+    },
+    {
+      "id": "gorgias-08",
+      "title": "Stop selling when the AI-referred shopper is ready to pay",
+      "lens": "psychological",
+      "buyer": "Merchants running proactive shopping chat, cart upsells and fast checkout",
+      "problem": "Checkout: a shopper who has already decided in an external AI conversation may encounter a new search prompt, coupon pitch or cross-sell that reopens the decision.",
+      "mechanism": "Answer the last question, confirm the chosen variant and total, then minimize interruption. More decided shoppers may complete a purchase even if fewer conversations or add-ons occur.",
+      "intervention": "Use an explicit readiness cue such as 'buy this' or a shopper-selected 'ready to checkout' control. Suppress optional prompts for that session, show a concise order check and existing checkout continuation, and keep help available without opening it automatically.",
+      "competitorOverlap": "Gorgias already adapts selling style to intent; Rebuy already tests cart variants, and Shopify provides checkout continuation. The narrow hypothesis is that a measurable subset benefits from prompt suppression, not a new checkout mechanism.",
+      "edgeHypothesis": "A quiet completion path increases order count among decided AI referrals compared with the merchant's normal promotional flow.",
+      "dataNeeded": [
+        "Readiness event recorded before randomization",
+        "Prompt and upsell exposure logs",
+        "Checkout progression, order and margin data",
+        "Referral source and assignment ID"
+      ],
+      "experiment": "Primary cohort: verified external-AI-origin arrivals; report self-declared and unknown origin separately. At the first explicit readiness event, randomize shopper-level normal flow versus optional-prompt suppression with unchanged prices. Primary: 7-day paid purchase; mature retained-purchase and contribution guardrails. Run 4-6 weeks and compute sample from actual ready-to-buy volume. Track essential disclosures, support access and checkout errors.",
+      "metric": "Paid purchases per assigned ready shopper, including abandonment. Chat engagement and AOV can fall while purchase count improves; retained contribution must remain economically acceptable.",
+      "impactEvidence": "Hypothesized; g-search and g-faq document proactive entry points, while rebuy-ab documents an existing testing comparator. No purchase percentage asserted.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Hypothetical merchant: 10000 eligible, verified external-AI-origin shoppers per month; 3% buy and retain at least one item; USD 40 contribution per additional retained purchase after merchandise, fulfillment and expected returns. These are chosen assumptions, not observations.",
+        "calculation": "Monthly incremental contribution = 10000 * (p_treatment - p_control) * USD 40 - additional operating costs - USD 250 fee. Ignoring additional operating costs, covering the fee requires 7 additional retained purchases (0.070 percentage points). Include all human, API, discount and integration costs before a buying decision.",
+        "range": "No supported uplift range. Zero or negative purchase effects are possible; break-even is a decision threshold, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD 250/month for a small orchestration layer, only after a holdout demonstrates extra retained orders.",
+      "costControl": "Use a simple session flag, avoid unnecessary model calls, and reduce paid conversations only when purchase results remain better.",
+      "feasibility": "now",
+      "dependencies": [
+        "Consent-compatible readiness/session signal",
+        "Control of merchant prompts",
+        "Checkout continuation and existing help access"
+      ],
+      "failureMode": "Suppression hides helpful guidance or profitable offers, or readiness detection is premature.",
+      "falsifier": "No purchase improvement or a loss of retained contribution versus normal assistance, despite accurate readiness classification.",
+      "sourceIds": [
+        "g-overview",
+        "g-search",
+        "g-faq",
+        "rebuy-ab",
+        "shopify-cart"
+      ]
+    },
+    {
+      "id": "gorgias-09",
+      "title": "Route the unresolved decision to an expert before the shopper leaves",
+      "lens": "temporal",
+      "buyer": "High-consideration merchants with scarce live product specialists",
+      "problem": "Decision/support: a referred shopper's final compatibility or suitability question needs expertise, but ordinary handover loses context or reaches an unstaffed queue.",
+      "mechanism": "A specialist receives the precise unresolved constraint, verified evidence and cart while the shopper is still considering purchase. Better timing and context can create orders that neither automation nor a later generic reply would recover.",
+      "intervention": "Add a pre-purchase escalation queue that estimates specialist availability, presents an honest wait or optional callback, and transfers a compact decision brief. Test scarce capacity allocation by unresolved task and deadline; explicit requests and sensitive-topic handovers retain priority regardless of experiment.",
+      "competitorOverlap": "Gorgias already escalates low-confidence answers and routes by rules. The proposed change coordinates live capacity and the unresolved purchase decision, and evaluates combined AI-plus-human orders rather than maximizing AI-only attribution.",
+      "edgeHypothesis": "Context-preserving, availability-aware expert routing yields more additional retained purchases per scarce expert minute than existing queue order.",
+      "dataNeeded": [
+        "External-AI referral/origin recorded before treatment; self-declared origin kept separate",
+        "Reason for escalation and unresolved requirement",
+        "Staff skills and real availability",
+        "Consented cart/conversation context",
+        "All human-assisted orders and loaded staff costs"
+      ],
+      "experiment": "Primary cohort: verified external-AI-origin arrivals; report self-declared and unknown origin separately. Use randomized shift blocks or team queues to prevent shared-capacity spillovers; compare ordinary handover with availability-aware decision briefs. Primary: 14-day paid purchases per eligible AI-origin escalation across the whole assigned queue. Run at least 8 weeks with cluster-aware power and unchanged staffing. Guardrails human-request wait, fairness, service levels and retained contribution.",
+      "metric": "All purchases per assigned eligible escalation including human handovers and nonresponders. Also report net extra retained orders per expert hour; never discard purchases because AI handed over.",
+      "impactEvidence": "Hypothesized. g-handover establishes native routing and g-metrics explains why an independent all-arm order ledger is necessary for this experiment.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Hypothetical merchant: 5000 eligible, verified external-AI-origin shoppers per month; 3% buy and retain at least one item; USD 40 contribution per additional retained purchase after merchandise, fulfillment and expected returns. These are chosen assumptions, not observations.",
+        "calculation": "Monthly incremental contribution = 5000 * (p_treatment - p_control) * USD 40 - additional operating costs - USD 500 fee. Ignoring additional operating costs, covering the fee requires 13 additional retained purchases (0.260 percentage points). Include all human, API, discount and integration costs before a buying decision.",
+        "range": "No supported uplift range. Zero or negative purchase effects are possible; break-even is a decision threshold, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD 500/month with staffing held constant; do not count hypothetical staff savings as purchase value.",
+      "costControl": "Reuse current specialists and allocate attention to measured recoverable uncertainty; cap briefing latency and track fully loaded labor.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Workforce/availability integration",
+        "Specialist taxonomy",
+        "Consented first-party order linkage",
+        "Cluster experiment design"
+      ],
+      "failureMode": "Capacity merely shifts orders from other shoppers, wait estimates are wrong, or prioritization harms service fairness.",
+      "falsifier": "No total purchase gain across the full queue after spillovers, or extra contribution fails to cover incremental labor.",
+      "sourceIds": [
+        "g-handover",
+        "g-metrics",
+        "g-bill"
+      ]
+    },
+    {
+      "id": "gorgias-10",
+      "title": "Recommend against the return reason, not toward the largest basket",
+      "lens": "algorithmic",
+      "buyer": "Apparel, beauty, furniture and equipment merchants with costly mismatch returns",
+      "problem": "Selection: an AI-origin shopper may accept a confident upsell that meets broad intent but fails a specific practical requirement and is later returned.",
+      "mechanism": "Use verified product limitations and observed reason-specific returns to ask about a plausible mismatch, then recommend a suitable variant or lower-priced alternative. More shoppers should complete and keep a suitable purchase; raw AOV is not the objective.",
+      "intervention": "Join consented assistance records to mature order and return outcomes at variant/use-case level, review recurring mismatch rules with merchants, and show the single relevant limitation before checkout. Permit down-selling or declining an unsuitable sale. Learn from aggregated reasons, not sensitive inferred traits.",
+      "competitorOverlap": "Gorgias can use suitability guidance and Gaia can identify ticket-based improvements; Constructor learns from shopping behavior. The edge to validate is outcome-calibrated mismatch prevention that improves retained purchase count beyond normal advice.",
+      "edgeHypothesis": "A precise limitation plus an appropriate alternative increases retained purchase probability more than a general warning or promotional recommendation.",
+      "dataNeeded": [
+        "External-AI referral/origin recorded before treatment; self-declared origin kept separate",
+        "Mature order, refund and exchange records",
+        "Merchant-reviewed mismatch reason taxonomy",
+        "Verified use-case/variant limitations",
+        "Consented constraints and exposure assignment"
+      ],
+      "experiment": "Primary cohort: verified external-AI-origin arrivals; report self-declared and unknown origin separately. Randomize eligible AI-origin shoppers before advice to normal truthful assistant or reason-specific limitation and alternative. Primary: 14-day paid purchase; decisive endpoint is a purchase with at least one suitable item retained through the merchant's return window. Recruit for 8-12 weeks, then wait for outcome maturity; power on retained-purchase rate. Guardrails false exclusions, discrimination, customer complaints and margin.",
+      "metric": "Retained purchasing shoppers per all assigned eligible shoppers, with paid-order rate and refunds reported separately. Exchanged orders count once after final retained status, and the intervention cannot claim conversion lift from refund reduction alone.",
+      "impactEvidence": "Hypothesized. g-research raises a refund counter-signal without quantifying it; g-bare is adjacent vendor case evidence, not a causal estimate for this policy.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Hypothetical merchant: 10000 eligible, verified external-AI-origin shoppers per month; 3% buy and retain at least one item; USD 40 contribution per additional retained purchase after merchandise, fulfillment and expected returns. These are chosen assumptions, not observations.",
+        "calculation": "Monthly incremental contribution = 10000 * (p_treatment - p_control) * USD 40 - additional operating costs - USD 650 fee. Ignoring additional operating costs, covering the fee requires 17 additional retained purchases (0.170 percentage points). Include all human, API, discount and integration costs before a buying decision.",
+        "range": "No supported uplift range. Zero or negative purchase effects are possible; break-even is a decision threshold, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD 650/month only if added retained-purchase contribution exceeds lost suitable sales, support, return and integration costs.",
+      "costControl": "Update reviewed mismatch rules in batches; use low-cost rules at runtime and send rare ambiguous cases to existing specialists.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Order/return data join and maturity window",
+        "Merchant review of mismatch rules",
+        "No sensitive-trait inference",
+        "Retained-order experiment ledger"
+      ],
+      "failureMode": "Return labels reflect other problems, conservative advice suppresses good purchases, or a feedback loop unfairly excludes some customers.",
+      "falsifier": "Return rate falls only because fewer suitable customers buy, leaving retained-purchase rate unchanged or lower.",
+      "sourceIds": [
+        "g-research",
+        "g-bare",
+        "g-gaia",
+        "constructor"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "g-overview",
+      "title": "Shopping Assistant explained",
+      "url": "https://docs.gorgias.com/en-US/shopping-assistant-explained-1216108",
+      "type": "official-doc",
+      "claim": "Shopify pre-purchase assistance, shopper context and selling styles; not external AI search distribution."
+    },
+    {
+      "id": "g-recommend",
+      "title": "How Shopping Assistant recommends products",
+      "url": "https://docs.gorgias.com/en-US/how-shopping-assistant-recommends-products-4996877",
+      "type": "official-doc",
+      "claim": "Product cards, current-session context and regional inventory exceptions for email/SMS or missing location."
+    },
+    {
+      "id": "g-discount",
+      "title": "How Shopping Assistant uses discounts",
+      "url": "https://docs.gorgias.com/en-US/how-shopping-assistant-uses-discounts-4996871",
+      "type": "official-doc",
+      "claim": "Single-use and automatic discounts; segment-targeted automatic discounts and headless detection not supported."
+    },
+    {
+      "id": "g-faq",
+      "title": "AI FAQs: proactively answer shopper questions on your website",
+      "url": "https://docs.gorgias.com/en-US/ai-faqs-proactively-answer-shopper-questions-on-your-website-4662149",
+      "type": "official-doc",
+      "claim": "Native proactive product questions; merchant cannot manually edit the generated questions."
+    },
+    {
+      "id": "g-search",
+      "title": "Search assist and ask anything input: proactively start conversations with shoppers",
+      "url": "https://docs.gorgias.com/en-US/search-assist-and-ask-anything-input-proactively-start-conversations-with-shoppers-1423468",
+      "type": "official-doc",
+      "claim": "Onsite search-triggered chat and persistent question input already exist."
+    },
+    {
+      "id": "g-playground",
+      "title": "Preview AI Agent responses with test conversations",
+      "url": "https://docs.gorgias.com/en-US/preview-ai-agent-responses-with-test-conversations-828087",
+      "type": "official-doc",
+      "claim": "Free sandbox conversations, existing-ticket re-simulation and single draft substitution. Enabled actions can affect real records."
+    },
+    {
+      "id": "g-metrics",
+      "title": "How metrics are calculated: AI & automation",
+      "url": "https://helpcenter.gorgias.com/en-US/how-metrics-are-calculated-ai-and-automation-5666070",
+      "type": "official-doc",
+      "claim": "Three-day attribution and differing handover/refund rules across metrics; current report definitions."
+    },
+    {
+      "id": "g-research",
+      "title": "AI shopping assistants are now officially influencing sales.",
+      "url": "https://www.gorgias.com/research/ai-shopping-assistants-are-now-officially-influencing-sales",
+      "type": "research",
+      "claim": "June 2026 vendor platform observational benchmark explicitly disclaims causality and flags refund uncertainty."
+    },
+    {
+      "id": "g-ab",
+      "title": "Use A/B split tests to create effective campaign messaging",
+      "url": "https://helpcenter.gorgias.com/en-US/use-ab-split-tests-to-create-effective-campaign-messaging-723376",
+      "type": "official-doc",
+      "claim": "Convert campaign traffic splits exist; assignment algorithm and purchase-level methodology not described."
+    },
+    {
+      "id": "g-trial",
+      "title": "Romain Lapeyre's Post",
+      "url": "https://www.linkedin.com/posts/romainlapeyre_folks-using-gorgias-were-running-a-30-activity-7384670213583245312-zx_I",
+      "type": "vendor-case",
+      "claim": "Executive trial recruitment and average sales claim, without sample, randomization protocol or confidence intervals."
+    },
+    {
+      "id": "g-price",
+      "title": "Gorgias AI Agent Pricing, Explained",
+      "url": "https://www.gorgias.com/blog/ai-agent-pricing",
+      "type": "official-doc",
+      "claim": "May 28, 2026 published interaction prices and overage proxy; not a merchant-specific total-cost quotation."
+    },
+    {
+      "id": "g-bill",
+      "title": "How you're billed for using Gorgias",
+      "url": "https://docs.gorgias.com/en-US/how-youre-billed-for-using-gorgias-199385",
+      "type": "official-doc",
+      "claim": "Current ticket plus automation billing and legacy exceptions; answers the full-cost question."
+    },
+    {
+      "id": "g-pepper",
+      "title": "Pepper Customer Story",
+      "url": "https://www.gorgias.com/customers-legacy/pepper",
+      "type": "vendor-case",
+      "claim": "Named deployment and chat-assisted outcomes; no public randomized protocol found in case."
+    },
+    {
+      "id": "g-bare",
+      "title": "bareMinerals Customer Story",
+      "url": "https://www.gorgias.com/customers/bareminerals",
+      "type": "vendor-case",
+      "claim": "Shade advice deployment and first-month merchant outcomes; causality and denominator not established by public case."
+    },
+    {
+      "id": "g-handover",
+      "title": "Customize how AI Agent hands over to your team",
+      "url": "https://docs.gorgias.com/en-US/customize-how-ai-agent-hands-over-to-your-team-6008591",
+      "type": "official-doc",
+      "claim": "Confidence, topic and human-request escalation plus routing already exist."
+    },
+    {
+      "id": "g-quality",
+      "title": "How Gorgias's AI Agent works",
+      "url": "https://docs.gorgias.com/en-US/how-gorgiass-ai-agent-works-1997817",
+      "type": "official-doc",
+      "claim": "Native tool planning and second-model response quality check already exist."
+    },
+    {
+      "id": "g-sync",
+      "title": "Sync and manage content from your store website and URLs",
+      "url": "https://docs.gorgias.com/en-US/sync-and-manage-content-from-your-store-website-and-urls-4036582",
+      "type": "official-doc",
+      "claim": "Website knowledge needs manual resync, limited to once per 24 hours; not the Shopify inventory update contract."
+    },
+    {
+      "id": "g-gaia",
+      "title": "Gaia explained",
+      "url": "https://docs.gorgias.com/en-US/gaia-explained-6646561",
+      "type": "official-doc",
+      "claim": "Open-beta ticket-driven setup, knowledge and action optimization; generic coaching is already offered."
+    },
+    {
+      "id": "g-mcp",
+      "title": "Connect your AI assistant to the Gorgias MCP",
+      "url": "https://helpcenter.gorgias.com/en-US/connect-your-ai-assistant-to-the-gorgias-mcp-6310546",
+      "type": "official-doc",
+      "claim": "Merchant account operations through external AI; does not establish consumer shopping/search integration."
+    },
+    {
+      "id": "alhena-events",
+      "title": "Cart and Checkout Events: How Alhena's SDK Tracks AI-Driven Revenue",
+      "url": "https://alhena.ai/blog/alhena-cart-checkout-events-sdk/",
+      "type": "official-doc",
+      "claim": "Cart/purchase events and conversation attribution already sold; linking an event is not causal identification."
+    },
+    {
+      "id": "alhena-context",
+      "title": "How Alhena Plugs Into Your Personalization Stack: From SDK Metadata to CDP Sync",
+      "url": "https://alhena.ai/blog/alhena-personalization-stack-sdk-metadata-cdp/",
+      "type": "official-doc",
+      "claim": "SDK customer metadata, authenticated custom tools and CDP integration are direct overlap."
+    },
+    {
+      "id": "constructor",
+      "title": "Learn about AI Shopping Agent",
+      "url": "https://docs.constructor.com/docs/products-ai-shopping-agents-learn-about-ai-shopping-agent",
+      "type": "official-doc",
+      "claim": "Conversation continuity, intent refinement, category-spanning recommendations and clickstream personalization."
+    },
+    {
+      "id": "zowie-ab",
+      "title": "A/B tests",
+      "url": "https://docs.zowie.ai/docs/ab-tests",
+      "type": "official-doc",
+      "claim": "Configurable traffic splits and conversation review; documented outcomes emphasize traffic, deflection and quality."
+    },
+    {
+      "id": "rebuy-cart",
+      "title": "Rebuy Smart Cart App - Shopify Cart Abandonment and Conversion Solutions",
+      "url": "https://www.rebuyengine.com/product/smart-cart",
+      "type": "official-doc",
+      "claim": "Existing cart upsells, rewards and subscription offers; no portable causal uplift inferred."
+    },
+    {
+      "id": "rebuy-ab",
+      "title": "A/B Testing | Smart Cart",
+      "url": "https://help.rebuyengine.com/en/articles/10305628-a-b-testing-smart-cart",
+      "type": "official-doc",
+      "claim": "Native cart variants, allocation and purchase/revenue goals; generic cart A/B tests are not novel."
+    },
+    {
+      "id": "narvar",
+      "title": "Narvar Promise | AI Powered Estimated Delivery Dates",
+      "url": "https://corp.narvar.com/promise",
+      "type": "official-doc",
+      "claim": "Existing personalized delivery estimates and performance analytics; no causal uplift imported into our ideas."
+    },
+    {
+      "id": "shopify-cart",
+      "title": "Carts and checkout for agents",
+      "url": "https://shopify.dev/docs/agents/carts-and-checkout",
+      "type": "official-doc",
+      "claim": "Existing long-running carts, continue_url and authenticated checkout; baseline infrastructure rather than invention."
+    },
+    {
+      "id": "shopify-agentic",
+      "title": "Shopify Help Center | Managing agentic storefronts",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/agentic-home",
+      "type": "official-doc",
+      "claim": "Native per-channel orders, sales, sessions and conversion; attribution and onsite assistance are separate."
+    },
+    {
+      "id": "g-usd",
+      "title": "Which Gorgias Plan Should You Choose? (Pricing Breakdown)",
+      "url": "https://www.gorgias.com/pricing/choose-your-plan",
+      "type": "official-doc",
+      "claim": "Published USD currency context; older plan descriptions can differ from current billing rules."
+    }
+  ]
+}

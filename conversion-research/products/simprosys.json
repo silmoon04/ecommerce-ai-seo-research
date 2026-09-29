@@ -1,0 +1,651 @@
+{
+  "id": "simprosys",
+  "name": "Simprosys Google Shopping Feed",
+  "benchmarkType": "commercial",
+  "winningEvidence": [
+    "Established distribution: Shopify App Store snapshot on 29 September 2026 shows a 4.9 rating from 4,894 reviews and a 16 August 2017 launch. Selection as a commercial benchmark is warranted; ratings do not prove incremental AI-shopping purchases (app).",
+    "Vendor claims 90K+ Shopify merchants; independent active/paid-customer verification was not found. Qualitative merchants value syncing and support, but controlled Simprosys conversion studies were not found in the reviewed official sources (product, reviews).",
+    "Low verified pricing and variant-inclusive billing create a demanding baseline for an entrant. This does not establish Simprosys profitability or imply that low price means weaker execution (pricing)."
+  ],
+  "currentOffer": "Shopify merchants use it to distribute and manage product feeds and related advertising/tracking operations. Observed 29 September 2026, USD/month: 500 published products 4.99; 1,000 8.99; 5,000 13.99; 10,000 17.99. Variants are not counted separately; billing is based on published products, not submitted products. First installation has a 21-day trial. AI enrichment is USD 1 per 25 products one-time; XML and additional market feeds have separate fees. Google, Microsoft, Meta and Pinterest integrations, rules, metafields and Markets support are documented (pricing, product).",
+  "conversionMechanism": "The feed can establish product eligibility and convey relevant facts, accurate offers and delivery information; merchant landing and checkout execution must then complete the purchase. Shopify documents Merchant Center, including third-party feeds, as the Google AI Mode/Gemini discovery route. Its ChatGPT channel instead uses Shopify Catalog and the merchant's online checkout. A Simprosys-only feed edit therefore cannot be presumed to alter ChatGPT data. Track the exact destination and checkout path before measuring impact (google-ai, chatgpt-shopify).",
+  "harness": {
+    "offlineSimulation": "not_found",
+    "liveMonitoring": "not_found",
+    "randomizedExperiment": "not_found",
+    "purchaseMeasurement": "documented",
+    "details": "Here liveMonitoring means observations of named consumer AI shopping outputs: none was found in reviewed Simprosys official pages. Feed/campaign status and live advertising reports are documented (zombie). No Simprosys offline shopping simulation or in-app randomized AI-shopping experiment was found; its blog recommends A/B testing (simprosys-ab), which is not a native implementation claim. GA4/GTM purchase tracking is documented (ga4), but source attribution is not causal incrementality and storefront pixels do not cover every embedded checkout (google-ai). These are source-search findings, not proof private or new features do not exist. DataFeedWatch already documents title A/B allocation by item ID (dfw-ab)."
+  },
+  "strengths": [
+    "Low published price with variants included, mature Shopify distribution and qualitative support evidence make replacement on basic feed operations unattractive.",
+    "Rules, source mapping, Markets feeds, generated enrichment with review, campaign operations, delivery integration and checkout setup already cover much of a generic AI-commerce feature list.",
+    "Simprosys can contribute to Google AI discovery through an actual Merchant Center integration path; this is more concrete than an undifferentiated AI readiness score.",
+    "Existing tracking and operational integrations can support a complementary experiment product without rebuilding feed transport."
+  ],
+  "limits": [
+    "AI enrichment guide specifies English stores, selected categories and descriptions longer than 200 characters, and says changed products do not automatically re-optimise (ai).",
+    "Merchant Center approval and successful submission do not verify every downstream offer, chosen variant or checkout requirement. Native platforms also perform checks, so residual error prevalence needs measurement.",
+    "Published merchant testimonials do not supply randomized purchase effects, denominators, refunds or attribution completeness. No supportable Simprosys-specific incremental AI conversion percentage was found.",
+    "Google and ChatGPT use different data routes; updating an ad feed need not change a Shopify Catalog record. Native mapping already exists (mapping).",
+    "Per-channel checkout constraints limit what a merchant app can repair or measure. No tool reviewed reveals proprietary production ranking, personalization or candidate retrieval."
+  ],
+  "improve": [
+    "Begin with reproduced, order-relevant failures for current Simprosys users and use the app as the transport layer. Compare against existing support and native configuration before charging.",
+    "Separate feed acceptance, consumer-facing propagation, correct variant landing, valid cart and kept purchase into distinct observations.",
+    "Prioritize variant handoff and source-change expiry as bounded pilots; compatibility and pack identity merit narrow vertical pilots only where authoritative evidence exists.",
+    "Use a frozen search proxy to test sensitivity and screen candidate repairs. Preserve real-engine monitoring as observational evidence and reserve causal claims for merchant-controlled randomized purchase experiments.",
+    "Sell measured extra retained contribution or a concrete repair, with the low incumbent price as the buyer's alternative. Proposed pilot prices below are unvalidated, not market demand."
+  ],
+  "ideas": [
+    {
+      "id": "simprosys-01",
+      "title": "Expire enriched facts when their source product changes",
+      "lens": "temporal",
+      "buyer": "A Shopify merchant with frequently revised apparel, furniture or hardware products already using Simprosys.",
+      "problem": "An optimized attribute can remain plausible after its supporting specification changes; an accepted feed can therefore answer the shopper's constraint incorrectly.",
+      "mechanism": "Discovery and selection: a dependency-triggered correction can restore eligibility for the right query and prevent a misleading recommendation. Purchases increase only if changed facts are reaching a shopping surface and were suppressing suitable demand.",
+      "intervention": "Record source-field and supplier-revision dependencies for generated facts. On a material edit, invalidate only affected facts, obtain merchant-approved replacement facts and publish them through the correct route: Merchant Center for Google or Shopify sources for Catalog. Verify destination and landing evidence before calling the repair complete.",
+      "competitorOverlap": "Simprosys already has AI enrichment and manual approval; its guide explicitly says updates do not automatically trigger re-optimisation. Feed refresh itself is not missing. Shopify mapping already chooses preferred sources.",
+      "edgeHypothesis": "A small add-on can detect a narrow class of semantically stale enrichment that ordinary successful-sync checks miss. The hypothesized advantage is measurable retained orders after verified propagation, not more generated attributes.",
+      "dataNeeded": [
+        "Versioned product edits and approved supplier specifications",
+        "Generated-field dependencies and destination snapshots",
+        "Product-family order, refund and AI-source attribution data"
+      ],
+      "experiment": "Randomize product families with upcoming routine revisions to dependency-triggered refresh or the merchant's normal reviewed refresh workflow; repair urgent false claims immediately in both arms. Use a predeclared propagation period, then 6-8 weeks or the powered sample. Primary endpoint: kept AI-origin orders per assigned family-week. Track total orders, disputes and return reasons; do not pool variants independently.",
+      "metric": "Difference in kept orders with observable AI provenance per randomized family-week, adjusted only for pre-period order levels; total kept orders are a guardrail. Missing referral provenance remains unknown.",
+      "impactEvidence": "Hypothesized purchase effect. The source establishes a refresh limitation, not its prevalence or loss rate (ai); separate destination routes are documented (google-ai, chatgpt-shopify).",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Illustrative monthly fee USD 29; measured incremental contribution per kept order denoted m; no traffic or conversion baseline assumed.",
+        "calculation": "Required extra kept orders = 29/m, before service costs. At an illustrative m = USD 20, break-even is 1.45 orders, or 2 whole extra orders.",
+        "range": "Effect can be zero if facts rarely change or engines use another source, and negative if correction breaks a valid mapping."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot: USD 29/month above the existing feed app, contingent on a demonstrated stale-fact incident and retained-order value.",
+      "costControl": "Hash source dependencies and regenerate only changed claims; avoid repeated whole-catalogue LLM jobs.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant permission to read source revisions and publish to the appropriate destination",
+        "A reliable canonical product identity",
+        "Enough revised products and orders for clustered inference"
+      ],
+      "failureMode": "A source edit might be cosmetic, or the supposed canonical source might be wrong; over-invalidation can remove useful information.",
+      "falsifier": "Observed revisions do not create consequential stale facts, or a powered rollout finds no incremental kept orders and no operational benefit worth its price.",
+      "sourceIds": [
+        "ai",
+        "mapping",
+        "google-ai",
+        "chatgpt-shopify"
+      ]
+    },
+    {
+      "id": "simprosys-02",
+      "title": "Keep the chosen variant intact from recommendation to cart",
+      "lens": "infrastructural",
+      "buyer": "Multi-variant merchants receiving AI referral traffic through Shopify storefronts.",
+      "problem": "The referral names a particular size, finish or pack, but redirects, theme scripts or locale changes can reset the selected variant.",
+      "mechanism": "Landing and checkout: preserving the shopper's already-made choice removes reselection and wrong-item carting, which may convert arrivals that would otherwise leave. It cannot create AI discovery by itself.",
+      "intervention": "Build owned-store browser probes that compare offered variant identity, rendered controls, displayed price and actual cart line. Repair approved URL/redirect/theme rules and carry country and quantity where supported. Run probes after theme releases; never assume a 200 response proves a working cart.",
+      "competitorOverlap": "Simprosys provides variant feeds and a direct-checkout tutorial; Google already checks checkout URLs and requires variant alignment. The proposed edge is verification through the merchant's real theme/cart behavior across locales.",
+      "edgeHypothesis": "Merchant-specific redirect and JavaScript failures survive generic feed validation often enough to justify continuous probes.",
+      "dataNeeded": [
+        "Canonical variant IDs and listing URLs",
+        "Redirect, selected-control and cart-line traces across locales/devices",
+        "Assigned visitor IDs, completed orders and wrong-variant returns"
+      ],
+      "experiment": "After fixing any severe known error universally, persistently randomize eligible AI-referred visitors between current supported routing and the verified variant-preserving route. Run 4-8 weeks plus return maturation, with sample size based on actual purchase frequency. Primary endpoint: kept orders per assigned visitor. Guard against slower loads, inaccessible selectors and accidental cart overwrites.",
+      "metric": "Intent-to-treat kept-order probability among all eligible randomized arrivals, including visitors who never add to cart; variant correction rate is a diagnostic only.",
+      "impactEvidence": "Hypothesized uplift; known variant/landing requirements and recurring Google URL validation are adjacent infrastructure evidence (variant, checkout), not Simprosys-specific failure rates.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Illustrative 2,000 eligible arrivals/month and USD 49/month fee; baseline purchase probability must be measured.",
+        "calculation": "Extra kept orders = 2,000 × observed absolute purchase-probability difference. At USD 25 contribution/order, fee break-even is 1.96 extra orders, about 0.098 percentage points.",
+        "range": "Zero if routing already preserves choices; negative if a repair changes the wrong variant or creates latency."
+      },
+      "willingnessToPay": "Unvalidated pilot USD 49/month for stores with reproduced failures; the fee must compete with simply fixing the theme once.",
+      "costControl": "Probe representative high-traffic route/variant combinations plus changed templates; use deterministic checks before model interpretation.",
+      "feasibility": "now",
+      "dependencies": [
+        "Theme or redirect fix access",
+        "A permitted cart test mechanism without placing orders",
+        "Reliable visitor assignment and order linkage"
+      ],
+      "failureMode": "Most stores already preserve variants, or AI referrals arrive without enough variant context to recover a choice.",
+      "falsifier": "A representative audit finds negligible variant loss, or correct routing fails to raise kept-order probability at useful precision.",
+      "sourceIds": [
+        "direct",
+        "variant",
+        "checkout",
+        "cart"
+      ]
+    },
+    {
+      "id": "simprosys-03",
+      "title": "Offer deadline-feasible fulfilment when the shopper needs it by a date",
+      "lens": "temporal",
+      "buyer": "Gift, replacement-part and event-supply merchants with dependable fulfilment data.",
+      "problem": "A broad shipping estimate does not answer whether this variant can reach this postcode before the shopper's stated deadline.",
+      "mechanism": "Selection and checkout: a currently feasible delivery or pickup option can retain deadline-sensitive buyers. The benefit comes from resolving a real timing constraint, not displaying artificial urgency.",
+      "intervention": "Combine exact stock location, processing cutoff, holidays and carrier service estimates into a timestamped quote for a shopper-provided deadline. Recheck before checkout and surface merchant-supported pickup or another service on the storefront when appropriate. Keep feed cutoff fields synchronized.",
+      "competitorOverlap": "Simprosys already supplies Google-calculated delivery estimates; Google has product/country handling cutoffs. Google AI direct checkout does not currently support local pickup/delivery, so those alternatives require a supported merchant-store route.",
+      "edgeHypothesis": "Operational exceptions and precise deadlines create a useful gap beyond aggregate historical estimates, particularly after cutoffs or during stock-location changes.",
+      "dataNeeded": [
+        "Shopper-provided postcode/deadline",
+        "Stock locations, warehouse calendars and live carrier options",
+        "Promised and actual delivery dates, kept orders and cancellations"
+      ],
+      "experiment": "Randomize eligible AI-referred visitors who enter a deadline, keeping the same input burden in both arms. Compare the current accurate shipping explanation with a feasible-option quote. Plan 6-8 weeks including cutoff transitions; power from actual deadline traffic. Primary endpoint: kept purchases delivered within the stated deadline per assigned visitor. Guardrails: total kept purchases, missed promises and support contacts.",
+      "metric": "On-time kept-order probability per prequalified randomized visitor; report completed-order probability separately so faster delivery is not mistaken for extra purchases.",
+      "impactEvidence": "Hypothesized effect; existing estimate and cutoff capabilities are documented (delivery, cutoff). No cited source measures this proposed deadline intervention.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Illustrative USD 49 monthly pilot; the store must measure deadline-eligible traffic and contribution.",
+        "calculation": "Break-even extra on-time kept orders = (49 + incremental fulfilment costs)/incremental contribution per order; do not count orders merely moved between shipping services as incremental.",
+        "range": "May be zero when buyers already trust existing estimates; negative if forecasts are wrong or faster fulfilment costs exceed retained demand."
+      },
+      "willingnessToPay": "Unvalidated USD 49/month plus merchant delivery costs, tested only with merchants reporting actual deadline abandonment.",
+      "costControl": "Cache stable calendars and carrier zones; fetch live quotes only for expressed deadline intent.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Warehouse and carrier integration",
+        "Honest delivery confidence and fallback behavior",
+        "Storefront checkout for unsupported delivery methods"
+      ],
+      "failureMode": "Carrier reliability or stock accuracy is insufficient, producing more missed promises than useful assurance.",
+      "falsifier": "Deadline uncertainty is rare, or the intervention only shifts shipping methods without increasing on-time kept purchases.",
+      "sourceIds": [
+        "delivery",
+        "cutoff",
+        "google-ai",
+        "cart"
+      ]
+    },
+    {
+      "id": "simprosys-04",
+      "title": "Publish verified compatibility rules, including explicit non-matches",
+      "lens": "algorithmic",
+      "buyer": "Merchants selling replacement parts, filters, chargers or accessories for specific equipment.",
+      "problem": "A fluent product description can imply compatibility from similar model names even when a connector, generation or dimension makes the item unusable.",
+      "mechanism": "Discovery and selection: machine-readable supported and excluded model combinations can help a suitable item survive a hard constraint and prevent false-positive purchases. Kept purchases, rather than gross conversion, determine success.",
+      "intervention": "Create an approved compatibility graph from manufacturer tables and merchant evidence, with exact model aliases, necessary adapters and explicit incompatible revisions. Export supported facts to existing metafields/feed attributes and render an evidence-backed fit check on the landing page. Treat unknown as unknown.",
+      "competitorOverlap": "Codizex Product Fit Finder already offers compatibility selectors; Shopify provides complementary recommendations and Simprosys transports attributes. The opportunity is maintaining authoritative rules across AI discovery and the resulting cart, not inventing fitment filtering.",
+      "edgeHypothesis": "A narrow vertical with high part-number ambiguity may pay for verified negative constraints and revision handling that generic enrichment cannot safely infer.",
+      "dataNeeded": [
+        "Manufacturer compatibility tables with revision dates",
+        "Product/model alias graph and merchant approvals",
+        "Pre-purchase model selections and incompatibility return reasons"
+      ],
+      "experiment": "Randomize product families to existing verified facts or the structured compatibility treatment, plus persistently randomized landing checks where separable. Avoid unsupported claims in both arms. Run 8-12 weeks and the return window; sample size must account for family clustering. Primary endpoint: kept compatible AI-origin orders per assigned family-week; guard total purchases and false fit approvals.",
+      "metric": "Incremental kept orders per randomized family-week, with wrong-fit refund rate and coverage reported separately. A lower refund rate alone is not evidence of more purchases.",
+      "impactEvidence": "Hypothesized; fitment tools and related-product infrastructure already exist (fitment, recommendations). No causal estimate for AI-compatible graph publication was found.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Illustrative USD 79/month and USD 30 contribution per additional kept order; actual eligible demand unknown.",
+        "calculation": "Fee-only break-even = 79/30 = 2.63, or 3 extra kept orders; verification labor and any added returns must also be recovered.",
+        "range": "Includes zero if engines ignore the fields and negative effects if the graph blocks compatible products."
+      },
+      "willingnessToPay": "Unvalidated USD 79/month vertical pilot, with data-entry work priced separately and only after proving the merchant's current fitment workflow misses the case.",
+      "costControl": "Use exact lookup and deterministic constraints; reserve model work for alias candidates, never final compatibility assertions.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Licensed or merchant-authorized compatibility evidence",
+        "A bounded product vertical",
+        "Product-family identity and order/return linkage"
+      ],
+      "failureMode": "Evidence is expensive to maintain or misleading aliases produce incorrect exclusions.",
+      "falsifier": "Existing fitment tools solve the full journey, or publication plus landing verification yields no additional kept purchases.",
+      "sourceIds": [
+        "fitment",
+        "recommendations",
+        "mapping",
+        "ai"
+      ]
+    },
+    {
+      "id": "simprosys-05",
+      "title": "Recover sold-out referrals without dropping the shopper's constraints",
+      "lens": "behavioral",
+      "buyer": "Fashion, homeware and consumables stores with variant stockouts and viable substitutes.",
+      "problem": "The referred variant becomes unavailable after indexing; generic recommendations may ignore the size, material, budget or other reason the shopper chose it.",
+      "mechanism": "Landing and selection: explicitly acknowledging the stockout and offering a feasible, clearly described substitute can turn an otherwise abandoned AI-origin visit into a kept purchase.",
+      "intervention": "On the merchant storefront, preserve known variant constraints, ask one clarifying question only when needed, and rank in-stock alternatives against merchant-approved equivalence rules. Explain each material difference and retain a path to the original product or a consented restock option. Do not silently redirect or substitute a cart item.",
+      "competitorOverlap": "Simprosys already syncs availability and excludes variants; Shopify Search & Discovery already recommends related products. The additional hypothesis is hard-constraint preservation for stale external referrals.",
+      "edgeHypothesis": "A constrained recovery flow beats ordinary related products for a measurable group of stockout arrivals without taking sales away from better-fitting items.",
+      "dataNeeded": [
+        "Requested product/variant and constraints actually available from the referral or shopper",
+        "Live stock and merchant-approved substitution relationships",
+        "Visitor assignment, all purchased SKUs and return reasons"
+      ],
+      "experiment": "Persistently randomize prequalified AI-referred stockout visitors between the existing out-of-stock page with current recommendations and the constrained recovery flow. Run 6-8 weeks plus returns; power depends on stockout volume. Primary endpoint: any kept purchase per assigned visitor. Guard unsuitable substitutions, complaints, margin and restock subscriptions counted separately.",
+      "metric": "All-SKU kept-order probability per randomized stockout visitor; do not count moving an already-likely order to a different SKU as extra conversion.",
+      "impactEvidence": "Hypothesized. Existing native stock-aware recommendations establish overlap (recommendations); OpenAI acknowledges possible update delays (openai-shopping), not a quantified stockout loss rate.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Illustrative 500 eligible stockout arrivals/month, USD 29 fee and USD 20 contribution/order.",
+        "calculation": "Extra kept orders = 500 × observed absolute purchase-probability difference; 1.45 extra orders cover the fee before operating costs.",
+        "range": "Zero if substitutes fail hard constraints; negative if choice overload or lower-quality substitution increases returns."
+      },
+      "willingnessToPay": "Unvalidated USD 29/month conditional on enough genuine stockout traffic; compare against configuring existing recommendations first.",
+      "costControl": "Run deterministic candidate filtering before semantic ranking and only invoke it on real stockout visits.",
+      "feasibility": "now",
+      "dependencies": [
+        "Merchant-owned landing-page integration",
+        "Availability of constraints without pretending to read private AI conversations",
+        "Substitute inventory and accurate comparison facts"
+      ],
+      "failureMode": "The missing variant was essential, and a recovery panel only delays an inevitable exit.",
+      "falsifier": "Existing recommendations perform as well on kept purchases, or treatment only increases low-quality replacement orders and returns.",
+      "sourceIds": [
+        "recommendations",
+        "openai-shopping",
+        "cart",
+        "product"
+      ]
+    },
+    {
+      "id": "simprosys-06",
+      "title": "Quote the payable offer for the actual destination before cart abandonment",
+      "lens": "psychological",
+      "buyer": "Cross-border merchants whose product price is attractive but delivery fees, minimum spend or local pricing change the decision.",
+      "problem": "The AI-visible item price can fit a budget while the order available to this shopper does not; uncertainty or a late surprise then destroys the purchase.",
+      "mechanism": "Selection and checkout: an early, honest estimate can identify a feasible service, quantity or alternative before commitment. It may reduce unsuitable checkouts while increasing completed, kept purchases among shoppers with a feasible offer.",
+      "intervention": "Use the shopper's chosen destination and exact variant/quantity to obtain a Shopify cart estimate, including applicable discounts and available delivery choices. State which taxes or duties remain unresolved, timestamp the quote and reconcile it at checkout. Offer optional feasible alternatives; never promise an estimate is final.",
+      "competitorOverlap": "Shopify already exposes buyer-aware cart costs; Simprosys already submits Markets feeds, promotions and Google automated discounts. Another price field or coupon engine is insufficient differentiation.",
+      "edgeHypothesis": "Joining the published AI offer to the merchant's payable cart catches economically consequential discrepancies that separate feed and checkout tools do not explain.",
+      "dataNeeded": [
+        "Exact variant, quantity and shopper-provided country/postcode",
+        "Cart cost components and discount eligibility",
+        "Quote-to-checkout discrepancies and kept orders"
+      ],
+      "experiment": "Randomize eligible AI-referred visitors before showing the additional quote; preserve existing mandatory disclosures in both arms. Compare current localized page with the quote workflow for 6-8 weeks plus refund maturation, sized from actual cross-border volume. Primary endpoint: kept purchases per assigned visitor. Guard page latency, margin, estimate error and privacy friction.",
+      "metric": "Intent-to-treat kept-order probability among prequalified arrivals; quote acceptance and checkout starts remain diagnostics. Contribution after fulfilment is a guardrail.",
+      "impactEvidence": "Hypothesized, with documented cart infrastructure and known estimate limitations (cart); existing Markets and discount competition (product, discount).",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Illustrative USD 49/month, unknown eligible traffic, and store-measured contribution m.",
+        "calculation": "Required additional kept orders = (49 + variable quoting cost)/m. Revenue gain without fulfilment and refund costs is not the break-even measure.",
+        "range": "Can be zero or negative if early cost disclosure merely moves abandonment earlier or the quote step adds friction."
+      },
+      "willingnessToPay": "Unvalidated USD 49/month for stores with measured cost-surprise abandonment; no published willingness-to-pay evidence for this exact intervention.",
+      "costControl": "Cache regional rules, use exact cart APIs for selected offers and avoid full-cart simulation for every catalogue item.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Authorized Storefront API integration",
+        "Correct buyer-country context and reliable shipping configuration",
+        "A usable quote when some amounts remain estimates"
+      ],
+      "failureMode": "A partial estimate creates more false certainty than the existing page or demands too much buyer information.",
+      "falsifier": "Cost discrepancies are negligible or an adequately powered test shows no rise in kept purchases net of quoting friction.",
+      "sourceIds": [
+        "cart",
+        "product",
+        "discount",
+        "openai-shopping"
+      ]
+    },
+    {
+      "id": "simprosys-07",
+      "title": "Make the return commitment understandable for this product and market",
+      "lens": "regulatory",
+      "buyer": "Merchants whose products have differing customization, hygiene, damage or return-shipping conditions.",
+      "problem": "A generic store policy may not answer the shopper's real concern about this item, and an incorrect blanket 'no returns' explanation can obscure rights or discourage a valid purchase.",
+      "mechanism": "Selection and checkout: a correct, concise product-specific explanation reduces uncertainty for buyers whose real return rights meet their needs. It must never manufacture a guarantee or weaken statutory rights to raise conversion.",
+      "intervention": "Have the merchant approve a policy decision table by jurisdiction and product condition. Generate a short explanation plus source policy link on the landing page and publish appropriate structured labels/FAQs through existing channels. Flag conflicts for review; do not autonomously decide novel legal questions.",
+      "competitorOverlap": "Simprosys documents return-policy labels; Shopify already supports policies and Knowledge Base FAQs. The proposed value is item/market-specific consistency and tested comprehension, not policy hosting.",
+      "edgeHypothesis": "A merchant with complex but legitimate return conditions may gain kept purchases by making existing rights clear at the decision point.",
+      "dataNeeded": [
+        "Current merchant policies and product exceptions",
+        "Relevant official jurisdiction guidance reviewed by the merchant",
+        "Shopper country, assigned exposures, kept orders and policy disputes"
+      ],
+      "experiment": "Correct any legally misleading baseline universally before testing. Randomize eligible AI-referred visitors between the current accurate full policy and a concise item-specific explanation linking to it. Plan 6-8 weeks plus the applicable return window; power from actual purchase rates. Primary endpoint: kept purchases per assigned visitor. Guard return expense, incorrect explanations and disputes.",
+      "metric": "Kept-order probability per randomized visitor, with gross orders, returned orders and complaints separately reported. Comprehension is a mechanism check, not conversion proof.",
+      "impactEvidence": "Hypothesized. UK official guidance supports the distinction between statutory rights and merchant rules (returns); native policy/FAQ tools already exist (ai-policy). No numeric uplift is inferred.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Illustrative USD 29/month and measured incremental contribution m after returns; no baseline conversion assumed.",
+        "calculation": "Break-even requires extra kept contribution greater than USD 29 plus policy review cost; more gross orders followed by equivalent returns do not meet it.",
+        "range": "Zero if customers already understand the policy; negative if clearer restrictions correctly disqualify many shoppers or explanations introduce errors."
+      },
+      "willingnessToPay": "Unvalidated USD 29/month for operationally complex stores; legal review cost is additional and cannot be hidden in a low-price claim.",
+      "costControl": "Use approved deterministic policy tables and regenerate only after relevant policy changes.",
+      "feasibility": "now",
+      "dependencies": [
+        "Merchant-approved legal/policy interpretation for a bounded jurisdiction",
+        "Accurate product exception tags",
+        "Supported destination fields and visible policy sources"
+      ],
+      "failureMode": "The merchant policy is inconsistent, or a generated summary drops a material exception.",
+      "falsifier": "Existing native FAQs answer the same questions accurately and the new presentation does not improve kept-order conversion.",
+      "sourceIds": [
+        "returns",
+        "ai-policy",
+        "mapping",
+        "optional"
+      ]
+    },
+    {
+      "id": "simprosys-08",
+      "title": "Resolve pack and seller identity before AI compares the wrong offer",
+      "lens": "identity",
+      "buyer": "Resellers and manufacturers offering singles, multipacks, kits or refurbished versions of the same named product.",
+      "problem": "A cheap single unit can be compared with a multipack, or the wrong maker/condition can be attached to an offer, causing rejection or a mistaken purchase.",
+      "mechanism": "Discovery and comparison: correct product identity can place an offer in the right comparison set and make a fair unit-price assessment possible. The purchase effect requires that erroneous identity was actually excluding or misleading prospective buyers.",
+      "intervention": "Build a merchant-reviewed identity record linking supplier evidence, GTIN/MPN, pack composition, condition and seller role. Reconcile source feeds, rendered pages and allowed Catalog mappings; distinguish a manufacturer bundle from a merchant-created kit. Verify observed destination grouping and never invent missing identifiers.",
+      "competitorOverlap": "Simprosys already covers GTIN/MPN/brand; Google specifies bundle/multipack identity; Shopify already groups identical items and variants. A generic barcode validator is not the product.",
+      "edgeHypothesis": "Cross-destination pack and seller-role conflicts persist despite syntactically valid identifiers, and a specialist evidence workflow resolves them cheaply enough to retain more sales.",
+      "dataNeeded": [
+        "Manufacturer/supplier identity and pack evidence",
+        "Feed, page and observed destination grouping records",
+        "Pack-specific orders, cancellation and wrong-item returns"
+      ],
+      "experiment": "Randomize matched product families with non-urgent identity ambiguity to evidence-backed reconciliation or the current documented review workflow. Immediately correct dangerous or materially false claims in both arms. Use 8-12 weeks after a fixed propagation period; power at family level. Primary endpoint: kept AI-origin orders per family-week; track total orders and incorrect-pack returns.",
+      "metric": "Incremental kept orders per assigned family-week; favourable ranking or unit-price display is a diagnostic. Include all items in each family to detect cannibalization.",
+      "impactEvidence": "Hypothesized. Official sources establish complex identity rules and native overlap (upi, simprosys-upi, mapping), not the incidence of broken identity in Simprosys.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Illustrative USD 49/month and USD 25 incremental contribution per kept order; prevalence must be audited.",
+        "calculation": "Fee-only break-even = 49/25 = 1.96, or 2 extra kept orders; supplier verification labor is additional.",
+        "range": "Zero if downstream systems already resolve the offers correctly; negative if grouping merges genuinely distinct products."
+      },
+      "willingnessToPay": "Unvalidated USD 49/month for high-conflict catalogues; first test whether the merchant will pay for a reproduced identity case.",
+      "costControl": "Use deterministic identifier and pack checks, with human review only for conflicting evidence.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable supplier evidence and legitimate identifier access",
+        "Destination-level observation without claiming control of ranking",
+        "Family-level purchase and return measurement"
+      ],
+      "failureMode": "The destination's matching logic ignores corrected fields or the merchant cannot establish authoritative identity.",
+      "falsifier": "Most cases are already solved by the feed app or Catalog mapping, or corrected identity fails to produce worthwhile retained-order value.",
+      "sourceIds": [
+        "upi",
+        "simprosys-upi",
+        "mapping",
+        "openai-shopping"
+      ]
+    },
+    {
+      "id": "simprosys-09",
+      "title": "Check that each AI checkout route can fulfil the actual product requirements",
+      "lens": "infrastructural",
+      "buyer": "Merchants with required custom inputs, checkout apps, bundles or fulfilment options that differ across channels.",
+      "problem": "A valid product feed does not guarantee that the selected AI checkout can collect the required information or offer the necessary fulfilment method.",
+      "mechanism": "Checkout completion: identifying route incompatibility before exposure and moving supported validation to server logic can prevent dead-end or invalid orders. A supported merchant checkout can preserve sales when an embedded route cannot meet requirements.",
+      "intervention": "Inventory required product and checkout capabilities, compare them with each channel's current contract, and replay approved sandbox carts through the supported path. Port permissible validations to Shopify Functions where appropriate; keep unsupported product flows on a permitted storefront route. Do not claim an app can force an AI engine to render unsupported components.",
+      "competitorOverlap": "Simprosys already has direct-checkout setup. Shopify explicitly documents unsupported Google direct-checkout product types, delivery methods and some blocks, with Functions support. The gap is merchant-specific verification of app dependencies and a tested fallback.",
+      "edgeHypothesis": "A small specialist can recover revenue from a narrow set of compatibility failures that feed validation and generic channel eligibility do not fully diagnose.",
+      "dataNeeded": [
+        "Product requirements and checkout-app inventory",
+        "Versioned channel capability constraints and sandbox traces",
+        "Channel-attributed completed orders, invalid orders and refunds"
+      ],
+      "experiment": "Randomize matched eligible stores to compatibility remediation or current onboarding/support, because checkout-channel settings are often store-level. Repair severe errors immediately in both arms. Run 8-12 weeks or longer until the predeclared store-cluster sample is reached. Primary endpoint: kept AI-origin orders per randomized store-week, adjusted for pre-period levels. Guard all-channel orders, loss of useful direct checkout, unsupported item sales and checkout latency.",
+      "metric": "Difference in kept AI-origin orders per assigned store-week; keep unsupported-product exposure and invalid orders as diagnostics. Use Shopify order records rather than relying only on storefront pixels.",
+      "impactEvidence": "Hypothesized. Shopify documents real capability and pixel limitations (google-ai); no evidence establishes their prevalence or incremental revenue under this proposed repair process.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Illustrative USD 99/month, unknown affected volume, contribution m after fulfilment/refunds.",
+        "calculation": "Break-even extra kept orders = (99 + remediation cost amortized monthly)/m; at illustrative m = USD 30 the subscription alone needs 3.3, or 4 whole orders.",
+        "range": "Negative if fallback loses the benefits of a working direct checkout; zero if native support already handles every important requirement."
+      },
+      "willingnessToPay": "Unvalidated USD 99/month or a separately scoped one-off repair fee, tested only after demonstrating an unresolved checkout dependency.",
+      "costControl": "Maintain reusable channel capability tests and rerun affected tests after app/configuration changes; do not replay every product.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant-authorized checkout configuration and app access",
+        "Supported sandbox/testing paths and order-ledger access",
+        "Enough merchants for store-level randomization"
+      ],
+      "failureMode": "There is no supported fallback with comparable convenience, or the merchant cannot alter a critical third-party app.",
+      "falsifier": "Audit finds no material route incompatibility beyond native checks, or remediation reduces total kept AI-origin purchases.",
+      "sourceIds": [
+        "direct",
+        "google-ai",
+        "chatgpt-shopify",
+        "agentic"
+      ]
+    },
+    {
+      "id": "simprosys-10",
+      "title": "Spend the next repair hour on changes that survive an order holdout",
+      "lens": "measurement",
+      "buyer": "Agencies and merchants with many feed suggestions but limited implementation time.",
+      "problem": "Cheap feed optimization creates more possible edits than a team can investigate, while simulated recommendation rates can rank work incorrectly.",
+      "mechanism": "Enabling mechanism: better allocation can cause more purchases only by choosing and deploying changes with higher real incremental kept-order effects under the same implementation budget. A dashboard alone has no purchase effect.",
+      "intervention": "Use a frozen, merchant-owned retrieval replay to diagnose which facts change model decisions, preserve repeated runs as model-variance checks, and nominate bounded repairs. Validate candidates in merchant-controlled live randomized rollouts, join assignment to the order ledger, and update a repair priority policy only from held-out purchase evidence. Keep paid-shopping and AI-shopping results separate.",
+      "competitorOverlap": "DataFeedWatch already offers product-title A/B allocation; Simprosys advises A/B testing and provides purchase tracking and campaign metrics. Shopify provides channel/referrer order attribution. The possible advantage is a validated allocation policy for retained AI-origin orders, not the A/B button.",
+      "edgeHypothesis": "Across repeated merchants and issue types, a low-cost diagnostic plus holdout workflow selects materially better work than prioritizing error counts or simulated recommendation deltas.",
+      "dataNeeded": [
+        "Representative shopper intents and fixed retrieval snapshots",
+        "Exact source edits, propagation observations and randomization assignments",
+        "Order/refund ledger, source-quality flags, implementation hours and tool costs"
+      ],
+      "experiment": "First A/A-check assignment and order joins. Then randomize merchants to purchase-evidence prioritization or their current issue-ranking workflow with equal repair hours and paid budget. Run at least 12 weeks and meet a store-cluster power target; sparse AI demand may require a larger pooled cohort. Primary endpoint: kept AI-origin orders per store-week. Guard all-channel purchases, contribution, analyst time and consent-related missingness.",
+      "metric": "Intent-to-treat order difference per randomized store-week; cost per incremental kept order is reported only when the incremental-order estimate is positive and sufficiently precise. Do not sum improvements from overlapping repairs.",
+      "impactEvidence": "Hypothesized indirect effect. Existing A/B and tracking features are documented (dfw-ab, ga4, zombie). Proprietary consumer behavior is not reproduced by arbitrary custom tools (openai-shopping).",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Illustrative USD 79/month, equal implementation hours in both arms, unknown incremental purchases.",
+        "calculation": "Net incremental contribution = held-out extra kept orders × measured contribution/order - USD 79 - incremental measurement/repair costs. A simulated recommendation delta contributes zero to this calculation.",
+        "range": "Can be zero when there is too little AI-origin traffic to learn, or negative when proxy-driven prioritization sends effort to the wrong fixes."
+      },
+      "willingnessToPay": "Unvalidated USD 79/month per merchant, or agency pilot priced against demonstrably better allocation; no claim that small stores can power it.",
+      "costControl": "Deterministic screening, cached retrievals, stratified intent samples and sequential compute budgets; increase model calls only when the decision could change.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "A genuine implementation channel for nominated repairs",
+        "Reliable order assignments and a large enough merchant cohort",
+        "Predeclared analysis, contamination checks and treatment propagation rules"
+      ],
+      "failureMode": "The harness learns its own synthetic shopper preferences, missing provenance biases outcomes, or shared inventory and campaigns contaminate arms.",
+      "falsifier": "Offline scores do not predict held-out purchase effects and the allocation policy fails to beat the existing workflow at equal effort.",
+      "sourceIds": [
+        "dfw-ab",
+        "ga4",
+        "zombie",
+        "openai-shopping",
+        "agentic",
+        "simprosys-ab"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "app",
+      "title": "Simprosys Google Shopping Feed - Shopify App Store",
+      "url": "https://apps.shopify.com/google-shopping-feed",
+      "type": "merchant-review",
+      "claim": "29 September 2026 snapshot: 4.9 rating from 4,894 reviews, launch date 16 August 2017, published plan prices and qualitative support experiences. Reviews are not controlled conversion evidence."
+    },
+    {
+      "id": "pricing",
+      "title": "Pricing for Simprosys Google Shopping Feed",
+      "url": "https://support.simprosys.com/faq/how-my-store-will-be-billed",
+      "type": "official-doc",
+      "claim": "Published-product billing excludes variant counts, includes a 21-day first-install trial, and documents monthly tiers and add-ons. Prices observed 29 September 2026, USD."
+    },
+    {
+      "id": "product",
+      "title": "Shopify Google Shopping Feed App by Simprosys",
+      "url": "https://simprosys.com/product-feed-app-for-shopify",
+      "type": "official-doc",
+      "claim": "Vendor claims 90K+ Shopify merchants and documents feed rules, channel integrations, campaigns, Markets, discounts and support. Reach is self-reported; no audited profit or causal uplift."
+    },
+    {
+      "id": "ai",
+      "title": "Enable AI-powered Feed Optimisation in Simprosys Google Shopping Feed for Shopify",
+      "url": "https://support.simprosys.com/faq/simprosys-ai-powered-feed-optimisation",
+      "type": "official-doc",
+      "claim": "English and category eligibility, description length over 200 characters, minimum USD 1/25 products, manual review or automatic submission, and no automatic re-optimisation after product updates."
+    },
+    {
+      "id": "delivery",
+      "title": "Setup Google Calculated Delivery Speed Estimates from Simprosys Google Shopping Feed App for Shopify",
+      "url": "https://support.simprosys.com/faq/setup-google-calculated-delivery-speed-estimates-from-simprosys-google-shopping-feed-app-for-shopify",
+      "type": "official-doc",
+      "claim": "Order-tracking data integration for Google delivery estimates; the guide describes US merchant availability and order exclusions. This is an existing feature, not measured incremental sales."
+    },
+    {
+      "id": "direct",
+      "title": "How to Enable the Direct Checkout Feature for Google Free Listings",
+      "url": "https://support.simprosys.com/faq/how-to-enable-the-direct-checkout-feature-for-google-free-listings",
+      "type": "official-doc",
+      "claim": "Simprosys publishes a direct-checkout setup tutorial. The page is video-led; it does not establish full parity with newer AI-channel checkout requirements."
+    },
+    {
+      "id": "ga4",
+      "title": "How to Enable Server-side Google Analytics 4 tracking using GTM",
+      "url": "https://support.simprosys.com/faq/enable-server-side-ga4-tracking-using-gtm",
+      "type": "official-doc",
+      "claim": "Existing GA4/GTM tracking and selectable purchase-value definitions. Tracking setup does not itself identify incremental treatment effects or eliminate missing attribution."
+    },
+    {
+      "id": "zombie",
+      "title": "Setup Google Ads Zombie SKUs Campaign through Simprosys Google Shopping Feed App",
+      "url": "https://support.simprosys.com/faq/setup-google-ads-zombie-skus-campaign",
+      "type": "official-doc",
+      "claim": "Existing PMAX workflow selects products using impressions, clicks and conversions and reports campaign performance. Paid-ad optimization is not evidence about AI recommendations."
+    },
+    {
+      "id": "discount",
+      "title": "Google Automated Discounts: Eligibility & Requirements Explained",
+      "url": "https://support.simprosys.com/faq/google-automated-discount-requirements",
+      "type": "official-doc",
+      "claim": "Documents an existing Google discount integration; do not pitch automated discount submission as a missing Simprosys feature."
+    },
+    {
+      "id": "simprosys-ab",
+      "title": "Product Feed Optimisation: An Ultimate Checklist to Drive Traffic, Clicks & Conversions",
+      "url": "https://simprosys.com/simprotips/product-feed-optimisation-checklist",
+      "type": "official-doc",
+      "claim": "Vendor advice includes A/B testing. Advice alone does not document an in-app randomized experiment or AI simulation harness."
+    },
+    {
+      "id": "reviews",
+      "title": "Verified Merchant Reviews from Major Platforms | Simprosys",
+      "url": "https://simprosys.com/customer-reviews",
+      "type": "merchant-review",
+      "claim": "Vendor-curated merchant reports describe support, faster syncing, time savings and sales improvement without controlled denominators or counterfactuals."
+    },
+    {
+      "id": "google-ai",
+      "title": "Shopify Help Center | Selling on Google AI Mode and Gemini",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/google",
+      "type": "official-doc",
+      "claim": "Merchant Center, including third-party feeds, powers discovery. Documents direct-checkout eligibility, unsupported product/delivery types, pixel limitations and checkout customization constraints."
+    },
+    {
+      "id": "chatgpt-shopify",
+      "title": "Shopify Help Center | Selling on ChatGPT",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/chatgpt",
+      "type": "official-doc",
+      "claim": "Shopify Catalog powers the Shopify ChatGPT channel; purchase occurs through the merchant's online checkout. This specific integration differs from general OpenAI checkout possibilities."
+    },
+    {
+      "id": "mapping",
+      "title": "Shopify Help Center | Mapping your product data sources for Shopify Catalog",
+      "url": "https://help.shopify.com/en/manual/shopify-catalog/mapping",
+      "type": "official-doc",
+      "claim": "Native preferred-source mappings, metafields, variant grouping and preview already exist; processing is delayed and mappings influence rather than guarantee output."
+    },
+    {
+      "id": "ai-policy",
+      "title": "Shopify Help Center | Optimizing your products for AI platforms",
+      "url": "https://help.shopify.com/en/manual/shopify-catalog/optimizing-products",
+      "type": "official-doc",
+      "claim": "Native guidance covers structured product information, current policies and Knowledge Base FAQs. Basic policy publication is already supported."
+    },
+    {
+      "id": "dfw-ab",
+      "title": "A/B Testing Product Titles for Better Ads Performance",
+      "url": "https://www.datafeedwatch.com/blog/ab-testing-product-titles",
+      "type": "official-doc",
+      "claim": "DataFeedWatch already assigns A/B title structures across item IDs and adds URL tracking. Documentation gives alternating item-ID allocation; it does not prove shopper randomization for the same product."
+    },
+    {
+      "id": "checkout",
+      "title": "Add a checkout link for your products - Google Merchant Center Help",
+      "url": "https://support.google.com/merchants/answer/13945960?hl=en",
+      "type": "official-doc",
+      "claim": "Variant-specific checkout URLs and recurring Google validation already exist. Necessary warnings can be bypassed when a shopper skips the product page."
+    },
+    {
+      "id": "variant",
+      "title": "How to fix: Inaccurate price status due to inconsistency between feed and landing page",
+      "url": "https://support.google.com/merchants/answer/9773429?hl=en-GB",
+      "type": "official-doc",
+      "claim": "Google requires consistency and recommends variant-specific preselection; feed/landing discrepancies are a known problem, not evidence of their prevalence in Simprosys stores."
+    },
+    {
+      "id": "cutoff",
+      "title": "Handling cutoff time [handling_cutoff_time] - Google Merchant Center Help",
+      "url": "https://support.google.com/merchants/answer/16543665?hl=en",
+      "type": "official-doc",
+      "claim": "Product/country cutoff and timezone controls already exist. A deadline intervention must add live operational verification, not merely another cutoff field."
+    },
+    {
+      "id": "upi",
+      "title": "About unique product identifiers - Google Merchant Center Help",
+      "url": "https://support.google.com/merchants/answer/160161?hl=en",
+      "type": "official-doc",
+      "claim": "Documents distinct identifier treatment for manufacturer-created and merchant-created bundles/multipacks. Correct identity must be established from evidence."
+    },
+    {
+      "id": "simprosys-upi",
+      "title": "Unique Product Identifiers: GTIN, MPN and Brand",
+      "url": "https://support.simprosys.com/faq/product-identifiers-mpn-gtin-and-brand",
+      "type": "official-doc",
+      "claim": "Simprosys already provides identifier guidance; generic GTIN cleanup is not an empty market."
+    },
+    {
+      "id": "returns",
+      "title": "Accepting returns and giving refunds: the law - GOV.UK",
+      "url": "https://www.gov.uk/accepting-returns-and-giving-refunds",
+      "type": "official-doc",
+      "claim": "UK guidance distinguishes statutory rights, sale items and distance-selling returns, with exceptions. Supports a narrowly scoped policy check, not universal legal assurance."
+    },
+    {
+      "id": "cart",
+      "title": "Create and update a cart with the Storefront API",
+      "url": "https://shopify.dev/docs/storefronts/headless/building-with-the-storefront-api/cart/manage",
+      "type": "official-doc",
+      "claim": "Carts support exact merchandise, buyer country, delivery preferences and estimated costs; checkout remains authoritative and estimates may change."
+    },
+    {
+      "id": "recommendations",
+      "title": "Shopify Help Center | Customize product recommendations with Shopify Search & Discovery",
+      "url": "https://help.shopify.com/en/manual/online-store/storefront-search/search-and-discovery-recommendations",
+      "type": "official-doc",
+      "claim": "Native related/complementary product recommendations already exist, with stock rules and merchant-selected metafields."
+    },
+    {
+      "id": "fitment",
+      "title": "Codizex - Product Fit Finder - Shopify App Store",
+      "url": "https://apps.shopify.com/product-fit-finder?surface_detail=store-design-search-and-navigation-search-and-filters&surface_inter_position=1&surface_intra_position=5&surface_type=category&surface_version=redesign",
+      "type": "official-doc",
+      "claim": "An adjacent vendor already sells configurable compatibility selectors and product-page fit checks. Its absolute no-wrong-purchase marketing claim is not accepted as empirical evidence."
+    },
+    {
+      "id": "openai-shopping",
+      "title": "Shopping with ChatGPT Search",
+      "url": "https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search",
+      "type": "official-doc",
+      "claim": "Selection depends on intent/context and multiple metadata/content sources; prices and shipping can lag. Public documentation does not disclose the full production ranking system."
+    },
+    {
+      "id": "agentic",
+      "title": "Shopify Help Center | Shopify agentic storefronts",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts",
+      "type": "official-doc",
+      "claim": "Documents channel/referrer attribution on orders and differences among discovery/referral and direct-checkout channels. Attribution does not establish incrementality."
+    },
+    {
+      "id": "optional",
+      "title": "Optional Attributes and Specifications in Google Shopping Feed",
+      "url": "https://support.simprosys.com/faq/optional-attributes-and-specifications-in-google-shopping-feed",
+      "type": "official-doc",
+      "claim": "Simprosys documents return-policy labels, physical dimensions, certification, promotions and free-shipping threshold attributes. These are existing feed capabilities."
+    }
+  ]
+}

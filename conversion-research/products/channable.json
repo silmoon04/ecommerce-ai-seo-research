@@ -1,0 +1,713 @@
+{
+  "id": "channable",
+  "name": "Channable",
+  "benchmarkType": "commercial",
+  "winningEvidence": [
+    "Selected as a commercial workflow benchmark because named merchant cases and extensive current operating documentation establish real use across feeds, PPC and marketplaces, not because private profitability is known.",
+    "Nolten case reports higher conversions alongside materially higher cost; Simons comparison spans 2022 to 2025. Both are adjacent vendor claims, not randomized AI-origin purchase evidence [ch-nolten, ch-simons].",
+    "The Stone case demonstrates return-aware and store-aware activation. Artefact mentions a control group, but the published design does not establish random allocation or confidence intervals [ch-stone, ch-artefact]."
+  ],
+  "currentOffer": "Observed 29 September 2026: feed management/rules, AI enrichment, marketplace listings/orders/repricing, PPC automation and performance segmentation for merchants and agencies. Public selected Core package: 5,000 items, 2 projects, 6 channels at EUR59 Standard, EUR79 Plus or EUR89 Pro/month, before relevant modules. Every variant including language counts as an item. Current CSS product page lists EUR29 Standard/EUR99 Pro per merchant/month; help-page entitlement wording differs and should be confirmed. Current ChatGPT feed setup explicitly supports OpenAI Ad Manager sponsored product feeds. General ChatGPT shopping integration is also marketed, but organic access and behavior must be verified independently [ch-price, ch-plans, ch-labelprice, ch-labeldoc, ch-openaiads, ch-chatgptblog].",
+  "conversionMechanism": "Improved eligibility, truthful offers and relevant distribution can bring suitable shoppers to buyable products; synchronized orders/stock can prevent cancellations. Performance labels can also reallocate existing sales or improve ROAS without adding purchases. Channable does not control consumer AI retrieval/ranking, merchant choice or checkout decisions. Organic AI-origin traffic and sponsored ChatGPT ad traffic must be measured separately.",
+  "harness": {
+    "offlineSimulation": "not_found",
+    "liveMonitoring": "unclear",
+    "randomizedExperiment": "unclear",
+    "purchaseMeasurement": "documented",
+    "details": "Scope is an AI-shopping conversion harness. Reviewed docs do not establish controlled shopper-agent replay or live consumer AI prompt/ranking monitoring. Operational feed checks, stock logs, ad performance and order measurement are documented. Meta image A/B workflows and paid ad-group comparisons exist, but Channable delegates experiment creation/performance to Meta and the reviewed pages do not establish a Channable-native randomized AI-shopping experiment. Order-based measurement exists; incremental AI-origin retained-purchase measurement was not established. not_found is the result of this source search, never proof of absence. Use offline frozen tool-response tests for comprehension/failure sensitivity only, live engine observations for external validity, controlled merchant experiments for causality and real orders for purchase endpoints."
+  },
+  "strengths": [
+    "Existing extraction controls, preview and individual/bulk approval make generic AI feed QA a weak differentiator [ch-approval].",
+    "Rule history/restoration, shared transformations and multi-channel operational infrastructure are already substantial [ch-version, ch-shared].",
+    "Performance segments include zero/low-history products and business-specific return/store data, so basic label systems and exploration budgets are occupied [ch-labelizer, ch-simons, ch-stone].",
+    "Order, fulfillment and marketplace connections support experiments near the real purchasing bottleneck [ch-orders, ch-fulfilled].",
+    "Sponsored ChatGPT product-feed delivery is already documented, creating both competition and a possible deployment route [ch-openaiads]."
+  ],
+  "limits": [
+    "No reviewed source establishes Channable-caused incremental AI-origin purchases or private vendor profitability.",
+    "Restoring a rule is not documented as atomic rollback of all downstream feeds, cached consumer results or active checkout offers; only 30 versions are retained [ch-version].",
+    "Generic imported stock and live order-adjusted stock differ; marketplace-held inventory has different responsibilities [ch-orders, ch-fulfilled].",
+    "Shared rules may affect both experimental arms unless isolated [ch-shared].",
+    "Current CSS marketing and help entitlement wording differ; obtain the actual package terms before comparing prices [ch-labelprice, ch-labeldoc].",
+    "Channable's July ChatGPT blog makes broad feed/visibility claims; OpenAI states organic results are independently selected and separate from ads [ch-chatgptblog, oa-shopping]."
+  ],
+  "improve": [
+    "Connect an identified AI shopping failure to a verified sellable offer and mature purchase outcome, keeping paid and organic populations separate.",
+    "Design product-family/market holdouts and storefront shopper experiments around real causal units; do not sell replay percentages as live ChatGPT recommendation probabilities.",
+    "Prioritize arrival continuity, inventory recovery and deadline feasibility before expanding feed-copy generation.",
+    "Use incumbent approvals, labels and connectors as integration infrastructure; validate additional value over merchants' current configurations.",
+    "Measure all-channel retained purchasers to reject channel shifts, discount pull-forward and higher-AOV-only wins."
+  ],
+  "ideas": [
+    {
+      "id": "channable-01",
+      "title": "Prioritize stock updates by the risk of losing an AI-origin purchase",
+      "lens": "infrastructural",
+      "buyer": "Multichannel merchants with fast-selling variants and measurable AI-origin traffic",
+      "problem": "An AI recommendation can remain buyable-looking after another channel consumes the final units. Equal-frequency updates spend effort on stable items while volatile, demanded variants lose orders.",
+      "mechanism": "Discovery to purchase: fresher sellability for genuinely demanded variants reduces failed arrivals and cancellations. This is an enabling intervention; it causes purchases only if stale stock is a material bottleneck and the destination consumes updates before the shopper decides.",
+      "intervention": "Join order-triggered inventory events, item-to-offer identity, observed channel propagation delay and identifiable AI demand. Prioritize supported delta updates and landing-page stock rechecks by expected recoverable retained orders. Keep stock truthful and use merchant-approved buffers; do not hoard units for AI traffic or promise real-time organic propagation.",
+      "competitorOverlap": "Channable already updates marketplace stock and distinguishes live versus imported inventory [ch-orders]; OpenAI has product update APIs [oa-productsapi]. Faster sync alone is occupied. AI-demand-weighted propagation-to-purchase optimization was not established in reviewed Channable docs.",
+      "edgeHypothesis": "An order-risk queue can outperform uniform high-frequency updates at the same integration cost without reducing total merchant sales.",
+      "dataNeeded": [
+        "Variant-level available-to-promise inventory and reservations",
+        "Stock/order event timestamps",
+        "Destination update acknowledgements plus observable serving state where available",
+        "AI-source cohort identifiers and order/cancellation records",
+        "Non-AI channel order totals"
+      ],
+      "experiment": "Randomize matched product-family-by-market clusters to risk-prioritized versus current update policy for at least six weeks, retaining stable family assignment. Precompute power from stale-arrival prevalence, cluster correlation and retained purchases; extend if sparse. Primary: identified AI-origin retained orders per assigned family-week. Hold prices and acquisition budgets fixed; guard all-channel retained orders, cancellations and overselling. Do not use only arriving sessions as the denominator for a feed-stage causal claim.",
+      "metric": "Intent-to-treat difference in AI-origin retained orders per randomized family-week, alongside total merchant orders. Track stale-arrival rate diagnostically. Missing referrers limit coverage and must not be labeled non-AI with certainty.",
+      "impactEvidence": "Hypothesized direct purchase effect. ch-orders and oa-productsapi establish infrastructure, not uplift; oa-shopping explicitly recognizes update delays.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume a high-volatility retailer; 10,000 eligible identified AI-origin visits per month, a 2% retained-order rate (200 orders), and GBP30 contribution per retained order. These are chosen assumptions, not observations. Fault prevalence is unmeasured and no recovery rate is assumed.",
+        "calculation": "At an unvalidated GBP300/month fee, 300/30 = 10.00 additional retained orders cover the fee alone. At 10,000 visits that is 0.100 percentage points above the hypothetical 2% baseline. Include implementation amortization, media, fulfillment and displaced-channel contribution before deciding.",
+        "range": "No empirical lift range. Zero if stock is already sufficiently fresh or downstream ingestion dominates; negative if friction, lost alternatives or implementation cost outweigh recovered purchases. The threshold is not a prediction."
+      },
+      "willingnessToPay": "Value-based test price: GBP300/month plus scoped integration, unvalidated. ch-price is an incumbent software-price proxy, not demonstrated willingness to pay for this addition.",
+      "costControl": "Cache stable catalog fields and send only supported stock/price changes; never reduce truth checks for fast-selling items to save calls.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable stock event source",
+        "Stable variant/offer mapping",
+        "Authorized destination update access",
+        "Existing order/referrer instrumentation"
+      ],
+      "failureMode": "Ingestion lag makes extra updates useless, false depletion suppresses viable offers, or stock buffers merely transfer purchases between channels.",
+      "falsifier": "A powered test materially lowers stale-arrival incidence but produces no retained-order gain, or total merchant orders fall enough to offset the AI cohort.",
+      "sourceIds": [
+        "ch-orders",
+        "ch-fulfilled",
+        "oa-productsapi",
+        "oa-shopping",
+        "ch-price"
+      ]
+    },
+    {
+      "id": "channable-02",
+      "title": "Offer a verified replacement when an AI-linked variant sells out",
+      "lens": "behavioral",
+      "buyer": "Apparel, electronics and home retailers with frequent variant stockouts",
+      "problem": "A shopper arrives from AI with a specific product choice but finds its required size or specification unavailable. Generic recommendations often discard the original constraints.",
+      "mechanism": "Landing to purchase: preserve the shopper's explicit requirements, remove infeasible replacements, and make one comparable alternative easy to choose. A saved session becomes an additional retained purchase rather than a dead end.",
+      "intervention": "On a sold-out exact-variant landing, show at most three in-stock alternatives verified against hard constraints, with price and specification differences visible. Recover constraints from permitted product/deep-link data or a short optional shopper confirmation, never an assumed private AI transcript. Offer replacement only after stock recheck; require shopper selection.",
+      "competitorOverlap": "Channable supports rule-based assortment/stock management and OpenAI supports variant identity [ch-marketplace, oa-feed]. Generic recommendation products exist; the claimed edge is retaining the AI-origin choice constraints at the failure point, not inventing product recommendations.",
+      "edgeHypothesis": "Constraint-preserving recovery converts more out-of-stock AI arrivals than the merchant's current generic related-products component.",
+      "dataNeeded": [
+        "Exact requested variant",
+        "Verified compatibility and size/specification attributes",
+        "Live substitute inventory and prices",
+        "Optional explicit hard constraints",
+        "First-party assignment and retained-order data"
+      ],
+      "experiment": "Randomize identified AI-origin shoppers at the first confirmed sold-out arrival, with persistent shopper assignment, to current page versus constraint-preserving recovery. Primary: any merchant retained purchase within 14 days; also report 30-day mature refunds. Run four to eight weeks or until the predeclared purchase MDE is adequately powered. Guard incompatible substitutions, return rates and added latency.",
+      "metric": "Retained purchasers divided by all randomized eligible sold-out AI-origin shoppers, including those who ignore the widget. Count one purchaser once and include purchases of any SKU to avoid mistaking substitution for new demand.",
+      "impactEvidence": "Hypothesized; reviewed sources document the stock and variant foundations, not an AI-origin rescue conversion result.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume a cohort of confirmed sold-out AI landings; 10,000 eligible identified AI-origin visits per month, a 2% retained-order rate (200 orders), and GBP30 contribution per retained order. These are chosen assumptions, not observations. Fault prevalence is unmeasured and no recovery rate is assumed.",
+        "calculation": "At an unvalidated GBP240/month fee, 240/30 = 8.00 additional retained orders cover the fee alone. At 10,000 visits that is 0.080 percentage points above the hypothetical 2% baseline. Include implementation amortization, media, fulfillment and displaced-channel contribution before deciding.",
+        "range": "No empirical lift range. Zero if shoppers already choose alternatives unaided; negative if friction, lost alternatives or implementation cost outweigh recovered purchases. The threshold is not a prediction."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot: GBP240/month, only after measuring enough eligible failed arrivals to make the purchase threshold plausible.",
+      "costControl": "Precompute verified candidate sets and retrieve live price/stock at display; use a model only for ambiguous shopper constraints.",
+      "feasibility": "now",
+      "dependencies": [
+        "Merchant storefront extension",
+        "Trusted replacement/compatibility relations",
+        "Live inventory endpoint",
+        "Consent-respecting experiment identity"
+      ],
+      "failureMode": "The system relaxes a non-negotiable requirement, distracts shoppers who would wait for restock, or recommends an expensive item that increases returns.",
+      "falsifier": "No increase in all-SKU retained purchasers versus the existing widget, or extra returns erase the increase in paid orders.",
+      "sourceIds": [
+        "ch-orders",
+        "ch-marketplace",
+        "oa-feed"
+      ]
+    },
+    {
+      "id": "channable-03",
+      "title": "Quote a feasible arrival date for deadline-driven AI shoppers",
+      "lens": "temporal",
+      "buyer": "Gift, event, replacement-part and seasonal merchants with dependable fulfillment data",
+      "problem": "A product matches the request but the shopper cannot determine whether it will arrive before a real deadline. Static delivery copy hides warehouse, cutoff and holiday differences.",
+      "mechanism": "Selection to checkout: a destination-specific quote resolves a purchase-blocking uncertainty, while alternate fulfillment modes recover orders whose standard delivery is too slow.",
+      "intervention": "Compile warehouse stock, carrier service, business-day calendars and current cutoff into a time-limited delivery estimate; let shoppers enter a required date and postcode. Offer truthful shipping/pickup options and revalidate at checkout. Publish only supported destination fields, with the detailed quote on the merchant page or authorized tool.",
+      "competitorOverlap": "Google Merchant Center already calculates estimated delivery dates [google-delivery]. Channable manages channels and fulfillment connections. OpenAI shipping fields do not themselves represent guaranteed arrival dates [oa-feed]. The proposed addition is cross-channel deadline feasibility tied to the final order.",
+      "edgeHypothesis": "Feasible, conservative deadline answers and fulfillment alternatives increase completed on-time purchases more than generic shipping claims.",
+      "dataNeeded": [
+        "Warehouse-level available stock",
+        "Carrier service estimates and cutoff/timezone",
+        "Holiday and handling calendars",
+        "Shopper-provided destination/date",
+        "Actual delivery and refund timestamps"
+      ],
+      "experiment": "Randomize AI-origin visitors to current shipping information versus deadline quote, before collecting the optional deadline. Primary: retained order delivered on or before the shopper's stated date, with all assigned visitors retained in the denominator and an additional all-order endpoint. Stratify deadline declaration using a common pre-treatment question if measuring that subgroup. Run six to eight weeks and power for actual purchases; guard late deliveries and expedited-shipping losses.",
+      "metric": "Incremental retained orders per randomized AI-origin visitor; for predeclared deadline shoppers, on-time retained orders per assigned shopper. Report declaration/missing-outcome rates separately.",
+      "impactEvidence": "Hypothesized AI-origin conversion effect. google-delivery establishes an existing mechanism and native competition, not a controlled lift for this product.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume a deadline-shopping merchant; 10,000 eligible identified AI-origin visits per month, a 2% retained-order rate (200 orders), and GBP30 contribution per retained order. These are chosen assumptions, not observations. Fault prevalence is unmeasured and no recovery rate is assumed.",
+        "calculation": "At an unvalidated GBP360/month fee, 360/30 = 12.00 additional retained orders cover the fee alone. At 10,000 visits that is 0.120 percentage points above the hypothetical 2% baseline. Include implementation amortization, media, fulfillment and displaced-channel contribution before deciding.",
+        "range": "No empirical lift range. Zero if arrival uncertainty is not preventing orders; negative if friction, lost alternatives or implementation cost outweigh recovered purchases. The threshold is not a prediction."
+      },
+      "willingnessToPay": "Unvalidated value-based test: GBP360/month plus carrier integration. Charge against retained orders and avoided service failures, not date badges created.",
+      "costControl": "Cache route/calendar calculations and refresh only stock, cutoff or carrier exceptions; avoid an LLM for date arithmetic.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Accurate fulfillment service data",
+        "Storefront quote/checkout integration",
+        "Native feed capability checks",
+        "Observed delivery outcomes"
+      ],
+      "failureMode": "Optimistic quotes create late gifts or replacement delays; asking for location too early deters shoppers; premium shipping destroys contribution.",
+      "falsifier": "Fewer questions or higher add-to-cart rates without a retained/on-time purchase gain, or increased lateness/refunds.",
+      "sourceIds": [
+        "google-delivery",
+        "oa-feed",
+        "ch-fulfilled"
+      ]
+    },
+    {
+      "id": "channable-04",
+      "title": "Carry the exact AI-selected variant into the shopper's local market",
+      "lens": "identity",
+      "buyer": "Merchants operating multiple country stores or storefront markets",
+      "problem": "An AI link lands on the wrong regional storefront, and a country switch loses the variant, currency context, cart or account continuity.",
+      "mechanism": "Landing to checkout: recover the same legitimate product identity in the eligible local market, preserve chosen options, and show the true local offer before checkout. Removing a restart can create additional purchases.",
+      "intervention": "Maintain a cross-market graph of canonical item, local variant ID and actual sellability. Offer a visible country confirmation and localized equivalent link/cart handoff, carrying only permitted state. Requote price, discounts and delivery after the shopper chooses the market; surface any specification differences.",
+      "competitorOverlap": "Channable already meters and supports country-specific channels [ch-plans]. Shopify contextual queries and CartBuyerIdentity already implement local pricing/context [shopify-context, shopify-buyer]. The claim is reliable AI-link-to-local-variant continuity across fragmented stores, not localization itself.",
+      "edgeHypothesis": "Merchants with documented market-switch losses gain more retained AI-origin buyers by preserving exact choice than by only translating feeds.",
+      "dataNeeded": [
+        "Canonical-to-local variant mapping",
+        "Market availability and product differences",
+        "Permitted cart/session state",
+        "Local price and shipping rules",
+        "Market-switch and purchase events"
+      ],
+      "experiment": "Randomize AI-origin arrivals eligible for a market switch before offering routing, with persistent shopper assignment. Compare current selector/redirect to exact-variant continuity. Primary: any retained purchase across linked merchant stores within 14 days. Run six weeks or the powered horizon; stratify country and device. Guard consent, wrong-market orders, currency surprises and duplicate carts.",
+      "metric": "Unique retained purchasers across participating markets divided by all randomized eligible AI-origin shoppers. A moved order between country stores is not an additional merchant purchase.",
+      "impactEvidence": "Hypothesized. Native sources establish feasibility and substantial incumbent overlap; no reviewed source establishes incremental AI-origin conversion from this handoff.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume a retailer with cross-market AI landings; 10,000 eligible identified AI-origin visits per month, a 2% retained-order rate (200 orders), and GBP30 contribution per retained order. These are chosen assumptions, not observations. Fault prevalence is unmeasured and no recovery rate is assumed.",
+        "calculation": "At an unvalidated GBP300/month fee, 300/30 = 10.00 additional retained orders cover the fee alone. At 10,000 visits that is 0.100 percentage points above the hypothetical 2% baseline. Include implementation amortization, media, fulfillment and displaced-channel contribution before deciding.",
+        "range": "No empirical lift range. Zero if existing native market handling already preserves choices; negative if friction, lost alternatives or implementation cost outweigh recovered purchases. The threshold is not a prediction."
+      },
+      "willingnessToPay": "Unvalidated pilot price: GBP300/month for a few linked markets; qualify merchants on observed broken handoffs before proposing an integration.",
+      "costControl": "Reuse native market APIs and persist mappings; do not rebuild tax, identity or currency engines.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Access to participating stores",
+        "Verified cross-market product identity",
+        "Storefront cart APIs",
+        "Cross-store deduplication with lawful consent"
+      ],
+      "failureMode": "Similar product IDs hide different specifications, state transfer mishandles consent, or automatic geography assumptions send shoppers to the wrong market.",
+      "falsifier": "No retained-order improvement over the platform's existing local-market flow, or gains vanish after deduplicating cross-store orders.",
+      "sourceIds": [
+        "ch-plans",
+        "shopify-context",
+        "shopify-buyer",
+        "oa-feed"
+      ]
+    },
+    {
+      "id": "channable-05",
+      "title": "Turn a fit objection into a verified measurement or store trial",
+      "lens": "psychological",
+      "buyer": "Footwear and apparel retailers with usable garment measurements, return reasons and store inventory",
+      "problem": "AI recommends an apparently relevant product, but an unresolved fit question prevents checkout. Excluding high-return products may hide useful products rather than resolve uncertainty.",
+      "mechanism": "Understanding to retained purchase: answer the specific fit uncertainty using verified measurements; where evidence is insufficient, offer a store trial with real stock. Confidence rises through information and a feasible action, not manufactured reassurance.",
+      "intervention": "Connect return reasons to product-level fit questions, distinguish measured facts from uncertain inferences, and add a compact comparison with a shopper's voluntarily supplied reference item. Offer reserve-to-try when supported; require explicit shopper action. Track completed online and attributable in-store sales.",
+      "competitorOverlap": "The Stone case already uses return/sales labels and shifts some campaigns toward store visits [ch-stone]. This idea adds uncertainty resolution and fulfilled sale measurement within identified AI-origin journeys. It does not claim novelty for return-aware segmentation.",
+      "edgeHypothesis": "Resolving fit doubts preserves more net buyers than simply suppressing high-return SKUs or showing a generic size chart.",
+      "dataNeeded": [
+        "Verified item measurements and tolerances",
+        "Structured return reasons",
+        "Optional shopper reference measurements",
+        "Store stock and reservation capability",
+        "Order/return and consented POS attribution"
+      ],
+      "experiment": "Randomize AI-origin visitors within qualifying product families to current sizing guidance or fact-based fit guidance, retaining all visitors in the denominator. Primary: online plus consentedly attributable store retained purchasers within 30 days. Follow returns for 60 days. Run to a predeclared retained-purchase MDE; guard reservation no-shows, disclosure friction and wrong-fit returns.",
+      "metric": "Incremental retained purchasers per assigned AI-origin visitor, with online/store components and unattributed POS purchases reported separately. Size confidence and reservations are intermediate outcomes.",
+      "impactEvidence": "Adjacent vendor claim only: ch-stone reports better paid-media economics after return-aware routing. Our fit-intervention purchase effect remains hypothetical.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume a size-sensitive retailer; 10,000 eligible identified AI-origin visits per month, a 2% retained-order rate (200 orders), and GBP30 contribution per retained order. These are chosen assumptions, not observations. Fault prevalence is unmeasured and no recovery rate is assumed.",
+        "calculation": "At an unvalidated GBP300/month fee, 300/30 = 10.00 additional retained orders cover the fee alone. At 10,000 visits that is 0.100 percentage points above the hypothetical 2% baseline. Include implementation amortization, media, fulfillment and displaced-channel contribution before deciding.",
+        "range": "No empirical lift range. Zero if fit uncertainty is already answered or verified measurements are unavailable; negative if friction, lost alternatives or implementation cost outweigh recovered purchases. The threshold is not a prediction."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot: GBP300/month; pricing can be tested against retained-order value after return windows mature.",
+      "costControl": "Create reusable measurement records once per product revision; use aggregate return signals and deterministic size comparisons.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable measurement data",
+        "Merchant-approved uncertainty wording",
+        "POS/reservation integrations for store route",
+        "Consent for optional reference measurements"
+      ],
+      "failureMode": "Return reasons are biased, sparse sizes appear more certain than they are, or store reservations shift purchases without increasing retained buyers.",
+      "falsifier": "Higher confidence or fewer returns but no net retained-purchaser increase, or incorrect fit guidance increases complaints.",
+      "sourceIds": [
+        "ch-stone",
+        "ch-orders",
+        "ch-approval"
+      ]
+    },
+    {
+      "id": "channable-06",
+      "title": "Give uncovered AI shopping intents a bounded product exploration budget",
+      "lens": "algorithmic",
+      "buyer": "Large-catalog retailers whose paid history favors established bestsellers",
+      "problem": "Clicks/ROAS labels can underrate new or niche products that meet specific conversational needs but have little exposure. Adding another historical-performance label does not establish new demand.",
+      "mechanism": "Discovery to purchase: allocate a small, real distribution budget to verified products that cover unmet intents, learn from retained purchases, and scale only the combinations that create new buyers rather than reshuffling existing demand.",
+      "intervention": "Use a merchant-approved corpus of actual questions to identify requirement combinations absent from the current promoted assortment. Select truthful, sellable products covering those gaps. In an authorized ChatGPT ad account, create bounded product sets with controlled exploration budgets; in organic channels, test publication/coverage only and make no rank-control promise.",
+      "competitorOverlap": "Labelizer already includes low/zero-history products [ch-labelizer]; Simons already funds low-visibility and new-arrival campaigns [ch-simons]. The hypothesized difference is intent-coverage-based selection plus causal retained-purchase evaluation, not a zombie campaign.",
+      "edgeHypothesis": "Coverage of verified unmet conversational requirements yields more new retained buyers per exploration pound than historical performance or generic newness alone.",
+      "dataNeeded": [
+        "Consented real shopper-intent corpus",
+        "Catalog requirement and compatibility data",
+        "Existing assortment coverage",
+        "Eligible AI ad account product reports",
+        "Orders, costs and cohort assignments"
+      ],
+      "experiment": "Randomize matched product-family clusters to equal-budget intent-coverage exploration or incumbent low-history/new-arrival allocation. Keep total media fixed and use pre-period stratification. Primary: retained AI-ad-origin purchasers per assigned family-week; all-merchant retained buyers are a cannibalization guardrail. Run eight to twelve weeks with power based on sparse cluster outcomes; report organic experiments separately.",
+      "metric": "Intent-to-treat retained purchaser count per assigned family-week and incremental contribution after media. Product reports establish delivery, not organic recommendations. Do not condition the primary estimate on treatment-generated impressions or clicks.",
+      "impactEvidence": "Adjacent vendor claim: ch-simons demonstrates existing learning-budget practice. AI intent-gap targeting and purchase incrementality remain unmeasured.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume an established retailer holding total exploration media constant; 10,000 eligible identified AI-origin visits per month, a 2% retained-order rate (200 orders), and GBP30 contribution per retained order. These are chosen assumptions, not observations. Fault prevalence is unmeasured and no recovery rate is assumed.",
+        "calculation": "At an unvalidated GBP450/month fee, 450/30 = 15.00 additional retained orders cover the fee alone. At 10,000 visits that is 0.150 percentage points above the hypothetical 2% baseline. Include implementation amortization, media, fulfillment and displaced-channel contribution before deciding.",
+        "range": "No empirical lift range. Zero if intent-gap products have no latent demand or ads do not reach those intents; negative if friction, lost alternatives or implementation cost outweigh recovered purchases. The threshold is not a prediction."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot: GBP450/month plus a merchant-controlled fixed media budget. ch-labelprice offers a lower-priced incumbent benchmark, so a premium needs purchase evidence.",
+      "costControl": "Use frozen intent clusters, verified deterministic requirement matching and a capped exploration share; do not continually generate catalog-wide copy.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Authorized AI ad account and feed access",
+        "Sufficient catalog/intent diversity",
+        "Product-level spend and order joins",
+        "Guarded exploration budget"
+      ],
+      "failureMode": "The inferred gaps reflect unrepresentative questions, exploratory spend cannibalizes proven products, or the ad platform cannot target the desired intent.",
+      "falsifier": "No retained-buyer improvement over equal-budget existing exploration after the powered period, even if catalog coverage or impressions increase.",
+      "sourceIds": [
+        "ch-labelizer",
+        "ch-simons",
+        "ch-nolten",
+        "oa-adsfeed",
+        "oa-reporting",
+        "ch-labelprice"
+      ]
+    },
+    {
+      "id": "channable-07",
+      "title": "Honor a genuine promotion across the feed-to-checkout transition",
+      "lens": "temporal",
+      "buyer": "Merchants running short, frequent promotions across feeds and storefronts",
+      "problem": "An AI-origin shopper sees a valid promotion but arrives after a propagation or clock mismatch. A correct feed schema can still expose a price that the cart will not honor.",
+      "mechanism": "Selection to checkout: consistent promotion state and a clearly defined short quote window prevent surprise price changes, recovering purchases otherwise lost to mismatch. Long-horizon orders must increase, not merely move forward in time.",
+      "intervention": "Create a promotion state machine with start/end timezone, eligible variants, checkout discount behavior and downstream observation. Activate or remove supported offer fields explicitly. Where economically approved, issue a short-lived merchant quote for the displayed legitimate promotion and honor it at checkout; no fake timers or invented reference prices.",
+      "competitorOverlap": "Channable already has scheduled/rule-driven feeds, approval and restoration [ch-price, ch-version]. OpenAI accepted date metadata cannot be assumed to schedule every change [oa-feed]. The proposed edge is a buyer-facing consistent offer contract across asynchronous systems.",
+      "edgeHypothesis": "Preventing verified promotion-to-cart mismatches creates additional retained buyers without turning discount leakage into apparent conversion growth.",
+      "dataNeeded": [
+        "Promotion calendar and eligibility",
+        "Variant price/discount state",
+        "Channel propagation observations",
+        "Quote issue/redemption timestamps",
+        "Orders, discount cost and 30-day follow-up purchases"
+      ],
+      "experiment": "Randomize AI-origin arrivals during eligible transitions to standard repricing or a merchant-approved short quote guarantee; keep public prices truthful in both arms. Primary: retained purchasers over 30 days, plus contribution net of discounts. Stratify promotion/country and run across several independent events; power for purchasers, not coupon redemption. Guard abuse, later purchase displacement and false reference prices.",
+      "metric": "Retained purchasers per randomized transition-period AI-origin shopper, with 30-day cumulative purchases and margin to detect pull-forward and discount-only effects.",
+      "impactEvidence": "Hypothesized. oa-feed documents relevant semantic limits; existing rule restoration is an operational capability, not evidence of this purchase effect.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume a retailer with promotion-transition AI traffic; 10,000 eligible identified AI-origin visits per month, a 2% retained-order rate (200 orders), and GBP30 contribution per retained order. These are chosen assumptions, not observations. Fault prevalence is unmeasured and no recovery rate is assumed.",
+        "calculation": "At an unvalidated GBP300/month fee, 300/30 = 10.00 additional retained orders cover the fee alone. At 10,000 visits that is 0.100 percentage points above the hypothetical 2% baseline. Include implementation amortization, media, fulfillment and displaced-channel contribution before deciding.",
+        "range": "No empirical lift range. Zero if the cart already honors offers or mismatches are rare; negative if friction, lost alternatives or implementation cost outweigh recovered purchases. The threshold is not a prediction."
+      },
+      "willingnessToPay": "Unvalidated pilot: GBP300/month; quote subsidy and discount exposure require a separately capped merchant budget.",
+      "costControl": "Schedule deterministic state transitions and monitor only affected offers; reserve expensive checks for observed timing conflicts.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Checkout discount/quote support",
+        "Merchant-defined honor window",
+        "Accurate timezones",
+        "Observable promotion ingestion state"
+      ],
+      "failureMode": "Coupons leak, customers learn to delay buying, quoted prices cannot be honored, or more orders simply bring forward next month's demand.",
+      "falsifier": "Short-term conversion rises but 30-day retained purchasers or contribution do not, or promotion complaints increase.",
+      "sourceIds": [
+        "ch-price",
+        "ch-version",
+        "ch-shared",
+        "oa-feed"
+      ]
+    },
+    {
+      "id": "channable-08",
+      "title": "Build a complete, compatible purchase set for the shopper's task",
+      "lens": "algorithmic",
+      "buyer": "DIY, electronics, outdoor and hobby retailers whose products need compatible components",
+      "problem": "AI can recommend a main item without the parts needed to use it, or assemble a bundle with incompatible/out-of-stock pieces. The shopper abandons rather than risk an incomplete purchase.",
+      "mechanism": "Selection to purchase: solve a concrete task within a budget using a verified, fully obtainable set, reducing compatibility research and checkout assembly. Success means more shoppers complete purchases, not merely larger baskets.",
+      "intervention": "Represent manufacturer-backed compatibility and required-versus-optional components. Generate the smallest complete in-stock set for a shopper-approved task, show exclusions and tradeoffs, revalidate every component and total at cart creation, and use real supported bundle or multi-line-cart capabilities.",
+      "competitorOverlap": "Channable lists Virtual Bundles as coming soon [ch-releases]; Shopify already has bundle/component inventory mechanics [shopify-bundles]. Neither source establishes this task-completeness purchase solver. Bundle generation and AOV uplift alone are insufficient differentiation.",
+      "edgeHypothesis": "Verified task completeness increases retained purchaser rate over ordinary related-item upsells, especially for unfamiliar technical categories.",
+      "dataNeeded": [
+        "Authoritative compatibility/requirement graph",
+        "Component stock and location",
+        "Full cart prices and shipping",
+        "Explicit shopper task/budget",
+        "Purchase and component-return outcomes"
+      ],
+      "experiment": "Randomize AI-origin visitors to eligible task pages to current product/upsell experience or a complete-set builder. Primary: any retained purchase within 14 days; track complete usable orders and 60-day component returns separately. Use persistent shopper assignment for six to eight weeks or the powered horizon. Guard budget overshoot, unnecessary components and latency.",
+      "metric": "Retained purchasers per assigned eligible AI-origin visitor. Report AOV and completeness as secondary metrics; do not count extra line items as additional purchases.",
+      "impactEvidence": "Hypothesized. ch-releases and shopify-bundles establish direct adjacent competition and implementation constraints, not a conversion lift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume a technical-category retailer; 10,000 eligible identified AI-origin visits per month, a 2% retained-order rate (200 orders), and GBP30 contribution per retained order. These are chosen assumptions, not observations. Fault prevalence is unmeasured and no recovery rate is assumed.",
+        "calculation": "At an unvalidated GBP450/month fee, 450/30 = 15.00 additional retained orders cover the fee alone. At 10,000 visits that is 0.150 percentage points above the hypothetical 2% baseline. Include implementation amortization, media, fulfillment and displaced-channel contribution before deciding.",
+        "range": "No empirical lift range. Zero if task incompleteness rarely prevents buying or existing bundles already solve it; negative if friction, lost alternatives or implementation cost outweigh recovered purchases. The threshold is not a prediction."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot: GBP450/month for one category plus compatibility-data setup. A premium over native bundles needs a purchaser-rate gain.",
+      "costControl": "Reuse a verified compatibility graph and deterministic constraint solving; limit model use to translating the shopper's stated task.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Authoritative compatibility data",
+        "Real bundle or multi-line checkout integration",
+        "Component inventory and shipping reconciliation",
+        "Merchant approval of required-component claims"
+      ],
+      "failureMode": "A missing or falsely required component undermines trust; bundles reduce flexibility; all-in price discourages buyers who would have purchased a simpler set.",
+      "falsifier": "Only AOV rises while retained purchaser rate is unchanged or lower, or incompatibility/partial-return incidence increases.",
+      "sourceIds": [
+        "ch-releases",
+        "shopify-bundles",
+        "ch-orders"
+      ]
+    },
+    {
+      "id": "channable-09",
+      "title": "Resolve the actual seller and buyable offer before handing off to a marketplace",
+      "lens": "identity",
+      "buyer": "Brands and resellers offering the same products through their own shop and marketplaces",
+      "problem": "An AI-selected product URL can lead to a marketplace offer sold by someone else, the wrong fulfillment mode, or a different condition. The original merchant sees apparent discovery without a merchant purchase.",
+      "mechanism": "Merchant selection to checkout: distinguish product identity from seller-offer identity, give the shopper transparent valid purchase routes, and avoid a broken or wrong-seller handoff. Count only genuine extra merchant purchases after cross-channel displacement.",
+      "intervention": "Maintain verified seller-account-to-offer links, condition, stock, fulfillment and destination-specific quoted costs. On merchant-controlled comparison/landing flows, show DTC and authorized marketplace routes with explicit seller identity and observed terms. Revalidate the selected route and never claim control over a marketplace buy box or ChatGPT seller ranking.",
+      "competitorOverlap": "Channable already handles offer-only synchronization, marketplaces and repricers [ch-marketplace]; catalog matching is beta [ch-releases]. OpenAI independently selects merchants [oa-shopping]. The proposed addition measures and repairs buyer handoff loss for the merchant's own legitimate offers.",
+      "edgeHypothesis": "Exact seller-offer continuity prevents merchant-attributed lost purchases beyond what a GTIN/ASIN match or repricer already achieves.",
+      "dataNeeded": [
+        "Verified merchant marketplace account identity",
+        "Canonical product, condition and offer IDs",
+        "Current seller/fulfillment URLs and stock",
+        "Permitted marketplace order/referral data",
+        "DTC and marketplace order deduplication"
+      ],
+      "experiment": "Randomize eligible AI-origin visitors on a merchant-controlled route page to current outbound links or verified seller-offer routing. Primary: retained purchase from the merchant across any participating channel within 14 days. Run eight weeks or a powered horizon, stratified by marketplace. Guard total shopper cost, wrong-seller clicks and attribution loss. No unauthorized marketplace manipulation.",
+      "metric": "Unique retained merchant purchasers per assigned AI-origin visitor across DTC and marketplaces; channels lacking reliable order joins are reported as unmeasured, not zero. Channel share alone is not incrementality.",
+      "impactEvidence": "Hypothesized merchant purchase recovery. Sources establish independent merchant ranking and separate inventory/fulfillment responsibilities, not an expected lift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume a multichannel merchant with verified seller-routing failures; 10,000 eligible identified AI-origin visits per month, a 2% retained-order rate (200 orders), and GBP30 contribution per retained order. These are chosen assumptions, not observations. Fault prevalence is unmeasured and no recovery rate is assumed.",
+        "calculation": "At an unvalidated GBP390/month fee, 390/30 = 13.00 additional retained orders cover the fee alone. At 10,000 visits that is 0.130 percentage points above the hypothetical 2% baseline. Include implementation amortization, media, fulfillment and displaced-channel contribution before deciding.",
+        "range": "No empirical lift range. Zero if marketplace links already preserve the seller or orders cannot be linked; negative if friction, lost alternatives or implementation cost outweigh recovered purchases. The threshold is not a prediction."
+      },
+      "willingnessToPay": "Unvalidated pilot: GBP390/month plus participating channel connections; qualify on observable handoff loss rather than marketplace GMV.",
+      "costControl": "Use authorized channel APIs and cache stable seller identity; refresh only volatile offer terms and sample consumer-route correctness.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Authorized marketplace access",
+        "Seller-specific links where supported",
+        "Cross-channel order joins",
+        "No assumption of buy-box control"
+      ],
+      "failureMode": "The route loses seller specificity, marketplace prices change after quoting, tracking restrictions prevent measurement, or apparent gains are only DTC-to-marketplace shifts.",
+      "falsifier": "No net merchant-purchaser gain after deduplication, or shopper cost/fulfillment outcomes deteriorate despite more merchant-specific clicks.",
+      "sourceIds": [
+        "ch-marketplace",
+        "ch-releases",
+        "ch-fulfilled",
+        "oa-shopping",
+        "oa-feed",
+        "ch-orderinsights"
+      ]
+    },
+    {
+      "id": "channable-10",
+      "title": "Allocate budget using an AI intervention by paid-media factorial test",
+      "lens": "measurement",
+      "buyer": "Larger retailers and agencies with both measurable AI-origin demand and material paid-search spend",
+      "problem": "Performance labels can move budget toward products with high attributed revenue even when ads mostly capture purchases initiated in AI. Cheap acquisition reports can hide cannibalization or helpful reinforcement.",
+      "mechanism": "Measurement to incremental purchase: identify when paid support complements an independently useful AI-shopping intervention; reallocate fixed spend toward combinations that create additional retained buyers. Reporting alone has no causal purchase effect until allocation changes.",
+      "intervention": "Add persistent experiment labels and a pre-registered 2x2 policy: incumbent versus one approved AI conversion intervention, crossed with standard versus reduced paid support. Join first-party retained orders across channels, estimate interaction and then deploy the winning allocation under a continuing holdout.",
+      "competitorOverlap": "Channable already has labels, paid-media performance measurement, Meta A/B workflows and rule versions [ch-labelizer, ch-meta-test, ch-version]. DataFeedWatch already offers feed title testing [dfw-ab]. The edge would be causal cross-channel purchase allocation, not another A/B button.",
+      "edgeHypothesis": "Some catalog/market segments need paid reinforcement after AI discovery and others do not; learning that interaction increases retained purchasers at fixed total spend.",
+      "dataNeeded": [
+        "Stable product-family/market assignment",
+        "One independently specified AI intervention",
+        "Paid spend and exposure logs",
+        "Identified AI-origin journeys plus all-channel orders",
+        "Refunds, margin and cross-channel deduplication"
+      ],
+      "experiment": "Randomize sufficiently many matched product-family-by-market clusters across four cells, with invariant assignment and fixed overall budget; avoid shopper-level splits where shared feed changes contaminate arms. Primary: all-channel retained purchasers per assigned family-week, with identified AI-origin retained purchasers as a prespecified co-primary or hierarchical endpoint. Run eight to twelve weeks plus return maturity; power for the interaction and cluster correlation. Do not infer no interaction from an underpowered pilot.",
+      "metric": "Factorial intent-to-treat main and interaction effects on retained purchaser counts; second-stage holdout measures the deployed allocation's extra purchases at fixed spend. Attribution is descriptive; random assignment supplies the causal contrast.",
+      "impactEvidence": "Hypothesized. ch-meta-test and dfw-ab establish that experiments are already sold; oa-reporting establishes attributed ad outcomes, not incrementality. No direct AI-to-purchase interaction result found.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume a retailer reallocating a fixed total media budget; 10,000 eligible identified AI-origin visits per month, a 2% retained-order rate (200 orders), and GBP30 contribution per retained order. These are chosen assumptions, not observations. Fault prevalence is unmeasured and no recovery rate is assumed.",
+        "calculation": "At an unvalidated GBP600/month fee, 600/30 = 20.00 additional retained orders cover the fee alone. At 10,000 visits that is 0.200 percentage points above the hypothetical 2% baseline. Include implementation amortization, media, fulfillment and displaced-channel contribution before deciding.",
+        "range": "No empirical lift range. Zero if paid support and the AI intervention have no actionable heterogeneous effects; negative if friction, lost alternatives or implementation cost outweigh recovered purchases. The threshold is not a prediction."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot: GBP600/month plus analysis/setup, only for merchants with sufficient traffic for the interaction test. Could price against independently measured incremental contribution after validation.",
+      "costControl": "Use offline simulation only to shortlist credible interventions; limit live factorial cells and reuse order pipelines. Never substitute model recommendation rate for purchase outcomes to save testing cost.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Enough independent clusters and purchase volume",
+        "Merchant authorization for bounded media changes",
+        "Holdout-safe rule configuration",
+        "Reliable order and refund joins"
+      ],
+      "failureMode": "Shared rules contaminate arms, auction interference breaks assumptions, AI referrals are missing, or the study ends before the relevant purchase/return cycle.",
+      "falsifier": "A powered deployment holdout finds no extra retained purchasers at fixed spend, even though last-click ROAS or attributed AI revenue improves.",
+      "sourceIds": [
+        "ch-labelizer",
+        "ch-meta-test",
+        "ch-shared",
+        "ch-version",
+        "dfw-ab",
+        "oa-reporting",
+        "ch-nolten"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "ch-price",
+      "title": "Pricing | Channable",
+      "url": "https://www.channable.com/pricing",
+      "type": "official-doc",
+      "claim": "Observed 29 September 2026: selected 5,000-item, 2-project, 6-channel Core prices are EUR59/79/89 monthly for Standard/Plus/Pro; cadence and add-ons differ. Configurator output is not a universal quote."
+    },
+    {
+      "id": "ch-plans",
+      "title": "Channable's pricing plans",
+      "url": "https://helpcenter.channable.com/account-billing/manage-your-subscription/channables-pricing-plans",
+      "type": "official-doc",
+      "claim": "Variants including language count as items; country-specific channels count separately. Describes Core, marketplace, PPC and order/repricer modules."
+    },
+    {
+      "id": "ch-version",
+      "title": "Rule versioning",
+      "url": "https://helpcenter.channable.com/manage-improve-product-data/rules-bulk-edit-and-enrich/rule-versioning",
+      "type": "official-doc",
+      "claim": "Core Pro keeps timestamped, attributable rule versions and supports restoration; retains at most 30 versions per rule. Does not establish atomic reversal of downstream channel state."
+    },
+    {
+      "id": "ch-approval",
+      "title": "How to create and use AI enriched attributes",
+      "url": "https://helpcenter.channable.com/manage-improve-product-data/generate-with-ai/ai-enriched-attributes/how-to-create-and-use-ai-enriched-attributes",
+      "type": "official-doc",
+      "claim": "Documents choosing source fields, filtering, preview, editing, individual/bulk approval/rejection, optional automatic approval for future items, and unique-item-ID dependence."
+    },
+    {
+      "id": "ch-labelizer",
+      "title": "Channable Labelizer: Product segmentation for Google Ads",
+      "url": "https://www.channable.com/blog/channable-labelizer",
+      "type": "official-doc",
+      "claim": "22 September 2026 article documents daily clicks/ROAS-based labels, optional zero-history group, supplemental feeds and CSS Pro positioning. Vendor catalog-distribution statistics are not used as population estimates."
+    },
+    {
+      "id": "ch-labelprice",
+      "title": "Labelizer Google Ads | Google Shopping Custom Labels Tool",
+      "url": "https://www.channable.com/products/labelizer-google-ads",
+      "type": "official-doc",
+      "claim": "Current page lists CSS Standard EUR29 and CSS Pro EUR99 per merchant/month; full Labelizer, Products AI, Price Benchmark and manual tags are existing capabilities."
+    },
+    {
+      "id": "ch-labeldoc",
+      "title": "Labelizer",
+      "url": "https://helpcenter.channable.com/css/labelizer",
+      "type": "official-doc",
+      "claim": "Help page describes performance labels and still associates using them in Ads with Insights/Core Pro, differing from current CSS Pro product positioning. Entitlements require confirmation."
+    },
+    {
+      "id": "ch-meta-test",
+      "title": "Use Meta Variant Testing to A/B test ads in Meta",
+      "url": "https://helpcenter.channable.com/manage-improve-product-data/creatives-create-and-edit-images/use-meta-variant-testing-to-a-b-test-ads-in-meta",
+      "type": "official-doc",
+      "claim": "Image variants, Meta API connection and optional Meta A/B experiment setup are documented. Experiment execution/measurement is delegated to Meta; not an AI-shopping simulation."
+    },
+    {
+      "id": "ch-adgroups",
+      "title": "Using multiple Ad Group generators",
+      "url": "https://helpcenter.channable.com/hc/en-us/articles/360017352559-Using-multiple-Ad-Group-generators",
+      "type": "official-doc",
+      "claim": "Search-indexed official guide describes comparing ad structures with multiple generators. Simultaneous structures alone do not establish randomized exposure."
+    },
+    {
+      "id": "ch-orders",
+      "title": "Orders page navigation",
+      "url": "https://helpcenter.channable.com/list-advertise/orders/orders-page-navigation",
+      "type": "official-doc",
+      "claim": "Documents paid/shipped/order status, returns and order-triggered stock updates. Live stock and last-import Items stock can differ; exact marketplace update timing varies."
+    },
+    {
+      "id": "ch-fulfilled",
+      "title": "Fulfilled by Marketplace",
+      "url": "https://helpcenter.channable.com/list-advertise/orders/processing-orders-returns-and-cancellations/fulfilled-by-marketplace",
+      "type": "official-doc",
+      "claim": "Marketplace-held inventory has distinct order connections and stock responsibilities; Channable does not send stock updates for those items."
+    },
+    {
+      "id": "ch-orderinsights",
+      "title": "Insights for orders",
+      "url": "https://helpcenter.channable.com/manage-improve-product-data/insights/insights-for-orders",
+      "type": "official-doc",
+      "claim": "Order-based performance measurement requires an order connection and relevant channel cost data. Supported data varies by channel."
+    },
+    {
+      "id": "ch-marketplace",
+      "title": "Channable Marketplace Optimization | Marketplace Integrator",
+      "url": "https://www.channable.com/products/marketplace-integrator",
+      "type": "official-doc",
+      "claim": "Marketplace listing, price/stock synchronization, orders and repricing are existing offerings. Offer-only sync can preserve manual content."
+    },
+    {
+      "id": "ch-shared",
+      "title": "Shared rules",
+      "url": "https://helpcenter.channable.com/manage-improve-product-data/rules-bulk-edit-and-enrich/shared-rules",
+      "type": "official-doc",
+      "claim": "One shared rule can affect multiple projects and channels; changes propagate to all uses. Useful capability with experiment contamination implications."
+    },
+    {
+      "id": "ch-releases",
+      "title": "Channable Product Updates",
+      "url": "https://www.channable.com/product-releases-2026",
+      "type": "official-doc",
+      "claim": "Observed roadmap lists AI feed setup/text generation available, Amazon catalog matching beta, and virtual bundles coming soon. Roadmap is not proof of released bundle behavior."
+    },
+    {
+      "id": "ch-openaiads",
+      "title": "Set up a ChatGPT Commerce feed for OpenAI ads",
+      "url": "https://helpcenter.channable.com/list-advertise/list-on-channels/set-up-a-chatgpt-feed-for-openai-ads",
+      "type": "official-doc",
+      "claim": "Current help guide prepares and uploads product feed via SFTP to OpenAI Ad Manager, with rules, mapping and quality review; campaigns are created in Ad Manager. This explicitly concerns sponsored placements."
+    },
+    {
+      "id": "ch-chatgptblog",
+      "title": "ChatGPT Shopping: So integrierst du deinen Feed in der Produktsuche",
+      "url": "https://www.channable.com/de/blog/chatgpt-shopping-mit-channable",
+      "type": "official-doc",
+      "claim": "27 July 2026 vendor blog markets ChatGPT shopping feed integration. Its broad visibility assertions are marketing, not verified causal effects or guaranteed organic ranking."
+    },
+    {
+      "id": "ch-nolten",
+      "title": "How product-level segmentation improved ROAS and product visibility",
+      "url": "https://www.channable.com/success-stories/nolten-product-segmentation-roas",
+      "type": "vendor-case",
+      "claim": "6 August 2026 vendor case reports +42% conversions, +195% revenue and +110% costs with +40% ROAS over the cited change period. No randomized counterfactual or AI-origin purchase isolation supplied."
+    },
+    {
+      "id": "ch-simons",
+      "title": "How La Maison Simons Doubled ROAS with Channable Insights",
+      "url": "https://www.channable.com/success-stories/la-maison-simons-channable-insights",
+      "type": "vendor-case",
+      "claim": "1 September 2026 case describes learning budgets for low-visibility products and new arrivals. Reported ROAS comparison runs from roughly 800% in 2022 to 1500% in 2025, not a short randomized trial."
+    },
+    {
+      "id": "ch-stone",
+      "title": "How The Stone Minimized Wasted Spend and Boosted Profitability Using Channable",
+      "url": "https://www.channable.com/success-stories/how-the-stone-reduced-wasted-ad-spend",
+      "type": "vendor-case",
+      "claim": "Vendor reports return/sales segmentation, shifting some products toward store visits, +58% ROAS and +16% Google Ads net profit. No controlled AI-shopping effect established."
+    },
+    {
+      "id": "ch-artefact",
+      "title": "How Artefact increased their clients' average CTR by 19% through automation and precision marketing",
+      "url": "https://www.channable.com/success-stories/artefact-increased-their-clients-ctr-by-19-through-automation-and-precision-marketing",
+      "type": "vendor-case",
+      "claim": "2020 case mentions a control group and reports CTR/CPA improvements, but omits allocation, sample and uncertainty details; adjacent paid media evidence only."
+    },
+    {
+      "id": "oa-shopping",
+      "title": "Shopping with ChatGPT Search",
+      "url": "https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search",
+      "type": "official-doc",
+      "claim": "Organic product results are independent from ads. Product and merchant selection depend on query/context and offer information; price/shipping updates may lag. No feed guarantees appearance."
+    },
+    {
+      "id": "oa-feed",
+      "title": "Products - Agentic Commerce",
+      "url": "https://developers.openai.com/commerce/specs/file-upload/products",
+      "type": "official-doc",
+      "claim": "Current product-file schema distinguishes item/group/offer identity and feed-dependent market/shipping fields. Shipping is not a delivery guarantee; some accepted date fields do not schedule changes. Acceptance/display support must be checked per integration."
+    },
+    {
+      "id": "oa-productsapi",
+      "title": "Products - Agentic Commerce API",
+      "url": "https://developers.openai.com/commerce/specs/api/products",
+      "type": "official-doc",
+      "claim": "Documents retrieval and partial product upserts by stable ID. API acceptance alone does not establish consumer display or ranking."
+    },
+    {
+      "id": "oa-getstarted",
+      "title": "Get Started - Agentic Commerce",
+      "url": "https://developers.openai.com/commerce/guides/get-started",
+      "type": "official-doc",
+      "claim": "Direct product-feed onboarding requires approved partner access; file and API methods are documented. Public schema is not universal integration availability."
+    },
+    {
+      "id": "oa-adsfeed",
+      "title": "Product Feeds - Ads",
+      "url": "https://developers.openai.com/ads/product-feeds",
+      "type": "official-doc",
+      "claim": "Catalog ads have feed ingestion, asynchronous changes, product filtering/custom labels and campaign setup, with account-access dependencies. Ad delivery is distinct from organic product ranking."
+    },
+    {
+      "id": "oa-reporting",
+      "title": "Reporting - Ads",
+      "url": "https://developers.openai.com/ads/reporting",
+      "type": "official-doc",
+      "claim": "Product-segmented ad delivery and conversion attribution are documented; attributed conversion counts are not randomized incrementality estimates."
+    },
+    {
+      "id": "dfw-ab",
+      "title": "A/B Testing Product Titles for Better Ads Performance",
+      "url": "https://www.datafeedwatch.com/blog/ab-testing-product-titles",
+      "type": "official-doc",
+      "claim": "DataFeedWatch already offers title variants, per-item allocation and link-based tracking across supported URL feeds. An A/B label does not itself establish human-randomized AI-shopping evidence."
+    },
+    {
+      "id": "google-delivery",
+      "title": "Set up estimated delivery time",
+      "url": "https://support.google.com/merchants/answer/14949917?hl=en",
+      "type": "official-doc",
+      "claim": "Google already supports delivery estimates using cutoffs, handling, transit, business days and holidays. Recreating an arrives-by badge alone is not a new product."
+    },
+    {
+      "id": "shopify-context",
+      "title": "Contextual queries",
+      "url": "https://shopify.dev/docs/storefronts/headless/building-with-the-storefront-api/in-context",
+      "type": "official-doc",
+      "claim": "Shopify supports contextual pricing/language and buyer identity takes precedence for carts; native market context is existing capability."
+    },
+    {
+      "id": "shopify-buyer",
+      "title": "CartBuyerIdentity - Storefront API",
+      "url": "https://shopify.dev/docs/api/storefront/latest/objects/cartbuyeridentity",
+      "type": "official-doc",
+      "claim": "Cart buyer country determines international pricing and should match shipping address. Delivery/wallet preferences can prefill checkout."
+    },
+    {
+      "id": "shopify-bundles",
+      "title": "Eligibility and considerations for using product bundles",
+      "url": "https://help.shopify.com/en/manual/products/bundles/eligibility-and-considerations",
+      "type": "official-doc",
+      "claim": "Native bundle eligibility, component inventory, shipping and return constraints already exist. A generated bundle still needs real storefront and inventory support."
+    }
+  ]
+}

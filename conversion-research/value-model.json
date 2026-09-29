@@ -1,0 +1,846 @@
+{
+  "schemaVersion": 1,
+  "researchDate": "2026-09-29",
+  "purpose": "Consistent value, price and power methods for the final 50 ideas; no idea-specific empirical uplift is asserted.",
+  "status": "illustrative sensitivity model; no live merchant purchase experiment performed",
+  "currency": "GBP",
+  "period": "month",
+  "primaryObjective": "additional incremental purchases with retained contribution after returns",
+  "secondaryObjective": "lower the cost of producing that purchase value",
+  "actualMerchantInputs": {
+    "merchantId": null,
+    "commercePlatform": null,
+    "aiOrigin": null,
+    "market": null,
+    "locale": null,
+    "currency": null,
+    "aiVisitsMonthly": null,
+    "independentEligibleUsersMonthly": null,
+    "baselinePurchaseRate": null,
+    "eligibleFraction": null,
+    "contributionPerCompletedOrderAfterReturns": null,
+    "unknownOriginShare": null,
+    "independentlyAssignableClusters": null,
+    "meanClusterSize": null,
+    "intraclusterCorrelation": null,
+    "setupCost": null,
+    "setupAmortizationMonths": null,
+    "otherOperatingCostsMonthly": null,
+    "verifiedLaborValueMonthly": null,
+    "purchaseOutcomeHorizonDays": null,
+    "returnMaturationDays": null
+  },
+  "assumptionRules": [
+    "All scenario traffic, conversion and contribution inputs are chosen examples, not industry benchmarks.",
+    "A hypothesis may have a scenario while expected empirical conversion lift remains null.",
+    "Positive scenario points are not an expected range, confidence interval or probability distribution.",
+    "Eligibility must be based on pre-treatment facts and traffic weighted, not inferred from the fraction of SKUs.",
+    "Repeat visits are not automatically independent experimental units.",
+    "The simple economics tables assume at most one counted completed order per visit and a constant contribution per completed order.",
+    "Returns, cancellations and variable order costs are already included in the 30 GBP contribution input.",
+    "Incremental operating costs and labor value are set to zero only to expose arithmetic; real pricing must include them."
+  ],
+  "evidenceClasses": [
+    {
+      "id": "direct_measured_ai_purchase",
+      "meaning": "Actual AI-origin purchase outcome for a named intervention and population; specify randomized or observational design.",
+      "required": [
+        "population",
+        "originDefinition",
+        "intervention",
+        "comparator",
+        "assignmentMethod",
+        "purchaseEndpoint",
+        "outcomeWindow",
+        "effectEstimate",
+        "uncertainty",
+        "dates",
+        "source"
+      ],
+      "limit": "Observational attribution alone is not causal; causal estimates do not automatically transfer."
+    },
+    {
+      "id": "adjacent_experiment_or_vendor_claim",
+      "meaning": "A result in paid shopping, general ecommerce, another channel, or a vendor-reported design with stated verification limits.",
+      "limit": "Do not convert the result into expected AI-origin purchase lift."
+    },
+    {
+      "id": "measured_simulation_or_monitoring",
+      "meaning": "Measured recommendation, retrieval, correctness or citation behavior on a recorded test distribution.",
+      "limit": "Not a consumer purchase effect or universal production recommendation rate."
+    },
+    {
+      "id": "hypothesis_or_scenario",
+      "meaning": "Explicit assumptions and conditional arithmetic; empirical expected effect may be unknown.",
+      "limit": "Not empirical uplift, demand, or willingness-to-pay evidence."
+    }
+  ],
+  "sharedConversationNumbers": {
+    "status": "invented illustrations, not measurements",
+    "recommendationLadderPercent": [
+      12,
+      19,
+      24,
+      26,
+      31,
+      37,
+      39,
+      41,
+      53,
+      67
+    ],
+    "beforeAfterRecommendationPercent": [
+      18.4,
+      31.7
+    ],
+    "allowedUse": "Explain the proposed test format only.",
+    "forbiddenInference": "Do not use as a forecast, calibrated prior, actual ChatGPT probability, purchase lift, or price justification.",
+    "repeatedRunsLimit": "Fifty repeats of one shopper prompt describe conditional model variability, not fifty independent shoppers or intents."
+  },
+  "definitions": {
+    "purchase": "Completed non-test order reaching the declared paid-purchase state; payment authorizations or checkout creation alone do not count. Refunded and cancelled outcomes are reconciled separately.",
+    "retainedOrders": "Orders meeting the declared retained-order rule after outcome maturation; distinct from completed orders.",
+    "retainedContribution": "Order-ledger sales net of discounts and applicable sales taxes, less net cost of goods, fees, fulfillment, shipping subsidy, refunds, cancellations, reverse logistics and nonrecoverable return loss, with recovered goods credited consistently.",
+    "contributionUnit": "Expected retained contribution per completed order, including the effect of returns; not contribution conditional on keeping an order.",
+    "causalEconomicEstimand": "For a population fixed before treatment, E[Y(1)-Y(0)] where Y is total retained contribution over the fixed horizon, including zero-purchase users.",
+    "attribution": "Credit assigned to a recorded origin; does not identify the counterfactual without the intervention.",
+    "threeTimesHurdle": "Benefits / all incremental customer costs >= 3, equivalent to 200 percent net ROI.",
+    "literalThreeHundredPercentNetROI": "(Benefits - costs) / costs >= 3, requiring benefits / costs >= 4."
+  },
+  "formulas": {
+    "eligibleVisits": "N * e",
+    "incrementalCompletedOrders": "N * e * (p1 - p0)",
+    "incrementalRetainedContribution": "N * e * (p1*c1 - p0*c0)",
+    "merchantNetValue": "incrementalRetainedContribution + L - K - P",
+    "constantContributionScenario": "N * e * p0 * relativeLift * c",
+    "breakEvenRelativeLift": "(P + K - L) / (N * e * p0 * c)",
+    "feeCeilingAt3xValueToCost": "max(0, (incrementalRetainedContribution + L)/3 - K)",
+    "feeCeilingAt300PercentNetROI": "max(0, (incrementalRetainedContribution + L)/4 - K)",
+    "relativeLiftAt3xValueToCost": "(3*(P+K)-L) / (N*e*p0*c)",
+    "laborValue": "verifiedHoursAvoided * fullyLoadedHourlyCost * avoidableOrUsefulRedeploymentFraction - newReviewCostNotAlreadyInK",
+    "trafficAndConversionOrderLift": "(1 + relativeTrafficLift) * (1 + relativeConditionalConversionLift) - 1",
+    "equalClusterDesignEffect": "1 + (meanClusterSize - 1) * ICC"
+  },
+  "formulaValidity": [
+    "N, e, p0 and c must be valid nonnegative inputs; break-even ratios are undefined when the denominator is zero or nonpositive.",
+    "Required p1 cannot exceed 1 for the binary purchase model.",
+    "Use separate c0 and c1 when discounts, product mix or return rates change.",
+    "A zero price ceiling does not remove negative merchant value.",
+    "If incremental contribution is unknown, evidence-supported price ceiling is unknown; scenario ceiling is conditional.",
+    "Discovery interventions can change arrivals; comparing only post-treatment arrivals can create selection bias.",
+    "Standalone idea lifts and price ceilings must not be summed across overlapping mechanisms."
+  ],
+  "cohorts": [
+    {
+      "id": "hypothetical-1000-eligible-visits",
+      "status": "arbitrary editable planning cohort, not a market average",
+      "aiVisitsMonthly": 1000,
+      "eligibleFraction": 1,
+      "eligibleAIVisitsMonthly": 1000,
+      "baselinePurchaseRate": 0.025,
+      "baselineCompletedOrdersMonthly": 25.0,
+      "contributionGBPPerCompletedOrderAfterReturns": 30,
+      "otherIncrementalCostsGBPMonthly": 0,
+      "verifiedLaborValueGBPMonthly": 0,
+      "scenarios": [
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": -0.1,
+          "treatmentPurchaseRate": 0.0225,
+          "absolutePercentagePointLift": -0.25,
+          "incrementalCompletedOrdersMonthly": -2.5,
+          "incrementalRetainedContributionGBPMonthly": -75.0,
+          "feeCeilingAt3xValueToCostGBPMonthly": 0,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 0,
+          "negativeOutcomeStillPossible": true
+        },
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": 0,
+          "treatmentPurchaseRate": 0.025,
+          "absolutePercentagePointLift": 0.0,
+          "incrementalCompletedOrdersMonthly": 0.0,
+          "incrementalRetainedContributionGBPMonthly": 0.0,
+          "feeCeilingAt3xValueToCostGBPMonthly": 0,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 0,
+          "negativeOutcomeStillPossible": true
+        },
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": 0.01,
+          "treatmentPurchaseRate": 0.02525,
+          "absolutePercentagePointLift": 0.025,
+          "incrementalCompletedOrdersMonthly": 0.25,
+          "incrementalRetainedContributionGBPMonthly": 7.5,
+          "feeCeilingAt3xValueToCostGBPMonthly": 2.5,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 1.875,
+          "negativeOutcomeStillPossible": true
+        },
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": 0.05,
+          "treatmentPurchaseRate": 0.02625,
+          "absolutePercentagePointLift": 0.125,
+          "incrementalCompletedOrdersMonthly": 1.25,
+          "incrementalRetainedContributionGBPMonthly": 37.5,
+          "feeCeilingAt3xValueToCostGBPMonthly": 12.5,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 9.375,
+          "negativeOutcomeStillPossible": true
+        },
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": 0.1,
+          "treatmentPurchaseRate": 0.0275,
+          "absolutePercentagePointLift": 0.25,
+          "incrementalCompletedOrdersMonthly": 2.5,
+          "incrementalRetainedContributionGBPMonthly": 75.0,
+          "feeCeilingAt3xValueToCostGBPMonthly": 25.0,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 18.75,
+          "negativeOutcomeStillPossible": true
+        },
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": 0.2,
+          "treatmentPurchaseRate": 0.03,
+          "absolutePercentagePointLift": 0.5,
+          "incrementalCompletedOrdersMonthly": 5.0,
+          "incrementalRetainedContributionGBPMonthly": 150.0,
+          "feeCeilingAt3xValueToCostGBPMonthly": 50.0,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 37.5,
+          "negativeOutcomeStillPossible": true
+        }
+      ],
+      "testPrices": [
+        {
+          "status": "unvalidated test price, not willingness-to-pay evidence",
+          "priceGBPMonthly": 49,
+          "breakEvenAdditionalCompletedOrdersMonthly": 1.6333333333333333,
+          "wholeAdditionalOrdersToCoverFeeAtExactly30GBP": 2,
+          "breakEvenRelativePurchaseLift": 0.06533333333333333,
+          "breakEvenAbsolutePercentagePointLift": 0.16333333333333333,
+          "relativeLiftFor3xValueToCost": 0.196,
+          "additionalCompletedOrdersFor3xValueToCostMonthly": 4.9,
+          "relativeLiftFor300PercentNetROI": 0.2613333333333333
+        },
+        {
+          "status": "unvalidated test price, not willingness-to-pay evidence",
+          "priceGBPMonthly": 99,
+          "breakEvenAdditionalCompletedOrdersMonthly": 3.3,
+          "wholeAdditionalOrdersToCoverFeeAtExactly30GBP": 4,
+          "breakEvenRelativePurchaseLift": 0.132,
+          "breakEvenAbsolutePercentagePointLift": 0.33,
+          "relativeLiftFor3xValueToCost": 0.396,
+          "additionalCompletedOrdersFor3xValueToCostMonthly": 9.9,
+          "relativeLiftFor300PercentNetROI": 0.528
+        },
+        {
+          "status": "unvalidated test price, not willingness-to-pay evidence",
+          "priceGBPMonthly": 199,
+          "breakEvenAdditionalCompletedOrdersMonthly": 6.633333333333334,
+          "wholeAdditionalOrdersToCoverFeeAtExactly30GBP": 7,
+          "breakEvenRelativePurchaseLift": 0.2653333333333333,
+          "breakEvenAbsolutePercentagePointLift": 0.6633333333333333,
+          "relativeLiftFor3xValueToCost": 0.796,
+          "additionalCompletedOrdersFor3xValueToCostMonthly": 19.9,
+          "relativeLiftFor300PercentNetROI": 1.0613333333333332
+        },
+        {
+          "status": "unvalidated test price, not willingness-to-pay evidence",
+          "priceGBPMonthly": 499,
+          "breakEvenAdditionalCompletedOrdersMonthly": 16.633333333333333,
+          "wholeAdditionalOrdersToCoverFeeAtExactly30GBP": 17,
+          "breakEvenRelativePurchaseLift": 0.6653333333333333,
+          "breakEvenAbsolutePercentagePointLift": 1.6633333333333333,
+          "relativeLiftFor3xValueToCost": 1.996,
+          "additionalCompletedOrdersFor3xValueToCostMonthly": 49.9,
+          "relativeLiftFor300PercentNetROI": 2.6613333333333333
+        }
+      ]
+    },
+    {
+      "id": "hypothetical-5000-eligible-visits",
+      "status": "arbitrary editable planning cohort, not a market average",
+      "aiVisitsMonthly": 5000,
+      "eligibleFraction": 1,
+      "eligibleAIVisitsMonthly": 5000,
+      "baselinePurchaseRate": 0.025,
+      "baselineCompletedOrdersMonthly": 125.0,
+      "contributionGBPPerCompletedOrderAfterReturns": 30,
+      "otherIncrementalCostsGBPMonthly": 0,
+      "verifiedLaborValueGBPMonthly": 0,
+      "scenarios": [
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": -0.1,
+          "treatmentPurchaseRate": 0.0225,
+          "absolutePercentagePointLift": -0.25,
+          "incrementalCompletedOrdersMonthly": -12.5,
+          "incrementalRetainedContributionGBPMonthly": -375.0,
+          "feeCeilingAt3xValueToCostGBPMonthly": 0,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 0,
+          "negativeOutcomeStillPossible": true
+        },
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": 0,
+          "treatmentPurchaseRate": 0.025,
+          "absolutePercentagePointLift": 0.0,
+          "incrementalCompletedOrdersMonthly": 0.0,
+          "incrementalRetainedContributionGBPMonthly": 0.0,
+          "feeCeilingAt3xValueToCostGBPMonthly": 0,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 0,
+          "negativeOutcomeStillPossible": true
+        },
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": 0.01,
+          "treatmentPurchaseRate": 0.02525,
+          "absolutePercentagePointLift": 0.025,
+          "incrementalCompletedOrdersMonthly": 1.25,
+          "incrementalRetainedContributionGBPMonthly": 37.5,
+          "feeCeilingAt3xValueToCostGBPMonthly": 12.5,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 9.375,
+          "negativeOutcomeStillPossible": true
+        },
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": 0.05,
+          "treatmentPurchaseRate": 0.02625,
+          "absolutePercentagePointLift": 0.125,
+          "incrementalCompletedOrdersMonthly": 6.25,
+          "incrementalRetainedContributionGBPMonthly": 187.5,
+          "feeCeilingAt3xValueToCostGBPMonthly": 62.5,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 46.875,
+          "negativeOutcomeStillPossible": true
+        },
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": 0.1,
+          "treatmentPurchaseRate": 0.0275,
+          "absolutePercentagePointLift": 0.25,
+          "incrementalCompletedOrdersMonthly": 12.5,
+          "incrementalRetainedContributionGBPMonthly": 375.0,
+          "feeCeilingAt3xValueToCostGBPMonthly": 125.0,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 93.75,
+          "negativeOutcomeStillPossible": true
+        },
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": 0.2,
+          "treatmentPurchaseRate": 0.03,
+          "absolutePercentagePointLift": 0.5,
+          "incrementalCompletedOrdersMonthly": 25.0,
+          "incrementalRetainedContributionGBPMonthly": 750.0,
+          "feeCeilingAt3xValueToCostGBPMonthly": 250.0,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 187.5,
+          "negativeOutcomeStillPossible": true
+        }
+      ],
+      "testPrices": [
+        {
+          "status": "unvalidated test price, not willingness-to-pay evidence",
+          "priceGBPMonthly": 49,
+          "breakEvenAdditionalCompletedOrdersMonthly": 1.6333333333333333,
+          "wholeAdditionalOrdersToCoverFeeAtExactly30GBP": 2,
+          "breakEvenRelativePurchaseLift": 0.013066666666666667,
+          "breakEvenAbsolutePercentagePointLift": 0.03266666666666666,
+          "relativeLiftFor3xValueToCost": 0.0392,
+          "additionalCompletedOrdersFor3xValueToCostMonthly": 4.9,
+          "relativeLiftFor300PercentNetROI": 0.05226666666666667
+        },
+        {
+          "status": "unvalidated test price, not willingness-to-pay evidence",
+          "priceGBPMonthly": 99,
+          "breakEvenAdditionalCompletedOrdersMonthly": 3.3,
+          "wholeAdditionalOrdersToCoverFeeAtExactly30GBP": 4,
+          "breakEvenRelativePurchaseLift": 0.0264,
+          "breakEvenAbsolutePercentagePointLift": 0.066,
+          "relativeLiftFor3xValueToCost": 0.0792,
+          "additionalCompletedOrdersFor3xValueToCostMonthly": 9.9,
+          "relativeLiftFor300PercentNetROI": 0.1056
+        },
+        {
+          "status": "unvalidated test price, not willingness-to-pay evidence",
+          "priceGBPMonthly": 199,
+          "breakEvenAdditionalCompletedOrdersMonthly": 6.633333333333334,
+          "wholeAdditionalOrdersToCoverFeeAtExactly30GBP": 7,
+          "breakEvenRelativePurchaseLift": 0.053066666666666665,
+          "breakEvenAbsolutePercentagePointLift": 0.13266666666666665,
+          "relativeLiftFor3xValueToCost": 0.1592,
+          "additionalCompletedOrdersFor3xValueToCostMonthly": 19.9,
+          "relativeLiftFor300PercentNetROI": 0.21226666666666666
+        },
+        {
+          "status": "unvalidated test price, not willingness-to-pay evidence",
+          "priceGBPMonthly": 499,
+          "breakEvenAdditionalCompletedOrdersMonthly": 16.633333333333333,
+          "wholeAdditionalOrdersToCoverFeeAtExactly30GBP": 17,
+          "breakEvenRelativePurchaseLift": 0.13306666666666667,
+          "breakEvenAbsolutePercentagePointLift": 0.33266666666666667,
+          "relativeLiftFor3xValueToCost": 0.3992,
+          "additionalCompletedOrdersFor3xValueToCostMonthly": 49.9,
+          "relativeLiftFor300PercentNetROI": 0.5322666666666667
+        }
+      ]
+    },
+    {
+      "id": "hypothetical-20000-eligible-visits",
+      "status": "arbitrary editable planning cohort, not a market average",
+      "aiVisitsMonthly": 20000,
+      "eligibleFraction": 1,
+      "eligibleAIVisitsMonthly": 20000,
+      "baselinePurchaseRate": 0.025,
+      "baselineCompletedOrdersMonthly": 500.0,
+      "contributionGBPPerCompletedOrderAfterReturns": 30,
+      "otherIncrementalCostsGBPMonthly": 0,
+      "verifiedLaborValueGBPMonthly": 0,
+      "scenarios": [
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": -0.1,
+          "treatmentPurchaseRate": 0.0225,
+          "absolutePercentagePointLift": -0.25,
+          "incrementalCompletedOrdersMonthly": -50.0,
+          "incrementalRetainedContributionGBPMonthly": -1500.0,
+          "feeCeilingAt3xValueToCostGBPMonthly": 0,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 0,
+          "negativeOutcomeStillPossible": true
+        },
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": 0,
+          "treatmentPurchaseRate": 0.025,
+          "absolutePercentagePointLift": 0.0,
+          "incrementalCompletedOrdersMonthly": 0.0,
+          "incrementalRetainedContributionGBPMonthly": 0.0,
+          "feeCeilingAt3xValueToCostGBPMonthly": 0,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 0,
+          "negativeOutcomeStillPossible": true
+        },
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": 0.01,
+          "treatmentPurchaseRate": 0.02525,
+          "absolutePercentagePointLift": 0.025,
+          "incrementalCompletedOrdersMonthly": 5.0,
+          "incrementalRetainedContributionGBPMonthly": 150.0,
+          "feeCeilingAt3xValueToCostGBPMonthly": 50.0,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 37.5,
+          "negativeOutcomeStillPossible": true
+        },
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": 0.05,
+          "treatmentPurchaseRate": 0.02625,
+          "absolutePercentagePointLift": 0.125,
+          "incrementalCompletedOrdersMonthly": 25.0,
+          "incrementalRetainedContributionGBPMonthly": 750.0,
+          "feeCeilingAt3xValueToCostGBPMonthly": 250.0,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 187.5,
+          "negativeOutcomeStillPossible": true
+        },
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": 0.1,
+          "treatmentPurchaseRate": 0.0275,
+          "absolutePercentagePointLift": 0.25,
+          "incrementalCompletedOrdersMonthly": 50.0,
+          "incrementalRetainedContributionGBPMonthly": 1500.0,
+          "feeCeilingAt3xValueToCostGBPMonthly": 500.0,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 375.0,
+          "negativeOutcomeStillPossible": true
+        },
+        {
+          "status": "illustrative sensitivity, not forecast",
+          "relativePurchaseLift": 0.2,
+          "treatmentPurchaseRate": 0.03,
+          "absolutePercentagePointLift": 0.5,
+          "incrementalCompletedOrdersMonthly": 100.0,
+          "incrementalRetainedContributionGBPMonthly": 3000.0,
+          "feeCeilingAt3xValueToCostGBPMonthly": 1000.0,
+          "feeCeilingAt300PercentNetROIGBPMonthly": 750.0,
+          "negativeOutcomeStillPossible": true
+        }
+      ],
+      "testPrices": [
+        {
+          "status": "unvalidated test price, not willingness-to-pay evidence",
+          "priceGBPMonthly": 49,
+          "breakEvenAdditionalCompletedOrdersMonthly": 1.6333333333333333,
+          "wholeAdditionalOrdersToCoverFeeAtExactly30GBP": 2,
+          "breakEvenRelativePurchaseLift": 0.003266666666666667,
+          "breakEvenAbsolutePercentagePointLift": 0.008166666666666666,
+          "relativeLiftFor3xValueToCost": 0.0098,
+          "additionalCompletedOrdersFor3xValueToCostMonthly": 4.9,
+          "relativeLiftFor300PercentNetROI": 0.013066666666666667
+        },
+        {
+          "status": "unvalidated test price, not willingness-to-pay evidence",
+          "priceGBPMonthly": 99,
+          "breakEvenAdditionalCompletedOrdersMonthly": 3.3,
+          "wholeAdditionalOrdersToCoverFeeAtExactly30GBP": 4,
+          "breakEvenRelativePurchaseLift": 0.0066,
+          "breakEvenAbsolutePercentagePointLift": 0.0165,
+          "relativeLiftFor3xValueToCost": 0.0198,
+          "additionalCompletedOrdersFor3xValueToCostMonthly": 9.9,
+          "relativeLiftFor300PercentNetROI": 0.0264
+        },
+        {
+          "status": "unvalidated test price, not willingness-to-pay evidence",
+          "priceGBPMonthly": 199,
+          "breakEvenAdditionalCompletedOrdersMonthly": 6.633333333333334,
+          "wholeAdditionalOrdersToCoverFeeAtExactly30GBP": 7,
+          "breakEvenRelativePurchaseLift": 0.013266666666666666,
+          "breakEvenAbsolutePercentagePointLift": 0.033166666666666664,
+          "relativeLiftFor3xValueToCost": 0.0398,
+          "additionalCompletedOrdersFor3xValueToCostMonthly": 19.9,
+          "relativeLiftFor300PercentNetROI": 0.053066666666666665
+        },
+        {
+          "status": "unvalidated test price, not willingness-to-pay evidence",
+          "priceGBPMonthly": 499,
+          "breakEvenAdditionalCompletedOrdersMonthly": 16.633333333333333,
+          "wholeAdditionalOrdersToCoverFeeAtExactly30GBP": 17,
+          "breakEvenRelativePurchaseLift": 0.03326666666666667,
+          "breakEvenAbsolutePercentagePointLift": 0.08316666666666667,
+          "relativeLiftFor3xValueToCost": 0.0998,
+          "additionalCompletedOrdersFor3xValueToCostMonthly": 49.9,
+          "relativeLiftFor300PercentNetROI": 0.13306666666666667
+        }
+      ]
+    }
+  ],
+  "eligibilityExample": {
+    "status": "illustrative sensitivity, not forecast",
+    "aiVisitsMonthly": 5000,
+    "eligibleFraction": 0.2,
+    "baselineEligiblePurchaseRate": 0.025,
+    "relativeLift": 0.1,
+    "contributionGBPPerCompletedOrderAfterReturns": 30,
+    "incrementalCompletedOrdersMonthly": 2.5,
+    "incrementalRetainedContributionGBPMonthly": 75,
+    "feeCeilingAt3xValueToCostGBPMonthly": 25
+  },
+  "power": {
+    "endpoint": "Any completed purchase per independent, persistently assigned user within a fixed horizon.",
+    "method": "Closed-form normal approximation for two independent proportions, equal allocation, no continuity correction; not an exact finite-sample binomial calculation.",
+    "baselinePurchaseRate": 0.025,
+    "power": 0.8,
+    "alpha": 0.05,
+    "alternative": "two-sided",
+    "allocationRatio": 1,
+    "zAlphaTwoSided": 1.9599639845400536,
+    "zPower": 0.8416212335729144,
+    "formula": "ceil((z_(1-alpha/2)*sqrt(2*pbar*(1-pbar)) + z_power*sqrt(p0*(1-p0)+p1*(1-p1)))^2 / (p1-p0)^2), pbar=(p0+p1)/2",
+    "varianceAssumptions": "Pooled variance under the null and unpooled variance under the alternative.",
+    "arithmeticVerification": "Calculated with Python math and statistics.NormalDist; both normal rejection tails evaluated at rounded n.",
+    "results": [
+      {
+        "relativeLift": 0.1,
+        "treatmentPurchaseRate": 0.0275,
+        "absolutePercentagePointLift": 0.25,
+        "alpha": 0.05,
+        "rawSampleSizePerArm": 64198.732837699965,
+        "roundedSampleSizePerArm": 64199,
+        "roundedSampleSizeTotal": 128398,
+        "bothTailNormalApproximationPowerAtRoundedN": 0.8000025919985886,
+        "minimumEnrollmentMonthsIfEveryVisitIndependentAndEligible": [
+          {
+            "independentEligibleUsersMonthly": 1000,
+            "months": 128.398
+          },
+          {
+            "independentEligibleUsersMonthly": 5000,
+            "months": 25.6796
+          },
+          {
+            "independentEligibleUsersMonthly": 20000,
+            "months": 6.4199
+          }
+        ]
+      },
+      {
+        "relativeLift": 0.2,
+        "treatmentPurchaseRate": 0.03,
+        "absolutePercentagePointLift": 0.5,
+        "alpha": 0.05,
+        "rawSampleSizePerArm": 16791.49920664335,
+        "roundedSampleSizePerArm": 16792,
+        "roundedSampleSizeTotal": 33584,
+        "bothTailNormalApproximationPowerAtRoundedN": 0.8000126549706295,
+        "minimumEnrollmentMonthsIfEveryVisitIndependentAndEligible": [
+          {
+            "independentEligibleUsersMonthly": 1000,
+            "months": 33.584
+          },
+          {
+            "independentEligibleUsersMonthly": 5000,
+            "months": 6.7168
+          },
+          {
+            "independentEligibleUsersMonthly": 20000,
+            "months": 1.6792
+          }
+        ]
+      },
+      {
+        "relativeLift": 0.5,
+        "treatmentPurchaseRate": 0.0375,
+        "absolutePercentagePointLift": 1.25,
+        "alpha": 0.05,
+        "rawSampleSizePerArm": 3040.26169402885,
+        "roundedSampleSizePerArm": 3041,
+        "roundedSampleSizeTotal": 6082,
+        "bothTailNormalApproximationPowerAtRoundedN": 0.800096205940129,
+        "minimumEnrollmentMonthsIfEveryVisitIndependentAndEligible": [
+          {
+            "independentEligibleUsersMonthly": 1000,
+            "months": 6.082
+          },
+          {
+            "independentEligibleUsersMonthly": 5000,
+            "months": 1.2164
+          },
+          {
+            "independentEligibleUsersMonthly": 20000,
+            "months": 0.3041
+          }
+        ]
+      }
+    ],
+    "limitations": [
+      "No multiplicity, interim looks, clustering, missingness or delayed outcomes included in the base table.",
+      "Visits can equal users only under the explicitly hypothetical one-visit-per-user condition.",
+      "Long enrollment times undermine stable treatment and population assumptions; the table is not a duration recommendation.",
+      "Power for binary purchase probability is not power for contribution, returns, repeated orders or retention.",
+      "The 50 percent target is a sensitivity calculation, not an expected lift."
+    ],
+    "clusterExample": {
+      "status": "chosen hypothetical values",
+      "meanClusterSize": 50,
+      "ICC": 0.02,
+      "designEffect": 1.98,
+      "limit": "Equal cluster approximation only; few or unequal clusters and time dependence require design-specific power."
+    },
+    "fiftyTestsExample": {
+      "status": "illustrative independent-null calculation",
+      "numberOfTests": 50,
+      "perTestAlpha": 0.05,
+      "atLeastOneFalsePositiveIfIndependent": 0.9230550247232868,
+      "bonferroniPerTestAlpha": 0.001,
+      "bonferroniTenPercentRelativeLift": {
+        "relativeLift": 0.1,
+        "treatmentPurchaseRate": 0.0275,
+        "absolutePercentagePointLift": 0.25,
+        "alpha": 0.001,
+        "rawSampleSizePerArm": 139660.3346701518,
+        "roundedSampleSizePerArm": 139661,
+        "roundedSampleSizeTotal": 279322,
+        "bothTailNormalApproximationPowerAtRoundedN": 0.8000027556053876,
+        "minimumEnrollmentMonthsIfEveryVisitIndependentAndEligible": [
+          {
+            "independentEligibleUsersMonthly": 1000,
+            "months": 279.322
+          },
+          {
+            "independentEligibleUsersMonthly": 5000,
+            "months": 55.8644
+          },
+          {
+            "independentEligibleUsersMonthly": 20000,
+            "months": 13.9661
+          }
+        ]
+      },
+      "policy": "Use discovery data to shortlist; confirm on untouched traffic with a declared hypothesis family and valid multiplicity/sequential procedure."
+    }
+  },
+  "experimentDesign": {
+    "postArrivalChange": "Persistent visitor or consented account assignment at first eligibility; include every assigned user and all linked outcomes over the fixed window.",
+    "publicCatalogueChange": "Assign independently isolatable catalogue, geography or merchant clusters before acquisition, or use a platform-supported upstream experiment.",
+    "switchbackLimit": "Only credible if recrawl, cache, memory and other carryover can be bounded; simple before/after is not randomized.",
+    "originSelectionLimit": "Origin may be affected by discovery treatment; preserve a fixed upstream population and report AI-attributed and all-channel effects.",
+    "interference": "Product substitution, variant propagation, shared caches and cross-arm recommendations can invalidate isolation; robust standard errors alone do not fix it.",
+    "simulationUnit": "Independent held-out intent family or product cluster, with repeated model runs nested inside it.",
+    "rankManipulation": "Tests sensitivity to supplied rank, not a deployable method to earn that rank.",
+    "overlapPolicy": "Measure bundle or marginal contribution after earlier changes; use factorial designs only when powered.",
+    "qualityChecks": [
+      "predeclare endpoint and minimum useful effect",
+      "assignment and A/A audit",
+      "sample-ratio check",
+      "transaction deduplication",
+      "outcome coverage reconciliation",
+      "declared return maturation",
+      "record negative and inconclusive results"
+    ],
+    "guardrails": [
+      "retained contribution",
+      "refund and cancellation rate",
+      "delivery or eligibility errors",
+      "page/checkout failure",
+      "customer complaints",
+      "privacy and lawful identity linkage"
+    ],
+    "poolingLimit": "Pooling can support a declared multi-merchant population claim; preserve heterogeneity and validate on held-out merchants without claiming every merchant has a local win."
+  },
+  "eventLedger": {
+    "actualEventVolumes": "unknown until merchant integration",
+    "dimensions": [
+      "merchant_id",
+      "commerce_platform",
+      "ai_origin",
+      "market",
+      "locale",
+      "currency",
+      "device_class",
+      "new_or_returning",
+      "eligibility_rule_version",
+      "experiment_id",
+      "variant",
+      "assignment_unit",
+      "assignment_time",
+      "catalogue_version",
+      "observation_window"
+    ],
+    "modelVersionRule": "Record only when actually known; do not infer a consumer model version from a referral domain.",
+    "liveEvents": [
+      "eligible",
+      "assigned",
+      "exposed",
+      "landing",
+      "product_view",
+      "cart",
+      "checkout_started",
+      "purchase",
+      "cancel",
+      "refund",
+      "contribution_reconciled"
+    ],
+    "orderKeys": [
+      "transaction_id",
+      "product_id",
+      "variant_id"
+    ],
+    "simulationEvents": [
+      "discovered",
+      "understood",
+      "shortlisted",
+      "recommended"
+    ],
+    "simulationProvenance": "Separate dataset with explicit simulation label and fixed prompt/model/tool fixture metadata.",
+    "originEvidenceTypes": [
+      "observed_referral",
+      "declared_origin",
+      "authenticated_platform_handoff",
+      "unknown"
+    ],
+    "missingnessPolicy": "Measure coverage; preserve unknown origin; do not gross up using unsupported AI-market multipliers.",
+    "financialSourceOfTruth": "Merchant order ledger after outcome maturation; reconcile analytics purchase and refund coverage."
+  },
+  "earnedEdge": {
+    "definition": "A reproducible improvement in incremental retained contribution, or lower verified cost to obtain the same improvement, against native tools and a competent cheaper workflow.",
+    "comparisonRule": "Choose comparator before experiment; charge against incremental value our product adds over it, not all value of fixing the merchant.",
+    "harnessValidation": "Judge on held-out live purchase direction and cheap rejection of bad interventions; score precision alone is insufficient.",
+    "pricingValidation": "Concrete paid offer, buyer budget, paid acceptance and retention; competitor list prices are alternatives, not willingness-to-pay evidence."
+  },
+  "perIdeaTemplate": {
+    "ideaId": null,
+    "evidenceClass": "hypothesis_or_scenario",
+    "expectedRelativePurchaseLift": null,
+    "eligiblePopulationDefinition": null,
+    "eligiblePopulationSize": null,
+    "baselinePurchaseRate": null,
+    "intervention": null,
+    "causalPurchaseMechanism": null,
+    "comparator": null,
+    "measuredEffect": {
+      "estimate": null,
+      "uncertaintyInterval": null,
+      "population": null,
+      "assignmentMethod": null,
+      "dates": null,
+      "sourceIds": []
+    },
+    "scenario": {
+      "status": "illustrative sensitivity, not forecast",
+      "eligibleVisits": null,
+      "relativeLiftAssumption": null,
+      "contributionPerCompletedOrderAfterReturns": null,
+      "incrementalCompletedOrders": null,
+      "incrementalRetainedContribution": null,
+      "zeroAndNegativePossible": true
+    },
+    "testPrice": {
+      "status": "unvalidated test price",
+      "amount": null,
+      "currency": "GBP",
+      "period": "month",
+      "requiredBreakEvenRelativeLift": null,
+      "requiredRelativeLiftAt3xValueToCost": null
+    },
+    "implementationAndOperatingCost": null,
+    "primaryPurchaseEndpoint": null,
+    "independentUnit": null,
+    "powerOrFeasibilityLimit": null,
+    "overlapWithOtherIdeas": [],
+    "falsifier": null
+  },
+  "sources": [
+    {
+      "id": "statsmodels-power",
+      "title": "statsmodels.stats.proportion.power_proportions_2indep",
+      "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.proportion.power_proportions_2indep.html",
+      "type": "official-doc",
+      "claim": "Two-proportion power calculation uses pooled null and unpooled alternative variance; no merchant uplift evidence."
+    },
+    {
+      "id": "statsmodels-sample-size",
+      "title": "statsmodels.stats.proportion.samplesize_proportions_2indep_onetail",
+      "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.proportion.samplesize_proportions_2indep_onetail.html",
+      "type": "official-doc",
+      "claim": "Explicit normal sample-size computation and its far-tail approximation; no empirical conversion claim."
+    },
+    {
+      "id": "r-power",
+      "title": "Power Calculations for Two-Sample Test for Proportions",
+      "url": "https://www.stat.ethz.ch/R-manual/R-devel/library/stats/html/power.prop.test.html",
+      "type": "official-doc",
+      "claim": "Per-group n and strict two-sided treatment of the opposite rejection tail."
+    },
+    {
+      "id": "consort-cluster",
+      "title": "Consort 2010 statement: extension to cluster randomised trials",
+      "url": "https://www.bmj.com/content/345/bmj.e5661",
+      "type": "research",
+      "claim": "Clustering reduces effective information; equal-cluster design effect 1+(m-1)*ICC. Access used indexed primary-source text; direct page fetch was unavailable."
+    },
+    {
+      "id": "nist-bonferroni",
+      "title": "7.4.6.3. Bonferroni's method",
+      "url": "https://www.itl.nist.gov/div898/handbook/prc/section4/prc463.htm",
+      "type": "official-doc",
+      "claim": "Bonferroni simultaneous-coverage principle; the 50-test application is our calculation."
+    },
+    {
+      "id": "microsoft-srm",
+      "title": "Diagnosing Sample Ratio Mismatch in A/B Testing",
+      "url": "https://www.microsoft.com/en-us/research/articles/diagnosing-sample-ratio-mismatch-in-a-b-testing/",
+      "type": "research",
+      "claim": "Assignment/logging validation and sample-ratio mismatch precede interpreting treatment effects."
+    },
+    {
+      "id": "google-ecommerce",
+      "title": "Measure ecommerce",
+      "url": "https://developers.google.com/analytics/devguides/collection/ga4/ecommerce",
+      "type": "official-doc",
+      "claim": "Purchase/refund event instrumentation with transaction and item identifiers; tracking does not itself prove incrementality."
+    },
+    {
+      "id": "openai-referrals",
+      "title": "Publishers and Developers - FAQ",
+      "url": "https://help.openai.com/en/articles/12627856-publishers-and-developers-faq",
+      "type": "official-doc",
+      "claim": "OpenAI documents utm_source=chatgpt.com on referral URLs; does not establish complete AI influence coverage."
+    }
+  ]
+}

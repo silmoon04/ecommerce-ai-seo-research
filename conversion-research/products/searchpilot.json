@@ -1,0 +1,665 @@
+{
+  "id": "searchpilot",
+  "name": "SearchPilot",
+  "benchmarkType": "commercial",
+  "winningEvidence": [
+    "Selected as a direct commercial benchmark because it sells enterprise GEO, SEO and Merchant Center experimentation, with named customers and published live controlled cases. Selection does not establish market leadership or profitability.",
+    "The Omio case reports +18% LLM sessions for a brand-USP intervention and a separate estimated -6.5% Google-session effect that blocked deployment. These are traffic outcomes in travel, not AI-origin purchase lift.",
+    "An anonymous global sports-brand case claims $6m revenue uplift from one test. Public calculation and AI attribution are insufficient to treat it as independently verified purchase evidence.",
+    "The vendor documents randomized-user CRO and combined SEO/CRO analysis. It also published a conversational shopper simulation on 2026-09-23, which is research overlap rather than proof of a packaged production simulator."
+  ],
+  "currentOffer": "As checked 2026-09-29, SearchPilot serves enterprise SEO/GEO, analytics and engineering teams with live website, product-feed and schema experiments, LLM referral metrics, statistical analysis and optional managed services. Commerce and Enterprise pricing is on request. Core starts at $37,500 annually for non-transactional sites only; the public page does not specify the dollar ISO currency, so this is not a verified USD ecommerce price.",
+  "conversionMechanism": "Changes to merchant-controlled pages and feeds may improve discovery and qualified arrivals; randomized conversion tests can evaluate what happens after arrival; the deployment policy can retain winners and avoid harmful changes. This chain only produces incremental purchases if the recruited shoppers complete and retain orders without equivalent losses elsewhere. The public GEO case establishes LLM-session movement, while financial translations and sparse conversion guardrails do not independently prove AI-origin purchase incrementality.",
+  "harness": {
+    "offlineSimulation": "documented",
+    "liveMonitoring": "documented",
+    "randomizedExperiment": "documented",
+    "purchaseMeasurement": "documented",
+    "details": "Offline simulation is documented as vendor research: a toy multi-turn shopper used a public frontier-model API across two synthetic personas, 12 runs each; no packaged customer simulator was verified. Live referral, traffic, feed and Googlebot monitoring is documented. Random user assignment is explicit for CRO; SEO/GEO uses statistically similar page groups and model-based counterfactuals, so do not call every page split a randomized-user trial. Conversion/revenue analysis is documented, but a reproducible randomized AI-origin retained-purchase result was not located. The full-funnel update describes CRO then SEO; an older page describes the reverse. Read this as documented capability with phase-order diligence, not proof that every site uses one fixed sequence."
+  },
+  "strengths": [
+    "Directly competes on live merchant intervention and measurement, not just prompt visibility tracking.",
+    "Existing full-funnel workflow acknowledges that traffic and conversion effects can conflict.",
+    "Productized readiness, power, credible intervals, forecast diagnostics, recrawl coverage and deployment QA.",
+    "Commerce integrations and enterprise services support adoption by large retailers.",
+    "Published cases include a decision not to deploy a GEO-positive change that harmed a larger channel.",
+    "Recent research recognizes conversational path dependence and the limits of first-prompt visibility."
+  ],
+  "limits": [
+    "Public Omio results are LLM and Google sessions, with no reproducible AI-origin retained-order estimate.",
+    "Some public revenue claims may be modeled from traffic; the source and calculation must be requested rather than assumed.",
+    "Statistically comparable page groups do not by themselves guarantee no shopper substitution, cross-page spillover or differential engine exposure.",
+    "SearchPilot explicitly says purchase and LLM metrics may be too sparse for primary test decisions; inconclusive guardrails do not rule out commercially meaningful harm.",
+    "Sequential SEO and CRO estimates need assumptions about cohort and time transport; this is an analytical concern, not a confirmed private implementation defect.",
+    "Googlebot recrawl does not establish identical-version exposure in every AI system. Public APIs and toy models cannot exactly reproduce proprietary consumer search behavior.",
+    "Reviewed public sources do not establish how the product handles each proposed failure. Unknown capabilities must not be described as confirmed absences."
+  ],
+  "improve": [
+    "Demonstrate retained-order decision quality beyond the incumbent full-funnel and native-commerce baselines.",
+    "Measure family-wide purchase substitution instead of interpreting every winning SKU as new demand.",
+    "Keep publication, ingestion and observed engine exposure separate while preserving randomized intention-to-treat.",
+    "Target concrete purchase losses such as cart conflicts, failed delivery dates, compatibility uncertainty and seller-promise changes.",
+    "Validate synthetic experiment selection against held-out, prospective real purchase outcomes before monetizing simulation scores.",
+    "Allocate experiments by the purchase decision they can change within stock and selling constraints, with equal-budget comparator trials."
+  ],
+  "ideas": [
+    {
+      "id": "searchpilot-01",
+      "title": "Re-test conversion when discovery changes the audience",
+      "lens": "measurement",
+      "buyer": "Enterprise ecommerce experimentation lead with a substantial, identifiable AI-referral cohort",
+      "problem": "A discovery change can recruit a different audience, so multiplying its traffic effect by a conversion result from an earlier visitor mix can approve an unprofitable rollout.",
+      "mechanism": "Enabling decision layer across discovery and purchase: detect changed audience composition, verify actual retained purchases in the new cohort, and withhold changes whose apparent traffic gain loses more orders than it creates.",
+      "intervention": "Add a predeclared second-cohort purchase validation to an existing full-funnel workflow. Store assignment, acquisition provenance, landing product family, completed order, cancellation and return state. Estimate cohort-specific effects and their uncertainty rather than automatically transporting a pooled CRO effect.",
+      "competitorOverlap": "SearchPilot already has randomized CRO, combined net-conversion analysis and segmented revenue models. Shopify Rollouts supplies native live experiments. The proposed edge is explicit validation after audience change, not inventing full-funnel testing. SearchPilot's private treatment of transport is unknown.",
+      "edgeHypothesis": "When discovery materially changes the mix of shoppers, this policy chooses deployments that produce more retained AI-labelled orders than the incumbent rollout policy at the same program budget.",
+      "dataNeeded": [
+        "Pre-treatment source and device definitions",
+        "Consented first-party shopper assignment and stable order IDs",
+        "Product-family and visitor-mix history",
+        "Order, cancellation, return and contribution data",
+        "Existing decision policy and deployment cost"
+      ],
+      "experiment": "Randomize matched independent catalog-family portfolios to incumbent full-funnel decisions or the added cohort-validation policy, keeping candidate changes and budget comparable. Within the added validation phase, randomize eligible returning and new AI-labelled shoppers to the original or candidate experience with a separately fixed crawlable version. Primary endpoint: retained AI-labelled orders per assigned portfolio over a fixed 12-week horizon, followed by return-window maturity. Precompute power using cluster counts and purchase rates; extend or declare inconclusive if sparse. Guardrails: all-channel retained orders, paid-media changes, latency and support complaints. Analyze any user-signal feedback into discovery as interference rather than assuming it vanishes.",
+      "metric": "Policy intention-to-treat difference in retained AI-labelled orders per preassigned portfolio-week. The within-cohort purchase rate uses all shoppers assigned before treatment, including abandoners. This identifies the observable cohort, not all hidden AI influence.",
+      "impactEvidence": "Hypothesized. sp-fullfunnel and sp-agentic establish existing combined analysis; sp-guardrails documents sparse purchase evidence. sp-omio is adjacent traffic evidence only.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen example: 20,000 identifiable AI arrivals/month, 3% order rate and 90% retention, giving 540 kept orders.",
+        "calculation": "If a candidate produces 10% more arrivals but only 2.4% order rate at the same retention, 22,000 * 0.024 * 0.90 = 475.2 expected kept orders. A traffic-only translation at unchanged conversion would instead imply 594. Avoiding this candidate prevents 64.8 expected lost orders under these assumptions, before validation cost.",
+        "range": "No empirical uplift range. The decision benefit is zero if cohort effects are stable, and negative if the additional delay withholds a useful change or its costs exceed prevented losses."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD 1,500/month for the additional decision service, conditional on merchant contribution recovered exceeding the fee and integration cost. SearchPilot's published Core price is an enterprise-budget proxy only and excludes commerce.",
+      "costControl": "Trigger revalidation only after a predeclared economically meaningful mix shift. Reuse existing assignment and order pipelines; do not run extra phases for every harmless change.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant order and returns integration",
+        "Enough independent product portfolios and AI-labelled purchases",
+        "A merchant-controlled experiment layer",
+        "Predeclared cohort-shift and stopping rules"
+      ],
+      "failureMode": "Purchase volume may be too low; missing source labels may vary with treatment; the later phase may face different demand; extra latency or rollout delay can cost more orders than it saves.",
+      "falsifier": "Across powered prospective portfolios, the new policy produces no more retained orders at the same total cost, or its incremental result disappears after prespecified cohort and return reconciliation.",
+      "sourceIds": [
+        "sp-fullfunnel",
+        "sp-fullfunnel-old",
+        "sp-agentic",
+        "sp-guardrails",
+        "sp-omio",
+        "shopify-rollouts",
+        "sp-pricing"
+      ]
+    },
+    {
+      "id": "searchpilot-02",
+      "title": "Count substitute families before declaring a catalog winner",
+      "lens": "algorithmic",
+      "buyer": "Multi-brand retailer or marketplace experimentation team with many interchangeable SKUs",
+      "problem": "A winning product page may take purchases from sibling products or control pages. SKU-level gains can therefore overstate additional merchant purchases.",
+      "mechanism": "Enabling layer for discovery and selection: group products that compete for the same shopping mission, measure merchant-level incremental orders, and deploy interventions that recruit or complete purchases rather than merely redistribute them.",
+      "intervention": "Build a substitution graph from consented aggregate co-view, comparison, switch and return/exchange histories plus product identity. Keep dense substitute families within an assignment unit, randomize matched families, and report recipient, donor and combined order effects with spillover diagnostics.",
+      "competitorOverlap": "SearchPilot already studies linked source and destination groups and discusses cross-page redistribution. This proposal extends assignment to observed shopper substitution, sibling variants and order outcomes. Cluster experimentation also exists in marketplace research; it is not a new statistical invention.",
+      "edgeHypothesis": "Substitution-aware assignment rejects more false merchant-growth wins without sacrificing enough statistical power to erase its commercial benefit.",
+      "dataNeeded": [
+        "Aggregate product switching and co-consideration graph",
+        "Stable variant and seller IDs",
+        "Orders covering all products in each family",
+        "Stock and promotion history",
+        "Cross-cluster browsing rates"
+      ],
+      "experiment": "Randomize matched substitute-family clusters to the same proposed discovery intervention or unchanged treatment. Primary endpoint: total retained merchant orders generated by the assigned families over at least eight weeks plus the return window. Define order-to-family allocation before launch and count a mixed basket once. Run a meta-experiment across portfolios comparing this design's rollout decisions with ordinary page splits. Use cluster-robust uncertainty, pre-period adjustment and boundary diagnostics; the effective sample is families, not URLs. Guardrails: all-channel order totals, stock depletion and spillovers.",
+      "metric": "Difference in retained orders per randomized family over a fixed horizon, accompanied by observed AI-labelled orders and all-channel totals. Do not divide by treatment-generated sessions or sum overlapping SKU effects.",
+      "impactEvidence": "Hypothesized purchase benefit. interference provides adjacent causal evidence that marketplace listing experiments can suffer interference. sp-linking proves SearchPilot already addresses some cross-page effects.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen illustration: 100,000 monthly category visits and 2,000 merchant orders across a substitute family.",
+        "calculation": "A treated SKU gains 100 orders while siblings lose 100, so merchant incrementality is 100 - 100 = 0 despite the SKU winner. If the sibling loss were 120, merchant impact would be -20; if it were 40, impact would be +60.",
+        "range": "These are accounting sensitivities, not predicted effects. The measurement product can have zero benefit when substitution is negligible and negative value if clustering makes useful tests too slow."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 2,000 per large catalog experiment. Break even only if the contribution from avoided false rollouts and better winners exceeds this fee and the loss of testing speed.",
+      "costControl": "Use sparse aggregate graphs and refresh clusters only after material assortment changes. Restrict graph complexity to boundaries that can alter a purchase decision.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Enough independent substitute families",
+        "Reliable cross-product order accounting",
+        "Consistent promotions and inventory logs",
+        "Merchant permission for aggregate behavioral data"
+      ],
+      "failureMode": "Substitution can cross the chosen boundaries; poor clustering can increase variance; broad category clusters may leave too few randomization units; external competitors remain unobserved.",
+      "falsifier": "Boundary-adjusted retained-order conclusions and prospective rollout value do not improve over ordinary page splits, or power loss prevents decisions within the selling horizon.",
+      "sourceIds": [
+        "sp-linking",
+        "sp-math",
+        "interference",
+        "openai-products"
+      ]
+    },
+    {
+      "id": "searchpilot-03",
+      "title": "Separate publication time from observed engine exposure",
+      "lens": "temporal",
+      "buyer": "Retailer feed-operations and experimentation teams testing frequently changing products",
+      "problem": "A merchant can publish a change while different engines still retrieve old information. An apparent null test may have little treatment exposure, or may finish after its offer expires.",
+      "mechanism": "Enabling infrastructure for discovery: distinguish an ineffective intervention from an unobserved one, allocate trials to offers with time to benefit, and keep stale claims from diverting shoppers into failed purchases.",
+      "intervention": "Create a version ledger linking merchant content and feed snapshots to acknowledgements, authorized crawler logs, permitted engine observations and the landing version. Precommit extend, retire and redeploy rules that use exposure coverage and remaining offer life. Preserve mandatory price and stock updates in every arm.",
+      "competitorOverlap": "SearchPilot already tracks Googlebot recrawls and forecast quality. OpenAI already documents feed uploads and updates. The proposed comparison is a cross-engine version and expiry policy tied to purchases; upload acceptance must not be represented as production exposure. Competitor support beyond public documentation is unknown.",
+      "edgeHypothesis": "At a fixed testing budget, distinguishing publication from observed exposure yields more useful purchase-generating deployments before offers expire.",
+      "dataNeeded": [
+        "Content hashes and deployment timestamps",
+        "Feed acknowledgements and exact submitted versions",
+        "Authorized bot/request logs and permitted retrieval samples",
+        "Offer validity, inventory and promotion dates",
+        "Orders and AI provenance available to the merchant"
+      ],
+      "experiment": "Randomize independent matched catalog-family portfolios to a fixed calendar testing policy or the exposure-aware policy. Primary endpoint: retained AI-labelled orders per assigned portfolio over the same 12-week horizon, with all-channel order guardrails. Retain intention-to-treat from random assignment even when an engine never refreshes; exposure-conditioned results are diagnostic. Do not switch a global product between treatment states faster than measured carryover permits. Power depends on portfolio count, referral purchases and exposure variation.",
+      "metric": "Retained orders from verifiable AI origins per fixed portfolio-horizon at equal program cost. Also report deployment-to-observation lag as a diagnostic, not as a purchase proxy or proof of full engine coverage.",
+      "impactEvidence": "Hypothesized. sp-product documents current recrawl tools and openai-onboarding documents delivery mechanisms. Neither proves our version policy causes purchase uplift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen example: 10,000 AI-labelled arrivals/month, 3% purchase rate, 90% retention; 2,000 arrivals occur while a useful change could still be exposed before expiry.",
+        "calculation": "If better scheduling exposes those 2,000 arrivals to a change that independently earns a hypothetical 0.3 percentage-point purchase improvement, extra retained orders = 2,000 * 0.003 * 0.90 = 5.4. This requires both a beneficial change and recoverable exposure time.",
+        "range": "Zero if engines do not expose the change sooner or it has no effect; negative if monitoring cost, delayed deployment or stale data exceeds recovered contribution. No general lift percentage is supported."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 750/month for one catalog. Merchant must verify that retained-order contribution recovered before expiry exceeds this price plus integration costs.",
+      "costControl": "Sample engines and versions adaptively, prioritizing changes near a decision deadline. Cache merchant snapshots and stop monitoring retired offers.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Authorized retrieval observations",
+        "Versioned feed and storefront integration",
+        "Known offer expiry and inventory state",
+        "A sufficiently long fixed experimental horizon"
+      ],
+      "failureMode": "Production engine exposure may remain unobservable; bots may not represent human-visible results; tests can be biased if the system drops unexposed assignments; global caches can contaminate groups.",
+      "falsifier": "The ledger cannot distinguish meaningful exposure states reliably, or a randomized policy trial produces no additional retained orders per budget compared with existing recrawl-aware practice.",
+      "sourceIds": [
+        "sp-product",
+        "openai-onboarding",
+        "openai-products"
+      ]
+    },
+    {
+      "id": "searchpilot-04",
+      "title": "Recover a missed delivery promise with verified alternatives",
+      "lens": "temporal",
+      "buyer": "Retailer with regional stock, collection options and deadline-sensitive AI referral traffic",
+      "problem": "The product selected during an AI conversation may no longer arrive by the shopper's required date when checkout starts, causing a lost order even when a suitable alternative is available.",
+      "mechanism": "Selection-to-purchase recovery: ask for the shopper's actual deadline, compare it with current fulfillment promises, and present an acceptable alternative before the shopper abandons or places an order that will be cancelled.",
+      "intervention": "At a merchant-owned landing or approved agent handoff, offer an optional need-by date and delivery region check. On a failed deadline, compare the exact variant, another verified equivalent, collection or a different fulfillment node. Explain price and product changes and require buyer confirmation before modifying the cart.",
+      "competitorOverlap": "Shopify already provides cart context, fulfillment options and checkout handoff; SearchPilot can test on-page changes. This is a specific recovery policy using those primitives, not a new cart or delivery-estimate invention. Existing retailers may already implement it.",
+      "edgeHypothesis": "For genuine deadline failures, a narrow verified recovery choice produces more on-time retained purchases than the retailer's standard out-of-stock or delivery message.",
+      "dataNeeded": [
+        "User-supplied deadline and delivery region",
+        "Authoritative inventory by node",
+        "Carrier and collection promise accuracy",
+        "Verified substitution constraints",
+        "Order fulfillment, cancellation and return outcomes"
+      ],
+      "experiment": "Randomize shoppers after they voluntarily provide a deadline but before the failure experience, stratified by region and device. Compare the current accurate availability experience with the verified alternatives. Primary endpoint: orders delivered by the stated date and retained through the return window per assigned eligible shopper. Start with six to eight weeks, then mature fulfillment and returns; power on the rare failure cohort before launch. Guardrails: promise misses, cost-to-serve, gross margin, substitution complaints and page latency. No invented urgency.",
+      "metric": "On-time retained orders divided by all assigned deadline-check shoppers, including those who buy nothing. Report the predeclared deadline-failure stratum separately. AI attribution uses a known referral or authenticated agent session.",
+      "impactEvidence": "Hypothesized. shopify-cart establishes implementation primitives, not prevalence or recovery lift. sp-conversations supplies only adjacent evidence that delivery constraints can matter in synthetic journeys.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen example: 10,000 identifiable AI arrivals/month, 3% ordinary order rate, 8% deadline-failure prevalence, 90% retention.",
+        "calculation": "If the intervention creates a hypothetical 5 percentage-point increase in on-time completed purchases within the 800 failures, extra retained orders = 10,000 * 0.08 * 0.05 * 0.90 = 36, before additional fulfillment cost.",
+        "range": "Zero when no acceptable alternative exists or failures are rare; negative when unreliable promises or unsuitable substitutions cause cancellations, returns or lost trust."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot: USD 500/month plus fulfillment integration. At USD 25 contribution per additional retained order, at least 20 incremental orders/month are required just to cover the subscription.",
+      "costControl": "Query fulfillment only after a shopper requests a date check; reuse authoritative inventory services and compare a small verified alternative set.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable fulfillment promises",
+        "Merchant-controlled landing or approved agent integration",
+        "User confirmation of changed items",
+        "Order delivery and return tracking"
+      ],
+      "failureMode": "Carrier estimates may be unreliable; the original recommendation may carry undisclosed constraints; alternatives can create choice overload or costly split shipments.",
+      "falsifier": "A powered trial shows no increase in on-time retained purchases, or fulfillment cost and complaint increases offset the additional contribution.",
+      "sourceIds": [
+        "shopify-cart",
+        "sp-conversations",
+        "sp-merchant"
+      ]
+    },
+    {
+      "id": "searchpilot-05",
+      "title": "Prove compatibility with the shopper's existing equipment",
+      "lens": "behavioral",
+      "buyer": "Electronics, appliance-parts or hobby-equipment merchant with authoritative compatibility data",
+      "problem": "AI may suggest an accessory that sounds suitable but does not work with the shopper's exact model or revision. Uncertainty loses sales; mistaken confidence produces returns.",
+      "mechanism": "Selection and post-purchase quality: explicit model verification removes unresolved fit questions, redirects confirmed mismatches to valid alternatives, and increases the number of purchases that actually work and remain kept.",
+      "intervention": "Build a compatibility check using user-entered model identifiers and manufacturer-supported rules with source and revision dates. Return compatible, incompatible or unknown; explain required adapters and check their stock. Attach the check to the selected variant and order. Initially exclude safety-critical equipment.",
+      "competitorOverlap": "Google supports manuals and related-product required-part references; Lily enriches product data; Constructor already validates recommendations against catalogs. The edge is an auditable compatibility verdict and measured kept-order outcome, not basic Q&A, attribute extraction or recommendations.",
+      "edgeHypothesis": "For shoppers with unresolved compatibility concerns, verified model-level answers create more retained compatible purchases than ordinary PDP specifications or generic conversational advice.",
+      "dataNeeded": [
+        "Manufacturer compatibility tables and manuals",
+        "Variant, model and hardware revision IDs",
+        "Required-part inventory",
+        "User-entered equipment identifier with consent",
+        "Compatibility return and support reasons"
+      ],
+      "experiment": "Randomize eligible AI-labelled shoppers before presenting the compatibility option to existing specifications or the verified check. Primary endpoint: retained purchases with no compatibility-related return per assigned shopper. Run at least eight weeks plus the normal return window, with power estimated from baseline failures and order rate. Guardrails: false compatible verdicts, support burden, checkout friction and substitution price changes. Audit verdict accuracy before any live test.",
+      "metric": "Retained compatible orders divided by all preassigned eligible shoppers. Report voluntary checker usage only as a mediator; do not count a higher success rate among self-selected users as causal uplift.",
+      "impactEvidence": "Hypothesized. google-conversation and constructor-agent establish adjacent capabilities; no source establishes our compatibility lift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen example: 5,000 AI-labelled accessory shoppers/month, 2% purchase rate, and 20% with an unresolved compatibility concern.",
+        "calculation": "If the 1,000 concern cases gain a hypothetical 2 percentage-point completed-purchase improvement and 95% of those additional orders are retained, contribution is 1,000 * 0.02 * 0.95 = 19 additional kept orders. Avoided returns on existing orders must be reported separately to avoid double counting.",
+        "range": "Zero if specifications already resolve compatibility; negative if unknowns are incorrectly treated as incompatible, source data is wrong or the check adds friction."
+      },
+      "willingnessToPay": "Unvalidated pilot price: USD 600/month for one equipment category. A merchant with USD 30 contribution per incremental kept order needs 20 such orders/month before data maintenance costs.",
+      "costControl": "Start with a category where compatibility is structured and concerns are frequent. Reuse deterministic rules and refresh only changed model families.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Licensed or merchant-authorized compatibility evidence",
+        "Exact model resolution",
+        "Variant-level inventory",
+        "Return-reason quality and expert audits"
+      ],
+      "failureMode": "Manufacturer data may omit revisions or undocumented combinations; conservative unknown handling may suppress valid sales; broad natural-language matching can assert false compatibility.",
+      "falsifier": "Verified verdict accuracy is inadequate, or a powered trial fails to improve retained compatible purchases enough to cover expert maintenance and integration.",
+      "sourceIds": [
+        "google-conversation",
+        "constructor-agent",
+        "lily-max",
+        "openai-products"
+      ]
+    },
+    {
+      "id": "searchpilot-06",
+      "title": "Merge agent cart edits without losing an approved choice",
+      "lens": "infrastructural",
+      "buyer": "Merchant or commerce-platform team supporting carts across agents, conversations and devices",
+      "problem": "A stale agent can replace a newer cart state, dropping a previously chosen item or restoring an unwanted quantity. The shopper reaches checkout with a basket that no longer reflects their choices.",
+      "mechanism": "Checkout completion: preserve approved choices across concurrent edits, reduce rework and mistaken baskets, and recover purchases that would otherwise be abandoned or cancelled.",
+      "intervention": "Implement a merchant-side revision ledger around cart updates, with latest-state reads, per-item change comparison and conflict handling. Automatically merge only demonstrably non-conflicting edits. Ask the buyer to confirm removed items, changed quantities or substitutions; retain idempotent checkout and order reconciliation.",
+      "competitorOverlap": "Shopify already offers persistent carts, continue_url, attribution transfer and idempotent cart-to-checkout conversion. Its cart update has full replacement semantics. Native implementations may already handle concurrency; the intervention must beat a correct native baseline, not an intentionally broken integration.",
+      "edgeHypothesis": "For real multi-context cart conflicts, explicit revision reconciliation increases retained completed baskets without making ordinary checkout slower.",
+      "dataNeeded": [
+        "Cart revision and request provenance",
+        "Buyer-authorized item changes",
+        "Order and checkout identifiers",
+        "Aggregate conflict incidence",
+        "Abandonment, cancellation and returns"
+      ],
+      "experiment": "First use owned sandbox carts to verify conflict detection. Then randomize eligible shopper accounts or first-party sessions, not individual cart requests, to the current correct native integration or reconciliation service. Primary endpoint: retained completed baskets per assigned shopper over eight weeks plus the return window. Predeclare a conflict-prone stratum based on pre-treatment behavior. Power on shoppers and conflict prevalence; guardrails include duplicate orders, accidental deletions, added confirmation steps and latency. Never create paid orders for synthetic agents.",
+      "metric": "Retained purchases per preassigned shopper, with one order counted once after idempotency reconciliation. Lost-item incidence and recovered-cart clicks are diagnostic only. Use authenticated agent origin or observed AI referral without cross-site identity inference.",
+      "impactEvidence": "Hypothesized. shopify-cart provides direct protocol evidence for full-state updates and existing protections, but does not prove current merchants suffer this failure or that our layer improves purchases.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen example: 10,000 identifiable agent-origin shoppers/month, 2% experiencing a real cart conflict, and 90% retention on completed orders.",
+        "calculation": "If resolving those 200 conflicts creates a hypothetical 10 percentage-point completion improvement, additional retained purchases = 10,000 * 0.02 * 0.10 * 0.90 = 18.",
+        "range": "Zero if the native stack already prevents conflicts or prevalence is negligible; negative if confirmations and latency lose more orders than reconciliation recovers."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 400/month per integration. With USD 25 contribution per additional retained basket, 16 recovered purchases/month cover the fee before engineering costs.",
+      "costControl": "Perform comparisons only when a revision mismatch occurs. Store compact item-state deltas with a bounded retention period rather than entire conversation histories.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant-side cart interception or revision support",
+        "Authenticated or consented first-party continuity",
+        "Order idempotency and reconciliation",
+        "Accurate representation of authorized edits"
+      ],
+      "failureMode": "A platform may not expose enough revision information; a single writer may eliminate the problem already; conflicts could be legitimate shopper changes; extra friction can overwhelm a rare benefit.",
+      "falsifier": "An audit finds negligible conflicts in correct native integrations, or randomized shoppers do not complete and retain more purchases after added friction and operating cost.",
+      "sourceIds": [
+        "shopify-cart",
+        "openai-checkout",
+        "google-ucp"
+      ]
+    },
+    {
+      "id": "searchpilot-07",
+      "title": "Keep seller promises attached to the selected offer",
+      "lens": "identity",
+      "buyer": "Marketplace, authorized reseller network or multi-seller merchant handling AI-origin orders",
+      "problem": "A product-level recommendation can blur seller-specific condition, warranty and return promises. A shopper may be handed a different offer from the one whose terms justified the choice.",
+      "mechanism": "Offer selection to purchase: preserve the identity of the actual seller and their verified promises, reduce surprise at checkout, and prevent avoidable abandonment, cancellation and disputes.",
+      "intervention": "Bind product, variant, seller and offer IDs to verified condition, warranty-provider and policy-version records. At a seller or offer change, show which terms changed and request confirmation. Resolve missing terms as unknown; never infer authorized-dealer status from branding or a GTIN.",
+      "competitorOverlap": "OpenAI's checkout contract already uses selected merchant offer IDs and authoritative merchant data. Its feed schema already separates brand and seller. Google and native commerce systems already represent offer-level policies. The edge is tested continuity of seller-specific promises, not entity mapping itself; incumbent support may be broader than public sources.",
+      "edgeHypothesis": "In journeys with multiple valid sellers or conditions, explicit promise continuity produces more retained purchases and fewer disputes than the existing product-to-offer handoff.",
+      "dataNeeded": [
+        "Verified seller legal/display identity",
+        "Product, variant and offer mappings",
+        "Merchant or manufacturer-confirmed warranty terms",
+        "Condition and return-policy versions",
+        "Handoff, checkout, disputes and returns"
+      ],
+      "experiment": "Randomize shopper-level eligible multi-offer journeys to the existing compliant handoff or the continuity check. Hold product availability and mandatory disclosures constant. Primary endpoint: retained completed orders per assigned journey over eight weeks plus return maturity; guardrails include seller-confusion complaints, disputes, price, confirmation abandonment and unauthorized-claim incidence. Stratify by observed offer switches without selecting the primary sample after treatment. OpenAI beta access is a dependency for inline checkout; merchant-owned referral pages can be tested sooner.",
+      "metric": "Retained merchant orders per assigned eligible shopper; report product-level demand, seller switching and destination retailer separately. A sale merely transferred among the buyer's own sellers is not automatically incremental marketplace demand.",
+      "impactEvidence": "Hypothesized. openai-checkout and openai-products establish native identity requirements. No direct evidence was found for retained-order uplift from the proposed promise continuity layer.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen example: 20,000 identifiable AI-origin offer journeys/month, 5% with genuinely ambiguous or changed seller terms, 90% retention.",
+        "calculation": "If the 1,000 affected journeys gain a hypothetical 3 percentage-point completion improvement, incremental retained orders = 20,000 * 0.05 * 0.03 * 0.90 = 27. Dispute reduction is counted separately from added orders.",
+        "range": "Zero if current handoffs already preserve terms; negative if extra choice prompts reduce completion or the verification data is wrong."
+      },
+      "willingnessToPay": "Unvalidated pilot: USD 800/month for a multi-seller catalog. At USD 40 contribution per additional retained order, 20 incremental orders/month cover the fee before verification operations.",
+      "costControl": "Verify at seller-policy-version level and reuse results across relevant offers. Refresh on changes instead of asking an LLM to regenerate promises per session.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Authoritative seller-policy records",
+        "Stable offer IDs across systems",
+        "Buyer confirmation when terms change",
+        "Approved integration access where required"
+      ],
+      "failureMode": "The merchant may lack reliable warranty authority; offer identity can change unexpectedly; policy complexity may overwhelm shoppers; the service may simply expose unattractive terms and reduce purchases.",
+      "falsifier": "A powered test produces no retained-order gain or higher disputes, or most observed ambiguities cannot be resolved from reliable evidence.",
+      "sourceIds": [
+        "openai-checkout",
+        "openai-products",
+        "google-returns"
+      ]
+    },
+    {
+      "id": "searchpilot-08",
+      "title": "Explain the actual return cost for this exact item",
+      "lens": "psychological",
+      "buyer": "Merchant selling products with country, condition or SKU-specific return exceptions",
+      "problem": "A shopper who reached a product through AI can remain uncertain about the practical downside of buying: who pays return postage, where it goes, whether a fee applies and how the refund works.",
+      "mechanism": "Comprehension and purchase: accurately resolve relevant return uncertainty before commitment so suitable buyers can decide, while avoiding misleading reassurance that creates refunded orders later.",
+      "intervention": "Compile merchant-approved policy data into a short item-specific return scenario using the shopper's voluntarily supplied country and intended condition. Show the applicable deadline, known costs, refund form and uncertainty. Keep the underlying policy accessible and synchronized with offer-level data.",
+      "competitorOverlap": "Google already supports offer overrides, return costs and refund forms; SearchPilot can test content and schema. This is a test of policy resolution and comprehension at the decision moment, not a claim to invent return-policy markup. Exact competitor automation is unknown.",
+      "edgeHypothesis": "A concise accurate scenario produces more retained AI-origin purchases than the existing accurate policy link or generic summary, particularly when exceptions make the generic summary unhelpful.",
+      "dataNeeded": [
+        "Merchant-reviewed return rules and precedence",
+        "Country, condition and SKU exceptions",
+        "Fee, label and refund-form data",
+        "Purchases and returns by reason",
+        "Policy comprehension and support contacts"
+      ],
+      "experiment": "Randomize AI-labelled eligible shoppers before showing policy content to the existing fully compliant disclosure or the resolved scenario. Never omit legally required information from control. Primary endpoint: retained orders per assigned shopper after the applicable return window; intermediate purchase rate and comprehension are secondary. Recruit over six to eight weeks or the precomputed sample needed, then allow maturation. Guardrails: complaints, incorrect eligibility statements, return rates, support load and accessibility. This is factual policy rendering, not legal advice.",
+      "metric": "Orders not cancelled or returned divided by all preassigned eligible shoppers. Report initial purchase lift and subsequent losses separately; a higher purchase rate with no retained-order gain does not meet the objective.",
+      "impactEvidence": "Hypothesized. google-returns establishes native data representation and precedence, not psychological or purchase effects. sp-agentic already emphasizes return rates in business measurement.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen example: 10,000 AI-labelled shoppers/month, 3% initial purchase rate and 15% returns/cancellations, giving 255 retained orders.",
+        "calculation": "A hypothetical treatment with 3.15% initial purchases and 14% returns yields 10,000 * 0.0315 * 0.86 = 270.9 retained orders, an increase of 15.9. At 20% returns instead, retained orders would be 252, a loss of 3.",
+        "range": "The numbers are sensitivity cases, not forecasts. Zero or negative effects are plausible when the policy is already understood, less attractive than expected, or rendered incorrectly."
+      },
+      "willingnessToPay": "Unvalidated pilot price: USD 300/month for one market. At USD 25 contribution per extra retained order, 12 additional retained orders/month cover the fee before policy-maintenance costs.",
+      "costControl": "Use deterministic policy resolution and preapproved language. Refresh only changed policies; avoid per-view model generation.",
+      "feasibility": "now",
+      "dependencies": [
+        "Merchant-owned, reviewed return data",
+        "Offer and country resolution",
+        "Reliable cancellation and return measurement",
+        "Compliance review for the markets actually served"
+      ],
+      "failureMode": "Conflicting configuration precedence can produce wrong statements; a scenario can oversimplify exceptions; visible restrictions may discourage purchases; return windows delay evidence.",
+      "falsifier": "After return maturity, a powered test shows no retained-order improvement or the error/support cost outweighs incremental contribution.",
+      "sourceIds": [
+        "google-returns",
+        "sp-merchant",
+        "sp-agentic"
+      ]
+    },
+    {
+      "id": "searchpilot-09",
+      "title": "Buy evidence only when it can change an order decision",
+      "lens": "algorithmic",
+      "buyer": "Enterprise experimentation leader allocating a fixed seasonal conversion budget",
+      "problem": "A statistically detectable traffic test can be commercially trivial or finish after stock runs out, while a smaller but decision-relevant purchase uncertainty receives no attention.",
+      "mechanism": "Enabling allocation layer: spend testing and engineering effort where resolving uncertainty can change a deployment with substantial remaining purchase value, increasing retained orders produced by the same budget.",
+      "intervention": "Add a transparent value-of-information policy using remaining selling days, stock, plausible kept-order effects, contribution, implementation cost and uncertainty. Choose among further observation, a bounded rollout, abandonment or another intervention. Keep priors auditable and prevent synthetic-agent scores from masquerading as purchase evidence.",
+      "competitorOverlap": "SearchPilot already offers power/readiness tools, commercial confidence thresholds, consultants and finance-aligned revenue models. Lily Max already runs goal-based optimization. The testable edge is a stock- and deadline-constrained allocation policy, not generic prioritization or Bayesian decision-making.",
+      "edgeHypothesis": "For a fixed portfolio budget and selling horizon, the policy generates more retained AI-labelled purchases than the buyer's current expert prioritization without harming total merchant purchases.",
+      "dataNeeded": [
+        "Candidate intervention costs and rollback costs",
+        "Remaining inventory and replenishment lead times",
+        "Expiry and campaign calendars",
+        "Merchant-calibrated effect distributions and uncertainty",
+        "Order contribution, returns and current program decisions"
+      ],
+      "experiment": "Randomize independent category portfolios or merchant teams to existing expert prioritization or the proposed policy with equal budgets and prespecified candidate menus. Primary endpoint: incremental retained AI-labelled orders over a fixed quarter, using within-portfolio controls for deployed changes. Measure all-channel retained-order contribution as a guardrail. Block by traffic, seasonality and stock risk. Effective sample is portfolios or teams, not tests; expect a multi-merchant or long pilot if units are few. Predeclare what happens when no policy can obtain adequate evidence.",
+      "metric": "Intention-to-treat retained AI-labelled order gain per assigned portfolio at equal cash and engineering budget, with net contribution and total merchant orders reported. Lower compute expense alone does not count as success.",
+      "impactEvidence": "Hypothesized. sp-math, sp-product and sp-agentic establish sophisticated incumbent decision support. The improvement must be demonstrated prospectively; no conversion percentage is supported.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen budget illustration: USD 10,000 per portfolio-quarter, USD 25 contribution per retained order and USD 1,000 incremental software/analysis cost.",
+        "calculation": "The new policy must create more than 1,000 / 25 = 40 additional retained orders beyond the existing policy merely to cover its extra cost. Stock, traffic and effect assumptions remain merchant inputs; no traffic uplift is assumed.",
+        "range": "No forecast range. Benefit is zero when both policies choose the same work, and negative when incorrect priors, delayed evidence or false stock forecasts displace better interventions."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 1,000 per portfolio-quarter. Price discovery should compare this fee with prospectively measured additional contribution, not with avoided API tokens alone.",
+      "costControl": "The policy explicitly values the next observation and stops spending when it cannot change a profitable decision. Reuse historical evidence only when the current merchant and intervention are sufficiently comparable.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "Enough independent portfolios for validation",
+        "Reliable inventory and contribution data",
+        "Transparent priors and calibrated uncertainty",
+        "Merchant authority to change the testing queue"
+      ],
+      "failureMode": "Priors can dominate sparse AI data; promising new ideas can be starved by conservative estimates; stock forecasts may be wrong; the policy can overfit past seasonal winners.",
+      "falsifier": "At equal budget, prospective portfolios fail to produce more retained orders or net contribution than the expert policy, including the cost of the new decision system.",
+      "sourceIds": [
+        "sp-math",
+        "sp-product",
+        "sp-agentic",
+        "sp-guardrails",
+        "lily-max"
+      ]
+    },
+    {
+      "id": "searchpilot-10",
+      "title": "Make the simulator earn its right to choose live tests",
+      "lens": "measurement",
+      "buyer": "Merchant experimentation platform or agency considering a synthetic-shopping product",
+      "problem": "A simulator can prefer text or rankings that influence its own agents but do not change production AI discovery or human purchases. Repeated runs can give precise answers to the wrong question.",
+      "mechanism": "Enabling selection layer: calibrate simulated failure diagnoses against held-out live purchase experiments, use only the parts that improve intervention selection, and allocate scarce live tests to changes that produce more real retained orders.",
+      "intervention": "Create a versioned benchmark of frozen tool responses, distinct consented shopping intents and merchant interventions paired with blinded live purchase results. Measure selection accuracy and calibration across held-out merchants and model versions. Treat rank swaps as oracle sensitivities, not deployable actions. Gate use of simulator recommendations on prospective portfolio performance.",
+      "competitorOverlap": "SearchPilot already published a multi-turn shopper toy experiment. Shopify SimGym provides synthetic shopper/theme comparisons, and Rollouts offers live experiments. Lily Max already links hypotheses to tests. The proposed advantage is validated simulation-to-purchase transfer, not simulation plus A/B testing.",
+      "edgeHypothesis": "A simulator that passes merchant-held-out validation can select a portfolio with more incremental retained AI-origin orders than experts or random selection at the same total testing budget.",
+      "dataNeeded": [
+        "Frozen retrieval/tool payloads and version hashes",
+        "Distinct real shopping missions with consent and no sensitive profiling",
+        "Merchant-owned intervention definitions",
+        "Blinded randomized purchase outcomes and return states",
+        "Model, tool, engine and cost versions"
+      ],
+      "experiment": "First freeze training and evaluation merchants before viewing outcomes. Then randomize independent merchant/category portfolios to expert-selected, randomly selected or simulator-selected feasible interventions, each with equal live testing and engineering budgets. Randomize the underlying merchant interventions at shopper or catalog-family level as appropriate. Primary endpoint: total incremental retained AI-labelled orders across the portfolio over a prespecified quarter plus returns, not synthetic recommendation share. Power on portfolios and real purchases; 50 reruns of one persona are not 50 consumer observations. Guardrails: all-channel orders, harmful recommendations and implementation cost.",
+      "metric": "Prospective portfolio difference in incremental retained AI-labelled orders at equal cost. Held-out ranking accuracy is a prerequisite diagnostic. Report observable AI provenance only, and never label offline simulated recommendation rates as current ChatGPT rates.",
+      "impactEvidence": "Hypothesized. sp-conversations is direct evidence of research overlap but no purchase validation. shopify-simgym is product overlap and explicitly warns of behavioral differences; shopify-rollouts supplies live testing primitives.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen example: ten equal-cost candidate live-test slots per quarter. Existing selection finds two useful interventions, each producing 30 incremental retained orders over the fixed horizon.",
+        "calculation": "If simulator selection finds three equally valuable interventions, the difference is (3 - 2) * 30 = 30 retained orders. At USD 25 contribution each this is USD 750 before simulator and integration cost. These assumed hit rates and effects require independent validation.",
+        "range": "Zero if both selectors find equivalent interventions; negative if simulated winners do not transfer, if it misses useful changes, or if generation cost exceeds the extra purchase value."
+      },
+      "willingnessToPay": "Unvalidated pilot price: USD 500 per merchant-quarter for experiment selection, conditional on benchmark and prospective lift. SimGym's USD 1.50 post-allowance comparison price makes raw simulation runs a weak pricing anchor.",
+      "costControl": "Reuse fixed payloads and paired random seeds for variance reduction, while sampling genuinely different intents. Stop resampling a persona once uncertainty is smaller than the next live-test decision requires.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "A sufficiently large independent live-experiment library",
+        "Permission to use shopping missions",
+        "Merchant-held-out and model-held-out evaluation",
+        "Live purchase/return instrumentation",
+        "No private production-engine replication claim"
+      ],
+      "failureMode": "Benchmark leakage, synthetic persona bias, model updates and merchant mismatch can create false transfer. A simulator can learn to predict traffic metrics while failing on retained orders.",
+      "falsifier": "Prospective equal-budget portfolios fail to outperform expert or random selection on retained purchases, even if simulated recommendation and add-to-cart rates improve.",
+      "sourceIds": [
+        "sp-conversations",
+        "shopify-simgym",
+        "shopify-rollouts",
+        "lily-max",
+        "sp-guardrails"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "sp-ai",
+      "title": "Drive visibility in AI search | Enhance your SEO with GEO | SearchPilot",
+      "url": "https://www.searchpilot.com/ai",
+      "type": "official-doc",
+      "claim": "Live GEO page-group testing on PDPs and PLPs; focuses on traffic after AI discovery. Does not establish a reusable purchase-lift percentage."
+    },
+    {
+      "id": "sp-merchant",
+      "title": "SEO A/B Testing for Google Merchant Center | SearchPilot",
+      "url": "https://www.searchpilot.com/merchant",
+      "type": "official-doc",
+      "claim": "Tests feeds, on-page content and schema; describes organic sessions, product-grid clicks and impressions."
+    },
+    {
+      "id": "sp-product",
+      "title": "How SearchPilot works & what SEO testing delivers",
+      "url": "https://www.searchpilot.com/what-we-do",
+      "type": "official-doc",
+      "claim": "Documents readiness, credible intervals, forecast diagnostics, publishing inspection and Googlebot recrawl analysis."
+    },
+    {
+      "id": "sp-pricing",
+      "title": "Pricing Plans | SearchPilot",
+      "url": "https://www.searchpilot.com/pricing",
+      "type": "official-doc",
+      "claim": "Checked 2026-09-29: Core from $37,500 annually for non-transactional sites; dollar currency unspecified on page. Commerce and Enterprise quote-only."
+    },
+    {
+      "id": "sp-omio",
+      "title": "GEO A/B Testing: SEO and GEO Are Not The Same",
+      "url": "https://www.searchpilot.com/geo-a-b-testing-seo-and-geo-are-not-the-same",
+      "type": "vendor-case",
+      "claim": "Omio reports +18% LLM sessions for USPs and a separate estimated -6.5% Google-session impact for key takeaways. Not purchase uplift."
+    },
+    {
+      "id": "sp-fullfunnel",
+      "title": "Announcement: We've improved how we run full funnel tests",
+      "url": "https://www.searchpilot.com/resources/blog/announcement-weve-improved-how-we-run-full-funnel-tests",
+      "type": "official-doc",
+      "claim": "Method update describes randomized-user CRO followed by SEO, Bayesian CRO analysis and combined net conversions. Updated 2025-04-07."
+    },
+    {
+      "id": "sp-fullfunnel-old",
+      "title": "What is Full-Funnel Testing? How we combine SEO and CRO testing",
+      "url": "https://www.searchpilot.com/resources/blog/what-is-full-funnel-testing-how-we-combine-seo-and-cro-testing",
+      "type": "official-doc",
+      "claim": "Explicit random user assignment; older explanation describes SEO then CRO, so phase order requires implementation diligence."
+    },
+    {
+      "id": "sp-math",
+      "title": "The Math Behind SearchPilot: How SEO A/B Testing Actually Works",
+      "url": "https://www.searchpilot.com/resources/blog/the-math-behind-searchpilot-how-seo-a/b-testing-actually-works",
+      "type": "official-doc",
+      "claim": "July 2026 description of optimized page bucketing, neural counterfactual model and commercial confidence thresholds; no public raw-data audit."
+    },
+    {
+      "id": "sp-guardrails",
+      "title": "The role of guardrail metrics in SEO testing",
+      "url": "https://www.searchpilot.com/resources/blog/guardrail-metrics",
+      "type": "official-doc",
+      "claim": "September 2026 article says conversions and LLM referrals can be too sparse for primary testing; documents decisions with secondary guardrails."
+    },
+    {
+      "id": "sp-conversations",
+      "title": "Buying journeys are conversations, not prompts",
+      "url": "https://www.searchpilot.com/resources/blog/conversations",
+      "type": "research",
+      "claim": "Vendor's 2026-09-23 toy conversation simulation: local shopper model and Gemini API, 12 runs for each of two personas. Not humans, purchases or a proven customer product."
+    },
+    {
+      "id": "sp-sports",
+      "title": "How this global sports brand generated $6M+ revenue uplift with SearchPilot",
+      "url": "https://www.searchpilot.com/global-sports-brand-customer-success-story",
+      "type": "vendor-case",
+      "claim": "Anonymous sports-brand summary claims $6m revenue from one test; public page lacks purchase calculation, AI attribution and reproduction data."
+    },
+    {
+      "id": "sp-agentic",
+      "title": "Agentic Commerce SEO: What Enterprise Ecommerce Teams Should Test Now",
+      "url": "https://www.searchpilot.com/resources/blog/agentic-commerce-seo-what-enterprise-ecommerce-teams-should-test-now",
+      "type": "official-doc",
+      "claim": "Explains finance-approved traffic-to-revenue translations; advises attention to margin, returns and business outcomes."
+    },
+    {
+      "id": "sp-linking",
+      "title": "Expanding Your Internal Linking Test Strategy",
+      "url": "https://www.searchpilot.com/resources/case-studies/expanding-your-internal-linking-test-strategy",
+      "type": "official-doc",
+      "claim": "Already evaluates link-source and link-recipient sections together. Our shopper-substitution proposal cannot claim first recognition of cross-page effects."
+    },
+    {
+      "id": "interference",
+      "title": "Reducing Interference Bias in Online Marketplace Pricing Experiments",
+      "url": "https://arxiv.org/abs/2004.12489",
+      "type": "research",
+      "claim": "Primary cluster-randomized marketplace research demonstrates interference can bias listing-level effects. Adjacent design evidence, not AI-commerce uplift."
+    },
+    {
+      "id": "shopify-simgym",
+      "title": "Shopify Help Center | SimGym",
+      "url": "https://help.shopify.com/en/manual/online-store/simgym",
+      "type": "official-doc",
+      "claim": "AI Research Preview simulates shoppers and add-to-cart. Published post-allowance prices: USD 0.75 single-theme and USD 1.50 comparison; warns real behavior may differ."
+    },
+    {
+      "id": "shopify-rollouts",
+      "title": "Shopify Help Center | Types of rollouts and changes",
+      "url": "https://help.shopify.com/en/manual/markets/rollouts/rollout-types",
+      "type": "official-doc",
+      "claim": "Grow+ experiments compare treatment/control with configurable allocation; theme, checkout/accounts and scoped catalog/discount changes already supported."
+    },
+    {
+      "id": "shopify-cart",
+      "title": "Carts and checkout for agents",
+      "url": "https://shopify.dev/docs/agents/carts-and-checkout",
+      "type": "official-doc",
+      "claim": "Native persistent carts, variant checkout links and handoff exist. Cart update uses full-state PUT semantics; checkout requirements and supported environments are scoped."
+    },
+    {
+      "id": "openai-onboarding",
+      "title": "Get Started",
+      "url": "https://developers.openai.com/commerce/guides/get-started",
+      "type": "official-doc",
+      "claim": "Approved-partner onboarding; recommends daily full feed plus updates during the day. Does not promise immediate visibility after upload."
+    },
+    {
+      "id": "openai-checkout",
+      "title": "Product checkout conversion spec",
+      "url": "https://developers.openai.com/plugins/guides/product-checkout-conversion-spec",
+      "type": "official-doc",
+      "claim": "Approved-partner beta; selected item and offer IDs must resolve authoritative merchant data. Basic offer identity and checkout are native."
+    },
+    {
+      "id": "openai-products",
+      "title": "Products",
+      "url": "https://developers.openai.com/commerce/specs/file-upload/products",
+      "type": "official-doc",
+      "claim": "Supported file schema distinguishes item/variant identity, seller, stock and product URL; unknown optional facts should not be fabricated."
+    },
+    {
+      "id": "google-conversation",
+      "title": "How to use conversational attributes - Google Merchant Center Help",
+      "url": "https://support.google.com/merchants/answer/17085370",
+      "type": "official-doc",
+      "claim": "Native question_and_answer, document_link and related_product support include manuals and required-part references."
+    },
+    {
+      "id": "google-returns",
+      "title": "Merchant Return Policy Structured Data (MerchantReturnPolicy) | Google Search Central | Documentation | Google for Developers",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/return-policy",
+      "type": "official-doc",
+      "claim": "Documents product-offer overrides, return costs, refund forms and configuration precedence. Schema support is not a legal assurance or display guarantee."
+    },
+    {
+      "id": "google-ucp",
+      "title": "Monitor and optimize your integration | Google Universal Commerce Protocol (UCP) Guide | Google for Developers",
+      "url": "https://developers.google.com/merchant/ucp/guides/tools/merchant-center/analytics",
+      "type": "official-doc",
+      "claim": "UCP dashboard already includes purchases, purchase rate and cancellations; report data is not yet available through Merchant API."
+    },
+    {
+      "id": "constructor-agent",
+      "title": "Learn about AI Shopping Agent",
+      "url": "https://docs.constructor.com/docs/products-ai-shopping-agents-learn-about-ai-shopping-agent",
+      "type": "official-doc",
+      "claim": "Existing conversational intent, catalog validation, multi-item recommendations and conversation history; no evidence here for our specific compatibility intervention."
+    },
+    {
+      "id": "lily-max",
+      "title": "How Lily Max Works | Agentic Product Intelligence",
+      "url": "https://www.lily.ai/how-it-works",
+      "type": "official-doc",
+      "claim": "Advertises feed/PDP/schema analysis, controlled variants, holdouts and approved deployment. Generic enrichment-to-experiment orchestration already overlaps."
+    }
+  ]
+}

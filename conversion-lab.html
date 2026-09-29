@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="A source-linked programme for testing whether AI commerce interventions cause more paid orders: 18 product analyses, 50 screened hypotheses, an experiment design and an editable value model.">
+  <title>From recommendation to paid order | Fieldnotes</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="conversion-lab.css">
+  <script defer src="vendor/marked.umd.js"></script>
+  <script defer src="conversion-data.js"></script>
+  <script defer src="conversion-lab.js"></script>
+</head>
+<body class="conversion-page">
+<a class="skip" href="#overview">Skip to the findings</a>
+<header class="site-header wrap">
+  <a class="wordmark" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>fieldnotes<span class="wordmark-sub">COMMERCE RESEARCH</span></span></a>
+  <nav aria-label="Research reports">
+    <a href="index.html">Original report</a>
+    <a href="competitive-deep-dive.html">Competitor deep dive</a>
+    <a href="conversion-lab.html" aria-current="page">Conversion research</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero conversion-hero wrap" aria-labelledby="page-title">
+    <div class="conversion-dateline"><span><span class="orange-dot" aria-hidden="true"></span> The conversion research</span><time id="research-date" datetime="2026-09-29">29 September 2026</time></div>
+    <div class="hero-heading">
+      <h1 id="page-title">Turn AI recommendations <br>into paid orders.</h1>
+      <div class="hero-deck">
+        <p>What to build, what the competition already does, and how to find out whether any of it changes a purchase.</p>
+        <p class="muted"><span data-product-total>18</span> product analyses. <span data-idea-total>50</span> screened hypotheses. A plan to test the commercial case.</p>
+        <a class="text-link" href="#ideas">Explore the hypotheses</a>
+      </div>
+    </div>
+    <figure class="hero-image conversion-image">
+      <img src="assets/experiment.png" alt="Two matching product bottles in parallel settings, one with an orange tag and one with a white tag" width="1536" height="1024" fetchpriority="high">
+      <figcaption class="conversion-image-caption">A controlled difference. An outcome that still needs measuring.</figcaption>
+    </figure>
+    <div class="hero-meta"><span>Public-source research, with source links and limits.</span><span>Research candidates. No merchant conversion trial has been run.</span></div>
+  </section>
+
+  <div class="report-layout wrap conversion-layout">
+    <aside class="chapter-rail">
+      <p class="rail-title">Inside this report</p>
+      <nav aria-label="Report chapters">
+        <a href="#overview">The verdict</a>
+        <a href="#harness">What the test can prove</a>
+        <a href="#existing">Already on the market</a>
+        <a href="#benchmarks">The product analyses</a>
+        <a href="#ideas">The selected ideas</a>
+        <a href="#value">Value and sample size</a>
+        <a href="#notes">Full research notes</a>
+      </nav>
+      <div class="rail-bottom">
+        <p>Recommendation, purchase and incremental purchase are different outcomes.</p>
+        <a href="#value">Model your assumptions</a>
+        <button class="quiet-button" id="print-report" type="button">Print the open sections</button>
+      </div>
+    </aside>
+
+    <div class="chapters">
+      <section class="chapter" id="overview" aria-labelledby="overview-title">
+        <p class="conversion-kicker">The verdict</p>
+        <h2 id="overview-title">Start with the purchase.</h2>
+        <p class="report-update">Newer findings and corrections to the earlier reports.</p>
+        <p class="lead">A product recommendation is a useful signal. The commercial question is whether an intervention produces orders that would otherwise not happen.</p>
+        <div class="conversion-scope">
+          <div><strong>What is researched</strong><p>Documented capabilities, published evidence and specific mechanisms worth testing.</p></div>
+          <div><strong>What is unproven</strong><p>Our conversion lift, customer willingness to pay and the transfer from a simulation to live shopping.</p></div>
+        </div>
+        <div id="overview-content" class="research-markdown"><p class="data-pending">The research text is loading.</p></div>
+      </section>
+
+      <section class="chapter" id="harness" aria-labelledby="harness-title">
+        <p class="conversion-kicker">The experiment design</p>
+        <h2 id="harness-title">Give each test a claim<br>it can actually support.</h2>
+        <p class="lead">A controlled replay can isolate a mechanism. A live merchant experiment has to establish the purchase effect.</p>
+        <div class="test-sequence" aria-label="Different kinds of evidence">
+          <div><span>Controlled replay</span><strong>Does the mechanism work here?</strong><p>Freeze the inputs, change one intervention and retain the trace.</p></div>
+          <div><span>Live observation</span><strong>Does it appear in the wild?</strong><p>Check real engines, actual eligibility and the observed shopper path.</p></div>
+          <div><span>Merchant experiment</span><strong>Does it cause more paid orders?</strong><p>Use a valid comparison, real purchases and economic guardrails.</p></div>
+        </div>
+        <div id="harness-content" class="research-markdown"><p class="data-pending">The experiment design is loading.</p></div>
+      </section>
+
+      <section class="chapter" id="existing" aria-labelledby="existing-title">
+        <p class="conversion-kicker">Already on the market</p>
+        <h2 id="existing-title">Check the baseline<br>before claiming the gap.</h2>
+        <p>Compare a proposed feature with the tools a merchant can already buy. A capability absent from the pages reviewed is unknown, not confirmed missing.</p>
+        <div id="matrix-content" class="research-markdown"><p class="data-pending">The competitor comparison is loading.</p></div>
+      </section>
+
+      <section class="chapter" id="benchmarks" aria-labelledby="benchmarks-title">
+        <p class="conversion-kicker">The product analyses</p>
+        <h2 id="benchmarks-title"><span data-product-total>18</span> products.<br>Ten ideas from each.</h2>
+        <p class="lead">Open a product to examine its offer, evidence, limits and every candidate idea developed from it.</p>
+        <p>These are commercial, workflow, native and specialist benchmarks. Selection does not establish that a business is profitable. Published results retain their original scope; a vendor case is not an expected lift for our product.</p>
+        <div class="library-controls product-controls" role="search" aria-label="Filter product analyses">
+          <label for="product-search">Find a product or problem<input id="product-search" type="search" placeholder="Search offers, mechanisms and ideas" autocomplete="off"></label>
+          <label for="product-type">Benchmark type<select id="product-type"><option value="">All types</option></select></label>
+        </div>
+        <div class="library-meta"><p id="product-count" role="status" aria-live="polite" aria-atomic="true">Loading product analyses.</p><button id="clear-products" class="reset-filters" type="button" hidden>Clear filters</button></div>
+        <div id="product-list" class="product-library"><p class="data-pending">The product library is loading.</p></div>
+      </section>
+
+      <section class="chapter" id="ideas" aria-labelledby="ideas-title">
+        <p class="conversion-kicker">The selected ideas</p>
+        <h2 id="ideas-title"><span data-idea-total>50</span> screened hypotheses.<br>A test for every claim.</h2>
+        <p class="lead">Search by the problem, buyer or mechanism. Open an idea for its intervention, existing alternatives, evidence, first experiment and a reason to stop.</p>
+        <p>Priorities are editorial judgments about what to investigate first. They are not measured success probabilities. The ideas overlap, and their possible effects must not be added together.</p>
+        <div class="library-controls idea-controls" role="search" aria-label="Filter selected ideas">
+          <label for="idea-search">Find an idea<input id="idea-search" type="search" placeholder="Try returns, checkout, identity or stock" autocomplete="off"></label>
+          <label for="idea-lens">Mechanism lens<select id="idea-lens"><option value="">All lenses</option></select></label>
+          <label for="idea-horizon">Build horizon<select id="idea-horizon"><option value="">All horizons</option></select></label>
+        </div>
+        <div class="library-meta"><p id="idea-count" role="status" aria-live="polite" aria-atomic="true">Loading selected ideas.</p><button id="clear-ideas" class="reset-filters" type="button" hidden>Clear filters</button></div>
+        <div id="idea-list" class="idea-library"><p class="data-pending">The idea library is loading.</p></div>
+        <p class="library-print-note">Printing includes the detail of sections you have opened. The full source notes remain linked below.</p>
+      </section>
+
+      <section class="chapter" id="value" aria-labelledby="value-title">
+        <p class="conversion-kicker">Value and sample size</p>
+        <h2 id="value-title">What would a small lift<br>be worth here?</h2>
+        <p class="lead">Choose a merchant's baseline, the contribution from a completed order and a hypothetical effect. Then ask whether the value could support a fee, and whether the effect is measurable.</p>
+        <p>Every input below is an assumption, not a market average or a forecast. A price supported by this arithmetic is a price to test with a buyer; it is not evidence of willingness to pay.</p>
+
+        <div class="conversion-calculator">
+          <div class="calculator-heading"><h3>Your merchant scenario</h3><span>Editable assumptions · GBP</span></div>
+          <div class="conversion-inputs">
+            <label for="calc-visits">AI visits per month<input id="calc-visits" name="visits" type="number" min="0" step="100" value="5000" inputmode="decimal"></label>
+            <label for="calc-eligible">Share eligible for this intervention, %<input id="calc-eligible" name="eligible" type="number" min="0" max="100" step="1" value="100" inputmode="decimal" aria-describedby="eligible-help"></label>
+            <label for="calc-cvr">Eligible cohort's baseline conversion, %<input id="calc-cvr" name="conversion" type="number" min="0" max="100" step="0.1" value="2.5" inputmode="decimal"></label>
+            <label for="calc-contribution">Contribution per completed order, £<input id="calc-contribution" name="contribution" type="number" min="0" step="1" value="30" inputmode="decimal" aria-describedby="contribution-help"></label>
+            <label for="calc-uplift">Assumed relative conversion change, %<input id="calc-uplift" name="uplift" type="number" min="-100" step="1" value="5" inputmode="decimal" aria-describedby="uplift-help"></label>
+            <label for="calc-price">Proposed monthly product fee, £<input id="calc-price" name="price" type="number" min="0" step="1" value="99" inputmode="decimal"></label>
+            <label for="calc-multiple">Merchant value / fee multiple<input id="calc-multiple" name="multiple" type="number" min="0.1" step="0.5" value="3" inputmode="decimal"></label>
+            <div class="eligible-preview"><span>Eligible visits used in this model</span><output id="eligible-visits">5,000 / month</output></div>
+          </div>
+          <p id="eligible-help" class="calculator-help">Count only traffic that can benefit from this intervention. If 20% is eligible, the same relative lift produces one fifth of the value. Use that cohort's conversion rate, not the whole store's average.</p>
+          <p id="contribution-help" class="calculator-help">Contribution means the amount left after expected returns, cost of goods and fulfilment. Include other variable costs that change with an order.</p>
+          <p id="uplift-help" class="calculator-help">Relative change multiplies the baseline conversion rate. At 2.5%, a 5% relative lift produces 2.625% conversion, an increase of 0.125 percentage points. Negative changes are allowed.</p>
+          <p id="calc-status" class="calculator-status" role="status" aria-live="polite" aria-atomic="true"></p>
+          <dl class="value-results" aria-label="Calculated monthly value">
+            <div><dt>Baseline paid orders</dt><dd id="result-baseline">125</dd></div>
+            <div><dt>Extra paid orders</dt><dd id="result-orders">6.25</dd></div>
+            <div class="result-emphasis"><dt>Extra order contribution</dt><dd id="result-contribution">£187.50</dd></div>
+            <div><dt>Lift needed to cover the fee</dt><dd id="result-breakeven">2.64%</dd></div>
+            <div><dt>Value-based monthly fee ceiling</dt><dd id="result-ceiling">£62.50</dd></div>
+            <div><dt>Merchant benefit after the fee</dt><dd id="result-benefit">£88.50</dd></div>
+          </dl>
+          <p id="value-explanation" class="calculator-explanation"></p>
+          <details class="calculation-method"><summary>How these numbers are calculated</summary><div>
+            <p>Baseline orders = eligible monthly visits × baseline purchase conversion.</p>
+            <p>Extra orders = baseline orders × assumed relative change. Extra contribution = extra orders × contribution per completed order.</p>
+            <p>Break-even relative lift = proposed fee ÷ baseline order contribution. The fee ceiling divides extra contribution by the chosen value / fee multiple. If extra contribution is zero or negative, it supports no positive fee.</p>
+            <p>Merchant benefit = extra contribution minus the proposed fee. These outputs assume the intervention caused the entire conversion change and the contribution per order stayed the same. They omit fixed implementation costs unless you account for those separately.</p>
+          </div></details>
+        </div>
+
+        <figure class="sensitivity-figure" aria-labelledby="sensitivity-title">
+          <div class="calculator-heading"><h3 id="sensitivity-title">Same baseline. Different assumed effects.</h3><span>Sensitivity, not a forecast</span></div>
+          <p>The rows hold your traffic, conversion rate and order contribution constant. They do not represent four independent opportunities.</p>
+          <div class="conversion-table-scroll" tabindex="0" role="region" aria-label="Conversion sensitivity table">
+            <table class="sensitivity-table"><thead><tr><th scope="col">Relative lift</th><th scope="col">Extra orders / month</th><th scope="col">Extra contribution / month</th></tr></thead><tbody id="sensitivity-body"></tbody></table>
+          </div>
+          <figcaption>Bar lengths show extra monthly contribution under the chosen assumptions. Orders are expected averages, so fractions are possible.</figcaption>
+        </figure>
+
+        <div class="power-calculator">
+          <div class="calculator-heading"><h3>Could you measure that effect?</h3><span>80% power · 5% two-sided significance</span></div>
+          <p>This normal approximation uses the baseline and relative change above, equal allocation and independent purchase outcomes. It is a planning floor.</p>
+          <dl class="power-results">
+            <div><dt>Eligible observations per arm</dt><dd id="power-arm">Calculating</dd></div>
+            <div><dt>Total across both arms</dt><dd id="power-total">Calculating</dd></div>
+            <div><dt>Minimum months at your traffic</dt><dd id="power-months">Calculating</dd></div>
+          </dl>
+          <p id="power-status" class="calculator-explanation" aria-live="polite" aria-atomic="true"></p>
+          <p class="power-caveat">Repeat visits and product or merchant clusters reduce independence. Testing 50 hypotheses introduces multiplicity. Model reruns are not independent human shoppers. None of those adjustments, ramp-up time or the delay needed to observe returns is included here.</p>
+          <details class="calculation-method"><summary>Sample-size formula and limits</summary><div>
+            <p>For baseline probability p₁ and assumed probability p₂, let p̄ = (p₁ + p₂) / 2.</p>
+            <p class="formula">n per arm = ceil((1.95996398454 × √(2p̄(1 − p̄)) + 0.84162123357 × √(p₁(1 − p₁) + p₂(1 − p₂)))² / (p₂ − p₁)²)</p>
+            <p>Minimum months = 2n ÷ eligible monthly visits. This assumes the eligible visits represent independent units and are allocated equally. Zero change has no finite sample size in this model. Rates at 0% or 100% need a different planning method.</p>
+          </div></details>
+        </div>
+      </section>
+
+      <section class="chapter" id="notes" aria-labelledby="notes-title">
+        <p class="conversion-kicker">The source material</p>
+        <h2 id="notes-title">Follow the reasoning<br>back to the evidence.</h2>
+        <p>Read the full product assessments, divergent idea explorations and methods behind the synthesis. Notes open here and also have a direct file link.</p>
+        <p><a href="conversion-research/selected-ideas.csv" download>Download all 50 ideas as a spreadsheet</a> · <a href="conversion-research/selected-ideas.json">Structured ideas</a> · <a href="conversion-research/dedup-map.json">All 260 selection decisions</a> · <a href="conversion-research/candidate-inventory.json">Full candidate archive</a></p>
+        <div id="note-list" class="conversion-note-list"><p class="data-pending">The research notes are loading.</p></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="conversion-footer wrap"><a class="wordmark" href="index.html">fieldnotes</a><p>A research programme for the next decision.</p><a href="#top">Back to the top</a></footer>
+
+<dialog id="note-dialog" class="conversion-dialog" aria-labelledby="note-title">
+  <div class="conversion-dialog-header"><div><p>Research note</p><h2 id="note-title">Research note</h2></div><button id="note-close" type="button" aria-label="Close research note">Close <span aria-hidden="true">×</span></button></div>
+  <div class="conversion-dialog-actions"><a id="note-source" href="#notes" target="_blank" rel="noopener noreferrer">Open the Markdown file</a></div>
+  <div id="note-content" class="research-markdown conversion-note-content" tabindex="0"></div>
+</dialog>
+<noscript><div class="no-script-message wrap">The interactive libraries and calculator need JavaScript. Read <a href="conversion-research/selected-ideas.md">all 50 ideas</a>, <a href="conversion-research/harness-landscape.md">the harness study</a> or <a href="conversion-research/decision-brief.md">the product recommendation</a> as plain text.</div></noscript>
+</body>
+</html>

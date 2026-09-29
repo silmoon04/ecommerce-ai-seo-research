@@ -1,0 +1,580 @@
+{
+  "lens": "infrastructural",
+  "ideas": [
+    {
+      "id": "infrastructure-01",
+      "title": "Recover the exact basket when checkout leaves the agent",
+      "lens": "infrastructural",
+      "buyer": "Merchants with custom checkout extensions and commerce integrators handling AI-origin handoffs.",
+      "problem": "A buyer has chosen a variant, quantity, promotion, and delivery method, but a required browser step or unsupported embedded flow loses part of that state.",
+      "mechanism": "Checkout completion: preserve and reconcile the intended basket at a necessary handoff so buyers can finish an already chosen purchase. This cannot raise discovery or listing rank by itself.",
+      "intervention": "Add a merchant-owned recovery service around existing cart and continue_url APIs. Store a versioned basket, issue an opaque short-lived handoff token, read back the destination checkout, and compare variant, quantities, discounts, country, and fulfillment selection. Repair only supported missing state; show the buyer any changed total and obtain renewed confirmation. Select the supported native, embedded, or browser path using actual capability and eligibility information.",
+      "competitorOverlap": "UCP already defines stateful continue_url; Shopify already provides persistent Cart MCP and checkout handoff; OpenAI has a partner checkout-plugin beta. The edge cannot be owning a cart or redirecting it. Merchant-specific recovery coverage is unverified competition, not a claimed absence.",
+      "edgeHypothesis": "A tested adapter can reduce state-loss abandonment in combinations of checkout apps, mobile browsers, expired sessions, and partner widgets that the merchant's existing implementation does not cover.",
+      "dataNeeded": [
+        "Authenticated channel/session identifier or consented tagged referral",
+        "Basket version and selected offer IDs",
+        "Destination checkout readback",
+        "Paid order ID and 30-day cancellation/refund outcome"
+      ],
+      "experiment": "First replay historical state-loss cases in a sandbox. Then randomize eligible AI-origin shopper sessions before handoff, sticky by shopper where consent permits, to existing correctly configured handoff or reconciliation. Compare paid nonduplicate orders within 24 hours per assigned session. Run at least four weeks and to a pilot-powered sample; retain 30-day refund follow-up. Stratify by checkout extension and browser. Guardrails: buyer-visible total, unauthorized state changes, privacy, and checkout latency.",
+      "metric": "Intent-to-treat difference in 24-hour purchase probability among all assigned eligible handoff sessions, including people who never open the destination. Report restoration success separately; unknown-origin traffic is not silently labelled AI.",
+      "impactEvidence": "Hypothesized purchase effect. Existing handoff mechanisms are directly documented by ucp-checkout, shopify-carts, and openai-checkout; none provides a measured incremental effect for this repair service.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed session count, baseline conversion, or state-loss prevalence. Let N be eligible sessions, q state-loss share, r additional purchase recovery, and h purchases harmed per session.",
+        "calculation": "Additional purchases = N*(q*r-h); break-even retained orders = monthly fee / contribution margin per retained order, plus integration amortization.",
+        "range": "Zero if existing handoff preserves state; negative if restoration adds delay, alters the basket, or repeats buyer review."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP 1,000/month plus a fixed integration pilot, justified only by merchant-measured retained orders.",
+      "costControl": "Reuse native carts and opaque server-side state; run expensive reconciliation only at real handoffs and cache adapter capability metadata.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant checkout read/write access",
+        "Supported state restoration operations",
+        "Partner/platform approval for relevant checkout path",
+        "No automated bypass of buyer review or payment challenge"
+      ],
+      "failureMode": "The destination denies restoration, a promotion expires legitimately, or a repair overwrites a buyer change made after the token was issued.",
+      "falsifier": "A powered test finds no purchase advantage over the merchant's native handoff, or fewer missing fields do not translate into retained purchases.",
+      "sourceIds": [
+        "ucp-checkout",
+        "shopify-carts",
+        "openai-checkout",
+        "google-implementation"
+      ]
+    },
+    {
+      "id": "infrastructure-02",
+      "title": "Prevent an older stock update from replacing the newest offer",
+      "lens": "infrastructural",
+      "buyer": "Multichannel retailers whose scarce stock and prices change faster than their feed jobs complete.",
+      "problem": "An accepted update can be overtaken by an older asynchronous import, or a product can remain unavailable after restocking. Increasing upload frequency alone does not establish the state an agent actually reads.",
+      "mechanism": "Discovery and purchase validity: publish current sellable offers in order, reduce false out-of-stock omissions and stale in-stock recommendations, and verify stock again when a buyer commits. Gains depend on a material stale-state failure rate.",
+      "intervention": "Create one merchant-controlled publisher per destination and inventory pool with source sequence numbers, coalescing, explicit deletion handling, and single-flight import scheduling. Track source state, accepted destination state, and any independently observed live state separately. Reconcile readback where APIs permit it, repair old overwrites, and prioritize genuine availability changes without inventing destination freshness fields.",
+      "competitorOverlap": "Stripe ACS already supports targeted stock/price updates and live hooks; OpenAI supports partial product upserts and feed retrieval. Native import scheduling and managed feed vendors may already solve parts of this problem. The proposal tests ordered publication across all writers and cross-destination reconciliation.",
+      "edgeHypothesis": "For volatile multi-channel catalogs, controlling every writer and detecting divergent generations will outperform a well-configured periodic feed plus native live checks, especially when stale unavailability prevents checkout from starting.",
+      "dataNeeded": [
+        "OMS stock/price event sequence",
+        "Every destination import job and terminal result",
+        "Feed/API readback timestamp",
+        "Observed stale-offer incidents",
+        "Order outcomes across AI and other channels"
+      ],
+      "experiment": "Randomize matched merchants or wholly separate inventory-and-substitution pools to the current feed plus native hooks or ordered publication. Do not user-randomize a shared public feed. Run eight weeks after a measured propagation wash-in, with sample size based on merchant-level variance. Primary endpoint is AI-origin paid orders per assigned merchant-day, adjusted using a pre-period baseline; all-channel contribution and cancellations guard against displacement. Freeze source attribution before assignment.",
+      "metric": "Cluster intent-to-treat change in paid AI-origin orders and 30-day retained contribution. Stock disagreement minutes and source-to-acceptance lag are diagnostics, never proof of live-engine freshness.",
+      "impactEvidence": "Hypothesized. stripe-acs documents unordered imports and openai-products documents acceptance/readback mechanics. These establish a failure opportunity, not its prevalence or conversion cost.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Traffic, conversion, and stale-state prevalence are unmeasured. Let N be eligible shopping opportunities, q stale opportunities, r recoverable purchases per stale opportunity, and h new lost purchases per opportunity.",
+        "calculation": "Additional purchases = N*(q*r-h). Required monthly retained purchases = total monthly service and integration cost / retained-order contribution.",
+        "range": "Zero if native hooks already eliminate the relevant loss; negative if serialization delays valid updates or conservative suppression hides purchasable stock."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP 1,500/month for a volatile catalog spanning several agent destinations.",
+      "costControl": "Coalesce obsolete deltas, prioritize availability transitions, and use destination webhooks before polling; avoid spending on unchanged products.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Authoritative stock events",
+        "Control over all feed writers",
+        "Destination approval and quotas",
+        "Readback access with documented latency limits"
+      ],
+      "failureMode": "An unregistered writer bypasses ordering, or platform caches remain stale after every merchant-side check passes.",
+      "falsifier": "Audited stale-offer exposure is negligible, ordering does not reduce it, or the trial improves freshness without increasing retained purchases.",
+      "sourceIds": [
+        "stripe-acs",
+        "openai-feed",
+        "openai-products",
+        "stripe-hooks"
+      ]
+    },
+    {
+      "id": "infrastructure-03",
+      "title": "Reserve scarce stock only once the buyer starts committing",
+      "lens": "infrastructural",
+      "buyer": "Limited-stock retailers and resellers with long agent conversations before checkout.",
+      "problem": "Reserve-on-cart can tie up stock while an agent compares many products; reserve-on-order can lose the last unit while a buyer completes a necessary review or payment step.",
+      "mechanism": "Checkout completion: place a short real reservation at an explicit purchase-intent transition, protect it during required buyer review, and release it promptly after abandonment. Count losses imposed on other buyers as part of the effect.",
+      "intervention": "Build an intent-gated reservation coordinator over the merchant's existing reservation engine. Exploratory agent carts hold nothing. At a buyer-confirmed checkout step, atomically acquire the specific SKU/location reservation, disclose an honest expiry, and permit bounded renewal while a verified review action is active. Share the lease with the browser handoff and release it on completion, cancellation, or expiry.",
+      "competitorOverlap": "commercetools already offers expiring ReserveOnCart and on-demand reservations; native checkout inventory management is not novel. The proposed policy controls when agent browsing becomes a hold and how a hold survives legitimate review without hoarding.",
+      "edgeHypothesis": "A policy tuned to agent journey timing preserves more merchant-wide purchases than either blanket cart reservation or waiting until order placement.",
+      "dataNeeded": [
+        "Explicit checkout-intent event",
+        "Per-SKU/location reservation ledger",
+        "Competing channel demand",
+        "Hold renewal/release events",
+        "Paid orders, abandoned holds, and stockout cancellations"
+      ],
+      "experiment": "Randomize matched, nonoverlapping inventory pools or merchants among existing reservation policy and intent-gated holds; retain the same buyer-facing prices. Run at least six weeks spanning stock pressure and power using pool-level order variance. Primary endpoint: total retained paid orders per assigned pool-day; AI-origin retained orders are a prespecified co-primary only with multiplicity control. Track non-AI displacement, expired-hold errors, and unfair repeat renewals.",
+      "metric": "Incremental retained purchases across the entire stock pool, with an AI-origin breakdown. A higher conversion rate among reservation recipients alone would ignore buyers denied inventory.",
+      "impactEvidence": "Hypothesized. commercetools-stock verifies technical feasibility and incumbent overlap; no direct purchase experiment for the proposed agent-specific timing policy was found.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured stockout probability, reservation abandonment, or cross-channel displacement. Let R be recovered agent orders and D be orders displaced or delayed elsewhere.",
+        "calculation": "Net additional retained purchases = R-D; require net contribution greater than service cost and any inventory carrying cost.",
+        "range": "Zero if stock is abundant; negative if browsing agents hoard inventory or renewals exclude more valuable genuine demand."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP 2,000/month for high-stock-pressure merchants, contingent on an all-channel retained-order test.",
+      "costControl": "Use the commerce engine's atomic reservation primitive; no new hold on search, product opening, or repeated read requests.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Authoritative atomic reservation API",
+        "Explicit buyer purchase intent",
+        "Shared availability across every selling channel",
+        "Accurate cancellation and expiry processing"
+      ],
+      "failureMode": "A synthetic intent signal is mistaken for buyer commitment, holds extend indefinitely, or a displayed timer outlives the underlying reservation.",
+      "falsifier": "AI checkout recovery is entirely offset by lower sales elsewhere, or an existing on-demand reservation policy performs as well.",
+      "sourceIds": [
+        "commercetools-stock",
+        "ucp-checkout"
+      ]
+    },
+    {
+      "id": "infrastructure-04",
+      "title": "Finish an ambiguous order once after a lost response",
+      "lens": "infrastructural",
+      "buyer": "Merchants and payment integrators with intermittent timeouts across agent gateway, commerce engine, and payment processor.",
+      "problem": "A completion request times out after a downstream action may have succeeded. A safe implementation avoids charging again, but unresolved state can strand the buyer or require manual support.",
+      "mechanism": "Checkout completion and confidence: resolve whether the original authorized transaction succeeded, safely finish remaining work, and return the existing order receipt. Avoid both abandoned valid purchases and duplicate orders.",
+      "intervention": "Add a durable transaction coordinator with a single logical purchase ID mapped to native idempotency keys, authoritative checkout status, payment status, inventory commitment, and order ID. Recover by observing state and reconciling provider receipts. Respect accepted-in-progress states; never use a new completion request as polling or fail over to another processor while the original payment is ambiguous.",
+      "competitorOverlap": "UCP already specifies safe recovery and idempotency; Stripe demands idempotent approval handling. Basic retries are native requirements. The edge is verified reconciliation across heterogeneous merchant systems and faster recovery than the merchant's current safe manual process.",
+      "edgeHypothesis": "Cross-system state reconciliation can convert an unresolved checkout into one correctly completed purchase without increasing duplicate capture, duplicate fulfillment, or refund work.",
+      "dataNeeded": [
+        "Logical purchase ID and request digest",
+        "Native checkout and PSP status APIs",
+        "Order and inventory commitment events",
+        "Webhook timing/order",
+        "Buyer-visible recovery outcome"
+      ],
+      "experiment": "In a sandbox, inject response loss, delayed webhooks, and process restarts after each transaction boundary. Production assignment must never induce faults: randomize eligible AI-origin logical checkout sessions to existing safe recovery or the coordinator, and analyze naturally occurring incidents. Primary endpoint is nonduplicate paid orders within 24 hours per assigned session; extend beyond six weeks if fault prevalence leaves the test underpowered. Immediate stop for duplicate capture or unauthorized completion.",
+      "metric": "Intent-to-treat purchase difference across assigned sessions, plus time from ambiguous response to authoritative receipt and duplicate-charge rate. Incident-only analysis is secondary and must use fault definitions fixed before assignment.",
+      "impactEvidence": "Hypothesized conversion effect. ucp-checkout and stripe-hooks document the state and retry contracts; they do not measure demand lost to unresolved merchant-side transactions.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed timeout prevalence q, safe-recovery baseline, or eligible session volume N.",
+        "calculation": "Additional purchases = N*q*(treatment recovery probability-control recovery probability), less duplicate-order and cancellation harm. Break-even requires resulting retained contribution above operating cost.",
+        "range": "Zero when native recovery already resolves every incident promptly; negative if reconciliation mishandles a late success or repeats a side effect."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP 2,500/month for a merchant with documented ambiguous-order losses; no fee justification from total payment volume alone.",
+      "costControl": "Record compact state transitions continuously, fetch expensive provider histories only for unresolved purchases, and stop recovery at the transaction's terminal state.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable PSP and commerce status reads",
+        "Stable idempotency mapping",
+        "Merchant authority for original purchase only",
+        "Deterministic concurrency control"
+      ],
+      "failureMode": "Providers lack an authoritative lookup key, or a late payment event arrives after a false failure declaration.",
+      "falsifier": "No reduction in unresolved purchases beyond native recovery, or any material duplicate-charge increase.",
+      "sourceIds": [
+        "ucp-checkout",
+        "stripe-hooks",
+        "ucp-orders"
+      ]
+    },
+    {
+      "id": "infrastructure-05",
+      "title": "Keep approval decisions inside the platform deadline",
+      "lens": "infrastructural",
+      "buyer": "Merchants whose agent checkout hooks depend on several slow commerce services.",
+      "problem": "A shopper can be ready to pay while inventory, tax, address, or policy services exceed the external platform's response deadline.",
+      "mechanism": "Checkout completion: reduce technical declines and stale-data fallback while preserving the same inventory, price, and policy decision. The effect comes from returning an authoritative answer in time.",
+      "intervention": "Build a deadline-aware execution layer for checkout hooks. Map the dependency graph, run independent reads concurrently, maintain an event-updated stock read model, cache only facts with explicit validity bounds, reserve a final authoritative check, and return a supported recoverable state early when needed. Set internal latency budgets below the platform limit and measure timeout behavior by hook type.",
+      "competitorOverlap": "Stripe already exposes live hooks and Google provides latency logging. CDNs and application-performance tools already optimize speed. The proposed edge is a commerce-specific dependency plan that meets external deadlines without weakening decisions or serving stale stock.",
+      "edgeHypothesis": "Removing slow optional dependencies and parallelizing independent checks will recover paid orders now rejected for deadline misses, compared with the merchant's tuned native implementation.",
+      "dataNeeded": [
+        "Per-dependency latency distribution",
+        "Hook result and timeout classification",
+        "Stock/read-model age",
+        "Policy decision parity",
+        "Paid orders and later fulfillment failures"
+      ],
+      "experiment": "Randomize AI-origin checkout sessions between the existing hook path and the new path, preserving business rules and sticky assignment through retries. Shadow-check decision parity before exposure. Run at least four weeks, including peak hours, then to a sample powered on deadline-miss prevalence. Primary endpoint: paid nonduplicate orders within 24 hours per assigned checkout. Guardrails: oversells, price disagreement, fraud loss, stale approvals, and total tail latency.",
+      "metric": "Purchase probability by assignment is primary. Four-second deadline misses, p95/p99 latency, and decision disagreement diagnose the cause; a faster response is not itself conversion evidence.",
+      "impactEvidence": "Hypothesized. stripe-hooks documents a four-second limit with different failure behavior for availability and approval; google-logger documents native latency observability. No general speed-to-purchase percentage is assumed.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured session count N or preventable deadline-decline share q. Let r be the share of those failures that become retained purchases and h be harm from incorrect fast decisions.",
+        "calculation": "Net retained purchases = N*(q*r-h); compare their contribution with monthly runtime, service, and engineering cost.",
+        "range": "Zero if hooks already meet deadlines or buyers return later; negative if low latency is purchased by weakening stock or policy checks."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP 1,500/month plus an implementation pilot for merchants with observed deadline misses.",
+      "costControl": "Spend extra compute where peak-load deadlines require it; reduce unnecessary fan-out and avoid generative-model calls in deterministic approval paths.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Control of merchant hook implementation",
+        "Bounded dependencies and source freshness",
+        "Documented platform failure behavior",
+        "Production-safe shadow comparison"
+      ],
+      "failureMode": "A fast replica is stale, asynchronous work changes a decision after approval, or more concurrency overloads a shared backend.",
+      "falsifier": "Deadline misses fall but paid retained orders do not increase, or correctness costs exceed recovered margin.",
+      "sourceIds": [
+        "stripe-hooks",
+        "google-logger",
+        "google-faq"
+      ]
+    },
+    {
+      "id": "infrastructure-06",
+      "title": "Land on the selected variant before JavaScript runs",
+      "lens": "infrastructural",
+      "buyer": "Headless and heavily customized stores receiving AI product referrals.",
+      "problem": "An agent selects a specific color, size, pack, or country offer, but the link renders the parent default, a different currency, or an empty client shell. The buyer must repeat selection and may buy the wrong item.",
+      "mechanism": "Landing correctness and checkout completion: resolve the selected offer from the incoming link and render the exact purchasable state immediately, reducing reselection and wrong-variant abandonment.",
+      "intervention": "Build a deployable storefront adapter that maps stable offer IDs to a canonical variant URL, validates market/currency, and renders matching visible price, availability, image, selection controls, and structured data in the initial response. Carry the same variant into add-to-cart. Use a shared resolver for human and agent requests and a release check that compares URL, server HTML, hydrated state, and basket.",
+      "competitorOverlap": "Geoffy already publishes and verifies server-rendered content, and Google already recommends initial-HTML product markup. The edge is correcting the full selected-offer-to-cart transaction, not an HTML audit, extra schema, or a crawler-only alternate page.",
+      "edgeHypothesis": "A variant and market resolver will recover purchases on referral paths where the merchant's existing markup is correct but the displayed or added variant is wrong.",
+      "dataNeeded": [
+        "Incoming offer/variant URL",
+        "Merchant variant and market mapping",
+        "Server-rendered and hydrated state",
+        "Add-to-cart variant ID",
+        "Tagged referral session and paid line items"
+      ],
+      "experiment": "For the landing-only claim, randomize identified AI-origin visitors to the existing URL resolution or corrected resolver with identical merchandise and copy. Keep assignment stable through checkout. Primary endpoint: paid intended-variant orders within seven days per assigned arrival. Run at least four weeks and a pilot-powered sample; follow returns for 30 days. Test discovery effects separately with catalog/page clusters and crawler wash-in.",
+      "metric": "Intent-to-treat intended-variant purchase probability per eligible AI referral arrival. This experiment estimates post-click conversion, not total AI-origin demand or crawler ranking.",
+      "impactEvidence": "Hypothesized purchase effect; google-render supports the rendering concern and geoffy-html establishes incumbent overlap. No evidence that server rendering alone increases ChatGPT purchases is claimed.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured eligible traffic, wrong-variant frequency, or baseline conversion. Let W be arrivals currently misresolved, r recovered intended-variant purchases per such arrival, and H newly harmed purchases.",
+        "calculation": "Incremental intended-variant purchases = W*r-H, with 30-day retained contribution required to exceed implementation and service cost.",
+        "range": "Zero if existing links and rendering are already correct; negative if market detection or caching serves the wrong price or offer."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP 500/month per storefront after a paid implementation audit with a reproducible mismatch.",
+      "costControl": "Use the existing server rendering pipeline and one versioned resolver; test high-traffic variant templates before expanding to the full catalog.",
+      "feasibility": "now",
+      "dependencies": [
+        "Storefront deployment access",
+        "Stable variant and market identifiers",
+        "Correct server-side cache keys",
+        "Ability to preserve experiment assignment"
+      ],
+      "failureMode": "A CDN ignores market or variant in its cache key, or hydration overwrites a correct initial selection.",
+      "falsifier": "The existing site rarely misresolves offers, or corrected landings reduce mismatch without raising retained intended-variant purchases.",
+      "sourceIds": [
+        "google-render",
+        "geoffy-html",
+        "openai-products"
+      ]
+    },
+    {
+      "id": "infrastructure-07",
+      "title": "Turn a failed purchase trace into a tested repair",
+      "lens": "infrastructural",
+      "buyer": "Commerce engineering teams deciding which agent-origin defects deserve release time.",
+      "problem": "A conversion dashboard can show a drop without reproducing the offer version, checkout state, and deployment that caused an individual purchase failure.",
+      "mechanism": "Enabling tool: trace-linked deterministic reproduction identifies and validates a specific repair; releasing that repair can increase purchases. Storing traces alone has no conversion effect.",
+      "intervention": "Join an opaque experiment/session ID to merchant-controlled offer snapshots, schema version, checkout requests, release SHA, provider receipts, order, and later refund state. Produce a minimized sandbox replay with credentials and personal data removed. Rank only reproducible failures by observed affected checkouts and test a repair in a merchant-controlled randomized release.",
+      "competitorOverlap": "Google already has a UCP request/response and latency logger plus purchase analytics; Peec joins GA4, crawl, and prompt information. UCP orders already support reconciliation. The proposed edge is cross-protocol, version-specific incident reproduction and verified repair delivery, not another attribution dashboard.",
+      "edgeHypothesis": "An engineering team given a replayable failure and its affected purchase cohort will ship more purchase-generating fixes per engineering week than a team given native logs and dashboards alone.",
+      "dataNeeded": [
+        "Merchant-controlled response snapshots and release identity",
+        "Protocol and order IDs",
+        "Refund/cancellation outcomes",
+        "Experiment assignments",
+        "Engineering time and reproducible defect taxonomy"
+      ],
+      "experiment": "Randomize matched merchant integration teams to native observability versus trace-to-repair workflow, with equal engineering capacity and an eight-to-twelve-week window. For each candidate repair, randomize eligible AI checkout traffic and measure paid orders within seven days. Primary program endpoint: retained AI-origin orders per assigned merchant-month, adjusted using a pre-period baseline. Power both the merchant-level comparison and nested trials; report null, negative, and uncertain repair effects and avoid summing overlapping effects.",
+      "metric": "The outer randomized comparison estimates retained AI-origin orders gained per merchant-month at equal engineering effort. Nested purchase trials explain which repairs contribute; time-to-fix and detection rate are secondary. Uncertain repair estimates are not recoded as proven zero or uplift.",
+      "impactEvidence": "Hypothesized enabling effect. google-logger, google-analytics, peec-referrals, and ucp-orders establish that many inputs and native alternatives already exist. No incremental purchase percentage is supported.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured fix throughput, incident prevalence, or purchase effect. Let I be the nonoverlapping incremental retained orders from deployed repairs and C total workflow and engineering cost.",
+        "calculation": "Net value = contribution from I-C. Break-even requires more retained contribution than both software cost and the opportunity cost of diverted engineering time.",
+        "range": "Zero if dashboards already lead to the same fixes; negative if teams spend time replaying rare faults instead of fixing larger purchase barriers."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP 1,500/month per merchant engineering team, tested against native logging plus existing observability spend.",
+      "costControl": "Keep immutable compact envelopes for all transactions, retain full sanitized payloads only for sampled faults, and stop investigating faults with too little plausible purchase value.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant telemetry access",
+        "Sandbox capable of deterministic commerce replay",
+        "Order lifecycle reconciliation",
+        "Engineering ownership to deploy an actual fix"
+      ],
+      "failureMode": "The trace omits the true dependency, records sensitive payment data, or the replay only succeeds because it unrealistically freezes live inventory.",
+      "falsifier": "No increase in verified incremental purchases at equal engineering capacity, even if diagnostic dashboards look better.",
+      "sourceIds": [
+        "google-logger",
+        "google-analytics",
+        "peec-referrals",
+        "ucp-orders"
+      ]
+    },
+    {
+      "id": "infrastructure-08",
+      "title": "Preserve units, totals, and cart state across protocol adapters",
+      "lens": "infrastructural",
+      "buyer": "Retailers of measured goods, multipacks, and complex configurations integrating several agent channels.",
+      "problem": "A schema-valid adapter can still treat a pack as a unit, convert scaled quantities twice, lose an omitted cart field, or drop a tax/fulfillment condition when crossing protocol and API versions.",
+      "mechanism": "Selection validity and checkout completion: retain the buyer's exact intended order across representations, exposing unsupported cases before payment instead of producing a surprise total or failed checkout.",
+      "intervention": "Create a typed merchant basket model carrying product and pack identity, exact quantity/unit/scale, currency exponent, tax basis, fulfillment IDs, and revision. Implement version-specific adapters and bidirectional semantic checks against authoritative checkout totals. Treat full-state replacement and patch updates differently. If a target cannot represent an item correctly, use a truthful browser handoff rather than silently coercing it.",
+      "competitorOverlap": "Stripe ACS already spans protocols, UCP specifies interoperability, and commerce integrators already map baskets. The edge is verified semantic equivalence for difficult merchandise and migration cases; translating JSON alone is not defensible.",
+      "edgeHypothesis": "A conformance suite built from real merchant baskets can prevent commercially meaningful silent corruption that schema validation and generic adapters miss.",
+      "dataNeeded": [
+        "ERP sale-unit definitions and pack IDs",
+        "Versioned destination schemas/capabilities",
+        "Authoritative quote calculator",
+        "Cart readbacks and line totals",
+        "Mismatch, order, return, and support outcomes"
+      ],
+      "experiment": "Run generated edge-case baskets and recorded failures through native adapters and the semantic model in a sandbox. On an approved agent integration, randomize eligible complex-basket sessions before mapping to baseline or checked adapters. Primary endpoint: correctly priced paid orders for the buyer's intended quantity within seven days per assigned session. Run six weeks or to powered sample, including at least one planned version migration. Guardrails: no overcharge, unauthorized substitution, or increased wrong-unit returns.",
+      "metric": "Intent-to-treat correctly constituted purchase probability, with total paid orders and 30-day returns alongside it. Passing a schema or replay is a release gate, not a purchase outcome.",
+      "impactEvidence": "Hypothesized. ucp-core and shopify-carts document real representation and replacement semantics; stripe-acs demonstrates direct incumbent overlap. Consumer support for each complex case still needs approval.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured complex-basket volume, semantic-error rate, or baseline checkout completion. Let E be affected eligible baskets and r the extra retained purchase probability when their representation is corrected.",
+        "calculation": "Additional retained purchases = E*r minus losses from extra escalation or mapping delay; require contribution above adapter maintenance and service cost.",
+        "range": "Zero if products use simple each-unit baskets already handled correctly; negative if strict validation rejects valid carts or sends too many buyers through a longer path."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP 2,000/month for a catalog with demonstrated cross-protocol quantity or totals failures.",
+      "costControl": "Use deterministic decimal arithmetic and reusable property checks; keep generative models out of price and quantity conversion.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "Version-pinned protocol access",
+        "Merchant reference price calculator",
+        "Platform support for relevant quantities/configurations",
+        "A supported buyer handoff for unrepresentable cases"
+      ],
+      "failureMode": "A supposedly canonical model erases a merchant-specific sale basis, or public protocol support is mistaken for availability on a particular consumer channel.",
+      "falsifier": "No material semantic errors beyond native adapters, or corrected representations do not improve retained intended orders.",
+      "sourceIds": [
+        "ucp-core",
+        "shopify-carts",
+        "stripe-acs",
+        "google-implementation"
+      ]
+    },
+    {
+      "id": "infrastructure-09",
+      "title": "Bind the selected delivery promise to stock and capacity",
+      "lens": "infrastructural",
+      "buyer": "Retailers with store pickup, local delivery, warehouse cutoffs, or time-sensitive products.",
+      "problem": "An agent can recommend an in-stock item with a plausible delivery promise, but the selected warehouse, pickup location, or delivery slot cannot fulfill that promise by the time checkout begins.",
+      "mechanism": "Discovery relevance and checkout completion: find a feasible offer for the buyer's declared destination and deadline, preserve its location and method, and revalidate the promise before authorization. Fewer unusable recommendations can become paid, successfully fulfilled orders.",
+      "intervention": "Build an authoritative availability-to-promise service combining sellable stock, picking capacity, carrier cutoff, store hours, and merchant service zones. Return a quote tied to exact item/location/method and a bounded expiry; where the merchant supports it, reserve capacity only after explicit checkout intent. Carry the same location and option IDs into supported agent checkout or web fallback, and visibly re-quote after expiry.",
+      "competitorOverlap": "UCP already models catalog and checkout fulfillment, native platforms calculate delivery choices, and OMS vendors offer availability-to-promise. The proposed edge is continuity between the agent's selected promise and the merchant's capacity commitment, not displaying shipping text.",
+      "edgeHypothesis": "For deadline-sensitive purchases, preserving a feasible location-and-capacity choice will outperform global stock plus a fresh generic checkout delivery estimate.",
+      "dataNeeded": [
+        "User-declared destination and needed-by date",
+        "Stock by location",
+        "Picking/carrier/store capacity and cutoffs",
+        "Quoted and selected fulfillment identifiers",
+        "Paid orders, promised delivery, actual fulfillment, and cancellations"
+      ],
+      "experiment": "Use cooperating agents with supported fulfillment capabilities. Randomize shoppers before feasible-offer selection, or randomize separate destination/capacity pools where reservations could interfere. Compare normal merchant delivery selection with promise continuity for six-to-eight weeks, including cutoff boundaries. Primary endpoint: paid orders fulfilled by the buyer's declared deadline per assigned eligible shopper; also report paid orders alone. Follow failures and cancellations through delivery. Power from pool-level variance.",
+      "metric": "Intent-to-treat on-time paid purchase probability across all assigned shoppers, including those shown no feasible offer. Total retained contribution across all capacity-sharing channels guards against shifting scarce slots.",
+      "impactEvidence": "Hypothesized. ucp-fulfillment specifies transportable fulfillment data and google-faq assigns address/inventory responsibility to merchants. Neither proves a capacity hold or a conversion uplift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured deadline-sensitive traffic, failed promises, or capacity displacement. Let R be extra paid on-time orders and D orders displaced elsewhere.",
+        "calculation": "Net additional successful purchases = R-D; compare retained contribution after extra fulfillment cost with integration and service cost.",
+        "range": "Zero when promises are already reliable; negative if overly conservative estimates suppress demand or expensive routing erases margin."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP 2,000/month for a regional retailer with measured delivery-promise failures.",
+      "costControl": "Reuse OMS and carrier calculators, invalidate only affected locations/cutoffs, and spend capacity checks on deadline-sensitive shopping intents.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "OMS and fulfillment capacity integration",
+        "Declared buyer location/deadline with consent",
+        "Supported capability on the selected agent channel",
+        "Operational authority to reserve and honor a promise"
+      ],
+      "failureMode": "The merchant cannot commit capacity, pickup and shipping location semantics are confused, or the engine ignores the returned fulfillment context.",
+      "falsifier": "More accurate promises produce no additional paid on-time orders, or gains are offset by displacement and fulfillment costs.",
+      "sourceIds": [
+        "ucp-fulfillment",
+        "google-faq",
+        "google-implementation",
+        "commercetools-stock"
+      ]
+    },
+    {
+      "id": "infrastructure-10",
+      "title": "Admit verified shopping agents without opening the whole store",
+      "lens": "infrastructural",
+      "buyer": "Merchants whose WAF or bot controls block legitimate AI product retrieval or buyer-directed checkout.",
+      "problem": "A blanket bot challenge can stop a real shopping agent before product selection or checkout, while broadly allowing an AI-looking user-agent permits abuse and stock hoarding.",
+      "mechanism": "Access and purchase completion: authenticate a real permitted agent, allow the exact approved read or checkout operation, and retain normal transaction authorization. Incremental sales require previously blocked legitimate shopping demand.",
+      "intervention": "Provide a merchant-owned access policy adapter using supported bot verification and platform credentials. Separate product reads from customer or checkout writes, enforce route-level scope, short expiry, rate limits, and merchant-side replay/idempotency handling. Test signed and unsigned requests on merchant-controlled endpoints. Use verified identity as one policy input, never as permission to charge.",
+      "competitorOverlap": "Cloudflare already verifies bot/agent identity and lets merchants configure access; platform authentication already exists. The edge is a tested commerce route policy with a measured purchase effect and matched abuse guardrails, not inventing agent signatures or defeating bot controls.",
+      "edgeHypothesis": "Narrow commerce policies will recover agent-origin purchases lost to overbroad challenges without the fraud and operational cost of a general allow rule.",
+      "dataNeeded": [
+        "Verified agent identity and permitted scopes",
+        "Pre-policy blocked/challenged requests",
+        "Merchant checkout/session linkage",
+        "Paid orders and fraud/refund outcomes",
+        "Abuse, origin load, and stock-hold metrics"
+      ],
+      "experiment": "First validate policies in shadow mode and merchant-owned sandbox traffic. Randomize allowed partner shopping sessions to the existing merchant policy or narrowly scoped admission where assignment before the challenge is possible; otherwise randomize merchants or matched route/catalog clusters and allow crawl wash-in. Run at least six weeks and to a powered sample. Primary endpoint: paid retained AI-origin orders per assigned partner session or merchant-day. Stop for elevated unauthorized writes, fraud, or origin exhaustion.",
+      "metric": "Intent-to-treat retained purchases including initially challenged sessions. Bot requests, challenge pass rate, and page fetches are diagnostic; absent proof of buyer-driven origin, request counts are not shopper counts.",
+      "impactEvidence": "Hypothesized. cloudflare-auth and cloudflare-verified document identification mechanisms and limits; google-faq supports authenticating platform requests rather than assuming request geography.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured legitimate blocked shopping volume, baseline purchases, or abuse cost. Let B be blocked legitimate shopping sessions, r added retained purchase probability, and L added fraud/operational loss.",
+        "calculation": "Net value = B*r*retained-order contribution-L-service cost; recovery must exceed both software cost and any new abuse loss.",
+        "range": "Zero if legitimate shopping agents are already admitted; negative if identity is treated as authorization or added access mostly serves non-buying automation."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP 750/month per storefront with confirmed legitimate shopping blocks.",
+      "costControl": "Use existing edge verification, evaluate simple deterministic policies, and log expensive details only for policy mismatches and incidents.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant WAF/edge access",
+        "Real agent verification supported by the provider",
+        "Transaction-specific authorization",
+        "An experiment unit identifiable before policy execution"
+      ],
+      "failureMode": "A valid signature is replayed or overtrusted; an agent passes identity checks without buyer purchase authority; measured requests cannot be connected to purchases.",
+      "falsifier": "Admission increases bot traffic but not retained purchases, or fraud and infrastructure costs exceed recovered contribution.",
+      "sourceIds": [
+        "cloudflare-auth",
+        "cloudflare-verified",
+        "google-faq"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "openai-feed",
+      "title": "Get Started - Agentic Commerce",
+      "url": "https://developers.openai.com/commerce/guides/get-started",
+      "type": "official-doc",
+      "claim": "Approved-partner feed access and a daily full upload plus intraday API update path; feed submission does not establish consumer exposure."
+    },
+    {
+      "id": "openai-products",
+      "title": "Products - Agentic Commerce",
+      "url": "https://developers.openai.com/commerce/specs/api/products",
+      "type": "official-doc",
+      "claim": "Current parent-product and variant schema, stable IDs, partial upserts, and a feed retrieval endpoint; acceptance is not a live ranking or propagation guarantee."
+    },
+    {
+      "id": "openai-checkout",
+      "title": "Product checkout conversion spec",
+      "url": "https://developers.openai.com/plugins/guides/product-checkout-conversion-spec",
+      "type": "official-doc",
+      "claim": "Approved-partner beta for checkout plugins; item IDs and quantities enter checkout and merchants resolve authoritative offer data."
+    },
+    {
+      "id": "stripe-acs",
+      "title": "Sell through agents",
+      "url": "https://docs.stripe.com/agentic-commerce/for-sellers",
+      "type": "official-doc",
+      "claim": "ACS multi-protocol integration, targeted stock/price updates, unordered asynchronous imports, agent connection approval, and order events."
+    },
+    {
+      "id": "stripe-hooks",
+      "title": "Manage your agentic commerce integration",
+      "url": "https://docs.stripe.com/agentic-commerce/for-sellers/manage",
+      "type": "official-doc",
+      "claim": "Price/availability and approval hooks both have four-second deadlines, with feed fallback versus payment decline; approval retries require idempotency."
+    },
+    {
+      "id": "ucp-checkout",
+      "title": "Checkout Capability",
+      "url": "https://ucp.dev/specification/shopping/checkout/",
+      "type": "official-doc",
+      "claim": "Checkout state, continue_url escalation, expiry, and rules for observing accepted completion and recovering a lost response."
+    },
+    {
+      "id": "ucp-core",
+      "title": "UCP Specification Overview",
+      "url": "https://ucp.dev/specification/overview/",
+      "type": "official-doc",
+      "claim": "Capability/version negotiation and exact quantity-unit representation; a protocol-defined feature is not proof of deployment by a consumer platform."
+    },
+    {
+      "id": "ucp-fulfillment",
+      "title": "Fulfillment Extension",
+      "url": "https://ucp.dev/specification/shopping/extensions/fulfillment/",
+      "type": "official-doc",
+      "claim": "Location-aware catalog fulfillment and checkout destination/method selection; this defines representation, not inventory or delivery capacity reservation."
+    },
+    {
+      "id": "ucp-orders",
+      "title": "Order Capability",
+      "url": "https://ucp.dev/specification/shopping/order/",
+      "type": "official-doc",
+      "claim": "Checkout-to-order identity, fulfillment events, adjustments, and optional attribution snapshot support reconciliation, not incremental attribution by themselves."
+    },
+    {
+      "id": "google-implementation",
+      "title": "Overview - Google Universal Commerce Protocol Guide",
+      "url": "https://developers.google.com/merchant/ucp/guides/overview",
+      "type": "official-doc",
+      "claim": "Google approval is required before going live, and not every feature in the UCP standard is available on Google."
+    },
+    {
+      "id": "google-faq",
+      "title": "Frequently Asked Questions - Google Universal Commerce Protocol Guide",
+      "url": "https://developers.google.com/merchant/ucp/faq",
+      "type": "official-doc",
+      "claim": "Merchants own live inventory and address validation; version migration can use separate endpoints. Native checkout is not an offer-ranking advantage."
+    },
+    {
+      "id": "commercetools-stock",
+      "title": "Inventory overview",
+      "url": "https://docs.commercetools.com/api/inventory-overview",
+      "type": "official-doc",
+      "claim": "Native ReserveOnCart reservations, expiry, stock guarantees, and distinct inventory read consistency; reservations themselves are existing functionality."
+    },
+    {
+      "id": "google-render",
+      "title": "Product snippet structured data",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/product-snippet",
+      "type": "official-doc",
+      "claim": "Google recommends initial-HTML product markup and warns dynamic markup can impair shopping crawl reliability; this is not evidence of AI purchase uplift."
+    },
+    {
+      "id": "cloudflare-auth",
+      "title": "Web Bot Auth",
+      "url": "https://developers.cloudflare.com/bots/reference/bot-verification/web-bot-auth/",
+      "type": "official-doc",
+      "claim": "Registered request signatures identify bots; the documented verifier does not deduplicate nonces, so signatures alone do not authorize or de-duplicate commerce writes."
+    },
+    {
+      "id": "cloudflare-verified",
+      "title": "Verified bots",
+      "url": "https://developers.cloudflare.com/bots/concepts/bot/verified-bots/",
+      "type": "official-doc",
+      "claim": "Current verified-bot treatment includes agents; identity verification and non-abusive behavior are distinct from merchant transaction permission."
+    },
+    {
+      "id": "shopify-carts",
+      "title": "Carts and checkout for agents",
+      "url": "https://shopify.dev/docs/agents/carts-and-checkout",
+      "type": "official-doc",
+      "claim": "Native long-running Cart MCP, checkout handoff, and full-state cart updates already exist. WebMCP has narrower checkout coverage and mutation behavior."
+    },
+    {
+      "id": "google-analytics",
+      "title": "Monitor and optimize your integration",
+      "url": "https://developers.google.com/merchant/ucp/guides/tools/merchant-center/analytics",
+      "type": "official-doc",
+      "claim": "Native UCP purchase, buy-click, cancellation, and linking analytics exist; dashboard data is not yet available through the Merchant API."
+    },
+    {
+      "id": "google-logger",
+      "title": "Use BigQuery to store and analyze UCP events (optional)",
+      "url": "https://developers.google.com/merchant/ucp/guides/tools/bq-storage",
+      "type": "official-doc",
+      "claim": "Google provides a reference logger for UCP requests, responses, latency, attribution, and funnel analysis; logging alone is not a new product edge."
+    },
+    {
+      "id": "peec-referrals",
+      "title": "Introducing AI referrals",
+      "url": "https://peec.ai/blog/introducing-ai-referrals",
+      "type": "official-doc",
+      "claim": "Vendor documents GA4 referral/conversion reporting and page-level joins to bot logs and prompt data; this does not establish session-level causal purchase measurement."
+    },
+    {
+      "id": "geoffy-html",
+      "title": "Frequently asked questions | Geoffy docs",
+      "url": "https://geoffy.ai/docs/faq",
+      "type": "official-doc",
+      "claim": "Geoffy already publishes and verifies server-rendered product content on the live storefront; generic HTML checks would overlap."
+    }
+  ]
+}

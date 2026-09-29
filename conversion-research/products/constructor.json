@@ -1,0 +1,628 @@
+{
+  "id": "constructor",
+  "name": "Constructor",
+  "benchmarkType": "commercial",
+  "winningEvidence": [
+    "Selected as a commercial benchmark for integrated onsite AI discovery, live experimentation practice and order instrumentation, not as a proven winner for offsite AI shopping.",
+    "Belk's vendor case reports double-or-better conversion among ASA users versus standard-search users; self-selection and unspecified event definitions prevent treating this as randomized purchase uplift.",
+    "General randomized AABB methodology is public. Marketing's separate ASA and PIA uplift figures lack enough study detail for causal or portable forecasts.",
+    "Current homepage explicitly lists Answer Engine Assistants (Beta), but its offsite capabilities and measured outcomes require separate verification from onsite results."
+  ],
+  "currentOffer": "As verified 29 September 2026, Constructor sells enterprise product discovery with AI Shopping Agent, Product Insights Agent, search/browse/recommendations and merchandising analytics. ASA supports natural-language goals and multi-item shopping; merchant integrations supply catalog, content and behavioral data. Answer Engine Assistants is marketed in beta for live data supplied to external answer engines. Implementation is sales/CSM-led; no public numeric subscription price or AEA-specific tariff verified.",
+  "conversionMechanism": "Onsite AI can help shoppers express intent, find eligible products, compare alternatives and resolve final questions before merchant checkout. Behavioral and purchase events feed subsequent ranking. AEA could improve the information external engines can use, but the reviewed evidence does not establish engine adoption, ranking improvement, or incremental offsite-origin purchases. AI-origin referral order reporting measures association; only a valid controlled merchant experiment can establish incremental purchases for an intervention.",
+  "harness": {
+    "offlineSimulation": "not_found",
+    "liveMonitoring": "documented",
+    "randomizedExperiment": "documented",
+    "purchaseMeasurement": "documented",
+    "details": "Offline shopper/tool-response replay was not found in reviewed product docs and targeted searches; this does not prove absence. LiveMonitoring here means documented live AI-referral sessions/orders/revenue in External Traffic Report, not repeated prompt/citation monitoring inside external engines, which was not found. General randomized AABB practice is documented; dashboard splits cover search/browse rules and recommendations, and ASA-specific randomization for advertised results is unestablished. Purchase events represent completed checkout; generic success events can be add-to-cart or other actions. From 1 September 2026 the attribution window changed to 30-day cross-session credit, so attributed-revenue changes can occur without new orders. Sources-table Purchase Rate is defined as AI-purchase share, not source session conversion."
+  },
+  "strengths": [
+    "Existing behavioral and catalog integration spans multiple onsite discovery experiences, which gives a real implementation and measurement comparator.",
+    "Public API and integration docs expose threads, product context, streaming and merchant UI responsibility.",
+    "Explicit purchase event, return ingestion and randomized-method documentation allow a stronger baseline than recommendation-count dashboards.",
+    "External Traffic Report already connects observable AI referrals with actual onsite orders and revenue."
+  ],
+  "limits": [
+    "Vendor-reported ASA and PIA user comparisons do not establish the causal effect of making the agent available.",
+    "Onsite search results, ASA results, PIA results and Answer Engine Assistants beta must remain separate.",
+    "Public AEA engine contracts, rollout eligibility, freshness guarantees and randomized offsite purchase results were not located.",
+    "Missing referrer signals obscure AI-origin coverage; platform purchase share is not conversion probability.",
+    "No public per-request pricing or complete implementation cost verified; merchant data quality and integrations remain material dependencies."
+  ],
+  "improve": [
+    "Publish exposure-based randomized ASA studies with absolute purchase rates, allocation, time windows, uncertainty and return-adjusted outcomes.",
+    "Document the beta answer-engine data contract, partner availability and which consumer surfaces actually consume the data.",
+    "Distinguish attribution accounting from additional purchases, especially across the September 2026 window change, and label purchase-share denominators explicitly.",
+    "Test narrowly specified mission, context-transfer and fulfillment improvements against current native functionality before claiming an edge."
+  ],
+  "ideas": [
+    {
+      "id": "constructor-01",
+      "title": "Prove that the whole project basket works",
+      "lens": "algorithmic",
+      "buyer": "DIY, electronics and specialist outdoor retailers with multi-item AI shopping missions",
+      "problem": "A plausible list of individually relevant products can omit a required part or contain an incompatible combination, so the shopper cannot confidently buy the project.",
+      "mechanism": "Selection to purchase: translate the stated job into explicit requirements, resolve all required dependencies and show one feasible basket. Fewer missing-part doubts should create additional completed project orders; larger basket value alone is not success.",
+      "intervention": "Build a constraint solver over exact variants, required-part relationships, quantities and total budget. Return a feasible basket with evidence for each dependency, plus a clear unresolved item when data is missing. Keep optional accessories visibly optional.",
+      "competitorOverlap": "Constructor ASA already handles multi-item goals; Google supports required_part relationships; Channable advertises forthcoming bundles. A constraint-checked complete basket is an edge hypothesis, not claimed category novelty.",
+      "edgeHypothesis": "At equal catalog data quality, explicit all-of compatibility checks outperform a conversational list on retained project-purchase rate.",
+      "dataNeeded": [
+        "Variant-level compatibility and required-part graph",
+        "Stock, quantity and total-price data",
+        "Shopper-confirmed project requirements",
+        "Order lines, cancellations and compatibility-related returns"
+      ],
+      "experiment": "Randomize eligible AI mission shoppers persistently before the first basket to existing ASA-style recommendations or the solver. Primary endpoint: at least one paid mission order within 14 days, retained at 45 days. Plan 6 to 8 weeks plus return maturation, powered from observed baseline/MDE. Guardrails: total purchase rate, missing-part returns, price, latency and no unapproved substitutions.",
+      "metric": "Retained mission purchasers / all randomized eligible mission shoppers; report absolute ITT difference. Completed-basket share and AOV are secondary and cannot substitute for more purchasers.",
+      "impactEvidence": "Hypothesized; adjacent agent-use association in belk and existing capabilities in asa/google-attrs/channable do not supply an expected lift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen example only: 10,000 eligible shoppers/month, GBP 80 contribution per retained incremental order, GBP 2,000 monthly fee; baseline conversion and fault prevalence unknown.",
+        "calculation": "Fee-only break-even = 2000 / 80 = 25 extra retained orders, or 25 / 10000 = 0.25 percentage points. Add integration and serving costs before deciding.",
+        "range": "No predicted effect; zero if existing recommendations already solve the job, negative if strict checks exclude valid combinations."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP 2,000/month, with integration quoted separately; validate willingness to pay against incremental retained contribution.",
+      "costControl": "Cache verified dependency graphs and solve deterministic constraints before calling an LLM. Preserve checks for genuinely ambiguous assemblies.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable compatibility owners",
+        "Variant identifiers shared with cart",
+        "Merchant order and return integration"
+      ],
+      "failureMode": "Incorrect graph edges create false confidence, or incomplete data makes a useful basket impossible to recommend.",
+      "falsifier": "A powered test finds no retained-purchase improvement or a rise in compatibility failures versus the same-data comparator.",
+      "sourceIds": [
+        "asa",
+        "google-attrs",
+        "channable",
+        "belk"
+      ]
+    },
+    {
+      "id": "constructor-02",
+      "title": "Ask only the question that changes the purchase decision",
+      "lens": "behavioral",
+      "buyer": "Merchants whose AI shopping agent repeatedly asks shoppers to refine broad requests",
+      "problem": "An extra clarification can prevent an unsuitable recommendation, but unnecessary dialogue can also lose a shopper who is ready to buy.",
+      "mechanism": "Selection to purchase: estimate whether an unresolved fact changes the set of suitable products; ask one short question only when that information is more valuable than the resulting delay. Otherwise expose a usable shortlist immediately.",
+      "intervention": "Build a question-selection and stopping policy using candidate-set disagreement, mandatory requirements and observed abandonment. Allow a skip path and show why a fact matters; do not infer sensitive traits or fabricate certainty.",
+      "competitorOverlap": "ASA and PIA already ask follow-ups and retain context. The proposed difference is a purchase-validated decision about when to stop asking, rather than a new chat capability.",
+      "edgeHypothesis": "A calibrated stop/ask policy produces more paid purchases per eligible conversation than a fixed follow-up strategy at equal recommendation quality.",
+      "dataNeeded": [
+        "Anonymized question/answer sequences",
+        "Which answers change eligible products",
+        "Conversation abandonment and response latency",
+        "Order linkage and product suitability returns"
+      ],
+      "experiment": "Randomize shoppers at their first eligible ambiguous AI query to existing follow-ups or the policy. Primary: paid purchase within 7 days; retain assignment across turns. Plan 4 to 6 weeks, calculate power from query prevalence and baseline, then mature returns. Guardrails: inappropriate recommendations, skip rate, customer-reported confusion and total purchases.",
+      "metric": "Paid purchasers within 7 days / all randomized eligible shoppers, including those who decline or abandon the question; report returns separately and reject a gain caused by unsuitable purchases.",
+      "impactEvidence": "Hypothesized; agent-api and pia establish overlap, while demo's use-conditioned claims cannot quantify this intervention.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Illustrative assumptions: 10,000 eligible ambiguous-query shoppers/month, GBP 30 incremental-order contribution, GBP 750 monthly fee; no measured baseline or clarification-failure prevalence.",
+        "calculation": "750 / 30 = 25 extra retained purchases; 25 / 10000 = 0.25 percentage points fee-only break-even.",
+        "range": "Zero if existing follow-ups are already well calibrated; negative if skipping questions conceals a decisive constraint."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 750/month plus serving costs; require enough measured incremental contribution to cover both.",
+      "costControl": "Use deterministic candidate divergence and a small classifier for the stop decision. Reserve larger-model questions for ambiguous cases.",
+      "feasibility": "now",
+      "dependencies": [
+        "Agent UI and policy control",
+        "Conversation-to-order instrumentation",
+        "Audited definitions of mandatory constraints"
+      ],
+      "failureMode": "The policy optimizes fast purchases while omitting a fact that would have prevented a return.",
+      "falsifier": "Paid purchase gains disappear after returns, or the policy cannot beat a simple one-question rule.",
+      "sourceIds": [
+        "agent-api",
+        "pia",
+        "demo",
+        "purchase"
+      ]
+    },
+    {
+      "id": "constructor-03",
+      "title": "Carry the shopper's accepted constraints through the AI referral",
+      "lens": "infrastructural",
+      "buyer": "Retailers receiving AI-origin visits and commerce-agent partners that control their handoff",
+      "problem": "A shopper arrives with a precise budget, use case and rejected alternatives, but the merchant sees only a product URL and starts discovery again.",
+      "mechanism": "Referral to purchase: transfer the shopper-approved decision context, verify it against the current offer, and resume the same task. Less re-entry and fewer accidental constraint changes should preserve qualified intent through checkout.",
+      "intervention": "Build an expiring signed handoff payload containing selected variants, accepted hard constraints, optional preferences and source/version metadata. The shopper chooses what to share. Offer a visible editable summary and plain-link fallback; never put private transcripts in URLs.",
+      "competitorOverlap": "Constructor has AEA beta and onsite thread continuity. Shopify already supports cart context and continue_url. The edge is verified preservation of non-product constraints across a supported partner boundary; universal ChatGPT support is not assumed.",
+      "edgeHypothesis": "At equal products and prices, transferred and visibly confirmed constraints yield more retained purchases than a prefilled cart alone.",
+      "dataNeeded": [
+        "Partner-supported handoff entry point",
+        "Consent and payload validation events",
+        "Current variant/offer identifiers",
+        "Merchant orders and identifiable source coverage"
+      ],
+      "experiment": "Within a partner-controlled AI journey, randomize eligible shoppers before handoff to plain product/cart link or context handoff. Primary: paid merchant order within 7 days. Plan 6 to 8 weeks or until powered; measure all assigned shoppers, including failed transfers. Guardrails: privacy, stale-context errors, bounce rate and cart correctness.",
+      "metric": "Paid purchasers / all randomized eligible handoffs, with retained-order follow-up. Separately disclose the fraction of all AI traffic the supported partner covers; do not extrapolate to unknown/direct traffic.",
+      "impactEvidence": "Hypothesized; home, implement and shop-cart establish adjacent functionality, external establishes current referral measurement. None proves this transfer increases purchases.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Illustrative: 6,000 supported AI handoffs/month, GBP 50 retained-order contribution, GBP 1,500 fee; unknown baseline and context-loss prevalence.",
+        "calculation": "1500 / 50 = 30 additional orders; 30 / 6000 = 0.5 percentage points before integration costs.",
+        "range": "Zero if context is already preserved; negative if the consent/handoff step is slower or introduces stale assumptions."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 1,500/month per retailer with adequate partner traffic; integration costs separate.",
+      "costControl": "Transmit compact structured constraints and revalidate only changed facts; do not regenerate a full conversation.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "Cooperating external agent or supported plugin",
+        "Consent UX and expiring signed payloads",
+        "Merchant cart and identity integration"
+      ],
+      "failureMode": "The largest consumer engine does not expose the required handoff, leaving too little reachable traffic to justify integration.",
+      "falsifier": "Supported coverage is too low for break-even, or prefilled-cart control matches the purchase outcome.",
+      "sourceIds": [
+        "home",
+        "implement",
+        "shop-cart",
+        "external"
+      ]
+    },
+    {
+      "id": "constructor-04",
+      "title": "Resume a saved project with only the decisions that changed",
+      "lens": "temporal",
+      "buyer": "Furniture, home improvement and other retailers with long consideration cycles",
+      "problem": "When a shopper returns days later, a saved chat or cart preserves old decisions even though stock, specifications or the shopper's deadline may have changed.",
+      "mechanism": "Return visit to purchase: show which previously accepted choices remain valid and resolve only consequential changes. This lowers the effort of restarting a complex purchase without manufacturing urgency.",
+      "intervention": "Add an opt-in project record with explicit requirements, accepted shortlist and dated evidence. On a return visit, compare the saved version to current facts and ask for confirmation only on material deltas; mark unknowns and allow deletion.",
+      "competitorOverlap": "Constructor has thread continuity and logged-in cross-device identifiers; Shopify has long-running carts. The proposal is a decision-change review on return, not basic memory or cart persistence.",
+      "edgeHypothesis": "A concise review of changed decisions converts more returning AI project shoppers than replaying the full transcript or opening the saved cart.",
+      "dataNeeded": [
+        "Consented saved requirements and shortlisted variants",
+        "Versioned stock/specification/price data",
+        "Return-visit identity with anonymous fallback",
+        "Paid and retained project orders"
+      ],
+      "experiment": "Randomize shoppers who opt into saving a project, with assignment kept for all return visits. Compare existing saved cart/chat with delta review. Primary: paid project order within 30 days of enrollment. Run 8 to 12 weeks plus 60-day order/return follow-up; power on returning-project prevalence. Guardrails: no misleading scarcity, privacy, restart errors and total purchases.",
+      "metric": "Project purchasers within 30 days / all randomized save-project shoppers, including non-returners. Report return-visitor conversion only as a secondary selected-subgroup measure.",
+      "impactEvidence": "Hypothesized; implement, identifiers and shop-cart show existing continuity. No direct purchase evidence for delta review.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Example only: 2,000 save-project shoppers/month, GBP 100 incremental retained-order contribution, GBP 1,000 monthly fee; return rate and conversion unknown.",
+        "calculation": "1000 / 100 = 10 additional orders; 10 / 2000 = 0.5 percentage points on the full enrolled denominator.",
+        "range": "Zero if shoppers already remember their decisions; negative if an over-detailed review creates new doubt."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot price: GBP 1,000/month, with longer evaluation for infrequent purchases.",
+      "costControl": "Use event-triggered version comparisons, not continuous LLM re-evaluation of dormant projects.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Versioned catalog facts",
+        "Consented persistent project storage",
+        "Stable experiment assignment"
+      ],
+      "failureMode": "A saved preference is mistaken for a permanent requirement, or returners see irrelevant changes.",
+      "falsifier": "The full enrolled cohort has no additional retained purchases, even if returning visitors engage more.",
+      "sourceIds": [
+        "implement",
+        "identifiers",
+        "shop-cart"
+      ]
+    },
+    {
+      "id": "constructor-05",
+      "title": "Keep a stable comparison board while the agent explains trade-offs",
+      "lens": "psychological",
+      "buyer": "Retailers selling products with several meaningful specifications, such as appliances or cameras",
+      "problem": "Conversational answers keep replacing recommendations, making shoppers reread messages and lose track of why an option was accepted or rejected.",
+      "mechanism": "Comparison to purchase: hold a small candidate set still, expose factual trade-offs against the shopper's stated requirements, and let the shopper make the final choice with less working-memory burden.",
+      "intervention": "Build a persistent comparison board beside chat, with locked candidates, requirement-by-requirement evidence, explicit unknowns and a reversible 'replace this option' action. Preserve mandatory filters and avoid defaulting to the highest-margin product.",
+      "competitorOverlap": "Constructor already permits custom agent UIs and product Q&A; comparison interfaces are established commerce patterns. The claim concerns stability during an evolving conversation and must beat the same underlying recommendations.",
+      "edgeHypothesis": "A stable board reduces comparison effort enough to increase retained purchase rate without requiring a better model or altered rankings.",
+      "dataNeeded": [
+        "Candidate and exclusion histories",
+        "Source-backed variant specifications",
+        "Board interaction and dialogue events",
+        "Orders, returns and device/latency data"
+      ],
+      "experiment": "Randomize eligible AI comparison shoppers persistently to current chat cards or the board, holding candidate generator constant. Primary: paid purchase within 7 days. Plan 4 to 6 weeks with baseline-derived power and return follow-up. Guardrails: accessibility, mobile performance, incorrect comparisons, retained purchases and user control.",
+      "metric": "Paid purchasers / all randomized eligible comparison shoppers; no conditioning on board usage. Time-to-decision and fewer chat turns are secondary.",
+      "impactEvidence": "Hypothesized; ui and pia document the mature comparator. Simulated improvement is not proof of human purchase gains.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Illustrative: 5,000 eligible comparison shoppers/month, GBP 40 retained-order contribution, GBP 500 fee; no measured baseline or comparison-friction prevalence.",
+        "calculation": "500 / 40 = 12.5 additional expected orders; 12.5 / 5000 = 0.25 percentage points fee-only threshold.",
+        "range": "Zero if ordinary product cards suffice; negative if a dense board increases cognitive load, especially on mobile."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 500/month per storefront, subject to actual retained contribution.",
+      "costControl": "Render structured data directly and cache cited explanations. Keep model changes out of the UI experiment.",
+      "feasibility": "now",
+      "dependencies": [
+        "Agent UI access",
+        "Reliable comparable variant attributes",
+        "Accessible mobile board design"
+      ],
+      "failureMode": "The board anchors shoppers on poor initial candidates or makes uncertain facts look authoritative.",
+      "falsifier": "At equal recommendations, a powered experiment shows no retained-purchase gain or a material mobile decline.",
+      "sourceIds": [
+        "ui",
+        "pia",
+        "simgym"
+      ]
+    },
+    {
+      "id": "constructor-06",
+      "title": "Recommend baskets that can arrive together before the real deadline",
+      "lens": "temporal",
+      "buyer": "Omnichannel retailers serving event, installation and project purchases",
+      "problem": "An agent recommends in-stock items separately even though the whole mission fails if one arrives late, requires another warehouse, or lacks an installation slot.",
+      "mechanism": "Selection to checkout: rank feasible whole-basket fulfillment plans using the shopper's declared deadline and location. A credible achievable plan prevents late checkout surprises and helps the shopper complete the mission.",
+      "intervention": "Join variant availability to warehouse, carrier cutoff, promised-delivery and appointment-capacity APIs. Quote complete-basket plans with timestamps, revalidate before checkout, and offer transparent partial-delivery alternatives only with shopper consent.",
+      "competitorOverlap": "ASA already validates catalog stock; OpenAI checkout resolves authoritative item, inventory and price data. Delivery Q&A also exists in PIA. The edge is joint basket/deadline feasibility using operational capacity, not another stock refresh.",
+      "edgeHypothesis": "Operationally feasible basket recommendations generate more paid, on-time mission orders than item-level availability and generic delivery answers.",
+      "dataNeeded": [
+        "Declared postcode and deadline with consent",
+        "Available-to-promise inventory and carrier cutoffs",
+        "Warehouse split and installation capacity",
+        "Order fulfillment, lateness and cancellation events"
+      ],
+      "experiment": "Randomize eligible deadline-sensitive AI shoppers to current recommendations or feasible-fulfillment planning. If limited delivery capacity creates interference, randomize matched service-area/time clusters with buffers and cluster-aware power. Primary: paid mission order placed within 7 days and delivered by the accepted deadline. Plan 6 to 8 weeks plus fulfillment completion. Guardrails: all-shoppers availability, cost, reservation expiry and false promises.",
+      "metric": "On-time paid mission purchasers / all randomized eligible shoppers; separately report initial paid purchase rate and total cancellations so a narrower endpoint cannot conceal lost purchases.",
+      "impactEvidence": "Hypothesized; asa, pia and oai-checkout establish existing stock and checkout capabilities but no portable estimate for joint fulfillment.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen example: 15,000 eligible shoppers/month, GBP 50 retained on-time-order contribution, GBP 1,500 fee; current deadline-failure prevalence unknown.",
+        "calculation": "1500 / 50 = 30 extra successful orders; 30 / 15000 = 0.2 percentage points before capacity/integration costs.",
+        "range": "Zero if item-level promises already imply basket feasibility; negative if reservations block other purchasers or conservative estimates reject viable orders."
+      },
+      "willingnessToPay": "Unvalidated price test: GBP 1,500/month plus fulfillment integration, contingent on incremental retained contribution.",
+      "costControl": "Compute feasible fulfillment plans deterministically and refresh at meaningful stock/capacity events; avoid repeated generative planning.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Authoritative fulfillment APIs",
+        "Capacity-aware experiment design",
+        "Merchant control of recommendation and checkout handoff"
+      ],
+      "failureMode": "A stale capacity response creates a false promise or a treatment shopper displaces a control shopper from a scarce slot.",
+      "falsifier": "Apparent gains disappear under cluster analysis, or total on-time purchases across the service area do not increase.",
+      "sourceIds": [
+        "asa",
+        "pia",
+        "oai-checkout"
+      ]
+    },
+    {
+      "id": "constructor-07",
+      "title": "Promote agent policies only on additional retained purchasers",
+      "lens": "measurement",
+      "buyer": "Retailers choosing among agent policies and paying for AI conversion optimization",
+      "problem": "Agent-user comparisons and attribution changes can make an intervention look successful even when the same people would have purchased anyway.",
+      "mechanism": "Measurement enables purchase growth by selecting policies that actually add retained purchasers and stopping policies that merely claim credit, increase chat use or generate return-prone orders. The ledger alone cannot create a purchase.",
+      "intervention": "Build a policy-selection loop with persistent randomized eligibility, frozen event definitions, deduplicated order IDs, cancellations/returns and mature cohorts. Feed incremental retained-purchaser estimates into promotion decisions while keeping a stable control; reconcile attributed revenue separately.",
+      "competitorOverlap": "Constructor already documents AABB, purchase measurement, return ingestion and dashboards; Shopify has live experiments. The proposed advantage is an explicit eligibility-to-retained-purchase policy objective, independent of changing attribution windows. Availability in private vendor workflows is unknown.",
+      "edgeHypothesis": "Over a fixed number of policy decisions, this gate selects policies that produce more retained purchasers than promotion based on agent-user CVR or attributed revenue.",
+      "dataNeeded": [
+        "Pre-interaction eligibility and assignment logs",
+        "Policy/version IDs and complete exposure logs",
+        "Order IDs, payment status, refunds and returns",
+        "Frozen source-classification and attribution definitions"
+      ],
+      "experiment": "Within multiple sufficiently large stores, randomize disjoint shopper pools to policy selection by current business metric or the proposed gate, retaining untouched controls and fixed candidate-policy budgets. Primary: retained purchasers per eligible shopper over the full policy sequence. Plan 12 to 16 weeks plus category return maturation, with hierarchical/cluster-aware power. Guardrails: paid purchase rate, margin, repeat buyers, sample-ratio mismatch and multiplicity.",
+      "metric": "Unique purchasers with a paid, non-cancelled/non-fully-returned order / all eligible assigned shoppers. Count each purchaser once for the primary endpoint; report incremental orders and contribution separately. Referral attribution and purchase share are descriptive.",
+      "impactEvidence": "Hypothesized selection benefit. aabb/purchase/returns-api are documented adjacent infrastructure; attribution and external identify concrete accounting traps, not evidence this new selection loop lifts purchases.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Illustrative: 30,000 eligible AI shoppers/month, GBP 50 contribution per additional retained purchaser's qualifying order, GBP 1,500 fee; no baseline effect assumed.",
+        "calculation": "1500 / 50 = 30 additional retained purchasers; 30 / 30000 = 0.1 percentage points. Instrumentation costs raise the threshold.",
+        "range": "Zero if existing selection already uses equivalent causal outcomes; negative if delayed feedback misses valuable short-lived opportunities."
+      },
+      "willingnessToPay": "Unvalidated GBP 1,500/month governance-and-selection pilot price; no success fee on reattributed revenue.",
+      "costControl": "Reuse existing order/event streams; allocate expensive policy experiments to decisions with enough traffic and plausible economic value.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant order ledger access",
+        "Stable assignment and policy controls",
+        "Return maturation and sequential-testing plan"
+      ],
+      "failureMode": "Delayed returns, contamination between policies or too few purchases make the causal signal unusable.",
+      "falsifier": "Across predeclared policy decisions, selected policies do not outperform the existing metric under an independent held-out purchase test.",
+      "sourceIds": [
+        "aabb",
+        "ab-doc",
+        "purchase",
+        "returns-api",
+        "attribution",
+        "external",
+        "rollouts"
+      ]
+    },
+    {
+      "id": "constructor-08",
+      "title": "Isolate gift intent from the account owner's shopping history",
+      "lens": "identity",
+      "buyer": "Department stores and gift-heavy merchants using personalized AI discovery",
+      "problem": "A shopper buying for someone else can receive recommendations shaped by their own past brands, sizes and tastes, and the gift conversation can then distort future self-shopping.",
+      "mechanism": "Intent to selection to purchase: let the shopper explicitly scope this mission to another recipient without importing their personal affinities. Recommendations should better fit stated recipient requirements and preserve future account relevance.",
+      "intervention": "Add an explicit 'for someone else' task scope with temporary, editable preferences. Suppress conflicting account-history features only within that scope and prevent gift events from becoming self-preference training labels unless the shopper agrees. Do not identify or profile the recipient.",
+      "competitorOverlap": "Constructor already combines purchase history and contextual signals and may handle gifting within configured domains. Task-level feature isolation and feedback-label separation are the hypothesis; no claim that competitors lack gift modes.",
+      "edgeHypothesis": "Explicit recipient-task isolation beats ordinary personalization on paid gift purchases and avoids subsequent self-shopping regression.",
+      "dataNeeded": [
+        "Voluntary gift-mode selection and non-sensitive stated preferences",
+        "Feature-provenance flags",
+        "Gift order and return events",
+        "Consented subsequent self-shopping outcomes"
+      ],
+      "experiment": "Among shoppers who explicitly declare a gift task, randomize persistent account/browser assignment to current contextual personalization or isolated task scope. Primary: paid gift order within 14 days; follow returns and later self-shopping for 60 days. Run 6 to 8 weeks, stratify seasonal events and power from eligible gift traffic. Guardrails: no sensitive inference, overall purchases and opt-out ease.",
+      "metric": "Gift purchasers / all randomized gift-intent shoppers, not gift-mode users after assignment. Total account purchases and gift returns are predeclared guardrails.",
+      "impactEvidence": "Hypothesized; asa and identifiers establish the potential history/context interaction, not evidence that it causes a current defect.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Illustrative: 10,000 explicit gift-intent shoppers/month, GBP 40 retained-order contribution, GBP 1,000 fee; baseline and profile-conflict prevalence unmeasured.",
+        "calculation": "1000 / 40 = 25 additional retained gift orders; 25 / 10000 = 0.25 percentage points before implementation cost.",
+        "range": "Zero if existing contextual models already isolate gifting; negative if suppressing history removes useful gift-selection signals."
+      },
+      "willingnessToPay": "Unvalidated GBP 1,000/month test price for merchants with sufficient gift traffic; evaluate outside a single holiday spike.",
+      "costControl": "Use explicit task flags and feature masks; avoid constructing or retaining a separate recipient profile.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Control over personalization features and feedback labels",
+        "Merchant consent/retention configuration",
+        "Gift-intent order linkage"
+      ],
+      "failureMode": "The shopper's own history contains useful information about the recipient, or isolation reduces accuracy without solving meaningful bias.",
+      "falsifier": "The masked policy produces no additional retained gift purchasers or worsens total account purchase outcomes.",
+      "sourceIds": [
+        "asa",
+        "identifiers",
+        "agent-api"
+      ]
+    },
+    {
+      "id": "constructor-09",
+      "title": "Apply the shopper's return conditions to the exact variant before recommending it",
+      "lens": "regulatory",
+      "buyer": "UK merchants selling mixed standard, customized and other policy-sensitive goods",
+      "problem": "A shopper who needs the option to change their mind may be shown a variant whose actual cancellation/return conditions differ from the brand-level policy or the agent's general answer.",
+      "mechanism": "Selection to purchase: resolve the shopper's stated return requirement against the exact offer and relevant merchant-reviewed policy, then present suitable alternatives and truthful conditions. This can reduce uncertainty while avoiding purchases the shopper would later regret.",
+      "intervention": "Build versioned policy eligibility linked to variants, customization state and destination, separating merchant goodwill policies from statutory rights and faulty-goods remedies. Show evidence and unresolved exceptions; keep mandatory disclosures in both control and treatment.",
+      "competitorOverlap": "PIA already answers return-policy questions and Google supports product Q&A/document links. The hypothesis is applying verified policy eligibility during candidate selection, not generating a clearer generic FAQ.",
+      "edgeHypothesis": "A shortlist that meets the shopper's declared return requirement yields more suitable retained purchases than post-selection policy Q&A.",
+      "dataNeeded": [
+        "Merchant-reviewed jurisdiction/variant policy rules",
+        "Customization and offer state",
+        "Explicit shopper return requirement and destination",
+        "Policy-related cancellations, returns, complaints and orders"
+      ],
+      "experiment": "Randomize eligible AI shoppers who state a return requirement to compliant current Q&A or proactive eligibility matching; never remove legally required information. Primary: paid suitable order within 14 days, retained at 60 days. Plan 6 to 8 weeks plus maturation and baseline-derived power. Guardrails: factual policy accuracy, lawful rights preservation, complaints and total purchase rate.",
+      "metric": "Retained purchasers of offers meeting their declared policy requirement / all randomized eligible shoppers; report total paid purchasers and complaints separately.",
+      "impactEvidence": "Hypothesized purchase effect. uk-returns supports why policy distinctions matter, not conversion uplift or legal assurance; pia/google-attrs establish competing functionality.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Illustrative: 5,000 eligible policy-sensitive shoppers/month, GBP 50 retained-order contribution, GBP 750 fee; no measured prevalence or baseline purchase rate.",
+        "calculation": "750 / 50 = 15 additional retained orders; 15 / 5000 = 0.3 percentage points before policy-maintenance costs.",
+        "range": "Zero if generic answers already suffice; negative if false exclusions shrink the shortlist or policy language scares shoppers away."
+      },
+      "willingnessToPay": "Unvalidated GBP 750/month test price plus specialist policy maintenance; verify merchant demand before building cross-jurisdiction coverage.",
+      "costControl": "Encode approved rules deterministically and regenerate only when a policy or variant changes. Route genuine ambiguity to merchant review.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant legal/policy ownership",
+        "Variant customization metadata",
+        "Country-specific review and versioning"
+      ],
+      "failureMode": "The system conflates change-of-mind exclusions with rights for faulty goods, or treats an uncertain interpretation as a promise.",
+      "falsifier": "No gain in suitable retained purchases, or any material increase in incorrect rights/policy statements.",
+      "sourceIds": [
+        "uk-returns",
+        "pia",
+        "google-attrs"
+      ]
+    },
+    {
+      "id": "constructor-10",
+      "title": "Spend reasoning time where it changes a shopper's chance of buying",
+      "lens": "algorithmic",
+      "buyer": "High-traffic retailers constrained by agent latency or per-conversation serving budget",
+      "problem": "The same expensive reasoning path can be used for an exact-SKU request and a genuinely difficult mission, increasing wait time and leaving less capacity for shoppers who need help.",
+      "mechanism": "Discovery to purchase: route straightforward intent to fast verified retrieval and reserve deeper reasoning or evidence lookup for consequential ambiguity. Under a fixed serving budget, this should reach more shoppers with useful assistance while reducing latency.",
+      "intervention": "Build a routing policy using explicit query/constraint complexity, retrieval confidence and missing decisive facts. Keep the product-correctness checks on every path. Randomly audit cheap-path decisions and evaluate fast-first rendering separately from answer quality.",
+      "competitorOverlap": "Constructor already has search, agent modes, streaming, a shared engine and performance optimization. The proposed difference is an experimentally calibrated allocation rule based on marginal retained-purchase value per unit of computation; equivalent private routing is unknown.",
+      "edgeHypothesis": "At the same total serving budget, value-aware routing increases retained purchasers compared with a uniform agent policy; at the same retained-purchase outcome, it reduces cost.",
+      "dataNeeded": [
+        "Per-route token, latency and infrastructure costs",
+        "Query/constraint complexity and retrieval confidence",
+        "Purchases, cancellations and returns",
+        "Capacity limits and failed/time-out requests"
+      ],
+      "experiment": "Randomize eligible AI-shopping users to uniform existing route or the allocator with equal aggregate serving budgets and persistent assignment. Primary: paid purchasers within 7 days, with retained-order follow-up. Run 4 to 6 weeks after baseline-powered planning. Guardrails: product correctness, p95 latency, coverage, rare-intent outcomes and no deterioration beyond a prespecified purchase noninferiority margin.",
+      "metric": "Paid/retained purchasers per all eligible assigned shoppers is primary. Cost per incremental retained purchaser is secondary only if incrementality is positive; ordinary cost per attributed order is not equivalent.",
+      "impactEvidence": "Hypothesized; agent-api and ui establish existing flexible agent interfaces. No published result supports a numerical uplift or cost saving for this router.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Illustrative: 50,000 eligible AI shoppers/month, GBP 40 retained-order contribution, GBP 1,000 fee, identical serving budget; baseline conversion unknown.",
+        "calculation": "Without cost savings, 1000 / 40 = 25 additional retained orders; 25 / 50000 = 0.05 percentage points. Verified cost savings can offset the fee only after the purchase guardrail passes.",
+        "range": "Zero if current routing is equally efficient; negative if cheap-path errors or delayed escalation lose purchases. Savings alone do not satisfy the primary purchase-growth objective."
+      },
+      "willingnessToPay": "Unvalidated GBP 1,000/month test price; require a controlled improvement in purchases or verified purchase-preserving savings that fund additional conversion work.",
+      "costControl": "Secondary objective is built into routing, with conversion guardrails and random quality audits preventing indiscriminate model downgrades.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Control over inference routes",
+        "Reliable per-request cost accounting",
+        "Adequate traffic for rare-intent guardrails"
+      ],
+      "failureMode": "The routing signal is poorly calibrated, so difficult shoppers are incorrectly assigned to a cheap path.",
+      "falsifier": "At matched serving spend, retained purchase rate does not improve; any cost advantage vanishes after quality remediation.",
+      "sourceIds": [
+        "agent-api",
+        "ui",
+        "purchase"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "home",
+      "title": "AI Ecommerce Search and Product Discovery | Constructor",
+      "url": "https://constructor.com/",
+      "type": "official-doc",
+      "claim": "Lists Answer Engine Assistants (Beta) as providing real-time data for discovery and purchase via answer engines such as ChatGPT. Does not establish a particular consumer-engine integration contract or causal purchase lift."
+    },
+    {
+      "id": "asa",
+      "title": "Learn about AI Shopping Agent",
+      "url": "https://docs.constructor.com/docs/products-ai-shopping-agents-learn-about-ai-shopping-agent",
+      "type": "official-doc",
+      "claim": "Documents goal-based multi-item shopping, catalog validation, clickstream personalization, and links to PDPs. Capabilities do not establish their incremental purchase effect."
+    },
+    {
+      "id": "implement",
+      "title": "Implement AI Shopping Agent",
+      "url": "https://docs.constructor.com/docs/products-ai-shopping-agents-learn-about-ai-shopping-agent-implement-ai-shopping-agent",
+      "type": "official-doc",
+      "claim": "Documents catalog/content preparation, merchant-owned UI integration and conversational thread_id persistence. Onboarding is through a customer success manager; no public monetary tariff verified."
+    },
+    {
+      "id": "agent-api",
+      "title": "Retrieve conversational agent replies",
+      "url": "https://docs.constructor.com/reference/v1-asa-retrieve-agent-insights-chat",
+      "type": "official-doc",
+      "claim": "Current API documents multi-turn conversation, search/browse/recommendations, knowledge-base answers, streamed events, follow-up refinements and domain configuration. Read official .md representation dated 28 September 2026."
+    },
+    {
+      "id": "pia",
+      "title": "AI Product Insights Agent | Constructor",
+      "url": "https://constructor.com/solutions/product-insights-agent",
+      "type": "official-doc",
+      "claim": "Product-page question answering already covers compatibility, delivery, returns, specifications and follow-up questions, using merchant content and other sources. Marketing is not a measured causal effect."
+    },
+    {
+      "id": "belk",
+      "title": "Belk Unlocks Next-Level Ecommerce Conversion and AI Innovation with Constructor",
+      "url": "https://constructor.com/customers/belk-constructor",
+      "type": "vendor-case",
+      "claim": "ASA mobile-app users reportedly convert at double or better the rate of standard-search users. No ASA-specific randomization, denominators or uncertainty reported. Earlier $21M and subsequent $35M/7.4% figures concern core search, not ASA."
+    },
+    {
+      "id": "demo",
+      "title": "See AI Shopping & Product Insight Agents in Action | Constructor",
+      "url": "https://info.constructor.com/agentic-commerce-demo",
+      "type": "vendor-case",
+      "claim": "Lists ASA +12% conversion, +16% revenue per visitor, +5% AOV without named test methodology. Separate PIA +197% purchase rate is versus non-users; user selection can explain some or all of the association."
+    },
+    {
+      "id": "ab-doc",
+      "title": "A/B testing",
+      "url": "https://docs.constructor.com/docs/analytics-a-b-testing",
+      "type": "official-doc",
+      "claim": "Dashboard offers configurable visitor splits for global search rules, global browse rules and recommendation strategies, MDE planning and maximum 90-day tests. ASA is not among the listed types; split alone does not prove random assignment."
+    },
+    {
+      "id": "aabb",
+      "title": "Still Running Classic A/B Tests? Here’s Why That Might Be a Big Mistake",
+      "url": "https://constructor.com/split-test-digest/why-running-classic-ab-tests-could-be-a-big-mistake",
+      "type": "official-doc",
+      "claim": "Explicitly describes random assignment to A1/A2/B1/B2 and checking duplicate-arm consistency. Establishes a general randomized practice, not the design behind advertised ASA case results."
+    },
+    {
+      "id": "purchase",
+      "title": "Success event and purchase tracking",
+      "url": "https://docs.constructor.com/docs/integrating-with-constructor-behavioral-tracking-success-event-and-purchase-tracking",
+      "type": "official-doc",
+      "claim": "Separates generic success events such as add-to-cart from purchase events representing checkout completion and order placement, and uses both for optimization."
+    },
+    {
+      "id": "metrics",
+      "title": "Metrics glossary",
+      "url": "https://docs.constructor.com/docs/analytics-metrics-glossary",
+      "type": "official-doc",
+      "claim": "Distinguishes success events, purchases and their session-based metrics; an unspecified marketing conversion label cannot automatically be interpreted as purchase rate."
+    },
+    {
+      "id": "attribution",
+      "title": "Attribution",
+      "url": "https://docs.constructor.com/docs/analytics-metrics-glossary-attribution",
+      "type": "official-doc",
+      "claim": "From 1 September 2026, reporting changes to a 30-day cross-session window. Last discovery interaction before add-to-cart receives per-item credit, inherited by the purchase. More attributed revenue can result without more purchases."
+    },
+    {
+      "id": "external",
+      "title": "External Traffic Report",
+      "url": "https://docs.constructor.com/docs/analytics-external-traffic-report",
+      "type": "official-doc",
+      "claim": "AI Optimization tab reports AI-origin sessions, orders and revenue from referrers/URL parameters. Missing signals can be classified Direct/Other. Sources-table Purchase Rate is defined as share of AI-origin purchases, not purchases per source session."
+    },
+    {
+      "id": "returns-api",
+      "title": "Post a list of offline behavioral actions",
+      "url": "https://docs.constructor.com/reference/v1-offline-behavioral-actions-create-actions",
+      "type": "official-doc",
+      "claim": "Accepts offline purchase and return actions. Return-event ingestion itself is existing functionality; the page does not establish causal retained-purchase optimization."
+    },
+    {
+      "id": "identifiers",
+      "title": "Identification parameters",
+      "url": "https://docs.constructor.com/docs/integrating-with-constructor-behavioral-tracking-identification-parameters",
+      "type": "official-doc",
+      "claim": "Documents browser/session identifiers and optional logged-in user identifier for cross-device behavior; internal tests use identification parameters for cell assignment."
+    },
+    {
+      "id": "docs-mcp",
+      "title": "MCP server",
+      "url": "https://docs.constructor.com/docs/ai-tooling-mcp-server",
+      "type": "official-doc",
+      "claim": "This is explicitly a Constructor Documentation MCP server. It is not evidence of public shopping or checkout MCP access in consumer ChatGPT."
+    },
+    {
+      "id": "ui",
+      "title": "Beyond the Search Bar: Enhancing Product Discovery Through AI Agents",
+      "url": "https://constructor.com/blog/enhancing-product-discovery-through-ai-agents",
+      "type": "official-doc",
+      "claim": "Documents modular agent UIs, search-bar/chat alternatives, PDP question blocks and merchant-side customization. Basic interface switching is already within scope."
+    },
+    {
+      "id": "shop-cart",
+      "title": "Carts and checkout for agents",
+      "url": "https://shopify.dev/docs/agents/carts-and-checkout",
+      "type": "official-doc",
+      "claim": "Shopify supports long-running exploratory carts across conversations, context and continue_url handoff. Persistent carts alone are not a new capability."
+    },
+    {
+      "id": "simgym",
+      "title": "Shopify Help Center | SimGym",
+      "url": "https://help.shopify.com/en/manual/online-store/simgym",
+      "type": "official-doc",
+      "claim": "AI Research Preview simulates browsing and add-to-cart for Liquid themes; output can differ from real shoppers. Published marginal prices are USD 0.75 single-theme and USD 1.50 comparison after allowance."
+    },
+    {
+      "id": "rollouts",
+      "title": "Shopify Help Center | Types of rollouts and changes",
+      "url": "https://help.shopify.com/en/manual/markets/rollouts/rollout-types",
+      "type": "official-doc",
+      "claim": "Shopify already supports live treatment/control rollout experiments across supported storefront, checkout/accounts, catalog and discount changes with eligibility and scope constraints."
+    },
+    {
+      "id": "oai-checkout",
+      "title": "Product checkout conversion spec",
+      "url": "https://developers.openai.com/plugins/guides/product-checkout-conversion-spec",
+      "type": "official-doc",
+      "claim": "Approved-partner beta checkout integration passes item/offer IDs; merchant retrieves authoritative catalog, inventory and pricing. Native item revalidation is an existing baseline, not proof of delivery-promise coordination."
+    },
+    {
+      "id": "google-attrs",
+      "title": "How to use conversational attributes",
+      "url": "https://support.google.com/merchants/answer/17085370",
+      "type": "official-doc",
+      "claim": "Google supports optional question_and_answer, document_link, related_product, item_group_title, variant_option and popularity_rank; related_product includes required-part relationships. No conversion guarantee."
+    },
+    {
+      "id": "channable",
+      "title": "Channable Product Updates",
+      "url": "https://www.channable.com/product-releases-2026",
+      "type": "official-doc",
+      "claim": "Advertises Virtual Bundles as coming soon. Generic product pairings or bundles are not defensible novelty."
+    },
+    {
+      "id": "uk-returns",
+      "title": "Accepting returns and giving refunds: the law - GOV.UK",
+      "url": "https://www.gov.uk/accepting-returns-and-giving-refunds",
+      "type": "official-doc",
+      "claim": "UK guidance distinguishes distance-sale cancellation rights, exceptions and rights for faulty goods. Supports careful policy modeling, not automated legal assurances or a universal refund promise."
+    }
+  ]
+}

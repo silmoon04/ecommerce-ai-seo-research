@@ -1,0 +1,661 @@
+{
+  "id": "geoffy",
+  "name": "Geoffy",
+  "benchmarkType": "workflow",
+  "winningEvidence": [
+    "Selected for documented operational detail: source-constrained product content, storefront confirmation and runtime safeguards. These are workflow strengths, not independent reliability tests.",
+    "Three public five-star Shopify reviews at retrieval on 29 September 2026. PadelDogs reports higher traffic and sales after five months of use; this is uncontrolled merchant testimony, not causal uplift, paid retention or profit evidence.",
+    "Vendor's garden-furniture benchmark distinguishes citations, brand naming and recommendation, and separates API counts from consumer-app illustrations. Useful measurement hygiene; no commercial intervention result."
+  ],
+  "currentOffer": "Snapshot 29 September 2026. Optimise publishes visible factual product content and structured data for Shopify, WooCommerce and documented custom Next.js/Astro integrations. Monitor and Influence are early access. Website GBP bundles: £199/£499/£1,499 monthly; standalone Optimise from £99. Shopify listing separately bills USD $249/$649/$1,949 per 30 days and advertises 14-day trials. Do not convert or reconcile these as one offer; website uses sales-assisted onboarding/free score.",
+  "conversionMechanism": "Source-constrained facts can help engines identify a suitable product and help a shopper decide. Publication, ingestion, retrieval, accurate selection, valid landing, checkout and retained purchase are separate stages. Geoffy documents the first stage well and monitors some middle stages; the examined evidence does not establish incremental purchases caused by Geoffy.",
+  "harness": {
+    "offlineSimulation": "not_found",
+    "liveMonitoring": "documented",
+    "randomizedExperiment": "unclear",
+    "purchaseMeasurement": "unclear",
+    "details": "Reviewed homepage, pricing, listing, workflow, headless docs, benchmark and outcome pages. No controllable frozen-tool-response replay was documented. Monitor is early access; optional middleware separately records AI crawls/referrals. Higher Shopify tiers advertise holdout groups without a public assignment method, endpoint or power plan. Published tracking payload and sector benchmark do not establish an order experiment. not_found means no documentation located in this search, not that the capability cannot exist."
+  },
+  "strengths": [
+    "Unknown catalog facts can remain blank; merchant review precedes publication.",
+    "Confirmation checks live HTML/version/canonical and namespace identity/content type rather than trusting a setting or a successful HTTP response.",
+    "Supplementary product facts avoid a second stale offers record; the commerce platform remains responsible for price and stock.",
+    "Custom-runtime docs explain refresh behavior, degraded output, language/canonical guards and optional visit telemetry.",
+    "Off-site source work is explicitly part of the offer; own-page edits are not presented as the only route to visibility."
+  ],
+  "limits": [
+    "Catalog-grounded does not mean independently true: supplier mistakes and missing contraindications can survive faithful rewriting.",
+    "Served markup cannot establish downstream ingestion, retrieval, engine interpretation, merchant ranking or successful checkout.",
+    "Published package language matching allows en-GB on en-US; that safeguard does not verify market-specific shipping, currency or policy.",
+    "Monitoring and Influence remain early access, and described holdouts lack sufficient public experimental detail.",
+    "AI referral telemetry has sampling/loss limits and misses unattributed influence; it is not an order counter.",
+    "Small review sample and before/after referral-share claims do not establish revenue causality or a winning commercial business."
+  ],
+  "improve": [
+    "Preserve existing fact and publishing controls, then trace specific purchase-blocking failures through the named channel and cart.",
+    "Test variant continuity, compatibility, deadline feasibility and complete solution cost before adding more generic content.",
+    "Treat offline agent preferences as candidate-screening evidence and calibrate them against independent live purchase tests.",
+    "Use retained orders and contribution, with uncertainty and all-channel displacement checks, rather than citation totals as the product's success criterion.",
+    "Restrict expensive checks to decisions they can change while maintaining unbiased validation and coverage of material risks."
+  ],
+  "ideas": [
+    {
+      "id": "geoffy-01",
+      "title": "Verify the purchasable offer after the destination accepts it",
+      "lens": "infrastructural",
+      "buyer": "Multi-market merchants with measurable price, stock or variant disagreements across AI channels.",
+      "problem": "A correctly published page can coexist with an old channel record or a cart that rejects the advertised offer.",
+      "mechanism": "Discovery and landing correctness: fewer invalid offers should preserve qualified visits through checkout. Verification alone earns nothing; repairs must remove a demonstrated purchase blocker.",
+      "intervention": "Build a trace keyed by merchant, destination, product, variant and market. Compare authoritative source, served HTML, destination diagnostics or accepted feed snapshot where available, and a merchant-authorized read/cart validation. Flag unobservable engine state as unknown; never call an accepted feed proof of ranking.",
+      "competitorOverlap": "Geoffy checks publication; Shopify Catalog already maps preferred sources and variants; Google already auto-corrects some offer discrepancies. The proposed edge is a documented failure across those boundaries, not another source mapper.",
+      "edgeHypothesis": "Merchants with frequent offer disagreements gain more retained AI-origin orders when fixes are driven by destination-and-cart evidence than by storefront checks alone.",
+      "dataNeeded": [
+        "Versioned product and market records",
+        "Published HTML and feed submission receipts",
+        "Destination diagnostics where accessible",
+        "Cart validation responses",
+        "Consented origin classification, paid orders, cancellations and returns"
+      ],
+      "experiment": "Randomize eligible product-family clusters to additional tracing plus repair or existing safe workflow; stratify by pre-period disagreement frequency and sales. Primary endpoint: net paid AI-origin orders per assigned family-day. Plan 8 to 12 weeks plus the normal return window, then power from observed baseline and cluster correlation; extend or declare inconclusive if sparse. Never withhold mandatory safety corrections. Audit spillovers, all-channel orders and margin.",
+      "metric": "Intention-to-treat difference in retained AI-origin orders per assigned family-day. Report referrals and unknown origin separately; offer-validity rate is diagnostic, not conversion lift.",
+      "impactEvidence": "Hypothesized; geoffy-check, shopify-mapping and google-updates establish overlapping controls, not the new workflow's order effect.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic or fault prevalence assumed. Measure affected arrivals A, repair coverage r, causal purchase recovery d and retained contribution m.",
+        "calculation": "Monthly value = A*r*d*m - £199 - integration/repair cost. Break-even requires A*r*d*m to exceed total cost.",
+        "range": "Unknown; zero when no purchase-blocking disagreement exists, negative if repairs introduce errors or displace sales."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot price: GBP £199/month, contingent on documented costly disagreement. Geoffy's published pricing is a software-budget proxy, not demand proof.",
+      "costControl": "Recheck only changed records and high-cost disagreements; cheap field comparisons precede cart validation. Keep high-risk offers on full coverage.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant permissions",
+        "Destination state access",
+        "Reliable variant/market joins",
+        "Order and refund measurement"
+      ],
+      "failureMode": "Destination acceptance is mistaken for engine use; attribution or stock changes create apparent gains; existing tools already resolve the relevant cases.",
+      "falsifier": "Baseline audit finds few material disagreements, or powered trial's upper confidence bound cannot cover fee and operating cost.",
+      "sourceIds": [
+        "geoffy-check",
+        "shopify-mapping",
+        "google-updates",
+        "shopify-cart",
+        "geoffy-price"
+      ]
+    },
+    {
+      "id": "geoffy-02",
+      "title": "Carry the selected variant intact from AI result to checkout",
+      "lens": "identity",
+      "buyer": "Apparel, beauty and equipment merchants whose AI referrals land on parent products with many variants.",
+      "problem": "The assistant names a particular size, pack or colour, but the destination opens the first available variant or a different market offer.",
+      "mechanism": "Landing and checkout: preserving the exact purchasable choice removes re-selection and expectation mismatch, potentially turning existing AI-origin visits into retained orders.",
+      "intervention": "Create a merchant-side resolver for stable product/variant identifiers and market context. Publish supported exact-variant links, verify selected media/price on arrival, keep the selection through cart creation, and request a choice when the requested variant is unavailable. Never silently substitute.",
+      "competitorOverlap": "Shopify already supports variant deep links and variant cart lines; Geoffy already handles product identity and canonical guards. The gap must be a measured broken handoff on actual referral paths.",
+      "edgeHypothesis": "End-to-end preservation across redirects and locale changes removes more lost purchases than correct parent-level metadata.",
+      "dataNeeded": [
+        "Destination links or merchant-controlled tool traces",
+        "Product-to-variant identity history",
+        "Market and redirect rules",
+        "Selected-variant/cart events",
+        "AI-origin sessions and paid/refunded orders"
+      ],
+      "experiment": "Randomize eligible AI-origin arrivals before rendering to repaired resolver or current valid landing behavior, with sticky assignment through purchase. Primary: paid orders within 7 days per assigned visitor; retained orders after the return window are a guardrail. Run at least full weekly cycles and power on baseline error prevalence; avoid testing on legally misleading offers, and stop for wrong-item errors.",
+      "metric": "Difference in seven-day purchase probability among all assigned eligible AI-origin visitors, not only those who click a variant. Estimate only post-arrival effects; acquisition is outside this test.",
+      "impactEvidence": "Hypothesized; shopify-variants and shopify-cart establish implementation primitives, not an effect size.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Measure eligible monthly visitors N, control purchase rate p0, incremental probability d and contribution m; no numerical rates assumed.",
+        "calculation": "Value = N*d*m - £99 - implementation cost; break-even d = total cost/(N*m).",
+        "range": "May be zero or negative if current links already preserve variants or resolver adds friction."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP £99/month for a store with confirmed variant-handoff faults.",
+      "costControl": "Resolve deterministically from catalog IDs and cache stable mappings; invoke a model only for ambiguous source labels, with merchant review.",
+      "feasibility": "now",
+      "dependencies": [
+        "Control of landing routes",
+        "Reliable variant IDs",
+        "Order-event instrumentation",
+        "Engine or feed support for supplied variant URLs"
+      ],
+      "failureMode": "An engine removes variant parameters; assistant selection is not observable; market mapping changes price; intervention helps one SKU while cannibalizing another.",
+      "falsifier": "Most real referrals lack a recoverable exact variant, or retained orders do not improve after measured handoff errors fall.",
+      "sourceIds": [
+        "shopify-variants",
+        "shopify-cart",
+        "geoffy-runtime"
+      ]
+    },
+    {
+      "id": "geoffy-03",
+      "title": "Answer the shopper's delivery deadline before the shortlist hardens",
+      "lens": "temporal",
+      "buyer": "Gift, event, replacement-part and urgent household merchants with dependable fulfillment data.",
+      "problem": "A product meets the nominal need but its actual delivery date makes the purchase useless; shoppers discover that too late.",
+      "mechanism": "Selection and checkout: show only honest deadline-feasible options early, then preserve the same delivery context through checkout so a qualified buyer can commit.",
+      "intervention": "Add an optional postcode-and-needed-by check on merchant tools and landing pages. Query sellable inventory, cutoff, carrier service and destination; return estimated delivery range, total cost and timestamp. Publish static service facts where appropriate, but compute volatile promises from commerce systems. Revalidate before payment without inventing guarantees.",
+      "competitorOverlap": "Shopify already offers delivery estimates and fulfillment settings. The proposed work brings the buyer's deadline into merchant-controlled AI selection and keeps the quote consistent after handoff.",
+      "edgeHypothesis": "Deadline-sensitive AI-origin traffic converts better when feasibility is established before basket creation, with no deterioration in on-time fulfillment.",
+      "dataNeeded": [
+        "Consented destination and deadline",
+        "Inventory by fulfillment location",
+        "Cutoff calendars and carrier estimates",
+        "Delivery quote and checkout logs",
+        "Paid orders, lateness, refunds and shipping margin"
+      ],
+      "experiment": "Randomize eligible AI-origin visitors with stated deadlines to early feasibility check or current delivery information; preserve normal mandatory disclosures. Primary: paid orders per assigned visitor. Run 6 to 10 weeks spanning comparable weekdays, power from deadline cohort size, and include actual delivery outcomes. Guard against higher late delivery, quote errors, margin loss and inaccessible forms.",
+      "metric": "Intention-to-treat paid-purchase rate and retained on-time orders per assigned deadline shopper. Report abandonment due to honestly ineligible stock separately.",
+      "impactEvidence": "Hypothesized; shopify-delivery and openai-feed document existing delivery/freshness constraints, not uplift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Measure monthly deadline shoppers D, purchase change d, retained margin m and extra fulfillment cost C.",
+        "calculation": "Value = D*d*m - C - £149. Break-even requires incremental retained contribution above fee and shipping cost.",
+        "range": "Unknown; may reduce gross orders by correctly excluding infeasible products, while still improving retained orders. Could be net negative."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP £149/month; no willingness-to-pay study located.",
+      "costControl": "Cache route/service facts, invalidate at real cutoffs, and obtain expensive live quotes only after voluntary destination entry.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Fulfillment and carrier integrations",
+        "Merchant-controlled assistant or landing experience",
+        "Deadline input",
+        "Operational ability to meet quoted service"
+      ],
+      "failureMode": "Carrier uncertainty overwhelms estimate quality; early postcode entry adds friction; the merchant cannot meet deadlines at a viable margin.",
+      "falsifier": "A powered trial finds no retained-order gain or on-time performance worsens beyond a prespecified threshold.",
+      "sourceIds": [
+        "shopify-delivery",
+        "openai-feed",
+        "shopify-cart"
+      ]
+    },
+    {
+      "id": "geoffy-04",
+      "title": "Prove hard compatibility instead of describing generic suitability",
+      "lens": "algorithmic",
+      "buyer": "Replacement-parts, furniture, electronics-accessory and technical-equipment retailers.",
+      "problem": "A plausible natural-language recommendation does not establish that a product fits the buyer's actual device, opening, connector or installation.",
+      "mechanism": "Selection: deterministic compatibility checks remove uncertainty for suitable buyers and reject bad matches, which can increase retained purchases and reduce wrong-fit returns.",
+      "intervention": "Compile authoritative compatibility tables, dimension tolerances and exclusions into executable rules. Ask for the minimum missing non-sensitive specification; return supported, incompatible or unknown with the exact governing facts and a purchasable variant. Use models to interpret the question, not invent compatibility.",
+      "competitorOverlap": "Geoffy already writes suitability/exclusion content and advocates learning from returns. Static attributes and native search exist. The proposed advantage is evaluated constraint logic tied to a concrete buyer configuration.",
+      "edgeHypothesis": "An auditable compatibility verdict produces more retained orders than an equally accurate but passive fact block in categories where wrong-fit fear blocks buying.",
+      "dataNeeded": [
+        "Manufacturer compatibility lists and revision dates",
+        "Measured dimensions and tolerance rules",
+        "Buyer-supplied model or dimensions",
+        "Return reasons",
+        "Orders and contribution after returns"
+      ],
+      "experiment": "Randomize AI-origin visitors on eligible technical categories to checker plus existing facts or existing facts alone. Primary: paid orders per assigned visitor; co-primary decision guardrail: wrong-fit returns. Run 8 to 12 weeks plus return window with power based on eligible sessions. Require expert validation and zero unsupported affirmative matches before launch; do not experiment with safety-critical unverified compatibility.",
+      "metric": "Purchase-rate difference and retained-order difference per all assigned visitors. Checker completion and supported-match fraction are mediators, not substitute outcomes.",
+      "impactEvidence": "Hypothesized; geoffy-returns explicitly says fact enrichment has no established recommendation lift. No direct purchase estimate found.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Measure eligible visitors N, purchase change d, contribution m, and avoided wrong-fit costs R; do not presume R is positive.",
+        "calculation": "Value = N*d*m + R - £199 - expert/rule-maintenance cost. Avoid counting the same returned order in both m and R.",
+        "range": "Unknown; gross orders can fall as false matches are excluded; retained contribution may still rise, stay flat or fall."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP £199/month plus scoped setup, justified only by measured fit-related losses.",
+      "costControl": "Use reusable deterministic rules and product-family templates; direct expert effort to unresolved high-volume configurations.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Authoritative compatibility evidence",
+        "Category specialist review",
+        "Correct variant mapping",
+        "Return data"
+      ],
+      "failureMode": "Source tables are incomplete; the checker asks too much; a false positive creates costly or unsafe purchases.",
+      "falsifier": "Wrong-fit errors persist, expert maintenance exceeds value, or passive facts match the retained-order performance.",
+      "sourceIds": [
+        "geoffy-returns",
+        "geoffy-home",
+        "shopify-search"
+      ]
+    },
+    {
+      "id": "geoffy-05",
+      "title": "Sell the complete working solution within the stated budget",
+      "lens": "behavioral",
+      "buyer": "Merchants selling equipment, home projects or starter kits where a headline item needs other parts.",
+      "problem": "AI recommends a cheap core item, but the shopper abandons when mandatory accessories or shipping push the complete job over budget.",
+      "mechanism": "Selection and cart: an honest complete basket reduces hidden work and late cost surprises, allowing suitable shoppers to purchase a usable solution.",
+      "intervention": "Represent required, optional and already-owned components separately. Generate a minimal compatible bill of materials from the customer's task and budget, show the total estimated delivered cost, and add only explicitly chosen items. Offer a valid lower-cost configuration when one exists.",
+      "competitorOverlap": "Shopify Bundles already provides bundles and component inventory. Generic bundle creation is covered; the hypothesis concerns task completeness, compatibility and budget feasibility before an AI-origin shopper checks out.",
+      "edgeHypothesis": "Task-complete baskets increase the number of retained purchasing customers, not merely average order value or unwanted accessory attachment.",
+      "dataNeeded": [
+        "Component dependency and compatibility rules",
+        "Bundle/channel eligibility",
+        "Inventory and delivered cost",
+        "Voluntarily declared already-owned items",
+        "Basket composition, paid orders and returns"
+      ],
+      "experiment": "Randomize AI-origin eligible task shoppers to complete-solution builder or existing individual-product/bundle presentation. Primary: customers with a paid order per assigned visitor; retained contribution and missing-component contacts are guardrails. Run 8 to 12 weeks and power for purchase probability; report basket-value changes separately and prohibit preselected optional extras.",
+      "metric": "Difference in retained purchasing customers per assigned visitor. Do not count larger baskets alone as incremental purchases; examine cannibalization across included SKUs.",
+      "impactEvidence": "Hypothesized; shopify-bundles documents the existing capability and constraints, not this intervention's effect.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Measure visitors N, purchase change d, retained contribution per additional customer m, incremental margin on existing buyers B and costs C.",
+        "calculation": "Purchase-value component = N*d*m. Report B separately; net value = N*d*m + B - C - £149.",
+        "range": "Unknown, including negative: clearer full cost can deter purchase, and excessive bundles can harm fit or margin."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP £149/month for categories with demonstrable incomplete-task abandonment.",
+      "costControl": "Precompute validated component graphs; use native bundle/cart operations and recompute only stock or price changes.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Validated component rules",
+        "Native bundle/cart support",
+        "Inventory sync",
+        "Merchant fulfillment for every required component"
+      ],
+      "failureMode": "The system mistakes an optional item for a requirement, overstates savings, sells incompatible bundles or fails on unsupported channels.",
+      "falsifier": "Purchase probability does not rise despite larger average baskets, or missing-part/return complaints increase.",
+      "sourceIds": [
+        "shopify-bundles",
+        "shopify-cart"
+      ]
+    },
+    {
+      "id": "geoffy-06",
+      "title": "Show the real cost and conditions of changing one's mind",
+      "lens": "regulatory",
+      "buyer": "UK merchants in considered-purchase categories with confusing return, warranty or delivery terms.",
+      "problem": "A buyer sees a product recommendation but cannot determine the seller, total delivered cost, return expense or relevant cancellation conditions.",
+      "mechanism": "Selection and checkout: understandable, accurate terms can resolve avoidable uncertainty for qualified buyers and prevent purchases based on false expectations.",
+      "intervention": "Build a policy decision card using seller identity, basket, destination, category exceptions and actual merchant terms. Show total costs, the applicable return route and concrete conditions with dated policy links; preserve the approved terms on the order receipt. Escalate ambiguity for merchant/legal review rather than generating legal assurances.",
+      "competitorOverlap": "Geoffy supplies answer content; Burnish already compares policy claims with live pages. Standard policy and returns tools exist. The proposed difference is a transaction-specific explanation and purchase test, not a compliance badge.",
+      "edgeHypothesis": "Buyers who would otherwise abandon because they cannot understand the terms complete more retained orders when their exact scenario is explained accurately.",
+      "dataNeeded": [
+        "Versioned approved policies",
+        "Seller identity and market",
+        "Item category and exceptions",
+        "Delivery/return fee tables",
+        "Orders, cancellations, returns and support reasons"
+      ],
+      "experiment": "Randomize eligible AI-origin visitors to a concise scenario card or the merchant's existing fully compliant disclosures. Never remove mandatory information. Primary: paid orders per assigned visitor; retained contribution, disputes and misleading-term incidents are guardrails. Plan 8 to 12 weeks plus the category return period, power on observed traffic; independently review all rule branches before release.",
+      "metric": "Purchase-rate difference per assigned eligible AI-origin visitor, with returns and support cost observed separately. Legal completeness is a prerequisite, not a conversion outcome.",
+      "impactEvidence": "Hypothesized; uk-distance supports disclosure categories, not an uplift or complete legal rule set. burnish-workflow establishes adjacent policy verification.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Measure visitors N, incremental purchase probability d, retained margin m and additional return/service cost C.",
+        "calculation": "Value = N*d*m - C - £99 - policy-maintenance cost. No positive d is presumed.",
+        "range": "May be zero or negative when terms are unattractive or the card exposes genuine disadvantages; truthful disclosure remains required."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP £99/month; treat any compliance work as separately scoped and professionally reviewed.",
+      "costControl": "Deterministic rules and reusable policy versions; model-assisted drafting only after the applicable rule and source are known.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant-approved jurisdiction/category rules",
+        "Current policies",
+        "Fee calculation",
+        "Appropriate legal review"
+      ],
+      "failureMode": "An exception is omitted, estimated cost is presented as final, or disclosure complexity increases hesitation.",
+      "falsifier": "Validated cards fail to improve retained purchase probability, or error/support costs exceed any gain.",
+      "sourceIds": [
+        "uk-distance",
+        "burnish-workflow",
+        "shopify-cart"
+      ]
+    },
+    {
+      "id": "geoffy-07",
+      "title": "Let shoppers resume a consented buying plan on the merchant's site",
+      "lens": "identity",
+      "buyer": "High-consideration merchants with shoppers returning after AI research across several sessions.",
+      "problem": "The shopper loses the shortlist and non-sensitive requirements from earlier research, then repeats work or buys elsewhere.",
+      "mechanism": "Return visit and checkout: preserving a user-chosen plan reduces repeated selection work and lets the merchant refresh price, stock and variants before a real purchase.",
+      "intervention": "Offer a voluntary save/resume handoff carrying only user-selected products, budget and practical requirements. Use an opaque revocable token, short retention and merchant-controlled authentication when needed. Let the shopper inspect/delete the plan. Recheck commerce facts on resume; keep cart credentials and personal details out of public links.",
+      "competitorOverlap": "Shopify already exposes cart/customer context and checkout handoff. Saved carts are established. The experiment tests continuity of a user-approved research plan, not a generic account or covert cross-site identity graph.",
+      "edgeHypothesis": "Among shoppers who need multiple visits, preserving practical decision context increases 30-day purchases enough to justify integration friction.",
+      "dataNeeded": [
+        "Explicit opt-in and chosen plan fields",
+        "Anonymous experiment assignment before the offer",
+        "Resumption and deletion events",
+        "Current catalog and cart state",
+        "Paid orders and consented return-visit linkage"
+      ],
+      "experiment": "Randomize eligible AI-origin arrivals to the optional plan feature or current navigation, before opt-in; compare all assigned visitors, not savers with nonsavers. Primary: paid purchase within 30 days. Run at least two purchase cycles and power from historical repeat-visit rate; guard consent withdrawal, shared-link leakage, stale price and account creation friction.",
+      "metric": "Intention-to-treat 30-day purchase probability per assigned AI-origin visitor. Report new versus returning customers and same-device versus consented cross-device coverage.",
+      "impactEvidence": "Hypothesized; shopify-cart supplies primitives and credential constraints. No evidence establishes this plan handoff's purchase effect.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Measure eligible arrivals N, incremental 30-day purchase probability d, margin m, storage/support cost C.",
+        "calculation": "Value = N*d*m - C - £149. Opt-in rate is not the purchase effect and must not multiply in a selectively estimated saver uplift.",
+        "range": "Unknown; may be zero if most buyers decide in one visit, or negative if the save step interrupts checkout."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP £149/month for a merchant with sufficient multi-visit AI-origin traffic.",
+      "costControl": "Store compact structured plans rather than full conversations; refresh only resumed plans and delete expired data.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "User-controlled sharing path or merchant assistant",
+        "Secure token handling",
+        "Consented measurement",
+        "Cart and catalog integrations"
+      ],
+      "failureMode": "Consumer assistants do not expose a handoff; shoppers refuse the extra action; account friction outweighs saved work.",
+      "falsifier": "Randomized plan offers do not raise 30-day purchases, even if selected users who save plans convert well.",
+      "sourceIds": [
+        "shopify-cart",
+        "openai-shopping"
+      ]
+    },
+    {
+      "id": "geoffy-08",
+      "title": "Turn verified unmet constraints into a small real assortment test",
+      "lens": "algorithmic",
+      "buyer": "DTC brands or specialist retailers able to add a size, compatible component or actual variant economically.",
+      "problem": "The catalog truly lacks the product an AI-assisted shopper needs. Rewriting existing pages cannot create that product.",
+      "mechanism": "Discovery and selection: adding a real, available option that satisfies an evidenced unmet constraint can create purchases that the current assortment cannot win.",
+      "intervention": "Analyze consented failed-shopping traces from a merchant-controlled assistant or recruited shopper panel. Separate retrieval failures from genuine catalog gaps. Estimate demand using observed people, validate costs and supplier feasibility, then fund a small real-stock or honestly described preorder test. Never infer market demand from repeated synthetic shoppers alone.",
+      "competitorOverlap": "Native Shopify semantic search and boosts already improve retrieval; Geoffy already points to returns and zero-result queries as evidence. The extra work changes the actual assortment only after ruling out those cheaper fixes.",
+      "edgeHypothesis": "For a narrow repeated unmet requirement, a limited real variant can generate more retained AI-origin purchases per pound of effort than further content optimization.",
+      "dataNeeded": [
+        "Consented independent shopper constraints and failure outcomes",
+        "Complete current assortment",
+        "Observed repeat demand, not synthetic frequency",
+        "Supplier lead times and minimum quantities",
+        "Inventory costs, paid orders, cancellations and returns"
+      ],
+      "experiment": "Randomize comparable regional or category demand clusters to a limited truthful launch versus unchanged assortment, with agreed availability boundaries and spillover tracking; do not advertise unavailable stock. Primary: incremental retained purchasing customers per assigned cluster-period across all category SKUs. Budget 12 to 16 weeks plus return/lead-time windows; power may require multiple merchants. Guard unsold inventory and displacement of existing purchases.",
+      "metric": "Net additional retained customers per assigned demand cluster, including displaced existing-SKU orders. AI-origin subset is reported with explicit origin coverage; total category effect checks attribution artifacts.",
+      "impactEvidence": "Hypothesized and integration-heavy; shopify-search and geoffy-returns support the distinction between retrieval evidence and absent product demand, not the launch's success.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Measure additional retained orders Q, contribution m, fixed sourcing cost S, unsold inventory loss U and ongoing fee F.",
+        "calculation": "Value = Q*m - S - U - F. Break-even Q = (S+U+F)/m. Each term is merchant-specific; no demand forecast is supplied.",
+        "range": "Can be strongly negative if traces are unrepresentative, minimum order sizes are high or demand vanishes before stock arrives."
+      },
+      "willingnessToPay": "Unvalidated pilot price: GBP £500 for one scoped decision study; inventory funding is separate and only merchant-authorized.",
+      "costControl": "Reject retrieval-only failures cheaply, require independent shopper evidence, and test small quantities before expanding assortment.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Consented real intent data",
+        "Supplier feasibility",
+        "Merchandising authority",
+        "Inventory risk budget",
+        "Enough independent demand clusters"
+      ],
+      "failureMode": "Synthetic prompts masquerade as demand, logged nonbuyers are not representative, or the added variant cannibalizes profitable stock.",
+      "falsifier": "Independent validation finds no repeated unmet need, or the controlled launch cannot recover sourcing and inventory cost.",
+      "sourceIds": [
+        "shopify-search",
+        "geoffy-returns",
+        "shopify-variants"
+      ]
+    },
+    {
+      "id": "geoffy-09",
+      "title": "Reduce the decision work imposed by the verified fact widget",
+      "lens": "psychological",
+      "buyer": "Merchants with substantial AI referral volume and dense technical or suitability content.",
+      "problem": "Adding correct information can still overwhelm a buyer who already researched the product, pushing the purchase action below a long repeated explanation.",
+      "mechanism": "Landing comprehension: a concise summary with accessible supporting facts can reduce unnecessary effort and improve purchase completion without changing the underlying truth.",
+      "intervention": "Test a short, task-relevant summary of the same approved facts, an explicit material limitation and a clear route to full detail. Keep facts server-rendered and equally available to people and crawlers; use accessible disclosure, not hidden AI-only text. Keep the purchase action visible without urgency tricks. Measure render and interaction cost.",
+      "competitorOverlap": "Geoffy's placement is configurable and its widget already covers intent tiers. This is a purchase-based comparison of presentation and comprehension, not a claim that factual widgets are novel.",
+      "edgeHypothesis": "For informed AI-origin arrivals, a shorter first view increases retained purchases without increasing misunderstanding or weakening accessible evidence.",
+      "dataNeeded": [
+        "Verified product facts",
+        "Observed referral landing paths",
+        "Consented task selection when needed",
+        "Comprehension checks in a separate research sample",
+        "Purchase, return and page-performance events"
+      ],
+      "experiment": "Randomize eligible AI-origin visitors to current approved widget layout or compact decision layout with identical facts and offers. Primary: paid orders per assigned visitor within 7 days; misunderstanding, returns, accessibility and latency are guardrails. Run several full weekly cycles and size from baseline purchase rate. Do not use simulated recommendations as the result.",
+      "metric": "Difference in seven-day purchase probability per assigned AI-origin visitor, plus retained contribution. Scroll depth or widget engagement are explanatory only.",
+      "impactEvidence": "Hypothesized; geoffy-home and geoffy-runtime establish the current widget and rendering constraints. No causal conversion estimate located.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Measure eligible sessions N, purchase probability change d, retained contribution m and implementation/serving cost C.",
+        "calculation": "Value = N*d*m - C - £99; require a positive lower confidence bound on contribution before scaling.",
+        "range": "Unknown, with zero/negative possible if details reassure buyers or compact presentation hides a decisive limitation."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP £99/month or a scoped experiment fee; willingness must be tested against existing CRO tools.",
+      "costControl": "Use a few reusable layouts and deterministic fact ordering first; spend inference only on demonstrated ambiguity, never on each page view.",
+      "feasibility": "now",
+      "dependencies": [
+        "Theme or widget rendering control",
+        "Enough AI-origin traffic",
+        "Accessibility review",
+        "Reliable purchase measurement"
+      ],
+      "failureMode": "Summary omits a decisive caveat, attribution mislabels traffic, or apparent wins vanish after returns and repeated visits.",
+      "falsifier": "Compact layout increases engagement but fails to improve retained purchases, or worsens comprehension.",
+      "sourceIds": [
+        "geoffy-home",
+        "geoffy-runtime"
+      ]
+    },
+    {
+      "id": "geoffy-10",
+      "title": "Calibrate the replay harness against retained orders before buying more tests",
+      "lens": "measurement",
+      "buyer": "Agencies and multi-store operators deciding which AI-discovery fixes deserve implementation budget.",
+      "problem": "A simulation can select changes that persuade its own shopper agents yet do nothing for consumer engines or purchases.",
+      "mechanism": "Enabling mechanism: prospective calibration directs a fixed implementation budget toward interventions with observed purchase value and stops unproductive tests. The harness has no direct conversion value unless deployed decisions outperform a comparator.",
+      "intervention": "Freeze factual retrieval snapshots for controlled sensitivity tests; hold out independent intents, categories and model versions. Keep original-rank and hypothetical-rank runs separate. Promote candidates into merchant-authorized live cluster experiments with order/refund joins, then learn whether each offline metric predicts held-out purchase outcomes. Publish inconclusive and negative results.",
+      "competitorOverlap": "Geoffy advertises higher-tier holdouts and separates API benchmark results from app examples. Burnish already links referrals to orders but calls its lift directional. The edge must be prospective randomized decision quality, not the existence of monitoring, attribution or holdouts.",
+      "edgeHypothesis": "A calibrated selection policy produces more retained incremental AI-origin orders per fixed merchant-hour and testing budget than manual prioritization or uncalibrated recommendation scores.",
+      "dataNeeded": [
+        "Frozen retrieval and tool-response traces",
+        "Independent real shopper intents with appropriate consent",
+        "Versions and randomized assignment logs",
+        "Live channel observations kept distinct from APIs",
+        "Orders, returns, margin and implementation costs"
+      ],
+      "experiment": "First randomize eligible product-family clusters for each candidate and measure paid orders per family-day, then retained orders. Subsequently randomize comparable merchant portfolios to calibrated allocation or equal-budget expert allocation. Primary policy endpoint: retained AI-origin incremental orders per assigned portfolio under the fixed budget. Allow 12+ weeks and return windows; power from merchant-level variation. Prespecify stopping, multiplicity, spillovers and no-release gates.",
+      "metric": "Policy intention-to-treat purchase difference under equal total cost; secondary retained contribution per pound spent. Offline shortlist/recommendation rate is a diagnostic proxy with out-of-sample calibration error, never a commercial conversion rate.",
+      "impactEvidence": "Hypothesized; geoffy-app documents holdout marketing without enough design detail; geoffy-benchmark documents an observational API sample; burnish-workflow explicitly limits causal claims.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Measure baseline budget B, retained order gains Qc and Qe from calibrated and expert policies, margin m and extra measurement cost M.",
+        "calculation": "Incremental policy value = (Qc-Qe)*m - M; subscription break-even additionally requires that value to exceed GBP £299/month. No forecast for Qc-Qe is made.",
+        "range": "Can be zero or negative if simulations select the wrong fixes, live tests are underpowered, or measurement costs consume the gains."
+      },
+      "willingnessToPay": "Unvalidated pilot price: GBP £299/month per agency plus agreed test costs, viable only where pooled traffic can support useful experiments.",
+      "costControl": "Use inexpensive replay to reject invalid ideas, then allocate live monitoring to unresolved decisions; retain a random validation sample so cost pruning does not create selection bias.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Multiple consenting merchants or substantial traffic",
+        "Order/refund access",
+        "Stable intervention ownership",
+        "Experimental expertise",
+        "Honest distinction between consumer surfaces and API tools"
+      ],
+      "failureMode": "Repeated seeds are counted as independent shoppers, rank manipulation is sold as a deployable gain, or post-treatment referral classification creates a false effect.",
+      "falsifier": "Offline metrics fail to predict held-out live order effects, or the allocation policy cannot beat equal-budget expert decisions.",
+      "sourceIds": [
+        "geoffy-app",
+        "geoffy-benchmark",
+        "geoffy-visits",
+        "burnish-workflow",
+        "openai-shopping",
+        "shopify-catalog"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "geoffy-home",
+      "title": "Geoffy: GEO for Shopify and WooCommerce stores",
+      "url": "https://geoffy.ai/",
+      "type": "official-doc",
+      "claim": "Visible product widgets, fact constraints, entity work, and the Optimise/Monitor/Influence offer; Monitor and Influence explicitly remain early access. Vendor capability claims, not independent performance evidence."
+    },
+    {
+      "id": "geoffy-workflow",
+      "title": "Connect your store. Geoffy does the engineering. | How it works",
+      "url": "https://geoffy.ai/how-it-works",
+      "type": "official-doc",
+      "claim": "Catalogue ingestion, unknown fields left empty, merchant review, publication and drift checks. Claims about speed of search uptake are not guaranteed destination ingestion."
+    },
+    {
+      "id": "geoffy-faq",
+      "title": "Frequently asked questions | Geoffy docs",
+      "url": "https://geoffy.ai/docs/faq",
+      "type": "official-doc",
+      "claim": "Adds rather than rewrites markup. Its supplementary Product node deliberately omits commerce offers; platform owns price, availability and identity. Domain verification and supported platforms documented."
+    },
+    {
+      "id": "geoffy-check",
+      "title": "Checking it worked (Next.js) | Geoffy docs",
+      "url": "https://geoffy.ai/docs/headless/nextjs/concepts/checking-it-worked",
+      "type": "official-doc",
+      "claim": "Actual server HTML, published-version and canonical checks; namespace verifies own bytes, site key and XML content type. Establishes publication, not downstream selection or purchase."
+    },
+    {
+      "id": "geoffy-price",
+      "title": "Agency-grade GEO. Software prices. | Geoffy pricing",
+      "url": "https://geoffy.ai/pricing",
+      "type": "official-doc",
+      "claim": "29 September 2026 snapshot: GBP bundle and modular prices; early access and sales-assisted onboarding. Separate from USD App Store offer."
+    },
+    {
+      "id": "geoffy-app",
+      "title": "Geoffy - Get your products named in ChatGPT and AI search answers | Shopify App Store",
+      "url": "https://apps.shopify.com/geoffy",
+      "type": "official-doc",
+      "claim": "USD plan prices, trials, higher-tier holdout claim and three reviews at retrieval. No disclosed randomization protocol or controlled order uplift."
+    },
+    {
+      "id": "geoffy-reviews",
+      "title": "Reviews: Geoffy - Get your products named in ChatGPT and AI search answers | Shopify App Store",
+      "url": "https://apps.shopify.com/geoffy/reviews",
+      "type": "merchant-review",
+      "claim": "Merchant testimony is uncontrolled and does not establish a paid subscription, causal uplift, retention, or vendor profitability."
+    },
+    {
+      "id": "geoffy-runtime",
+      "title": "The package (Next.js) | Geoffy docs",
+      "url": "https://geoffy.ai/docs/headless/nextjs/reference/package",
+      "type": "official-doc",
+      "claim": "Node 18+, ESM, optional React peer, server component, language/canonical safeguards, bounded fetches and degraded output. Language matching does not distinguish en-GB from en-US."
+    },
+    {
+      "id": "geoffy-astro",
+      "title": "Astro quickstart | Geoffy docs",
+      "url": "https://geoffy.ai/docs/headless/astro",
+      "type": "official-doc",
+      "claim": "Static versus on-demand rendering requirements and environment behavior. Static content needs rebuilds and cannot serve the documented dynamic namespace."
+    },
+    {
+      "id": "geoffy-refresh",
+      "title": "How updates arrive (Next.js) | Geoffy docs",
+      "url": "https://geoffy.ai/docs/headless/nextjs/concepts/how-updates-arrive",
+      "type": "official-doc",
+      "claim": "One-hour default cache window and optional signed invalidation for faster storefront refresh; says nothing about external engine indexing delay."
+    },
+    {
+      "id": "geoffy-visits",
+      "title": "AI visit tracking (Next.js) | Geoffy docs",
+      "url": "https://geoffy.ai/docs/headless/nextjs/guides/ai-visits",
+      "type": "official-doc",
+      "claim": "Optional crawler/referral telemetry, trusted-address verification, separate queues, sampling and loss reporting; specified payload does not describe purchase attribution."
+    },
+    {
+      "id": "geoffy-benchmark",
+      "title": "AI visibility for garden and outdoor furniture brands | Geoffy",
+      "url": "https://geoffy.ai/sectors/garden-furniture",
+      "type": "vendor-case",
+      "claim": "14 September 2026 UK API benchmark, 10 prompts x 3 engines x 3 repeats; consumer-app examples separately identified. Citation, naming and recommendation differ. Not an intervention trial."
+    },
+    {
+      "id": "geoffy-outcomes",
+      "title": "GEO vs SEO: what changes when the reader is a machine",
+      "url": "https://geoffy.ai/geo-vs-seo",
+      "type": "vendor-case",
+      "claim": "Vendor reports one customer's LLM referral share increasing from 1% to 5% after three weeks. Denominator, counts, comparison and causal contribution are not supplied."
+    },
+    {
+      "id": "geoffy-returns",
+      "title": "Your Returns Data Is a List of the Facts Your Product Pages Left Out",
+      "url": "https://geoffy.ai/blog/returns-data-is-a-content-brief",
+      "type": "official-doc",
+      "claim": "Vendor already proposes using return reasons to improve product facts and explicitly states that recommendation lift is unproven and returns omit nonbuyers."
+    },
+    {
+      "id": "shopify-mapping",
+      "title": "Shopify Help Center | Mapping your product data sources for Shopify Catalog",
+      "url": "https://help.shopify.com/en/manual/shopify-catalog/mapping",
+      "type": "official-doc",
+      "claim": "Preferred source mappings, metafields and custom variant grouping already exist; changes are inputs to Catalog and processed with delay."
+    },
+    {
+      "id": "shopify-catalog",
+      "title": "Shopify Help Center | Shopify Catalog",
+      "url": "https://help.shopify.com/en/manual/shopify-catalog",
+      "type": "official-doc",
+      "claim": "Catalog supplies structured data while each AI channel controls final ranking, wording and shopping experience; mapping does not guarantee placement."
+    },
+    {
+      "id": "google-updates",
+      "title": "Allow Merchant Center to update product information automatically - Google Merchant Center Help",
+      "url": "https://support.google.com/merchants/answer/12157888?hl=en-GB",
+      "type": "official-doc",
+      "claim": "Automatic price/availability/condition repair exists but is not a replacement for regular feed updates. Google describes relaxed matching of some stock states."
+    },
+    {
+      "id": "openai-shopping",
+      "title": "Shopping with ChatGPT Search | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search",
+      "type": "official-doc",
+      "claim": "Consumer shopping uses query/context and external metadata; product information can be rewritten and price/shipping updates delayed. Does not specify the full production ranking pipeline."
+    },
+    {
+      "id": "openai-feed",
+      "title": "Products",
+      "url": "https://developers.openai.com/commerce/specs/file-upload/products",
+      "type": "official-doc",
+      "claim": "Current product-feed contract requires current price and availability updates; date fields do not schedule those changes. A spec is not proof a merchant has feed access."
+    },
+    {
+      "id": "shopify-variants",
+      "title": "Support product variants",
+      "url": "https://shopify.dev/docs/storefronts/themes/product-merchandising/variants",
+      "type": "official-doc",
+      "claim": "Native variant deep links and option-specific price/media handling already exist. They provide a baseline for a handoff repair, not evidence of its incremental impact."
+    },
+    {
+      "id": "shopify-cart",
+      "title": "Create and update a cart with the Storefront API",
+      "url": "https://shopify.dev/docs/storefronts/headless/building-with-the-storefront-api/cart/manage",
+      "type": "official-doc",
+      "claim": "Cart lines use variant IDs; buyer identity affects contextual prices; cart costs are estimates; checkoutUrl completes the handoff. Private cart key must not be shared."
+    },
+    {
+      "id": "shopify-delivery",
+      "title": "Shopify Help Center | Getting started with fulfillment time and delivery dates",
+      "url": "https://help.shopify.com/en/manual/fulfillment/setup/delivery-expectations/overview",
+      "type": "official-doc",
+      "claim": "Native fulfillment times and delivery-date display already exist. The proposed improvement is earlier deadline-based selection using real merchant data."
+    },
+    {
+      "id": "shopify-bundles",
+      "title": "Shopify Help Center | Eligibility and considerations for using product bundles",
+      "url": "https://help.shopify.com/en/manual/products/bundles/eligibility-and-considerations",
+      "type": "official-doc",
+      "claim": "Fixed/multipack/mix-and-match bundles and component inventory already exist, with plan, channel and checkout restrictions; no new AI conversion evidence."
+    },
+    {
+      "id": "uk-distance",
+      "title": "Online and distance selling : Distance selling - GOV.UK",
+      "url": "https://www.gov.uk/online-and-distance-selling-for-businesses",
+      "type": "official-doc",
+      "claim": "Official UK guidance identifies precontract seller, total-price, delivery and cancellation information. Exceptions and applicability must be checked; this research gives no compliance certification."
+    },
+    {
+      "id": "shopify-search",
+      "title": "Shopify Help Center | Modifying search with Shopify Search & Discovery",
+      "url": "https://help.shopify.com/en/manual/online-store/storefront-search/search-and-discovery-modify-search",
+      "type": "official-doc",
+      "claim": "Native semantic search and on-site product boosts already exist. Shopify explicitly distinguishes its own search boosts from third-party rankings; neither proves unmet product demand."
+    },
+    {
+      "id": "burnish-workflow",
+      "title": "How Burnish works.",
+      "url": "https://useburnish.com/what-it-does/",
+      "type": "official-doc",
+      "claim": "Sourced facts, approvals, rollback and pixel/order-journey measurement already advertised; explicitly describes its per-action revenue evidence as directional, not a controlled trial."
+    }
+  ]
+}

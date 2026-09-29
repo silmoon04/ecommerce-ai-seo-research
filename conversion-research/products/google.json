@@ -1,0 +1,746 @@
+{
+  "id": "google",
+  "name": "Google Merchant Center, AI shopping and Universal Commerce Protocol",
+  "benchmarkType": "native",
+  "winningEvidence": [
+    "Selected as the native benchmark because Google operates the relevant shopping experiences and publishes merchant interfaces, not because a feature list proves merchant profitability.",
+    "Merchant Center and eligible organic listings are free. Native AI visibility reporting, diagnostics and checkout tooling create substantial substitution pressure for standalone visibility dashboards.",
+    "Official UCP analytics documents completed purchases and cancellations. This establishes a transaction channel and measurement capability, not an independently measured incremental conversion effect for a third-party product.",
+    "Snapshot checked against official sources on 2026-09-29. No merchant account, private results, paid campaign, live checkout or API credentials were accessed."
+  ],
+  "currentOffer": "Merchant Center manages retail product data and organic eligibility; Google Ads is a separate paid channel. As verified 2026-09-29, the Merchant Center account and organic product listings are free. Google also documents conversational attributes, organic AI performance insights, Business Agent, merchant diagnostics, an alpha Merchant API MCP service, and UCP checkout/cart integrations. UCP participation and geography are gated; processor fees and UCP commercial terms were not established by this research.",
+  "conversionMechanism": "Truthful product evidence can improve matching and selection; correct stock, variants, policies and fulfillment can preserve purchase intent; UCP cart/native checkout can reduce completion failures. Google explicitly says native UCP integration does not affect offer ranking. Each step needs live validation, and more UCP orders can partly replace orders that would otherwise happen on the merchant site.",
+  "harness": {
+    "offlineSimulation": "not_found",
+    "liveMonitoring": "documented",
+    "randomizedExperiment": "documented",
+    "purchaseMeasurement": "documented",
+    "details": "No public exact replay of consumer Google retrieval/ranking or controlled LLM recommendation counterfactual service was found in the reviewed official sources. UCP documents sandbox request simulations and production validation, which test integration behavior. Live observations include Merchant Center organic AI insights, Search Console generative-AI impressions, product status notifications and UCP analytics. Randomized/A-B experiment tooling is documented for paid Google Ads, including Shopping versus Performance Max; it does not establish an organic AI ranking experiment service. UCP purchase analytics is explicitly not exposed through Merchant API yet. Merchant-side order logging and Google’s ucp-analytics reference implementation are available. A not_found result is a search boundary, not proof of private feature absence."
+  },
+  "strengths": [
+    "Native transaction and product identifiers support stronger reconciliation than repeated public prompts.",
+    "Documented purchase funnel plus merchant order lifecycle can support retained-order endpoints.",
+    "Optional related_product and variant_option attributes already cover useful conversational product relationships.",
+    "Native integration tests, status notifications and MCP data access reduce the amount of infrastructure a partner needs to invent."
+  ],
+  "limits": [
+    "Merchant Center AI insights are organic AI visibility metrics, not causal orders; availability is English queries in AU, CA, IN, NZ and US.",
+    "Search Console now provides separate generative AI impression reporting; it is inaccurate to say all AI visibility is inseparable. The documented report is still not an order-level attribution service.",
+    "Google's public eligibility pages are not fully aligned: checkout help mentions eligible US, CA and AU products, while integration-hub documentation describes a US rollout with AU and CA following early next year. Verify actual account access.",
+    "A Merchant API/MCP product search is a search of authorized merchant data, not documented access to the consumer Shopping Graph ranking stack.",
+    "The official guides do not establish causal uplift from the ten proposed interventions. Paid-ad case results cannot be transferred to organic AI shopping.",
+    "Content API reached sunset on 2026-08-18; staged degradation is documented from 2026-09-01. New integration plans should use Merchant API rather than obsolete Content API examples."
+  ],
+  "improve": [
+    "Build on native diagnostics and analytics; prioritize repairs using retained purchases and contribution, then prove the allocation strategy experimentally.",
+    "Keep offline sensitivity, integration conformance, live visibility and randomized purchase outcomes as separate evidence products.",
+    "Start with UCP-enabled merchants that have enough authenticated or pseudonymous order continuity to test checkout interventions.",
+    "Expose attribution uncertainty and channel substitution; never label every srsltid-tagged purchase as an AI-origin purchase."
+  ],
+  "ideas": [
+    {
+      "id": "google-01",
+      "title": "Allocate repair work by incremental retained orders",
+      "lens": "measurement",
+      "buyer": "Retail ecommerce director or agency operating several UCP-enabled stores",
+      "problem": "A visibility or disapproval queue can consume the team's budget while checkout failures with larger purchase consequences remain unfixed.",
+      "mechanism": "Enabling tool: reconciled failures and randomized fix outcomes change which approved work gets shipped under a fixed resource budget; better selection can create more purchases. Reporting alone has no conversion mechanism.",
+      "intervention": "Join UCP checkout/order identifiers, merchant fulfillment/refunds, product issues and deployment versions. Maintain an experiment register and rank eligible repair candidates by posterior incremental retained orders per engineering hour, with an exploration budget for uncertain candidates.",
+      "competitorOverlap": "Google already provides UCP purchases/cancellations, a BigQuery logging reference, product diagnostics and status notifications. Paid Google Ads has experiment tools. A cross-repair allocation effect must be demonstrated; absence of a private native equivalent is unknown.",
+      "edgeHypothesis": "Order-level reconciliation plus equal-budget repair selection can beat a team prioritizing impression loss or error counts.",
+      "dataNeeded": [
+        "UCP session and order IDs without payment tokens",
+        "Merchant order/refund ledger and contribution",
+        "Repair effort and deployment versions",
+        "Preperiod opportunity volume and issue history"
+      ],
+      "experiment": "Randomize matched merchant or independently managed store clusters to the proposed queue versus their existing approved backlog, with equal engineering hours. Primary endpoint: retained AI-origin orders per cluster-week. Plan at least an 8-week pilot and the full returns lag, but power on independent clusters and purchase variance before launch. Critical incidents are repaired in both arms. Track all-channel orders to detect migration.",
+      "metric": "Intent-to-treat difference in retained verified-AI-origin orders per randomized store-week; cost per additional retained order is secondary. UCP orders are identified directly; ordinary Google referrals remain a separate, less-specific cohort.",
+      "impactEvidence": "Hypothesized. ucp-analytics, ucp-bigquery, product-issues, status-events and pmax-experiments establish existing components, not purchase uplift from this prioritization.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, purchase rate or fault prevalence has been measured. Chosen test fee: USD 1000/month; chosen contribution per additional retained order: USD 25, after ordinary variable costs.",
+        "calculation": "Monthly break-even retained orders = 1000 / 25 = 40, before implementation cost and any additional losses not included in contribution.",
+        "range": "Unknown. Added purchases can be zero or negative; this is a break-even threshold, not an uplift forecast."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: USD 1,000/month per store portfolio, excluding implementation. Compare with measured contribution from additional retained orders.",
+      "costControl": "Use event-triggered diagnostics and reusable adapters; cap expensive investigation only after protecting high-value purchase paths.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Enough independent stores or categories for a powered trial",
+        "Merchant order reconciliation",
+        "Approved repair capacity",
+        "Native UCP participation"
+      ],
+      "failureMode": "The queue favors high-volume easy fixes, duplicates native reports, or counts channel switching as growth.",
+      "falsifier": "At equal engineering cost it does not increase retained orders relative to the existing queue, or cannot link recommended work to causal outcomes.",
+      "sourceIds": [
+        "ucp-analytics",
+        "ucp-bigquery",
+        "product-issues",
+        "status-events",
+        "pmax-experiments"
+      ]
+    },
+    {
+      "id": "google-02",
+      "title": "Preserve every item through the Google-to-store cart handoff",
+      "lens": "infrastructural",
+      "buyer": "Merchant with UCP cart transfer and complex bundles or variants",
+      "problem": "A shopper's selected quantity, variant or required item can be lost when a Google cart becomes a merchant cart.",
+      "mechanism": "Preventing a broken handoff removes re-selection and abandoned baskets after an actual AI shopping interaction.",
+      "intervention": "Build an idempotent merchant cart adapter that validates SKU/variant/quantity against the requested cart, returns a signed short-lived continuation URL, preserves authorized discounts, and shows any necessary changes before checkout. Record a semantic cart diff without storing sensitive payloads.",
+      "competitorOverlap": "Google's Cart API already creates a merchant cart and returns continue_url, and its integration hub tests cart operations. The proposed addition is merchant-specific integrity and recovery across redirects, session expiry and commerce plugins.",
+      "edgeHypothesis": "Cart equivalence testing and production continuity recover more completed orders than endpoint conformance alone.",
+      "dataNeeded": [
+        "Incoming UCP cart item IDs and quantities",
+        "Merchant cart state and version",
+        "Redirect/session-expiry events",
+        "Paid orders and returns"
+      ],
+      "experiment": "Randomize newly created eligible transfer sessions to current validated adapter or the improved adapter, sticky for the session. Primary: retained paid orders within 7 days per assigned transfer session; include the returns maturation window. Run 4-8 weeks only if precomputed power is adequate. Guardrails: no duplicate carts/charges, no silent substitutions, equal offers and all-channel order checks.",
+      "metric": "Difference in retained-order probability per randomized AI-origin transfer start, with cart-loss and restart rates as diagnostics. A rise in UCP attribution alone is not counted as incremental merchant orders.",
+      "impactEvidence": "Hypothesized. cart-api and integration-hub document the handoff and test interfaces; neither measures this adapter's incremental purchases.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, purchase rate or fault prevalence has been measured. Chosen test fee: USD 500/month; chosen contribution per additional retained order: USD 25, after ordinary variable costs.",
+        "calculation": "Monthly break-even retained orders = 500 / 25 = 20, before implementation cost and any additional losses not included in contribution.",
+        "range": "Unknown. Added purchases can be zero or negative; this is a break-even threshold, not an uplift forecast."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 500/month per integration, plus a scoped setup quote.",
+      "costControl": "Reuse deterministic cart fixtures for common platforms and test only changed mappings; preserve full checks for money and identity fields.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Cart API participation",
+        "Merchant cart mutation and persistence access",
+        "Stable item identifiers",
+        "Lawful session-to-order reconciliation"
+      ],
+      "failureMode": "Extra verification slows redirects, URLs leak cart details, or restored carts resurrect items the shopper removed.",
+      "falsifier": "Measured cart divergence is rare or fixing it does not improve retained orders after latency and channel substitution are considered.",
+      "sourceIds": [
+        "cart-api",
+        "integration-hub",
+        "order-lifecycle"
+      ]
+    },
+    {
+      "id": "google-03",
+      "title": "Recover correctable checkout failures inside the purchase flow",
+      "lens": "behavioral",
+      "buyer": "Merchant checkout engineering team using native UCP",
+      "problem": "An address or eligibility issue that a shopper can correct may be returned as a terminal failure, ending a nearly completed purchase.",
+      "mechanism": "A precise recoverable response gives the shopper a usable correction step and preserves the session, increasing completion if error handling is a material cause of abandonment.",
+      "intervention": "Map existing commerce errors to the negotiated UCP version, distinguish protocol failures from business rules, populate the correct field path and severity, and retain authorized checkout state. Generate regression cases from redacted failure categories, not raw customer details.",
+      "competitorOverlap": "Google already documents structured error codes and native recovery behavior. The added product is a tested mapping layer for a merchant's legacy ERP, tax, delivery and discount systems.",
+      "edgeHypothesis": "Reducing falsely terminal errors adds retained purchases without changing price or search exposure.",
+      "dataNeeded": [
+        "Redacted error categories and recovery paths",
+        "Negotiated UCP version",
+        "Checkout state transitions",
+        "Completed orders, refunds and duplicate-payment checks"
+      ],
+      "experiment": "Randomize at checkout creation between two valid error adapters and analyze all assigned sessions; report predeclared recoverable categories secondarily. Primary: retained order per assigned checkout. Use a powered 4-8-week window plus returns lag. Both arms keep required security and policy checks; hard stop on duplicate payment or invalid-order acceptance.",
+      "metric": "Intent-to-treat retained purchases divided by all randomized UCP checkout starts. Conditional recovery rate helps explain the result but cannot replace the purchase endpoint.",
+      "impactEvidence": "Hypothesized. ucp-errors and native-faq establish a concrete recovery mechanism; no observed prevalence or uplift was available.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, purchase rate or fault prevalence has been measured. Chosen test fee: USD 750/month; chosen contribution per additional retained order: USD 25, after ordinary variable costs.",
+        "calculation": "Monthly break-even retained orders = 750 / 25 = 30, before implementation cost and any additional losses not included in contribution.",
+        "range": "Unknown. Added purchases can be zero or negative; this is a break-even threshold, not an uplift forecast."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 750/month for monitored adapter maintenance.",
+      "costControl": "Deterministic error classification handles routine cases; engineering review focuses on frequent purchase-blocking exceptions.",
+      "feasibility": "now",
+      "dependencies": [
+        "Merchant-side error ownership",
+        "Google's negotiated protocol capability",
+        "Safe rollout controls",
+        "Stable checkout-to-order identifiers"
+      ],
+      "failureMode": "A genuinely terminal or fraud-related failure is incorrectly labeled recoverable, or repeated retries frustrate users.",
+      "falsifier": "Most failures are correctly terminal, or recovery raises retries without increasing retained orders.",
+      "sourceIds": [
+        "ucp-errors",
+        "native-faq",
+        "checkout-api"
+      ]
+    },
+    {
+      "id": "google-04",
+      "title": "Keep the promised stock and price valid until order commit",
+      "lens": "temporal",
+      "buyer": "High-turnover retailer with frequent price or inventory changes",
+      "problem": "The product can be purchasable at discovery but unavailable or repriced by the time an AI-origin checkout completes.",
+      "mechanism": "Faster authoritative updates and a short merchant-side reservation reduce late failure and price surprise; the benefit depends on actual stock/price races.",
+      "intervention": "Connect inventory and promotion change events to Merchant API updates, storefront data and checkout validation. At merchant session creation, use an explicit short reservation or quote validity window where the commerce platform supports it; revalidate at commit and release expired holds.",
+      "competitorOverlap": "Google automations already correct some price/availability mismatches and recommends Merchant API for frequent changes. Checkout APIs already return current totals. Reservation and cross-system consistency are merchant operational work, not a claimed Google ranking feature.",
+      "edgeHypothesis": "A common versioned offer across feed, page and checkout prevents more purchase failures than frequent feed uploads alone.",
+      "dataNeeded": [
+        "Timestamped authoritative inventory and price versions",
+        "Feed update acknowledgments",
+        "Checkout quote and reservation lifecycle",
+        "Stock-related declines, orders and cancellations"
+      ],
+      "experiment": "Randomize product-family by fulfillment-pool clusters to the complete consistency path or current valid refresh/checkout process. Shared inventory requires clustered assignment. Primary: retained verified-AI-origin orders per cluster-week, adjusted using fixed preperiod opportunity weights. Plan 6-10 weeks and power on race prevalence. Guardrails include all-channel sales, hold-induced stockouts, latency and margin.",
+      "metric": "Incremental retained orders per randomized inventory cluster-week; stock-race failure rate is explanatory. Do not divide by treatment-generated clicks when estimating the full discovery-to-purchase effect.",
+      "impactEvidence": "Hypothesized. automatic-updates establishes native overlap and freshness limits; checkout-api supplies transaction validation; no merchant race prevalence was measured.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, purchase rate or fault prevalence has been measured. Chosen test fee: USD 1000/month; chosen contribution per additional retained order: USD 25, after ordinary variable costs. Contribution must include reservation-related operating cost.",
+        "calculation": "Monthly break-even retained orders = 1000 / 25 = 40, before implementation cost and any additional losses not included in contribution.",
+        "range": "Unknown. Added purchases can be zero or negative; this is a break-even threshold, not an uplift forecast."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 1,000/month for a high-change catalog; qualify demand using documented failed-order volume.",
+      "costControl": "Update changed offers, debounce redundant feed writes, and reserve only purchase-intent sessions rather than all crawls.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Inventory event stream",
+        "Reservation-capable order system",
+        "Consistent product IDs",
+        "Merchant API quota and UCP access"
+      ],
+      "failureMode": "Holds block genuine buyers elsewhere, frequent updates exceed quota, or price locks destroy margin.",
+      "falsifier": "Races are negligible or reduced checkout failures are offset by lost all-channel purchases and inventory opportunity cost.",
+      "sourceIds": [
+        "automatic-updates",
+        "checkout-api",
+        "api-sunset"
+      ]
+    },
+    {
+      "id": "google-05",
+      "title": "Carry earned loyalty benefits into AI checkout with consent",
+      "lens": "identity",
+      "buyer": "Retailer with a substantial existing loyalty membership",
+      "problem": "A returning shopper may abandon or leave the AI checkout when their earned price, points or shipping entitlement is not recognized.",
+      "mechanism": "Consented account continuity preserves a benefit the shopper already values and avoids a separate login journey; it can increase completion or merely move an existing purchase between channels.",
+      "intervention": "Implement UCP identity linking against the merchant's loyalty service, with an accurate benefit preview, explicit linking consent, reliable token refresh and a guest path. Validate entitlements server-side; do not infer membership or use sensitive profiling.",
+      "competitorOverlap": "Google already provides OAuth identity linking and recommends streamlined linking. This product would integrate real merchant entitlement systems and test whether benefit recognition changes retained purchases.",
+      "edgeHypothesis": "Correct entitlement resolution recovers orders for eligible members whose existing checkout loses their benefits.",
+      "dataNeeded": [
+        "Consented pseudonymous loyalty identity",
+        "Eligibility rules and benefit cost",
+        "Linking attempts/outcomes",
+        "Order and repeat-purchase records with appropriate permission"
+      ],
+      "experiment": "Where both methods are supported, randomize eligible new sessions to current compliant linking or improved streamlined linking plus accurate entitlement retrieval. Never withhold an earned benefit in control. Primary: retained orders per assigned session within 7 days; predeclare member/nonmember analysis. Plan 6-8 weeks plus return lag and power using actual eligible traffic. Track reward cost and all-channel purchases.",
+      "metric": "Intent-to-treat retained-order probability among assigned eligible sessions; linking success is intermediate. Net contribution includes the cost of redeemed benefits.",
+      "impactEvidence": "Hypothesized. identity-linking and account-linking document consented integration routes; their possible conversion benefit is not an estimate for this product.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, purchase rate or fault prevalence has been measured. Chosen test fee: USD 750/month; chosen contribution per additional retained order: USD 25, after ordinary variable costs. The chosen contribution is after loyalty redemptions.",
+        "calculation": "Monthly break-even retained orders = 750 / 25 = 30, before implementation cost and any additional losses not included in contribution.",
+        "range": "Unknown. Added purchases can be zero or negative; this is a break-even threshold, not an uplift forecast."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 750/month per loyalty integration, subject to incremental contribution and setup cost.",
+      "costControl": "Cache non-sensitive benefit definitions and reuse token-handling components; fetch personal entitlements only with permission when needed.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "UCP native checkout and identity capability",
+        "OAuth/account-linking implementation",
+        "Merchant loyalty APIs",
+        "Consent and retention controls"
+      ],
+      "failureMode": "Linking friction exceeds the value of the benefit, membership mapping is wrong, or all observed orders would have happened through the direct channel.",
+      "falsifier": "Higher linking success produces no incremental retained purchases after benefit cost and channel substitution.",
+      "sourceIds": [
+        "identity-linking",
+        "account-linking",
+        "integration-hub"
+      ]
+    },
+    {
+      "id": "google-06",
+      "title": "Prove that a recommended basket contains compatible required parts",
+      "lens": "algorithmic",
+      "buyer": "Electronics, tools, furniture or replacement-parts merchant",
+      "problem": "A plausible recommendation may omit a necessary part or combine products that cannot work together, causing indecision or returns.",
+      "mechanism": "A verified dependency graph lets the merchant expose a complete compatible solution within the shopper's budget, reducing uncertainty and failed purchases rather than maximizing basket size.",
+      "intervention": "Build a versioned compatibility graph from manufacturer evidence and merchant validation. Distinguish required parts, optional accessories and substitutes; publish supported related_product relations and provide a merchant-side complete-basket validator. Require an evidence record for each compatibility edge.",
+      "competitorOverlap": "Google already supports related_product for conversational recommendations. The hypothesis concerns verified graph correctness, budget-aware completion and downstream retained orders, not inventing the attribute. Third-party verification coverage was not established here.",
+      "edgeHypothesis": "Merchants with high compatibility uncertainty can win more retained orders by making the smallest working basket explicit.",
+      "dataNeeded": [
+        "Manufacturer compatibility/required-part evidence",
+        "Merchant SKU and GTIN graph",
+        "Actual stock, price and basket totals",
+        "Incomplete-order support reasons and returns"
+      ],
+      "experiment": "Randomize matched product-family clusters to existing accurate catalog relationships or the verified dependency package. Primary: retained verified-AI-origin orders per assigned family-week, with fixed preperiod opportunity weights. Run 8-12 weeks only after cluster-power assessment and allow category-specific returns to mature. Guardrails: total customer cost, unnecessary attachments, incompatible-item returns and all-channel purchases.",
+      "metric": "Incremental retained orders per randomized product family; complete-compatible-basket rate is a diagnostic, and AOV alone is not success. Report total spend saved for customers when unnecessary parts are removed.",
+      "impactEvidence": "Hypothesized. related-products establishes an available transmission channel; it does not establish that Google will consume every submitted edge or that the proposed solver changes purchases.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, purchase rate or fault prevalence has been measured. Chosen test fee: USD 600/month; chosen contribution per additional retained order: USD 30, after ordinary variable costs.",
+        "calculation": "Monthly break-even retained orders = 600 / 30 = 20, before implementation cost and any additional losses not included in contribution.",
+        "range": "Unknown. Added purchases can be zero or negative; this is a break-even threshold, not an uplift forecast."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 600/month for one high-complexity category, excluding manufacturer-data integration.",
+      "costControl": "Validate high-demand or high-return graph edges first and cache verified compatibility; prioritize evidence gaps by expected purchase consequence.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable manufacturer evidence",
+        "Merchant technical review",
+        "Native conversational fields",
+        "Sufficient UCP or otherwise verified AI-origin orders"
+      ],
+      "failureMode": "Relations are ignored, required parts are mistaken for optional accessories, or the solution appears more expensive and deters useful purchases.",
+      "falsifier": "Verified relationships improve simulation answers but not live retained orders, or compatibility-related returns do not fall.",
+      "sourceIds": [
+        "related-products",
+        "conversational-attributes",
+        "order-lifecycle"
+      ]
+    },
+    {
+      "id": "google-07",
+      "title": "Bind the shopper's exact variant to the item they can buy",
+      "lens": "behavioral",
+      "buyer": "Merchant with custom-size, memory, width, finish or configuration variants",
+      "problem": "AI selection can describe a valid configuration but lead to a generic family or a different sellable variant.",
+      "mechanism": "Maintaining identity from searchable variant facts through the product page and checkout prevents re-selection and wrong-item hesitation.",
+      "intervention": "Create an invariant checker for product family, variant_option values, offer ID, selected landing-page variant and checkout item. Publish accurate grouping and deep links, test sold-out combinations, and require explicit choice when an old variant is unavailable.",
+      "competitorOverlap": "Google already documents variant_option and item grouping for AI and traditional Search. This overlaps existing catalog-mapping work; no claim is made that other vendors lack end-to-end checks. The addition is transaction-level identity verification across the complete path.",
+      "edgeHypothesis": "Custom dimensions that generic catalog mappings miss cause enough real purchase friction to justify enforcing this invariant.",
+      "dataNeeded": [
+        "Variant matrix and valid combinations",
+        "Merchant Center offer IDs",
+        "Deep-link resolution and cart item IDs",
+        "Wrong-item returns and paid orders"
+      ],
+      "experiment": "Randomize product-family clusters to current valid grouping/deep links or verified identity binding; do not split sibling variants across arms. Primary: retained AI-origin orders per family-week using fixed preperiod weights. Plan 6-10 weeks with precomputed power and full return lag. Guardrails: total availability, page latency, wrong-variant returns and all-channel orders.",
+      "metric": "Retained orders per randomized family, with exact-requested-variant receipt as a secondary endpoint. Redirect success alone is insufficient.",
+      "impactEvidence": "Hypothesized. variant-options documents native field support; checkout-api requires item identifiers. Neither measures the real prevalence of cross-system variant drift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, purchase rate or fault prevalence has been measured. Chosen test fee: USD 400/month; chosen contribution per additional retained order: USD 25, after ordinary variable costs.",
+        "calculation": "Monthly break-even retained orders = 400 / 25 = 16, before implementation cost and any additional losses not included in contribution.",
+        "range": "Unknown. Added purchases can be zero or negative; this is a break-even threshold, not an uplift forecast."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 400/month for a complex-variant catalog.",
+      "costControl": "Generate tests from the existing variant matrix and run on changed mappings; reserve human review for unsupported or ambiguous dimensions.",
+      "feasibility": "now",
+      "dependencies": [
+        "Authoritative variant matrix",
+        "Storefront deep-link control",
+        "Stable feed-to-order ID mapping",
+        "Verified AI-origin order cohort"
+      ],
+      "failureMode": "Grouping fragments product visibility, legacy links break, or no meaningful variant drift exists.",
+      "falsifier": "The invariant fixes metadata but does not improve retained purchases or wrong-variant outcomes.",
+      "sourceIds": [
+        "variant-options",
+        "conversational-attributes",
+        "checkout-api"
+      ]
+    },
+    {
+      "id": "google-08",
+      "title": "Show the return promise that actually applies to this item",
+      "lens": "psychological",
+      "buyer": "High-consideration retailer with country, condition or personalization exceptions",
+      "problem": "A broad store policy can leave the shopper unsure whether this particular purchase is returnable and at what cost.",
+      "mechanism": "Clear, truthful item-specific return terms can reduce uncertainty before commitment and prevent later cancellations caused by misunderstood policies.",
+      "intervention": "Compile merchant-approved return rules by product, destination and purchase date into supported offer/account data and a concise storefront explanation. Detect conflicts between the feed, product page and policy system; show exclusions prominently rather than presenting a favorable generic promise.",
+      "competitorOverlap": "Google already has account-level returns, exception labels and newly documented offer-level return overrides. The new work is correctness across rule combinations and testing comprehension against retained purchases.",
+      "edgeHypothesis": "Resolving genuine policy ambiguity increases retained orders in uncertain categories without relying on a more generous or misleading policy.",
+      "dataNeeded": [
+        "Approved return rules and seasonal exceptions",
+        "Product-country-condition mappings",
+        "Refund reasons and return costs",
+        "Order cohorts and policy version"
+      ],
+      "experiment": "Correct misleading or invalid policies in both arms first. Then randomize eligible UCP-to-store or verified AI-origin landing sessions between the existing accurate presentation and precise item-specific explanation. Primary: retained purchases per assigned session after the full return window. Plan 8-12 weeks or longer from power and return duration. Guardrails: comprehension, complaints and contribution after returns.",
+      "metric": "Intent-to-treat retained-order rate with refund-adjusted contribution; gross checkout conversion is intermediate and can fall while misunderstandings are corrected.",
+      "impactEvidence": "Hypothesized. return-policies and api-updates establish Google's existing controls. No experiment establishes that this explanation improves purchases.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, purchase rate or fault prevalence has been measured. Chosen test fee: USD 500/month; chosen contribution per additional retained order: USD 25, after ordinary variable costs. Contribution must include return-processing costs.",
+        "calculation": "Monthly break-even retained orders = 500 / 25 = 20, before implementation cost and any additional losses not included in contribution.",
+        "range": "Unknown. Added purchases can be zero or negative; this is a break-even threshold, not an uplift forecast."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 500/month for merchants with many policy exceptions.",
+      "costControl": "Use deterministic rule compilation and conflict checks; send only unresolved merchant-policy ambiguity for review.",
+      "feasibility": "now",
+      "dependencies": [
+        "Merchant-approved policy source",
+        "Accurate country/item rules",
+        "Control of landing presentation",
+        "Order/refund linkage"
+      ],
+      "failureMode": "More visible restrictive terms reduce sales, policy logic is wrong, or readability work duplicates what the platform already does.",
+      "falsifier": "Item-specific clarity produces no gain in retained orders or fewer mistaken purchases, or raises disputes.",
+      "sourceIds": [
+        "return-policies",
+        "return-label",
+        "api-updates"
+      ]
+    },
+    {
+      "id": "google-09",
+      "title": "Offer delivery dates backed by fulfillment evidence",
+      "lens": "regulatory",
+      "buyer": "US retailer with deadline-sensitive purchases and multiple shipping services",
+      "problem": "Broad or stale delivery estimates make deadline-sensitive shoppers hesitate; unsupported promises can produce canceled or refunded orders.",
+      "mechanism": "Address-aware, capacity-backed delivery choices allow buyers to select a feasible service and complete a purchase with less uncertainty. The value must survive delivery and refund outcomes.",
+      "intervention": "Build a merchant quote service combining warehouse cutoffs, inventory location, carrier service evidence and current capacity. Return precise supported shipping options and costs through UCP, retain the basis for the promise, and use approved delay-consent/refund procedures after purchase. This is a rules/evidence workflow, not legal certification.",
+      "competitorOverlap": "Google native checkout already transmits fulfillment options and estimated delivery text; shipping tools already estimate dates. Differentiation is the merchant's evidence-backed promise and measured retained-order effect, not the presence of a delivery field.",
+      "edgeHypothesis": "Better-calibrated dates convert time-constrained shoppers who reject coarse estimates without increasing late orders.",
+      "dataNeeded": [
+        "Actual warehouse cutoffs and capacity",
+        "Carrier delivery history by service/region",
+        "UCP address and fulfillment selections with minimization",
+        "Order delivery, cancellation and refund events"
+      ],
+      "experiment": "Randomize eligible checkout sessions between existing accurate broad estimates and evidence-backed specific options, with the same available services and prices. Primary: retained orders delivered within the selected promise per assigned session. Plan 6-10 weeks plus delivery/return maturation, powered on eligible demand. Both arms must satisfy existing policy obligations; stop if promise reliability worsens.",
+      "metric": "Additional retained, on-promise orders divided by all randomized AI-origin checkout starts. Track total purchases separately so an on-time-rate gain caused only by suppressing orders is visible.",
+      "impactEvidence": "Hypothesized. checkout-api supports fulfillment options; ftc-shipping establishes the US reasonable-basis requirement for shipping representations, not a conversion guarantee.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, purchase rate or fault prevalence has been measured. Chosen test fee: USD 1000/month; chosen contribution per additional retained order: USD 25, after ordinary variable costs. Contribution is after incremental shipping and delay-remediation costs.",
+        "calculation": "Monthly break-even retained orders = 1000 / 25 = 40, before implementation cost and any additional losses not included in contribution.",
+        "range": "Unknown. Added purchases can be zero or negative; this is a break-even threshold, not an uplift forecast."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 1,000/month for a retailer with measured deadline-related abandonment.",
+      "costControl": "Reuse carrier/warehouse evidence and update affected lanes at cutoffs; avoid a fresh predictive-model call for every product impression.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Fulfillment and carrier integrations",
+        "Reliable order lifecycle",
+        "Merchant-approved promise policy",
+        "UCP-supported shipping display"
+      ],
+      "failureMode": "Precise-looking estimates are poorly calibrated, peak demand invalidates capacity, or a more conservative promise loses more sales than it preserves.",
+      "falsifier": "Specific dates fail to improve retained on-promise purchases or create more cancellations and complaints.",
+      "sourceIds": [
+        "checkout-api",
+        "order-lifecycle",
+        "ftc-shipping"
+      ]
+    },
+    {
+      "id": "google-10",
+      "title": "Reduce false declines caused by missing AI checkout context",
+      "lens": "algorithmic",
+      "buyer": "Payments/risk lead at a UCP-enabled retailer",
+      "problem": "A merchant risk system tuned to its own browser checkout may treat a legitimate Google-origin transaction as suspicious when expected context is absent or mis-mapped.",
+      "mechanism": "Using the supported transaction context correctly can preserve legitimate purchases while maintaining fraud controls. This depends on proving a material false-decline problem.",
+      "intervention": "Build a version-aware adapter from documented UCP risk signals to the merchant's existing risk provider. Ignore unknown optional keys, distinguish technical mapping failures from risk decisions, and calibrate only permitted low-risk decision paths using mature outcomes. Never bypass security checks or infer sensitive traits.",
+      "competitorOverlap": "Google already provides contextual risk signals and merchants retain the decision. Existing payment/risk vendors handle false declines. The hypothesis is an integration and calibration gap specific to a merchant's UCP traffic.",
+      "edgeHypothesis": "Context parity with direct checkout recovers legitimate AI-origin purchases without an unacceptable fraud-loss increase.",
+      "dataNeeded": [
+        "Minimized documented UCP risk context",
+        "Existing PSP/risk reason codes",
+        "Technical failure classifications",
+        "Settled orders, fraud losses and chargeback maturity"
+      ],
+      "experiment": "First replay redacted historical cases in shadow mode. With merchant risk approval, randomize eligible low-risk sessions between two approved adapters while retaining the same mandatory rules. Primary: legitimate settled orders per assigned AI-origin session after chargeback maturation. A pilot may take 90 days or longer; power on rare loss events. Hard guardrails for fraud loss, disparate error patterns, privacy and duplicate charges.",
+      "metric": "Difference in legitimate retained/settled orders per randomized eligible session; subtract incremental fraud and chargeback costs from contribution. Approval-rate lift alone is insufficient.",
+      "impactEvidence": "Hypothesized. risk-signals documents inputs and tolerant handling of unknown keys; ucp-errors distinguishes failure classes. No source proves that UCP transactions currently suffer excess false declines.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No false-decline prevalence, traffic or loss rate was measured. Chosen fee is USD 1,500/month and contribution before additional fraud losses is USD 30 per incremental legitimate order.",
+        "calculation": "Break-even additional legitimate orders = (1500 + incremental fraud/chargeback losses in USD) / 30. With the explicitly hypothetical assumption of zero additional losses, the threshold is 50 orders/month, before implementation cost.",
+        "range": "Unknown, including zero or negative purchase/contribution effects. Rare delayed losses can reverse an early apparent gain."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 1,500/month per risk integration, conditional on mature net contribution.",
+      "costControl": "Reuse the merchant's existing risk model and deterministic mapping; review the categories responsible for most lost legitimate orders.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Risk-provider and merchant approval",
+        "Sufficient outcome maturity",
+        "Documented Google capability/version",
+        "Data minimization and secure logging"
+      ],
+      "failureMode": "More approvals create chargebacks, missing labels conceal losses, or the suspected context gap does not exist.",
+      "falsifier": "Technical context correction does not recover legitimate settled orders, or added fraud losses erase the value.",
+      "sourceIds": [
+        "risk-signals",
+        "ucp-errors",
+        "order-lifecycle"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "merchant-home",
+      "title": "Promote Your Business with Merchant Center - Google for Retail",
+      "url": "https://business.google.com/us/merchant-center/",
+      "type": "official-doc",
+      "claim": "Merchant Center account and organic listings are free; paid campaigns are separate. Does not establish a price for UCP integration or a third-party product."
+    },
+    {
+      "id": "ai-insights",
+      "title": "About AI performance insights",
+      "url": "https://support.google.com/merchants/answer/17200695?hl=en",
+      "type": "official-doc",
+      "claim": "Current organic AI Mode/AI Overviews visibility report, supported English-query markets, stage/term/attribute metrics and data limitations. Does not report causal purchase lift."
+    },
+    {
+      "id": "genai-report",
+      "title": "Generative AI performance report (Search)",
+      "url": "https://support.google.com/webmasters/answer/16984139?hl=en",
+      "type": "official-doc",
+      "claim": "Dedicated Search Console AI impressions report, with worldwide rollout note dated 2026-08-31. It is not an order-level conversion report."
+    },
+    {
+      "id": "genai-launch",
+      "title": "Introducing Search Generative AI performance reports in Search Console",
+      "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports",
+      "type": "official-doc",
+      "claim": "First-party launch and rollout clarification; AI impression visibility exists alongside overall performance reporting."
+    },
+    {
+      "id": "multimodal-report",
+      "title": "Announcing web multimodal Search performance reporting in Search Console",
+      "url": "https://developers.google.com/search/blog/2026/09/web-multimodal-in-sc",
+      "type": "official-doc",
+      "claim": "2026-09-24 announcement of multimodal filters. Supports current reporting scope, not purchase effects."
+    },
+    {
+      "id": "ai-guide",
+      "title": "Optimizing your website for generative AI features on Google Search",
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "type": "official-doc",
+      "claim": "Official AI-search guidance warns that third-party tools do not have access to internal ranking/AI systems. Supports the replication boundary."
+    },
+    {
+      "id": "conversational-attributes",
+      "title": "How to use conversational attributes",
+      "url": "https://support.google.com/merchants/answer/17085370",
+      "type": "official-doc",
+      "claim": "Optional question/answer, document, relationship, grouping, variant and popularity attributes; includes Merchant API submission. Does not guarantee display or lift."
+    },
+    {
+      "id": "related-products",
+      "title": "Related product [related_product]",
+      "url": "https://support.google.com/merchants/answer/17085213?hl=en",
+      "type": "official-doc",
+      "claim": "Native supported relationships for conversational experiences, including required parts and accessories. Does not validate merchants' compatibility assertions."
+    },
+    {
+      "id": "variant-options",
+      "title": "Variant option [variant_option]",
+      "url": "https://support.google.com/merchants/answer/17085214?hl=en",
+      "type": "official-doc",
+      "claim": "Optional custom variant dimensions and grouping for conversational and traditional experiences. Does not establish end-to-end checkout correctness."
+    },
+    {
+      "id": "native-eligibility",
+      "title": "About the Universal Commerce Protocol (UCP) and UCP-powered checkout feature on Google",
+      "url": "https://support.google.com/merchants/answer/16837055?hl=en",
+      "type": "official-doc",
+      "claim": "Select-merchant UCP checkout, seller-of-record role and distinction from agentic website checkout; eligibility language mentions US, CA and AU."
+    },
+    {
+      "id": "native-attribute",
+      "title": "Native commerce [native_commerce]",
+      "url": "https://support.google.com/merchants/answer/17251586?hl=en",
+      "type": "official-doc",
+      "claim": "Per-item checkout_eligibility controls supported native Buy display; a data field alone does not satisfy program eligibility."
+    },
+    {
+      "id": "integration-hub",
+      "title": "How to start UCP integration in Merchant Center",
+      "url": "https://developers.google.com/merchant/ucp/guides/tools/merchant-center/integration",
+      "type": "official-doc",
+      "claim": "Merchant Center sandbox/production validation paths for cart, checkout and identity. Hub rollout language is narrower than generic eligibility help."
+    },
+    {
+      "id": "native-faq",
+      "title": "Frequently Asked Questions",
+      "url": "https://developers.google.com/merchant/ucp/faq",
+      "type": "official-doc",
+      "claim": "Explicitly states native integration does not affect listing ranking; explains recovery and merchant responsibilities. Does not quantify conversion improvement."
+    },
+    {
+      "id": "native-flow",
+      "title": "Native checkout overview",
+      "url": "https://developers.google.com/merchant/ucp/guides/overview/native-checkout",
+      "type": "official-doc",
+      "claim": "Documents session construction followed by user completion in Google UI. Avoid portraying all UCP purchases as fully autonomous."
+    },
+    {
+      "id": "ucp-profile",
+      "title": "Prepare your UCP profile",
+      "url": "https://developers.google.com/merchant/ucp/guides/overview/ucp-profile",
+      "type": "official-doc",
+      "claim": "Version and capability negotiation and Google's published agent profiles. Consumer ranking access is not part of this documentation."
+    },
+    {
+      "id": "ucp-analytics",
+      "title": "Monitor and optimize your integration",
+      "url": "https://developers.google.com/merchant/ucp/guides/tools/merchant-center/analytics",
+      "type": "official-doc",
+      "claim": "UCP Buy clicks, purchases, purchase rate, AOV, cancellations and linking metrics. Explicitly says this report is not available through Merchant API yet."
+    },
+    {
+      "id": "ucp-bigquery",
+      "title": "Use BigQuery to store and analyze UCP events (optional)",
+      "url": "https://developers.google.com/merchant/ucp/guides/tools/bq-storage",
+      "type": "official-doc",
+      "claim": "Existing ucp-analytics logging reference for performance, failures and checkout/revenue analysis. Logging alone is not causal measurement."
+    },
+    {
+      "id": "cart-api",
+      "title": "Cart API implementation",
+      "url": "https://developers.google.com/merchant/ucp/implementation/2026-04-08/cart-api",
+      "type": "official-doc",
+      "claim": "User-triggered CreateCart request and merchant continue_url. Enables handoff integrity tests, not synthetic consumer ranking replication."
+    },
+    {
+      "id": "checkout-api",
+      "title": "Native checkout REST API implementation",
+      "url": "https://developers.google.com/merchant/ucp/implementation/2026-04-08/native-checkout-api",
+      "type": "official-doc",
+      "claim": "Current version's checkout lifecycle, item IDs, totals, fulfillment options and errors. Does not provide measured benefits for proposed adapters."
+    },
+    {
+      "id": "ucp-errors",
+      "title": "Error codes",
+      "url": "https://developers.google.com/merchant/ucp/guides/overview/error-codes",
+      "type": "official-doc",
+      "claim": "Documents protocol/business error categories and recovery fields; supports version-aware mapping."
+    },
+    {
+      "id": "identity-linking",
+      "title": "Identity Linking - OAuth 2.0",
+      "url": "https://developers.google.com/merchant/ucp/guides/overview/identity-linking",
+      "type": "official-doc",
+      "claim": "UCP consented identity and loyalty continuity, guest experience and optional streamlined linking. No independent uplift measurement."
+    },
+    {
+      "id": "account-linking",
+      "title": "Overview",
+      "url": "https://developers.google.com/identity/account-linking",
+      "type": "official-doc",
+      "claim": "Consented account sharing, unlinking and supported linking paths; supports legitimate identity continuity, not inferred identity."
+    },
+    {
+      "id": "risk-signals",
+      "title": "Risk signals implementation",
+      "url": "https://developers.google.com/merchant/ucp/implementation/2026-04-08/risk-signals",
+      "type": "official-doc",
+      "claim": "Merchant decision control, contextual transaction signals and requirement to tolerate unknown optional keys. Does not establish a false-decline prevalence."
+    },
+    {
+      "id": "order-lifecycle",
+      "title": "Order lifecycle implementation",
+      "url": "https://developers.google.com/merchant/ucp/implementation/2026-04-08/order-lifecycle",
+      "type": "official-doc",
+      "claim": "Order, delivery, return/refund events and versioned identifiers for reconciliation. Does not itself establish incrementality."
+    },
+    {
+      "id": "product-issues",
+      "title": "List your products data and product issues",
+      "url": "https://developers.google.com/merchant/api/guides/products/list-products-data-issues",
+      "type": "official-doc",
+      "claim": "Product/account diagnostics, aggregate status and issue rendering are already native."
+    },
+    {
+      "id": "status-events",
+      "title": "Get push notifications for product status changes",
+      "url": "https://developers.google.com/merchant/api/guides/notifications/product-status-changes",
+      "type": "official-doc",
+      "claim": "Product approval status events include reporting context and event time; free-listing UCP checkout is a documented context."
+    },
+    {
+      "id": "performance-api",
+      "title": "ProductPerformanceView",
+      "url": "https://developers.google.com/merchant/api/reference/rpc/google.shopping.merchant.reports.v1/Types/ProductPerformanceView",
+      "type": "official-doc",
+      "claim": "Merchant product metrics include attributed conversions for FREE traffic. FREE is broader than verified AI-origin purchases."
+    },
+    {
+      "id": "autotag",
+      "title": "About auto-tagging",
+      "url": "https://support.google.com/merchants/answer/15191080?hl=en",
+      "type": "official-doc",
+      "claim": "srsltid supports free-listing purchase tracking with an event source. It is not documented as an AI-Mode-only marker."
+    },
+    {
+      "id": "purchase-tag",
+      "title": "Set up purchase events for Google tag",
+      "url": "https://support.google.com/merchants/answer/13071852?hl=en",
+      "type": "official-doc",
+      "claim": "Website purchase events can be linked to Merchant Center; events must still be reconciled with actual merchant orders."
+    },
+    {
+      "id": "pmax-experiments",
+      "title": "About Performance Max experiments",
+      "url": "https://support.google.com/google-ads/answer/12997711?hl=en",
+      "type": "official-doc",
+      "claim": "Paid campaign and optimization A/B experiments, including Shopping versus Performance Max. Not an organic AI listing experiment."
+    },
+    {
+      "id": "custom-experiments",
+      "title": "Set up a custom experiment",
+      "url": "https://support.google.com/google-ads/answer/6261395?hl=en",
+      "type": "official-doc",
+      "claim": "Standard custom experiments have campaign-type restrictions; avoid claiming every Google Ads experiment supports Shopping."
+    },
+    {
+      "id": "direct-offers",
+      "title": "A new generation of ads for the AI era of Search",
+      "url": "https://blog.google/products/ads-commerce/google-marketing-live-search-ads/",
+      "type": "official-doc",
+      "claim": "2026-05-20 Direct Offers pilot and ad-format announcement. These sponsored experiments should not be mixed with organic shopping results."
+    },
+    {
+      "id": "business-agent",
+      "title": "Get started with Business Agent",
+      "url": "https://support.google.com/merchants/answer/16410382?hl=en",
+      "type": "official-doc",
+      "claim": "Brand conversational experience, US customization requirements and website/catalog grounding; deeper training, insights and agentic checkout are described as coming soon on this page."
+    },
+    {
+      "id": "automatic-updates",
+      "title": "Allow Merchant Center to update product information automatically",
+      "url": "https://support.google.com/merchants/answer/12157888?hl=en",
+      "type": "official-doc",
+      "claim": "Native price/availability/condition automations are a supplement, not a replacement for frequent authoritative product updates."
+    },
+    {
+      "id": "return-policies",
+      "title": "Set up your return policies for Shopping ads and free listings",
+      "url": "https://support.google.com/merchants/answer/14011730?hl=en",
+      "type": "official-doc",
+      "claim": "Existing return-policy configuration and consistency requirements; no measured lift from the proposed explanation."
+    },
+    {
+      "id": "return-label",
+      "title": "Return policy label [return_policy_label]",
+      "url": "https://support.google.com/merchants/answer/9445425?hl=en",
+      "type": "official-doc",
+      "claim": "Product-level exception mapping already exists."
+    },
+    {
+      "id": "api-updates",
+      "title": "Latest updates",
+      "url": "https://developers.google.com/merchant/api/latest-updates",
+      "type": "official-doc",
+      "claim": "August 2026 updates include item-level returns overrides and UCP account integration services; source for current native overlap."
+    },
+    {
+      "id": "api-sunset",
+      "title": "Deprecation and sunset",
+      "url": "https://developers.google.com/shopping-content/guides/deprecation-and-sunset",
+      "type": "official-doc",
+      "claim": "Content API sunset on 2026-08-18 and staged service degradation, with extension-related conditions. Not evidence of immediate universal shutdown."
+    },
+    {
+      "id": "merchant-mcp",
+      "title": "Merchant API MCP Access Service (Alpha)",
+      "url": "https://developers.google.com/merchant/api/guides/agentic-tools/merchant-data-mcp",
+      "type": "official-doc",
+      "claim": "Authorized merchant catalog/report/diagnostic tools and limited writes; experimental with shared API quota. Does not expose proprietary consumer search ranking."
+    },
+    {
+      "id": "ftc-shipping",
+      "title": "Mail, Internet, or Telephone Order Merchandise Rule",
+      "url": "https://www.ftc.gov/legal-library/browse/rules/mail-internet-or-telephone-order-merchandise-rule",
+      "type": "official-doc",
+      "claim": "Current FTC summary of US shipping-representation reasonable basis and delay-consent/refund obligations. A scope reference, not legal assurance."
+    }
+  ]
+}

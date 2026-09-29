@@ -1,0 +1,637 @@
+{
+  "id": "truefit",
+  "name": "True Fit",
+  "benchmarkType": "vertical",
+  "winningEvidence": [
+    "Selected for an operational fit-data network and concrete integrations, not inferred private profitability: web checkout tracking, native SDK order tracking, return reconciliation and A/B assignment hooks are publicly documented.",
+    "Vendor homepage claims 1-2% sitewide conversion lift against A/B controls. Public allocation protocol, sample size, uncertainty and retained-purchase treatment effect were not supplied.",
+    "PacSun's 12.9% conversion among True Fit shoppers and claimed 4.71% incremental revenue are vendor case evidence with selection and methodology limits, not an expected lift for our product.",
+    "Vendor says conversational fit was live at Lands' End in August 2026; its September Glance announcement is a future rollout. Neither provides a separately measured agent-origin retained-purchase gain."
+  ],
+  "currentOffer": "As of 29 September 2026, sells apparel/footwear fit intelligence through merchant widgets, Shopify, native SDKs, a shopping agent and licensed MCP integration. Buyers include retailers and agent platforms. Pricing conflicts: vendor Shopify page says starts at $1,000/month; the current Shopify App Store listing says Free. Treat effective paid price and currency as unresolved until a quote; older localized listings explicitly stated USD.",
+  "conversionMechanism": "Relevant products plus credible size advice can resolve pre-purchase uncertainty and avoid unfulfillable selections. The proprietary network connects product and shopper context with purchase/return history. Success requires incremental retained purchases among all eligible shoppers, not a comparison of tool users with nonusers. Reduced bracketing may lower raw order volume without increasing purchasing; lower returns alone is insufficient.",
+  "harness": {
+    "offlineSimulation": "not_found",
+    "liveMonitoring": "not_found",
+    "randomizedExperiment": "documented",
+    "purchaseMeasurement": "documented",
+    "details": "A/B capability and per-user assignment hooks are documented, but randomization mechanics and causal statistical protocol are not publicly specified. Web and SDK order tracking plus returns feeds enable purchase reconciliation when implemented completely. No public controlled shopper-agent replay product or monitoring of third-party consumer search-engine recommendations was found. These statuses describe the reviewed sources, not proof of internal absence."
+  },
+  "strengths": [
+    "Evidence from product, shopper, purchase and return relationships addresses a decision that generic description rewriting cannot reliably solve.",
+    "Licensed MCP and native/web integration paths let a merchant use existing fit infrastructure in its own assistant.",
+    "Order and return identifiers can support outcome measurement beyond clicks or recommendation frequency.",
+    "Existing agent, profiles, alternatives, size filtering and charts set a high overlap baseline for a new entrant."
+  ],
+  "limits": [
+    "Engaged-user conversion ratios are vulnerable to selection; vendor A/B assertions do not expose an auditable retained-purchase estimate.",
+    "Return data can be missing, delayed or reason-incomplete; a non-return is not proof of satisfactory fit.",
+    "Marketing statements about no PII in recommendations do not mean the service processes no personal data. Profile linkage and sharing require explicit design review.",
+    "Public scale labels, return/bracketing endpoints and pricing vary across pages; do not average or silently reconcile them.",
+    "An MCP endpoint does not establish distribution through proprietary consumer assistants, and announced integrations are not measured deployed outcomes."
+  ],
+  "improve": [
+    "Use intention-to-treat retained-purchase endpoints with complete cancellations, exchanges and cross-channel returns; keep raw orders and return savings separate.",
+    "Validate actual shopper authorization and the exact handoff/variant data contract before treating portable fit as a product advantage.",
+    "Add only features whose specific incremental value survives comparison with existing True Fit and Fit Analytics capabilities.",
+    "Calibrate controlled simulations against independent live tests and use them to prioritize work, without claiming to replicate production ChatGPT or Google."
+  ],
+  "ideas": [
+    {
+      "id": "truefit-01",
+      "title": "Carry one authorized fit decision from an assistant into checkout",
+      "lens": "identity",
+      "buyer": "Apparel marketplaces and merchants receiving AI shopping referrals",
+      "problem": "An assistant resolves sizing, but merchant login, browser handoff or native-app opening loses the shopper context and forces another decision.",
+      "mechanism": "Landing and checkout: preserve an authorized fit result across the handoff so fewer already-interested shoppers abandon or choose the wrong variant; incremental value requires avoided friction to exceed permission friction.",
+      "intervention": "Build a short-lived, retailer-scoped fit-decision receipt containing product/variant, size system, recommendation version and opaque authenticated subject reference. Exchange it through explicit shopper authorization; validate at landing, expire on logout and support revocation. Guests receive session-only general guidance without fabricated identity.",
+      "competitorOverlap": "True Fit already supplies ID sync, profiles and SDK session tokens. A standard fit passport is not new; a narrowly scoped external-assistant-to-checkout receipt and its measured benefit remain unverified.",
+      "edgeHypothesis": "A single fit decision can survive an external referral with fewer repeated questions and less exposed profile data than a full profile export.",
+      "dataNeeded": [
+        "Authorized identity mapping across assistant and retailer",
+        "Referral and handoff events",
+        "Recommendation version and variant mapping",
+        "Orders, cancellations and matured returns"
+      ],
+      "experiment": "Randomize eligible consenting shoppers before handoff to scoped receipt or current deep link; retain assignment across devices where authorized. Primary endpoint is a retained purchase by day 30 after assignment, matured through the merchant's return window. Run at least 6 weeks plus maturation, lengthening for a prespecified minimum detectable effect; include permission refusal in intention-to-treat and guard latency, wrong-account joins and complaints.",
+      "metric": "Treatment minus control share of all eligible randomized shoppers with at least one paid, noncancelled eligible order retaining a line after the full return window; deduplicate exchanges. Report raw orders and return rates separately.",
+      "impactEvidence": "Hypothesized incremental effect. tf-id and tf-ios establish integration components; tf-pacsun is only adjacent fit-guidance evidence.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen example: 10,000 eligible shoppers/month, 2% retained-purchaser rate, GBP 30 contribution per additional retained purchaser, GBP 500 monthly fee; not observed data.",
+        "calculation": "Fee break-even requires 500/30 = 16.7 additional retained purchasers, or about 0.167 percentage points across 10,000 shoppers, before integration and operating costs.",
+        "range": "No forecast. Zero or negative lift is possible if permissions or failed joins add more friction than they remove."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 500/month plus explicitly quoted integration costs; require a paid pilot and positive incremental contribution.",
+      "costControl": "Pass a small signed result, reuse licensed fit inference within its validity period and avoid exporting or repeatedly processing raw profiles.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant and assistant authorization integration",
+        "True Fit or another licensed fit provider",
+        "Consent and token lifecycle",
+        "Cross-channel order reconciliation"
+      ],
+      "failureMode": "Incorrect identity joins harm trust; account linking costs more effort than repeating one size question.",
+      "falsifier": "A powered trial excludes the prespecified economic lift, or reduces completion despite correct handoffs.",
+      "sourceIds": [
+        "tf-id",
+        "tf-ios",
+        "tf-mcp",
+        "tf-privacy",
+        "ico-consent",
+        "tf-pacsun"
+      ]
+    },
+    {
+      "id": "truefit-02",
+      "title": "Keep the recommended width and inseam available until checkout",
+      "lens": "infrastructural",
+      "buyer": "Footwear and denim merchants with fragmented variant inventory",
+      "problem": "A shopper accepts a fit recommendation but the exact width, inseam or regional size is unavailable or mismapped when the cart opens.",
+      "mechanism": "Selection to checkout: prevent a stale or wrong-variant promise from destroying purchase intent, while preserving a shopper-approved alternative when fulfilment is genuinely possible.",
+      "intervention": "Attach size-system and fit-version identifiers to the result, revalidate the exact variant against authoritative stock at handoff, and offer a short merchant-supported reservation after explicit add-to-cart intent. Reconfirm material substitutions; do not silently choose a different fit.",
+      "competitorOverlap": "True Fit already filters by recommended-size availability, and Fit Analytics Product Suggestions finds alternatives. The proposed edge is a verified, time-bounded path from recommendation to the same purchasable variant.",
+      "edgeHypothesis": "Reservation and fresh variant validation add value beyond merely hiding out-of-stock products.",
+      "dataNeeded": [
+        "Variant-level stock and reservation API",
+        "Width, inseam and locale mappings",
+        "Timestamped recommendations and carts",
+        "Fulfilment failures and matured purchase outcomes"
+      ],
+      "experiment": "Randomize shoppers at fit acceptance to current availability filtering or validation plus optional reservation. Primary is retained purchase within 7 days, matured through return expiry. Run 6-8 weeks plus maturation and power for observed stock-failure prevalence. If holds affect other shoppers materially, randomize independent stock pools instead; guard stock hoarding, checkout latency, cancellations and spillovers.",
+      "metric": "Difference in retained-purchaser rate among all assigned fit-accepting shoppers; preserve nonbuyers in the denominator and deduplicate replacement orders.",
+      "impactEvidence": "Hypothesized. tf-agent and fa-simons establish existing availability-aware recommendations, not causal evidence for reservation.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Let N be observed eligible handoffs and f their measured stock/mapping failure fraction; both unknown before instrumentation.",
+        "calculation": "Maximum addressable pool is N*f. Additional retained purchasers = N*f*(recovery improvement) minus lost purchasers caused by delay or displaced stock; all terms must be estimated.",
+        "range": "Can be zero when existing filtering is fresh, or negative when reservations displace more sales than they rescue."
+      },
+      "willingnessToPay": "Unvalidated pilot price: GBP 750/month; compare with contribution from incremental retained purchases and reservation costs.",
+      "costControl": "Recheck stock on decision transitions, not every generated token; cache stable size mappings separately from volatile inventory.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Inventory reservation support",
+        "Shared-stock interference assessment",
+        "Exact merchant variant identity",
+        "Provider recommendation permissions"
+      ],
+      "failureMode": "Holds create artificial stockouts or size mappings confuse a wide fit with a longer shoe.",
+      "falsifier": "Failures are too rare to meet break-even, or the experiment only shifts purchases between shoppers without net gain.",
+      "sourceIds": [
+        "tf-agent",
+        "fa-simons",
+        "tf-spec"
+      ]
+    },
+    {
+      "id": "truefit-03",
+      "title": "Ask only the fit question that can change the buying decision",
+      "lens": "behavioral",
+      "buyer": "Merchants with many new-to-brand AI-assisted shoppers",
+      "problem": "A long body questionnaire interrupts buying; a generic answer can also leave a shopper unable to choose.",
+      "mechanism": "Selection: one useful question can separate two viable sizes or products; skipping questions that cannot change the recommendation prevents needless abandonment.",
+      "intervention": "Build a question-selection policy that estimates whether an optional reference-garment, fit-preference or inseam answer would change the shortlist. Ask at most one initial question, allow skip, then either resolve or state uncertainty. Optimize from live purchase outcomes rather than questionnaire completion.",
+      "competitorOverlap": "True Fit already supports general guidance, contextual questions and saved preferences. Selecting questions by incremental retained-purchase value, with an explicit friction cost, is a narrower unverified extension.",
+      "edgeHypothesis": "Decision-relevant questions outperform a fixed form and indiscriminate conversational questioning.",
+      "dataNeeded": [
+        "Allowed candidate questions",
+        "Recommendation disagreement before/after each answer",
+        "Question refusal and abandonment",
+        "Paid purchases and returns",
+        "Real human intent distribution"
+      ],
+      "experiment": "Randomize all eligible shoppers before any prompt between the existing fit flow and adaptive one-question flow. Primary is 14-day retained purchase matured through return expiry. Run at least 6 weeks and power using actual eligible traffic; do not select only question completers. Guard accessibility, response burden and poor-fit complaints.",
+      "metric": "Intention-to-treat difference in retained purchasers divided by all randomized eligible shoppers, including skips; question completion is diagnostic only.",
+      "impactEvidence": "Hypothesized; tf-agent documents existing conversation and tf-spec documents general fallback. No claimed uplift for this policy.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Measure the proportion who face an unresolved fit decision, question-induced abandonment and retained purchase rates; no numeric baseline is available.",
+        "calculation": "Net incremental retained purchases = purchases rescued by improved decisions minus purchases lost to questioning; evaluate each term in a randomized policy test.",
+        "range": "Null or negative if a question rarely changes the decision or sensitive-seeming requests reduce trust."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 400/month; charge only after the merchant can inspect a randomized purchase result.",
+      "costControl": "Use a small decision policy over structured fit outputs; call a larger model only for an unresolved explanation.",
+      "feasibility": "now",
+      "dependencies": [
+        "Licensed fit output access",
+        "Usable optional-question UX",
+        "Stable experiment assignment",
+        "Sufficient purchase outcomes for policy learning"
+      ],
+      "failureMode": "The policy learns who is already likely to buy rather than which question causes a purchase.",
+      "falsifier": "Compared with the existing flow, answers increase but retained purchases do not, or the confidence interval excludes break-even.",
+      "sourceIds": [
+        "tf-agent",
+        "tf-spec",
+        "tf-ab"
+      ]
+    },
+    {
+      "id": "truefit-04",
+      "title": "Reset fit advice when a familiar garment changes",
+      "lens": "temporal",
+      "buyer": "Brands that reuse style names across seasons, factories or fabric revisions",
+      "problem": "A shopper's successful old purchase becomes a misleading anchor after a cut, fabric or production change.",
+      "mechanism": "Selection and repeat buying: detect product-version drift before returning shoppers receive unjustified reassurance; a corrected size or truly comparable alternative can keep the next purchase viable.",
+      "intervention": "Build a versioned fit graph using merchant-declared cut/fabric revisions plus cautious change detection on reason-coded outcomes. Quarantine stale garment-to-size links, request a targeted sample measurement and publish advice tied to the revised product version.",
+      "competitorOverlap": "True Fit already learns from outcomes and manages dynamic size charts. Public materials do not establish batch-level change detection or automatic invalidation of historical fit anchors; internal capability is unknown.",
+      "edgeHypothesis": "Explicit product-version boundaries prevent failures that aggregate continuous learning corrects too slowly.",
+      "dataNeeded": [
+        "Product revision and manufacturing metadata",
+        "Historical reference-garment links",
+        "Time-stamped size recommendations",
+        "Return reasons and exchanges",
+        "Sample measurements independent of return behavior"
+      ],
+      "experiment": "Randomize matched product-version clusters to drift-aware guidance or the existing model, balancing launch date and category. Primary is retained purchase among eligible AI-referred shoppers encountering those clusters. Observe at least 8-12 weeks plus return maturation; power on cluster count and account for shoppers crossing clusters. Guard false alerts and premature size changes.",
+      "metric": "Cluster-adjusted difference in retained purchasers per eligible shopper exposure cohort; report whether value comes from additional orders or fewer reversed purchases.",
+      "impactEvidence": "Hypothesized. tf-catalog and tf-returns provide input infrastructure; tf-agent establishes dynamic-chart overlap.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown revision prevalence d, exposed returning shoppers N and retained-purchase loss associated with genuine drift.",
+        "calculation": "Addressable retained-purchase loss is bounded by N*d*observed loss; subtract false-alert damage, measurement costs and delayed launches.",
+        "range": "Zero if version drift is uncommon; negative if normal return noise repeatedly triggers unnecessary changes."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 1,000/month for a multi-season catalog; sample measurement costs priced separately.",
+      "costControl": "Trigger physical measurement only after corroborated catalog or outcome signals; avoid remeasuring every SKU.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable product-version identity",
+        "Manufacturing or merchandising cooperation",
+        "Enough outcomes per changed cluster",
+        "Delay-aware return monitoring"
+      ],
+      "failureMode": "Changes in customer mix or return policy are mistaken for garment drift.",
+      "falsifier": "Blinded sample measurements fail to confirm alerts, or drift-aware advice does not improve retained purchases in genuine-change clusters.",
+      "sourceIds": [
+        "tf-catalog",
+        "tf-returns",
+        "tf-agent"
+      ]
+    },
+    {
+      "id": "truefit-05",
+      "title": "Let an adult gift recipient share one fit permission",
+      "lens": "regulatory",
+      "buyer": "Gift-heavy apparel merchants and adult gifting assistants",
+      "problem": "A gift buyer cannot confidently select size without asking for body information or contaminating their own fit profile with someone else's purchases.",
+      "mechanism": "Selection: a recipient-authorized, limited recommendation removes an information barrier and prevents the gift transaction from retraining the buyer's personal sizing history.",
+      "intervention": "Offer a recipient-created, category-limited gift fit link usable for named merchants and an expiry date. Return only the needed recommended variant, keep buyer and wearer distinct, allow immediate revocation and separate marketing consent. Use a guest path if the recipient declines; launch for adults.",
+      "competitorOverlap": "True Fit already advertises shopping for others. A one-use recipient-controlled permission with buyer/wearer outcome separation is an integration hypothesis, not a claim that multi-profile shopping is absent.",
+      "edgeHypothesis": "Recipients are more willing to authorize a narrow sizing use than disclose a reusable body profile, raising completed retained gift purchases.",
+      "dataNeeded": [
+        "Explicit recipient permission and scope",
+        "Buyer versus wearer relationship",
+        "Eligible category and product identity",
+        "Gift delivery dates",
+        "Gift returns/exchanges reconciled to original orders"
+      ],
+      "experiment": "Randomize gift-intent buyers before offering the optional link to current gift flow or scoped permission. Primary is a retained gift purchase within 30 days, matured beyond the longer gift return window. Run one complete gifting cycle and power for invitation uptake; include nonresponse. Guard recipient burden, privacy complaints, surprise loss and mistaken profile learning.",
+      "metric": "Incremental retained gift purchasers per all randomized gift-intent buyers; count a successful exchange once and exclude gift-card substitution from the garment endpoint.",
+      "impactEvidence": "Hypothesized. tf-shopify establishes direct overlap; ico-consent supports specific permission design, not increased conversion or legal certification.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown invitation acceptance a, fit-related gift abandonment b and incremental retained purchase conditional on acceptance; measure before any forecast.",
+        "calculation": "Net gain = invited buyers * causal retained-purchase difference; never multiply acceptance by an observational user-versus-nonuser conversion ratio.",
+        "range": "Could be zero or negative if a request delays buying or spoils a surprise."
+      },
+      "willingnessToPay": "Unvalidated seasonal pilot price: GBP 500/month during the gifting period; test against incremental gift contribution.",
+      "costControl": "Resolve identity once per permission and reuse its valid fit result; do not create a second general-purpose customer profile.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Recipient-controlled authorization",
+        "Wearer-aware transaction labels",
+        "Merchant gift return feeds",
+        "Review of consent implementation for target jurisdictions"
+      ],
+      "failureMode": "Merchants treat fit consent as marketing consent or attribute recipient outcomes to the buyer.",
+      "falsifier": "Invitation uptake is insufficient for break-even, or uptake rises without an intention-to-treat retained-purchase increase.",
+      "sourceIds": [
+        "tf-shopify",
+        "tf-privacy",
+        "ico-consent",
+        "tf-id"
+      ]
+    },
+    {
+      "id": "truefit-06",
+      "title": "Show an honest fit tradeoff between two viable products",
+      "lens": "psychological",
+      "buyer": "Multi-brand retailers whose agents offer one confident answer despite ambiguous fit",
+      "problem": "A single recommended size hides a tradeoff such as comfortable waist versus desired leg length; generic reassurance leaves shoppers uncertain or misled.",
+      "mechanism": "Comprehension and selection: showing concrete differences helps a shopper choose according to their stated preference and avoid buying an unsuitable product solely because the answer sounded certain.",
+      "intervention": "Build a two-option fit comparison using verified garment facts and calibrated fit outputs: identify the relevant difference, state evidence limits and preserve an opt-out. Say when neither option meets the requirement; do not fabricate peer counts or probabilities.",
+      "competitorOverlap": "True Fit explains fit, and Fit Analytics already offers alternative products. The edge hypothesis concerns transparent, preference-specific tradeoffs and calibrated abstention rather than generic recommendations.",
+      "edgeHypothesis": "A concise comparison increases retained purchases more than a single confident answer or an unranked grid.",
+      "dataNeeded": [
+        "Verified garment dimensions and stretch evidence",
+        "User-stated preferences",
+        "Calibration data by product/category",
+        "Recommendation and choice records",
+        "Matured retained purchases"
+      ],
+      "experiment": "Randomize eligible ambiguous-fit shoppers to current single recommendation or two-option comparison with the same candidate set and prices. Primary is 14-day retained purchase. Run 6-8 weeks plus return maturation, power for the ambiguous subgroup and guard excessive abandonment, accessibility and false certainty.",
+      "metric": "Difference in retained purchasers per all assigned ambiguous-fit shoppers; recommendation acceptance and fewer raw orders are secondary.",
+      "impactEvidence": "Hypothesized. fa-simons is adjacent vendor evidence for alternatives, not evidence for this presentation or calibration method.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No known baseline; measure ambiguity frequency and current retained-purchaser rate before defining an economic minimum effect.",
+        "calculation": "Incremental retained purchasers = N_ambiguous * (r_comparison - r_current); subtract service cost and any lost contribution from unnecessary abstention.",
+        "range": "Zero if shoppers already understand the difference; negative if added choices paralyze decisions."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 350/month for a category pilot.",
+      "costControl": "Generate from a small structured comparison template and cache product facts; avoid repeated free-form reasoning.",
+      "feasibility": "now",
+      "dependencies": [
+        "Evidence-backed fit dimensions",
+        "Honest uncertainty calibration",
+        "User preference capture",
+        "Variant-aware product comparison"
+      ],
+      "failureMode": "The interface disguises weak evidence as precision, or favors familiar best sellers at the expense of suitable alternatives.",
+      "falsifier": "Understanding improves in usability checks but a powered purchase trial rules out the required retained-purchase gain.",
+      "sourceIds": [
+        "tf-agent",
+        "fa-simons",
+        "tf-spec"
+      ]
+    },
+    {
+      "id": "truefit-07",
+      "title": "Make a too-long garment purchasable through a verified alteration",
+      "lens": "algorithmic",
+      "buyer": "Apparel merchants with an existing alteration service",
+      "problem": "An AI shopper rejects every in-stock option because none meets a required inseam, although an existing merchant service could shorten a suitable garment.",
+      "mechanism": "Discovery and fulfilment: expand the genuinely feasible product set by combining an eligible garment with a specific alteration, total price and delivery date.",
+      "intervention": "Build a constraint solver over allowable alterations, garment measurements, verified service capacity and deadlines. Present the finished dimensions and all-in terms in the assistant, require shopper confirmation and submit the merchant's existing alteration option at checkout.",
+      "competitorOverlap": "UNIQLO already sells online shortening for eligible bottoms; True Fit already resolves fit. The proposed edge is assistant discovery of the feasible garment-plus-service combination, not inventing tailoring.",
+      "edgeHypothesis": "Some no-match AI shopping journeys become retained purchases when the service is considered during discovery.",
+      "dataNeeded": [
+        "Merchant-confirmed alteration eligibility",
+        "Finished-dimension tolerance",
+        "Service prices and capacity",
+        "Shopper-provided target length and deadline",
+        "Complaints, remakes and retained order data"
+      ],
+      "experiment": "Randomize adults with a pre-treatment no-match inseam constraint to current product-only search or product-plus-approved-alteration search. Primary is a delivered retained purchase within 30 days, matured through applicable return terms. Run 8-12 weeks with enough no-match journeys; separately require satisfactory-fit feedback and monitor remakes because return restrictions can mechanically inflate retention.",
+      "metric": "Incremental retained purchasers per all eligible no-match shoppers, with a mandatory satisfaction/remake guardrail and identical treatment of statutory remedies; no credit for merely making returns unavailable.",
+      "impactEvidence": "Hypothesized purchase effect. uniqlo-alter proves a service mechanism exists, not that this agent intervention improves conversion.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Let N be real no-match journeys, e the verified alterable fraction, and c the incremental contribution after service cost. Values are unmeasured.",
+        "calculation": "Potential added retained purchasers cannot exceed N*e. Break-even requires experimentally measured incremental purchasers*c to exceed integration, service and software cost.",
+        "range": "Zero if no-match products are not safely alterable; negative with late delivery, measurement mistakes or unwanted restrictions."
+      },
+      "willingnessToPay": "Unvalidated pilot price: GBP 1,500/month for an alteration-enabled merchant, excluding tailoring and integration costs.",
+      "costControl": "Use deterministic feasibility rules before any model explanation; integrate an existing service rather than operating a new tailoring network.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant alteration capability",
+        "Accurate target measurements",
+        "Capacity and deadline integration",
+        "Clear merchant policy and remedy handling"
+      ],
+      "failureMode": "The agent treats shortening as equivalent to tapering or ignores garment shape and altered-item terms.",
+      "falsifier": "The feasible pool is too small, or incremental retained orders disappear when dissatisfied and remade items are included.",
+      "sourceIds": [
+        "uniqlo-alter",
+        "tf-spec"
+      ]
+    },
+    {
+      "id": "truefit-08",
+      "title": "Offer a human fitting check only when it can rescue a purchase",
+      "lens": "behavioral",
+      "buyer": "High-consideration footwear, denim and occasionwear merchants with trained fit staff",
+      "problem": "Repeated AI answers do not resolve unusual fit uncertainty, while offering human help to every shopper is expensive and slow.",
+      "mechanism": "Selection to checkout: a qualified fitter supplies the missing factual answer or measured alternative for an unresolved shopper, converting otherwise abandoned intent into a retained purchase.",
+      "intervention": "Build an escalation policy based on unresolved product constraints, low evidence confidence and explicit shopper interest. Send the fitter a compact authorized product/fit summary, offer a clear wait estimate and return a checkable answer to the same cart.",
+      "competitorOverlap": "True Fit supplies support-agent fit intelligence and merchant chat products already hand off to staff. The proposed edge is purchase-uplift-based allocation of scarce fitting capacity; competitor coverage is unknown.",
+      "edgeHypothesis": "A bounded fitting intervention produces enough additional retained purchases in unresolved cases to justify its labor cost.",
+      "dataNeeded": [
+        "Unresolved question type and confidence",
+        "Consent to share context with fitter",
+        "Queue and labor costs",
+        "Fitter answer and actual variant",
+        "Purchase and return outcomes"
+      ],
+      "experiment": "Within staffed periods, randomize eligible unresolved shoppers to optional fitting check or the current AI flow. Primary is 14-day retained purchase, matured through return expiry. Run 8 weeks or longer for power; include declined offers and stratify staff availability. Guard wait abandonment, capacity spillovers and discriminatory routing.",
+      "metric": "Retained-purchaser difference per all assigned unresolved shoppers; secondary cost per incremental retained purchaser includes idle staff and failed contacts.",
+      "impactEvidence": "Hypothesized; tf-mcp supports the data path, but no observed causal result for this escalation policy was found.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen unit example: a completed check takes 6 minutes at GBP 30/hour, costing GBP 3; incremental retained purchase contributes GBP 40. These are assumptions.",
+        "calculation": "Ignoring fixed and waiting costs, the check needs 3/40 = 7.5 percentage points of incremental retained-purchase probability per checked case. The intention-to-treat offer effect and uptake must be measured separately.",
+        "range": "Could be negative if delay drives abandonment. Low-cost deflection alone does not count as purchase gain."
+      },
+      "willingnessToPay": "Unvalidated software pilot price: GBP 300/month plus merchant staffing; retain only if total incremental contribution exceeds full cost.",
+      "costControl": "Cap queue length, reuse product answers and route only experimentally promising unresolved cases; preserve randomized exploration so the policy does not merely pick likely buyers.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Trained available fit staff",
+        "Authorized context handoff",
+        "Wait-time service level",
+        "Causal policy training data"
+      ],
+      "failureMode": "Routing selects high-intent shoppers who would buy anyway, creating a persuasive but false success rate.",
+      "falsifier": "Randomized offers produce no economically sufficient retained-purchase gain after labor and delay costs.",
+      "sourceIds": [
+        "tf-mcp",
+        "tf-spec",
+        "tf-ab"
+      ]
+    },
+    {
+      "id": "truefit-09",
+      "title": "Replenish sizes requested by real AI shoppers who could not buy",
+      "lens": "temporal",
+      "buyer": "Multi-brand retailers with replenishable assortments",
+      "problem": "Sales history understates demand for sizes that were consistently unavailable; an agent repeatedly encounters qualified no-match shoppers.",
+      "mechanism": "Availability: adding the right missing size can enable purchases that fit advice cannot create from an empty inventory pool.",
+      "intervention": "Collect privacy-minimized, deduplicated human-initiated AI shopping intents, their fit constraints and actual no-match reason. Aggregate unmet size demand, propose a small replenishment experiment and compare it with the merchant's existing equal-budget buying rule. Exclude synthetic monitoring queries and speculative model demand.",
+      "competitorOverlap": "True Fit already describes fit-informed inventory and restocking. The narrower edge is using verified unmet AI-origin demand plus controlled inventory trials rather than observed sales alone.",
+      "edgeHypothesis": "Unmet fit-qualified intent improves replenishment choices enough to increase retained orders under the same working-capital budget.",
+      "dataNeeded": [
+        "Human-origin intent provenance",
+        "Size recommendation and actual stock snapshot",
+        "SKU replenishment feasibility and lead times",
+        "Exposure and substitution paths",
+        "Matured sales, returns and unsold inventory"
+      ],
+      "experiment": "Randomize matched independent SKU/market stock pools to intent-informed replenishment or the existing buying rule at equal capital. Primary is retained purchases per prespecified market cohort over a full replenishment cycle plus return maturation. Power on pools, not conversations; model substitution and cross-market spillover. Guard inventory aging and cash tied up.",
+      "metric": "Cluster-adjusted incremental retained orders per fixed pre-treatment eligible shopper cohort; count exchange chains once and assess category-wide cannibalization, not only replenished SKU sales.",
+      "impactEvidence": "Hypothesized. tf-spec documents direct restocking overlap; tf-catalog supports underlying product/outcome inputs. No measured gain for unmet AI-intent buying was found.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Required observed inputs are replenishable no-match volume, existing substitution rate, landed inventory cost and retained contribution; no numerical forecast is defensible.",
+        "calculation": "Net additional retained orders = new retained orders in treated pools minus displaced category orders and control-pool growth; economic value also subtracts unsold inventory and carrying cost.",
+        "range": "Zero with complete substitution; negative if inferred demand does not persist until stock arrives."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 2,000 per replenishment pilot, with a separately capped merchant inventory budget.",
+      "costControl": "Aggregate constraints and stock events without retaining raw conversation history; fund only small experiments with enough qualified unmet demand.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "Inventory buying authority",
+        "Replenishable products and supplier lead times",
+        "Independent experimental stock pools",
+        "Reliable human-versus-synthetic intent separation"
+      ],
+      "failureMode": "The system counts repeated agent retries as new demand or replenishes after seasonal interest has passed.",
+      "falsifier": "Category-wide retained purchases do not increase at equal inventory capital, despite higher sales for targeted SKUs.",
+      "sourceIds": [
+        "tf-spec",
+        "tf-catalog",
+        "tf-agent"
+      ]
+    },
+    {
+      "id": "truefit-10",
+      "title": "Validate which simulated fit failures predict lost retained purchases",
+      "lens": "measurement",
+      "buyer": "Conversion teams choosing which AI-shopping fixes to implement",
+      "problem": "A replayed shopper model can change its recommendation after a fit-data edit without any real shopper becoming more likely to buy.",
+      "mechanism": "Enables discovery-to-purchase improvements: learn which offline failure signals identify interventions that subsequently raise retained purchases, then spend a fixed implementation budget on those interventions.",
+      "intervention": "Build a merchant-owned fit replay suite with frozen retrieval, real anonymized intent strata, product truth and paired interventions. Register predictions before live tests; join intervention assignment to orders and mature returns. Score predictive calibration across interventions, and promote only fixes with actual purchase evidence. Rank swaps remain sensitivity probes.",
+      "competitorOverlap": "True Fit has A/B assignment hooks, order/return tracking and fit analytics; Fit Analytics publishes controlled merchant tests. A generic testing dashboard is not novel. Transfer calibration from controlled agent replay to retained purchases is the proposed research product.",
+      "edgeHypothesis": "Calibrated replay selects more productive fit fixes per engineering pound than manual heuristics while refusing to translate model recommendations directly into sales.",
+      "dataNeeded": [
+        "Consented or de-identified human shopping intents",
+        "Frozen candidate sets and factual fit data",
+        "Independent intervention IDs",
+        "Live random assignments and all eligible exposures",
+        "Order, cancellation, return and exchange joins"
+      ],
+      "experiment": "First randomize real shoppers separately for each truthful candidate intervention against the existing merchant experience, using retained purchase as primary and full return maturation. Then randomize enough merchant/category teams to replay-ranked versus heuristic-ranked work under equal budget for 12+ weeks plus maturation. Power on teams for policy value; if too few exist, report calibration only, not a proven business uplift.",
+      "metric": "Primary deployment-policy endpoint: additional retained purchasers per all eligible shoppers at fixed implementation budget; secondary cost per incremental retained purchase. Offline recommendation frequency is diagnostic, never current ChatGPT conversion or recommendation share.",
+      "impactEvidence": "Hypothesized transfer and allocation value. tf-ab, tf-orders, tf-returns and fa-snipes establish adjacent experimentation mechanics; none establishes simulator-to-purchase transfer.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No simulator-to-human transfer coefficient is known. Measure existing fix cost and randomized retained-purchase effects before valuing selection.",
+        "calculation": "Value = retained-purchase gain from deployed replay-selected fixes minus gain from equal-budget control-selected fixes; subtract replay, labeling and experimentation costs. Repeated seeds do not increase the number of independent human intents.",
+        "range": "Zero or negative if replay favors persuasive model text that shoppers ignore, or consumes budget that would have funded effective fixes."
+      },
+      "willingnessToPay": "Unvalidated fixed-scope pilot price: GBP 2,500 for a category experiment and return-matured readout; ongoing pricing requires demonstrated allocation value.",
+      "costControl": "Use small paired replays to eliminate factual failures, reserve expensive models for disputed cases, and stop simulation once uncertainty is dominated by live purchase data.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant-controlled agent or landing experiment",
+        "Adequate randomized purchase sample",
+        "Truthful implementable interventions",
+        "Stable outcome reconciliation and statistical review"
+      ],
+      "failureMode": "The team mistakes repeated agent seeds for independent demand or validates only fixes selected after seeing favorable live data.",
+      "falsifier": "Preregistered replay rankings fail to predict held-out retained-purchase effects, or equal-budget selection produces no better purchase outcome.",
+      "sourceIds": [
+        "tf-ab",
+        "tf-orders",
+        "tf-returns",
+        "tf-ios",
+        "fa-snipes"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "tf-home",
+      "title": "True Fit | Fit & Sizing Intelligence for Retailers, Enhanced by AI",
+      "url": "https://www.truefit.com/",
+      "type": "official-doc",
+      "claim": "Advertises 1-2% sitewide conversion lift against A/B controls; publishes no sample, uncertainty or retained-order estimand."
+    },
+    {
+      "id": "tf-spec",
+      "title": "Fit Intelligence Technical Spec, Data & MCP | True Fit",
+      "url": "https://www.truefit.com/fit-intelligence-spec",
+      "type": "official-doc",
+      "claim": "July 2026 product specification: cross-brand outcome network, confidence, fallback guidance, inventory and exchange use cases. Scale and outcome figures are vendor assertions."
+    },
+    {
+      "id": "tf-mcp",
+      "title": "MCP Integration Overview",
+      "url": "https://techdocs.truefitcorp.com/docs/mcp-integration",
+      "type": "official-doc",
+      "claim": "Documents provisioned MCP access, retailer authorization and chat-provider responsibilities. Integration capability does not establish consumer-platform distribution."
+    },
+    {
+      "id": "tf-id",
+      "title": "User Identity Sync",
+      "url": "https://techdocs.truefitcorp.com/docs/mcp-user-identity-sync",
+      "type": "official-doc",
+      "claim": "Describes authenticated ID mapping, guest fallback and namespace consistency; exact tool schema needs vendor confirmation."
+    },
+    {
+      "id": "tf-orders",
+      "title": "Order Confirmation Page Integration",
+      "url": "https://techdocs.truefitcorp.com/docs/order-confirmation-integration",
+      "type": "official-doc",
+      "claim": "Documents checkout tracking with order and product identifiers, prices, sizes and quantities."
+    },
+    {
+      "id": "tf-ios",
+      "title": "iOS",
+      "url": "https://techdocs.truefitcorp.com/docs/native-sdk-2-0-ios",
+      "type": "official-doc",
+      "claim": "SDK 2.0 supports widget callbacks, session tokens and completed-order tracking; publishing an SDK is not evidence of measured uplift."
+    },
+    {
+      "id": "tf-returns",
+      "title": "Weekly Incremental Returns Feed",
+      "url": "https://techdocs.truefitcorp.com/docs/weekly-incremental-returns-feed",
+      "type": "official-doc",
+      "claim": "Documents reconciliation to original orders and online/in-store return channels; reason is recommended, not guaranteed."
+    },
+    {
+      "id": "tf-data",
+      "title": "Shopify Data Requirements",
+      "url": "https://help.truefit.com/app-data-requirements",
+      "type": "official-doc",
+      "claim": "June 2025 guidance says return data is optional, although encouraged; observed purchase data alone cannot establish retention."
+    },
+    {
+      "id": "tf-catalog",
+      "title": "Catalog, Purchases, Returns & Reviews Data",
+      "url": "https://techdocs.truefitcorp.com/docs/mcp-catalog-and-transactions",
+      "type": "official-doc",
+      "claim": "Documents catalog, transaction and review ingestion, historical feeds and data availability fallbacks."
+    },
+    {
+      "id": "tf-ab",
+      "title": "A/B Test Tracking",
+      "url": "https://techdocs.truefitcorp.com/docs/experiment-settings-event-hook",
+      "type": "official-doc",
+      "claim": "Experiment event hook exposes user group assignments; disabled by default and vendor-enabled. Does not reveal randomization algorithm or power."
+    },
+    {
+      "id": "tf-shopify",
+      "title": "True Fit | AI Fit & Sizing Intelligence for Shopify Retailers",
+      "url": "https://www.truefit.com/shopify",
+      "type": "official-doc",
+      "claim": "Vendor page advertises pricing from $1,000/month and shopping for others; conflicts with current app listing price label."
+    },
+    {
+      "id": "tf-app",
+      "title": "True Fit: AI Size Guidance - Size recommendations powered by shoppers, enhanced by AI. | Shopify App Store",
+      "url": "https://apps.shopify.com/truefit",
+      "type": "official-doc",
+      "claim": "Observed 29 September 2026: Free label, 4.5 rating from 23 reviews. Reviews and listing labels do not establish enterprise price or causal outcomes."
+    },
+    {
+      "id": "tf-privacy",
+      "title": "True Fit Privacy Policy",
+      "url": "https://www.truefit.com/privacy-policy-and-choices",
+      "type": "official-doc",
+      "claim": "February 2026 policy describes personal profile data, sharing and privacy choices; output minimization does not make the entire service anonymous."
+    },
+    {
+      "id": "tf-agent",
+      "title": "AI Shopping Agent for Apparel & Footwear | True Fit",
+      "url": "https://www.truefit.com/conversation-fit-agent",
+      "type": "official-doc",
+      "claim": "Markets conversational fit guidance, persistent profiles, personal-size filtering and dynamic size charts. These are existing overlap."
+    },
+    {
+      "id": "tf-pacsun",
+      "title": "How PacSun Raised Incremental Revenue Over 4% by Building Shopper Confidence",
+      "url": "https://info.truefit.com/pacsun-case-study",
+      "type": "vendor-case",
+      "claim": "Reports 12.9% conversion among True Fit shoppers; exposed-user selection and missing public experiment details limit inference."
+    },
+    {
+      "id": "tf-size-post",
+      "title": "Why clothing sizes are inconsistent across brands, and what retailers can do about it",
+      "url": "https://www.truefit.com/post/why-clothing-sizes-are-inconsistent-across-brands-and-what-retailers-can-do-about-it",
+      "type": "vendor-case",
+      "claim": "Vendor restates PacSun's 4.71% incremental revenue claim and identifies results as retailer-specific; no public causal calculation."
+    },
+    {
+      "id": "tf-moosejaw",
+      "title": "Moosejaw Case Study",
+      "url": "https://info.truefit.com/moosejaw-case-study",
+      "type": "vendor-case",
+      "claim": "Headline reports 24% fewer ecommerce returns and 34% fewer size bracketers; other True Fit pages label 24% as bracketing decline. Endpoint ambiguity matters."
+    },
+    {
+      "id": "tf-glance",
+      "title": "True Fit + Glance Bring Fit Intelligence Into the Agentic Shopping Experience",
+      "url": "https://www.truefit.com/post/true-fit-glance-bring-fit-intelligence-into-the-agentic-shopping-experience",
+      "type": "official-doc",
+      "claim": "22 September 2026 announcement plans first integrated experiences for the 2026 holiday season, with broader merchant availability in 2027."
+    },
+    {
+      "id": "tf-lands",
+      "title": "Agentic Commerce Gets Real at Lands’ End",
+      "url": "https://www.truefit.com/post/agentic-commerce-gets-real-at-lands-end",
+      "type": "official-doc",
+      "claim": "20 August 2026 vendor announcement says conversational fit is live at Lands' End; no separate agent-specific retained-purchase result."
+    },
+    {
+      "id": "fa-snipes",
+      "title": "Fit Analytics | Snipes Case Study",
+      "url": "https://fitanalytics.com/case-studies/snipes",
+      "type": "vendor-case",
+      "claim": "Adjacent vendor reports all-traffic A/B, 645,000 shoppers, two months, 3% conversion increase. Does not disclose full statistical protocol."
+    },
+    {
+      "id": "fa-simons",
+      "title": "Fit Analytics | Simons Case Study",
+      "url": "https://fitanalytics.com/case-studies/simons",
+      "type": "vendor-case",
+      "claim": "Existing alternatives for unavailable or poorly fitting products; vendor A/B claims are adjacent evidence, not a forecast for these proposals."
+    },
+    {
+      "id": "uniqlo-alter",
+      "title": "UNIQLO UK | Online Alterations | Customer Service",
+      "url": "https://faq-uk.uniqlo.com/pkb_Home?fs=RelatedArticle&id=kA0Vh0000001Mui&l=en_US",
+      "type": "official-doc",
+      "claim": "Selected bottoms can be shortened; lead-time, pricing and return restrictions illustrate operational requirements, not conversion proof."
+    },
+    {
+      "id": "ico-consent",
+      "title": "What is valid consent? | ICO",
+      "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/consent/what-is-valid-consent/",
+      "type": "official-doc",
+      "claim": "Specific, informed consent and easy withdrawal when consent is used; page notes guidance review after UK legislation changes. No compliance certification inferred."
+    }
+  ]
+}

@@ -1,0 +1,685 @@
+{
+  "id": "scrunch",
+  "name": "Scrunch / Sitecore AXP",
+  "benchmarkType": "commercial",
+  "winningEvidence": [
+    "Sitecore confirms acquiring Scrunch on 3 June 2026 and reports 500+ brands/agencies. This supports enterprise adoption, not standalone profitability [acquisition].",
+    "Akamai's deployed AXP/non-AXP comparison supplies adjacent visibility evidence; randomized purchase lift is not disclosed [akamai].",
+    "Runpod reports 4x new paying-customer growth over 90 days after broader optimization work. This is a vendor case without an isolated causal AXP estimate [runpod]."
+  ],
+  "currentOffer": "Observed 29 September 2026: monitoring, site diagnostics, product/retailer shopping analytics and separate AXP agent-content delivery for brands/agencies. Direct pricing page lists Starter $250/month annually or $300 monthly; Growth $417 annually or $500 monthly; Enterprise custom. Page uses $, with no explicit currency code. Starter/Growth offer 350/700 custom prompts and 3/5 seats. AXP is separately purchasable; no current public AXP-only price found. Older Core pricing surfaces conflict and are not merged [pricing, axp, shopping].",
+  "conversionMechanism": "AXP makes approved product/context facts easier for a retrieving agent to read; if this changes relevant recommendations, a shopper can discover a suitable offer and purchase. Serving content does not control upstream retrieval, recommendation rank, human arrival correctness or checkout. Incremental paid orders require testing the whole path and accounting for returns, substitution and purchases attributed to other channels.",
+  "harness": {
+    "offlineSimulation": "not_found",
+    "liveMonitoring": "documented",
+    "randomizedExperiment": "not_found",
+    "purchaseMeasurement": "documented",
+    "details": "Public sources reviewed include AXP delivery/how-to/help, collection-method FAQ, shopping, GA4 integration, Akamai and Runpod cases, and targeted experiment/A-B searches. Monitoring uses browser collection/APIs [monitor]. No controlled offline tool-response replay or randomized merchant purchase experiment was found; not_found is a search result, not proof of absence. Akamai uses comparable pages, without disclosed randomization [akamai]. GA4 supports AI-attributed purchases/revenue [ga4], which is not incremental lift. The published journey research is observational and transaction-free [panel-v2]."
+  },
+  "strengths": [
+    "An implementation path exists beyond monitoring: managed agent-content delivery, approvals and a repository [axp].",
+    "Content deployments, logs and version redeployment are documented [deploy].",
+    "Product and retailer recommendation analysis is already available; do not pitch it as missing [shopping].",
+    "GA4 transaction/revenue reporting goes beyond citations [ga4].",
+    "Sitecore offers an existing enterprise content distribution channel, although integration plans are not proof of incremental outcomes [acquisition]."
+  ],
+  "limits": [
+    "No reviewed controlled study establishes an AXP-caused ecommerce purchase percentage.",
+    "Akamai case metrics and acquisition-release citation figures have different/undisclosed scopes; do not combine them into one effect.",
+    "Runpod's 4x customer-growth headline does not isolate content, market growth, site repairs or AXP.",
+    "Use paper v2 instead of older blog metrics and position claims [panel-v2].",
+    "Freshness depends on configuration: stored sources may need refresh, while live-page modes can reoptimize [freshness].",
+    "Agent-request logs cannot automatically identify the human who later buys. Missing referrers and off-platform journeys remain attribution gaps.",
+    "Generic HTML/Markdown conversion and catalog mapping face existing Cloudflare and Shopify functionality [cloudflare, shopify-map].",
+    "Shopify does not recommend inserting a proxy in front of its stores; use supported native product flows [shopify-discovery]."
+  ],
+  "improve": [
+    "Report versions and exact fact coverage delivered to agents, then distinguish retrieval success, correct understanding, recommendations and paid orders.",
+    "Choose the supported native feed/CMS/AXP route based on demonstrated failures; avoid building a second CDN as the default.",
+    "Build merchant-specific compatibility, offer, handoff and fulfillment services whose outputs are independently checkable.",
+    "Calibrate a controlled replay against live retrieval and randomized purchase experiments before using it to allocate merchant spend.",
+    "Show uncertainty, interference risks, delayed ingestion and economic break-even rather than a universal recommendation-to-sales multiplier."
+  ],
+  "ideas": [
+    {
+      "id": "scrunch-01",
+      "title": "Constraint-preserving agent page compiler",
+      "lens": "algorithmic",
+      "buyer": "Retailers with technical catalogs already using AXP, native feeds or edge conversion",
+      "problem": "A short agent response can drop the one exception, unit or variant condition that determines whether a product is suitable.",
+      "mechanism": "Discovery and selection: preserve verified purchase constraints through compression -> fewer eligible products rejected or misrepresented -> more qualified recommendations -> more retained purchases. This requires live retrieval of the improved representation; replay improvement alone cannot cause orders.",
+      "intervention": "Compile a merchant-approved fact graph into nested summaries with explicit units, exclusions and variant scope. Test several truncation budgets against hard-constraint questions. Reject outputs that change truth values. Publish through the merchant's existing renderer or AXP, not a new CDN.",
+      "competitorOverlap": "Scrunch already simplifies content, and Cloudflare converts HTML to Markdown. Shopify already maps sources. The proposed addition is measured preservation of decision-critical facts under truncation; equivalent vendor internals are unknown.",
+      "edgeHypothesis": "A merchant-specific hard-constraint loss function will outperform token reduction alone for complex products.",
+      "dataNeeded": [
+        "Approved variant facts and exclusions",
+        "Representative distinct shopping intents",
+        "Observed response lengths and truncation patterns",
+        "Agent response version logs and paid/returned order events"
+      ],
+      "experiment": "Pair comparable product-family clusters and randomize static assignments to the compiler or current approved representation for 8-12 weeks after retrieval wash-in. Primary endpoint: retained paid orders per cluster-week, adjusted for preperiod demand. Keep human pages and other marketing balanced; monitor category-wide cannibalization, returns and factual errors. Power on independent clusters, not model reruns.",
+      "metric": "ITT difference in paid orders net of returns per randomized product-family-week. Extraction accuracy and AI referral purchases are mechanism/attribution checks, not substitute conversion endpoints.",
+      "impactEvidence": "Hypothesized. Akamai establishes adjacent visibility differences, not this compiler's purchase effect [akamai]. Compression and conversion already exist [compression, cloudflare].",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Pricing arithmetic only: 10,000 eligible shoppers per month; control purchase probability 3%; US$30 contribution per retained order; US$300 test fee. These are chosen assumptions, not observed merchant data.",
+        "calculation": "Break-even incremental retained orders = 300/30 = 10.00 (at least 10 whole orders). Equivalent absolute purchase-probability gain = 10.00/10000 = 0.100 percentage points, before implementation cost. For upstream cluster trials use fixed preperiod demand, not treatment-created referral traffic, as the normalization.",
+        "range": "No expected-lift range is supportable. Zero or negative effects are possible; the quoted threshold is an economic requirement, not an estimate."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: US$300/month for one catalog. Scrunch's published monthly entry price is an adjacent budget proxy, not proof buyers will pay us.",
+      "costControl": "Use deterministic fact checks and cached compilation; spend model calls on changed facts and known retrieval failures.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable fact ownership",
+        "Existing publishing adapter",
+        "Sufficient independent product clusters",
+        "Orders and returns joined without personal chat capture"
+      ],
+      "failureMode": "Agents use other sources or ignore the output; overcompression removes useful nuance; purchases shift between the merchant's own products.",
+      "falsifier": "No out-of-sample reduction in constraint mistakes, or a powered deployment shows no retained-order benefit despite verified retrieval.",
+      "sourceIds": [
+        "compression",
+        "cloudflare",
+        "shopify-map",
+        "akamai",
+        "openai-shopping"
+      ]
+    },
+    {
+      "id": "scrunch-02",
+      "title": "Retired-citation rescue for sold-out variants",
+      "lens": "temporal",
+      "buyer": "Seasonal, fashion and rapidly changing inventory merchants receiving AI referrals",
+      "problem": "An old recommendation can still send a shopper to a retired SKU or sold-out size after the merchant has updated its current feed.",
+      "mechanism": "Landing and selection: recognize the exact obsolete offer -> explain what changed -> propose currently buyable alternatives satisfying the same explicit constraints -> recover purchases that otherwise end at a dead page.",
+      "intervention": "Keep a stable product/variant history registry. On an obsolete landing, display the old item with its actual status, identify verified successor or substitute options, and let the shopper select one. Refresh current feeds and stored agent pages; never silently replace the named product.",
+      "competitorOverlap": "AXP freshness workflows and Shopify live Catalog updates exist. They cannot retract every already-generated citation. Scrunch shopping monitors products; whether it ships historical variant-aware landing recovery is unknown.",
+      "edgeHypothesis": "Historical variant identity plus constraint-preserving substitutes will recover more orders than generic related-products blocks.",
+      "dataNeeded": [
+        "Variant and URL history",
+        "Current inventory and prices",
+        "Verified substitute compatibility",
+        "Recognized AI referral/partner arrivals",
+        "Paid orders, cancellations and returns"
+      ],
+      "experiment": "Randomize eligible users arriving at unavailable cited variants to this recovery panel or the current truthful unavailable-page experience. Track any merchant purchase within 7 days for 4-8 weeks or the powered sample. Keep inventory access equal; guard against misleading redirects, wrong substitutes and category-level cannibalization.",
+      "metric": "Retained paid purchasers / all assigned unavailable-offer entrants. Deduplicate returning users; source tags describe the recruited subset, not all AI influence.",
+      "impactEvidence": "Hypothesized. Freshness modes and feed update requirements establish the operational gap, without measured recovery lift [freshness, openai-feed].",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Pricing arithmetic only: 3,000 eligible shoppers per month; control purchase probability 2%; US$25 contribution per retained order; US$300 test fee. These are chosen assumptions, not observed merchant data.",
+        "calculation": "Break-even incremental retained orders = 300/25 = 12.00 (at least 12 whole orders). Equivalent absolute purchase-probability gain = 12.00/3000 = 0.400 percentage points, before implementation cost. For upstream cluster trials use fixed preperiod demand, not treatment-created referral traffic, as the normalization.",
+        "range": "No expected-lift range is supportable. Zero or negative effects are possible; the quoted threshold is an economic requirement, not an estimate."
+      },
+      "willingnessToPay": "Unvalidated test price: US$300/month, conditional on enough unavailable-offer traffic to clear the retained-order break-even.",
+      "costControl": "Recompute substitutes on inventory events; cache stable compatibility relations and stop serving low-confidence suggestions.",
+      "feasibility": "now",
+      "dependencies": [
+        "Historical variant registry",
+        "Truthful in-stock alternatives",
+        "Landing template access",
+        "Order/return reconciliation"
+      ],
+      "failureMode": "Most stockouts have no acceptable substitute; extra options confuse shoppers or cannibalize purchases they would make anyway.",
+      "falsifier": "Eligible dead-end traffic is rare, or recovered clicks fail to improve total merchant paid purchasers after returns.",
+      "sourceIds": [
+        "freshness",
+        "openai-feed",
+        "shopify-discovery"
+      ]
+    },
+    {
+      "id": "scrunch-03",
+      "title": "Carry the shortlist into the product page",
+      "lens": "behavioral",
+      "buyer": "Merchants with an owned shopping assistant or an authorized agent/checkout partner",
+      "problem": "A shopper resolves requirements in an assistant, then reaches a default PDP and must rediscover the right size, configuration and reason for choosing it.",
+      "mechanism": "Handoff and checkout: carry the user's explicitly selected requirements and exact variant -> preselect the valid offer and show relevant facts -> reduce repeated work -> more completed purchases.",
+      "intervention": "Issue a short-lived, signed handoff token containing product ID, variant ID and only the user-approved requirement checklist. Show the checklist, selected variant and changed facts at arrival. Provide guest access and an editable cart; do not infer or capture a private conversation.",
+      "competitorOverlap": "OpenAI feeds already support selected-variant URLs, Shopify maps variant groups, and checkout plugins exist for approved partners. The opportunity is permitted requirement continuity and arrival validation. ChatGPT does not share chats with retailers.",
+      "edgeHypothesis": "Explicit task continuity will help shoppers who otherwise change or abandon the intended variant after referral.",
+      "dataNeeded": [
+        "Consented requirement checklist",
+        "Variant URL mapping",
+        "Live offer validation",
+        "Handoff failures",
+        "User-level assignment and purchases"
+      ],
+      "experiment": "Within an owned/partner shopping flow, randomize eligible shoppers before optional handoff to token-based continuation or ordinary variant links. Primary endpoint: any paid merchant order within 14 days; run 4-8 weeks and power by distinct shoppers. Guardrails: latency, privacy opt-outs, wrong variants, returns and accidental cart additions.",
+      "metric": "Paid purchasers / all randomized eligible shoppers, including those declining handoff. Token acceptance and clickthrough are mediators.",
+      "impactEvidence": "Hypothesized; standards establish inputs and access limits, not uplift [openai-feed, openai-research, checkout-plugin].",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Pricing arithmetic only: 10,000 eligible shoppers per month; control purchase probability 3%; US$30 contribution per retained order; US$300 test fee. These are chosen assumptions, not observed merchant data.",
+        "calculation": "Break-even incremental retained orders = 300/30 = 10.00 (at least 10 whole orders). Equivalent absolute purchase-probability gain = 10.00/10000 = 0.100 percentage points, before implementation cost. For upstream cluster trials use fixed preperiod demand, not treatment-created referral traffic, as the normalization.",
+        "range": "No expected-lift range is supportable. Zero or negative effects are possible; the quoted threshold is an economic requirement, not an estimate."
+      },
+      "willingnessToPay": "Unvalidated test price: US$300/month plus scoped integration. Sell against measured recovered purchases, not simulated recommendation rates.",
+      "costControl": "Use compact tokens and deterministic variant mapping; transfer only necessary choices, not transcripts.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Owned assistant or partner adoption",
+        "Explicit user sharing",
+        "Signed token verifier",
+        "Variant-specific storefront/cart support"
+      ],
+      "failureMode": "External assistants cannot or will not pass the token; consent adds friction; the token becomes stale before arrival.",
+      "falsifier": "No material restart/variant-loss problem exists, or the randomized handoff reduces neither abandonment nor purchase failure.",
+      "sourceIds": [
+        "openai-feed",
+        "openai-research",
+        "checkout-plugin",
+        "shopify-map"
+      ]
+    },
+    {
+      "id": "scrunch-04",
+      "title": "Quote the complete delivered price before recommendation",
+      "lens": "regulatory",
+      "buyer": "UK merchants with location-dependent delivery charges or cross-border offers",
+      "problem": "A headline product price looks suitable to an agent but the customer's actual delivered total or delivery eligibility differs.",
+      "mechanism": "Selection and checkout: calculate a truthful total for a shopper-supplied destination -> compare eligible offers on payable price -> avoid late surprises and unfulfillable recommendations -> more completed, uncancelled orders.",
+      "intervention": "Expose a read-only quote service returning item/variant, mandatory taxes and fees, delivery options, expiry and assumptions. Revalidate at checkout. Present equally clear public information when a destination is unknown; integrate with existing feeds or UCP rather than claiming to change consumer-engine rankings.",
+      "competitorOverlap": "UCP already models fulfillment costs/timing and feeds contain shipping fields. The edge is a tested merchant adapter that reconciles discovery quotes with the actual basket, plus regional disclosure QA.",
+      "edgeHypothesis": "Earlier accurate quotes can improve paid purchases among delivery-sensitive shoppers even if headline clickthrough falls.",
+      "dataNeeded": [
+        "Merchant shipping/tax rules",
+        "User-supplied coarse destination",
+        "Real inventory and cutoff times",
+        "Quote-to-checkout discrepancies",
+        "Orders, cancellations and contribution"
+      ],
+      "experiment": "Randomize eligible shoppers in a controlled merchant/partner flow to early total-price comparison or the existing compliant disclosure flow. Never use a legally deficient control. Primary endpoint: paid and fulfilable orders within 14 days. Run through at least four full weekly delivery cycles and until powered; guard margin, quote accuracy and cancellations.",
+      "metric": "Uncancelled paid purchasers / all assigned quote-eligible shoppers. Also report total payable-price error and contribution per assigned shopper.",
+      "impactEvidence": "Hypothesized conversion effect. Current CMA guidance establishes truthful pricing requirements; UCP provides implementation primitives [cma-prices, ucp-fulfillment]. No legal assurance or empirical lift claimed.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Pricing arithmetic only: 5,000 eligible shoppers per month; control purchase probability 4%; US$40 contribution per retained order; US$500 test fee. These are chosen assumptions, not observed merchant data.",
+        "calculation": "Break-even incremental retained orders = 500/40 = 12.50 (at least 13 whole orders). Equivalent absolute purchase-probability gain = 12.50/5000 = 0.250 percentage points, before implementation cost. For upstream cluster trials use fixed preperiod demand, not treatment-created referral traffic, as the normalization.",
+        "range": "No expected-lift range is supportable. Zero or negative effects are possible; the quoted threshold is an economic requirement, not an estimate."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: US$500/month per market, excluding tax-engine and carrier charges.",
+      "costControl": "Reuse existing merchant tax/shipping engines; cache only within rule-specific expiry and revalidate monetary commitments.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Authoritative quote API",
+        "Market eligibility rules",
+        "Explicit destination input",
+        "Checkout price reconciliation",
+        "Merchant review of disclosure wording"
+      ],
+      "failureMode": "Early higher totals reduce purchases; quotes expire too quickly; missing basket context makes per-product totals misleading.",
+      "falsifier": "Quote mismatch is negligible or early accurate quotes fail to improve retained purchases and contribution at an adequately powered test.",
+      "sourceIds": [
+        "cma-prices",
+        "ucp-fulfillment",
+        "openai-feed"
+      ]
+    },
+    {
+      "id": "scrunch-05",
+      "title": "Compatibility answers that execute against a parts graph",
+      "lens": "algorithmic",
+      "buyer": "Merchants selling electronics accessories, replacement parts or modular furniture",
+      "problem": "A plausible language answer cannot reliably determine whether an exact accessory fits an exact device or revision.",
+      "mechanism": "Eligibility and selection: execute verified compatibility rules -> distinguish compatible, incompatible and unknown combinations -> reduce uncertainty for valid matches -> increase correct purchases and reduce return-driven loss.",
+      "intervention": "Build a versioned compatibility graph from manufacturer-approved specifications and verified purchase/return reasons. Provide a deterministic query endpoint and evidence links; allow an agent to ask for a missing model number. Publish searchable compatibility pages for unsupported agents.",
+      "competitorOverlap": "True Fit already supplies fit intelligence through API/MCP in apparel. AXP can surface facts. The narrower proposed market is non-apparel compatibility relations with exact model revisions; competing category-specific tools require merchant diligence.",
+      "edgeHypothesis": "Exact relation checks and explicit unknowns will beat prose-based inference for compatibility-sensitive purchase decisions.",
+      "dataNeeded": [
+        "Manufacturer compatibility and revision data",
+        "User-declared model identifiers",
+        "Return reasons",
+        "Observed ambiguity/failure cases",
+        "Paid purchases and kept orders"
+      ],
+      "experiment": "Randomize distinct compatibility-seeking shoppers in a merchant-controlled assistant to executable checking or current approved search/product facts. Primary endpoint: paid purchase retained after the return window. Run 6-12 weeks plus returns maturation; guard incorrect compatibility advice, abandonment and coverage bias.",
+      "metric": "Retained paid purchasers / all randomized compatibility-seeking shoppers. Accuracy among answered questions is secondary and must include coverage/abstention.",
+      "impactEvidence": "Hypothesized for this vertical. True Fit is adjacent commercial capability evidence, not a transferable lift estimate [truefit].",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Pricing arithmetic only: 4,000 eligible shoppers per month; control purchase probability 5%; US$40 contribution per retained order; US$500 test fee. These are chosen assumptions, not observed merchant data.",
+        "calculation": "Break-even incremental retained orders = 500/40 = 12.50 (at least 13 whole orders). Equivalent absolute purchase-probability gain = 12.50/4000 = 0.313 percentage points, before implementation cost. For upstream cluster trials use fixed preperiod demand, not treatment-created referral traffic, as the normalization.",
+        "range": "No expected-lift range is supportable. Zero or negative effects are possible; the quoted threshold is an economic requirement, not an estimate."
+      },
+      "willingnessToPay": "Unvalidated test price: US$500/month for one well-bounded product ecosystem; onboarding priced separately after measuring relation coverage.",
+      "costControl": "Deterministic graph queries replace repeated model reasoning. Prioritize relations with measured abandoned demand and return cost.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Rights to technical source data",
+        "Reliable model/revision identity",
+        "Merchant sign-off on compatibility",
+        "Order/return joins"
+      ],
+      "failureMode": "Source data is incomplete or wrong; shoppers cannot identify their device; abstentions outweigh the confidence benefit.",
+      "falsifier": "No improvement in retained purchase rate at equal error tolerance, or relation maintenance costs exceed measured contribution.",
+      "sourceIds": [
+        "truefit",
+        "axp",
+        "openai-research"
+      ]
+    },
+    {
+      "id": "scrunch-06",
+      "title": "Keep earned benefits when the shopper changes agents",
+      "lens": "identity",
+      "buyer": "Merchants whose repeat customers have loyalty benefits, saved preferences or account-specific eligibility",
+      "problem": "A returning shopper is treated as a stranger after AI discovery, so earned benefits and saved choices disappear until late sign-in.",
+      "mechanism": "Account continuity and repeat purchase: optional, consented account linking reveals already-earned benefits and saved selections -> lowers repeated effort and uncertainty -> more completed repeat orders without inventing new discounts.",
+      "intervention": "Implement scoped identity linking through a supported standard/partner. Return benefit eligibility and saved choices through narrow endpoints; keep guest checkout usable, reveal the value of linking, and revalidate benefits at checkout.",
+      "competitorOverlap": "UCP already specifies OAuth identity linking for loyalty and saved data. This is an integration and conversion-validation opportunity for merchants lacking usable cross-agent continuity, not a new identity protocol. Platform implementation breadth is unknown.",
+      "edgeHypothesis": "A useful, optional linking moment will outperform generic sign-in prompts without the margin loss of blanket coupons.",
+      "dataNeeded": [
+        "Existing loyalty eligibility rules",
+        "Consented account linkage",
+        "Saved non-sensitive choices",
+        "Authentication failures",
+        "Customer orders across channels and returns"
+      ],
+      "experiment": "Randomize eligible repeat shoppers before the optional link prompt to benefit-aware continuation or the existing sign-in/guest flow. Primary endpoint: any paid order within 30 days, with retained contribution guardrail. Run 6-8 weeks plus follow-up; compare all assigned shoppers, not only linkers.",
+      "metric": "Thirty-day paid purchasers / randomized eligible returning shoppers; margin per assigned shopper guards against merely redistributing discounts or order timing.",
+      "impactEvidence": "Hypothesized. UCP documents capability and consent semantics, not sales improvement [ucp-identity].",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Pricing arithmetic only: 5,000 eligible shoppers per month; control purchase probability 8%; US$30 contribution per retained order; US$500 test fee. These are chosen assumptions, not observed merchant data.",
+        "calculation": "Break-even incremental retained orders = 500/30 = 16.67 (at least 17 whole orders). Equivalent absolute purchase-probability gain = 16.67/5000 = 0.333 percentage points, before implementation cost. For upstream cluster trials use fixed preperiod demand, not treatment-created referral traffic, as the normalization.",
+        "range": "No expected-lift range is supportable. Zero or negative effects are possible; the quoted threshold is an economic requirement, not an estimate."
+      },
+      "willingnessToPay": "Unvalidated test price: US$500/month plus identity integration. Price against incremental retained contribution after benefit costs.",
+      "costControl": "Reuse merchant OAuth and loyalty systems; scope/cache eligibility briefly instead of copying full customer profiles.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant OAuth support",
+        "Partner agent identity-linking support",
+        "Explicit consent and revocation",
+        "Cross-channel order deduplication"
+      ],
+      "failureMode": "Authentication friction exceeds the value; customers already sign in easily; linking only shifts the same purchase earlier.",
+      "falsifier": "A powered 30-day cohort test finds no additional purchasers or retained contribution, or unlinking/support burdens consume the benefit.",
+      "sourceIds": [
+        "ucp-identity",
+        "shopify-privacy"
+      ]
+    },
+    {
+      "id": "scrunch-07",
+      "title": "Route unavailable brand products to a buyable authorized retailer",
+      "lens": "infrastructural",
+      "buyer": "Manufacturers selling through D2C and authorized retail partners",
+      "problem": "An AI referral reaches an official brand page, but the brand cannot fulfill the exact product to that shopper while a retailer can.",
+      "mechanism": "Fulfillment and purchase: preserve exact product identity -> obtain current partner stock and destination eligibility -> let the shopper choose an available authorized seller -> recover a brand sale from an otherwise unbuyable referral.",
+      "intervention": "Connect the manufacturer's existing Where to Buy system to signed/authorized inventory and offer checks. Show exact SKU, total price and credible delivery/pickup options; preserve user choice. Join permitted retailer order confirmations to assigned recovery policies.",
+      "competitorOverlap": "PriceSpider already offers inventory-aware retailer routing, pickup, bundling and sales tracking. Scrunch Shopping tracks retailer destinations. The hypothesis is agent-origin, exact-variant offer reconciliation and experimental optimization, preferably built on those systems.",
+      "edgeHypothesis": "Validated, destination-specific options will outperform a generic retailer link list when the D2C offer is unavailable.",
+      "dataNeeded": [
+        "GTIN/SKU retailer mappings",
+        "Partner inventory/fulfillment APIs",
+        "Authorized seller registry",
+        "Consented destination",
+        "Partner purchases and returns"
+      ],
+      "experiment": "Randomize eligible unavailable-offer arrivals to reconciled options or the current Where to Buy list for 6-10 weeks. Primary endpoint: a verified brand purchase across participating sellers within 14 days; include D2C orders. Guard channel margin, seller neutrality, stale offers and missing-outcome coverage.",
+      "metric": "Verified retained brand purchasers / all randomized eligible arrivals. Report retailer measurement coverage; unobserved sellers cannot be coded as zero purchases.",
+      "impactEvidence": "Hypothesized improvement over substantial existing overlap. PriceSpider documents partner-dependent order tracking; Scrunch documents retailer analytics [pricespider, pricespider-tracking, shopping].",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Pricing arithmetic only: 10,000 eligible shoppers per month; control purchase probability 2%; US$20 contribution per retained order; US$1000 test fee. These are chosen assumptions, not observed merchant data.",
+        "calculation": "Break-even incremental retained orders = 1000/20 = 50.00 (at least 50 whole orders). Equivalent absolute purchase-probability gain = 50.00/10000 = 0.500 percentage points, before implementation cost. For upstream cluster trials use fixed preperiod demand, not treatment-created referral traffic, as the normalization.",
+        "range": "No expected-lift range is supportable. Zero or negative effects are possible; the quoted threshold is an economic requirement, not an estimate."
+      },
+      "willingnessToPay": "Unvalidated test price: US$1,000/month for a manufacturer pilot, excluding partner data fees. Confirm measured wholesale contribution covers it.",
+      "costControl": "Integrate existing retail networks and cache stable identity mappings; query live offers only when a shopper is eligible for recovery.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Retail partner contracts/API access",
+        "Purchase and return coverage",
+        "SKU identity resolution",
+        "Enough D2C-unavailable demand"
+      ],
+      "failureMode": "Retailers withhold order data, inventory is stale, or the route only diverts profitable D2C sales.",
+      "falsifier": "No increase in total brand retained purchases across observed channels, or uncertainty about unobserved channels overwhelms the proposed gain.",
+      "sourceIds": [
+        "shopping",
+        "pricespider",
+        "pricespider-tracking",
+        "ucp-fulfillment"
+      ]
+    },
+    {
+      "id": "scrunch-08",
+      "title": "Purchase panel that calibrates the replay score",
+      "lens": "measurement",
+      "buyer": "Large merchants and agencies choosing between expensive agent-content interventions",
+      "problem": "A controllable proxy can produce impressive recommendation gains that fail to transfer to real engines or purchases.",
+      "mechanism": "Enabling measurement: learn which replay improvements survive live retrieval and paid-order tests -> deploy only validated interventions under the same budget -> allocate scarce work to changes that create more purchases. The panel itself does not generate organic demand.",
+      "intervention": "Version product/source snapshots, freeze tool outputs for offline ablations, and maintain distinct out-of-sample intent/product/engine sets. Add consenting shoppers with real planned purchases and merchant order/return joins. Use observed transfer to rank a subsequent live deployment portfolio; label rank swapping as an oracle sensitivity.",
+      "competitorOverlap": "Scrunch already supplies monitoring, GA4 and opt-in journey reports. Controlled replay/randomized purchase portfolios were not found publicly; private features are unknown.",
+      "edgeHypothesis": "A calibrated portfolio will deliver more retained purchases per implementation dollar than selecting by citation lift or simulated recommendation lift.",
+      "dataNeeded": [
+        "Versioned tool responses and source facts",
+        "Distinct real shopping intents",
+        "Consented panel exposure records",
+        "Authoritative transactions/returns",
+        "Intervention cost and live retrieval uptake"
+      ],
+      "experiment": "Pre-register and freeze the scoring policy after calibration. Randomize matched merchant-category clusters to equal-budget replay-selected agent-page changes or the existing analyst-selected policy, keeping human pages and marketing balanced. Primary endpoint: retained orders per cluster-week over 8-12 weeks after wash-in. Use consented panel paths to test AI mediation; power on clusters and disclose cache/spillover contamination.",
+      "metric": "ITT incremental retained orders per randomized category-week and per implementation dollar. AI-origin labels and recommendation scores are secondary; neither panel membership nor post-treatment referral sessions define the primary denominator.",
+      "impactEvidence": "Hypothesized enabling effect; available building blocks do not prove purchase causality [panel-v2, ga4, openai-tools].",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Pricing arithmetic only: 100,000 fixed preperiod-equivalent shoppers across the pilot window; control purchase probability 3%; US$30 contribution per retained order; US$5000 test fee. These are chosen assumptions, not observed merchant data.",
+        "calculation": "Break-even incremental retained orders = 5000/30 = 166.67 (at least 167 whole orders). Equivalent absolute purchase-probability gain = 166.67/100000 = 0.167 percentage points, before implementation cost. For upstream cluster trials use fixed preperiod demand, not treatment-created referral traffic, as the normalization.",
+        "range": "No expected-lift range is supportable. Zero or negative effects are possible; the quoted threshold is an economic requirement, not an estimate."
+      },
+      "willingnessToPay": "Unvalidated paid-study test price: US$5,000 per defined pilot, with participant and implementation costs separately disclosed.",
+      "costControl": "Use inexpensive offline falsification before human/live trials; stop a futile intervention using preregistered rules and reserve an independent holdout.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "Enough independent merchant/category clusters",
+        "Consented exposure panel",
+        "Transaction and return access",
+        "Stable evaluation/versioning",
+        "Budget for a powered live study"
+      ],
+      "failureMode": "Panel behavior is unrepresentative, third-party cache interference contaminates controls, or the model score learns category-specific noise.",
+      "falsifier": "Out-of-sample replay rankings do not predict live retained-order effects, or equal-budget deployment performs no better than analyst selection.",
+      "sourceIds": [
+        "panel-v2",
+        "monitor",
+        "ga4",
+        "openai-tools",
+        "akamai"
+      ]
+    },
+    {
+      "id": "scrunch-09",
+      "title": "Show the decisive tradeoff with verifiable evidence",
+      "lens": "psychological",
+      "buyer": "Merchants selling considered-purchase products where a specific uncertainty blocks buying",
+      "problem": "AI summaries sound confident, but shoppers still cannot verify a critical claim or understand what they give up by choosing a product.",
+      "mechanism": "Comprehension and selection: show the one relevant, substantiated tradeoff and its limits -> reduce unresolved uncertainty without overstating benefits -> enable confident suitable purchases and fewer remorse returns.",
+      "intervention": "Build claim-level evidence records with source, tested conditions, date and limitations. On an owned assistant/PDP, let the shopper select a concern and receive a compact comparison plus source evidence and honest unknowns. Commission missing objective tests only for high-demand questions; never fabricate endorsements.",
+      "competitorOverlap": "ChatGPT shopping research already provides rationale and tradeoffs; AXP compiles source material. The proposed distinction is merchant-audited, condition-specific evidence and tested buyer comprehension, not generic comparison copy.",
+      "edgeHypothesis": "Evidence matched to the shopper's explicit concern will outperform longer product descriptions or unsupported confidence language.",
+      "dataNeeded": [
+        "Licensed/manufacturer test evidence",
+        "Approved claim conditions and limitations",
+        "Explicit shopper concern",
+        "Comprehension checks",
+        "Paid purchases and reason-coded returns"
+      ],
+      "experiment": "Randomize AI-referred or partner-assistant users before the evidence module to concern-specific proof or existing approved comparison content. Primary endpoint: retained paid purchase within 30 days. Run 4-8 weeks plus return maturation; preserve all material facts in both arms and guard against misunderstanding, selective evidence and page slowdown.",
+      "metric": "Retained paid purchasers / all randomized eligible users. Comprehension is a mediator; trust survey scores alone cannot establish commercial success.",
+      "impactEvidence": "Hypothesized. Existing native comparison capability establishes competition, not controlled sales lift from this proof format [openai-research, axp].",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Pricing arithmetic only: 10,000 eligible shoppers per month; control purchase probability 3%; US$30 contribution per retained order; US$300 test fee. These are chosen assumptions, not observed merchant data.",
+        "calculation": "Break-even incremental retained orders = 300/30 = 10.00 (at least 10 whole orders). Equivalent absolute purchase-probability gain = 10.00/10000 = 0.100 percentage points, before implementation cost. For upstream cluster trials use fixed preperiod demand, not treatment-created referral traffic, as the normalization.",
+        "range": "No expected-lift range is supportable. Zero or negative effects are possible; the quoted threshold is an economic requirement, not an estimate."
+      },
+      "willingnessToPay": "Unvalidated test price: US$300/month for an evidence-backed category; new laboratory/test costs require a separate business case.",
+      "costControl": "Reuse approved evidence across channels; commission new tests only when unresolved uncertainty and purchase volume justify the cost.",
+      "feasibility": "now",
+      "dependencies": [
+        "Rights and quality review for evidence",
+        "Explicit concern selection",
+        "Merchant review of claims",
+        "Orders and returns"
+      ],
+      "failureMode": "Honest limitations reduce sales, source quality is weak, or additional comparisons make decisions harder.",
+      "falsifier": "The module improves stated confidence but not retained purchases, or adds factual/comprehension errors.",
+      "sourceIds": [
+        "openai-research",
+        "axp"
+      ]
+    },
+    {
+      "id": "scrunch-10",
+      "title": "Build a complete, removable project kit",
+      "lens": "infrastructural",
+      "buyer": "Home-improvement, hobby electronics and modular-product merchants",
+      "problem": "An agent recommends the main product but omits a required adapter, consumable or tool, leaving the shopper unsure whether the purchase will solve the job.",
+      "mechanism": "Task completion and checkout: translate an explicit project into a verified minimum kit -> account for items the shopper already owns -> show a compatible, in-stock basket with full cost -> remove completeness uncertainty -> more completed and kept project purchases.",
+      "intervention": "Maintain merchant-approved project dependency rules; assemble a draft cart with required versus optional components, source evidence and removable items. Recheck stock, compatibility and total delivery costs. Require explicit confirmation before cart/checkout changes and never force bundles.",
+      "competitorOverlap": "PriceSpider already supports bundles; standard checkout/cart integrations exist. The proposed edge is a task-completeness validator with owned-item subtraction and an actual purchase endpoint, not generic upselling.",
+      "edgeHypothesis": "For incomplete-project shoppers, reducing omitted necessities will create additional purchasers rather than merely raising basket value.",
+      "dataNeeded": [
+        "Project dependency rules",
+        "Explicit owned-item list",
+        "Product compatibility and inventory",
+        "Full basket quote",
+        "Orders, cancellations, return reasons and project-success feedback"
+      ],
+      "experiment": "Randomize distinct project-shopping users in an owned/authorized assistant to a verified editable kit or current product recommendations for 6-10 weeks. Primary endpoint: any retained paid project purchase within 30 days. Guard total spend, unwanted components, returns, fulfillment failures and existing-customer cannibalization.",
+      "metric": "Retained purchasing users / all randomized project shoppers. AOV and items per cart are secondary; higher basket value without more purchasers does not satisfy the conversion claim.",
+      "impactEvidence": "Hypothesized. Bundling and fulfillment primitives are documented, without direct evidence for this project-completeness intervention [pricespider, ucp-fulfillment, checkout-plugin].",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Pricing arithmetic only: 5,000 eligible shoppers per month; control purchase probability 3%; US$40 contribution per retained order; US$500 test fee. These are chosen assumptions, not observed merchant data.",
+        "calculation": "Break-even incremental retained orders = 500/40 = 12.50 (at least 13 whole orders). Equivalent absolute purchase-probability gain = 12.50/5000 = 0.250 percentage points, before implementation cost. For upstream cluster trials use fixed preperiod demand, not treatment-created referral traffic, as the normalization.",
+        "range": "No expected-lift range is supportable. Zero or negative effects are possible; the quoted threshold is an economic requirement, not an estimate."
+      },
+      "willingnessToPay": "Unvalidated test price: US$500/month for one project category, excluding integration. Validate on contribution from additional purchasers, not add-on revenue alone.",
+      "costControl": "Reuse deterministic project templates and compatibility relations; avoid open-ended agent searches for common kits.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Validated task dependencies",
+        "User confirmation and owned-item input",
+        "Basket/checkout integration",
+        "Current inventory and delivery quotes"
+      ],
+      "failureMode": "Kits are too expensive, required parts are misclassified, or the experience increases AOV but discourages purchase.",
+      "falsifier": "No increase in retained purchasing users at stable complaint/return rates, even if accessory attach rate rises.",
+      "sourceIds": [
+        "pricespider",
+        "ucp-fulfillment",
+        "checkout-plugin"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "pricing",
+      "title": "Scrunch pricing and plans",
+      "url": "https://scrunch.com/pricing/",
+      "type": "official-doc",
+      "claim": "Direct page observed 29 September 2026 lists Starter and Growth annual/monthly prices. Indexed Core matrix conflicts; do not merge. Page uses $, without an explicit currency code."
+    },
+    {
+      "id": "acquisition",
+      "title": "Sitecore acquires Scrunch to help brands influence discovery and buying decisions in the AI-search era",
+      "url": "https://www.sitecore.com/company/newsroom/press-releases/2026/06/sitecore-acquires-scrunch-to-help-brands-influence-discovery--and-buying-decisions",
+      "type": "official-doc",
+      "claim": "Confirms 3 June 2026 acquisition and company-reported adoption; no standalone earnings or transaction value. Its Akamai citation number has a different or undisclosed scope from the case page."
+    },
+    {
+      "id": "axp",
+      "title": "Agent Experience Platform (AXP)",
+      "url": "https://helpcenter.scrunchai.com/en/articles/13656392-agent-experience-platform-axp",
+      "type": "official-doc",
+      "claim": "July 2026 documentation describes managed edge delivery, content repository, approvals, and separate AXP product. Establishes capabilities, not purchase lift."
+    },
+    {
+      "id": "delivery",
+      "title": "How AXP Serves Content to AI Agents",
+      "url": "https://helpcenter.scrunchai.com/en/articles/12845899-how-axp-serves-content-to-ai-agents",
+      "type": "official-doc",
+      "claim": "Documents same public URL, bot-specific origin, approval/pass-through behavior, and public discoverability of served content. Older delivery mode wording should not override newer configuration-specific docs."
+    },
+    {
+      "id": "deploy",
+      "title": "How to serve AI-optimized content directly to LLMs",
+      "url": "https://scrunch.com/how-tos/how-to-serve-ai-optimized-content-directly-to-llms/",
+      "type": "official-doc",
+      "claim": "Documents Markdown/HTML inputs, deployments, activity log and version redeployment."
+    },
+    {
+      "id": "freshness",
+      "title": "How does Scrunch’s AXP approach compare to publishing AI-friendly content directly in the CMS?",
+      "url": "https://scrunch.com/faqs/how-does-scrunchs-axp-approach-compare-to-publishing-ai-friendly-content-directly-in-the-cms",
+      "type": "official-doc",
+      "claim": "Distinguishes automatic live-page reoptimization from stored sources requiring refresh; supports a configuration-dependent freshness risk."
+    },
+    {
+      "id": "monitor",
+      "title": "What methods does Scrunch use to collect data from AI platforms?",
+      "url": "https://scrunch.com/faqs/what-methods-does-scrunch-use-to-collect-data-from-ai-platforms",
+      "type": "official-doc",
+      "claim": "Uses browser automation and official APIs for response collection. Persona/prompt monitoring does not establish controllable offline replay."
+    },
+    {
+      "id": "shopping",
+      "title": "Scrunch | Shopping",
+      "url": "https://scrunch.com/platform/shopping/",
+      "type": "official-doc",
+      "claim": "Product-level recommendation/rank, competitive share, retailer destinations and prompt analysis are already advertised. Page does not establish causal retailer purchase attribution."
+    },
+    {
+      "id": "ga4",
+      "title": "Connecting the AI Referrals Tool to your Google Analytics Account",
+      "url": "https://helpcenter.scrunchai.com/en/articles/11826932-connecting-the-ai-referrals-tool-to-your-google-analytics-account",
+      "type": "official-doc",
+      "claim": "GA4 integration includes AI sessions, transactions, purchase revenue and conversion rate when configured; referral attribution is not incrementality."
+    },
+    {
+      "id": "akamai",
+      "title": "How Akamai 5x’d brand presence in AI search results by delivering optimized content directly to LLMs",
+      "url": "https://scrunch.com/case-studies/akamai-5x-brand-presence-in-ai-search-results/",
+      "type": "vendor-case",
+      "claim": "AXP/non-AXP page comparison reports citation and presence gains. No randomized assignment, power analysis or completed purchase endpoint disclosed."
+    },
+    {
+      "id": "runpod",
+      "title": "How Runpod leveraged the Scrunch AI platform to achieve 4x growth, turning ChatGPT into a top performing acquisition channel",
+      "url": "https://scrunch.com/news/2025-07-how-runpod-leveraged-the-scrunch-ai-platform-to-achieve-4x-growth%2C-turning-chatgpt-into-a-top-performing-acquisition-channel-",
+      "type": "vendor-case",
+      "claim": "Reports 4x paying-customer growth in 90 days and lower software spend after monitoring/content/rendering work; no randomized counterfactual or isolated AXP effect."
+    },
+    {
+      "id": "panel-v2",
+      "title": "From Prompt to Purchase: How AI Brand Recommendations Move Consumers on the Open Web",
+      "url": "https://arxiv.org/html/2606.10907v2",
+      "type": "research",
+      "claim": "Revision dated 31 August: observational navigation outcomes, no transactions, no reliable mention-position gradient; report-form pipeline."
+    },
+    {
+      "id": "panel-blog",
+      "title": "The prompt-to-purchase pipeline: What millions of search events told us about how AI influences buyer behavior",
+      "url": "https://scrunch.com/blog/prompt-to-purchase-pipeline-how-ai-influences-buyer-behavior",
+      "type": "research",
+      "claim": "June 2026 blog links the paper but uses older estimates and stronger position language. Prefer paper v2 for quantitative interpretation."
+    },
+    {
+      "id": "compression",
+      "title": "Agent Experience Platform (AXP): Your most important visitor isn’t human",
+      "url": "https://scrunch.com/platform/agent-experience/",
+      "type": "official-doc",
+      "claim": "Advertises semantic simplification and large token reductions. Demonstration token counts are not evidence of preserved purchase constraints or sales."
+    },
+    {
+      "id": "cloudflare",
+      "title": "Markdown for Agents",
+      "url": "https://developers.cloudflare.com/fundamentals/reference/markdown-for-agents/",
+      "type": "official-doc",
+      "claim": "Native negotiated HTML-to-Markdown conversion preserves JSON-LD and response headers; generic conversion is already infrastructure functionality."
+    },
+    {
+      "id": "openai-feed",
+      "title": "Products",
+      "url": "https://developers.openai.com/commerce/specs/file-upload/products",
+      "type": "official-doc",
+      "claim": "Current stable discovery feed supports item/variant identity and selected-variant URLs; current inventory/prices require updates. Checkout is a separate integration."
+    },
+    {
+      "id": "openai-shopping",
+      "title": "Shopping with ChatGPT Search",
+      "url": "https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search",
+      "type": "official-doc",
+      "claim": "Selection uses context and several data sources; merchant ranking considers availability/price/quality and seller role. Feed quality cannot guarantee a rank."
+    },
+    {
+      "id": "openai-research",
+      "title": "Using shopping research in ChatGPT",
+      "url": "https://help.openai.com/en/articles/12911370-using-shopping-r",
+      "type": "official-doc",
+      "claim": "Existing product discovery includes comparisons, tradeoffs and personal context. Chats are not shared with retailers, constraining handoff designs."
+    },
+    {
+      "id": "openai-tools",
+      "title": "Using tools",
+      "url": "https://developers.openai.com/api/docs/guides/tools",
+      "type": "official-doc",
+      "claim": "Custom function tools permit a controlled tool-response experiment; no claim of matching the consumer ChatGPT search pipeline."
+    },
+    {
+      "id": "checkout-plugin",
+      "title": "Product checkout conversion spec",
+      "url": "https://developers.openai.com/plugins/guides/product-checkout-conversion-spec",
+      "type": "official-doc",
+      "claim": "Partner checkout plugins are beta and require approval; feed submission alone does not provide production checkout access."
+    },
+    {
+      "id": "shopify-map",
+      "title": "Mapping your product data sources for Shopify Catalog",
+      "url": "https://help.shopify.com/en/manual/shopify-catalog/mapping",
+      "type": "official-doc",
+      "claim": "Preferred sources, metafields/metaobjects, variant grouping and previews exist natively. Mappings influence Catalog and process with delay."
+    },
+    {
+      "id": "shopify-discovery",
+      "title": "Shopify Catalog and product discovery for agentic storefronts",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/products",
+      "type": "official-doc",
+      "claim": "Native Catalog updates products and agent discovery files; Shopify does not recommend a proxy in front of its stores."
+    },
+    {
+      "id": "shopify-privacy",
+      "title": "Data sharing and privacy for selling with agentic storefronts",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/data-privacy",
+      "type": "official-doc",
+      "claim": "Lists channel-specific discovery/checkout availability; ChatGPT setting is Catalog access only. Do not imply universal direct checkout."
+    },
+    {
+      "id": "ucp-identity",
+      "title": "Identity Linking Capability",
+      "url": "https://ucp.dev/2026-04-08/specification/identity-linking/",
+      "type": "official-doc",
+      "claim": "UCP specifies consented OAuth identity linking and scoped access to user benefits; specification does not prove every agent implements it."
+    },
+    {
+      "id": "ucp-fulfillment",
+      "title": "Fulfillment",
+      "url": "https://ucp.dev/specification/shopping/extensions/fulfillment/",
+      "type": "official-doc",
+      "claim": "UCP supports fulfillment options, costs and timing; a discovered fulfillment option may change at checkout."
+    },
+    {
+      "id": "cma-prices",
+      "title": "Providing clear and accurate information about prices: summary",
+      "url": "https://www.gov.uk/government/publications/price-transparency-cma209/providing-clear-and-accurate-information-about-prices-summary",
+      "type": "official-doc",
+      "claim": "Current UK CMA guidance covers mandatory fees, delivery charges and total-price disclosure. A quote product is not a blanket legal-compliance guarantee."
+    },
+    {
+      "id": "truefit",
+      "title": "True Fit Fit Intelligence: Technical Specification",
+      "url": "https://www.truefit.com/fit-intelligence-spec",
+      "type": "official-doc",
+      "claim": "True Fit already offers outcome-based fit guidance through widgets, API and MCP. Generic fit agents are not an empty market."
+    },
+    {
+      "id": "pricespider",
+      "title": "Where to Buy Shoppable Solutions - Instantly Shoppable",
+      "url": "https://www.pricespider.com/where-to-buy/",
+      "type": "official-doc",
+      "claim": "Existing retailer routing, inventory, local pickup, bundling and purchase visibility overlap; do not claim first-in-category functionality."
+    },
+    {
+      "id": "pricespider-tracking",
+      "title": "How PriceSpider’s Universal Tracking Suite Works",
+      "url": "https://www.pricespider.com/Blog/how-pricespiders-universal-tracking-suite-works/",
+      "type": "official-doc",
+      "claim": "Partner-dependent retail purchase tracking exists; measurement access and coverage cannot be assumed for arbitrary sellers."
+    }
+  ]
+}

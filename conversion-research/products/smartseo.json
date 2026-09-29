@@ -1,0 +1,703 @@
+{
+  "id": "smartseo",
+  "name": "Smart SEO",
+  "benchmarkType": "commercial",
+  "winningEvidence": [
+    "Established Shopify marketplace benchmark: direct listing fetch on 29 September 2026 showed Built for Shopify, launch August 6, 2015, and 5.0 from 956 reviews. These are public distribution/reputation signals, not proof of profit or AI purchase lift.",
+    "Published low monthly prices and multi-year reviewer histories indicate an incumbent with a substantial implementation/support offer. The Card Collective's reported switch from a USD 99/month proposal is one merchant's price comparison, not current competitor price verification.",
+    "Sherpas claims 20,000+ customers across its Shopify app suite. This cannot be assigned wholly to Smart SEO or treated as paid subscriber, retention or revenue data."
+  ],
+  "currentOffer": "Checked 29 September 2026, USD monthly: Free; Pro 14.99; Business 24.99; Premium 49.99, with seven-day paid-plan trials and quotas. Shopify merchant toolkit for metadata, product descriptions, images, audit/edit workflows, structured data, links, indexing and navigation speed. Business adds multilingual work; Premium adds broader automation and own-key AI generation. LLM Catalog and a read-only Search Console MCP connection are documented paid-plan features.",
+  "conversionMechanism": "Technical correctness and useful product facts can improve eligibility, understanding and clickthrough; link recovery and page performance can help visitors complete purchases. Each dependency must be checked against native Shopify behavior and real faults. Smart SEO documentation and merchant accounts do not establish causal incremental AI-origin purchases. A higher audit score, valid schema or generated AI file is not a purchase endpoint.",
+  "harness": {
+    "offlineSimulation": "not_found",
+    "liveMonitoring": "not_found",
+    "randomizedExperiment": "not_found",
+    "purchaseMeasurement": "not_found",
+    "details": "Fields refer specifically to an AI-shopping conversion harness. Reviewed the current listing, help collection, detailed audit/MCP/catalogue docs, privacy policy and targeted official-site searches. SEO content previews, Search Console reporting and 404 monitoring are documented, but a controlled shopper simulation, repeated external-engine prompt monitoring, randomized AI-shopping deployment or order-level AI purchase attribution was not located. Not_found describes this source search, not proven product absence. The privacy policy says customer/order histories are not collected. Native Shopify separately offers SimGym, Rollouts and agentic-channel purchase reports."
+  },
+  "strengths": [
+    "Broad execution toolkit at low published prices creates a demanding commercial comparator for a narrowly scoped add-on.",
+    "Current audit workflow includes preview before applying generated content and visible generation cost; safe preview is existing capability.",
+    "Merchant reviews describe specific live debugging and theme/review-app conflict resolution. This suggests a useful service component but provides no incident-rate denominator.",
+    "Native Shopify marketplace integration, long tenure and suite-level cross-distribution are plausible distribution advantages, not disclosed unit economics.",
+    "Already maintains product, shipping/return and link workflows that can support narrow purchase experiments without rebuilding generic SEO machinery."
+  ],
+  "limits": [
+    "LLM Catalog caps its feed at 100/200/300 products and uses weekly or daily regeneration, according to its documentation; this is not proof of external-engine ingestion or freshness.",
+    "Shopify already publishes default agent-discovery files and distributes product data. Google says it ignores special AI files for ranking; an AI-file generator alone is a weak differentiated offer.",
+    "The MCP server exposes merchant Search Console analysis, not a documented consumer-shopping tool or purchase experiment.",
+    "Search Console metrics, technical scores, reviews and before/after impressions cannot establish incremental purchases. No verified Smart SEO causal AI-shopping result was found.",
+    "Low prices, broad functionality and hands-on support create a difficult benchmark. Support labor, actual retention, paid mix and profit are unknown.",
+    "Selected positive and critical support cases are anecdotes. They cannot establish how often stores experience faults or what share of users need intervention."
+  ],
+  "improve": [
+    "Prioritize verified purchase failures and compare against competent native/existing implementations before proposing new catalogue cleanup.",
+    "Preserve item/variant/market and buying constraints across broken links, recommendation handoffs and cart creation.",
+    "Integrate operational truth such as delivery deadlines, complete kits and actual policy consequences where it changes buying feasibility.",
+    "Use simulations only to rank hypotheses; calibrate against independent intents, observed engine exposure and randomized paid-order outcomes.",
+    "Buy or integrate existing shipping, bundle, quiz and experiment capabilities where possible; spend engineering on measurable gaps.",
+    "Test renewal around recurring operational changes and regressions instead of assuming an initial SEO backlog creates perpetual subscription value."
+  ],
+  "ideas": [
+    {
+      "id": "smartseo-01",
+      "title": "Recover the shopping intent behind a dead product link",
+      "lens": "behavioral",
+      "buyer": "Shopify merchants with discontinued, renamed or seasonally replaced products and measurable AI referrals.",
+      "problem": "Stage: landing recovery. An assistant can cite an old product URL. A generic homepage redirect discards the product requirements and makes the visitor restart.",
+      "mechanism": "Remember the retired item's verified constraints, offer an honest replacement choice, and reduce the work needed to reach a suitable purchasable item. Orders increase only if compatible inventory exists and the failed-link cohort is large enough.",
+      "intervention": "Create a merchant-approved replacement map using retired product snapshots, current stock and hard compatibility rules. Show a fast discontinuation/replacement page with the old item's identity, two qualified alternatives and explicit differences; retain a normal failure page when no fit exists.",
+      "competitorOverlap": "Smart SEO already detects 404s and supports custom and automated redirects. Its documented manual Fix defaults to the homepage. The proposed difference is tested preservation of buying constraints; absence of this precise workflow elsewhere is not established.",
+      "edgeHypothesis": "A constraint-preserving recovery page beats both the merchant's current redirect and a competent manually chosen replacement, rather than merely beating a broken page.",
+      "dataNeeded": [
+        "Retired product snapshots",
+        "Existing redirect targets",
+        "Inventory and compatibility facts",
+        "Pre-treatment AI-source classification",
+        "Assigned sessions and paid orders"
+      ],
+      "experiment": "Randomize eligible arriving human sessions, sticky by visitor, between current relevant redirect and recovery page. Primary: at least one paid order within 7 days per assigned session. Run 8 weeks after a baseline power check; extend recruitment if faults are rare. Track returns through the merchant return window, redirect loops, latency and unrelated-product complaints.",
+      "metric": "Intention-to-treat difference in 7-day purchaser rate among all preclassified eligible AI arrivals, including people who never click an alternative. Report the source-detection coverage and all-channel result separately; orders are counted once.",
+      "impactEvidence": "Hypothesized; smartseo-links documents the recoverable workflow, not its sales effect.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion-rate or fault-prevalence assumption. Chosen unvalidated monthly fee USD 29; assumed contribution USD 20 per additional fulfilled order after variable costs and expected returns. Integration costs excluded.",
+        "calculation": "Break-even additional orders per month = 29 / 20 = 1.45. Add implementation and operating costs to the numerator before a buying decision.",
+        "range": "Effect is unknown and may be zero or negative. This is a break-even requirement, not an uplift estimate."
+      },
+      "willingnessToPay": "Unvalidated USD 29/month test price. Smart SEO's paid bundle is a low-price comparator, not evidence of demand for this add-on.",
+      "costControl": "Run deterministic hard constraints and cached product snapshots; use a model only to draft ambiguous candidate explanations for merchant review.",
+      "feasibility": "now",
+      "dependencies": [
+        "Merchant-approved substitutions",
+        "Ability to serve the old URL appropriately",
+        "Order attribution and consented experiment assignment"
+      ],
+      "failureMode": "An apparently similar replacement violates an unstated requirement, or current custom redirects already solve the problem.",
+      "falsifier": "An adequately powered test cannot improve paid-order rate over curated redirects, or return/complaint costs erase the gain.",
+      "sourceIds": [
+        "smartseo-links",
+        "smartseo-plans",
+        "shopify-agentic"
+      ]
+    },
+    {
+      "id": "smartseo-02",
+      "title": "Keep the chosen variant and market intact from answer to cart",
+      "lens": "infrastructural",
+      "buyer": "Multi-variant, multi-market Shopify stores whose referred shoppers must reselect size, model or currency.",
+      "problem": "Stage: arrival to checkout. A recommendation for one purchasable variant can land on a default variant or a different market's offer, even when catalogue grouping is correct.",
+      "mechanism": "Preserve explicit item/variant/market selections, revalidate current price and stock, and explain any change before adding to cart. This can prevent reselection errors and offer surprises that interrupt an otherwise viable purchase.",
+      "intervention": "Build a landing verifier for merchant-owned links and pages. Resolve source offer IDs to live variants, preserve only known selections, display current market terms, and log mismatches. For generic referrals ask a minimal clarifying question rather than infer the shopper's private prompt.",
+      "competitorOverlap": "Shopify Catalog Mapping already groups variants and chooses preferred sources; native shopping integrations already synchronize offers. The opportunity is proving the last handoff remains correct in actual merchant themes, not inventing variant grouping.",
+      "edgeHypothesis": "Verified continuity reduces wrong-variant cart additions and increases purchases beyond correct native catalogue configuration.",
+      "dataNeeded": [
+        "Source offer and variant IDs when available",
+        "Market and currency settings",
+        "Current price and stock",
+        "Landing selection and cart lines",
+        "Paid orders and variant returns"
+      ],
+      "experiment": "Randomize preclassified AI arrivals with explicit variant-bearing links between the existing page and the verifier. Primary: 7-day paid-order rate per assigned visitor. Run 6 to 8 weeks only if baseline mismatch volume supports power. Guardrails: added latency, price accuracy, forced-market changes and wrong-variant returns; no silent substitutions.",
+      "metric": "Incremental purchasers per randomized eligible arrival; mismatch and correct-variant cart rates diagnose mechanism. Missing prompt/variant data is excluded by pre-treatment eligibility, not guessed or dropped after assignment.",
+      "impactEvidence": "Hypothesized; shopify-mapping documents existing infrastructure and openai-shopping acknowledges update lag. Neither quantifies this handoff fault.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion-rate or fault-prevalence assumption. Chosen unvalidated monthly fee USD 49; assumed contribution USD 25 per additional fulfilled order after variable costs and expected returns. Integration costs excluded.",
+        "calculation": "Break-even additional orders per month = 49 / 25 = 1.96. Add implementation and operating costs to the numerator before a buying decision.",
+        "range": "Effect is unknown and may be zero or negative. This is a break-even requirement, not an uplift estimate."
+      },
+      "willingnessToPay": "Unvalidated USD 49/month test price; charge only after measuring a material handoff problem.",
+      "costControl": "Use exact identifiers and cached mappings with transactional stock/price validation. Avoid model calls on every page request.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Theme and cart integration",
+        "Stable product/variant identifiers",
+        "Authoritative market price and availability",
+        "Source links that preserve useful context"
+      ],
+      "failureMode": "The external source strips variant context, native behavior is already correct, or validation adds more friction than it removes.",
+      "falsifier": "Audited mismatches are negligible, or correcting them produces no purchase improvement against the native implementation.",
+      "sourceIds": [
+        "shopify-mapping",
+        "shopify-discovery",
+        "openai-shopping"
+      ]
+    },
+    {
+      "id": "smartseo-03",
+      "title": "Expose only delivery promises that can still be met",
+      "lens": "temporal",
+      "buyer": "Gift, event-supply and time-sensitive goods merchants with reliable fulfillment data.",
+      "problem": "Stage: selection and checkout. A technically relevant product loses the sale when it cannot arrive by the buyer's stated deadline; static delivery summaries age across cutoffs and holidays.",
+      "mechanism": "Combine a shopper-provided destination/deadline with actual fulfillment constraints, shortlist feasible offers, and carry the same quoted terms into checkout. The causal benefit is converting a feasible time-sensitive purchase rather than eliciting a recommendation that later fails.",
+      "intervention": "Integrate a delivery engine with merchant inventory and partner shopping tools. Return a timestamped delivery window, cost, expiry and alternatives such as pickup. Publish conservative destination-level information for public discovery; only a consenting interactive tool gets shopper-specific context.",
+      "competitorOverlap": "Smart SEO already publishes shipping schema. ShipperHQ already handles delivery dates and fulfillment rules. The proposed edge is retaining deadline feasibility from permitted AI selection through checkout; upstream engine cooperation remains a dependency.",
+      "edgeHypothesis": "Earlier deadline feasibility can recover purchases that an equally accurate checkout-only estimate cannot.",
+      "dataNeeded": [
+        "Inventory by origin",
+        "Carrier/service calendars and cutoffs",
+        "Fulfillment handling times",
+        "Volunteered destination and deadline",
+        "Quoted versus actual dispatch/delivery",
+        "Orders and cancellations"
+      ],
+      "experiment": "In a partner shopping flow, randomize eligible deadline-shopping sessions to the same delivery engine used before selection versus only at checkout. Primary: paid orders per assigned session, with fulfilled-on-time orders a required guardrail. Recruit for 8 to 12 weeks and power on the deadline cohort; include weekends and cutoffs, follow late-delivery outcomes.",
+      "metric": "Intention-to-treat paid-order difference over all enrolled deadline sessions. Report on-time completion and contribution after shipping costs; do not count a late/cancelled order as successful value.",
+      "impactEvidence": "Hypothesized; shipperhq-date establishes an existing operational engine, not purchase gain from moving it upstream.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion-rate or fault-prevalence assumption. Chosen unvalidated monthly fee USD 99; assumed contribution USD 25 per additional fulfilled order after variable costs and expected returns. Integration costs excluded.",
+        "calculation": "Break-even additional orders per month = 99 / 25 = 3.96. Add implementation and operating costs to the numerator before a buying decision.",
+        "range": "Effect is unknown and may be zero or negative. This is a break-even requirement, not an uplift estimate."
+      },
+      "willingnessToPay": "Unvalidated USD 99/month plus clearly disclosed delivery-provider costs; test against the contribution from additional on-time fulfilled orders.",
+      "costControl": "Cache conservative public windows, invalidate at operational cutoffs, and call carrier services only for eligible active sessions.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable fulfillment and carrier data",
+        "Partner tool or merchant shopping flow",
+        "Explicit destination/deadline input",
+        "Quote expiry and revalidation"
+      ],
+      "failureMode": "No integration exposes the quote before selection, or operational estimates prove too optimistic and create cancellations.",
+      "falsifier": "Earlier feasible-offer selection fails to beat the checkout-only comparator, or the on-time delivery rate degrades.",
+      "sourceIds": [
+        "smartseo-schema",
+        "shipperhq-date",
+        "openai-shopping"
+      ]
+    },
+    {
+      "id": "smartseo-04",
+      "title": "Make compatibility answers fail closed on unknown facts",
+      "lens": "algorithmic",
+      "buyer": "Electronics accessories, replacement-parts and equipment merchants where one wrong specification invalidates the purchase.",
+      "problem": "Stage: understanding and qualification. A fluent product description can leave an assistant unable to distinguish compatible, incompatible and unknown configurations.",
+      "mechanism": "Source-backed hard constraints prevent false recommendations while allowing truly compatible products to be selected with confidence. Purchases should rise among qualified needs and wrong-fit returns should fall; fewer recommendations overall can be healthy.",
+      "intervention": "Build an auditable compatibility graph from manufacturer documents and merchant-verified tests, including explicit exclusions, version boundaries and unknown states. Publish useful product explanations and expose a deterministic compatibility check to opted-in merchant/partner agents. Offline replay finds confusion; only validated assertions ship.",
+      "competitorOverlap": "RevenueHunt already supports compatibility quizzes, exclusions and variant explanations. Lily Max already enriches product intelligence. The proposed comparison is a source-backed hard-constraint system versus a competently configured quiz/enrichment workflow.",
+      "edgeHypothesis": "Explicit unknown/exclusion handling improves retained purchases on difficult cross-model queries without hiding qualified products.",
+      "dataNeeded": [
+        "Manufacturer model/version specifications",
+        "Verified compatibility tests and exceptions",
+        "Real customer questions with permission",
+        "Return reasons",
+        "Product-family orders"
+      ],
+      "experiment": "Randomize product-family clusters to enhanced evidence versus existing accurate specifications, preventing variant spillover. Primary: AI-attributed paid line-item orders per assigned family-week; count all assigned families including zero exposure. Allow 10 to 12 weeks plus indexing lag and return follow-up; power at cluster level. Separate a session-randomized on-site test of the checker from upstream discovery.",
+      "metric": "Family-level incremental orders for discovery; purchaser rate for on-site randomization. Report incompatible-order/return rate and abstention as guardrails. Never use simulated shortlist frequency as the purchase endpoint.",
+      "impactEvidence": "Hypothesized; revenuehunt-fit and lily establish strong adjacent competition, not the proposed marginal effect.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion-rate or fault-prevalence assumption. Chosen unvalidated monthly fee USD 149; assumed contribution USD 35 per additional fulfilled order after variable costs and expected returns. Integration costs excluded.",
+        "calculation": "Break-even additional orders per month = 149 / 35 = 4.26. Add implementation and operating costs to the numerator before a buying decision.",
+        "range": "Effect is unknown and may be zero or negative. This is a break-even requirement, not an uplift estimate."
+      },
+      "willingnessToPay": "Unvalidated USD 149/month for a narrow high-error category plus priced evidence onboarding; demand depends on avoidable wrong-fit losses.",
+      "costControl": "Build graphs per model family, reuse manufacturer evidence and run deterministic checks. Reserve expert/model review for new or contradictory evidence.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable compatibility sources",
+        "Merchant approval of hard assertions",
+        "Family-level randomization",
+        "Partner uptake or merchant-facing checker"
+      ],
+      "failureMode": "Specifications are incomplete, the graph becomes stale, or cautious abstention removes too many suitable options.",
+      "falsifier": "Against the existing quiz/spec workflow, qualified purchase rate does not improve and wrong-fit returns do not decline enough to justify cost.",
+      "sourceIds": [
+        "revenuehunt-fit",
+        "lily",
+        "openai-functions"
+      ]
+    },
+    {
+      "id": "smartseo-05",
+      "title": "Answer the actual return-cost question before checkout",
+      "lens": "regulatory",
+      "buyer": "UK-focused Shopify merchants whose product exceptions or cross-border return costs create purchase uncertainty.",
+      "problem": "Stage: purchase confidence. A generic return-policy badge does not answer whether this item can be returned in this situation, who pays, or which merchant policy is additional to statutory rights.",
+      "mechanism": "A clear, product-specific explanation can reduce uncertainty for eligible buyers without hiding exceptions. The gain depends on better comprehension causing purchases, not on weakening consumer protections.",
+      "intervention": "Create a merchant/legal-reviewed policy decision table by item category, destination and reason. Display a saved, dated explanation of voluntary policy, applicable reviewed rights and known return costs beside the offer and in permitted agent answers. Flag conflicts for review; never auto-generate a blanket compliance guarantee.",
+      "competitorOverlap": "Smart SEO already supports return-policy schema and policy extraction; Shopify exposes policies to agentic channels. This tests decision-specific comprehension and cost consistency, not another policy schema field.",
+      "edgeHypothesis": "Explaining the consequence for the shopper's declared situation beats a generic policy link, particularly for legitimate exceptions and expensive returns.",
+      "dataNeeded": [
+        "Reviewed market/category policy rules",
+        "Current return fees and operational process",
+        "Shopper-selected country/reason if needed",
+        "Policy comprehension checks",
+        "Paid orders, refunds and complaints"
+      ],
+      "experiment": "After correcting any inaccurate information for everyone, randomize preclassified AI arrivals between two accurate presentations: current policy link and contextual explanation. Primary: 7-day paid-order rate per assigned visitor. Run 8 weeks subject to power and observe returns through the full policy window. Monitor misunderstanding, complaints, refund costs and accessibility.",
+      "metric": "Intention-to-treat purchase-rate difference among eligible AI arrivals, with kept-order contribution and comprehension guardrails. Never withhold legally required information from control.",
+      "impactEvidence": "Hypothesized; uk-returns supports scoped legal distinctions and smartseo-schema establishes existing markup. No legal assurance or conversion percentage follows.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion-rate or fault-prevalence assumption. Chosen unvalidated monthly fee USD 49; assumed contribution USD 25 per additional fulfilled order after variable costs and expected returns. Integration costs excluded.",
+        "calculation": "Break-even additional orders per month = 49 / 25 = 1.96. Add implementation and operating costs to the numerator before a buying decision.",
+        "range": "Effect is unknown and may be zero or negative. This is a break-even requirement, not an uplift estimate."
+      },
+      "willingnessToPay": "Unvalidated USD 49/month plus disclosed policy-review costs. Test willingness to pay for clearer decisions rather than a legal-compliance label.",
+      "costControl": "Reuse reviewed market/category rules; generate plain explanations from templates. Escalate changed law/policy or ambiguous exceptions to a qualified reviewer.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Qualified review for supported markets",
+        "Accurate merchant policies and fees",
+        "Visible versioning and expiry",
+        "Experiment/order data"
+      ],
+      "failureMode": "The explanation oversimplifies rights, displays stale costs, or accurately revealing restrictive terms lowers purchases.",
+      "falsifier": "Customers understand the policy no better, purchase contribution is non-positive, or error/complaint rates increase.",
+      "sourceIds": [
+        "uk-returns",
+        "smartseo-schema",
+        "shopify-discovery"
+      ]
+    },
+    {
+      "id": "smartseo-06",
+      "title": "Sell the complete working setup without unnecessary extras",
+      "lens": "behavioral",
+      "buyer": "Merchants selling equipment, hobbies or home-installation products that need a compatible set of components.",
+      "problem": "Stage: selection and basket formation. A shopper asks for a working outcome, but individual product recommendations omit a required component or include accessories the shopper already owns.",
+      "mechanism": "Translate the declared task and owned items into the smallest sufficient purchasable set, with a real all-in price and availability. Removing uncertainty about completeness can turn abandoned projects into orders; merely increasing basket value is not the objective.",
+      "intervention": "Maintain required/optional dependency rules for a narrow category. Create discoverable, honestly described kits using native bundles where supported; offer a visible task checklist and let shoppers deselect already-owned items. Revalidate component availability and price before cart creation.",
+      "competitorOverlap": "Shopify Bundles already creates fixed bundles and multipacks for free. Compatibility quizzes and shopping agents also recommend sets. The hypothesis is validated task completeness and minimal sufficient cost, not generic bundling or upselling.",
+      "edgeHypothesis": "A demonstrably complete minimal kit raises purchase incidence versus the same products offered individually or in existing merchant bundles.",
+      "dataNeeded": [
+        "Required versus optional component rules",
+        "Compatibility and owned-item input",
+        "Component stock and prices",
+        "Bundle price synchronization",
+        "Paid baskets, cancellations and missing-part returns"
+      ],
+      "experiment": "First randomize eligible AI-referred human sessions between current assortment and the task checklist/kit at equal component economics. Primary: paid orders per assigned visitor within 7 days. Run 8 to 12 weeks if power permits; keep kit price, discount exposure and ads controlled. A separate product-family holdout tests discoverable kit listings. Guardrails: contribution, excess-item complaints and incomplete setups.",
+      "metric": "Incremental purchasing visitors, not AOV alone. Keep the on-site and discovery experiments separate and count each order once; report gross margin and complete-setup fulfillment.",
+      "impactEvidence": "Hypothesized; shopify-bundles establishes implementation feasibility and existing competition. No bundled-order uplift is assumed.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion-rate or fault-prevalence assumption. Chosen unvalidated monthly fee USD 79; assumed contribution USD 25 per additional fulfilled order after variable costs and expected returns. Integration costs excluded.",
+        "calculation": "Break-even additional orders per month = 79 / 25 = 3.16. Add implementation and operating costs to the numerator before a buying decision.",
+        "range": "Effect is unknown and may be zero or negative. This is a break-even requirement, not an uplift estimate."
+      },
+      "willingnessToPay": "Unvalidated USD 79/month; free native bundle creation means payment must buy proven completeness and additional orders.",
+      "costControl": "Reuse native inventory/bundle primitives and deterministic dependency graphs; validate only changed components instead of regenerating all kits.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant-owned dependency knowledge",
+        "Native bundle/channel compatibility",
+        "Accurate inventory and price maintenance",
+        "Item-level order and return data"
+      ],
+      "failureMode": "Bundle discovery is unsupported, the package is more expensive than the buyer wants, or an omitted dependency undermines trust.",
+      "falsifier": "Purchase incidence does not improve against existing bundles/individual products, even if AOV rises, or returns eliminate added contribution.",
+      "sourceIds": [
+        "shopify-bundles",
+        "revenuehunt-fit",
+        "shopify-agentic"
+      ]
+    },
+    {
+      "id": "smartseo-07",
+      "title": "Prove which seller and product the shopper is choosing",
+      "lens": "identity",
+      "buyer": "Manufacturers and authorized specialty retailers whose products are confused with lookalikes, resellers or another version.",
+      "problem": "Stage: offer selection. Correct product identity does not automatically establish who supplies the item, whether the item is new/refurbished, or whose warranty and support apply.",
+      "mechanism": "Separate product identity, seller identity and offer terms so buyers and capable agents can distinguish legitimate offers. This can increase purchases from a suitable seller when ambiguity, rather than price, is the barrier.",
+      "intervention": "Reconcile GTIN/brand/model against authoritative data; attach dated, source-linked manufacturer or authorized-reseller evidence and explicit condition/warranty terms. Surface unresolved claims as unknown, and publish only evidence the seller has permission to use.",
+      "competitorOverlap": "Verified by GS1 already provides identifier ownership checks; native catalogues resolve product groups. OpenAI documents maker/primary-seller status as one merchant-selection factor. The proposed product tests offer-level evidence continuity and buyer comprehension, without promising ranking privileges.",
+      "edgeHypothesis": "Verified seller/product distinctions increase legitimate offer purchases beyond identifier cleanup alone.",
+      "dataNeeded": [
+        "GTIN and manufacturer model records",
+        "Seller entity/domain records",
+        "Manufacturer authorization evidence",
+        "Condition and warranty terms",
+        "Matched competing offers",
+        "Orders and authenticity-related contacts"
+      ],
+      "experiment": "Start with visitor randomization on AI-referred product pages: existing accurate seller details versus a concise evidence panel, with identical prices. Primary: 7-day paid-order rate per assigned visitor. Run 8 to 12 weeks if baseline doubt cases support power; measure comprehension and warranty/authenticity complaints. Separately cluster upstream evidence publication by product family to avoid claiming a landing test changed AI ranking.",
+      "metric": "Incremental paid purchasers in the randomized arrival cohort; upstream offer routing is a separate diagnostic. A GTIN lookup is never counted as an authenticated sale.",
+      "impactEvidence": "Hypothesized; gs1-identity and openai-shopping establish plausible inputs. GS1 ownership verification does not authenticate an individual unit or prove reseller authorization.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion-rate or fault-prevalence assumption. Chosen unvalidated monthly fee USD 99; assumed contribution USD 40 per additional fulfilled order after variable costs and expected returns. Integration costs excluded.",
+        "calculation": "Break-even additional orders per month = 99 / 40 = 2.48. Add implementation and operating costs to the numerator before a buying decision.",
+        "range": "Effect is unknown and may be zero or negative. This is a break-even requirement, not an uplift estimate."
+      },
+      "willingnessToPay": "Unvalidated USD 99/month plus licensed verification costs; test first with high-value goods where a few additional legitimate orders cover the fee.",
+      "costControl": "Cache authoritative evidence with expiry; use deterministic identity matching and human review for ownership conflicts.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Authoritative identity/authorization records",
+        "Rights to display supporting evidence",
+        "Market-specific warranty accuracy",
+        "Order attribution"
+      ],
+      "failureMode": "The badge-like presentation conveys more assurance than evidence warrants, buyers do not value it, or platforms already resolve identity adequately.",
+      "falsifier": "Against clean identifiers and normal seller details, comprehension and paid-order contribution fail to improve, or mistaken-authenticity complaints increase.",
+      "sourceIds": [
+        "gs1-identity",
+        "openai-shopping",
+        "shopify-mapping"
+      ]
+    },
+    {
+      "id": "smartseo-08",
+      "title": "Optimize the cold product-page arrival that AI sends",
+      "lens": "infrastructural",
+      "buyer": "Shopify merchants with slow mobile product pages and a meaningful flow of external AI referrals.",
+      "problem": "Stage: first landing to purchase. Preloading a page after an on-site hover cannot help someone whose first store interaction is an external assistant link.",
+      "mechanism": "Render the chosen product, price, availability and purchase controls quickly on a cold entry, reducing failures before the shopper can evaluate or buy. Effects depend on real baseline latency and must not sacrifice product understanding.",
+      "intervention": "Audit the exact incoming product-page path under representative mobile conditions. Produce narrowly scoped theme/app-loading changes, defer nonessential code, preserve product imagery and accessibility, and enforce a field-performance budget. Use native Rollouts for eligible theme tests.",
+      "competitorOverlap": "Smart SEO already offers image work and navigation preloading; the speed-optimization market is mature. The proposed edge is choosing changes using actual AI-arrival purchase outcomes rather than lab scores or warming subsequent navigation.",
+      "edgeHypothesis": "Fixing cold-entry bottlenecks generates more purchases per engineering hour than further metadata or hover-preload work on the same store.",
+      "dataNeeded": [
+        "Cold-session field LCP/interaction data",
+        "Entry URLs and device/network mix",
+        "App/script dependency inventory",
+        "Experiment assignment and paid orders",
+        "Product-image quality and accessibility checks"
+      ],
+      "experiment": "Randomize eligible visitors between visually/functionally equivalent theme versions, stratified by pre-treatment AI source and device. Primary: 7-day paid-order rate for AI-referred visitors. Run 6 to 8 weeks if powered; otherwise report uncertainty rather than borrowing a general-traffic effect. Guardrails: page errors, cart/checkout success, image adequacy and accessibility.",
+      "metric": "Incremental paid purchasers per assigned AI-referred visitor; LCP and abandonment explain mechanism but are not the endpoint. Report all-source effects separately and retain repeat visits in original assignment.",
+      "impactEvidence": "Adjacent measured case, not direct AI evidence: vodafone reports a paid-traffic 50/50 landing experiment with improved LCP and more sales. Its 2021 baseline and scale cannot supply our expected lift. smartseo-speed establishes the preloading comparator.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion-rate or fault-prevalence assumption. Chosen unvalidated monthly fee USD 99; assumed contribution USD 25 per additional fulfilled order after variable costs and expected returns. Integration costs excluded.",
+        "calculation": "Break-even additional orders per month = 99 / 25 = 3.96. Add implementation and operating costs to the numerator before a buying decision.",
+        "range": "Effect is unknown and may be zero or negative. This is a break-even requirement, not an uplift estimate."
+      },
+      "willingnessToPay": "Unvalidated USD 99/month with separately priced implementation; sell measured ongoing regression prevention only where fresh regressions occur.",
+      "costControl": "Prioritize dominant cold-entry paths; use field samples and deterministic asset checks, not repeated full-catalog browser runs or model calls.",
+      "feasibility": "now",
+      "dependencies": [
+        "Theme/app change access",
+        "Real-user performance measurement",
+        "Reliable assignment/order join",
+        "Rollback and purchase-path checks"
+      ],
+      "failureMode": "Most visitors already get a fast page, external in-app browsers dominate delay, or deferred features are important to purchase decisions.",
+      "falsifier": "A verified performance improvement produces no worthwhile purchase gain, or missing functionality offsets it.",
+      "sourceIds": [
+        "smartseo-speed",
+        "vodafone",
+        "rollouts",
+        "google-ai-guide"
+      ]
+    },
+    {
+      "id": "smartseo-09",
+      "title": "Let shoppers carry their own equipment context between stores and agents",
+      "lens": "identity",
+      "buyer": "Replacement-parts and accessories merchants, with shoppers as explicit participants and owners of the shared context.",
+      "problem": "Stage: repeat discovery and qualification. Buyers repeatedly identify the equipment they own; model/version mistakes can send each new assistant conversation toward incompatible products.",
+      "mechanism": "Reuse a shopper-confirmed equipment list and verified prior selections so the next AI-assisted search begins with correct constraints. This reduces repeated questioning and wrong-model choices, enabling additional compatible repeat purchases.",
+      "intervention": "Offer an optional equipment card containing only shopper-approved model/version and prior compatible item IDs. Allow local export or an expiring, revocable share link for a chosen agent/store; show every shared field and re-confirm changed equipment. Start with one category and partner flow.",
+      "competitorOverlap": "Swym already supports persistent/shared wishlists and APIs; ChatGPT uses provided context; True Fit already offers fit/preferences through MCP. A generic preference passport is not new. The narrower hypothesis concerns cross-brand equipment version continuity with explicit ownership and verified compatibility outcomes.",
+      "edgeHypothesis": "A portable, shopper-controlled equipment record beats a saved wishlist plus repeated model-entry questions on subsequent accessory purchases.",
+      "dataNeeded": [
+        "Shopper-confirmed equipment identifiers",
+        "Consent scope, expiry and revocation state",
+        "Verified compatible prior purchases where volunteered",
+        "Eligible later AI-assisted journeys",
+        "Repeat orders and incompatibility returns"
+      ],
+      "experiment": "Randomize consenting eligible shoppers at first visit to the equipment-card offer versus an ordinary saved list; analyze everyone assigned, including non-adopters. Primary: a subsequent paid accessory order in a verified AI-assisted flow within 90 days. Recruit to baseline repeat-rate power, likely multiple merchants and several months; follow compatibility returns and withdrawal requests.",
+      "metric": "Intention-to-treat repeat purchasers per enrolled shopper. Report card adoption and known AI-source coverage separately; do not claim all later orders originated in AI.",
+      "impactEvidence": "Hypothesized; swym, truefit and openai-shopping show major adjacent/native overlap. No source establishes demand or interoperable purchase lift for equipment cards.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion-rate or fault-prevalence assumption. Chosen unvalidated monthly fee USD 149; assumed contribution USD 30 per additional fulfilled order after variable costs and expected returns. Integration costs excluded.",
+        "calculation": "Break-even additional orders per month = 149 / 30 = 4.97. Add implementation and operating costs to the numerator before a buying decision.",
+        "range": "Effect is unknown and may be zero or negative. This is a break-even requirement, not an uplift estimate."
+      },
+      "willingnessToPay": "Unvalidated USD 149/month merchant pilot fee with consumer use free; adoption and repeat contribution must justify it against existing wishlist tools.",
+      "costControl": "Use compact exact IDs and local export; defer costly cross-retailer account linking until the manual-share pilot shows repeat purchase value.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "Shopper opt-in and editable data",
+        "Stable cross-brand equipment identity",
+        "Partner agent/store acceptance",
+        "Revocable scoped access",
+        "Longitudinal order measurement"
+      ],
+      "failureMode": "Shoppers do not maintain or share the record, equipment changes, or existing account history already supplies sufficient context.",
+      "falsifier": "The offer produces little adoption or no incremental compatible repeat purchasing relative to a saved list after a powered follow-up.",
+      "sourceIds": [
+        "swym",
+        "truefit",
+        "openai-shopping",
+        "gs1-identity"
+      ]
+    },
+    {
+      "id": "smartseo-10",
+      "title": "Choose the repair that earns the next purchase at a fixed work budget",
+      "lens": "measurement",
+      "buyer": "Agencies and multi-store operators deciding whether to spend on feeds, storefront fixes, fulfillment or content.",
+      "problem": "Stage: allocation across the purchase path. A long audit queue can spend scarce effort on clean metadata while broken handoffs or unavailable offers remain. Synthetic recommendation gains can mis-rank the work.",
+      "mechanism": "Calibrate failure signals against randomized purchase outcomes, then allocate the same budget to interventions with the strongest validated incremental order contribution. This is an enabling tool: savings matter only if they preserve or increase actual purchases.",
+      "intervention": "Maintain a ledger joining observed failure, deployable intervention, cost, exposure and order effect. Use frozen tool-response replay to triage hypotheses, live engine observations to check exposure, and real randomized deployments to estimate value. Select among existing implementation tools; include a do-nothing option and uncertainty thresholds.",
+      "competitorOverlap": "Lily Max already markets enrichment/testing/measurement/deployment; DataFeedWatch tests titles; Shopify has SimGym, Rollouts and channel order reports. The testable edge is calibrated allocation across operational, landing and catalogue repairs at equal cost, not a generic A/B dashboard.",
+      "edgeHypothesis": "At the same total labor/API budget, a cross-stage purchase-calibrated queue outperforms both an expert audit queue and a simulation-score queue.",
+      "dataNeeded": [
+        "Distinct real shopping intents with provenance",
+        "Frozen query/tool/response snapshots",
+        "Live exposure observations",
+        "Intervention costs and versions",
+        "Random assignment and paid orders",
+        "Return-adjusted contribution"
+      ],
+      "experiment": "Randomize matched merchant clusters among expert allocation, calibrated allocation and no-change holdout, with equal active-arm budgets and pre-registered actions. Primary: incremental known-AI paid orders per assigned merchant over a 12 to 16 week window versus holdout. Power on merchants/orders, not model reruns; include indexing lags and returns. Sparse AI volume may require a large consortium or kill viability.",
+      "metric": "Intention-to-treat known-AI orders per merchant at fixed cost, plus all-channel order and contribution guardrails. Compare active-arm lift against the same holdout. Separate simulated recommendations, observed appearances, attributed orders and randomized incrementality.",
+      "impactEvidence": "Hypothesized improvement over existing experimentation tools. openai-functions supports controlled tool replay; simgym, rollouts, lily and dfw-tests establish competition. No public API proves exact production-engine replication.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion-rate or fault-prevalence assumption. Chosen unvalidated monthly fee USD 199; assumed contribution USD 25 per additional fulfilled order after variable costs and expected returns. Integration costs excluded.",
+        "calculation": "Break-even additional orders per month = 199 / 25 = 7.96. Add implementation and operating costs to the numerator before a buying decision.",
+        "range": "Effect is unknown and may be zero or negative. This is a break-even requirement, not an uplift estimate."
+      },
+      "willingnessToPay": "Unvalidated USD 199/month per operator cohort plus implementation; require incremental purchase contribution after total work cost. Cheap simulation alone faces native SimGym pricing.",
+      "costControl": "Reuse frozen cases, exact-data checks and inexpensive replay for rejection; fund live/purchase tests only where possible decisions justify their cost. Do not cut the actual-order holdout to make margins look better.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Multi-merchant experiment participation",
+        "Consented order measurement",
+        "Intervention executor integrations",
+        "Enough independent units",
+        "Stable pre-registered attribution and cost accounting"
+      ],
+      "failureMode": "AI purchases are too sparse for useful decisions, simulation signals fail to transfer, interference contaminates groups, or experts already choose as well.",
+      "falsifier": "The calibrated queue cannot beat expert allocation in incremental purchases at equal cost, or its uncertainty makes decisions slower/more expensive without added value.",
+      "sourceIds": [
+        "openai-functions",
+        "openai-search",
+        "simgym",
+        "rollouts",
+        "lily",
+        "dfw-tests",
+        "shopify-agentic"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "smartseo-listing",
+      "title": "Smart SEO AI & Image Optimizer - AI SEO optimizer, AEO & page speed to drive traffic... | Shopify App Store",
+      "url": "https://apps.shopify.com/smart-seo",
+      "type": "official-doc",
+      "claim": "Fetched 29 September 2026: Built for Shopify, launched August 6, 2015, 5.0 from 956 reviews. These establish marketplace tenure and public feedback, not paid installs, retention, revenue or profit."
+    },
+    {
+      "id": "smartseo-plans",
+      "title": "Smart SEO plans and billing info | Sherpas Design Help Center",
+      "url": "https://intercom.help/sherpas-design/en/articles/11401987-smart-seo-plans-and-billing-info",
+      "type": "official-doc",
+      "claim": "Current free plan and USD monthly prices of 14.99, 24.99 and 49.99, quotas, multilingual tier, trial limits and own-key option. Prices checked 29 September 2026."
+    },
+    {
+      "id": "smartseo-audit",
+      "title": "SEO Audit | Sherpas Design Help Center",
+      "url": "https://intercom.help/sherpas-design/en/articles/11929118-seo-audit",
+      "type": "official-doc",
+      "claim": "Documents product/content editing, AI-generated descriptions and metadata, cost preview, immediate application and Test AI Optimize preview. Preview is not a randomized experiment."
+    },
+    {
+      "id": "smartseo-catalog",
+      "title": "Help AI assistants discover your products with LLM Catalog | Sherpas Design Help Center",
+      "url": "https://intercom.help/sherpas-design/en/articles/16257230-help-ai-assistants-discover-your-products-with-llm-catalog",
+      "type": "official-doc",
+      "claim": "Documents agents.md and Markdown catalogue feed, product caps of 100/200/300, weekly/daily regeneration and theme status. Does not establish uptake by an external engine or purchase impact."
+    },
+    {
+      "id": "smartseo-mcp",
+      "title": "Connect AI agents to your SEO data with MCP | Sherpas Design Help Center",
+      "url": "https://intercom.help/sherpas-design/en/articles/16257268-connect-ai-agents-to-your-seo-data-with-mcp",
+      "type": "official-doc",
+      "claim": "MCP exposes read-only Google Search Console data to merchant agents; it does not let agents change the store. This is not documented consumer shopping integration."
+    },
+    {
+      "id": "smartseo-schema",
+      "title": "JSON-LD structured data | Sherpas Design Help Center",
+      "url": "https://intercom.help/sherpas-design/en/articles/10602817-json-ld-structured-data",
+      "type": "official-doc",
+      "claim": "Product schema already includes review integrations, shipping and return policies, including AI policy extraction. Generic policy markup is existing functionality."
+    },
+    {
+      "id": "smartseo-links",
+      "title": "Fixing broken links | Sherpas Design Help Center",
+      "url": "https://intercom.help/sherpas-design/en/articles/10602788-fixing-broken-links",
+      "type": "official-doc",
+      "claim": "Detects on-site links, 404 user hits and backlinks; default manual Fix points to homepage, editable targets and automated archived/deleted-product redirects are documented."
+    },
+    {
+      "id": "smartseo-speed",
+      "title": "Page speed | Sherpas Design Help Center",
+      "url": "https://intercom.help/sherpas-design/en/articles/10602873-page-speed",
+      "type": "official-doc",
+      "claim": "Documents JavaScript preloading triggered before subsequent navigation. This does not itself establish a faster cold entry from an external assistant."
+    },
+    {
+      "id": "smartseo-reviews",
+      "title": "Reviews: Smart SEO AI & Image Optimizer - AI SEO optimizer, AEO & page speed to drive traffic... | Shopify App Store",
+      "url": "https://apps.shopify.com/smart-seo/reviews",
+      "type": "merchant-review",
+      "claim": "Infano, The Card Collective and JOERIAKNITS describe technical support fixing live schema or old-theme-code issues. Individual merchant accounts, including one very early review; not measured incident frequency or causal sales evidence."
+    },
+    {
+      "id": "smartseo-critical",
+      "title": "Reviews: Smart SEO AI & Image Optimizer - AI SEO optimizer, AEO & page speed to drive traffic... | Shopify App Store",
+      "url": "https://apps.shopify.com/smart-seo/reviews?ratings%5B%5D=1",
+      "type": "merchant-review",
+      "claim": "Brand63's May 21, 2025 review alleges app-access and support problems. A selected anecdote, not representative reliability evidence."
+    },
+    {
+      "id": "smartseo-privacy",
+      "title": "Smart SEO Privacy Policy",
+      "url": "https://sherpas.design/blogs/news/smart-seo-privacy-policy",
+      "type": "official-doc",
+      "claim": "Policy dated March 24, 2026 states that customer/order-history information is not collected. Supports caution about attributing order-level measurement to the app, not an audit of implementation."
+    },
+    {
+      "id": "sherpas-suite",
+      "title": "Shopify Apps",
+      "url": "https://sherpas.design/pages/shopify-apps",
+      "type": "official-doc",
+      "claim": "Vendor claims 20,000+ customers across its Shopify apps and displays a partner ecosystem. This is suite-level marketing, not Smart SEO paid subscribers or financial disclosure."
+    },
+    {
+      "id": "shopify-discovery",
+      "title": "Shopify Help Center | Shopify Catalog and product discovery for agentic storefronts",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/products",
+      "type": "official-doc",
+      "claim": "Native Catalog syndication and default agents.md, llms.txt and llms-full.txt already exist. Catalogue data updates and AI-channel eligibility are native capabilities; custom files alone are not a differentiated purchase product."
+    },
+    {
+      "id": "shopify-mapping",
+      "title": "Shopify Help Center | Mapping your product data sources for Shopify Catalog",
+      "url": "https://help.shopify.com/en/manual/shopify-catalog/mapping",
+      "type": "official-doc",
+      "claim": "Preferred field sources, metafields, metaobjects, custom variant grouping and display names already influence Catalog. Changes are processed with delay."
+    },
+    {
+      "id": "shopify-agentic",
+      "title": "Shopify Help Center | Managing agentic storefronts",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/agentic-home",
+      "type": "official-doc",
+      "claim": "Native per-channel orders, sales, sessions and conversion reports and raw Catalog search preview. Channels can rerank the preview; analytics are unavailable for headless stores. Attribution reports are not randomized causal effects."
+    },
+    {
+      "id": "google-ai-guide",
+      "title": "Google's Guide to Optimizing for Generative AI Features on Google Search | Google Search Central",
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "type": "official-doc",
+      "claim": "Google explicitly says special AI text files do not improve Google Search visibility; recommends useful content, current merchant data and good page experience. Does not describe every other engine."
+    },
+    {
+      "id": "openai-shopping",
+      "title": "Shopping with ChatGPT Search | OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search",
+      "type": "official-doc",
+      "claim": "Shopping uses query/context and product/merchant metadata; merchant selection can consider price, availability and maker/primary-seller status. Shopify Catalog is integrated. Pricing updates can lag. Not a disclosed ranking algorithm."
+    },
+    {
+      "id": "openai-functions",
+      "title": "Function calling | OpenAI API",
+      "url": "https://developers.openai.com/api/docs/guides/function-calling",
+      "type": "official-doc",
+      "claim": "Application-controlled function outputs permit frozen/replayed search_products responses. This establishes a test mechanism, not replication of consumer ChatGPT."
+    },
+    {
+      "id": "openai-search",
+      "title": "Web search | OpenAI API",
+      "url": "https://developers.openai.com/api/docs/guides/tools-web-search",
+      "type": "official-doc",
+      "claim": "Responses API supports hosted web search and live/cache access control. Cache-only access is not a frozen reproducible ranking corpus or consumer shopping simulator."
+    },
+    {
+      "id": "shopify-bundles",
+      "title": "Shopify Help Center | Shopify Bundles",
+      "url": "https://help.shopify.com/en/manual/products/bundles/shopify-bundles",
+      "type": "official-doc",
+      "claim": "Free native bundles already exist. Component price changes do not automatically change bundle price, a practical maintenance constraint."
+    },
+    {
+      "id": "shipperhq-date",
+      "title": "How to configure Delivery Date & Time",
+      "url": "https://docs.shipperhq.com/delivery-datecalendar-configuration",
+      "type": "official-doc",
+      "claim": "ShipperHQ already calculates/displays delivery information with origin/cutoff/lead-time and carrier configuration. Supports integration/competition, not AI-search purchase uplift."
+    },
+    {
+      "id": "revenuehunt-fit",
+      "title": "Size & fit finder quiz for ecommerce",
+      "url": "https://revenuehunt.com/solutions/size-finder/",
+      "type": "official-doc",
+      "claim": "RevenueHunt already supports compatibility exclusions, variant selection and recommendation explanations. Its generic promotional outcome statements do not establish our effect."
+    },
+    {
+      "id": "uk-returns",
+      "title": "Accepting returns and giving refunds: the law - GOV.UK",
+      "url": "https://www.gov.uk/accepting-returns-and-giving-refunds",
+      "type": "official-doc",
+      "claim": "UK consumer returns guidance distinguishes distance cancellation, faulty goods and product exceptions. Supports scoped policy review, not automatic legal compliance."
+    },
+    {
+      "id": "gs1-identity",
+      "title": "Verified by GS1 | Barcode GTIN GLN Company Lookup Verification",
+      "url": "https://www.gs1.org/services/verified-by-gs1",
+      "type": "official-doc",
+      "claim": "Verifies identifier ownership and available core product data. It does not by itself authenticate an individual item or authorize a reseller."
+    },
+    {
+      "id": "swym",
+      "title": "Swym Wishlist Plus - Increase your store conversions with a full featured wishlist | Shopify App Store",
+      "url": "https://apps.shopify.com/swym-relay",
+      "type": "official-doc",
+      "claim": "Anonymous/shared wishlists, account extension, APIs and USD 29.99 monthly starter price already exist. A generic persistent shortlist is established competition."
+    },
+    {
+      "id": "vodafone",
+      "title": "Vodafone: A 31% improvement in LCP increased sales by 8% | web.dev",
+      "url": "https://web.dev/case-studies/vodafone",
+      "type": "vendor-case",
+      "claim": "Google/Vodafone's 2021 report describes a 50/50 paid-traffic landing-page A/B test and an 8% sales difference. Adjacent case with very different traffic and baseline; not an expected AI-referral lift."
+    },
+    {
+      "id": "simgym",
+      "title": "Shopify Help Center | SimGym",
+      "url": "https://help.shopify.com/en/manual/online-store/simgym",
+      "type": "official-doc",
+      "claim": "Native AI Research Preview simulates shoppers and compares theme add-to-cart rates. Simulated behavior may differ from people; this is existing simulation competition."
+    },
+    {
+      "id": "rollouts",
+      "title": "Shopify Help Center | Types of rollouts and changes",
+      "url": "https://help.shopify.com/en/manual/markets/rollouts/rollout-types",
+      "type": "official-doc",
+      "claim": "Grow+ supports treatment/control experiments across supported theme, checkout/account, catalog-state and discount changes. Scope does not mean arbitrary external feed experiments."
+    },
+    {
+      "id": "lily",
+      "title": "How Lily Max Works | Agentic Product Intelligence",
+      "url": "https://www.lily.ai/how-it-works",
+      "type": "official-doc",
+      "claim": "Vendor already markets gap detection, enrichment, controlled testing, holdouts, measurement and approval. Public claims do not establish random assignment or performance for the proposed interventions."
+    },
+    {
+      "id": "dfw-tests",
+      "title": "A/B Testing Product Titles for Better Ads Performance",
+      "url": "https://www.datafeedwatch.com/blog/ab-testing-product-titles",
+      "type": "official-doc",
+      "claim": "Existing feed-title tests assign versions across item IDs and append tracking links. Documentation concerns advertising/feed channels; it is not evidence of randomized AI-shopping purchases."
+    },
+    {
+      "id": "truefit",
+      "title": "True Fit | Fit & Sizing Intelligence for Retailers, Enhanced by AI",
+      "url": "https://www.truefit.com/",
+      "type": "official-doc",
+      "claim": "Existing agent/PDP fit and preference intelligence plus MCP integration. Generic fit-profile portability is not a novel idea."
+    }
+  ]
+}

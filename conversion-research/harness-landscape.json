@@ -1,0 +1,1361 @@
+{
+  "schemaVersion": "1.0",
+  "id": "controlled-ai-shopping-harness-landscape",
+  "checkedOn": "2026-09-29",
+  "scope": "Verification of controlled search/page replay, live engine monitoring, live merchant experiments, actual purchase measurement and optimization/deployment competition.",
+  "summary": [
+    "Controlled search/page responses are implementable for an agent we operate using public function tools.",
+    "Synthetic commerce testing, live catalogue experiments, deployment loops and generic replay already have direct or adjacent competitors.",
+    "No reviewed public source establishes exact reproduction of consumer ChatGPT private retrieval, ranking, personalization and checkout orchestration through public model APIs.",
+    "The economic hypothesis is better selection of deployable edits followed by measured incremental retained purchases, not novelty of the software loop.",
+    "No prototype, paid API experiment, merchant change or real purchase was executed in this research."
+  ],
+  "statusDefinitions": {
+    "available": "A published product guide, API, code or operating workflow supports the scoped capability. This does not mean it was exercised in an account or that its commercial efficacy is independently proven.",
+    "limited_claim": "Marketing-only, preview/early access, incomplete implementation detail, historical availability, or a related capability that does not establish the full requested one.",
+    "not_found": "No supporting documentation was found in the reviewed sources. This is an evidence gap, not proof that the capability is absent."
+  },
+  "layers": [
+    {
+      "id": "offline_replay",
+      "intervention": "Change a frozen tool response/page for our own agent.",
+      "endpoint": "Observable agent actions, factual correctness, shortlist/recommendation.",
+      "claimLimit": "Conditional on our model, tools, fixtures and sampled intent contexts."
+    },
+    {
+      "id": "live_engine_sampling",
+      "intervention": "Sample named production API or permitted UI behavior.",
+      "endpoint": "Prompt/context/time-specific mentions, recommendations, clicks where observed.",
+      "claimLimit": "Observational output frequency is not a merchant intervention effect or population-wide recommendation rate."
+    },
+    {
+      "id": "merchant_experiment",
+      "intervention": "Assign merchant-owned units to deployable edit or control.",
+      "endpoint": "Propagation and channel response plus order outcomes.",
+      "claimLimit": "Requires assignment validity, exposure checks and analysis of spillover."
+    },
+    {
+      "id": "purchase_measurement",
+      "intervention": "Join assigned units to paid orders and later reversals.",
+      "endpoint": "Incremental retained orders/net contribution.",
+      "claimLimit": "Attribution labels do not substitute for causal assignment; unknown origin remains unknown."
+    }
+  ],
+  "competitors": [
+    {
+      "id": "profound",
+      "name": "Profound",
+      "kind": "AI discovery platform",
+      "offlineReplay": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "liveEngineMonitoring": {
+        "status": "available",
+        "scope": "Answer and shopping visibility monitoring."
+      },
+      "stagedSplitExperiments": {
+        "status": "limited_claim",
+        "scope": "Vendor randomized page-format study; reusable customer split-test workflow not established."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "not_found",
+        "scope": "Study endpoint is bot traffic, not orders."
+      },
+      "optimizationDeployment": {
+        "status": "available",
+        "scope": "AI Marketer/Agents can create content workflows and publish through CMS nodes."
+      },
+      "purchaseEvidence": "No randomized AI-origin purchase outcome established.",
+      "sourceIds": [
+        "profound-changelog",
+        "profound-agents",
+        "profound-markdown"
+      ]
+    },
+    {
+      "id": "peec",
+      "name": "Peec AI",
+      "kind": "AI discovery platform",
+      "offlineReplay": {
+        "status": "limited_claim",
+        "scope": "Vendor lab research isolates brand-name effects without search and compares fixed passages across open rerankers. A customer-accessible frozen search/page replay feature is not established."
+      },
+      "liveEngineMonitoring": {
+        "status": "available",
+        "scope": "Scheduled UI/browser sampling, shopping analytics and data integrations."
+      },
+      "stagedSplitExperiments": {
+        "status": "not_found",
+        "scope": "Before/after Impact tracking does not establish treatment assignment."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "optimizationDeployment": {
+        "status": "limited_claim",
+        "scope": "Agent actions, custom skills, MCP and lift predictor advertised; merchant deployment/experiment protocol unclear."
+      },
+      "purchaseEvidence": "Referral reporting is observational; lift prediction is not proof of purchase causality.",
+      "sourceIds": [
+        "peec-docs",
+        "peec-pricing",
+        "peec-mcp",
+        "peec-impact",
+        "peec-names-research",
+        "peec-rerankers-research"
+      ]
+    },
+    {
+      "id": "scrunch",
+      "name": "Scrunch",
+      "kind": "AI discovery and delivery",
+      "offlineReplay": {
+        "status": "not_found",
+        "scope": "Human/bot previews are not counterfactual agent runs."
+      },
+      "liveEngineMonitoring": {
+        "status": "available",
+        "scope": "Brand/source/bot/referral monitoring."
+      },
+      "stagedSplitExperiments": {
+        "status": "not_found",
+        "scope": "Page deployment and version restore documented; controlled split not found."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "optimizationDeployment": {
+        "status": "available",
+        "scope": "AXP creates and deploys agent-facing content with previews and version restore."
+      },
+      "purchaseEvidence": "Configured GA4/Adobe purchase revenue is attribution.",
+      "sourceIds": [
+        "scrunch-axp",
+        "scrunch-referrals"
+      ]
+    },
+    {
+      "id": "burnish",
+      "name": "Burnish",
+      "kind": "Shopify AI discovery",
+      "offlineReplay": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "liveEngineMonitoring": {
+        "status": "available",
+        "scope": "Remeasures AI answers after catalog changes."
+      },
+      "stagedSplitExperiments": {
+        "status": "not_found",
+        "scope": "Per-action lift explicitly directional, not a controlled trial."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "optimizationDeployment": {
+        "status": "available",
+        "scope": "Catalog optimization, approval, audit and rollback loop advertised."
+      },
+      "purchaseEvidence": "Pixel/order-journey signals and bootstrap intervals remain observational; public case-study page has no customer results.",
+      "sourceIds": [
+        "burnish-method",
+        "burnish-cases"
+      ]
+    },
+    {
+      "id": "geoffy",
+      "name": "Geoffy",
+      "kind": "Shopify/WooCommerce AI discovery",
+      "offlineReplay": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "liveEngineMonitoring": {
+        "status": "limited_claim",
+        "scope": "Monitor is early access; vendor benchmark uses APIs."
+      },
+      "stagedSplitExperiments": {
+        "status": "limited_claim",
+        "scope": "Listing advertises holdout groups; method and availability not established."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "not_found",
+        "scope": "Allocation and order endpoint not documented."
+      },
+      "optimizationDeployment": {
+        "status": "limited_claim",
+        "scope": "Optimise available; Monitor/Influence loop early access."
+      },
+      "purchaseEvidence": "Holdout claim cannot be promoted to demonstrated incremental orders.",
+      "sourceIds": [
+        "geoffy-site",
+        "geoffy-listing"
+      ]
+    },
+    {
+      "id": "lily-max",
+      "name": "Lily Max",
+      "kind": "Catalog intelligence and testing",
+      "offlineReplay": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "liveEngineMonitoring": {
+        "status": "not_found",
+        "scope": "AI-surface coverage does not itself document consumer answer sampling."
+      },
+      "stagedSplitExperiments": {
+        "status": "limited_claim",
+        "scope": "Matched-spend A/B, holdouts and DiD marketed as product workflow."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "limited_claim",
+        "scope": "Controlled lift claims; random allocation, purchase endpoint and AI-channel protocol not specified."
+      },
+      "optimizationDeployment": {
+        "status": "limited_claim",
+        "scope": "Generate variants, test, recommend winners and human-approved deployment advertised."
+      },
+      "purchaseEvidence": "Direct strategic overlap; marketing method requires execution/protocol verification.",
+      "sourceIds": [
+        "lily-how"
+      ]
+    },
+    {
+      "id": "feedonomics",
+      "name": "Feedonomics",
+      "kind": "Feed operations",
+      "offlineReplay": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "liveEngineMonitoring": {
+        "status": "not_found",
+        "scope": "Traffic/AEO reporting is not documented consumer answer replay."
+      },
+      "stagedSplitExperiments": {
+        "status": "available",
+        "scope": "Transformer-based stable-hash product assignment; variants remain in one arm."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "limited_claim",
+        "scope": "Randomized feed groups and revenue-based Google Ads reporting documented; purchaser event configuration and merchant-run analysis required."
+      },
+      "optimizationDeployment": {
+        "status": "available",
+        "scope": "Field/channel rollout and winning-config deployment."
+      },
+      "purchaseEvidence": "Actual ads/store outcomes can be connected; does not demonstrate consumer AI-origin order lift.",
+      "sourceIds": [
+        "feedonomics-ab",
+        "feedonomics-analytics",
+        "feedonomics-field"
+      ]
+    },
+    {
+      "id": "datafeedwatch",
+      "name": "DataFeedWatch",
+      "kind": "Feed operations",
+      "offlineReplay": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "liveEngineMonitoring": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "stagedSplitExperiments": {
+        "status": "available",
+        "scope": "Title A/B, tracking links, result comparison and winner publication."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "limited_claim",
+        "scope": "Alternating item-ID groups documented, not random customer assignment; conversion endpoint external."
+      },
+      "optimizationDeployment": {
+        "status": "available",
+        "scope": "Generated title versus mapping test with winner rollout."
+      },
+      "purchaseEvidence": "Paid/feed experiment capability cannot be relabeled as an AI-shopping purchase experiment.",
+      "sourceIds": [
+        "datafeedwatch-ab",
+        "datafeedwatch-ai"
+      ]
+    },
+    {
+      "id": "kedra",
+      "name": "Kedra",
+      "kind": "Shopify AI discovery",
+      "offlineReplay": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "liveEngineMonitoring": {
+        "status": "available",
+        "scope": "Buyer questions and competitor recommendations tracked."
+      },
+      "stagedSplitExperiments": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "optimizationDeployment": {
+        "status": "available",
+        "scope": "Audits, drafted/approved fixes, feed and remeasurement."
+      },
+      "purchaseEvidence": "Visits and sales reporting is advertised; causal allocation protocol not found.",
+      "sourceIds": [
+        "kedra-listing"
+      ]
+    },
+    {
+      "id": "searchpilot",
+      "name": "SearchPilot",
+      "kind": "Live GEO/SEO experiments",
+      "offlineReplay": {
+        "status": "limited_claim",
+        "scope": "September 2026 toy multi-turn shopping conversation research uses synthetic personas, a local model and Gemini API calls. No customer frozen-search replay feature or real-world purchase validity established."
+      },
+      "liveEngineMonitoring": {
+        "status": "limited_claim",
+        "scope": "Live LLM referral measurement; full answer-panel sampling not established here."
+      },
+      "stagedSplitExperiments": {
+        "status": "available",
+        "scope": "GEO PDP/PLP and Merchant Center feed/page/schema experiments."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "available",
+        "scope": "Full-funnel product has randomized-user CRO portion followed by page-level SEO; custom conversion instrumentation required."
+      },
+      "optimizationDeployment": {
+        "status": "available",
+        "scope": "Live page changes, power/readiness, recrawl analysis and winner deployment."
+      },
+      "purchaseEvidence": "Strong conversion-testing overlap; combined modeled effect is not an engine-side randomized AI-origin purchase trial.",
+      "sourceIds": [
+        "searchpilot-geo",
+        "searchpilot-merchant",
+        "searchpilot-platform",
+        "searchpilot-funnel",
+        "searchpilot-conversations"
+      ]
+    },
+    {
+      "id": "seotesting",
+      "name": "SEOTesting",
+      "kind": "SEO measurement",
+      "offlineReplay": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "liveEngineMonitoring": {
+        "status": "not_found",
+        "scope": "Google Search Console outcomes are not consumer LLM answer samples."
+      },
+      "stagedSplitExperiments": {
+        "status": "available",
+        "scope": "Balanced test/control URL configuration and SEO measurement."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "optimizationDeployment": {
+        "status": "limited_claim",
+        "scope": "Measures externally implemented changes; merchant deployment not established."
+      },
+      "purchaseEvidence": "Organic traffic testing, not order-level AI-channel causal proof.",
+      "sourceIds": [
+        "seotesting-groups"
+      ]
+    },
+    {
+      "id": "splitsignal",
+      "name": "Semrush SplitSignal",
+      "kind": "Historical SEO experiment product",
+      "offlineReplay": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "liveEngineMonitoring": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "stagedSplitExperiments": {
+        "status": "limited_claim",
+        "scope": "Historical documented page-group SEO tests; current product URL redirects."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "optimizationDeployment": {
+        "status": "limited_claim",
+        "scope": "Historical workflow only; current availability not verified."
+      },
+      "purchaseEvidence": "Do not label discontinued or currently purchasable based on a redirect alone.",
+      "sourceIds": [
+        "splitsignal-historic",
+        "splitsignal-current"
+      ]
+    },
+    {
+      "id": "statsig",
+      "name": "Statsig",
+      "kind": "Generic experiment infrastructure",
+      "offlineReplay": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "liveEngineMonitoring": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "stagedSplitExperiments": {
+        "status": "available",
+        "scope": "Canonical-URL randomized buckets and warehouse metrics."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "available",
+        "scope": "Configurable live experiment infrastructure can use merchant purchase events; integration and endpoint validation required."
+      },
+      "optimizationDeployment": {
+        "status": "available",
+        "scope": "Experiment/gate configuration and merge-winner workflow."
+      },
+      "purchaseEvidence": "No packaged simulation-to-consumer-AI purchase transfer is established.",
+      "sourceIds": [
+        "statsig-seo"
+      ]
+    },
+    {
+      "id": "shopify-simgym",
+      "name": "Shopify SimGym",
+      "kind": "Native synthetic shoppers",
+      "offlineReplay": {
+        "status": "limited_claim",
+        "scope": "AI Research Preview compares live/draft Liquid themes with synthetic shoppers; no frozen search-result replay."
+      },
+      "liveEngineMonitoring": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "stagedSplitExperiments": {
+        "status": "not_found",
+        "scope": "Simulated theme comparison, not a live customer split."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "not_found",
+        "scope": "Winner metric is synthetic add-to-cart, not actual purchases."
+      },
+      "optimizationDeployment": {
+        "status": "limited_claim",
+        "scope": "Feedback and theme choice; separate live-testing layer needed."
+      },
+      "purchaseEvidence": "First-party synthetic commerce competitor; results may differ from real buyers.",
+      "sourceIds": [
+        "simgym-help",
+        "simgym-engineering"
+      ]
+    },
+    {
+      "id": "shopify-rollouts",
+      "name": "Shopify Rollouts",
+      "kind": "Native live commerce testing",
+      "offlineReplay": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "liveEngineMonitoring": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "stagedSplitExperiments": {
+        "status": "available",
+        "scope": "Grow+ control/treatment with configurable traffic; scoped theme/checkout/catalog/discount changes."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "limited_claim",
+        "scope": "Real order/checkout conversion by traffic split is documented; assignment algorithm not detailed in reviewed help."
+      },
+      "optimizationDeployment": {
+        "status": "available",
+        "scope": "Scheduled experiments, launch and rollback workflow."
+      },
+      "purchaseEvidence": "Actual live purchase metrics; no native AI-search intervention or controlled engine retrieval demonstrated.",
+      "sourceIds": [
+        "rollouts-types",
+        "rollouts-analytics"
+      ]
+    },
+    {
+      "id": "squoosh",
+      "name": "Squoosh AI",
+      "kind": "Synthetic shopper product",
+      "offlineReplay": {
+        "status": "limited_claim",
+        "scope": "Same synthetic panel compares pages; no frozen consumer-search implementation disclosed."
+      },
+      "liveEngineMonitoring": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "stagedSplitExperiments": {
+        "status": "limited_claim",
+        "scope": "Routes predicted winners into external experimentation tools."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "limited_claim",
+        "scope": "Claims 85% agreement with completed live A/B winners; full report only on request."
+      },
+      "optimizationDeployment": {
+        "status": "limited_claim",
+        "scope": "Analytics-grounded simulation and deployment/testing-stack handoffs marketed."
+      },
+      "purchaseEvidence": "Calibration claim is relevant, but sample, holdouts, endpoint and failures not public in reviewed page.",
+      "sourceIds": [
+        "squoosh"
+      ]
+    },
+    {
+      "id": "bluepill",
+      "name": "BluePill",
+      "kind": "Synthetic research product",
+      "offlineReplay": {
+        "status": "limited_claim",
+        "scope": "AI shoppers compare offers, creatives and pages; replay implementation not established."
+      },
+      "liveEngineMonitoring": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "stagedSplitExperiments": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "optimizationDeployment": {
+        "status": "limited_claim",
+        "scope": "Synthetic screening for merchant decisions; live deployment method not found."
+      },
+      "purchaseEvidence": "Simulated purchase intention/behavior is not actual purchase measurement.",
+      "sourceIds": [
+        "bluepill"
+      ]
+    },
+    {
+      "id": "shopperprobe",
+      "name": "ShopperProbe",
+      "kind": "Agentic commerce QA",
+      "offlineReplay": {
+        "status": "limited_claim",
+        "scope": "Private beta synthetic store missions and reproducible traces; frozen counterfactual replay not established."
+      },
+      "liveEngineMonitoring": {
+        "status": "not_found",
+        "scope": "Checks owned-store missions, not production AI answer share."
+      },
+      "stagedSplitExperiments": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "not_found",
+        "scope": "Explicitly stops without payment submission."
+      },
+      "optimizationDeployment": {
+        "status": "limited_claim",
+        "scope": "Evidence/remediation workflow in private beta."
+      },
+      "purchaseEvidence": "Tests ability to complete a flow; does not show incremental demand or purchases.",
+      "sourceIds": [
+        "shopperprobe"
+      ]
+    },
+    {
+      "id": "langsmith-langgraph",
+      "name": "LangSmith / LangGraph",
+      "kind": "Generic agent infrastructure",
+      "offlineReplay": {
+        "status": "available",
+        "scope": "Own-agent dataset comparisons, checkpoints and state forks; fixture tools still required for frozen downstream responses."
+      },
+      "liveEngineMonitoring": {
+        "status": "not_found",
+        "scope": "Production observability for your agent is not consumer-engine monitoring."
+      },
+      "stagedSplitExperiments": {
+        "status": "not_found",
+        "scope": "Merchant catalog testing not supplied."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "optimizationDeployment": {
+        "status": "available",
+        "scope": "Agent quality/CI/deployment workflow, not merchant catalog publishing."
+      },
+      "purchaseEvidence": "Reusable infrastructure for the proposed test runner; not a trained shopping or consumer-engine replica.",
+      "sourceIds": [
+        "langsmith",
+        "langgraph"
+      ]
+    },
+    {
+      "id": "braintrust",
+      "name": "Braintrust",
+      "kind": "Generic agent infrastructure",
+      "offlineReplay": {
+        "status": "available",
+        "scope": "Immutable eval runs, datasets, scorers and documented external-state stubbing; application implements fixtures."
+      },
+      "liveEngineMonitoring": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "stagedSplitExperiments": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "optimizationDeployment": {
+        "status": "available",
+        "scope": "AI application eval/CI/deployment loop; not native merchant experiments."
+      },
+      "purchaseEvidence": "Provides experiment infrastructure, not simulated-to-human validity.",
+      "sourceIds": [
+        "braintrust",
+        "braintrust-agents"
+      ]
+    },
+    {
+      "id": "kitaru",
+      "name": "Kitaru",
+      "kind": "Generic agent replay infrastructure",
+      "offlineReplay": {
+        "status": "available",
+        "scope": "Re-executes actual own-agent code with recorded tool responses; forks and cohorts."
+      },
+      "liveEngineMonitoring": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "stagedSplitExperiments": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "optimizationDeployment": {
+        "status": "limited_claim",
+        "scope": "Replay regression/CI decisions; merchant publication must be implemented."
+      },
+      "purchaseEvidence": "Strong overlap with controlled proxy mechanics; no shopping-specific causal transfer claim established.",
+      "sourceIds": [
+        "kitaru"
+      ]
+    },
+    {
+      "id": "amazon-experiments",
+      "name": "Amazon Manage Your Experiments",
+      "kind": "Native marketplace experiments",
+      "offlineReplay": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "liveEngineMonitoring": {
+        "status": "not_found",
+        "scope": "No supporting feature documentation found in the reviewed sources."
+      },
+      "stagedSplitExperiments": {
+        "status": "available",
+        "scope": "Product listing content versions shown to randomized customer groups."
+      },
+      "randomizedPurchaseMeasurement": {
+        "status": "available",
+        "scope": "Units sold, sales, conversion and sample size from actual customers."
+      },
+      "optimizationDeployment": {
+        "status": "available",
+        "scope": "Test recommendations and winner publication."
+      },
+      "purchaseEvidence": "Clear adjacent purchase-randomization benchmark; confined to eligible Amazon listings, not ChatGPT search.",
+      "sourceIds": [
+        "amazon-experiments"
+      ]
+    }
+  ],
+  "publicApiFeasibility": {
+    "localInspection": "package.json and src search found no OpenAI agent/search_products implementation; current app is not an existing consumer-shopping harness.",
+    "available": [
+      "Application-controlled function tools and outputs.",
+      "Frozen retrieval/page fixtures and one-change forks.",
+      "Own-agent traces, experiment records and offline comparisons using existing infrastructure.",
+      "Separate live API sampling and merchant-authorized deployment integrations."
+    ],
+    "notEstablished": [
+      "Replacement of ChatGPT.com built-in ranked results through a public API while preserving full production orchestration.",
+      "Exact consumer ranking/personalization/index/checkout equivalence.",
+      "Conversion of simulated recommendation percentages into real purchase uplift without held-out external validation."
+    ],
+    "hostedWebSearchCaveat": "external_web_access:false uses cached/indexed search, not a user-selected immutable index or response-rewrite hook.",
+    "backendDecision": "Portable experiment data and replaceable runner. Do not add a new dependency on legacy OpenAI Evals: read-only October 31, 2026; scheduled shutdown November 30, 2026.",
+    "sourceIds": [
+      "openai-functions",
+      "openai-search",
+      "openai-shopping",
+      "openai-deprecations"
+    ]
+  },
+  "buildSpecification": [
+    {
+      "step": 1,
+      "name": "Prespecify decision",
+      "deliverable": "Merchant/category/channel population, purchase endpoint, comparator, break-even effect and error cost."
+    },
+    {
+      "step": 2,
+      "name": "Factual catalogue",
+      "deliverable": "Versioned product/variant/offer records with source fields, provenance, stock/price timestamps and locale."
+    },
+    {
+      "step": 3,
+      "name": "Frozen environment",
+      "deliverable": "Hashed raw search responses, ranked candidates, page bytes, extracted representations, images, exact tool arguments and code version."
+    },
+    {
+      "step": 4,
+      "name": "Strict replay",
+      "deliverable": "Fixture-only tool resolver; unseen requests become explicit unsupported cases or predeclared captured branches; no silent live fallback."
+    },
+    {
+      "step": 5,
+      "name": "Separate experimental modes",
+      "deliverable": "Fixed-candidate selection, own-retriever reindexing, and rank-oracle sensitivity reported separately."
+    },
+    {
+      "step": 6,
+      "name": "Factual single-factor variants",
+      "deliverable": "One field/boundary changed per primary arm; evidence-backed values; combined effects require interaction design."
+    },
+    {
+      "step": 7,
+      "name": "Versioned agent",
+      "deliverable": "Model/resolved ID when exposed, provider, prompt, tools, settings, trace, run time and evaluation rubric."
+    },
+    {
+      "step": 8,
+      "name": "Observable scoring",
+      "deliverable": "Product identity, hard constraints, open/shortlist/recommendation/cart outcomes, failure/abstention, and explicit denominators."
+    },
+    {
+      "step": 9,
+      "name": "Honest holdouts",
+      "deliverable": "Intent-family and merchant/category split before optimization; later-time and alternate-model sets; paired contexts and clustered uncertainty over repeats."
+    },
+    {
+      "step": 10,
+      "name": "Production calibration",
+      "deliverable": "Predictions locked before safe live edits; all candidate quality levels represented; exposure receipts; held-out false positives, ranking, calibration and decision value."
+    },
+    {
+      "step": 11,
+      "name": "Live experiment",
+      "deliverable": "Stable product-family/category assignment upstream or visitor assignment downstream; baseline balance, prespecified stopping/power, multiplicity treatment, interference and rollback checks."
+    },
+    {
+      "step": 12,
+      "name": "Exposure verification",
+      "deliverable": "Approved diff, deployment/read-back receipt and observed channel adoption separately; assignment-based estimate retained."
+    },
+    {
+      "step": 13,
+      "name": "Paid-order ledger",
+      "deliverable": "Pseudonymous assignment join, deduplicated order/line-item/payment/cancellation/refund events, export reconciliation and maturity window."
+    },
+    {
+      "step": 14,
+      "name": "Attribution plus totals",
+      "deliverable": "All assigned-unit outcomes, observed-AI-origin subset and unknown origin separately; category/store displacement checks."
+    },
+    {
+      "step": 15,
+      "name": "Decision report",
+      "deliverable": "Simulated, live-channel and purchase outcomes distinguished; intervals, unit counts, propagation, cost and deploy/continue/reject decision."
+    }
+  ],
+  "artifactContracts": [
+    {
+      "artifact": "Experiment",
+      "minimumFields": [
+        "experiment_id",
+        "merchant_id",
+        "channel",
+        "market",
+        "hypothesis",
+        "randomization_unit",
+        "primary_purchase_endpoint",
+        "comparator",
+        "assignment_seed_or_rule",
+        "analysis_plan_version",
+        "stopping_rule",
+        "cost_budget",
+        "approval_id"
+      ]
+    },
+    {
+      "artifact": "Fixture",
+      "minimumFields": [
+        "fixture_id",
+        "capture_time",
+        "tool_schema_version",
+        "tool_name",
+        "canonical_arguments",
+        "response_bytes_hash",
+        "source_urls",
+        "extraction_version",
+        "locale",
+        "price_stock_asof"
+      ]
+    },
+    {
+      "artifact": "Intervention",
+      "minimumFields": [
+        "intervention_id",
+        "mode",
+        "product_family_id",
+        "field_or_boundary",
+        "control_value_hash",
+        "variant_value_hash",
+        "factual_source_ids",
+        "deployable",
+        "approved_diff"
+      ]
+    },
+    {
+      "artifact": "Run",
+      "minimumFields": [
+        "run_id",
+        "experiment_id",
+        "case_id",
+        "intent_family_id",
+        "merchant_id",
+        "variant_assignment",
+        "repeat_index",
+        "model_provider",
+        "model_id_observed",
+        "runner_version",
+        "fixture_hashes",
+        "prompt_hash",
+        "visible_actions",
+        "errors",
+        "scores",
+        "cost",
+        "time"
+      ]
+    },
+    {
+      "artifact": "Deployment",
+      "minimumFields": [
+        "deployment_id",
+        "experiment_id",
+        "approved_diff_hash",
+        "assigned_units",
+        "applied_time",
+        "readback_receipt",
+        "channel_adoption_receipt",
+        "rollback_version"
+      ]
+    },
+    {
+      "artifact": "OrderOutcome",
+      "minimumFields": [
+        "pseudonymous_assignment_id",
+        "order_id",
+        "line_item_id",
+        "product_family_id",
+        "payment_status",
+        "currency",
+        "paid_value",
+        "discount_value",
+        "refund_value",
+        "cancellation_state",
+        "attribution_class",
+        "attribution_provenance",
+        "maturity_time"
+      ]
+    }
+  ],
+  "claimsAudit": [
+    {
+      "claim": "12%-67% staged improvement ladder",
+      "verdict": "Invented illustrative values in supplied conversation; no measurement or forecast.",
+      "reason": "Several percentages cannot be unweighted binary rates from exactly 50 trials; marginal effects and interactions not measured."
+    },
+    {
+      "claim": "18.4% current ChatGPT recommendation rate, estimated 31.7%",
+      "verdict": "Unsupported label and predicted transfer.",
+      "reason": "A custom agent's simulated rate is not consumer ChatGPT rate; no calibration or deployment/purchase evidence supplied."
+    },
+    {
+      "claim": "50 identical shopper runs equal 50 shoppers",
+      "verdict": "Incorrect unit of inference.",
+      "reason": "Repeats estimate conditional model variation, not independent humans or intent families."
+    },
+    {
+      "claim": "Move SERP rank 4 to 2",
+      "verdict": "Useful oracle sensitivity only.",
+      "reason": "An exogenous rank change is not a deployable ranking intervention or proof of earned position."
+    },
+    {
+      "claim": "Funnel rates prove conversion lift",
+      "verdict": "Unsupported.",
+      "reason": "Denominators and stage nesting are unspecified; recommendation/citation/rank are not completed payments."
+    }
+  ],
+  "powerIllustration": {
+    "status": "Illustrative sensitivity, not forecast",
+    "baselinePurchaseProbability": 0.02,
+    "treatmentPurchaseProbability": 0.024,
+    "absoluteDifference": 0.004,
+    "relativeDifference": 0.2,
+    "twoSidedAlpha": 0.05,
+    "power": 0.8,
+    "approximateObservationsPerArm": 21109,
+    "formula": "n = [z_(1-alpha/2)*sqrt(2*pbar*(1-pbar)) + z_power*sqrt(p0*(1-p0)+p1*(1-p1))]^2/(p1-p0)^2",
+    "assumptions": [
+      "Equal independent Bernoulli arms.",
+      "Normal approximation.",
+      "No cluster design effect, attrition, multiplicity or delayed-outcome inflation."
+    ],
+    "limitation": "Not a product-cluster power calculation; synthetic repetitions do not supply live purchase observations."
+  },
+  "validationGates": [
+    "Replay detects planted factual/variant errors with low false-positive rates.",
+    "Held-out offline predictions rank deployable interventions better than simple factual audit and relevant existing workflow.",
+    "Production adoption is observed before assigning a channel response to the edit.",
+    "Live effect and uncertainty survive prespecified unit-level analysis and displacement/refund checks.",
+    "Incremental retained purchase value exceeds implementation, experiment, support and operating cost."
+  ],
+  "falsifiers": [
+    "Offline winners do not outperform cheap baselines on held-out live interventions.",
+    "Apparent improvements disappear on unseen merchants, models or later time windows.",
+    "Selection/attribution gains are substitution from existing purchases rather than net gain.",
+    "Merchant volume or assignment access cannot support the intended purchase claim.",
+    "Deployment or manual operational cost eliminates the benefit."
+  ],
+  "sources": [
+    {
+      "id": "openai-functions",
+      "title": "Function calling",
+      "url": "https://developers.openai.com/api/docs/guides/function-calling",
+      "type": "official-doc",
+      "claim": "Application executes custom tools and supplies function_call_output; supports controlled own-agent inputs.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "openai-search",
+      "title": "Web search",
+      "url": "https://developers.openai.com/api/docs/guides/tools-web-search",
+      "type": "official-doc",
+      "claim": "Hosted search controls, sources and events; cache-only mode is not a merchant-controlled frozen index.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "openai-shopping",
+      "title": "Shopping with ChatGPT Search",
+      "url": "https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search",
+      "type": "official-doc",
+      "claim": "Consumer product selection uses context, structured provider data and other sources; merchant ranking has separate factors.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "openai-deprecations",
+      "title": "Deprecations",
+      "url": "https://developers.openai.com/api/docs/deprecations",
+      "type": "official-doc",
+      "claim": "Evals read-only October 31, 2026; dashboard/API scheduled shutdown November 30, 2026.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "simgym-help",
+      "title": "SimGym",
+      "url": "https://help.shopify.com/en/manual/online-store/simgym",
+      "type": "official-doc",
+      "claim": "AI Research Preview compares themes with synthetic add-to-cart and feedback; explicit real-behavior caveat.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "simgym-engineering",
+      "title": "2,000 robots walk into a shop...",
+      "url": "https://shopify.engineering/simgym",
+      "type": "vendor-engineering",
+      "claim": "Browser agents and twins browse alternate themes; operational account, not consumer AI-search replication.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "rollouts-types",
+      "title": "Types of rollouts and changes",
+      "url": "https://help.shopify.com/en/manual/markets/rollouts/rollout-types",
+      "type": "official-doc",
+      "claim": "Grow+ treatment/control experiments, 50/50 default, scoped theme/checkout/catalog/discount changes.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "rollouts-analytics",
+      "title": "Rollout analytics",
+      "url": "https://help.shopify.com/en/manual/markets/rollouts/analytics",
+      "type": "official-doc",
+      "claim": "Experiment order/checkout-conversion metrics and analytics exclusions; no customizable metric set.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "lily-how",
+      "title": "How Lily Max Works | Agentic Product Intelligence",
+      "url": "https://www.lily.ai/how-it-works",
+      "type": "vendor-product",
+      "claim": "Full enrichment/test/holdout/DiD/confidence/approved deployment loop advertised; random allocation and production AI purchase proof not specified.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "feedonomics-ab",
+      "title": "A/B testing enriched content",
+      "url": "https://docs.feedonomics.com/product/enrichment/ab-testing",
+      "type": "official-doc",
+      "claim": "Stable-hash random product groups, family consistency, custom labels and Google Ads CVR/ROAS; merchant owns analysis.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "feedonomics-analytics",
+      "title": "Analytics onboarding",
+      "url": "https://docs.feedonomics.com/product/analytics/onboarding",
+      "type": "official-doc",
+      "claim": "Paid media and optional BigCommerce order/revenue data; tagging is required.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "feedonomics-field",
+      "title": "Where enriched fields go",
+      "url": "https://docs.feedonomics.com/product/enrichment/field-mapping",
+      "type": "official-doc",
+      "claim": "Separate channel activation and field-by-field staged rollout.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "datafeedwatch-ab",
+      "title": "A/B Testing Product Titles for Better Ads Performance",
+      "url": "https://www.datafeedwatch.com/blog/ab-testing-product-titles",
+      "type": "vendor-product-guide",
+      "claim": "Actual title A/B interface, alternating item-ID allocation, tracking parameters and winner publication.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "datafeedwatch-ai",
+      "title": "AI product feed management | DataFeedWatch",
+      "url": "https://www.datafeedwatch.com/solutions/datafeedwatch-ai-feed-optimization",
+      "type": "vendor-product",
+      "claim": "Enrichment review and A/B testing against existing mapping.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "searchpilot-geo",
+      "title": "Drive visibility in AI search | Enhance your SEO with GEO",
+      "url": "https://www.searchpilot.com/ai",
+      "type": "vendor-product",
+      "claim": "GEO testing of PDP/PLP control and variant groups with LLM-referral outcomes.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "searchpilot-merchant",
+      "title": "SEO A/B Testing for Google Merchant Center",
+      "url": "https://www.searchpilot.com/merchant",
+      "type": "vendor-product",
+      "claim": "Feed, on-page metadata/schema tests and organic product-grid clicks/impressions.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "searchpilot-platform",
+      "title": "How SearchPilot works & what SEO testing delivers",
+      "url": "https://www.searchpilot.com/what-we-do",
+      "type": "vendor-product",
+      "claim": "Live page changes, test-readiness diagnostics, credible intervals, crawl coverage and publishing workflow.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "searchpilot-funnel",
+      "title": "Announcement: We've improved how we run full funnel tests",
+      "url": "https://www.searchpilot.com/resources/blog/announcement-weve-improved-how-we-run-full-funnel-tests",
+      "type": "vendor-method",
+      "claim": "Sequential randomized-user CRO then page-split SEO analysis; combined total-conversion model.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "seotesting-groups",
+      "title": "SEO AB Test Group Configuration Tool",
+      "url": "https://seotesting.com/blog/seo-ab-test-group-configuration-tool/",
+      "type": "vendor-product-guide",
+      "claim": "UI for balanced control/test URL cohorts; source does not establish purchase randomization.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "splitsignal-historic",
+      "title": "SEO A/B Split Testing 101",
+      "url": "https://www.semrush.com/blog/seo-a-b-split-testing-101/",
+      "type": "vendor-method",
+      "claim": "Historical SplitSignal page-group organic-traffic testing.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "splitsignal-current",
+      "title": "Enterprise SEO & AI Search Platform - Semrush for Enterprise",
+      "url": "https://www.semrush.com/splitsignal/",
+      "type": "vendor-product",
+      "claim": "Requested product URL redirects to enterprise.semrush.com; current SplitSignal availability not established.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "statsig-seo",
+      "title": "SEO Experimentation with Statsig",
+      "url": "https://docs.statsig.com/experiments/types/seo-testing",
+      "type": "official-doc",
+      "claim": "Canonical-URL randomized bucketing, warehouse metrics, indexing and cannibalization checks.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "profound-markdown",
+      "title": "Markdown vs HTML: An Experiment on AI Traffic",
+      "url": "https://www.tryprofound.com/reports-guides/markdown-html-llm-test",
+      "type": "vendor-research",
+      "claim": "381-page, six-site, three-week randomized study measures bots, not purchase lift.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "profound-agents",
+      "title": "Getting started with Agents",
+      "url": "https://help.tryprofound.com/articles/2212787792-create-a-workflow",
+      "type": "official-doc",
+      "claim": "AI Marketer/workflow creation and content-publishing nodes.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "profound-changelog",
+      "title": "Changelog - Profound",
+      "url": "https://product.tryprofound.com/changelog",
+      "type": "vendor-changelog",
+      "claim": "Current answer insights and AI Marketer analysis features.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "peec-docs",
+      "title": "Welcome to Peec AI",
+      "url": "https://docs.peec.ai/intro-to-peec-ai",
+      "type": "official-doc",
+      "claim": "Daily prompt monitoring; vendor describes browser/UI sampling and logged-out limitations.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "peec-pricing",
+      "title": "Pricing for Peec AI",
+      "url": "https://peec.ai/pricing",
+      "type": "vendor-product",
+      "claim": "Agent actions, custom skills and visibility lift predictor listed; predictor method not disclosed here.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "peec-mcp",
+      "title": "Peec AI MCP",
+      "url": "https://peec.ai/mcp",
+      "type": "vendor-product",
+      "claim": "Visibility data access and agent workflow integration.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "peec-impact",
+      "title": "Measure Campaign AI Impact",
+      "url": "https://peec.ai/mcp-use-cases/pr-impact",
+      "type": "vendor-product-guide",
+      "claim": "Before/after campaign visibility comparison, not randomized causal experiment.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "scrunch-axp",
+      "title": "How to serve AI-optimized content directly to LLMs",
+      "url": "https://scrunch.com/how-tos/how-to-serve-ai-optimized-content-directly-to-llms/",
+      "type": "official-doc",
+      "claim": "Agent-targeted content deployment, previews, logging, version restore and monitoring.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "scrunch-referrals",
+      "title": "Does Scrunch track AI referral traffic to my website?",
+      "url": "https://scrunch.com/faqs/does-scrunch-track-ai-referral-traffic-to-my-website",
+      "type": "official-doc",
+      "claim": "GA4/Adobe referrals and configured purchase revenue; attribution, not causal randomization.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "burnish-method",
+      "title": "Burnish - How it works",
+      "url": "https://useburnish.com/what-it-does/",
+      "type": "vendor-product",
+      "claim": "Optimization and measurement loop; expressly directional, not controlled trial.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "burnish-cases",
+      "title": "Burnish - Case studies",
+      "url": "https://useburnish.com/case-studies/",
+      "type": "vendor-product",
+      "claim": "No published customer results yet; approval/audit/rollback claims.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "geoffy-site",
+      "title": "Geoffy: GEO for Shopify and WooCommerce stores",
+      "url": "https://geoffy.ai/",
+      "type": "vendor-product",
+      "claim": "Optimise available; Monitor/Influence early access; API benchmark methods.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "geoffy-listing",
+      "title": "Geoffy",
+      "url": "https://apps.shopify.com/geoffy",
+      "type": "vendor-app-listing",
+      "claim": "Holdout groups marketed on Grow/Dominate; allocation and purchase endpoint not documented.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "kedra-listing",
+      "title": "Kedra: AI SEO & AEO Visibility",
+      "url": "https://apps.shopify.com/kedra-ai-index",
+      "type": "vendor-app-listing",
+      "claim": "Buyer-question tracking, approved fixes, product feed and AI-referred visits/sales.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "squoosh",
+      "title": "Squoosh AI | Human Behavior Simulation for Digital Experiences",
+      "url": "https://squoosh.ai/",
+      "type": "vendor-product",
+      "claim": "Same synthetic shopper panel across variants, analytics-grounded personas, live-stack handoff and claimed 85% winner agreement; report on request.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "bluepill",
+      "title": "Ecommerce Customer Simulations: Test Offers, Creatives & UX",
+      "url": "https://blue-pill.ai/industry/ecommerce",
+      "type": "vendor-product",
+      "claim": "Synthetic ecommerce creative/offer/page testing; no frozen search replay or purchase-causality method established.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "shopperprobe",
+      "title": "ShopperProbe | Agentic Commerce Observability",
+      "url": "https://shopperprobe.com/",
+      "type": "vendor-product",
+      "claim": "Private beta synthetic shopping missions and cart/checkout failure evidence; no payment submission.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "langsmith",
+      "title": "LangSmith: AI Agent & LLM Model Evaluation Platform",
+      "url": "https://www.langchain.com/langsmith/evaluation",
+      "type": "vendor-product",
+      "claim": "Offline/online dataset evaluations, trajectories, comparisons, expert review and CI.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "langgraph",
+      "title": "Use time-travel",
+      "url": "https://docs.langchain.com/oss/python/langgraph/use-time-travel",
+      "type": "official-doc",
+      "claim": "Checkpoint replay/fork; post-checkpoint API calls re-execute unless explicitly stubbed.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "braintrust",
+      "title": "Experiments",
+      "url": "https://www.braintrust.dev/docs/evaluate/run-evaluations",
+      "type": "official-doc",
+      "claim": "Immutable experiment records, task/data/scorers, comparisons and CI.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "braintrust-agents",
+      "title": "Evaluating agents",
+      "url": "https://www.braintrust.dev/docs/best-practices/agents",
+      "type": "official-doc",
+      "claim": "Step and end-to-end evaluation; snapshot and stub external dependencies.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "kitaru",
+      "title": "zenml-io/kitaru",
+      "url": "https://github.com/zenml-io/kitaru",
+      "type": "official-code",
+      "claim": "Re-executes own agent against recorded tool responses; forked replay, cohorts, evaluator calibration.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "amazon-experiments",
+      "title": "Test listing content with Manage Your Experiments",
+      "url": "https://sell.amazon.com/tools/manage-your-experiments",
+      "type": "official-doc",
+      "claim": "Randomly split actual shoppers, units/sales/conversion metrics, winner publication; Amazon listing scope.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "searchpilot-conversations",
+      "title": "Buying journeys are conversations, not prompts",
+      "url": "https://www.searchpilot.com/resources/blog/conversations",
+      "type": "vendor-research",
+      "claim": "23 September 2026 toy shopping-conversation study uses synthetic personas, a local model and Gemini API calls. Author explicitly limits real-world representativeness; not a documented customer replay product or purchase trial.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "peec-names-research",
+      "title": "AI assistants judge your company by its name",
+      "url": "https://peec.ai/blog/ai-assistants-judge-your-company-by-its-name-i-measured-how-much",
+      "type": "vendor-research",
+      "claim": "Controlled lab experiment with web search disabled and matched fictional brand names, randomized conditions and clustered uncertainty. Measures modeled attribute judgments, not actual purchases or a customer replay feature.",
+      "checkedOn": "2026-09-29"
+    },
+    {
+      "id": "peec-rerankers-research",
+      "title": "Rerankers for GEO/AEO: How AI search chooses passages and sources",
+      "url": "https://peec.ai/blog/rerankers-for-geo-aeo-how-ai-search-chooses-passages-and-sources",
+      "type": "vendor-research",
+      "claim": "Same two passages compared across twelve open rerankers. Explicitly not a claim that proprietary consumer engines use those models or that a score guarantees citation.",
+      "checkedOn": "2026-09-29"
+    }
+  ],
+  "relatedStudies": [
+    {
+      "path": "products/gorgias.md",
+      "scope": "Onsite Playground, campaign A/B functionality and order attribution; does not establish external-engine transportability."
+    },
+    {
+      "path": "products/constructor.md",
+      "scope": "Onsite randomized experimentation and order/return instrumentation; agent-specific/offsite purchase causality remains a separate question."
+    }
+  ]
+}

@@ -1,0 +1,684 @@
+{
+  "id": "tinyseo",
+  "name": "TinySEO",
+  "benchmarkType": "commercial",
+  "winningEvidence": [
+    "At 2026-09-29 the Shopify listing showed Built for Shopify and 5.0/2,520 reviews. This supports selecting an established distribution/workflow benchmark, not proof of paid adoption, retention, vendor profit or AI-origin incrementality. Source: listing.",
+    "Caravan Cover Shop and AMARRA vendor cases report technical improvements; neither reports a randomized AI-origin purchase experiment. Sources: caravan, amarra.",
+    "The 2026-07-28 four-star BE Artistic Designs review documents a preservation issue and successful restoration, illustrating both automation risk and support value. Source: review-alt."
+  ],
+  "currentOffer": "Shopify SEO/image/performance suite for merchants: compression, metadata/alt editing, structured data, redirects, scripts, preloading, lazy loading, AI content and GSC analytics. Verified 2026-09-29: free install with 50 monthly images then US$0.03/image; listed paid tiers US$14, US$23, US$49 per 30-day cycle, with 1,500/5,000/15,000 images. Website also lists US$8/month billed yearly. Feature entitlements need in-app confirmation because summaries and comparison tables differ. Sources: listing, pricing, features.",
+  "conversionMechanism": "Technical eligibility can increase discovery; relevant images and text can improve selection; speed and working controls can reduce abandonment. Every transition must be measured. Files, schema, bytes saved, speed scores and recommendations are intermediate outputs, not additional purchases. The strongest proposed extension is verified repair followed by merchant-side randomized order measurement.",
+  "harness": {
+    "offlineSimulation": "not_found",
+    "liveMonitoring": "unclear",
+    "randomizedExperiment": "not_found",
+    "purchaseMeasurement": "not_found",
+    "details": "Reviewed current listing, vendor feature/pricing/help pages, analytics documentation, success cases and targeted site searches on 2026-09-29. GSC traffic/rank monitoring is documented; isolated live AI-shopping answer monitoring is not established, hence unclear. No controlled shopper replay, randomized merchant experiment or AI-origin order measurement was found in reviewed TinySEO sources. These are search results, not proof of product absence. Generic testing tags in an app listing do not establish a causal harness."
+  },
+  "strengths": [
+    "Established Shopify distribution and inexpensive recurring automation; credible competition for generic SEO cleanup.",
+    "Image, speed, redirect and metadata tools operate in one merchant workflow.",
+    "Existing backups, restoration and support reduce some implementation risk.",
+    "Documented controls address real storefront assets and scripts rather than only an AI score."
+  ],
+  "limits": [
+    "Technical before/after case metrics do not identify causal purchase impact; case authors are affiliated with the vendor.",
+    "GSC analytics does not by itself isolate AI-origin purchases. Google includes AI-feature traffic in Search Console Web reporting.",
+    "The help center documents image access boundaries, including manual handling for files and third-party images.",
+    "A merchant's overwritten alt-text report establishes an incident, not its prevalence or lost revenue; restoration already exists.",
+    "Special AI files are not required for Google's AI features according to Google; their presence must not be treated as a ranking guarantee.",
+    "No reviewed source supports a forecast conversion percentage for any of the ten proposed ideas."
+  ],
+  "improve": [
+    "Measure a working image-to-variant-to-cart path and purchases, alongside speed and eligibility.",
+    "Preserve merchant-authored facts with version-aware merging and explicit field ownership.",
+    "Use real fault prevalence to qualify stores and prioritize a small set of repairs.",
+    "Separate offline sensitivity tests, live engine observation, randomized storefront interventions and paid-order outcomes.",
+    "Compare against native Shopify, Cloudinary, Rewind and existing experimentation tools before claiming novelty."
+  ],
+  "ideas": [
+    {
+      "id": "tinyseo-01",
+      "title": "Schedule scripts around a functioning purchase path",
+      "lens": "infrastructural",
+      "buyer": "Shopify stores with measured slow AI-referral product landings and several third-party apps.",
+      "problem": "A page can gain a speed score while a deferred size picker, stock check or cart widget stops buyers completing their purchase.",
+      "mechanism": "Stage: landing to checkout. Reduce work before essential buying controls are ready while preserving those controls; fewer stalls can produce additional paid orders. The effect depends on finding real latency-related abandonment.",
+      "intervention": "Build an app-dependency map, record time until variant selection and add-to-cart work, and test deferred loading of nonessential scripts. Use browser task checks and a quick rollback for each published policy.",
+      "competitorOverlap": "TinySEO already has page-type script toggles, preloading and lazy loading. Intelligems already runs storefront experiments. A purchase-task-verified scheduling policy is the hypothesis, not basic script control.",
+      "edgeHypothesis": "Preserving the working purchase path will choose more profitable speed changes than optimizing a synthetic performance score alone.",
+      "dataNeeded": [
+        "Consent-compatible entry-source and experiment records",
+        "Script dependency traces and real-user timing",
+        "Paid orders, errors and cancellations",
+        "Theme and app versions"
+      ],
+      "experiment": "Randomize eligible unique AI-attributed entrants persistently to existing scheduling or a validated dependency-aware policy; primary endpoint is any paid order within seven days. Run at least two buying cycles and use baseline conversion to power the sample; do not stop on a transient win. Block any variant-selection or checkout regression before rollout; monitor margin and other traffic.",
+      "metric": "Intention-to-treat seven-day purchaser rate: assigned entrants with a paid order divided by all eligible assigned entrants. Report the randomized difference, attribution coverage, 30-day refunds and contribution separately.",
+      "impactEvidence": "Hypothesized AI-origin purchase effect. Adjacent merchant performance experiment: rakuten. TinySEO technical before/after only: caravan. No transferable lift estimate.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No merchant traffic, control conversion, fault prevalence or contribution margin has been supplied. N is eligible assigned traffic, p0 and p1 are measured purchase probabilities, m is contribution per retained incremental order, and F is total monthly fee plus delivery cost.",
+        "calculation": "Incremental paid orders = N * (p1 - p0). For break-even, measure retained-order probabilities r0 and r1 after the return window and require N * (r1 - r0) * m > F.",
+        "range": "No numerical lift supported. Zero if latency is not a bottleneck; negative if a needed function loads late."
+      },
+      "willingnessToPay": "Unvalidated value-based offer: US$99/month plus disclosed setup. Require measured incremental contribution to exceed total cost; TinySEO's low-cost suite is the price anchor, not proof of willingness to pay.",
+      "costControl": "Trace one representative template per app/version combination and reuse verified dependencies; send novel failures to a human.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Theme and third-party app integration",
+        "Reliable persistent assignment and order join",
+        "Merchant-authorized deploy and rollback"
+      ],
+      "failureMode": "Delaying a review, payment or sizing dependency removes useful information or breaks cart behavior.",
+      "falsifier": "An adequately powered test improves timing but excludes the merchant's minimum worthwhile purchase effect, or guardrail failures offset gains.",
+      "sourceIds": [
+        "scripts",
+        "lazy",
+        "preload",
+        "intelligems",
+        "rakuten",
+        "caravan"
+      ]
+    },
+    {
+      "id": "tinyseo-02",
+      "title": "Compress images against product-detail recognition",
+      "lens": "algorithmic",
+      "buyer": "Fashion, jewelry, collectibles and technical-product merchants where material, markings or fine details affect the choice.",
+      "problem": "Global visual similarity can hide damage to the small region a shopper uses to distinguish two products.",
+      "mechanism": "Stage: selection and landing. Faster delivery retains decision-critical detail, allowing a shopper to verify the recommended product and complete an appropriate purchase.",
+      "intervention": "Attach merchant-approved detail regions and recognition questions to each image family. Generate standard compressed derivatives, reject versions that obscure those regions or change color, and deliver an original-detail zoom on demand. Do not invent missing detail with generative restoration.",
+      "competitorOverlap": "TinySEO already preserves perceived quality; Cloudinary already uses perceptual quality and browser-aware formats. Product-specific recognition constraints and retained-order validation are the proposed distinction.",
+      "edgeHypothesis": "Task-specific detail constraints choose a better speed-versus-comprehension tradeoff than a generic perceptual score.",
+      "dataNeeded": [
+        "Original images and existing derivatives",
+        "Merchant-marked decision details and color references",
+        "Bandwidth and device classes",
+        "Order and return reasons tied to assignment"
+      ],
+      "experiment": "Randomize eligible AI-origin entrants by persistent visitor ID to the merchant's existing optimization or constrained derivatives. Primary endpoint: paid order within seven days; guardrails: detail-recognition errors, image failures and 30-day misdescription returns. Use a powered sample spanning two buying cycles; a lab recognition improvement alone is insufficient.",
+      "metric": "Seven-day purchaser rate per assigned entrant; retain original denominator for 30-day retained orders and contribution. Compare bandwidth secondarily.",
+      "impactEvidence": "Hypothesized. compression and cloudinary document adjacent capability; google-images supports the speed/quality tradeoff. No source quantifies this intervention's purchase effect.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No merchant traffic, control conversion, fault prevalence or contribution margin has been supplied. N is eligible assigned traffic, p0 and p1 are measured purchase probabilities, m is contribution per retained incremental order, and F is total monthly fee plus delivery cost.",
+        "calculation": "Net incremental retained orders = N * (r1 - r0), where r is measured retained-order probability; purchase rate remains the primary endpoint. Value = N * (r1 - r0) * m - F.",
+        "range": "No numerical lift supported. Zero when existing compression preserves all relevant details; negative if larger derivatives slow buyers more than detail helps."
+      },
+      "willingnessToPay": "Unvalidated offer: US$149/month for a bounded catalog with pass-through derivative costs; validate against retained-order contribution.",
+      "costControl": "Cache by source-image hash; use merchant rules for repeat image families and reserve expensive recognition evaluation for ambiguous details.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Original asset access",
+        "CDN derivative delivery",
+        "Domain-specific detail labels",
+        "Return-outcome join"
+      ],
+      "failureMode": "A model passes a misleading image, or the preserved detail forces enough extra bytes to reduce purchases.",
+      "falsifier": "Recognition checks add no reliable information beyond ordinary quality scores, or the purchase/return tradeoff fails to cover costs.",
+      "sourceIds": [
+        "compression",
+        "cloudinary",
+        "google-images"
+      ]
+    },
+    {
+      "id": "tinyseo-03",
+      "title": "Verify the variant from citation to cart",
+      "lens": "identity",
+      "buyer": "Merchants with color, size or compatibility variants and AI referrals to product pages.",
+      "problem": "A cited variant can land on the default image or price, making the recommendation look wrong or placing the wrong item in the cart.",
+      "mechanism": "Stage: clickthrough to correct selection. Preserve the explicit variant identity through URL, rendered media, price and cart line, reducing re-selection and wrong-item abandonment.",
+      "intervention": "Create a verifier for real cited URLs and variant deep links. Repair theme handling so an explicit available variant selects its matching gallery and price; show a clear unavailable-state choice when necessary. Test the cart line after each theme update.",
+      "competitorOverlap": "Shopify already documents variant deep links and synchronized media/price. TinySEO manages images and SEO. The edge is detecting and repairing cross-layer mismatches on actual AI landing paths.",
+      "edgeHypothesis": "URL-to-cart identity assertions catch theme and app faults missed by separate catalog and page audits.",
+      "dataNeeded": [
+        "Observed referral URLs without private conversation text",
+        "Catalog variant IDs and availability",
+        "Rendered selected media, price and cart lines",
+        "Paid orders and wrong-variant returns"
+      ],
+      "experiment": "Randomize eligible arrivals carrying explicit valid variant IDs to existing verified-safe behavior or repaired selection handling. Primary endpoint: paid order within seven days; stratify by product family and device. Size using observed mismatch prevalence and conversion; require two buying cycles. Never substitute an unavailable variant silently.",
+      "metric": "Paid purchasers per all randomized explicit-variant AI entrants; wrong-variant returns per assigned entrant are a guardrail. Results apply only to this fault-exposed segment.",
+      "impactEvidence": "Hypothesized; variants documents supported platform behavior, not evidence that merchants currently have this fault or that fixing it lifts orders.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No merchant traffic, control conversion, fault prevalence or contribution margin has been supplied. N is eligible assigned traffic, p0 and p1 are measured purchase probabilities, m is contribution per retained incremental order, and F is total monthly fee plus delivery cost.",
+        "calculation": "Incremental orders = N * f * d if f is independently measured mismatch prevalence and d the measured absolute repair effect among mismatched entrants; do not multiply a segment effect again if p1-p0 already averages over f.",
+        "range": "No numerical lift supported. Zero if variants already resolve correctly; negative if repair overrides a buyer's later selection."
+      },
+      "willingnessToPay": "Unvalidated offer: US$79/month with a capped number of theme checks; qualify stores using observed mismatch traffic.",
+      "costControl": "Test unique URL/variant/template combinations on changes and sample unchanged paths.",
+      "feasibility": "now",
+      "dependencies": [
+        "Theme access",
+        "Catalog identity map",
+        "Order-line evidence",
+        "A/B delivery compatible with current theme"
+      ],
+      "failureMode": "Correcting an old variant link overwrites a fresh user selection or selects a product unavailable in their market.",
+      "falsifier": "The fault is rare in real AI traffic or resolving it produces no economically worthwhile order difference.",
+      "sourceIds": [
+        "variants",
+        "features"
+      ]
+    },
+    {
+      "id": "tinyseo-04",
+      "title": "Make the image-to-cart journey accessible",
+      "lens": "regulatory",
+      "buyer": "Merchants whose product selection depends on galleries, swatches or image-only measurements, including stores assessing EU accessibility obligations.",
+      "problem": "Alt text coverage can look complete while a buyer cannot identify a swatch, read dimensions, operate the gallery or recover from a cart error.",
+      "mechanism": "Stage: understanding through checkout. Meaningful alternatives and operable controls let more shoppers verify requirements and complete a purchase. Accessibility has value independently of measured uplift.",
+      "intervention": "Audit purchase tasks with keyboard and consenting assistive-technology users. Add contextual image alternatives, readable measurement tables, named swatches, clear selected states and an operable cart path. Supply evidence for scope review, not a legal-compliance badge.",
+      "competitorOverlap": "TinySEO already edits alt text. W3C guidance covers image purpose and functional alternatives. The proposed integration connects product-media meaning to successful purchasing; specialist accessibility services also overlap.",
+      "edgeHypothesis": "Task completion finds consequential barriers that a missing-alt checklist overlooks.",
+      "dataNeeded": [
+        "Image purpose and merchant-approved measurements",
+        "Keyboard and screen-reader task observations",
+        "Consented test-participant feedback",
+        "Paid orders and error events",
+        "Merchant jurisdiction and applicable scope review"
+      ],
+      "experiment": "Fix known blocking or required accessibility defects for everyone. Then randomize AI-origin entrants between two reviewed accessible versions, testing richer product explanations and navigation. Primary endpoint is paid order within seven days; monitor task errors. Power on purchase data over multiple buying cycles; a small assistive-technology panel is usability evidence, not a revenue experiment.",
+      "metric": "Purchasers per randomized entrant. Report voluntarily recruited usability-panel outcomes separately; do not infer disability from browser behavior.",
+      "impactEvidence": "Hypothesized purchase impact. w3c-informative and w3c-functional establish design guidance. accessibility-act identifies e-commerce scope and exemptions, not an assurance for an individual store.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No merchant traffic, control conversion, fault prevalence or contribution margin has been supplied. N is eligible assigned traffic, p0 and p1 are measured purchase probabilities, m is contribution per retained incremental order, and F is total monthly fee plus delivery cost.",
+        "calculation": "Incremental orders = N * (p1 - p0); compare their contribution with F. Required remediation is not withheld merely because measured financial return is low.",
+        "range": "No numerical lift supported. Zero if both versions already communicate and operate well; negative if added explanations overload the page."
+      },
+      "willingnessToPay": "Unvalidated US$149/month for recurring purchase-path checks, with human testing scoped separately. Do not sell legal certainty or invented conversion gains.",
+      "costControl": "Reuse audited component patterns across templates; human testing focuses on novel controls and products with image-only information.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Accessible theme components",
+        "Human assistive-technology testing",
+        "Merchant-approved factual alternatives",
+        "Jurisdiction-specific scope assessment where relevant"
+      ],
+      "failureMode": "Automated descriptions contain errors, controls remain unusable, or a vendor presents a limited audit as full compliance.",
+      "falsifier": "Task barriers are not reduced, or optional enhancements fail a powered purchase test; neither result cancels mandatory accessibility work.",
+      "sourceIds": [
+        "alt",
+        "w3c-informative",
+        "w3c-functional",
+        "accessibility-act"
+      ]
+    },
+    {
+      "id": "tinyseo-05",
+      "title": "Protect authored work while making high-value fixes",
+      "lens": "behavioral",
+      "buyer": "Merchants with hand-written alt text, supplier-approved claims and repeated catalog imports.",
+      "problem": "Fear of losing useful work can block adoption of automation; careless overwrites can also remove information buyers need.",
+      "mechanism": "Stage: enablement. Field ownership and safe merging let merchants deploy verified purchase-relevant fixes sooner while retaining existing useful evidence. Purchases improve only if those enabled fixes work or harm is avoided.",
+      "intervention": "Record field provenance, lock merchant-authored regions, show semantic diffs, and use compare-and-swap writes so a new human edit is never silently overwritten. Propose explicit changes when protected text is stale; support field-level rollback and expiry of outdated locks.",
+      "competitorOverlap": "TinySEO has restoration and backup; Rewind backs up product data and images. Burnish and other workflow tools already advertise approval/rollback. The claim is safer concurrent merging and faster deployment of useful fixes, not novel backups.",
+      "edgeHypothesis": "Ownership-aware merges reduce both refused useful changes and accidental loss better than a generic approve-all batch.",
+      "dataNeeded": [
+        "Field versions, ownership and edit timestamps",
+        "Accepted/rejected fix proposals and reasons",
+        "Time to deployment",
+        "AI-origin orders for affected product cohorts",
+        "Restoration incidents"
+      ],
+      "experiment": "Randomize matched merchant catalog teams or disjoint product cohorts to their existing reviewed process or ownership-aware merging, with equal fix budgets. Primary endpoint: observed AI-origin paid orders per assigned product-week. Measure adoption and damage as mechanisms; run multiple import and buying cycles, with cluster-level power. Both arms require human review for uncertain changes.",
+      "metric": "Difference in cluster-normalized AI-origin paid orders, with prior traffic adjustment specified before analysis. Report saved labor separately; do not count prevented hypothetical loss as measured revenue.",
+      "impactEvidence": "Adjacent merchant pain evidence: review-alt. Existing restore/backup capabilities: restore and rewind. Conversion effect is hypothesized.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No merchant traffic, control conversion, fault prevalence or contribution margin has been supplied. N is eligible assigned traffic, p0 and p1 are measured purchase probabilities, m is contribution per retained incremental order, and F is total monthly fee plus delivery cost.",
+        "calculation": "Incremental value = experimentally observed additional retained orders * m - F. Time saved is added only as a separate cost benefit; adopted fixes are not counted as orders.",
+        "range": "No numerical lift supported. Zero if merchants already trust and safely use automation; negative if locks preserve incorrect claims."
+      },
+      "willingnessToPay": "Unvalidated US$49/month per store, or an agency batch price tested by paid pilots. The primary justification is measured productive fixes and fewer restoration incidents.",
+      "costControl": "Use deterministic hashes and ownership rules before model comparison; inspect only changed fields.",
+      "feasibility": "now",
+      "dependencies": [
+        "Versioned field writes",
+        "Merchant ownership rules",
+        "Conflict-resolution UI",
+        "Cohort-level order observation"
+      ],
+      "failureMode": "Locks fossilize stale facts or semantic comparisons miss important wording changes.",
+      "falsifier": "Protected merging does not increase useful deployed fixes or reduce incidents, and orders do not improve at equal labor budget.",
+      "sourceIds": [
+        "review-alt",
+        "restore",
+        "rewind",
+        "alt",
+        "burnish"
+      ]
+    },
+    {
+      "id": "tinyseo-06",
+      "title": "Show the product evidence for the shopper's stated constraint",
+      "lens": "psychological",
+      "buyer": "Furniture, apparel and equipment merchants with useful but poorly organized product media.",
+      "problem": "A shopper following an AI recommendation may still need to check one concrete condition, such as pocket shape, connector type or folded dimensions, buried late in a gallery.",
+      "mechanism": "Stage: understanding and selection. Presenting relevant verified evidence reduces uncertainty and search effort, allowing the shopper to make a confident, suitable purchase.",
+      "intervention": "Build a gallery index linking existing images and measured facts to supported questions. With explicit shopper input or consented partner context, open the relevant image and caption while retaining the full gallery. Ask for missing evidence instead of generating an imagined product view.",
+      "competitorOverlap": "TinySEO optimizes assets; ordinary gallery merchandising and Intelligems content tests already cover parts of this. W3C contextual-image guidance applies. The hypothesis is verified constraint-to-evidence selection.",
+      "edgeHypothesis": "Choosing the correct existing proof image for an explicit requirement improves purchase completion more than making every image equally fast.",
+      "dataNeeded": [
+        "Merchant-verified image-to-attribute links",
+        "Explicit shopper constraints or consented handoff context",
+        "Gallery interaction and unanswered-question events",
+        "Orders and reason-coded returns"
+      ],
+      "experiment": "Randomize AI-origin entrants who explicitly select a constraint to the standard gallery or the evidence-selected view. Primary endpoint: paid order within seven days. Run long enough for the powered sample and subsequent return window; preserve all choices and guard against false assurance or added latency.",
+      "metric": "Purchasers divided by all assigned constraint-selecting entrants; report question-answer accuracy and 30-day retained orders separately. No inference to visitors who never state a constraint.",
+      "impactEvidence": "Hypothesized. w3c-informative supports contextual information design; intelligems establishes adjacent experimentation. No measured sales effect for this mechanism.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No merchant traffic, control conversion, fault prevalence or contribution margin has been supplied. N is eligible assigned traffic, p0 and p1 are measured purchase probabilities, m is contribution per retained incremental order, and F is total monthly fee plus delivery cost.",
+        "calculation": "Incremental orders = N * (p1 - p0), where N includes only pre-treatment eligible constraint-selecting entrants; net retained-order contribution must exceed F.",
+        "range": "No numerical lift supported. Zero when the standard gallery answers the concern already; negative when the selected view misleads or hides useful context."
+      },
+      "willingnessToPay": "Unvalidated US$99/month for a bounded product category, with new media work priced separately and no uplift guarantee.",
+      "costControl": "Index source assets once, resolve common constraints deterministically, and cache approved evidence mappings.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "Reliable merchant-approved evidence mapping",
+        "Consented context or explicit user selection",
+        "Gallery integration",
+        "Accurate abstention when evidence is missing"
+      ],
+      "failureMode": "The system treats a visual impression as proof of a specification or personalizes from context the shopper never shared.",
+      "falsifier": "Constraint answers are unreliable, shoppers prefer the original gallery, or a powered test shows no profitable purchase benefit.",
+      "sourceIds": [
+        "w3c-informative",
+        "google-images",
+        "intelligems"
+      ]
+    },
+    {
+      "id": "tinyseo-07",
+      "title": "Recover purchases from obsolete AI citations",
+      "lens": "temporal",
+      "buyer": "Stores with seasonal or frequently retired products receiving traffic to old URLs.",
+      "problem": "Old recommendations can continue sending shoppers to deleted products, while a generic redirect loses the requirement that made the old product relevant.",
+      "mechanism": "Stage: stale clickthrough to selection. An honest successor page explains what changed and offers a verified compatible option, recovering a purchase that a dead end might lose.",
+      "intervention": "Maintain a lifecycle record for retired products. Preserve an explanatory page where appropriate, clearly label discontinuation, and show only merchant-approved successors with differences and live availability. Use permanent redirects only for true URL moves or equivalent replacements.",
+      "competitorOverlap": "TinySEO already offers broken-link reports, automatic redirects and deletion redirects. The additional hypothesis is requirement-preserving successor selection and an explanatory landing experience.",
+      "edgeHypothesis": "A compatibility-preserving recovery page converts more stale referred demand than a generic collection redirect.",
+      "dataNeeded": [
+        "Old cited URLs and arrival counts",
+        "Discontinuation reason and product requirements",
+        "Approved successors and current availability",
+        "Referral-source and paid-order join",
+        "Return/complaint reasons"
+      ],
+      "experiment": "Randomize unique eligible AI arrivals at retired URLs between the existing truthful recovery page and a validated successor page, keeping upstream indexing changes out of this test. Primary endpoint: paid order within seven days. Power from stale-arrival volume across a full seasonal/buying cycle; guard returns and never conceal product discontinuation.",
+      "metric": "Paid purchasers per assigned stale-link arrival, with 30-day retained orders. Redirect count and catalog freshness are secondary diagnostics.",
+      "impactEvidence": "Hypothesized; redirects documents existing mechanics. No evidence establishes the prevalence of obsolete AI citations or the sales recovered.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No merchant traffic, control conversion, fault prevalence or contribution margin has been supplied. N is eligible assigned traffic, p0 and p1 are measured purchase probabilities, m is contribution per retained incremental order, and F is total monthly fee plus delivery cost.",
+        "calculation": "Incremental orders = measured stale-arrival N * (p1 - p0); total-store effect is not inferred by applying this segment lift to every visitor.",
+        "range": "No numerical lift supported. Zero without meaningful stale traffic or suitable alternatives; negative if a suggested successor fails the original requirement."
+      },
+      "willingnessToPay": "Unvalidated US$79/month for stores with sufficient observed stale demand; value-test against recovered retained orders.",
+      "costControl": "Review successor relationships at retirement and revalidate only on availability/specification changes.",
+      "feasibility": "now",
+      "dependencies": [
+        "Product lifecycle events",
+        "Verified successor map",
+        "Control over retired-product landing pages",
+        "Truthful price/stock rendering"
+      ],
+      "failureMode": "A non-equivalent replacement looks like the originally recommended item, increasing returns and distrust.",
+      "falsifier": "There is insufficient recoverable stale demand or the successor experience fails to beat the existing truthful recovery page.",
+      "sourceIds": [
+        "redirects",
+        "pricing"
+      ]
+    },
+    {
+      "id": "tinyseo-08",
+      "title": "Repair image discovery where the storefront actually fails",
+      "lens": "infrastructural",
+      "buyer": "Merchants whose distinctive product images are missing from crawlable HTML or reside in third-party widgets.",
+      "problem": "Optimizing the bytes of an image cannot help discovery if the page never exposes a usable image URL and relevant product context to retrieval systems.",
+      "mechanism": "Stage: discovery. Repair genuine image-access and representation faults so products can enter candidate sets; purchases require subsequent retrieval, selection and a working landing path.",
+      "intervention": "Compare raw HTML, rendered DOM, actual asset responses and product identity. Repair missing img/src fallbacks, inaccessible assets and inconsistent image associations on the merchant's storefront; preserve equal factual content for people and crawlers. Recheck after theme changes.",
+      "competitorOverlap": "TinySEO performs audits and image optimization, while its help center documents image access limits. Google documents image indexing practices. Geoffy and other storefront-verification tools already overlap; a rendered-page check alone is not differentiation.",
+      "edgeHypothesis": "Targeted repair of observed missing product evidence produces more purchases per engineering hour than indiscriminate metadata rewrites.",
+      "dataNeeded": [
+        "Raw/rendered pages and asset response history",
+        "Verified product/image mapping",
+        "Indexing observations and engine citation samples",
+        "AI-attributed and total paid orders by assigned product cluster"
+      ],
+      "experiment": "Randomize matched product-family clusters with verified faults to a staged repair rollout; primary endpoint is observed AI-origin paid orders per assigned product-week, not conversion among survivors who arrived. Set lag and duration from actual recrawl evidence and cluster-level power. Monitor all-channel sales, noindex changes and cross-cluster substitution; never deliberately break working assets.",
+      "metric": "Cluster intention-to-treat difference in attributable paid orders per product-week; use fixed attribution criteria and disclose unobservable AI traffic. Recommendation/crawl counts are mechanism checks, not purchases.",
+      "impactEvidence": "Hypothesized; google-images and google-ai document eligibility practices, not guaranteed inclusion. coverage documents a vendor integration boundary.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No merchant traffic, control conversion, fault prevalence or contribution margin has been supplied. N is eligible assigned traffic, p0 and p1 are measured purchase probabilities, m is contribution per retained incremental order, and F is total monthly fee plus delivery cost.",
+        "calculation": "Incremental orders = number of assigned product-weeks * (treatment orders per product-week - control orders per product-week), estimated with predeclared clustering and lag; value minus F.",
+        "range": "No numerical lift supported. Zero if engines already see adequate images, do not recrawl, or never choose the product; negative if a repair breaks existing discovery."
+      },
+      "willingnessToPay": "Unvalidated US$99/month plus scoped repairs; sell verified defects and experimental results rather than a guaranteed ranking increase.",
+      "costControl": "Hash templates and assets, sample unchanged families, and spend rendering budget on observed high-value failures.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Theme/asset access",
+        "Crawl and rendering probes",
+        "Enough product clusters and order volume",
+        "A defined live-monitoring query sample"
+      ],
+      "failureMode": "Improved technical eligibility never transfers to real retrieval, or observed AI-source coverage is too weak to estimate the effect.",
+      "falsifier": "Repairs do not change extraction in repeated probes or, after measured crawl lag, a powered cluster test rules out worthwhile purchase gains.",
+      "sourceIds": [
+        "coverage",
+        "google-images",
+        "google-ai",
+        "features",
+        "geoffy"
+      ]
+    },
+    {
+      "id": "tinyseo-09",
+      "title": "Allocate repair work by incremental purchases per hour",
+      "lens": "measurement",
+      "buyer": "Agencies and larger stores facing more SEO/performance findings than their engineering budget can address.",
+      "problem": "A low-cost optimizer can generate a long list of technically valid tasks without establishing which fixes will create purchases.",
+      "mechanism": "Stage: enablement and allocation. Redirect the same labor budget toward fault classes with experimentally supported purchase value; the tool has no independent conversion effect unless it changes deployed work.",
+      "intervention": "Join detected faults to exposed AI-origin traffic and repair cost, run a small randomized repair portfolio, and maintain uncertainty-aware priorities. Reserve exploration for new or rare fault classes; stop treating simulation scores as revenue.",
+      "competitorOverlap": "TinySEO already provides audits/GSC prioritization and Intelligems already measures experiments and orders. The proposed distinction is allocating a constrained repair budget using causal purchase value and explicit uncertainty.",
+      "edgeHypothesis": "A repair queue based on exposure, evidence and cost creates more incremental retained purchases per fixed labor budget than severity scores or easiest-first selection.",
+      "dataNeeded": [
+        "Fault exposure and repair hours",
+        "Randomized assignment and adoption",
+        "Paid orders, refunds and contribution",
+        "Observed-source coverage",
+        "Negative and inconclusive test results"
+      ],
+      "experiment": "Randomize comparable merchant portfolios or independent teams to evidence-based or existing prioritization at the same fixed engineering budget. Primary endpoint: AI-origin paid orders per assigned store-period, adjusted using a predeclared baseline model. Run multiple buying and repair cycles; power at team/store level and prevent shared-staff contamination. Track all-channel contribution and required work separately.",
+      "metric": "Intention-to-treat incremental AI-origin paid orders at equal labor input; retained contribution per labor hour is a secondary economic endpoint. Never sum overlapping intervention estimates as if independent.",
+      "impactEvidence": "Hypothesized. analytics and intelligems show substantial existing measurement overlap. No evidence yet validates this allocation policy.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No merchant traffic, control conversion, fault prevalence or contribution margin has been supplied. N is eligible assigned traffic, p0 and p1 are measured purchase probabilities, m is contribution per retained incremental order, and F is total monthly fee plus delivery cost.",
+        "calculation": "Net benefit = experimentally observed additional retained orders at equal labor budget * m - F; saved hours count only if the comparison actually uses less labor and avoids double counting.",
+        "range": "No numerical lift supported. Zero when current teams already prioritize well; negative if noisy estimates starve important low-volume products or exploration."
+      },
+      "willingnessToPay": "Unvalidated US$199/month per agency portfolio, tested with equal-budget pilots; require incremental merchant value and delivery savings above all fees.",
+      "costControl": "Reuse one event/assignment pipeline, apply deterministic screening before simulation, and cap experiments whose reachable value is below their cost.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Experiment platform and trustworthy order joins",
+        "Recorded labor costs",
+        "Enough independent teams/stores",
+        "Governance for required non-ROI work"
+      ],
+      "failureMode": "Attribution loss and small samples produce confident but wrong rankings, or staff ignore the queue.",
+      "falsifier": "At equal budget, the policy does not increase deployed purchase-producing work or retained purchases over several powered portfolio tests.",
+      "sourceIds": [
+        "analytics",
+        "intelligems",
+        "intelligems-faq"
+      ]
+    },
+    {
+      "id": "tinyseo-10",
+      "title": "Recover an explicitly saved selection across browser handoffs",
+      "lens": "identity",
+      "buyer": "Merchants with measurable cart loss when buyers move from an AI app's embedded browser to a normal browser or return later.",
+      "problem": "A shopper can finish choosing a product yet lose that selection when the browser context changes; actual prevalence needs an instrumented audit.",
+      "mechanism": "Stage: checkout continuity. An opt-in, expiring continuation link restores only the chosen items, checks availability and returns the shopper to checkout without reconstructing the choice.",
+      "intervention": "Offer Save this selection after the buyer chooses variants. Create a scoped opaque token for variant IDs and quantities, recover it across browsers, revalidate stock/price, and ask the buyer to accept changes. Avoid embedding personal data or inferred preferences in URLs.",
+      "competitorOverlap": "Shopify already supports cart permalinks, agent Cart MCP, continue_url and checkout URLs; this is not a new cart protocol. The hypothesis is a verified recovery experience for observed handoff failures with clear consent and expiry.",
+      "edgeHypothesis": "Targeting proven context-loss points will recover purchases more efficiently than displaying another general cart reminder.",
+      "dataNeeded": [
+        "Consented continuation-token events",
+        "Selected variant IDs and quantities",
+        "Browser handoff completion without fingerprinting",
+        "Price/availability changes",
+        "Paid orders joined to original assignment"
+      ],
+      "experiment": "Randomize AI-origin shoppers with a prepared selection before the offer to standard checkout or the optional continuation experience. Primary endpoint: paid order within seven days using assignment-preserving tokens where voluntarily used. Run at least two buying cycles and power on observed handoff loss; guard privacy, cart duplication, changed prices and checkout latency.",
+      "metric": "Paid purchasers per all eligible assigned shoppers, including those who decline the offer. Report linkage loss and token use separately; do not compare only token users with nonusers.",
+      "impactEvidence": "Hypothesized; cart-links and agent-carts establish existing technical capabilities. No primary evidence here quantifies AI-webview cart loss or recoverable revenue.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No merchant traffic, control conversion, fault prevalence or contribution margin has been supplied. N is eligible assigned traffic, p0 and p1 are measured purchase probabilities, m is contribution per retained incremental order, and F is total monthly fee plus delivery cost.",
+        "calculation": "Incremental orders = N * (p1 - p0) across everyone offered the feature. If modeled by fault prevalence f, use N * f * repair_effect without also applying an already averaged treatment effect.",
+        "range": "No numerical lift supported. Zero if carts already persist or people do not resume; negative if the offer distracts from immediate purchase."
+      },
+      "willingnessToPay": "Unvalidated US$149/month only after a store demonstrates material continuation loss; a higher fee needs measured recovered contribution.",
+      "costControl": "Use native Shopify cart capabilities, short retention and event-driven validation; do not build a parallel checkout.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Shopify cart integration",
+        "Consent and expiring-token design",
+        "Reliable cross-context attribution without covert identification",
+        "Handling for subscriptions/customizations beyond permalink support"
+      ],
+      "failureMode": "Links expose selections, expire prematurely, duplicate existing carts or bypass important variant/customization choices.",
+      "falsifier": "Observed context loss is negligible, recovery is already solved by native cart behavior, or the offer does not increase purchases in a powered trial.",
+      "sourceIds": [
+        "cart-links",
+        "agent-carts",
+        "variants"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "listing",
+      "title": "TinySEO: SEO & Image Optimizer - AI SEO optimization, page speed, JSON-LD & compress images↑ | Shopify App Store",
+      "url": "https://apps.shopify.com/smart-image-optimizer",
+      "type": "official-doc",
+      "claim": "Snapshot 2026-09-29: Built for Shopify, 5.0 from 2,520 reviews, free and paid plans; evidence of distribution and offer, not retention, profit or causal purchase lift."
+    },
+    {
+      "id": "pricing",
+      "title": "TinySEO App Pricing | TinySEO",
+      "url": "https://tinyseo.com/pricing/",
+      "type": "official-doc",
+      "claim": "US$14, US$23 and US$49 monthly tiers; image quotas, extras, backups and AI credits. Feature placement differs between page summaries and comparison table; confirm entitlement in-app."
+    },
+    {
+      "id": "features",
+      "title": "TinySEO Shopify App Features | TinySEO",
+      "url": "https://tinyseo.com/services/",
+      "type": "official-doc",
+      "claim": "Official SEO, image, speed and automation inventory; no claim that these guarantee AI recommendations."
+    },
+    {
+      "id": "scripts",
+      "title": "Third-Party App Script Management on Shopify | TinySEO",
+      "url": "https://tinyseo.com/services/third-party-scripts/",
+      "type": "official-doc",
+      "claim": "Page-type toggles for third-party scripts establish overlap with any script-management proposal."
+    },
+    {
+      "id": "compression",
+      "title": "Automatic Image Compression for Shopify | TinySEO",
+      "url": "https://tinyseo.com/services/image-optimization/",
+      "type": "official-doc",
+      "claim": "Automatic image compression and quality-oriented positioning; no randomized purchase result."
+    },
+    {
+      "id": "alt",
+      "title": "Bulk Alt Text Editing on Shopify | TinySEO",
+      "url": "https://tinyseo.com/services/alt-text-editing/",
+      "type": "official-doc",
+      "claim": "Bulk alt editing and templates; a complete accessible purchase journey is a different proposed intervention."
+    },
+    {
+      "id": "analytics",
+      "title": "Advanced Analytics for Shopify | TinySEO",
+      "url": "https://tinyseo.com/services/analytics/",
+      "type": "official-doc",
+      "claim": "Search Console traffic, impressions, keywords and ranking metrics; does not document isolated AI-origin purchase measurement."
+    },
+    {
+      "id": "restore",
+      "title": "What if I want to get my original images back? | TinySEO Help Center",
+      "url": "https://help.tinyseo.com/en/articles/3092515-what-if-i-want-to-get-my-original-images-back",
+      "type": "official-doc",
+      "claim": "Individual restoration, automatic-optimization limitation, support for bulk restore and restore-before-uninstall instruction."
+    },
+    {
+      "id": "coverage",
+      "title": "What images does TinySEO optimize ? | TinySEO Help Center",
+      "url": "https://help.tinyseo.com/en/articles/9106213-what-images-does-tinyseo-optimize",
+      "type": "official-doc",
+      "claim": "June 2026 documentation describes reachable image categories and manual handling for files/third-party images; actual integration permissions need verification."
+    },
+    {
+      "id": "review-alt",
+      "title": "Reviews: TinySEO: SEO & Image Optimizer - AI SEO optimization, page speed, JSON-LD & compress images↑ | Shopify App Store",
+      "url": "https://apps.shopify.com/smart-image-optimizer/reviews?ratings%5B%5D=4",
+      "type": "merchant-review",
+      "claim": "Four-star BE Artistic Designs review on 2026-07-28 reports overwritten authored alt text and successful support restoration. Vendor said warnings existed and visibility could improve. No measured lost orders."
+    },
+    {
+      "id": "caravan",
+      "title": "Case study Caravan Cover Shop - TinySEO",
+      "url": "https://tinyseo.com/success-stories/caravan-cover-shop-image-optimization/",
+      "type": "vendor-case",
+      "claim": "2021 before/after page-speed and interaction results; no randomized conversion or AI-origin order endpoint."
+    },
+    {
+      "id": "amarra",
+      "title": "AMARRA Saves 2.26GB on Website Images | TinySEO Success Story",
+      "url": "https://tinyseo.com/success-stories/amarra-road-to-customer-loyalty-with-tinyimg/",
+      "type": "vendor-case",
+      "claim": "2024 vendor case reports image/file savings and PageSpeed score 48 to 82. These are technical outcomes, not purchase uplift."
+    },
+    {
+      "id": "lazy",
+      "title": "One-Click Lazy Loading Feature for Shopify | TinySEO",
+      "url": "https://tinyseo.com/services/lazy-loading/",
+      "type": "official-doc",
+      "claim": "Current documentation distinguishes critical and below-fold resources and advises theme backup. Historical review complaints are not proof of current behavior."
+    },
+    {
+      "id": "preload",
+      "title": "One-Click Asset Preloading for Shopify | TinySEO",
+      "url": "https://tinyseo.com/services/asset-preloading/",
+      "type": "official-doc",
+      "claim": "Asset preloading exists already; any edge must exceed a generic preloading toggle."
+    },
+    {
+      "id": "redirects",
+      "title": "Broken Link Redirects and Reports for Shopify | TinySEO",
+      "url": "https://tinyseo.com/services/broken-link-fixing/",
+      "type": "official-doc",
+      "claim": "Automatic and custom redirects and scheduled broken-link reports already exist."
+    },
+    {
+      "id": "google-ai",
+      "title": "AI Features and Your Website | Google Search Central | Documentation | Google for Developers",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "type": "official-doc",
+      "claim": "Google says no special AI files or schema are required, eligibility does not guarantee inclusion, and AI-feature traffic is included in Search Console Web data."
+    },
+    {
+      "id": "google-images",
+      "title": "Image SEO Best Practices | Google Search Central | Documentation | Google for Developers",
+      "url": "https://developers.google.com/search/docs/appearance/google-images",
+      "type": "official-doc",
+      "claim": "HTML img/src discovery, fallback URLs, speed/quality tradeoff, contextual text and stable image URLs; these are Google-specific practices, not all-engine ranking guarantees."
+    },
+    {
+      "id": "cloudinary",
+      "title": "Optimize Images | Documentation",
+      "url": "https://cloudinary.com/documentation/image_optimization",
+      "type": "official-doc",
+      "claim": "Cloudinary already offers perceptual automatic quality/format optimization and preserves originals; generic quality-aware compression is not a new category."
+    },
+    {
+      "id": "w3c-informative",
+      "title": "Informative Images | Web Accessibility Initiative (WAI) | W3C",
+      "url": "https://www.w3.org/WAI/tutorials/images/informative/",
+      "type": "official-doc",
+      "claim": "Text alternatives depend on an image's purpose and context, not only its appearance."
+    },
+    {
+      "id": "w3c-functional",
+      "title": "Functional Images | Web Accessibility Initiative (WAI) | W3C",
+      "url": "https://www.w3.org/WAI/tutorials/images/functional/",
+      "type": "official-doc",
+      "claim": "Alternatives for interactive images describe the action or function; supports purchase-task testing."
+    },
+    {
+      "id": "accessibility-act",
+      "title": "Accessibility of products and services | EUR-Lex",
+      "url": "https://eur-lex.europa.eu/EN/legal-content/summary/accessibility-of-products-and-services.html",
+      "type": "official-doc",
+      "claim": "Official summary includes e-commerce from 28 June 2025, with exemptions including microenterprises providing services; scope and national implementation require review."
+    },
+    {
+      "id": "variants",
+      "title": "Support product variants",
+      "url": "https://shopify.dev/docs/storefronts/themes/product-merchandising/variants",
+      "type": "official-doc",
+      "claim": "Shopify documents variant deep links and updating media and price for selection; this is existing platform functionality."
+    },
+    {
+      "id": "rewind",
+      "title": "What does Rewind backup for Shopify?",
+      "url": "https://help.rewind.com/hc/en-us/articles/27722238895003-What-does-Rewind-backup-for-Shopify",
+      "type": "official-doc",
+      "claim": "Backups and restoration of products, product images, variants and themes already exist; preservation alone is not novel."
+    },
+    {
+      "id": "intelligems",
+      "title": "Page Targeting | Intelligems Docs",
+      "url": "https://docs.intelligems.io/general-features/targeting/page-targeting",
+      "type": "official-doc",
+      "claim": "Existing page-targeted content experiments and order attribution demonstrate overlap with purchase-linked testing; eligibility differs by test type."
+    },
+    {
+      "id": "intelligems-faq",
+      "title": "General FAQs | Intelligems Docs",
+      "url": "https://docs.intelligems.io/getting-started/general-faqs",
+      "type": "official-doc",
+      "claim": "Existing theme, template, content, price and shipping experiments; visitor identifiers attached to orders. Do not infer current checkout limitations from older FAQ passages."
+    },
+    {
+      "id": "cart-links",
+      "title": "Create cart permalinks",
+      "url": "https://shopify.dev/docs/apps/build/checkout/create-cart-permalinks",
+      "type": "official-doc",
+      "claim": "Native prefilled carts/checkout with variants and tracking; selling plans do not work with these permalinks."
+    },
+    {
+      "id": "agent-carts",
+      "title": "Carts and checkout for agents",
+      "url": "https://shopify.dev/docs/agents/carts-and-checkout",
+      "type": "official-doc",
+      "claim": "Shopify documents long-running Cart MCP carts, continue_url handoff and catalog-provided variant checkout URLs; basic agent handoff is existing functionality."
+    },
+    {
+      "id": "rakuten",
+      "title": "How Rakuten 24's investment in Core Web Vitals increased revenue per visitor by 53.37% and conversion rate by 33.13% | web.dev",
+      "url": "https://web.dev/case-studies/rakuten",
+      "type": "vendor-case",
+      "claim": "Adjacent Google-published merchant case describes a month-long 50/50 performance A/B test and reported business outcomes. Neither TinySEO evidence nor an AI-shopping forecast."
+    },
+    {
+      "id": "burnish",
+      "title": "How Burnish works.",
+      "url": "https://useburnish.com/what-it-does/",
+      "type": "official-doc",
+      "claim": "Official page H1. Burnish advertises source-attached facts, approvals, dependency controls and rollback. Its own revenue language distinguishes directional measurement from a controlled trial."
+    },
+    {
+      "id": "geoffy",
+      "title": "Frequently asked questions | Geoffy docs",
+      "url": "https://geoffy.ai/docs/faq",
+      "type": "official-doc",
+      "claim": "Geoffy fetches the live product page and verifies its markup in server-rendered HTML before counting publication; storefront verification is existing competition."
+    }
+  ]
+}

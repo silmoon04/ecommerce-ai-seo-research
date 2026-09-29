@@ -1,0 +1,971 @@
+[
+  {
+    "id": "I01",
+    "title": "Preserve the selected variant from AI link to cart",
+    "lens": "infrastructural",
+    "stage": "Arrival and cart",
+    "priority": "Test first",
+    "horizon": "now",
+    "primaryCandidateId": "peec-02",
+    "candidateIds": [
+      "peec-02",
+      "geoffy-02",
+      "simprosys-02",
+      "tinyseo-03",
+      "google-07",
+      "smartseo-02",
+      "infrastructure-06",
+      "channable-04"
+    ],
+    "reason": "An explicit size, pack or regional variant can be lost at redirects, rendering or add-to-cart. A merchant-owned resolver and release probes can repair a visible purchase failure.",
+    "edgeReview": "Test additional purchasers against correctly configured native variant links; the proposed advantage is closing observed theme, locale and app failures, not introducing deep links.",
+    "knownOverlap": "Shopify already supplies variant links, cart permalinks and Catalog mappings. Peec reports destinations; Geoffy verifies served HTML.",
+    "scopeNote": "Buyer: configurable-goods merchant. Require an observed incoming identifier, theme control and order joins. Unknown selections need confirmation. Count all assigned AI-origin arrivals, with wrong-variant orders and latency as guardrails."
+  },
+  {
+    "id": "I02",
+    "title": "Recover unavailable items with requirement-preserving alternatives",
+    "lens": "behavioral",
+    "stage": "Selection recovery",
+    "priority": "Test first",
+    "horizon": "now",
+    "primaryCandidateId": "algorithmic-04",
+    "candidateIds": [
+      "algorithmic-04",
+      "peec-03",
+      "burnish-05",
+      "datafeedwatch-05",
+      "channable-02",
+      "simprosys-05",
+      "lilyai-03",
+      "gorgias-05",
+      "behavioral-07"
+    ],
+    "reason": "Recover shoppers who hit a real stockout by comparing available substitutes with their confirmed requirements and the option to wait.",
+    "edgeReview": "Beat a tuned related-products and waitlist flow on purchasing shoppers over a complete buying window. A replacement SKU sale alone does not establish an extra order.",
+    "knownOverlap": "Algolia, Constructor and merchant recommendation tools already provide alternatives and stock filters. Compatibility filtering and longer-horizon incrementality are the proposed improvements.",
+    "scopeNote": "Buyer: merchant with measurable unavailable-variant referrals. Use live stock and explicit requirements, disclose differences and require a choice. Protect hard requirements; evaluate catalog-wide orders, returns and later purchases."
+  },
+  {
+    "id": "I03",
+    "title": "Prove exact compatibility before purchase",
+    "lens": "algorithmic",
+    "stage": "Product qualification",
+    "priority": "Test first",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "burnish-06",
+    "candidateIds": [
+      "burnish-06",
+      "scrunch-05",
+      "geoffy-04",
+      "datafeedwatch-02",
+      "feedonomics-04",
+      "simprosys-04",
+      "smartseo-04",
+      "shopify-04",
+      "identity-04",
+      "searchpilot-05"
+    ],
+    "reason": "Compile licensed manufacturer relationships, exclusions and version boundaries into supported, incompatible or unknown results. Resolve the customer's exact model before recommending a purchasable variant.",
+    "edgeReview": "The test is whether auditable relation checks earn more suitable purchases than a competent fitment finder, semantic search with facets or existing specifications. Generic factual grounding is insufficient.",
+    "knownOverlap": "Partly and fitment tools already identify parts; Constructor validates catalog recommendations; Google supports manuals and related parts. The proposed improvement is source-backed model and revision handling carried into purchase.",
+    "scopeNote": "Buyer: one parts or accessories vertical with authoritative data and expert ownership. Start outside hazardous equipment. Ask for missing model details, abstain on unknowns and retain the evidence version through cart changes."
+  },
+  {
+    "id": "I04",
+    "title": "Turn a delivery deadline into a feasible purchase plan",
+    "lens": "temporal",
+    "stage": "Fulfilment qualification",
+    "priority": "Test first",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "temporal-01",
+    "candidateIds": [
+      "temporal-01",
+      "profound-05",
+      "peec-05",
+      "burnish-04",
+      "geoffy-03",
+      "datafeedwatch-04",
+      "channable-03",
+      "simprosys-03",
+      "smartseo-03",
+      "shopify-03",
+      "google-09",
+      "infrastructure-09",
+      "gorgias-06",
+      "searchpilot-04",
+      "behavioral-08",
+      "constructor-06"
+    ],
+    "reason": "Use the shopper's destination and needed-by date with actual stock locations, cutoffs and capacity. Offer a valid shipping or collection choice and preserve it through checkout.",
+    "edgeReview": "Compare with the merchant's accurate existing delivery estimator. The advantage must come from earlier qualification and an executable alternative, measured as additional on-time purchasers.",
+    "knownOverlap": "Google, UCP, carriers and merchant checkouts already expose delivery estimates and fulfilment options. A date answer or generic shipping FAQ is not an edge.",
+    "scopeNote": "Buyer: event, gift or urgent-use merchant with operational APIs. The merchant must honor the selected service or visibly requote it. Basket-wide feasibility is included; a guaranteed date requires an actual merchant commitment."
+  },
+  {
+    "id": "I05",
+    "title": "Build the smallest complete basket that performs the task",
+    "lens": "algorithmic",
+    "stage": "Basket construction",
+    "priority": "Test first",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "constructor-01",
+    "candidateIds": [
+      "constructor-01",
+      "profound-03",
+      "scrunch-10",
+      "geoffy-05",
+      "channable-08",
+      "feedonomics-05",
+      "smartseo-06",
+      "google-06",
+      "algorithmic-03",
+      "behavioral-06",
+      "gorgias-07",
+      "shopify-07"
+    ],
+    "reason": "Translate a declared project into required capabilities, compatible components and quantities, subtract what the shopper already owns, then validate a complete purchasable set.",
+    "edgeReview": "Beat Constructor's existing multi-item agent or a competent merchant kit on purchasing customers, with equal information and prices. More items or higher order value does not meet the objective.",
+    "knownOverlap": "Constructor already supports multi-item goals; native bundles and Google required_part relations exist. The proposed improvement is verified completeness across the whole basket.",
+    "scopeNote": "Buyer: specialist merchant with maintained dependency rules. Show optional extras separately and require approval. Start within one merchant; cross-seller optimization needs approved integrations and seller-specific checkout and delivery totals."
+  },
+  {
+    "id": "I06",
+    "title": "Keep correctable checkout errors inside the purchase flow",
+    "lens": "infrastructural",
+    "stage": "Checkout recovery",
+    "priority": "Test first",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "google-03",
+    "candidateIds": [
+      "google-03",
+      "profound-09",
+      "peec-10"
+    ],
+    "reason": "Translate known ERP, address, delivery and discount failures into accurate recoverable checkout states so a buyer can correct one field and continue.",
+    "edgeReview": "Beat the merchant's current standards-compliant error adapter on completed nonduplicate purchases. Correctly identifying an error is only valuable if it recovers a valid order.",
+    "knownOverlap": "UCP already specifies structured errors and continuation behavior. This is a merchant integration and recovery-quality hypothesis.",
+    "scopeNote": "Buyer: checkout engineering team with an approved agent route. Assign before failures occur, retain all assigned sessions and leave business rules unchanged. Unknown payment completion belongs to I35, not a retry instruction here."
+  },
+  {
+    "id": "I07",
+    "title": "Quote the payable total before the buyer commits",
+    "lens": "regulatory",
+    "stage": "Offer qualification",
+    "priority": "Test first",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "scrunch-04",
+    "candidateIds": [
+      "scrunch-04",
+      "peec-08",
+      "feedonomics-07",
+      "simprosys-06"
+    ],
+    "reason": "Resolve the chosen variant, quantity and destination into shipping, tax, duty and mandatory charges while the shopper is still comparing feasible offers.",
+    "edgeReview": "Compare earlier reconciled quotes with an already lawful, accurate native flow. The claim is additional retained purchases from fewer late surprises, not greater clickthrough or a compliance guarantee.",
+    "knownOverlap": "UCP and commerce platforms already calculate totals; feeds carry shipping facts. The edge requires meaningful quote-to-cart disagreement or timing friction.",
+    "scopeNote": "Buyer: merchant with location-dependent charges and an authoritative quote API. Mark estimates and expiry, requote material changes and preserve mandatory disclosures in both arms. Use contribution after discounts, fees and returns."
+  },
+  {
+    "id": "I08",
+    "title": "Ask only the question that changes the buying decision",
+    "lens": "behavioral",
+    "stage": "Decision support",
+    "priority": "Test first",
+    "horizon": "now",
+    "primaryCandidateId": "constructor-02",
+    "candidateIds": [
+      "constructor-02",
+      "peec-06",
+      "burnish-08",
+      "lilyai-05",
+      "truefit-03",
+      "algorithmic-02",
+      "gorgias-03",
+      "behavioral-01"
+    ],
+    "reason": "Choose between one bounded clarification, a provisional shortlist and proceeding. Use disagreement among viable options and prior failed searches to decide whether another question is worth its friction.",
+    "edgeReview": "Compare with the current tuned conversational agent and a short fixed quiz at equal recommendation quality. The objective is purchasing shoppers, not dialogue completion.",
+    "knownOverlap": "Constructor, Gorgias and fit agents already ask follow-ups. Purchase-tested stopping and question selection are the proposed advantages.",
+    "scopeNote": "Buyer: merchant controlling its agent or landing component. Show useful results immediately, allow skip and retain hard constraints. Randomize before the first eligible clarification and keep assignment across turns."
+  },
+  {
+    "id": "I09",
+    "title": "Resolve retired recommendations to a documented successor",
+    "lens": "temporal",
+    "stage": "Selection recovery",
+    "priority": "Develop next",
+    "horizon": "now",
+    "primaryCandidateId": "profound-06",
+    "candidateIds": [
+      "profound-06",
+      "scrunch-02",
+      "smartseo-01",
+      "tinyseo-07"
+    ],
+    "reason": "Preserve the identity of a discontinued model and explain the exact differences, lost capabilities and compatibility of an available successor.",
+    "edgeReview": "Beat both a generic redirect and a competent manually chosen successor page. Success means new purchasers from stale referrals, not reclaimed page views.",
+    "knownOverlap": "Redirect apps, Smart SEO and merchant lifecycle pages already address dead links. Versioned model lineage and tested requirement continuity are the hypothesis.",
+    "scopeNote": "Buyer: merchant with old-model referrals and manufacturer revision records. This is permanent lifecycle recovery; I02 handles temporary unavailability. Never silently replace the named product or reuse identifiers inaccurately."
+  },
+  {
+    "id": "I10",
+    "title": "Calculate the exact packs and quantities needed for the job",
+    "lens": "psychological",
+    "stage": "Basket construction",
+    "priority": "Develop next",
+    "horizon": "now",
+    "primaryCandidateId": "datafeedwatch-06",
+    "candidateIds": [
+      "datafeedwatch-06"
+    ],
+    "reason": "Turn a requested amount or coverage into valid pack combinations, showing full cost, unit cost, surplus and delivery implications before creating exact cart lines.",
+    "edgeReview": "Beat a good unit-price display and existing quantity calculator on purchasing customers. A larger pack or basket alone is not a win.",
+    "knownOverlap": "Feed managers already publish pack and unit attributes. The edge is the transparent, executable feasible-cart calculation for a defined buying task.",
+    "scopeNote": "Buyer: flooring, consumables, materials or multipack merchant with reliable units. Use deterministic arithmetic and authoritative cart totals; test with actual AI-origin shoppers who have a quantity requirement."
+  },
+  {
+    "id": "I11",
+    "title": "Check physical fit and operating clearance in the buyer's space",
+    "lens": "algorithmic",
+    "stage": "Product qualification",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "algorithmic-05",
+    "candidateIds": [
+      "algorithmic-05",
+      "psychological-05",
+      "behavioral-03"
+    ],
+    "reason": "Combine manual dimensions or a supported room scan with verified product geometry, packaging and movement clearances. Explain measurement uncertainty and abstain near unsafe margins.",
+    "edgeReview": "Beat scaled visualization plus a simple measurement form on retained purchasing shoppers and independently checked fit errors.",
+    "knownOverlap": "IKEA Kreativ already places products at scale; Apple RoomPlan supplies geometry. Another attractive room render is insufficient.",
+    "scopeNote": "Buyer: furniture or appliance merchant with trustworthy dimensions. Start with one bounded task such as an alcove or door swing. It differs from I03 by measuring the customer's physical environment rather than resolving a manufacturer relation."
+  },
+  {
+    "id": "I12",
+    "title": "Offer an explicit compromise when the requested combination is impossible",
+    "lens": "behavioral",
+    "stage": "Selection recovery",
+    "priority": "Develop next",
+    "horizon": "now",
+    "primaryCandidateId": "feedonomics-06",
+    "candidateIds": [
+      "feedonomics-06"
+    ],
+    "reason": "Explain the smallest conflicting set of requested preferences, then show a few feasible options each changing one buyer-marked negotiable requirement.",
+    "edgeReview": "Beat tuned nearest-match recommendations on additional catalog purchasers. A sale obtained by silently dropping a requirement fails the test.",
+    "knownOverlap": "Semantic search, facets and conversational agents already relax queries. The proposed difference is a visible, buyer-approved tradeoff tied to a purchasable option.",
+    "scopeNote": "Buyer: merchant with real zero-result demand and enough assortment alternatives. Never relax a hard budget, safety requirement or compatibility condition without explicit revision. I03 supplies qualification; this idea changes only permitted preferences."
+  },
+  {
+    "id": "I13",
+    "title": "Carry a buyer-approved shopping brief across the AI handoff",
+    "lens": "identity",
+    "stage": "Arrival and cart",
+    "priority": "Conditional bet",
+    "horizon": "frontier",
+    "primaryCandidateId": "constructor-03",
+    "candidateIds": [
+      "constructor-03",
+      "profound-02",
+      "peec-04",
+      "scrunch-03",
+      "burnish-03",
+      "feedonomics-03",
+      "lilyai-06",
+      "shopify-05",
+      "shopify-08",
+      "behavioral-02",
+      "regulatory-08",
+      "gorgias-01"
+    ],
+    "reason": "Transfer the selected products, accepted requirements and unfinished decision through an expiring opaque handle, then show an editable, revalidated summary at the merchant.",
+    "edgeReview": "Beat the identical correctly prefilled native cart. The extra value must come from preserving approved decision context rather than duplicating variant links.",
+    "knownOverlap": "Shopify has long-running carts and continue_url; Constructor has thread continuity and AEA beta. Basic memory, saved carts and portable credentials are existing capabilities.",
+    "scopeNote": "Buyer: merchant and cooperating assistant partner. A shopper-pasted brief can test the owned-site mechanism now; automated external transfer needs explicit partner support. Referrers reveal no private conversation, and the handle conveys no payment authority."
+  },
+  {
+    "id": "I14",
+    "title": "Resume a saved buying decision by reviewing only what changed",
+    "lens": "temporal",
+    "stage": "Decision continuity",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "constructor-04",
+    "candidateIds": [
+      "constructor-04",
+      "burnish-09",
+      "geoffy-07",
+      "behavioral-09"
+    ],
+    "reason": "Save chosen products, rejected options and the remaining task with permission. On a voluntary return, revalidate facts and present only material changes before resuming.",
+    "edgeReview": "Beat an existing saved cart or chat transcript on eventual first purchases from the original AI-origin cohort.",
+    "knownOverlap": "Constructor already retains threads and cross-device identity; Shopify supplies persistent carts. A stored shortlist by itself is not the proposed advantage.",
+    "scopeNote": "Buyer: high-consideration merchant with multi-visit journeys. Keep retention short and editable; do not count ordinary repeat orders as new discovery purchases. Notifications, if later tested, require a separately chosen channel."
+  },
+  {
+    "id": "I15",
+    "title": "Give decided shoppers a quiet path to payment",
+    "lens": "psychological",
+    "stage": "Checkout completion",
+    "priority": "Develop next",
+    "horizon": "now",
+    "primaryCandidateId": "gorgias-08",
+    "candidateIds": [
+      "gorgias-08"
+    ],
+    "reason": "After an explicit readiness cue, suppress optional agent follow-ups and promotional interruptions, show a concise order check and open the existing checkout route.",
+    "edgeReview": "Beat the merchant's current tuned promotional flow on order count in the predeclared ready-to-buy cohort. Lost upsell revenue is a contribution guardrail.",
+    "knownOverlap": "Gorgias and commerce platforms already support checkout links and controllable agent behavior. The edge is a tested stopping policy for informed referrals.",
+    "scopeNote": "Buyer: merchant whose ready shoppers receive further prompts. Use explicit buyer intent, not inferred emotion. Keep help available and mandatory information visible; count all eligible assigned shoppers."
+  },
+  {
+    "id": "I16",
+    "title": "Keep a stable, evidence-backed comparison at the decision point",
+    "lens": "psychological",
+    "stage": "Decision support",
+    "priority": "Develop next",
+    "horizon": "now",
+    "primaryCandidateId": "constructor-05",
+    "candidateIds": [
+      "constructor-05",
+      "profound-07",
+      "scrunch-09",
+      "geoffy-09",
+      "lilyai-09",
+      "truefit-06",
+      "tinyseo-06"
+    ],
+    "reason": "Keep selected alternatives stable while showing decisive requirements, verified limitations, relevant proof images and explicit unknowns.",
+    "edgeReview": "Beat the same recommendations and facts in the current comparison or agent UI. More confidence, longer descriptions or changed ranking do not establish the advantage.",
+    "knownOverlap": "Comparison tables, product Q&A, review summaries and evidence-backed enrichment already exist. Stability and a correct decisive contrast must earn incremental purchases.",
+    "scopeNote": "Buyer: merchant receiving comparison-stage referrals. Never claim to know a private agent's reasoning. Test the presentation of the same evidence and products; separately researched recommendation audits and return-trained policies remain in reserve."
+  },
+  {
+    "id": "I17",
+    "title": "Show which choices remain suitable when priorities change",
+    "lens": "psychological",
+    "stage": "Decision support",
+    "priority": "Conditional bet",
+    "horizon": "now",
+    "primaryCandidateId": "psychological-02",
+    "candidateIds": [
+      "psychological-02",
+      "psychological-01"
+    ],
+    "reason": "Let the shopper revise consequential assumptions and acceptable preference ranges, then show which eligible products remain suitable and exactly when the choice changes.",
+    "edgeReview": "Beat a fixed recommendation and ordinary editable filters using the same products, prices and hard requirements. The test is additional purchasers without greater decision burden.",
+    "knownOverlap": "Preference controls and interactive comparison are established patterns. The proposed value is making recommendation sensitivity understandable, not claiming access to hidden model reasoning.",
+    "scopeNote": "Buyer: high-consideration merchant with explicit comparable dimensions. Keep all feasible alternatives accessible. This addresses unstable priorities; I08 addresses a missing fact and I16 presents the current evidence."
+  },
+  {
+    "id": "I18",
+    "title": "Teach the one technical distinction blocking the purchase",
+    "lens": "psychological",
+    "stage": "Decision support",
+    "priority": "Develop next",
+    "horizon": "now",
+    "primaryCandidateId": "psychological-03",
+    "candidateIds": [
+      "psychological-03"
+    ],
+    "reason": "Offer an optional short demonstration of a consequential concept, then let the shopper check their device or task against sourced rules.",
+    "edgeReview": "Beat a matched-length, equally accurate answer or guide on novice purchasers. Lesson completion and comprehension are intermediate outcomes.",
+    "knownOverlap": "Manufacturer explainers and shopping-agent Q&A already teach specifications. A task-specific interactive explanation needs its own purchase evidence.",
+    "scopeNote": "Buyer: technical-goods merchant with recurring novice confusion, such as connector shape versus charging capability. Keep checkout available and use only verified examples; do not turn the flow into a required quiz."
+  },
+  {
+    "id": "I19",
+    "title": "Show measured performance under the shopper's intended conditions",
+    "lens": "psychological",
+    "stage": "Product qualification",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "psychological-04",
+    "candidateIds": [
+      "psychological-04"
+    ],
+    "reason": "Present a validated range of real performance, such as runtime under a selected load, so the buyer can compare it with an explicit minimum requirement.",
+    "edgeReview": "Beat the current accurate specification display on retained purchasers after an independent calibration gate. A model confidence number is not performance evidence.",
+    "knownOverlap": "Outcome-based fit guidance already exists in True Fit and product testing is established. This is a narrow non-apparel performance presentation hypothesis.",
+    "scopeNote": "Buyer: equipment merchant with licensed representative tests and held-out outcome data. Abstain where conditions lack support. Count data acquisition, misleading reassurance, returns and subgroup calibration before judging commercial value."
+  },
+  {
+    "id": "I20",
+    "title": "Send a small physical sample that resolves the stated doubt",
+    "lens": "psychological",
+    "stage": "Experiential qualification",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "psychological-06",
+    "candidateIds": [
+      "psychological-06"
+    ],
+    "reason": "Offer a comparative sample kit chosen to answer one explicit sensory question, with real product identities, neutral instructions and a route to either full-size product or neither.",
+    "edgeReview": "Beat a generic sample kit at equal credit and fulfilment cost on retained full-size purchasing households.",
+    "knownOverlap": "Samplize and SoPost already provide samples, targeting and purchase pathways. The edge is a more discriminating trial design, not sampling orchestration.",
+    "scopeNote": "Buyer: finish, fabric or sensory-product merchant with representative samples. Randomize before kit uptake; exclude sample orders from purchase success and include all shipping, waste and delay costs."
+  },
+  {
+    "id": "I21",
+    "title": "Restore documented risk context before a legitimate checkout is declined",
+    "lens": "algorithmic",
+    "stage": "Checkout completion",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "google-10",
+    "candidateIds": [
+      "google-10"
+    ],
+    "reason": "Map supported agent transaction context into the merchant's existing risk provider so a technical context gap does not cause an otherwise legitimate purchase to fail.",
+    "edgeReview": "Beat the current approved native adapter on legitimate settled orders after chargeback maturity. Approval rate alone is insufficient, and no excess false-decline prevalence has been established.",
+    "knownOverlap": "Google already supplies contextual risk signals and payment/risk vendors already address false declines. The edge is a proven merchant-specific mapping or calibration defect.",
+    "scopeNote": "Buyer: payments lead at a UCP-enabled retailer, with merchant and risk-provider approval. Shadow-test documented fields, retain mandatory rules and evaluate mature fraud losses. This is not a risk bypass, new identity inference or generic model-retuning claim."
+  },
+  {
+    "id": "I22",
+    "title": "Explain supported reasons why authentic reviews disagree",
+    "lens": "psychological",
+    "stage": "Decision support",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "psychological-08",
+    "candidateIds": [
+      "psychological-08"
+    ],
+    "reason": "Compare conflicting reviews by exact product version and relevant usage context, preserve contrary evidence and state when no supported reconciliation exists.",
+    "edgeReview": "Beat the same reviews in an aspect-summary view on retained catalog purchasers, with independent audits of explanation accuracy.",
+    "knownOverlap": "Amazon already summarizes positive and negative review aspects, and shopping assistants synthesize reviews. Context-backed disagreement is the narrow hypothesis.",
+    "scopeNote": "Buyer: merchant with licensed authentic reviews and sufficient version/context coverage. Never invent reviewer motives or explain away genuine defects. Stop if unsupported explanations, omitted negatives or mismatch returns increase."
+  },
+  {
+    "id": "I23",
+    "title": "Route unresolved buying tasks to an available specialist",
+    "lens": "behavioral",
+    "stage": "Assisted conversion",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "behavioral-05",
+    "candidateIds": [
+      "behavioral-05",
+      "truefit-08",
+      "gorgias-09"
+    ],
+    "reason": "Recognize the unresolved task and failed checks, offer an honest wait estimate and transfer a minimal approved brief to a specialist who can finish it.",
+    "edgeReview": "Beat the current Gorgias or specialist queue at equal staffing cost on additional purchasers per eligible shopping cohort.",
+    "knownOverlap": "Gorgias already performs human handoffs and routing; fit services already offer expertise. Better task selection and context transfer must earn their labor cost.",
+    "scopeNote": "Buyer: high-consideration merchant with real expert capacity. Honor direct human requests in every arm. Evaluate the optional proactive policy before escalation and include shoppers who decline or abandon the wait."
+  },
+  {
+    "id": "I24",
+    "title": "Turn an unanswered buying question into a reusable supplier fact",
+    "lens": "infrastructural",
+    "stage": "Assisted conversion",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "behavioral-04",
+    "candidateIds": [
+      "behavioral-04",
+      "datafeedwatch-10",
+      "feedonomics-10",
+      "lilyai-08",
+      "algorithmic-07"
+    ],
+    "reason": "Send a precise SKU-and-revision question to staff or a supplier, request the smallest useful measurement or document, then resume the shopper's saved decision and reuse the approved product fact.",
+    "edgeReview": "Beat the existing support and catalog-completeness workflow on purchasers at a fixed expert budget. A fact queue without a fulfilled response is insufficient.",
+    "knownOverlap": "Lily Max, feed managers and support tools already identify gaps and produce grounded content. The proposed value is acquiring missing evidence and returning it to a live buying task.",
+    "scopeNote": "Buyer: specialist merchant with supplier access. Record provenance and unfavorable answers too. Prioritization is a component; the product intervention is obtaining and delivering the missing fact. Exclude unsupported safety-critical measurements."
+  },
+  {
+    "id": "I25",
+    "title": "Repair product identity collisions across feeds and offers",
+    "lens": "identity",
+    "stage": "Discovery and offer integrity",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "datafeedwatch-08",
+    "candidateIds": [
+      "datafeedwatch-08",
+      "simprosys-08",
+      "identity-01"
+    ],
+    "reason": "Trace an observed wrong grouping to conflicting model, region, pack, condition or offer identifiers; repair the source evidence and verify permitted downstream representation.",
+    "edgeReview": "Beat competent feed validation and native Catalog mapping on additional qualified purchases from previously misrepresented offers.",
+    "knownOverlap": "Shopify grouping, Channable Catalog Matching and feed managers already map identifiers. The edge is contradiction-aware repair of a specific published collision.",
+    "scopeNote": "Buyer: multichannel merchant with evidence of mistaken grouping and rights to correct identifiers. Do not invent GTINs or equate acceptance with live exposure. This changes public product identity; I01 repairs the visitor's selected variant state."
+  },
+  {
+    "id": "I26",
+    "title": "Keep seller provenance and promises attached to the exact offer",
+    "lens": "identity",
+    "stage": "Trust and terms",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "searchpilot-07",
+    "candidateIds": [
+      "searchpilot-07",
+      "smartseo-07",
+      "regulatory-03",
+      "identity-02"
+    ],
+    "reason": "Bind seller identity, model, region, condition, warranty provider and policy version to the offer; disclose material changes if the shopper changes seller.",
+    "edgeReview": "Beat the merchant's existing offer presentation and trust evidence on additional retained purchases in seller-sensitive journeys.",
+    "knownOverlap": "OpenAI already carries merchant offer IDs, and platforms represent seller and policy data. Brand authorization evidence and generic trust badges also exist.",
+    "scopeNote": "Buyer: brand or authorized retailer with verifiable records and permitted publication. An absent authorization record does not prove counterfeiting. A GTIN match is not physical authentication. Offer selection remains the buyer's choice."
+  },
+  {
+    "id": "I27",
+    "title": "Repair an exact partner-offer failure after incumbent routing",
+    "lens": "infrastructural",
+    "stage": "Selection recovery",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "peec-07",
+    "candidateIds": [
+      "peec-07",
+      "profound-04",
+      "scrunch-07",
+      "channable-09",
+      "regulatory-01"
+    ],
+    "reason": "At a demonstrated wrong-model, wrong-region or stale-stock handoff, recheck the exact permitted offer against partner evidence and repair that specific route before the buyer leaves.",
+    "edgeReview": "Beat configured PriceSpider/Wayvia or MikMak using the same retailer network on brand-wide additional retained purchasers. Generic retailer routing, stock checks, pickup and purchase attribution are incumbent capabilities.",
+    "knownOverlap": "PriceSpider/Wayvia supplies availability-linked routing and retailer purchase/basket tracking; MikMak supplies in-stock and authorized-retailer routing. See https://wayvia.com/shoppable-media and https://www.mikmak.com/partnership .",
+    "scopeNote": "Buyer: manufacturer with a demonstrated incumbent miss, a partner API able to recheck the exact regional SKU and permitted order receipts. Keep only if the added check fixes a measurable gap beyond a correct incumbent configuration. Retailer switching and clickthrough do not count as added brand demand."
+  },
+  {
+    "id": "I28",
+    "title": "Preserve the organization, quote and approval needed to buy",
+    "lens": "identity",
+    "stage": "Purchase authority",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "identity-07",
+    "candidateIds": [
+      "identity-07",
+      "behavioral-10"
+    ],
+    "reason": "Carry the authorized purchasing location, project, required technical sign-offs and quote version through native drafts and approval, then recheck material changes before payment.",
+    "edgeReview": "Beat existing B2B roles, quote and requisition flows on paid eligible requests at equal commercial terms.",
+    "knownOverlap": "Shopify B2B, distributor portals and procurement systems already provide roles, entitlements and approval. The hypothesis is continuity across an observed failing handoff.",
+    "scopeNote": "Buyer: distributor or B2B merchant with an approved assistant route and organization permissions. Start with one integration and native roles. Only the authorized payer can finalize the purchase; cross-distributor procurement remains a separate reserve hypothesis."
+  },
+  {
+    "id": "I29",
+    "title": "Resolve joint buyers' conflicting requirements before checkout",
+    "lens": "identity",
+    "stage": "Decision support",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "psychological-09",
+    "candidateIds": [
+      "psychological-09",
+      "identity-08"
+    ],
+    "reason": "Create a voluntary shared decision where participants privately state non-negotiable requirements and decide what to share, then compare options satisfying the agreed constraints.",
+    "edgeReview": "Beat a shared shortlist and chat on mutually accepted purchasing households or projects, without increasing decision delay.",
+    "knownOverlap": "Shared lists and collaborative shopping already exist. Private, explicit constraint elicitation and resolution must show additional purchase value.",
+    "scopeNote": "Buyer: furniture or other joint-purchase merchant. Participants send their own invitations. Use task-limited adult participation, avoid inferred relationships and keep factual agreement distinct from payment authority in I28."
+  },
+  {
+    "id": "I30",
+    "title": "Keep gift intent separate from the buyer's own preferences",
+    "lens": "identity",
+    "stage": "Personalized selection",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "constructor-08",
+    "candidateIds": [
+      "constructor-08"
+    ],
+    "reason": "Let the shopper explicitly mark a task as a gift, use temporary editable preferences and prevent gift activity from automatically training the buyer's self-preference profile.",
+    "edgeReview": "Beat the merchant's tuned existing personalization, including any gift mode, on gift purchases and later self-shopping outcomes.",
+    "knownOverlap": "Constructor already uses contextual signals and purchase history and may support configured gifting. The edge is task-level feature isolation and correct feedback labels, not a gift chat mode.",
+    "scopeNote": "Buyer: merchant controlling personalization inputs and training labels. Do not identify or profile the recipient. Require explicit gift context and evaluate whether ordinary shopping regresses after the gift task."
+  },
+  {
+    "id": "I31",
+    "title": "Refresh fit advice when the garment's construction changes",
+    "lens": "temporal",
+    "stage": "Product qualification",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "truefit-04",
+    "candidateIds": [
+      "truefit-04"
+    ],
+    "reason": "Tie measurements and reference-garment advice to the actual product revision; invalidate stale evidence after a material cut or fabric change and obtain a targeted independent measurement.",
+    "edgeReview": "Beat True Fit's current model and dynamic size charts on additional suitable purchasers within genuine-change cohorts. Reduced returns alone must be reported separately.",
+    "knownOverlap": "True Fit already learns from outcomes, ingests returns and manages fit guidance. Generic versioning and enrichment expiry also exist; batch-level superiority is unproven.",
+    "scopeNote": "Buyer: apparel brand that reuses styles and can supply manufacturing revisions. Confirm alerts with measurements, not changing customer mix. The selected intervention invalidates stale garment references; generic fit enrichment and catalog-wide fact expiry remain in reserve."
+  },
+  {
+    "id": "I32",
+    "title": "Make a no-match garment purchasable through a real alteration",
+    "lens": "behavioral",
+    "stage": "Assortment extension",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "truefit-07",
+    "candidateIds": [
+      "truefit-07"
+    ],
+    "reason": "Combine an eligible garment with the merchant's actual shortening service, finished-dimension tolerance, price and capacity to meet a stated length and deadline.",
+    "edgeReview": "Beat product-only search plus the existing alteration offer on delivered satisfied purchasers. Restricted returns cannot be counted as improved retention.",
+    "knownOverlap": "UNIQLO already offers online alterations and True Fit already resolves fit. The proposed edge is discovering the feasible garment-and-service combination before rejecting the search.",
+    "scopeNote": "Buyer: apparel merchant with an operating alteration service. Respect which dimensions can change, show applicable terms and monitor remakes and satisfaction. Never treat shortening as a solution for an incompatible cut."
+  },
+  {
+    "id": "I33",
+    "title": "Apply a verified existing benefit before budget filtering",
+    "lens": "identity",
+    "stage": "Offer qualification",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "identity-05",
+    "candidateIds": [
+      "identity-05",
+      "scrunch-06",
+      "google-05",
+      "regulatory-02",
+      "gorgias-04"
+    ],
+    "reason": "With permission, resolve an existing loyalty or verified-discount entitlement and show the eligible live price before the agent rejects the offer as unaffordable.",
+    "edgeReview": "Beat the same benefit applied later through a competent native flow. More purchases must come from timing and reliable proof transfer, not a new discount subsidy.",
+    "knownOverlap": "UCP already supports identity linking and loyalty; verification providers and promotion engines already establish eligibility.",
+    "scopeNote": "Buyer: merchant with a real program and issuer trust. Keep documents with the verifier, bind claims to the offer and expiry, support guests and revalidate at checkout. Account linking must be optional and show its concrete benefit."
+  },
+  {
+    "id": "I34",
+    "title": "Choose a purchase route that supports the actual cart",
+    "lens": "infrastructural",
+    "stage": "Checkout routing",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "shopify-02",
+    "candidateIds": [
+      "shopify-02",
+      "simprosys-09"
+    ],
+    "reason": "Check the cart's required options, validations and checkout extensions against the supported agent route, then choose a valid direct route or a preserved storefront handoff.",
+    "edgeReview": "Beat documented native eligibility checks and a correctly configured fallback on completed purchases from complex carts.",
+    "knownOverlap": "Shopify and Google already publish capabilities, validation tools and continuation routes. A manifest alone is not an edge.",
+    "scopeNote": "Buyer: merchant with customization, subscriptions or extension-dependent carts and control of an approved integration. Never force an external engine to render unsupported UI. Measure route changes before checkout failure, separately from I06 error repair."
+  },
+  {
+    "id": "I35",
+    "title": "Finish an ambiguous checkout exactly once",
+    "lens": "infrastructural",
+    "stage": "Checkout recovery",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "infrastructure-04",
+    "candidateIds": [
+      "infrastructure-04"
+    ],
+    "reason": "Reconcile one logical purchase across commerce state, payment state, provider receipts and order IDs after a lost response or delayed webhook.",
+    "edgeReview": "Beat safe native recovery and the merchant's manual reconciliation on timely nonduplicate orders, without duplicate captures or fulfilment.",
+    "knownOverlap": "UCP and Stripe already require idempotency and safe recovery. The proposed advantage is correct cross-system reconciliation in heterogeneous merchant stacks.",
+    "scopeNote": "Buyer: merchant or integrator with authoritative status reads and stable idempotency mapping. Inject faults only in a sandbox; observe natural production failures. Never treat a new payment attempt as a status check or broaden the buyer's original authorization."
+  },
+  {
+    "id": "I36",
+    "title": "Complete checkout decisions before the platform timeout",
+    "lens": "infrastructural",
+    "stage": "Checkout completion",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "infrastructure-05",
+    "candidateIds": [
+      "infrastructure-05"
+    ],
+    "reason": "Budget the hook's dependency path, parallelize independent reads, remove optional delays and keep an authoritative final check so valid purchases are not lost to deadline misses.",
+    "edgeReview": "Beat a tuned native implementation on paid orders while preserving decision parity, stock truth and security checks.",
+    "knownOverlap": "Stripe live hooks, Google latency logging and performance tooling already exist. Faster execution alone is not a commercial edge.",
+    "scopeNote": "Buyer: merchant with measured hook timeouts and implementation control. Shadow-test identical decisions first, then randomize sessions. Distinct from I49: this changes backend decision deadlines, not storefront page loading."
+  },
+  {
+    "id": "I37",
+    "title": "Repair legacy basket mappings into approved checkout channels",
+    "lens": "infrastructural",
+    "stage": "Arrival and cart",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "infrastructure-08",
+    "candidateIds": [
+      "infrastructure-08",
+      "infrastructure-01",
+      "google-02",
+      "datafeedwatch-03"
+    ],
+    "reason": "Map a merchant's documented legacy units, pack meanings and totals into an approved checkout contract, then read back the basket and reconcile the intended quantity and authoritative price.",
+    "edgeReview": "Beat a correct current native UCP or Stripe ACS adapter. The edge is a demonstrated legacy-to-channel mapping defect, not adding units, visible conversion or recoverable quantity errors that the protocol already specifies.",
+    "knownOverlap": "The UCP 2026-08-25 checkout contract already defines quantity_unit, scale, increment, sale basis, authoritative totals, visible conversion and recoverable mismatch, and forbids silent reinterpretation: https://ucp.dev/specification/shopping/checkout/ . ACS already spans protocols.",
+    "scopeNote": "Buyer: complex-goods retailer with documented legacy semantics, approved channel access and reference totals. Reproduce one real adapter defect and compare with a competent native correction. Follow the current contract; use the permitted merchant handoff for unsupported merchandise. Concurrent edits remain a separate reserve."
+  },
+  {
+    "id": "I38",
+    "title": "Repair false blocks of verified buyer-directed shopping agents",
+    "lens": "infrastructural",
+    "stage": "Access and discovery",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "infrastructure-10",
+    "candidateIds": [
+      "infrastructure-10",
+      "identity-10"
+    ],
+    "reason": "Trace a verified partner through product and cart routes, then correct supported WAF or signature-policy configuration at the exact false-block point.",
+    "edgeReview": "Beat the existing narrow merchant policy on additional orders with matched fraud, unauthorized-write and load guardrails.",
+    "knownOverlap": "Cloudflare already verifies agents and platforms already authenticate requests. This is a commerce-route configuration and testing hypothesis.",
+    "scopeNote": "Buyer: merchant with proven false blocks and edge-policy control. Signed identity is only one access input and never payment authority. Do not whitelist user-agent text or bypass a legitimate denial; keep a normal buyer continuation."
+  },
+  {
+    "id": "I39",
+    "title": "Keep newer offers from being overwritten by stale publications",
+    "lens": "infrastructural",
+    "stage": "Offer integrity",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "infrastructure-02",
+    "candidateIds": [
+      "infrastructure-02",
+      "google-04"
+    ],
+    "reason": "Coordinate every writer with source versions, coalesced updates and explicit deletion; reconcile source truth, accepted state, observed display and checkout separately.",
+    "edgeReview": "Beat well-configured feed scheduling and native live hooks on orders from volatile catalogs. Fewer upload errors are only diagnostic.",
+    "knownOverlap": "Stripe ACS and OpenAI support updates and live checks; feed vendors already synchronize catalogs. The edge requires measured harmful ordering or propagation failures across writers.",
+    "scopeNote": "Buyer: multichannel merchant controlling every publisher and admitted API access. Acceptance is not live exposure. Use merchant or independent inventory-pool assignment, preserve mandatory truth updates and include all-channel displacement. Refresh-budget optimization remains in reserve."
+  },
+  {
+    "id": "I40",
+    "title": "Hold inventory only when the buyer genuinely starts committing",
+    "lens": "temporal",
+    "stage": "Checkout completion",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "infrastructure-03",
+    "candidateIds": [
+      "infrastructure-03",
+      "peec-09",
+      "burnish-10",
+      "feedonomics-02",
+      "shopify-10",
+      "truefit-02",
+      "temporal-07"
+    ],
+    "reason": "Acquire a real bounded reservation after explicit buyer commitment, share its lease across the handoff and release it reliably on completion, cancellation or expiry.",
+    "edgeReview": "Beat the merchant's existing reservation policy on total fulfilled purchases across the shared inventory pool.",
+    "knownOverlap": "Native inventory and draft-order reservations already exist. Merely reserving the last item for an AI visitor may displace another sale.",
+    "scopeNote": "Buyer: merchant with documented stock races and supported holds. Crawler reads hold nothing. Use truthful expiry and abuse limits; proceed only where replenishment or capacity makes additional total orders plausible."
+  },
+  {
+    "id": "I41",
+    "title": "Honor a genuine quoted price through checkout",
+    "lens": "temporal",
+    "stage": "Offer integrity",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "shopify-09",
+    "candidateIds": [
+      "shopify-09",
+      "channable-07",
+      "regulatory-10"
+    ],
+    "reason": "Issue a merchant-authorized expiring item-price receipt for an eligible offer and redeem it through a supported discount or draft-order path.",
+    "edgeReview": "Beat native sale scheduling, price refresh and the existing support exception flow at the same discount budget on new purchasers.",
+    "knownOverlap": "Commerce platforms already schedule promotions and support discounts. The proposed edge is reliable quoted-offer redemption, not another timer or savings claim.",
+    "scopeNote": "Buyer: merchant with verified quote-to-cart abandonment and authority to honor quotes. Bind item, currency, quantity and terms; keep tax and shipping separate unless included. Legal prior-price claims need actual applicable history and merchant review."
+  },
+  {
+    "id": "I42",
+    "title": "Quote the return terms and practical route for this exact purchase",
+    "lens": "regulatory",
+    "stage": "Trust and terms",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "regulatory-09",
+    "candidateIds": [
+      "regulatory-09",
+      "burnish-07",
+      "geoffy-06",
+      "simprosys-07",
+      "smartseo-05",
+      "google-08",
+      "temporal-05",
+      "constructor-09",
+      "searchpilot-08"
+    ],
+    "reason": "Resolve the item, destination, condition and relevant dates into the applicable return terms and, where available, a usable collection route and real cost.",
+    "edgeReview": "Beat accurate native policy Q&A and configured Narvar-style returns on new retained purchasers after logistics costs.",
+    "knownOverlap": "Google supports offer-level return data; Narvar supports configurable rules and fees; Constructor answers policy questions. Generic policy markup is direct overlap.",
+    "scopeNote": "Buyer: merchant with complex or bulky-item returns and a provider able to honor quoted service. Keep statutory remedies, voluntary policy and optional collection distinct. Gift-date windows are a use case of this same evaluator."
+  },
+  {
+    "id": "I43",
+    "title": "Turn a known safety specification into an evidence-complete order",
+    "lens": "regulatory",
+    "stage": "Product qualification",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "regulatory-04",
+    "candidateIds": [
+      "regulatory-04",
+      "profound-08",
+      "datafeedwatch-07"
+    ],
+    "reason": "Match buyer-supplied approved requirements to exact product, model and document versions, show satisfied, contradicted or unestablished evidence, and prepare the purchasing packet.",
+    "edgeReview": "Beat the distributor's competent document and expert workflow on suitable paid orders, with incorrect qualification as a stop condition.",
+    "knownOverlap": "Suppliers already publish declarations and standards evidence; product-data tools can expose it. The edge is exact evidence-to-order continuity and reduced support delay.",
+    "scopeNote": "Buyer: specialist distributor with reviewed records and qualified requirement owners. The system does not perform a hazard assessment or certify compliance. Start in one jurisdiction and product category; required safety information is present in every arm."
+  },
+  {
+    "id": "I44",
+    "title": "Make repairability resolve to a real service the buyer can use",
+    "lens": "regulatory",
+    "stage": "Trust and terms",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "regulatory-05",
+    "candidateIds": [
+      "regulatory-05"
+    ],
+    "reason": "Join an exact device model and applicable repair information to a participating repairer's current coverage, scoped quote, parts access and service terms.",
+    "edgeReview": "Beat the required label and existing repair information on additional device purchasers after any service subsidy.",
+    "knownOverlap": "EPREL already exposes repairability information and product documents; repair networks already quote work. The proposed advantage is an executable local route, not another label.",
+    "scopeNote": "Buyer: electronics retailer with repair partners. Separate a present indicative quote from any genuinely funded future promise. Do not sell statutory rights as an add-on or count a service purchase as an additional device buyer."
+  },
+  {
+    "id": "I45",
+    "title": "Verify that the buyer can actually use the refill or take-back program",
+    "lens": "regulatory",
+    "stage": "Offer qualification",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "regulatory-06",
+    "candidateIds": [
+      "regulatory-06"
+    ],
+    "reason": "Check exact refill compatibility, local delivery and collection coverage, deposits and acceptance terms before proposing the starter purchase.",
+    "edgeReview": "Beat an already truthful claim and normal ordering path on retained first purchases; repeat refill orders are a separate secondary cohort.",
+    "knownOverlap": "Provenance already validates scoped claims and distributes them to shopping channels. A claims ledger or green badge is not the proposed edge.",
+    "scopeNote": "Buyer: brand with an operating refill or take-back service. Require current serviceability and merchant-reviewed claims. Do not infer whole-product environmental superiority or count starter and refill lines as separate converted buyers."
+  },
+  {
+    "id": "I46",
+    "title": "Make the entire handoff and extension step accessible",
+    "lens": "regulatory",
+    "stage": "Checkout completion",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "regulatory-07",
+    "candidateIds": [
+      "regulatory-07",
+      "tinyseo-04"
+    ],
+    "reason": "Repair the actual variant, validation and extension journey with semantic controls, preserved entries, announced errors and predictable focus, validated by consenting assistive-technology users.",
+    "edgeReview": "Beat the accessible native base checkout plus existing integrated extension on completed purchases in the predeclared eligible cohort.",
+    "knownOverlap": "Native checkouts and accessibility tools already cover many controls. The edge is a specific end-to-end task failure spanning a third-party step.",
+    "scopeNote": "Buyer: merchant and cooperating extension provider with an observed barrier. Preserve authentication and a resumable help route. Automated scores do not establish accessibility or legal compliance; evaluate the full purchase task."
+  },
+  {
+    "id": "I47",
+    "title": "Test a small real assortment against unmet shopping requirements",
+    "lens": "algorithmic",
+    "stage": "Demand fulfilment",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "algorithmic-06",
+    "candidateIds": [
+      "algorithmic-06",
+      "geoffy-08"
+    ],
+    "reason": "Distinguish a genuine assortment gap from retrieval failure, then fund a small real-stock or honestly described preorder pilot from deduplicated failed human shopping intents.",
+    "edgeReview": "Beat the existing buying policy at equal working capital on total retained purchasers across affected inventory pools.",
+    "knownOverlap": "Google suggests products to stock and Lily offers demand forecasting. Assortment optimization is established; the edge is verified requirement-level demand that improves a controlled inventory decision.",
+    "scopeNote": "Buyer: retailer with buying authority, supplier access and independent stock cells. Source real purchasable products and keep marketing support equal. Include unsold inventory, substitutions and returns. Synthetic prompts cannot establish demand; stock transfers and size replenishment remain separate reserves."
+  },
+  {
+    "id": "I48",
+    "title": "Match the intended use date to a fulfilable usable-life promise",
+    "lens": "temporal",
+    "stage": "Fulfilment qualification",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "temporal-06",
+    "candidateIds": [
+      "temporal-06"
+    ],
+    "reason": "Qualify dated products using the customer's use date and an allocatable batch or enforceable minimum-life promise, then preserve that condition through fulfilment.",
+    "edgeReview": "Beat accurate existing life labels and minimum-life commitments on additional fulfilled purchasers after waste and refunds.",
+    "knownOverlap": "Ocado already offers a Fresh+ minimum-life promise. The proposed edge is use-date qualification backed by actual allocation, beyond arrival-date checking.",
+    "scopeNote": "Buyer: perishable-goods merchant with batch data or an enforceable promise. Respect storage conditions and distinguish safety dates from quality dates. Never extend dates; stop if fulfilment cannot honor the selected condition."
+  },
+  {
+    "id": "I49",
+    "title": "Make the cold AI referral page ready for an actual purchase",
+    "lens": "infrastructural",
+    "stage": "Arrival and cart",
+    "priority": "Develop next",
+    "horizon": "now",
+    "primaryCandidateId": "smartseo-08",
+    "candidateIds": [
+      "smartseo-08",
+      "tinyseo-01",
+      "tinyseo-02"
+    ],
+    "reason": "Optimize the exact uncached arrival path until the correct image, variant control and add-to-cart work, deferring nonessential scripts while preserving product-detail recognition.",
+    "edgeReview": "Beat a competent speed app and tuned native theme on AI-origin paid orders per engineering budget, rather than lab scores or warmed navigation.",
+    "knownOverlap": "Smart SEO and Tiny SEO already optimize images and performance; Shopify Rollouts can test theme changes. Cold-entry task completion is the proposed focus.",
+    "scopeNote": "Buyer: merchant with measured slow referral paths and theme access. Validate image detail and accessibility, use representative mobile field data, and keep buyer assignment persistent. Repairing missing image discovery is a separate reserve; this idea optimizes a functioning visible purchase path."
+  },
+  {
+    "id": "I50",
+    "title": "Make simulation earn a role in choosing purchase-producing changes",
+    "lens": "measurement",
+    "stage": "Experiment selection",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "primaryCandidateId": "measurement-01",
+    "candidateIds": [
+      "measurement-01",
+      "profound-01",
+      "peec-01",
+      "scrunch-08",
+      "burnish-01",
+      "burnish-02",
+      "geoffy-10",
+      "datafeedwatch-01",
+      "feedonomics-01",
+      "simprosys-10",
+      "smartseo-10",
+      "tinyseo-09",
+      "shopify-01",
+      "google-01",
+      "lilyai-10",
+      "truefit-10",
+      "algorithmic-08",
+      "temporal-10",
+      "measurement-02",
+      "measurement-03",
+      "measurement-04",
+      "measurement-05",
+      "measurement-06",
+      "measurement-07",
+      "measurement-08",
+      "measurement-09",
+      "measurement-10",
+      "constructor-07",
+      "searchpilot-01",
+      "searchpilot-02",
+      "searchpilot-03",
+      "searchpilot-09",
+      "searchpilot-10"
+    ],
+    "reason": "Pair frozen replay predictions with independently assigned merchant purchase tests, then determine whether those predictions improve intervention selection at a fixed total budget on held-out merchants.",
+    "edgeReview": "Beat experienced operators and the existing SearchPilot, Lily Max or native testing workflow. Require prospective additional orders from the selection policy, not synthetic preference or a more elaborate statistical report.",
+    "knownOverlap": "SimGym, Rollouts, SearchPilot, Lily Max, Feedonomics and Constructor already provide simulation, experiments or purchase measurement. Generic simulation plus A/B testing is not new.",
+    "scopeNote": "Buyer: agency or experimentation team with enough real trials and order/refund permission. This is the sole pure measurement/allocation idea. Assignment, substitution controls, falsification, pooling and repair prioritization are supporting methods, not additional products."
+  }
+]

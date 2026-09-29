@@ -1,0 +1,669 @@
+{
+  "id": "datafeedwatch",
+  "name": "DataFeedWatch",
+  "benchmarkType": "commercial",
+  "winningEvidence": [
+    "Public USD subscriptions and long-running Shopify listing establish a real paid workflow benchmark; the fetched listing showed 4.7/5 from 339 reviews on 29 September 2026. This is neither audited active-customer count nor proof of causal conversion uplift.",
+    "Vendor reports 18,497+ brands and extensive channel distribution. Selection rests on commercial adoption and relevant experimentation, not an inference about private profitability.",
+    "Vendor cases report paid-shopping gains, but randomized AI-origin purchase lift was not established in the reviewed material. Current announcement says DataFeedWatch is joining Revmatics, superseding older Cart.com-only notes."
+  ],
+  "currentOffer": "Snapshot 29 September 2026: catalog/feed mapping, rules, AI extraction/title generation, validation, segmentation and channel exports for merchants/agencies. Vendor monthly prices: Shop USD 64 for 1,000 SKUs/3 feeds; Merchant USD 84 for 5,000/10; Agency USD 239 for 30,000/150; Enterprise quote-led. Shopify listing separately displays Enterprise USD 599, so obtain a current quote. Vendor offers coaching +USD 450/month and managed service from USD 750. Existing Perplexity and ChatGPT-shopping feed templates are documented.",
+  "conversionMechanism": "Truthful, relevant feed data can improve eligibility, matching, selection and landing consistency; rules and tests can scale effective changes. Google Shopping impressions/clicks/CVR and AI-discovery recommendations are different outcomes. More attributable AI orders can also replace other-channel purchases; retained total orders and randomized holdouts are needed for an incremental-demand claim.",
+  "harness": {
+    "offlineSimulation": "not_found",
+    "liveMonitoring": "documented",
+    "randomizedExperiment": "unclear",
+    "purchaseMeasurement": "documented",
+    "details": "Scope distinctions: live feed QA and external Google campaign/GA monitoring are documented, while production AI answer monitoring and offline shopper replay were not found in the reviewed DFW sources. A/B titles are documented, but the detailed guide alternates A/B over item IDs and exposes one title per item, so randomization is not established. External Google cart/purchase measurement is documented; a native AI-origin randomized purchase ledger was not found. These are source-search results, not proof of absent private capabilities."
+  },
+  "strengths": [
+    "Mature editable feed rules and previews with source/AI choice",
+    "Existing title tests and product-level output control",
+    "Merchant-operable channel distribution including AI-shopping templates",
+    "External purchase-level/cart-data workflow and expert services",
+    "A test-to-template pattern already demonstrated in vendor case narratives"
+  ],
+  "limits": [
+    "Detailed A/B guide describes deterministic product allocation, not randomized shopper exposure",
+    "Case reports omit enough design detail to prevent independent causal estimation",
+    "United RV prose and embedded screenshots appear reversed and differ on duration; conversion-action definitions are not disclosed",
+    "Adalystic GA screenshot is explicitly illustrative, dated 2023 and reports all conversion events, so it is not case-specific purchase proof",
+    "Feed validity/admission/acceptance do not establish actual recommendation or purchase effects",
+    "Revmatics CRO and native commerce functions increase competitive overlap; undocumented features remain unknown"
+  ],
+  "improve": [
+    "Layer pre-registered family randomization, ingestion observation and net-order reconciliation onto existing DFW workflows",
+    "Separate organic AI, paid shopping and onsite experiments; preserve total-order cannibalization guardrails",
+    "Tie exact fit, delivery, pack, identity and cart failures to independently testable interventions",
+    "Use tool replay for diagnosis and test prioritization; calibrate against live human purchases before claiming transfer",
+    "Spend data acquisition and update capacity according to observed purchase loss, with explicit unknowns and fixed budgets"
+  ],
+  "ideas": [
+    {
+      "id": "datafeedwatch-01",
+      "title": "Prove whether a paid-shopping title winner also produces AI-origin orders",
+      "lens": "measurement",
+      "buyer": "Feed agencies and larger merchants already using DataFeedWatch title tests",
+      "problem": "A title can win Google Shopping clicks yet fail AI product interpretation; current product splits and tagged referrals do not establish incremental AI purchases.",
+      "mechanism": "Discovery and measurement. Validate title/fact changes on real purchase outcomes, then deploy only supported winners. Measurement creates value only if it changes an allocation or publishing decision that produces more retained orders.",
+      "intervention": "Add a pre-registered experiment service above existing DFW exports: assign matched product-family clusters with a seeded random draw, preserve the established Google winner, test a factual alternative in the admitted AI feed, record assignment and ingestion evidence, join order/return data and report cross-channel spillovers.",
+      "competitorOverlap": "DFW already provides title splits, URL tracking and winner publication; Blue Bungalow already joins purchased-item data. Burnish-style directional revenue measurement is also adjacent. We did not find public DFW documentation of this AI-specific randomized purchase protocol; absence is unconfirmed.",
+      "edgeHypothesis": "A treatment-invariant assignment ledger plus purchase reconciliation can reject synthetic or paid-channel winners that do not create AI-origin retained orders, improving the next deployment decision.",
+      "dataNeeded": [
+        "Product-family and substitution groups",
+        "Preperiod orders and AI referral coverage",
+        "Feed export and observed ingestion timestamps",
+        "Order IDs, purchased SKUs, cancellations and returns",
+        "Concurrent promotion and ad-spend logs"
+      ],
+      "experiment": "Randomize stratified product-family clusters, not consecutive SKU IDs, to current DFW AI export versus a proposed factual title recipe. Primary endpoint: retained AI-origin orders per assigned cluster over a fixed eight-week window, followed by the return window. Estimate power using preperiod cluster variance; eight weeks is provisional. Keep assignment in intention-to-treat analysis if ingestion fails. Guardrails: total-store retained orders, paid performance, factual accuracy, cross-family substitution and unchanged attribution coverage.",
+      "metric": "Difference in mean retained AI-origin orders per assigned family-week. Referrer-tagged orders are the observable subset, not all AI-assisted demand. Report total-order change beside channel change; no claim of net incremental demand if channel gains merely replace other purchases.",
+      "impactEvidence": "Adjacent vendor claims only: dfw-rv and dfw-searchmind report Google Shopping improvement with confounded comparisons. dfw-adalystic documents split-test scale, not a reproducible AI purchase effect. Proposed advantage is hypothesized.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed traffic, fault prevalence or conversion baseline. Chosen planning assumptions: USD 600 software/pilot fee per month; USD 40 contribution per additional fulfilled order retained after returns. Integration and operator costs are additional.",
+        "calculation": "Fee-only break-even is 600 / 40 = 15 additional retained orders per month. Full break-even is (fee + incremental operating + integration costs) / contribution per retained order.",
+        "range": "No empirical uplift range. Zero or negative purchase effects are possible; the fee-only threshold is a hurdle, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot price: USD 600/month for experiment setup and order reconciliation. Existing DFW software/service pricing is only an adjacent budget proxy.",
+      "costControl": "Screen factual candidates with cheap deterministic checks and paired tool replay, then spend live-test budget on a small pre-registered set; do not choose winners on simulation alone.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant-approved feed access",
+        "Sufficient organic AI shopping volume",
+        "Separate admitted destination export",
+        "Stable first-party purchase/return join",
+        "A source field the destination actually consumes"
+      ],
+      "failureMode": "Sparse referrals, engine rewrites, ingestion delay and shopper substitution make the test inconclusive; title changes can move attribution without increasing purchases.",
+      "falsifier": "A powered live holdout finds no commercially useful retained-order gain, or current DFW/agency procedures deliver the same decision quality at lower total cost.",
+      "sourceIds": [
+        "dfw-ab",
+        "dfw-ga-ab",
+        "dfw-adalystic",
+        "dfw-rv",
+        "dfw-searchmind",
+        "dfw-purchase",
+        "openai-shopping",
+        "openai-products"
+      ]
+    },
+    {
+      "id": "datafeedwatch-02",
+      "title": "Resolve exact accessory fit before recommending a purchasable variant",
+      "lens": "algorithmic",
+      "buyer": "Electronics, tools and non-safety-critical replacement-parts merchants",
+      "problem": "A feed may contain the word compatible without specifying model revisions, adapters or exclusions; an AI shopper cannot reliably choose the right part.",
+      "mechanism": "Selection to purchase. Resolve the buyer's explicitly supplied device model against verified fit relationships, eliminate incompatible options and present the exact sellable item. Fewer unresolved fit questions may produce more purchases and fewer returns.",
+      "intervention": "Build a manufacturer-evidence graph with model aliases, version bounds, required adapters and explicit unknowns; expose an exact-fit resolver in the merchant's assistant and product page, then publish supported factual outputs to feeds. Ask for the model when unknown instead of inferring compatibility.",
+      "competitorOverlap": "DFW already extracts attributes and its healthcare case highlights compatibility specifications. Supplier/PIM tools collect technical data. The proposed edge is verified relational fit resolution and cart validation, not extraction or adding compatibility words.",
+      "edgeHypothesis": "Evidence-backed relationships outperform title matching for model-specific buying tasks where all individual attributes are already present.",
+      "dataNeeded": [
+        "Manufacturer fit tables and revision dates",
+        "Merchant item-to-model mappings",
+        "Buyer-supplied model identifier",
+        "Availability and exact variant IDs",
+        "Order and fit-related return reasons"
+      ],
+      "experiment": "Randomize consenting AI-origin visitors who supply a model before assignment to existing product search/details versus the fit resolver. Primary endpoint: a fulfilled compatible order retained through 30 days per eligible visitor. Start with six weeks and size from preperiod fit-query volume; extend only under the pre-registered rule. Guardrails: wrong-fit returns, latency, escalation rate and unchanged prices.",
+      "metric": "Retained compatible purchasers divided by all pre-randomization eligible visitors, deduplicated per visitor; also report total purchasers to detect diversion between accessories.",
+      "impactEvidence": "Hypothesized. dfw-adalystic offers adjacent qualitative support that specifications matter; no measured conversion benefit for this relational resolver.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed traffic, fault prevalence or conversion baseline. Chosen planning assumptions: USD 400 software/pilot fee per month; USD 40 contribution per additional fulfilled order retained after returns. Integration and operator costs are additional.",
+        "calculation": "Fee-only break-even is 400 / 40 = 10 additional retained orders per month. Full break-even is (fee + incremental operating + integration costs) / contribution per retained order.",
+        "range": "No empirical uplift range. Zero or negative purchase effects are possible; the fee-only threshold is a hurdle, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated pilot price: USD 400/month for one bounded accessory family, conditional on recoverable fit-related demand.",
+      "costControl": "Reuse approved manufacturer relationships and invalidate only changed model ranges; reserve human checks for ambiguous or conflicting evidence.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Rights to manufacturer data",
+        "A bounded initial catalog",
+        "Explicit shopper input",
+        "Storefront/cart integration",
+        "Supported public fields or a cooperating assistant"
+      ],
+      "failureMode": "Incomplete fit tables create false reassurance; users may already know the part and find the extra step obstructive.",
+      "falsifier": "The resolver does not beat the current search/product page on retained purchases, or false-positive compatibility exceeds the merchant's pre-set threshold.",
+      "sourceIds": [
+        "dfw-adalystic",
+        "dfw-price",
+        "akeneo-sdm",
+        "openai-products"
+      ]
+    },
+    {
+      "id": "datafeedwatch-03",
+      "title": "Carry a verified item decision from AI selection into the final cart",
+      "lens": "identity",
+      "buyer": "Merchants with multiple size, pack, condition or market variants",
+      "problem": "The selected product can change between an AI result, a regional product page and checkout, even when every feed row is individually valid.",
+      "mechanism": "Landing to purchase. Preserve the buyer's chosen seller, variant, quantity and market, then verify those values against the live cart so the buyer does not have to repeat a decision or discover a mismatch at payment.",
+      "intervention": "Create a short-lived decision record keyed to a native cart link or UCP cart, containing only explicitly selected non-sensitive fields. Compare selected item, live cart and displayed price; resolve a changed item or total with a visible confirmation before checkout. Do not store private external chat content.",
+      "competitorOverlap": "Shopify already has variant-specific cart permalinks, attribution and UCP carts. DFW maps variant links. The edge is verifying the complete decision across feed, market redirects and cart state; a prefilled link alone duplicates native behavior.",
+      "edgeHypothesis": "Checking semantic continuity across market and pack transformations removes a measurable class of abandonment beyond native variant preselection.",
+      "dataNeeded": [
+        "Source offer/item/group identifiers",
+        "Consented selected options and quantity",
+        "Market routing rules",
+        "Native cart state and displayed totals",
+        "Orders, wrong-item cancellations and returns"
+      ],
+      "experiment": "Randomize eligible AI-origin visitors after selection but before handoff to the merchant's current variant-specific native link versus the verified decision record. Primary endpoint: a fulfilled retained order per assigned visitor. Plan four to six weeks plus returns; power for the audited mismatch prevalence. Guardrails: extra clicks, redirect latency, checkout errors, privacy and wrong-variant returns.",
+      "metric": "Retained purchasers / all assigned selection sessions, with stable visitor bucketing. Count each order once and show mismatch-attributable failures separately; an attribution token alone never proves incrementality.",
+      "impactEvidence": "Hypothesized. shopify-permalink and shopify-agent-checkout establish implementation and an active comparator, not uplift from the proposed verification.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed traffic, fault prevalence or conversion baseline. Chosen planning assumptions: USD 200 software/pilot fee per month; USD 25 contribution per additional fulfilled order retained after returns. Integration and operator costs are additional.",
+        "calculation": "Fee-only break-even is 200 / 25 = 8 additional retained orders per month. Full break-even is (fee + incremental operating + integration costs) / contribution per retained order.",
+        "range": "No empirical uplift range. Zero or negative purchase effects are possible; the fee-only threshold is a hurdle, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated pilot price: USD 200/month per shop; first demonstrate failures not already prevented by its native cart integration.",
+      "costControl": "Use existing cart APIs and verify only identity/price deltas; avoid an LLM on ordinary handoffs.",
+      "feasibility": "now",
+      "dependencies": [
+        "Storefront extension or cooperating assistant",
+        "Native cart access",
+        "Merchant market mappings",
+        "First-party consent and retention policy"
+      ],
+      "failureMode": "The extra confirmation adds friction while native links already preserve selections; ordinary ChatGPT referral links may not carry buyer constraints.",
+      "falsifier": "Audited native handoffs have negligible semantic mismatch, or retained purchase rate worsens after verification.",
+      "sourceIds": [
+        "shopify-permalink",
+        "shopify-agent-checkout",
+        "openai-products",
+        "openai-research"
+      ]
+    },
+    {
+      "id": "datafeedwatch-04",
+      "title": "Test delivery feasibility against the buyer's actual deadline",
+      "lens": "temporal",
+      "buyer": "Bulky-goods, event-supply and time-sensitive merchants",
+      "problem": "In-stock and a generic shipping estimate do not establish that this item can reach this buyer before an explicitly stated deadline.",
+      "mechanism": "Selection and checkout. Use the real fulfillment quote to exclude impossible options early and preserve a feasible choice through checkout, increasing purchases that actually arrive in time.",
+      "intervention": "Add a deadline-aware selection adapter over the merchant's shipping engine: combine destination, order cutoff, warehouse stock, freight requirements and chosen quantity; retain the quote inputs and expiry across the assistant and cart. Unsupported destinations get an explicit unknown, not an invented promise.",
+      "competitorOverlap": "DFW already maps freight costs; ShipperHQ already shows product-page rates and dates; native agent carts expose fulfillment context. The proposed edge is deadline-constrained product choice and quote continuity, rather than another shipping calculator.",
+      "edgeHypothesis": "Deadline-aware selection beats an ordinary product-page estimate for shoppers who otherwise discover infeasibility late.",
+      "dataNeeded": [
+        "Explicit delivery deadline and consented destination",
+        "Warehouse stock and carrier cutoffs",
+        "Shipping-engine quotes and expiry",
+        "Freight/accessorial requirements",
+        "Order, dispatch and delivered timestamps"
+      ],
+      "experiment": "Randomize visitors who declare a deadline before assignment to the existing ShipperHQ-style calculator versus deadline-constrained selection. Primary endpoint: a purchase delivered by that deadline per eligible visitor. Run across at least six weeks including normal weekdays; determine sample from actual deadline demand. Guardrails: total retained purchases, delivery misses, subsidy cost and unsupported promises.",
+      "metric": "Unique buyers with an on-time fulfilled purchase / all deadline-qualified assigned visitors. Report retained purchases separately; no inference to shoppers without deadlines or engines that cannot call the adapter.",
+      "impactEvidence": "Hypothesized. shipperhq establishes direct competition; dfw-rv establishes freight-data workflow but no isolated delivery effect.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed traffic, fault prevalence or conversion baseline. Chosen planning assumptions: USD 300 software/pilot fee per month; USD 30 contribution per additional fulfilled order retained after returns. Integration and operator costs are additional.",
+        "calculation": "Fee-only break-even is 300 / 30 = 10 additional retained orders per month. Full break-even is (fee + incremental operating + integration costs) / contribution per retained order.",
+        "range": "No empirical uplift range. Zero or negative purchase effects are possible; the fee-only threshold is a hurdle, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 300/month above the existing shipping engine; pricing must be justified by additional on-time purchases.",
+      "costControl": "Cache quotes only within carrier/merchant validity and reuse the shipping engine rather than estimating logistics with an LLM.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Accurate warehouse inventory",
+        "Shipping engine integration",
+        "Owned or cooperating assistant for pre-click choice",
+        "Carrier outcome data",
+        "Explicit shopper deadline"
+      ],
+      "failureMode": "Carrier variance defeats the promise, or filtering hides products the shopper would have accepted with a later date.",
+      "falsifier": "No gain over native estimates in on-time retained purchasers, or delivery-miss rate increases.",
+      "sourceIds": [
+        "shipperhq",
+        "dfw-rv",
+        "shopify-agent-checkout",
+        "openai-products"
+      ]
+    },
+    {
+      "id": "datafeedwatch-05",
+      "title": "Recover stockout visits with substitutes that preserve stated requirements",
+      "lens": "behavioral",
+      "buyer": "Variant-heavy merchants receiving AI referrals to unavailable items",
+      "problem": "Out-of-stock exclusions prevent some future exposure but do not help an already referred buyer; ordinary related products may violate the reason that buyer selected the original.",
+      "mechanism": "Landing and selection. Retain the buyer's stated must-haves, offer only verified purchasable alternatives and make tradeoffs explicit, allowing an otherwise abandoned visit to become a retained purchase.",
+      "intervention": "Build an outage-triggered substitution service that takes the original item's facts and any explicitly shared constraints, checks exact variant stock, and shows up to three acceptable alternatives with reasons. Request confirmation for every relaxed requirement; never silently switch the cart.",
+      "competitorOverlap": "DFW already excludes low/out-of-stock products. Shopify Search & Discovery already offers stock-aware related products. The edge is preserving a declared constraint set and explaining deviations at the unavailable-item handoff.",
+      "edgeHypothesis": "Constraint preservation generates more retained orders than similarity-based related-product recommendations for prequalified stockout visits.",
+      "dataNeeded": [
+        "Original offer and current stock",
+        "Buyer-declared required features",
+        "Verified substitute relationships",
+        "Alternative variant inventory",
+        "Orders, cancellations and return reasons"
+      ],
+      "experiment": "Randomize AI-origin visitors whose selected variant is unavailable before assignment to existing stock-aware related products versus constraint-preserving substitutes. Primary endpoint: a retained shop purchase per eligible visitor. Six-week starting window, with power based on stockout arrivals and the return period. Guardrails: regret returns, price changes, stock reservation and loss of original-product backorders.",
+      "metric": "Unique retained purchasers / all assigned stockout visitors. Count any shop purchase once; do not count a shifted purchase from a different shop page as new demand without the holdout.",
+      "impactEvidence": "Hypothesized. shopify-related and dfw-shopify document strong existing baselines; neither supplies the proposed intervention's effect.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed traffic, fault prevalence or conversion baseline. Chosen planning assumptions: USD 200 software/pilot fee per month; USD 25 contribution per additional fulfilled order retained after returns. Integration and operator costs are additional.",
+        "calculation": "Fee-only break-even is 200 / 25 = 8 additional retained orders per month. Full break-even is (fee + incremental operating + integration costs) / contribution per retained order.",
+        "range": "No empirical uplift range. Zero or negative purchase effects are possible; the fee-only threshold is a hurdle, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated pilot price: USD 200/month for merchants with enough measured stockout referral traffic.",
+      "costControl": "Precompute candidates by product family, verify live inventory on demand, and use deterministic hard constraints before model ranking.",
+      "feasibility": "now",
+      "dependencies": [
+        "Storefront intervention",
+        "Live variant inventory",
+        "Reliable hard-constraint attributes",
+        "Buyer consent for any carried preferences"
+      ],
+      "failureMode": "Too few valid substitutes exist, inferred constraints are wrong, or recommendations divert buyers who would have waited and bought more.",
+      "falsifier": "Retained shop purchase rate does not beat native related products, or wrong-fit/price-regret returns exceed the pre-set guardrail.",
+      "sourceIds": [
+        "dfw-shopify",
+        "shopify-related",
+        "openai-research"
+      ]
+    },
+    {
+      "id": "datafeedwatch-06",
+      "title": "Turn required quantity into a transparent pack-and-cart calculation",
+      "lens": "psychological",
+      "buyer": "Consumables, building-supply and bulk-pack merchants",
+      "problem": "A shopper needing 120 units can struggle to compare 25-packs, 50-packs, minimum quantities and delivery costs even when pack size appears correctly in the feed.",
+      "mechanism": "Comprehension to purchase. Translate the buyer's explicit quantity requirement into feasible carts with clear delivered totals and surplus units, reducing arithmetic errors and uncertainty before purchase.",
+      "intervention": "Add a deterministic quantity planner to the merchant assistant/product page. Enumerate valid pack combinations and show total price, unit price, surplus and delivery implications; send the selected exact quantities through the native cart. Use supported feed unit/pack fields as inputs, not as the product itself.",
+      "competitorOverlap": "DFW already surfaces pack quantities and builds title templates; native carts already set quantities. The edge is solving a buyer-specific integer packing problem with checkout-consistent totals and testing purchase completion.",
+      "edgeHypothesis": "A transparent feasible-cart comparison increases retained purchasers beyond simply displaying unit prices and pack counts.",
+      "dataNeeded": [
+        "Verified units per pack and indivisible order sizes",
+        "Minimum order and quantity pricing rules",
+        "Explicit required quantity",
+        "Shipping/checkout totals",
+        "Order IDs and quantity-related return reasons"
+      ],
+      "experiment": "Randomize visitors who enter a quantity before assignment to existing pack/unit-price information versus the quantity planner. Primary endpoint: a retained order meeting that declared quantity per visitor. Plan six weeks and power from qualifying traffic; include returns. Guardrails: overbuying complaints, subtotal accuracy, margin, and single-order counting.",
+      "metric": "Visitors with a retained sufficient-quantity order / all assigned quantity-qualified visitors. Splitting one intended purchase into multiple orders is not counted as lift.",
+      "impactEvidence": "Hypothesized. dfw-adalystic supplies adjacent qualitative support for pack clarity, while shopify-agent-checkout supports native totals/cart operations. No measured effect for this calculator.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed traffic, fault prevalence or conversion baseline. Chosen planning assumptions: USD 150 software/pilot fee per month; USD 15 contribution per additional fulfilled order retained after returns. Integration and operator costs are additional.",
+        "calculation": "Fee-only break-even is 150 / 15 = 10 additional retained orders per month. Full break-even is (fee + incremental operating + integration costs) / contribution per retained order.",
+        "range": "No empirical uplift range. Zero or negative purchase effects are possible; the fee-only threshold is a hurdle, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 150/month for one quantity-heavy category.",
+      "costControl": "Use an exact small integer solver and cached pack definitions; call the live shipping engine only for a short candidate list.",
+      "feasibility": "now",
+      "dependencies": [
+        "Correct pack/unit data",
+        "Pricing and minimum-order rules",
+        "Cart API",
+        "Adequate buyer quantity demand"
+      ],
+      "failureMode": "The merchant's existing calculator already solves the problem; too many options confuse buyers or cause unnecessary surplus.",
+      "falsifier": "No retained-purchase advantage over the current unit-price/cart baseline, or quantity errors rise.",
+      "sourceIds": [
+        "dfw-adalystic",
+        "openai-products",
+        "shopify-agent-checkout"
+      ]
+    },
+    {
+      "id": "datafeedwatch-07",
+      "title": "Attach readable, variant-specific safety evidence to eligible offers",
+      "lens": "regulatory",
+      "buyer": "EU-facing sellers of in-scope non-food consumer goods",
+      "problem": "Legally required offer information may be present yet difficult to understand or tied to the wrong variant; buyers and shopping agents can remain uncertain about identity and safe intended use.",
+      "mechanism": "Eligibility and comprehension to purchase. Connect a lawful sellable item to the correct responsible-party details, warnings and manufacturer documents; clearer evidence may let suitable buyers complete purchases while preventing unsuitable ones.",
+      "intervention": "Build a scoped evidence record for manufacturer/responsible person, product identity and warnings, with document version, applicable variant and approved consumer-language explanation. Publish accessible product-page evidence and only supported feed fields. Merchant review establishes scope; the software does not certify compliance or invent CE claims.",
+      "competitorOverlap": "DFW maps fields and reviews feed correctness; PIM/supplier portals handle documents and validation. The proposed edge is checking document-to-variant applicability and testing comprehension/purchases after the compliance baseline is already met.",
+      "edgeHypothesis": "Variant-specific evidence presentation reduces unresolved buyer questions enough to improve retained purchases for suitable products without increasing unsafe or mistaken orders.",
+      "dataNeeded": [
+        "Merchant-reviewed legal scope by product/market",
+        "Manufacturer and responsible-person records",
+        "Current warning and instruction documents",
+        "Variant/document applicability",
+        "Locale, orders and product-question logs"
+      ],
+      "experiment": "Bring both arms to the same legally compliant baseline before randomizing eligible AI-origin visitors to existing compliant presentation versus the readable evidence record. Primary endpoint: retained suitable-product purchasers per assigned visitor. Start with eight weeks, then power for actual demand and return lag. Never randomize withholding required warnings; stop for incorrect or stale safety information.",
+      "metric": "Retained lawful purchases / all pre-qualified assigned visitors; report unsuitable-purchase prevention, document comprehension and support demand separately. Regulatory eligibility is not evidence of an AI ranking advantage.",
+      "impactEvidence": "Hypothesized conversion effect. gpsr establishes obligations, not uplift. No source validates this presentation as legal certification or a platform preference signal.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed traffic, fault prevalence or conversion baseline. Chosen planning assumptions: USD 250 software/pilot fee per month; USD 25 contribution per additional fulfilled order retained after returns. Integration and operator costs are additional.",
+        "calculation": "Fee-only break-even is 250 / 25 = 10 additional retained orders per month. Full break-even is (fee + incremental operating + integration costs) / contribution per retained order.",
+        "range": "No empirical uplift range. Zero or negative purchase effects are possible; the fee-only threshold is a hurdle, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated pilot price: USD 250/month for a narrow reviewed product/market scope; compliance services and translations are additional.",
+      "costControl": "Reuse approved documents by true applicability groups and escalate changed safety text to humans; never save cost by generating unsupported warnings.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Qualified merchant compliance owner",
+        "Correct GPSR/product-specific scope",
+        "Authoritative documents",
+        "Approved translations",
+        "Storefront access"
+      ],
+      "failureMode": "Complex presentation can reduce comprehension; an incorrect applicability match can mislead buyers and harm them.",
+      "falsifier": "No conversion/comprehension improvement over compliant existing pages, or any unacceptable document-to-product mismatch.",
+      "sourceIds": [
+        "gpsr",
+        "akeneo-sdm",
+        "openai-products"
+      ]
+    },
+    {
+      "id": "datafeedwatch-08",
+      "title": "Separate offers that AI shopping wrongly collapses into one product",
+      "lens": "identity",
+      "buyer": "Multi-brand sellers with pack, condition and regional-model collisions",
+      "problem": "A valid GTIN and tidy feed can still associate a seller's refurbished unit, multipack or regional model with an incompatible offer elsewhere.",
+      "mechanism": "Discovery and selection to purchase. Resolve the actual trade item, condition and seller offer so a buyer sees the correct comparison and reaches the right purchasable product; fewer false equivalences may reduce lost sales and wrong-item returns.",
+      "intervention": "Trace observed AI product/merchant-grouping errors back through GTIN registration, manufacturer identity, pack content, condition and stable offer IDs. Produce evidence-backed repairs using existing DFW exports, then verify downstream representation. Never invent identifiers or mislabel an independent seller as the manufacturer.",
+      "competitorOverlap": "DFW checks GTIN validity; GS1 verifies registered identity; OpenAI supports item, group and offer distinctions. The edge is diagnosing observed cross-source grouping errors and validating the result, not validating barcode syntax.",
+      "edgeHypothesis": "Following a specific published collision to its source fixes failures that an individually valid feed review misses.",
+      "dataNeeded": [
+        "Observed wrong grouping examples",
+        "Feed/source identity history",
+        "Licensed GS1/manufacturer records",
+        "Pack/condition/market truth",
+        "Orders and wrong-product return reasons"
+      ],
+      "experiment": "Randomize non-safety-critical suspect product-family clusters to current operator/DFW identity review versus evidence-driven collision tracing under equal labor budgets. Correct confirmed material inaccuracies promptly in both arms. Primary endpoint: retained AI-origin orders per assigned family-week; twelve-week provisional window and cluster power analysis. Guardrails: total orders, unjustified identity changes, visibility loss and condition-related complaints.",
+      "metric": "Difference in retained AI-origin orders per assigned family-week, accompanied by all-channel orders and attribution coverage. Reduced observed collision rate is a diagnostic endpoint, not purchase lift.",
+      "impactEvidence": "Hypothesized. gs1 and openai-products document identity mechanisms; neither quantifies AI conversion lost to this collision class.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed traffic, fault prevalence or conversion baseline. Chosen planning assumptions: USD 500 software/pilot fee per pilot; USD 50 contribution per additional fulfilled order retained after returns. Integration and operator costs are additional.",
+        "calculation": "Fee-only break-even is 500 / 50 = 10 additional retained orders per pilot. Full break-even is (fee + incremental operating + integration costs) / contribution per retained order.",
+        "range": "No empirical uplift range. Zero or negative purchase effects are possible; the fee-only threshold is a hurdle, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated fixed pilot price: USD 500 for a bounded collision cohort; proceed only after demonstrating real errors beyond standard feed checks.",
+      "costControl": "Use deterministic identity checks first and purchase-linked examples to prioritize manual research; cache licensed reference data.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reproducible observed collisions",
+        "Permitted reference-data access",
+        "Merchant identity ownership",
+        "Destination support for distinct offers",
+        "Sufficient affected traffic"
+      ],
+      "failureMode": "The engine continues to merge offers regardless of corrected fields, or splitting identity fragments beneficial discovery.",
+      "falsifier": "Current native identity mapping already resolves audited failures, or repaired representation produces no retained-order gain at adequate power.",
+      "sourceIds": [
+        "dfw-price",
+        "gs1",
+        "openai-products",
+        "openai-shopping"
+      ]
+    },
+    {
+      "id": "datafeedwatch-09",
+      "title": "Spend update capacity where stale offers lose the most purchases",
+      "lens": "infrastructural",
+      "buyer": "Large catalogs with volatile stock/prices and limited destination update capacity",
+      "problem": "Uniform refreshes spend capacity on unchanged products while a small set of actively shopped offers becomes stale between feed cycles.",
+      "mechanism": "Discovery and checkout reliability. Move scarce update capacity toward recent high-demand changes, reduce invalid offers encountered by buyers and preserve purchases that would otherwise fail or be cancelled.",
+      "intervention": "Create an event-driven scheduler over existing feed exports and admitted update APIs. Score changed offers using demand, volatility and measured stale-offer failure, then confirm acceptance separately from observed display and checkout truth. Preserve a periodic full reconciliation.",
+      "competitorOverlap": "DFW has daily refresh tiers, Google has automatic corrections and OpenAI documents partial upserts. Faster sync alone is occupied; the edge is equal-budget scheduling against measured purchase loss and downstream freshness.",
+      "edgeHypothesis": "Prioritizing purchase-sensitive changes yields more retained orders per update budget than uniform/FIFO refresh when capacity is genuinely constrained.",
+      "dataNeeded": [
+        "Inventory/price change events",
+        "Destination quotas and actual latency",
+        "Current feed schedule",
+        "Observed stale-offer arrivals",
+        "Orders, cancellations and cohort-level demand"
+      ],
+      "experiment": "Randomize matched product-family update queues to existing schedule/native corrections versus prioritized scheduling with equal request budgets. Do not delay safety or legally required corrections. Primary endpoint: retained AI-origin orders per assigned family-week. Plan eight weeks plus returns; power from measured volatility/fault prevalence. Guardrails: total retained orders, API errors, reconciliation completeness and price accuracy.",
+      "metric": "Retained AI-origin orders per randomized family-week is primary. Stale-offer buyer encounters and update cost per incremental retained order are secondary; API acceptance alone is not successful exposure.",
+      "impactEvidence": "Hypothesized. google-updates establishes a native safety net with stated limits; openai-product-api establishes an update mechanism, not guaranteed propagation time.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed traffic, fault prevalence or conversion baseline. Chosen planning assumptions: USD 250 software/pilot fee per month; USD 25 contribution per additional fulfilled order retained after returns. Integration and operator costs are additional.",
+        "calculation": "Fee-only break-even is 250 / 25 = 10 additional retained orders per month. Full break-even is (fee + incremental operating + integration costs) / contribution per retained order.",
+        "range": "No empirical uplift range. Zero or negative purchase effects are possible; the fee-only threshold is a hurdle, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 250/month plus measured infrastructure cost; requires evidence that current refresh cadence loses purchases.",
+      "costControl": "Batch changed records, deduplicate events and allocate calls under a fixed budget while retaining full consistency checks.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable source webhooks",
+        "Confirmed destination API access and quotas",
+        "Visible ingestion/offer observations",
+        "Order reconciliation",
+        "A real capacity bottleneck"
+      ],
+      "failureMode": "Destination latency dominates merchant update speed, or demand scoring starves long-tail items and reduces total purchases.",
+      "falsifier": "Equal-budget trials show no improvement over native scheduling, or stale-offer exposure is too rare to recover the fee.",
+      "sourceIds": [
+        "dfw-price",
+        "openai-product-api",
+        "openai-upload",
+        "google-updates",
+        "openai-shopping"
+      ]
+    },
+    {
+      "id": "datafeedwatch-10",
+      "title": "Buy missing supplier evidence in the order most likely to unlock purchases",
+      "lens": "algorithmic",
+      "buyer": "Distributors with large catalogs and slow supplier responses",
+      "problem": "Attribute extraction cannot recover a fact that no accessible source contains; filling every empty field wastes the same scarce supplier/operator effort on low-value and purchase-blocking questions.",
+      "mechanism": "Data acquisition to selection to purchase. Identify unanswered, explicit buyer questions that block a viable order; obtain authoritative supplier evidence; publish it; then test whether resolved uncertainty creates more retained purchases.",
+      "intervention": "Build a question-value queue over opted-in merchant support/search observations. Cluster by product relationship and missing fact, route a small evidence request through the merchant's existing supplier workflow, record proof and scope, then update product pages and DFW fields. Prioritize expected value of information while keeping exploration for low-volume categories.",
+      "competitorOverlap": "DFW already extracts attributes; Akeneo SDM already provides supplier portals, templates, validation and APIs. The proposed edge is deciding which new facts to obtain using observed buying friction and randomized purchase feedback, not building another onboarding portal.",
+      "edgeHypothesis": "A purchase-value queue produces more additional retained orders per fixed evidence-acquisition budget than completeness-based enrichment.",
+      "dataNeeded": [
+        "Consented buyer questions with unavailable answers",
+        "Current authoritative sources and explicit unknowns",
+        "Supplier turnaround/cost records",
+        "Relevant product-family demand",
+        "Published evidence, order and return outcomes"
+      ],
+      "experiment": "Randomize matched supplier/product-family question clusters to equal-budget completeness-based acquisition versus purchase-value prioritization. Mandatory safety/compliance work remains outside the experiment. Primary endpoint: retained AI-origin orders per assigned family-week after a fixed evidence-publication deadline, including unresolved clusters in intention-to-treat. Plan twelve weeks plus returns; size from supplier response rates and cluster variance. Guardrails: evidence accuracy, supplier burden and all-channel purchases.",
+      "metric": "Incremental retained AI-origin orders per assigned family-week; secondary incremental orders per operator-hour and evidence dollar. Reject self-reported simulated recommendation gains as the purchase endpoint.",
+      "impactEvidence": "Hypothesized. akeneo-sdm establishes existing acquisition workflows and dfw-price establishes existing extraction. No measured conversion percentage for selecting supplier questions this way.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed traffic, fault prevalence or conversion baseline. Chosen planning assumptions: USD 600 software/pilot fee per pilot; USD 40 contribution per additional fulfilled order retained after returns. Integration and operator costs are additional.",
+        "calculation": "Fee-only break-even is 600 / 40 = 15 additional retained orders per pilot. Full break-even is (fee + incremental operating + integration costs) / contribution per retained order.",
+        "range": "No empirical uplift range. Zero or negative purchase effects are possible; the fee-only threshold is a hurdle, not a forecast."
+      },
+      "willingnessToPay": "Unvalidated pilot budget: USD 600 including a capped evidence-acquisition allowance for one supplier cohort; a paid renewal must follow measured purchase value.",
+      "costControl": "Reuse verified answers across legitimately shared product families, avoid rereading unchanged documents and stop acquiring facts whose purchase impact remains unsupported.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Cooperative suppliers",
+        "Merchant-owned and consented question data",
+        "Rights to publish supplied facts",
+        "Sufficient affected AI shopping demand",
+        "Evidence review and existing PIM/feed integration"
+      ],
+      "failureMode": "Supplier turnaround is too slow, questions are curiosity rather than buying friction, or the target engines ignore the published facts.",
+      "falsifier": "Equal-budget supplier work produces no more retained purchases than existing completeness prioritization, or supplier cost exceeds recovered contribution.",
+      "sourceIds": [
+        "akeneo-sdm",
+        "dfw-price",
+        "openai-research",
+        "openai-products"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "dfw-price",
+      "title": "Pricing - DataFeedWatch",
+      "url": "https://www.datafeedwatch.com/pricing",
+      "type": "official-doc",
+      "claim": "29 September 2026 vendor pricing, SKU limits, daily update cadence, source/AI/rules choice, previews, title tests and paid service tiers. Published prices are not proof of willingness to pay for a new product."
+    },
+    {
+      "id": "dfw-ab",
+      "title": "A/B Testing Product Titles for Better Ads Performance",
+      "url": "https://www.datafeedwatch.com/blog/ab-testing-product-titles",
+      "type": "official-doc",
+      "claim": "One title per item ID; A/B titles alternate across products; URL tracking; preview; winner deployment. Does not document randomized assignment, visitor randomization, power or spillover handling."
+    },
+    {
+      "id": "dfw-ga-ab",
+      "title": "How to check the performance of product titles during A/B Testing in Google Analytics.",
+      "url": "https://help.datafeedwatch.com/article/jxnqqyp0z1-checking-performance-of-product-titles-in-a-b-testing-google-analytics-landing-pages-report",
+      "type": "official-doc",
+      "claim": "External Google Analytics landing-page comparison workflow for title arms. Tracking an arm does not establish incrementality."
+    },
+    {
+      "id": "dfw-adalystic",
+      "title": "[Case Study] Using DataFeedWatch AI to create a scalable title optimization architecture",
+      "url": "https://www.datafeedwatch.com/blog/scaling-title-optimization-using-ai",
+      "type": "vendor-case",
+      "claim": "Reported 50/50 catalog splits: over 20,000 SKUs for 30 days, approximately 7,000 for 60 days; paid and organic Shopping; template distillation. No reproducible numerical treatment effect; embedded GA screenshot is expressly an example and dated 2023."
+    },
+    {
+      "id": "dfw-rv",
+      "title": "[Case Study] We noted a 44% CVR Increase on Google Shopping with DataFeedWatch's AI Feed Optimization",
+      "url": "https://www.datafeedwatch.com/blog/ai-feed-optimization-case-study",
+      "type": "vendor-case",
+      "claim": "United RV reports 17% and 44% CVR increases, with no concurrent randomized control described. Embedded screenshots appear reversed relative to prose: 2.33% to 3.37% (+44.31%) over 19-day comparison windows and 1.42% to 1.66% (+16.73%) over 13-day windows. Ads-style conversion configuration is undisclosed."
+    },
+    {
+      "id": "dfw-searchmind",
+      "title": "[Case Study] How to Increase Conversions on Google Shopping Using Keywords",
+      "url": "https://www.datafeedwatch.com/blog/google-shopping-keywords-conversion-increase",
+      "type": "vendor-case",
+      "claim": "May 2018 versus May 2019 report: CTR 1.09% to 1.50%, CVR 5.11% to 8.40%, conversions +93.65%. Historical year-over-year observation, not randomized or AI-discovery evidence."
+    },
+    {
+      "id": "dfw-ai-feed",
+      "title": "Future-Proof Your Advertising: DataFeedWatch now supports Perplexity and Shopping GPT feeds",
+      "url": "https://www.datafeedwatch.com/blog/datafeedwatch-announces-perplexity-shopping-gpt-feed-support",
+      "type": "official-doc",
+      "claim": "Existing dedicated AI-shopping feed templates, mappings, segmentation and daily refreshes. Does not establish merchant admission, actual engine ingestion, recommendation lift or purchase incrementality."
+    },
+    {
+      "id": "dfw-revmatics",
+      "title": "DataFeedWatch is joining Revmatics",
+      "url": "https://www.datafeedwatch.com/blog/datafeedwatch-is-joining-revmatics",
+      "type": "official-doc",
+      "claim": "Vendor announces joining Revmatics; optional CRO, audience and retail intelligence additions are discussed. Corrects older notes describing only Cart.com ownership. Roadmap is not proof all additions are live."
+    },
+    {
+      "id": "dfw-shopify",
+      "title": "Data Feed Watch Shopping Feeds - Product feeds for Google Shopping, Facebook feed, Bing & more | Shopify App Store",
+      "url": "https://apps.shopify.com/datafeedwatch",
+      "type": "merchant-review",
+      "claim": "Fetched 29 September 2026: 4.7 rating from 339 reviews, USD billing, existing out-of-stock exclusions and ChatGPT/Perplexity/UCP integrations listed. Reviews support adoption, not representative causal uplift; vendor pricing and listing differ on some plan details."
+    },
+    {
+      "id": "dfw-purchase",
+      "title": "[Case Study] How Australian Women's Clothing Boutique Grew Profits from DataFeedWatch",
+      "url": "https://www.datafeedwatch.com/blog/how-to-increase-revenue-with-data-feed-management-tool",
+      "type": "vendor-case",
+      "claim": "Blue Bungalow uses external Google Ads cart data and DataFeedWatch COGS to identify actual purchased items, including different items from the ad clicked. Establishes purchase-linked workflow, not randomized AI incrementality."
+    },
+    {
+      "id": "google-title",
+      "title": "Title [title] and structured title [structured_title]",
+      "url": "https://support.google.com/merchants/answer/6324415?hl=en-GB",
+      "type": "official-doc",
+      "claim": "150-character submission limit; first 70 or fewer characters usually seen; Google may customize titles; AI-generated title provenance belongs in structured_title. Does not impose an OpenAI title-performance rule."
+    },
+    {
+      "id": "google-updates",
+      "title": "Allow Merchant Center to update product information automatically",
+      "url": "https://support.google.com/merchants/answer/12157888?hl=en",
+      "type": "official-doc",
+      "claim": "Native Google price, availability and condition correction already exists; it is not a substitute for regular data updates and can struggle with frequent changes. Google-specific behavior."
+    },
+    {
+      "id": "openai-shopping",
+      "title": "Shopping with ChatGPT Search",
+      "url": "https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search",
+      "type": "official-doc",
+      "claim": "Product results are distinct from ads; context, metadata and other content inform selection; generated display titles, merchant ranking and update delays are documented. Shopify Catalog integration and application for direct feeds are documented; no ranking guarantee."
+    },
+    {
+      "id": "openai-research",
+      "title": "Using shopping research in ChatGPT",
+      "url": "https://help.openai.com/en/articles/12911370-using-shopping-r",
+      "type": "official-doc",
+      "claim": "Shopping research may use ACP product data, public retail information and multiple searches. Retailers do not receive user chats. Supports explicit-consent constraints, not hidden access to conversation history."
+    },
+    {
+      "id": "openai-products",
+      "title": "Products",
+      "url": "https://developers.openai.com/commerce/specs/file-upload/products",
+      "type": "official-doc",
+      "claim": "Stable file-upload profile includes distinct item/group/offer identity, variant rows, per-variant data, and shipping/returns fields. Discovery, Ads and checkout have separate requirements; eligibility does not guarantee display; Draft is not production."
+    },
+    {
+      "id": "openai-product-api",
+      "title": "Products",
+      "url": "https://developers.openai.com/commerce/specs/api/products",
+      "type": "official-doc",
+      "claim": "Documented feed product retrieval and partial upsert API, matched by ID. Acceptance is not evidence of when a consumer sees the update, and availability/access must be confirmed for a merchant."
+    },
+    {
+      "id": "openai-upload",
+      "title": "Overview",
+      "url": "https://developers.openai.com/commerce/specs/file-upload/overview",
+      "type": "official-doc",
+      "claim": "Full snapshot delivery via SFTP and recommended at-least-daily cadence; a delivery specification does not establish production ranking or latency."
+    },
+    {
+      "id": "openai-function",
+      "title": "Function calling",
+      "url": "https://developers.openai.com/api/docs/guides/function-calling",
+      "type": "official-doc",
+      "claim": "Applications can return their own tool outputs to models. Supports controlled replay experiments; does not replicate ChatGPT consumer retrieval, personalization or rankings."
+    },
+    {
+      "id": "shopify-permalink",
+      "title": "Create cart permalinks",
+      "url": "https://shopify.dev/docs/apps/build/checkout/create-cart-permalinks",
+      "type": "official-doc",
+      "claim": "Native variant/quantity prefilled cart URLs, attribution parameters and constraints already exist. A generic deep link is not new."
+    },
+    {
+      "id": "shopify-agent-checkout",
+      "title": "Carts and checkout for agents",
+      "url": "https://shopify.dev/docs/agents/carts-and-checkout",
+      "type": "official-doc",
+      "claim": "Native UCP cart and checkout workflows, variant checkout URLs, totals, buyer handoff and authenticated checkout. Proposed continuity service must add verification beyond these native capabilities."
+    },
+    {
+      "id": "shopify-related",
+      "title": "Customize product recommendations with Shopify Search & Discovery",
+      "url": "https://help.shopify.com/en/manual/online-store/storefront-search/search-and-discovery-recommendations",
+      "type": "official-doc",
+      "claim": "Native related/substitute recommendations, inventory eligibility and manual curation already exist. Does not document preservation of an external shopper's complete constraint set."
+    },
+    {
+      "id": "shipperhq",
+      "title": "Reduce Cart Abandonment with ShipperHQ's Product Page Calculator",
+      "url": "https://shipperhq.com/blog/product-page-shipping-calculator",
+      "type": "official-doc",
+      "claim": "Existing product-page shipping estimates and delivery dates with destination input. The proposed edge must go beyond showing shipping costs early."
+    },
+    {
+      "id": "gs1",
+      "title": "What is Verified by GS1?",
+      "url": "https://support.gs1.org/support/solutions/articles/43000734077-what-is-verified-by-gs1-",
+      "type": "official-doc",
+      "claim": "Existing company/product identity verification through GTIN database and member access for API querying. Identity registration is not proof of every product claim, condition or compatibility."
+    },
+    {
+      "id": "akeneo-sdm",
+      "title": "What is Supplier Data Manager?",
+      "url": "https://help.akeneo.com/en_US/supplier-data-manager-what-do-i-need-to-get-started/what-is-supplier-data-manager",
+      "type": "official-doc",
+      "claim": "Supplier portals, normalization, extraction, classification, mapping and external API already cover supplier data acquisition. Our proposed addition is purchase-driven choice of new evidence to acquire."
+    },
+    {
+      "id": "gpsr",
+      "title": "EUR-Lex - 02023R0988-20260529 - EN - EUR-Lex",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/988",
+      "type": "official-doc",
+      "claim": "Consolidated GPSR as of 29 May 2026, Articles 2 and 19: scope and required online-offer manufacturer/responsible-person, product identification and warnings. Evidence of requirements, not proof of compliance or conversion benefit."
+    }
+  ]
+}

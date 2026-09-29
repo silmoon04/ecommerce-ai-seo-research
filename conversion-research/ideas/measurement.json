@@ -1,0 +1,627 @@
+{
+  "lens": "measurement",
+  "ideas": [
+    {
+      "id": "measurement-01",
+      "title": "Admit a simulator only after it predicts purchase-winning interventions",
+      "lens": "measurement",
+      "buyer": "An ecommerce experimentation lead deciding which AI discovery fixes deserve scarce live traffic.",
+      "problem": "A larger simulated recommendation delta can select the wrong patch because model preferences, retrieval context and human purchases differ.",
+      "mechanism": "Across discovery and checkout, a calibrated ranking of candidate interventions could put useful changes into live tests earlier. Orders rise only if this changes the chosen releases or their timing enough to beat the current selection process.",
+      "intervention": "Create a paired intervention registry containing frozen simulator effects and independently randomized merchant purchase effects. Train a hierarchical predictor of treatment ranking, not an absolute ChatGPT conversion rate. Hold out merchants, intervention families and future periods; abstain for unsupported contexts. Estimate prediction uncertainty including noisy trial estimates.",
+      "competitorOverlap": "Shopify SimGym already offers synthetic theme comparisons and Shopify Rollouts offers live experiments; Lily Max advertises a test-and-deploy loop. The proposed distinction is prospectively demonstrated purchase-valued selection quality, not adding simulation to A/B testing. Undocumented calibration in competitors remains unknown.",
+      "edgeHypothesis": "Simulator evidence adds predictive value beyond pre-period traffic, defect type and an experienced operator, and a calibrated selector earns more orders at the same live-test budget.",
+      "dataNeeded": [
+        "Frozen simulator inputs, model versions and within-intent reruns",
+        "Unselected as well as selected candidate interventions",
+        "Independent live randomization and paid-order outcomes",
+        "Baseline merchant, product category, actual engine, country and task mix",
+        "Separate training and prospective evaluation cohorts"
+      ],
+      "experiment": "Randomize sufficiently independent merchant portfolios to calibrated selection or the existing selection workflow for a fixed release budget. Each arm still validates candidate patches in live randomized trials. Primary endpoint is cumulative verified AI-origin paid orders per preassigned portfolio over a fixed horizon, with all-channel orders and margin guardrails. Use at least a complete deployment, indexing and purchase cycle; power the policy comparison at portfolio level. Include a random exploration sample of candidates to avoid learning only from historical winners.",
+      "metric": "Intention-to-treat difference in AI-origin paid-order counts per randomized portfolio, baseline-adjusted using only pre-treatment data. Attribution coverage is reported; unknown-origin orders are separate. Cross-validated ranking accuracy is diagnostic, not conversion lift. Reruns estimate model noise, not human sample size.",
+      "impactEvidence": "Hypothesized purchase impact. transport states why transfer needs explicit assumptions; llm-diversity gives adjacent evidence against treating model reruns as a human population. Neither supplies a shopping lift percentage.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No merchant baseline supplied. Let V be fixed-horizon eligible demand and d be the difference in true purchase effect of patches selected by the two policies.",
+        "calculation": "Incremental orders = V*d, minus any extra order loss caused by the calibration policy's exploration or deployment delay, if not already included in d.",
+        "range": "Unknown; zero if both policies choose the same useful releases, negative if calibration is wrong or slows release."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot: GBP 1,000 per portfolio per month, only worth testing where measured incremental contribution can exceed the fee and extra experimentation cost.",
+      "costControl": "Use small paired simulator batches for within-intent uncertainty; spend additional calls on new independent tasks only when they can change selection.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Several real intervention trials, including nulls and harms",
+        "Deployable merchant-controlled changes",
+        "Permission to retain de-identified experiment summaries",
+        "Sufficient independent portfolios for a policy trial"
+      ],
+      "failureMode": "Calibration overfits a few successful merchants or an old engine version; a good proxy prediction hides a poor absolute purchase decision.",
+      "falsifier": "On unseen merchants and future periods, the calibrated policy fails to beat operator or uncalibrated selection on cumulative purchases within the same cost and risk budget.",
+      "sourceIds": [
+        "transport",
+        "llm-diversity",
+        "simgym",
+        "shopify-rollouts",
+        "lily-max"
+      ]
+    },
+    {
+      "id": "measurement-02",
+      "title": "Plan catalogue trials around propagation and stable assignment",
+      "lens": "measurement",
+      "buyer": "A merchant or agency testing factual product-source changes that external engines crawl or ingest asynchronously.",
+      "problem": "An ordinary session A/B test cannot give a global external crawler two stable versions of one source. Rapid alternation and early readouts can mix cached treatments and produce false deployment decisions.",
+      "mechanism": "Discovery-stage trials that survive real ingestion lag can identify effective source repairs and avoid discarding slow genuine gains or rolling out cache artifacts. The conversion benefit depends on which deployment decisions this changes.",
+      "intervention": "Build a design compiler that groups variant families, canonical duplicates and tightly linked pages into persistent randomized clusters; blocks on pre-period demand; and chooses a fixed observation horizon from propagation pilots. Keep assignment stable throughout. Use received, published and externally observed versions as diagnostics, never as a post-treatment filter for the primary sample.",
+      "competitorOverlap": "Statsig already documents canonical-URL SEO trials, indexing lag and cannibalization guardrails; DataFeedWatch already has product-title A/B workflows. The edge must be supported treatment-family clustering, actual source propagation evidence and purchase-valued decisions beyond those tools.",
+      "edgeHypothesis": "For persistent source changes, stable family-level designs reduce decision errors enough to generate more orders than independent URL or alternating-title tests.",
+      "dataNeeded": [
+        "Product-family and canonical URL graph",
+        "Pre-period order counts, demand and seasonality",
+        "Source version publication times and observable fetch/ingestion evidence",
+        "Fixed cluster assignment",
+        "Paid orders linked to eligible product families and reliable AI-origin evidence"
+      ],
+      "experiment": "Randomize disjoint product-family clusters to an actionable truthful source repair or unchanged source, with inference at cluster level. The primary analysis includes every assigned cluster from the predeclared start; do not reset the clock only for treated pages observed by a crawler. Evaluate the compiler against the current design workflow across independent portfolios, measuring subsequent purchase outcomes of their chosen releases. Plan duration from carryover and order delay, and power from cluster count and intracluster correlation; short switchbacks are disallowed when carryover is unbounded.",
+      "metric": "Verified AI-origin paid orders per fixed assigned cluster-week; total merchant orders and substitute-family orders are guardrails. Conversion per arriving AI session is secondary because the repair can change who arrives. Count all eligible units, including unpropagated treatments.",
+      "impactEvidence": "Hypothesized purchase improvement. statsig-seo proves workflow overlap; switchback-paper explains the importance of carryover assumptions, not an expected AI shopping benefit.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured propagation delays or order effect supplied. Let L be orders lost by wrong release decisions under the current design and R be extra orders lost through longer correct trials.",
+        "calculation": "Decision-policy incremental orders = avoided L - additional R over the same fixed horizon.",
+        "range": "May be zero or negative when current designs are already adequate, clusters are too few, or waiting costs exceed avoided errors."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 500 per multi-category trial, subject to an incremental contribution break-even calculation using the merchant's own margin.",
+      "costControl": "Reuse existing experiment assignment and warehouse systems; audit representative version propagation instead of issuing redundant model calls.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Enough independent product clusters",
+        "Reliable product-family mapping",
+        "Source deployment control",
+        "A measurable propagation window"
+      ],
+      "failureMode": "Cross-family substitution or engine-wide re-ranking still contaminates clusters; a longer trial loses the entire selling season.",
+      "falsifier": "Against the existing URL-based workflow, the design changes few decisions or produces no gain in purchases after accounting for its longer test duration.",
+      "sourceIds": [
+        "statsig-seo",
+        "switchback-paper",
+        "dfw-title"
+      ]
+    },
+    {
+      "id": "measurement-03",
+      "title": "Reject false winners with predeclared falsification controls",
+      "lens": "measurement",
+      "buyer": "An agency producing many AI optimisation recommendations and charging merchants for implementations.",
+      "problem": "Engine changes, attribution changes or broken assignment can look like a winning intervention. A dashboard can make an invalid result appear precise.",
+      "mechanism": "A release gate can preserve orders by stopping harmful false winners and directing the recovered implementation budget to valid candidates. Passing the gate itself creates no conversion lift.",
+      "intervention": "Attach predeclared A/A assignment checks, sample-ratio checks, pre-period placebo comparisons and carefully justified negative-control outcomes to every proposed release. Run semantic-preserving shams only inside the offline harness. Quarantine only implicated evidence, publish reasons and an expiry for investigation, and avoid open-ended blocking.",
+      "competitorOverlap": "Microsoft treats sample-ratio mismatch as an established experimentation gate, and mature platforms offer experiment diagnostics. The proposed value is an AI-source-specific falsification library that demonstrably improves release decisions, rather than a claim to have invented trustworthy A/B tests.",
+      "edgeHypothesis": "A modest, bounded gate catches enough consequential attribution and engine-change errors to outperform existing diagnostics without excessive false alarms.",
+      "dataNeeded": [
+        "Assignment and event counts from independent logging paths",
+        "Stable source attribution definitions",
+        "Pre-period outcomes and deployment history",
+        "Control outcomes plausibly unaffected by the specific intervention",
+        "Subsequent outcomes for quarantined and accepted releases"
+      ],
+      "experiment": "Start in shadow mode to estimate false alarms. Then randomize independent merchant portfolios to existing quality gates or the added gate, with the same candidate and implementation budgets. Primary endpoint is cumulative verified AI-origin paid orders per portfolio; all-channel orders and time-to-useful-release are guardrails. Treat knowingly broken instrumentation as a defect to fix in both arms, not a live harmful control. Power from portfolios and observed error prevalence over several release cycles.",
+      "metric": "Policy intention-to-treat order difference per assigned portfolio over a fixed horizon. Gate precision and saved work are secondary. An unaffected control must be justified causally; a null result does not prove absence of bias.",
+      "impactEvidence": "Hypothesized purchase preservation. negative-controls supports bias detection under conditions; microsoft-srm documents operational importance. No source quantifies this proposed gate's conversion lift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Let F be false winners that existing valid practice still misses, h their order harm, a the fraction caught, and D the order cost of false alarms and delay.",
+        "calculation": "Net orders preserved = F*h*a - D. All terms require field measurement.",
+        "range": "Zero when existing checks catch the same issues; negative if the new gate blocks useful releases more often than it prevents harm."
+      },
+      "willingnessToPay": "Unvalidated value test: GBP 250 per merchant per month, priced against prevented order loss and avoided rework, not number of warnings.",
+      "costControl": "Run deterministic assignment and event checks before model-based diagnostics; stop investigating after a defined evidence budget unless the decision remains material.",
+      "feasibility": "now",
+      "dependencies": [
+        "Existing responsible experiment workflow",
+        "Independent order truth source",
+        "A justifiable negative control for each intervention",
+        "Ability to record delay cost"
+      ],
+      "failureMode": "A supposed negative control is affected by substitution, or the gate becomes a permanent excuse to avoid uncertain but useful changes.",
+      "falsifier": "Prospective portfolios experience equal or fewer purchases with the gate because it adds delay without preventing consequential false releases.",
+      "sourceIds": [
+        "negative-controls",
+        "microsoft-srm",
+        "lily-max"
+      ]
+    },
+    {
+      "id": "measurement-04",
+      "title": "Test complementary funnel repairs before funding the biggest drop",
+      "lens": "measurement",
+      "buyer": "A retailer choosing between AI-source clarification, landing-page repair and checkout work.",
+      "problem": "The largest drop in a simulated funnel is not necessarily the highest-value causal bottleneck. A useful source correction may need a matching destination correction to produce any order gain.",
+      "mechanism": "A truthful delivery or variant fact in the retrieved source can attract suitable demand, while a landing change preserves that promise and enables checkout. Their combined purchase effect may exceed either alone; unrelated cosmetic fixes then lose budget.",
+      "intervention": "Generate a small full-factorial proposal for two actionable changes: for example, verified delivery-cutoff information in the merchant source and the matching location-aware delivery calculation on the landing page. Freeze the four combinations and the interaction estimand before testing. Fund the best affordable combination using paid orders.",
+      "competitorOverlap": "Shopify Rollouts already supports combinations of changes, and Lily Max already prepares variants and controlled tests. NIST's factorial methods are established. The hypothesis is that source-to-destination complementarity selection beats choosing the largest observed funnel drop or one-factor-at-a-time edits.",
+      "edgeHypothesis": "Identifying complementary repairs prevents the merchant from rejecting a valuable paired intervention or spending on a bottleneck that does not constrain real purchases.",
+      "dataNeeded": [
+        "Two truthful independently controllable repairs",
+        "Pre-period product-family demand",
+        "Exposure and paid-order records",
+        "Delivery, stock and product-variant truth",
+        "Sufficient clusters to estimate a prespecified interaction"
+      ],
+      "experiment": "For public source changes, randomize independent product-family clusters to a 2x2 design with both changes assigned at cluster level; avoid claiming upstream effects from a trial of arrival-only visitors. Primary endpoint is verified AI-origin paid orders per assigned cluster-week. Compare chosen factorial packages against the current prioritisation policy in subsequent randomized portfolio deployment. Power the interaction as well as main effects; stop after a prespecified full propagation and order window. Guard margin, correctness, cancellation and all-channel orders.",
+      "metric": "Cluster-level purchase contrasts for source repair, landing repair and their interaction; sum whole-catalogue orders to check displacement. Intermediate funnel rates describe mechanisms but do not independently identify mediation effects.",
+      "impactEvidence": "Hypothesized direct purchase mechanism. nist-factorial supports the design. No evidence supplied that the illustrative delivery pair improves purchases.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Let N be fixed eligible demand and p00, p10, p01, p11 the real purchase rates under the four assigned combinations.",
+        "calculation": "Interaction in purchase probability = p11 - p10 - p01 + p00. Pair gain over current state = N*(p11-p00), not the sum of separate observed funnel deltas.",
+        "range": "Interaction and total gain can be positive, zero or negative; a bundle with a positive interaction can still have a negative total effect."
+      },
+      "willingnessToPay": "Unvalidated service pilot: GBP 1,000 for design and readout of a sufficiently powered source-to-landing trial, with implementation costs separately disclosed.",
+      "costControl": "Start with two scientifically motivated factors; a large fractional design can alias the interaction being sought.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Deployable source and landing controls",
+        "A truthful source-to-destination mismatch",
+        "Adequate sample for interaction estimation",
+        "No unavoidable cluster interference"
+      ],
+      "failureMode": "Too many factors exhaust the sample, or treated visitors form a different population and a conditional funnel analysis mistakes selection for causation.",
+      "falsifier": "Paired testing does not identify a more purchase-effective affordable package than current prioritisation on a fresh release cohort.",
+      "sourceIds": [
+        "nist-factorial",
+        "shopify-rollouts",
+        "lily-max"
+      ]
+    },
+    {
+      "id": "measurement-05",
+      "title": "Reuse randomized shopping logs to reject weak retrieval policies",
+      "lens": "measurement",
+      "buyer": "A merchant operating its own shopping assistant or a commerce tool whose retrieval and landing routing it controls.",
+      "problem": "Every new retrieval policy can consume a live test, while simulator preferences provide no counterfactual purchase labels. Historical deterministic rankings leave many proposed actions unsupported.",
+      "mechanism": "Logging a small safe exploration policy permits offline comparison of supported candidate policies on real purchase outcomes. Screening weak policies can reserve live traffic for better ones and accelerate a verified winner.",
+      "intervention": "For permitted equivalent offer or landing choices, log context, chosen action, the exact action probability and mature purchase reward. Implement cross-fitted doubly robust evaluation with weight diagnostics, support checks and pessimistic uncertainty bounds. Require a fresh online test before broad rollout. Do not infer proprietary ChatGPT or Google action probabilities.",
+      "competitorOverlap": "Vowpal Wabbit already implements offline policy evaluation and contextual-bandit methods. The product opportunity is a commerce integration with paid-order rewards, exact variant eligibility and a purchase-tested screening policy; the estimator itself is not novel.",
+      "edgeHypothesis": "Real logged outcomes eliminate low-value tests more accurately than simulator-only ranking, enough to offset safe exploration and logging costs.",
+      "dataNeeded": [
+        "Owned retrieval or routing control",
+        "Exact randomized action probabilities and allowed action sets",
+        "Pre-action context without sensitive inferred traits",
+        "Stable shopper assignment and mature paid orders",
+        "Candidate policy code frozen before its evaluation set is read"
+      ],
+      "experiment": "First collect bounded randomized exploration among truthful, available offers. Evaluate supported policies offline, then randomize independent merchant assistant deployments to OPE screening or the existing candidate selection process at equal live-test budget. Within deployments, validate finalists on stable shopper cohorts. Primary endpoint is paid orders per AI-shopping user assigned before retrieval. Follow full purchase delay and use design-aware inference for adaptive logs. Guard total order value, latency, stock accuracy and exploration loss.",
+      "metric": "Intention-to-treat paid orders per unique assigned AI-shopping user, with repeated sessions retained in the user's original arm. Effective sample size, weight tails and offline confidence bounds are eligibility checks. Offline estimated value is not a measured online lift.",
+      "impactEvidence": "Method supported by dr-2011 and vw-ope; adaptive-ope documents why uncertainty can fail under adaptive data. Purchase benefit of this screening workflow remains hypothesized.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Let Oweak be order loss avoided by skipping weak tests, Oearly orders gained from earlier good releases, and Oexplore order loss from exploration.",
+        "calculation": "Net incremental orders = Oweak + Oearly - Oexplore over a matched fixed horizon; do not add these components again to the observed policy-trial total.",
+        "range": "Zero or negative if action support is sparse, propensities are wrong, or exploration harms exceed saved test losses."
+      },
+      "willingnessToPay": "Unvalidated enterprise pilot: GBP 1,500 per month for one owned assistant deployment, contingent on a purchase-contribution break-even test.",
+      "costControl": "Batch offline evaluation against shared logged data; limit candidate queries against the holdout and reserve live tests for supported policies.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Control of the action policy",
+        "Sufficient randomized support",
+        "Reliable delayed purchase joins",
+        "Statistical implementation for adaptive data"
+      ],
+      "failureMode": "The system confidently evaluates actions that historical logging almost never took, or an offer's availability changed after the recorded context.",
+      "falsifier": "Offline lower-bound rankings fail prospective calibration, or the OPE selection program produces no extra purchases over the same-budget existing workflow.",
+      "sourceIds": [
+        "vw-ope",
+        "dr-2011",
+        "adaptive-ope"
+      ]
+    },
+    {
+      "id": "measurement-06",
+      "title": "Measure whether AI wins add orders or only move them between products",
+      "lens": "measurement",
+      "buyer": "A marketplace, multi-brand retailer or agency managing overlapping substitute products.",
+      "problem": "A promoted product can gain purchases by taking them from untreated substitutes. Shared stock, delivery capacity and demand can bias a simple treated-SKU comparison.",
+      "mechanism": "A saturation-aware rollout selects changes that grow the merchant's complete order pool instead of rewarding internal displacement. This can preserve availability for suitable customers and avoid spending on apparent gains with no new purchases.",
+      "intervention": "Build a substitution and shared-capacity graph from pre-treatment evidence. Form reasonably independent demand clusters, then randomize clusters to zero, partial or full treatment saturation. In partially treated clusters, randomize eligible products. Estimate total cluster purchase effects and displacement before recommending a full rollout.",
+      "competitorOverlap": "Statsig already documents cannibalization diagnostics and switchbacks; marketplace researchers and platforms already use cluster designs. The specific product claim is superior full-catalogue purchase decisions for AI discovery interventions, not invention of interference analysis.",
+      "edgeHypothesis": "A material fraction of apparent SKU-level AI gains disappear at full treatment or harm substitute availability, and rejecting those rollouts frees effort for true incremental demand.",
+      "dataNeeded": [
+        "Pre-period substitute-product graph and shared inventory dependencies",
+        "Cluster-level total paid orders",
+        "Treatment saturation and product assignment",
+        "Stockouts, delivery-capacity state and prices",
+        "AI-origin evidence collected consistently across all products"
+      ],
+      "experiment": "Use two-stage cluster/saturation randomization for a deployable source or owned retrieval change, including zero and full saturation. Primary endpoint is total verified AI-origin paid orders in each fixed demand cluster, not treated-SKU conversion. Use randomized inference respecting both stages. Compare the resulting release rule with independent-SKU selection across independent portfolio cohorts. Run through propagation and demand cycles; small cluster counts and cross-cluster substitution may make a causal claim infeasible. Guard total merchant orders, stockouts and margin.",
+      "metric": "Total treatment effect on paid orders per assigned cluster-time, plus direct and spillover contrasts where the design supports them. Report merchant-level totals to detect cross-cluster displacement. Do not add SKU gains as independent incremental orders.",
+      "impactEvidence": "Adjacent empirical method evidence from airbnb-interference, with pricing and lodging context limitations. No transported percentage is claimed for ecommerce AI interventions. saturation-design provides the two-stage estimands under partial interference.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Let G be extra treated-product orders, C orders displaced from the merchant's own substitutes, and S extra stockout or capacity losses.",
+        "calculation": "Merchant incremental orders = G - C - S. Gains captured from external competitors are incremental to the merchant but not automatically new category demand.",
+        "range": "Can be negative even when G is positive; equals zero when all apparent gains are internal displacement."
+      },
+      "willingnessToPay": "Unvalidated pilot: GBP 2,000 per large portfolio trial; viable only if potential avoided displacement or capacity harm has materially higher contribution value.",
+      "costControl": "Use the pre-period graph to focus trials on high-overlap categories; do not impose costly saturation designs on demonstrably independent low-volume products.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Enough separable demand clusters",
+        "Whole-portfolio order access",
+        "Ability to vary treatment saturation",
+        "Stable shared-stock accounting"
+      ],
+      "failureMode": "The substitution graph misses cross-category shopping, leaving interference between experimental clusters; the variance penalty removes useful power.",
+      "falsifier": "Saturation-based release choices do not improve whole-portfolio purchases over independent-product decisions at equal total implementation cost.",
+      "sourceIds": [
+        "airbnb-interference",
+        "statsig-seo",
+        "switchback-paper",
+        "saturation-design",
+        "statsig-switchback"
+      ]
+    },
+    {
+      "id": "measurement-07",
+      "title": "Spend experiment budget where a decision can still create orders",
+      "lens": "measurement",
+      "buyer": "A growth lead with a seasonal catalogue, limited engineering time and a fixed monthly testing budget.",
+      "problem": "Equal-duration tests waste traffic on decisions that cannot change, or finish after inventory and seasonal demand have disappeared.",
+      "mechanism": "A finite-horizon allocator can move promising evidence-backed repairs into production while saleable demand remains, abandon expensive indecision and spend the recovered budget on another useful intervention.",
+      "intervention": "For each candidate, combine conservative effect uncertainty, exposure rate, inventory horizon, implementation cost and reversibility into a next-action policy: gather another batch, ship within an approved risk limit, keep control or abandon. Use prespecified sequentially valid purchase inference and pre-treatment variance reduction where appropriate. Keep a cumulative program holdout.",
+      "competitorOverlap": "Statsig already offers sequential testing and CUPED-related functionality; Eppo already supports program holdouts. The proposed advantage is allocation across different merchant interventions and selling horizons, validated on cumulative orders, rather than faster p-values.",
+      "edgeHypothesis": "Purchase-valued budget allocation outperforms the existing fixed-duration queue after counting test exposure losses, delayed releases and expired inventory.",
+      "dataNeeded": [
+        "Mature purchase outcomes and assignment",
+        "Pre-period covariates eligible for variance reduction",
+        "Inventory depletion and seasonal horizon forecasts with uncertainty",
+        "Engineering, API and opportunity costs",
+        "Frozen decision thresholds and total portfolio budget"
+      ],
+      "experiment": "Randomize independent merchant or category portfolios to the allocator versus their competent current test queue. Keep identical total implementation and experimentation budgets. Primary endpoint is cumulative verified AI-origin paid orders over a fixed selling horizon, including orders during testing. Use sequential inference compatible with the actual unit and delay process; do not assume Statsig's user-test method automatically applies to switchbacks or clusters. Guard contribution, operational faults and maximum exploration loss. Power at portfolio level before launch.",
+      "metric": "Incremental paid orders per preassigned portfolio over the full decision horizon; incremental contribution is a guardrail. Time to decision and number of tests are secondary and do not substitute for purchases.",
+      "impactEvidence": "Hypothesized program-level purchase gain. always-valid and cuped support statistical components; statsig-sequential and eppo-holdouts show established commercial overlap.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen illustration only: 20,000 eligible users per month, baseline purchase probability 2%, an effective patch with absolute effect 0.1 percentage point, and release seven days earlier in a 30-day month.",
+        "calculation": "Earlier-release orders = 20,000*(7/30)*0.001 = 4.67 expected orders, before subtracting extra exploration or mistaken-release harm. These assumed numbers are not observed results.",
+        "range": "Zero if timing does not change or demand expires first; negative if early release selects a harmful patch. No portable percentage is supportable."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP 500 per month. At an assumed GBP 25 contribution per extra order, the fee alone needs 20 incremental orders; the timing example alone would not justify it.",
+      "costControl": "Stop simulator work when it cannot change the next decision; optimize orders within a budget rather than maximizing experiment throughput.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable inventory and demand horizons",
+        "A valid uncertainty model",
+        "Reversible deployment controls",
+        "Enough portfolios for a program trial"
+      ],
+      "failureMode": "Overconfident forecasts prefer flashy short-term winners; delayed orders make apparently weak arms look worse than they are.",
+      "falsifier": "At the same all-in cost, the allocator yields no more cumulative purchases than the existing queue or violates its order-harm budget.",
+      "sourceIds": [
+        "always-valid",
+        "cuped",
+        "statsig-sequential",
+        "eppo-holdouts",
+        "statsig-switchback"
+      ]
+    },
+    {
+      "id": "measurement-08",
+      "title": "Protect release decisions from simulator-specific overfitting",
+      "lens": "measurement",
+      "buyer": "A team generating hundreds of candidate product interventions from an LLM-controlled search proxy.",
+      "problem": "Repeatedly optimizing titles, prompts or result positions against one frozen task set can discover a simulator shortcut instead of a deployable improvement.",
+      "mechanism": "A protected evaluation process can prevent narrow synthetic winners from consuming live-test and rollout budget, leaving more capacity for changes that help real shoppers. Its value is conditional on errors it actually prevents.",
+      "intervention": "Separate candidate creation, tuning and final evaluation by merchant, intent family and future time, not just random reruns. Freeze a small set of finalists, give an independent evaluator access to a locked test set, and retire that set after material adaptive use. Label artificial result-rank changes as sensitivity probes, and require a deployable truthful actuator before graduation.",
+      "competitorOverlap": "Reusable-holdout research and commercial eval systems already address adaptive validation; Shopify SimGym supplies synthetic comparisons. This proposal must beat current disciplined evaluation practice through task-family coverage and purchase-valued graduation, rather than claim generic train/test splitting as innovation.",
+      "edgeHypothesis": "Protected cross-context graduation reduces costly false positives enough to beat a same-budget simulator-optimised pipeline on real orders.",
+      "dataNeeded": [
+        "Candidate and prompt lineage",
+        "Independent real task/intention samples with consent where needed",
+        "Frozen product snapshots and model/tool versions",
+        "Locked merchant and future-period evaluation partitions",
+        "Complete record of which holdout feedback developers have seen"
+      ],
+      "experiment": "Randomize independent candidate batches or merchant portfolios to protected graduation versus the existing simulator screening process, at equal generation and live-test budget. Both arms' finalists undergo real randomized merchant experiments; primary endpoint is cumulative verified AI-origin paid orders from subsequent permitted releases. Final purchase validation uses fresh units and correction for the selected claim family. Cluster uncertainty by real task or merchant; 50 seeds for one task remain one task with model-noise observations. Follow at least one full release and purchase cycle.",
+      "metric": "Real policy-level incremental paid orders per randomized portfolio, including false-release loss and evaluation delay. New-task recommendation performance and generalisation gaps are diagnostics only.",
+      "impactEvidence": "Hypothesized purchase impact. reusable-holdout supports protection from adaptive reuse, but its guarantees do not apply automatically to ordinary dataset splitting. llm-diversity cautions against treating synthetic runs as people.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Let B be the order value of better candidates enabled by recovered test capacity, H avoided order harm from overfit releases, and D delay from protected evaluation.",
+        "calculation": "Net policy orders = B + H - D over the same fixed horizon.",
+        "range": "Could be zero if current evaluation already prevents overfit; negative when screening rejects useful unusual interventions or uses too much scarce traffic."
+      },
+      "willingnessToPay": "Unvalidated audit pilot: GBP 750 for one candidate-generation release cycle, with renewal only if prospective decision value exceeds the audit and delay cost.",
+      "costControl": "Cache immutable retrieved records and run small noise-estimation batches; pay for fresh task coverage instead of thousands of indistinguishable seeds.",
+      "feasibility": "now",
+      "dependencies": [
+        "Evaluation access separation",
+        "Fresh task and merchant cohorts",
+        "Deployable intervention registry",
+        "Portable evaluation records"
+      ],
+      "failureMode": "Developers learn the locked task distribution through repeated acceptance feedback; evaluator models share the same preference bias as generator models.",
+      "falsifier": "Protected graduation shows no advantage in real purchase outcomes over the same-budget existing validation pipeline on new merchants and future tasks.",
+      "sourceIds": [
+        "reusable-holdout",
+        "llm-diversity",
+        "simgym",
+        "openai-evals"
+      ]
+    },
+    {
+      "id": "measurement-09",
+      "title": "Let fast proxies earn a limited role through mature purchase evidence",
+      "lens": "measurement",
+      "buyer": "A merchant whose AI-origin orders arrive days after discovery, with meaningful cancellation or return delays.",
+      "problem": "A recommendation, cart or immediate checkout metric is fast but can favor interventions that do not produce paid orders, or that attract poorly matched customers who cancel.",
+      "mechanism": "A validated early decision rule could promote useful changes sooner while mature purchase monitoring removes deceptive proxy winners. Additional orders require the saved delay to exceed harm from early mistakes.",
+      "intervention": "Maintain a proxy eligibility register by intervention family. Compare early signals with mature randomized purchase effects on held-out experiments; model order delay from predeclared windows. Allow only bounded provisional exposure when evidence supports the early rule, maintain a persistent randomized holdout, and automatically re-evaluate the release when paid orders mature. Returns and margin remain separately visible.",
+      "competitorOverlap": "Statsig's meta-analysis documentation already includes cross-experiment metric correlations and Eppo provides long-term holdouts. The proposed distinction is a purchase-validated, intervention-specific provisional release policy with expiry, not a dashboard correlating carts and revenue.",
+      "edgeHypothesis": "For some intervention families, a conservative early policy reaches effective releases faster than waiting for all outcomes without increasing mistaken-release harm.",
+      "dataNeeded": [
+        "Randomized early metrics and mature paid orders for many past interventions",
+        "Time-to-purchase and censoring records",
+        "Refund, cancellation and contribution data",
+        "Untouched validation experiments",
+        "Stable buyer assignment through follow-up"
+      ],
+      "experiment": "Randomize independent owned-assistant or downstream AI-referral portfolios to the provisional rule versus existing mature-endpoint decisions. Primary endpoint is cumulative paid orders per preassigned eligible user or portfolio over a fixed horizon long enough for purchase maturity; use cancellations, returns and contribution as guardrails. Keep an enduring randomized control for provisional winners. Predeclare censoring treatment and compare mature intention-to-treat estimates. Surrogate correlation alone cannot authorize replacing the purchase endpoint; power must include delayed follow-up.",
+      "metric": "Mature paid orders per assigned user for arrival-level trials, or per assigned portfolio-time for upstream trials. Report provisional exposure losses and final outcome reversals. Kept orders and net contribution are guardrails, not silently substituted definitions of purchase.",
+      "impactEvidence": "Methodological adjacent support from surrogate-index, which requires strong surrogacy and comparability conditions. No evidence says synthetic recommendation rate is a valid surrogate for real purchases.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Let E be additional orders from earlier rollout of real winners and M orders lost on false provisional winners before mature reversal.",
+        "calculation": "Incremental orders = E - M, including any follow-up and holdout opportunity cost within the same horizon.",
+        "range": "Can be negative even with high cart-purchase correlation if the tested intervention changes that relationship."
+      },
+      "willingnessToPay": "Unvalidated pilot: GBP 500 per month for a high-volume merchant; charge only after a shadow study shows that early decisions could change enough contribution to cover the fee.",
+      "costControl": "Use order-event maturity checks before additional simulation; permit proxies only in families with evidence that decisions can safely be accelerated.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Enough completed randomized interventions",
+        "Stable delayed order joins",
+        "Sufficient horizon for mature verification",
+        "Bounded reversible rollout"
+      ],
+      "failureMode": "The intervention directly changes purchases through a route absent from the proxy model, invalidating surrogacy exactly when the early rule is used.",
+      "falsifier": "Held-out interventions show unreliable early effect rankings, or provisional decisions produce fewer mature paid orders than waiting at the same cost.",
+      "sourceIds": [
+        "surrogate-index",
+        "statsig-meta",
+        "eppo-holdouts"
+      ]
+    },
+    {
+      "id": "measurement-10",
+      "title": "Pool comparable merchant trials without hiding who benefits",
+      "lens": "measurement",
+      "buyer": "An agency or merchant cooperative whose individual stores have too little AI-origin traffic to resolve useful treatment effects.",
+      "problem": "Each small store can run an inconclusive test, leaving useful repairs unapplied and tempting the operator to substitute synthetic sample size for real customers.",
+      "mechanism": "A cooperative can test the same truthful intervention across comparable stores, learn average and heterogeneous effects, then release only where supported evidence is favorable. Purchases improve if this resolves decisions that current isolated tests leave unresolved.",
+      "intervention": "Create an opt-in trial registry with a narrow intervention protocol, harmonized purchase definitions and a hierarchical analysis. Share aggregate experiment summaries where feasible, assess heterogeneity, validate on untouched merchants and abstain on out-of-distribution stores. Preserve within-store randomization for downstream changes and cluster assignment for public source changes.",
+      "competitorOverlap": "Statsig already offers cross-experiment meta-analysis and a knowledge bank, and Lily Max says results inform future work. The proposed edge is an explicitly governed cross-merchant protocol with validated borrowing and purchase decisions for low-traffic stores. Competitor internal pooling methods are unknown.",
+      "edgeHypothesis": "Limited evidence sharing within prespecified comparable groups resolves enough real purchase decisions to improve orders beyond isolated merchant tests, without harmful overgeneralisation.",
+      "dataNeeded": [
+        "Merchant-approved de-identified assignment and outcome summaries",
+        "Consistent intervention versions and purchase windows",
+        "Pre-treatment merchant, category, locale and offer context",
+        "Within-merchant sampling variances and cluster dependence",
+        "Untouched merchants for predictive validation and harm monitoring"
+      ],
+      "experiment": "Recruit comparable merchants, then randomize merchant groups to a cooperative evidence-and-release policy or competent isolated testing at equal aggregate budget. Within groups, randomize deployable interventions using the correct user or product-cluster unit. Primary endpoint is cumulative verified AI-origin paid orders across fixed enrolled merchant-weeks; prespecify both demand-weighted total and merchant-level harm guardrails. Require leave-merchant-out validation before borrowing heavily. Duration and power come from real merchant numbers, heterogeneity and order rates, potentially several months.",
+      "metric": "Policy intention-to-treat difference in total paid orders across the fixed merchant cohort, with separately reported merchant effects and uncertainty. Partial pooling reduces variance only under a defensible model; it cannot manufacture an observed store-specific effect.",
+      "impactEvidence": "meager-meta provides an adjacent example of hierarchical analysis across randomized studies, not merchant-specific efficacy. Purchase uplift and merchant exchangeability remain hypotheses.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Let ni be a merchant's fixed eligible demand and di the true purchase effect of the release selected by cooperative evidence rather than isolated testing.",
+        "calculation": "Total incremental orders = sum_i(ni*di), counting test-period effects and harms once. A positive cohort sum can coexist with negative effects at individual merchants.",
+        "range": "Unknown; zero when no decisions change, negative when inappropriate pooling spreads an ineffective or harmful intervention."
+      },
+      "willingnessToPay": "Unvalidated cooperative pilot: GBP 100 per merchant per month, with a shared analysis budget and a no-claim rule for merchants outside the evidence base.",
+      "costControl": "Reuse a small number of precisely specified interventions and aggregate summaries; do not collect raw shopper identity or run separate large simulator populations per merchant.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant consent and compatible data rights",
+        "Harmonized outcomes and intervention protocol",
+        "Enough independent merchants",
+        "Prespecified borrowing limits and harm rules"
+      ],
+      "failureMode": "Large stores dominate, treatment versions differ, or selected enthusiastic merchants create a misleading prior for the next small store.",
+      "falsifier": "Held-out merchant predictions are poorly calibrated or the cooperative policy produces no additional total purchases, or unacceptable merchant-specific losses, versus isolated testing.",
+      "sourceIds": [
+        "meager-meta",
+        "transport",
+        "statsig-meta",
+        "lily-max"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "transport",
+      "title": "External Validity: From Do-Calculus to Transportability Across Populations",
+      "url": "https://arxiv.org/abs/1503.01603",
+      "type": "research",
+      "claim": "Pearl and Bareinboim formalize assumptions needed to transport causal effects. This does not license transporting synthetic recommendation outcomes into human purchase effects."
+    },
+    {
+      "id": "llm-diversity",
+      "title": "Diminished Diversity-of-Thought in a Standard Large Language Model",
+      "url": "https://arxiv.org/abs/2302.07267",
+      "type": "research",
+      "claim": "Preregistered replications with text-davinci-003 found limited variation and replication problems. Evidence concerns an older model and social-science tasks, not a measured failure rate for current shopping models."
+    },
+    {
+      "id": "statsig-seo",
+      "title": "SEO Experimentation with Statsig",
+      "url": "https://docs.statsig.com/experiments/types/seo-testing",
+      "type": "official-doc",
+      "claim": "Documents canonical-URL assignment, indexing-lag considerations, conversion/revenue guardrails and a cannibalization ratio. Generic page experiments and crawl diagnostics already exist."
+    },
+    {
+      "id": "switchback-paper",
+      "title": "Design and Analysis of Switchback Experiments",
+      "url": "https://arxiv.org/abs/2009.00148",
+      "type": "research",
+      "claim": "Provides design and inference methods that explicitly depend on carryover assumptions. Persistent external search caches may violate a proposed short switchback."
+    },
+    {
+      "id": "negative-controls",
+      "title": "Negative Controls: A Tool for Detecting Confounding and Bias in Observational Studies",
+      "url": "https://dash.harvard.edu/entities/publication/73120379-21f6-6bd4-e053-0100007fdf3b",
+      "type": "research",
+      "claim": "Explains how suitable negative-control exposures and outcomes can reveal bias. Passing negative controls does not prove a causal claim."
+    },
+    {
+      "id": "microsoft-srm",
+      "title": "Diagnosing Sample Ratio Mismatch in A/B Testing",
+      "url": "https://www.microsoft.com/en-us/research/articles/diagnosing-sample-ratio-mismatch-in-a-b-testing/",
+      "type": "research",
+      "claim": "Microsoft describes SRM as a trustworthiness gate before interpreting effects. It is an established quality check, not a novel conversion intervention."
+    },
+    {
+      "id": "nist-factorial",
+      "title": "5.5.9.4. Interaction effects matrix plot",
+      "url": "https://itl.nist.gov/div898/handbook/pri/section5/pri594.htm",
+      "type": "official-doc",
+      "claim": "Explains main effects and interactions, and the limitations introduced by fractional designs. Supports separating complementary funnel interventions experimentally."
+    },
+    {
+      "id": "vw-ope",
+      "title": "Offline Policy Evaluation Using the Command Line",
+      "url": "https://vowpalwabbit.org/docs/vowpal_wabbit/python/latest/tutorials/off_policy_evaluation.html",
+      "type": "official-doc",
+      "claim": "Documents off-policy evaluation from logged contextual-bandit actions and probabilities. It does not supply missing propensities for proprietary consumer search engines."
+    },
+    {
+      "id": "dr-2011",
+      "title": "Doubly Robust Policy Evaluation and Learning",
+      "url": "https://arxiv.org/abs/1103.4601",
+      "type": "research",
+      "claim": "Develops doubly robust evaluation and learning under partial reward observation. Identification and useful precision still require appropriate logged data and action support."
+    },
+    {
+      "id": "adaptive-ope",
+      "title": "Off-Policy Evaluation via Adaptive Weighting with Data from Contextual Bandits",
+      "url": "https://arxiv.org/abs/2106.02029",
+      "type": "research",
+      "claim": "Studies inference difficulties with adaptive bandit data, including bias and variance problems. Supports explicit uncertainty and effective-sample checks."
+    },
+    {
+      "id": "airbnb-interference",
+      "title": "Reducing Interference Bias in Online Marketplace Experiments Using Cluster Randomization: Evidence from a Pricing Meta-experiment on Airbnb",
+      "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2020.01157",
+      "type": "research",
+      "claim": "An empirical marketplace meta-experiment studies interference and cluster randomization. Its pricing results are adjacent evidence, not expected ecommerce AI conversion lift."
+    },
+    {
+      "id": "always-valid",
+      "title": "Always Valid Inference: Continuous Monitoring of A/B Tests",
+      "url": "https://pubsonline.informs.org/doi/10.1287/opre.2021.2135",
+      "type": "research",
+      "claim": "Provides sequentially valid inference and multiple-testing treatment for continuously monitored experiments. Validity does not create statistical power or eliminate business risk."
+    },
+    {
+      "id": "cuped",
+      "title": "Deep Dive Into Variance Reduction",
+      "url": "https://www.microsoft.com/en-us/research/group/experimentation-platform-exp/articles/deep-dive-into-variance-reduction/",
+      "type": "research",
+      "claim": "Explains Microsoft CUPED variance reduction using pre-experiment information. Achievable gains depend on covariate correlation and correct implementation."
+    },
+    {
+      "id": "statsig-sequential",
+      "title": "Frequentist Sequential Testing",
+      "url": "https://docs.statsig.com/experiments/advanced-setup/sequential-testing",
+      "type": "official-doc",
+      "claim": "Sequential testing is already commercial functionality; the documentation distinguishes early ship decisions from precise effect estimation."
+    },
+    {
+      "id": "reusable-holdout",
+      "title": "STATISTICS. The reusable holdout: Preserving validity in adaptive data analysis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26250683/",
+      "type": "research",
+      "claim": "Demonstrates that adaptive reuse of data needs protection to preserve validity. A plain repeatedly queried holdout does not inherit the paper's guarantees."
+    },
+    {
+      "id": "surrogate-index",
+      "title": "The Surrogate Index: Combining Short-Term Proxies to Estimate Long-Term Treatment Effects More Rapidly and Precisely",
+      "url": "https://www.nber.org/papers/w26463",
+      "type": "research",
+      "claim": "Formal surrogate identification requires a conditional independence assumption and comparability conditions. Correlation of carts and purchases alone is insufficient."
+    },
+    {
+      "id": "eppo-holdouts",
+      "title": "Holdouts",
+      "url": "https://docs.geteppo.com/feature-flagging/concepts/holdout-config/",
+      "type": "official-doc",
+      "claim": "Documents randomized status-quo versus shipped-winner audiences for aggregate program impact. Persistent holdouts are established functionality."
+    },
+    {
+      "id": "meager-meta",
+      "title": "Understanding the Average Impact of Microcredit Expansions: A Bayesian Hierarchical Analysis of Seven Randomized Experiments",
+      "url": "https://www.aeaweb.org/articles?id=10.1257/app.20170299",
+      "type": "research",
+      "claim": "Uses hierarchical modeling to estimate average and heterogeneous effects across randomized studies. Supports a method, not an assumption that merchant effects are exchangeable."
+    },
+    {
+      "id": "statsig-meta",
+      "title": "Meta-Analysis",
+      "url": "https://docs-legacy.statsig.com/experimentation/meta-analysis/",
+      "type": "official-doc",
+      "claim": "Legacy official documentation includes experiment history, cross-experiment metric correlations and a knowledge bank. Confirm current packaging; generic meta-analysis is established."
+    },
+    {
+      "id": "simgym",
+      "title": "Shopify Help Center | SimGym",
+      "url": "https://help.shopify.com/en/manual/online-store/simgym",
+      "type": "official-doc",
+      "claim": "AI Research Preview simulates shoppers and compares theme add-to-cart ratios; warns actual behavior may differ. Extra simulations cost USD 0.75 single-theme or USD 1.50 comparison after allowance, verified 2026-09-29."
+    },
+    {
+      "id": "shopify-rollouts",
+      "title": "Shopify Help Center | Types of rollouts and changes",
+      "url": "https://help.shopify.com/en/manual/markets/rollouts/rollout-types",
+      "type": "official-doc",
+      "claim": "Grow and higher support treatment/control experiments with configurable traffic splits and scoped theme, checkout/accounts, catalogue activation and discount changes."
+    },
+    {
+      "id": "lily-max",
+      "title": "How Lily Max Works | Agentic Product Intelligence",
+      "url": "https://www.lily.ai/how-it-works/",
+      "type": "official-doc",
+      "claim": "Vendor describes enrichment, matched-spend tests, holdouts, difference-in-differences, confidence intervals and approved winner deployment. This page alone does not establish random assignment or a purchase effect for our proposed system."
+    },
+    {
+      "id": "dfw-title",
+      "title": "A/B Testing Product Titles for Better Ads Performance",
+      "url": "https://www.datafeedwatch.com/blog/ab-testing-product-titles",
+      "type": "official-doc",
+      "claim": "Documents item-level title variants distributed by alternating product IDs and tracking parameters, primarily in advertising feeds. This is direct workflow overlap; it is not evidence of randomized human AI-shopping uplift."
+    },
+    {
+      "id": "openai-evals",
+      "title": "Working with evals",
+      "url": "https://developers.openai.com/api/docs/guides/evals",
+      "type": "official-doc",
+      "claim": "At the 2026-09-29 snapshot, the page announces Evals read-only on 2026-10-31 and shutdown on 2026-11-30. Preserve portable evaluation records instead of coupling durable evidence to this service."
+    },
+    {
+      "id": "saturation-design",
+      "title": "Toward Causal Inference With Interference",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2600548/",
+      "type": "research",
+      "claim": "Defines direct, indirect, total and overall effects with two-stage randomization under partial interference. Requires no interference between the chosen groups; it does not prove retail clusters satisfy that condition."
+    },
+    {
+      "id": "statsig-switchback",
+      "title": "Switchback Tests",
+      "url": "https://docs.statsig.com/experiments/types/switchback-tests",
+      "type": "official-doc",
+      "claim": "Documents population/time switchbacks and burn-in/burn-out controls. At this snapshot its switchback docs state that CUPED and sequential testing are not supported for that experiment type."
+    }
+  ]
+}

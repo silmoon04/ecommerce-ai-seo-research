@@ -1,0 +1,575 @@
+{
+  "lens": "temporal",
+  "ideas": [
+    {
+      "id": "temporal-01",
+      "title": "Route each stated arrival deadline to a deliverable offer",
+      "lens": "temporal",
+      "buyer": "Gift, travel and event-goods merchants with meaningful delivery-deadline demand.",
+      "problem": "A product can meet every specification yet arrive after the shopper needs it; a generic delivery estimate leaves that mismatch unresolved.",
+      "mechanism": "Selection and checkout: preserve the shopper's need-by date, resolve the actual warehouse, cutoff and service, and offer only credible delivery or collection paths. More feasible paths could produce additional paid orders; a stricter filter could also reduce them.",
+      "intervention": "A merchant-owned deadline resolver consumes postcode, timestamp, chosen variant and need-by date; returns dated delivery options, source timestamps and the last real order cutoff; carries the selected service into checkout and rechecks it there. No unsupported guaranteed-arrival language.",
+      "competitorOverlap": "Google Merchant Center already models delivery dates and cutoff times. Existing carrier and merchant checkout estimates are the comparator. The hypothesis is preserving a shopper-specific deadline through AI selection and handoff; no universal competitor absence is claimed.",
+      "edgeHypothesis": "An explicit feasibility check and a valid fallback such as collection can recover deadline-sensitive purchases that truthful generic estimates lose.",
+      "dataNeeded": [
+        "User-supplied deadline and coarse delivery location",
+        "Warehouse and carrier calendars, cutoff and holidays",
+        "Variant inventory and checkout shipping quotes",
+        "Observed on-time delivery and retained orders"
+      ],
+      "experiment": "Randomize identifiable AI-origin buyers after collecting the same optional deadline in both arms. Compare current accurate estimates with resolved deadline options. Primary endpoint is a paid order retained after the return window per eligible buyer; on-time receipt is a guardrail. Run across weekday, weekend and cutoff boundaries for at least six weeks, then mature outcomes; power from observed baseline and deadline prevalence. Do not falsify control estimates.",
+      "metric": "Intention-to-treat retained purchase probability among all preidentified deadline-bearing AI-origin buyers. Report order count, late-delivery rate and incremental contribution; this on-site test does not establish discovery lift.",
+      "impactEvidence": "Hypothesized purchase effect; google-delivery and google-cutoff establish existing operational inputs, not a conversion percentage.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unmeasured N eligible AI-origin deadline shoppers, control retained-purchase rate c0, deadline-failure prevalence f and contribution m. No baseline is assumed positive.",
+        "calculation": "Incremental retained orders = N*(cT-c0). Break-even requires N*(cT-c0)*m to exceed fee plus incremental shipping, integration and support cost. Zero or negative change is possible, especially if current estimates already solve the problem.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 300 per store per month plus a separately quoted integration. Renewal requires measured incremental contribution above total cost.",
+      "costControl": "Use deterministic calendars and cached carrier routes; refresh near actual cutoff changes and checkout. Reserve model calls for interpreting user-supplied dates.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Authoritative fulfillment data",
+        "Checkout service selection integration",
+        "Merchant or approved agent interface able to receive a deadline",
+        "Timezone and holiday handling"
+      ],
+      "failureMode": "Overconfident estimates create late orders; conservative estimates suppress viable ones; most shoppers never supply a date.",
+      "falsifier": "A powered test rules out the merchant's predeclared break-even retained-order effect, or any gain is erased by late-delivery refunds.",
+      "sourceIds": [
+        "google-delivery",
+        "google-cutoff",
+        "cma-urgency"
+      ]
+    },
+    {
+      "id": "temporal-02",
+      "title": "Sell availability for the whole usage interval",
+      "lens": "temporal",
+      "buyer": "Equipment, clothing and event-supply rental merchants selling paid bookings online.",
+      "problem": "Static in-stock answers cannot tell a shopper whether equipment is available throughout a wedding, trip or production period.",
+      "mechanism": "Discovery and selection: bind a shopper's start and end dates to inventory that is actually bookable throughout that interval, then preserve dates into payment. Fewer dead-end calendar checks could yield more paid rental orders.",
+      "intervention": "An interval-aware merchant search endpoint checks location, requested quantity, turnaround buffers and start/end times; returns valid rental offers and permitted date alternatives. Carry a signed selection into booking checkout and revalidate before payment.",
+      "competitorOverlap": "Booqable already exposes date-aware availability and exact-period inventory quantities. Rebuilding its calendar is not an edge. The proposal connects an AI-origin request to existing bookable inventory without losing its dates.",
+      "edgeHypothesis": "Calendar constraints preserved from conversation through booking outperform generic product links followed by repeated date entry.",
+      "dataNeeded": [
+        "Explicit rental dates, quantities and location",
+        "Booking calendar and downtime buffers",
+        "Live availability API and final price",
+        "Paid booking, cancellation and completed rental records"
+      ],
+      "experiment": "Randomize AI-origin date-bearing buyer requests between current product landing pages and interval-preserving results. Endpoint is a paid booking completed without cancellation per randomized request. Follow through rental completion and refund maturity; recruit for at least eight weeks but extend for sufficient independent buyers and seasonal coverage. Monitor wrong-date bookings, double booking and total all-channel orders.",
+      "metric": "Completed paid rental orders divided by all randomized eligible requests, with revenue and margin secondary. These are purchases of a rental service; report separately if the portfolio requires only ownership purchases.",
+      "impactEvidence": "Hypothesized; booqable-api proves availability infrastructure and substantial adjacent overlap, not AI-origin purchase lift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown N eligible rental intents, baseline completed-booking probability b0, calendar-conflict rate f and margin m.",
+        "calculation": "Incremental completed bookings = N*(bT-b0). Value = that difference*m minus integration, refunds and booking cost. It can be zero or negative if native date selection is already easy.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 200 per rental location per month, conditional on net booking contribution exceeding cost.",
+      "costControl": "Batch interval checks for shortlisted items and reuse the rental system's calculations. Do not rebuild the inventory calendar in an LLM.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant rental-system integration",
+        "An approved AI commerce route or merchant assistant",
+        "Reliable timezone and buffer semantics",
+        "Booking checkout that preserves interval identity"
+      ],
+      "failureMode": "Availability races or buffer errors double-book stock; rental commerce may fall outside the intended target market.",
+      "falsifier": "No incremental completed paid bookings versus the native date-aware flow after adequate power, or additional cancellations absorb the gain.",
+      "sourceIds": [
+        "booqable-api"
+      ]
+    },
+    {
+      "id": "temporal-03",
+      "title": "Match preorder commitment to the shopper's purchase horizon",
+      "lens": "temporal",
+      "buyer": "Made-to-order furniture, collectible and limited-production merchants with reliable future supply dates.",
+      "problem": "An unavailable item is often treated as a dead end even when the shopper would accept later delivery; conversely, a preorder can be wrong for an urgent need.",
+      "mechanism": "Selection and order completion: a declared latest acceptable date determines whether an existing preorder option is suitable. A clear commitment path may convert long-horizon demand while avoiding misleading immediate-availability promises.",
+      "intervention": "Expose authoritative preorder status, earliest/latest estimated fulfillment, payment milestones and cancellation terms. An AI or landing module matches them to the shopper's horizon and offers the merchant's current preorder checkout only when suitable. Later date changes trigger only agreed status updates.",
+      "competitorOverlap": "Shopify already supports preorder apps with full, partial or no initial payment. OpenAI supports preorder date metadata without implying stock change or date display. The proposed distinction is verified horizon matching and completed-order measurement.",
+      "edgeHypothesis": "Qualifying the delivery horizon before proposing a preorder will generate more fulfilled, fully paid orders than a generic sold-out or preorder page.",
+      "dataNeeded": [
+        "Shopper's latest acceptable receipt date",
+        "Supplier milestones and date-confidence history",
+        "Preorder checkout and payment-state events",
+        "Cancellation, fulfillment and final-payment outcomes"
+      ],
+      "experiment": "Randomize eligible long-horizon AI-origin buyers to existing truthful product/preorder presentation or horizon-matched presentation. Count fully paid, fulfilled and retained orders, not deposits or waitlist registrations. Follow until the release cycle plus return window, which may require several months; stratify by release cohort and predeclare power. No treatment may imply guaranteed supply.",
+      "metric": "Retained fulfilled orders per randomized eligible buyer by a common, preregistered horizon. Publish deposits, payment failures and delays separately; these are not purchases in the primary endpoint.",
+      "impactEvidence": "Hypothesized; shopify-preorder and openai-dates support technical feasibility and its limits. No measured effect is available.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown eligible N, control completed-order rate c0, preorder delay/cancellation prevalence and margin m.",
+        "calculation": "Incremental completed orders = N*(cT-c0), evaluated after final payment and fulfillment. Any deposit revenue is excluded until earned. Break-even includes delay support, cancellations and financing cost; zero or negative is possible.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 250 per merchant per month during an eligible release cycle; judge value after completion, not on preorder cash collected.",
+      "costControl": "Reuse established preorder apps and event updates. Check unstable supplier milestones more often than fixed, confirmed releases.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Preorder-provider and payment eligibility",
+        "Reliable supply milestones",
+        "Jurisdiction-appropriate terms reviewed by merchant",
+        "Long outcome-observation window"
+      ],
+      "failureMode": "Supplier estimates are unreliable, delayed-payment failure dominates, or simpler restock alerts convert equally well.",
+      "falsifier": "Apparent preorder gains disappear when counting fulfilled retained orders or when delayed control purchases mature.",
+      "sourceIds": [
+        "shopify-preorder",
+        "openai-dates",
+        "cma-urgency"
+      ]
+    },
+    {
+      "id": "temporal-04",
+      "title": "Keep a saved shopping need alive only until its own expiry",
+      "lens": "temporal",
+      "buyer": "Fashion, outdoor and home merchants whose customers often wait for a qualifying product.",
+      "problem": "A back-in-stock alert preserves one SKU but may forget the shopper's delivery deadline, price ceiling, alternative choices or whether the need still exists.",
+      "mechanism": "Return visit and purchase: with express permission, retain the shopper's constraints and notify only when a currently purchasable offer satisfies them before the need expires. This may recover an otherwise abandoned AI-origin journey.",
+      "intervention": "A saved-intent record contains allowed products/substitutes, size, budget, need-by date, channel permission and delete date. Requalify every outbound offer against stock, total price and arrival feasibility; stop on purchase, expiry or withdrawal. Use a checkout continuation link after a fresh check.",
+      "competitorOverlap": "Klaviyo provides stock alerts; its documented flow cannot recheck stock before a second message after the first alert. Shopify provides persistent agent carts. The hypothesis is the compound, expiring qualification rule, not reminders or cart persistence alone.",
+      "edgeHypothesis": "Rechecking the full need before every authorized notification outperforms ordinary stock alerts and avoids offers that became unsuitable while the shopper waited.",
+      "dataNeeded": [
+        "Explicit saved constraints and channel-specific consent",
+        "Live inventory, price and fulfillment facts",
+        "Purchase and suppression events",
+        "Notification expiry and unsubscribe state"
+      ],
+      "experiment": "Randomize consenting AI-origin shoppers with a saved need between their current stock-alert workflow and compound qualification, keeping contact caps equal. Primary endpoint is any qualifying retained purchase by the declared expiry plus returns maturity. Use at least eight weeks of enrollment and enough independent needs for power. Record no-message decisions, false qualifying alerts and unsubscribes.",
+      "metric": "Retained purchases of any permitted item per all randomized saved needs, including those receiving no message. A reopened email is not a conversion. Deduplicate one customer need across devices where consent permits.",
+      "impactEvidence": "Hypothesized; klaviyo-backstock establishes adjacent functionality and a scoped limitation; shopify-carts establishes continuity competition; ico-email informs permission design.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown number N of consented AI-origin needs, baseline retained purchase probability p0, qualifying-offer frequency q and contribution m.",
+        "calculation": "Incremental retained purchases = N*(pT-p0), not messages_sent*click_rate. Value subtracts communication and integration cost; zero/negative is plausible if filtering reduces useful reminders or extra consent friction dominates.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 150 per store per month plus transparent message costs; merchant requires incremental contribution above its existing alert system.",
+      "costControl": "Evaluate deterministic constraints on inventory/price events, not repeated full-catalog model sweeps. Expire data and stop processing when the need ends.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Channel-specific opt-in and withdrawal",
+        "Merchant order identity with consent",
+        "Inventory and fulfillment event streams",
+        "Commercial APIs permitted for background operation"
+      ],
+      "failureMode": "The saved intent becomes stale, a user buys elsewhere, or the extra form discourages completion.",
+      "falsifier": "No retained-purchase gain against the existing alert tool after accounting for consent take-up, or false qualifying alerts/complaints rise.",
+      "sourceIds": [
+        "klaviyo-backstock",
+        "shopify-carts",
+        "ico-email",
+        "shop-personal"
+      ]
+    },
+    {
+      "id": "temporal-05",
+      "title": "Match gift dates to the actual return window",
+      "lens": "temporal",
+      "buyer": "Gift, apparel and consumer-electronics merchants with seasonal or product-specific return policies.",
+      "problem": "A shopper may buy a gift early but discover that its return window ends before the recipient opens it; a generic number of return days hides the timing problem.",
+      "mechanism": "Selection and confidence: calculate return eligibility against the delivery and gift dates so buyers can choose a suitable item or order time. Reducing uncertainty may yield retained purchases, though honest ineligibility can suppress unsuitable orders.",
+      "intervention": "A policy-date calculator resolves SKU exceptions, delivery-based start rules and genuine seasonal overrides. It displays the latest date under the merchant's policy and whether the stated gift date leaves the buyer's requested inspection period. Publish only supported policy fields; link the governing terms.",
+      "competitorOverlap": "Google supports merchant return data and seasonal overrides. Shop agents already answer return-policy/window questions. The hypothesis is event-date arithmetic and SKU-specific exceptions carried into selection, not a policy extractor.",
+      "edgeHypothesis": "An exact gift-date fit answer resolves a material objection more effectively than a general return-policy link or generic assistant response.",
+      "dataNeeded": [
+        "Optional gift date and desired inspection time",
+        "Approved, versioned return policies and SKU exclusions",
+        "Delivery estimate or actual delivery date",
+        "Retained orders, returns and policy disputes"
+      ],
+      "experiment": "Randomize preidentified AI-origin gift shoppers between accurate current policy presentation and the date calculator. Keep policy generosity identical. Primary retained orders per randomized shopper after the longest applicable policy window; also report initial orders and return costs. Run across a gift season and mature outcomes; power on gift-intent prevalence, not total traffic.",
+      "metric": "Intention-to-treat retained purchase probability in the AI-origin gift cohort. Attribute no separate lift to policy extension unless that is independently randomized.",
+      "impactEvidence": "Hypothesized; google-return and shop-personal establish direct adjacent functionality. No causal gift-date conversion result is claimed.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown N eligible gift shoppers, control retained conversion c0, date-policy mismatch prevalence f and contribution m.",
+        "calculation": "Incremental retained orders = N*(cT-c0). Break-even includes support and return costs. Zero/negative is possible when truthful date calculations reveal ineligibility or generic policies were already understood.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated seasonal pilot: GBP 200 per store per month; renewal depends on retained contribution rather than initial holiday orders.",
+      "costControl": "Use a deterministic policy rules engine and versioned merchant approval. Ask for a date only when a gift purpose is explicitly supplied.",
+      "feasibility": "now",
+      "dependencies": [
+        "Machine-resolvable merchant policy exceptions",
+        "User-supplied dates",
+        "Clear separation of discretionary merchant policy and statutory rights",
+        "Outcome follow-up beyond seasonal return deadlines"
+      ],
+      "failureMode": "Ambiguous exceptions generate false assurances; calculating expected delivery as certain produces incorrect deadlines.",
+      "falsifier": "The calculator fails merchant policy review on meaningful cases, or a powered test rules out the prespecified retained-order break-even effect.",
+      "sourceIds": [
+        "google-return",
+        "shop-personal"
+      ]
+    },
+    {
+      "id": "temporal-06",
+      "title": "Match intended use dates to remaining usable life",
+      "lens": "temporal",
+      "buyer": "Fresh-food, celebration-food and other dated perishable-goods merchants.",
+      "problem": "Availability and delivery date do not establish that a delivered product will still be suitable when the shopper plans to use it.",
+      "mechanism": "Selection and basket completion: show offers whose verified remaining life covers the shopper's use date and stated storage conditions. This can make a dated event basket purchasable and avoid quality-related cancellations.",
+      "intervention": "Join the intended use date with warehouse batch allocation or an enforceable minimum-life promise at delivery. Distinguish use-by from best-before; surface qualifying pack sizes and delivery slots. Revalidate at allocation and offer a truthful alternative when the promise cannot be met.",
+      "competitorOverlap": "Ocado already publishes a minimum-life Fresh+ Promise. Food-date guidance already distinguishes safety and quality labels. The hypothesis is matching a customer's planned use date to an allocatable batch throughout AI selection and fulfillment.",
+      "edgeHypothesis": "Event-specific usable-life qualification removes uncertainty that a generic freshness claim leaves unresolved.",
+      "dataNeeded": [
+        "Explicit use date and necessary storage conditions",
+        "Batch expiry or merchant minimum-life commitment",
+        "Delivery-slot and allocation data",
+        "Quality refunds, substitutions, complaints and completed orders"
+      ],
+      "experiment": "Randomize AI-origin shoppers who provide an intended use date before assignment. Compare existing accurate life labels with use-date qualification. Primary endpoint is retained, fulfilled paid baskets per eligible shopper; unsafe or false date claims are stop conditions. Enroll across multiple replenishment cycles, then complete refund observation; power depends on dated-product traffic and mismatch prevalence.",
+      "metric": "Retained paid baskets per all randomized eligible AI-origin shoppers. Report use-date fulfillment accuracy, substitutions and food-quality refunds separately; do not optimize basket conversion by concealing short dates.",
+      "impactEvidence": "Hypothesized; ocado-fresh is an adjacent merchant benchmark, food-dates defines a constraint. Neither supplies an AI-origin uplift estimate.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown eligible N, baseline retained-basket conversion b0, remaining-life mismatch rate f and basket contribution m.",
+        "calculation": "Incremental retained baskets = N*(bT-b0). Value subtracts batch-selection, waste, substitution and fulfillment cost. The effect may be zero/negative if extra constraints narrow choice or allocation cannot honor the promise.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 400 per merchant per month, with integration priced separately and renewal tied to retained basket contribution.",
+      "costControl": "Evaluate dates and batch rules deterministically. Start with a category that has reliable batch data instead of inferring expiry from product descriptions.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Batch-aware inventory or enforceable merchant minimum-life policy",
+        "Fulfillment allocation capable of honoring the selected promise",
+        "Approved food-date wording",
+        "User-supplied date and appropriate storage facts"
+      ],
+      "failureMode": "Batch data arrive too late, substitutions violate the promise, or a quality date is confused with a safety date.",
+      "falsifier": "Merchant cannot reliably honor the use-date promise, or the test produces no net contribution after waste, refunds and allocation cost.",
+      "sourceIds": [
+        "food-dates",
+        "ocado-fresh"
+      ]
+    },
+    {
+      "id": "temporal-07",
+      "title": "Reserve a chosen variant for the real checkout handoff",
+      "lens": "temporal",
+      "buyer": "Merchants with scarce sizes, one-off products or inventory that often disappears between agent selection and payment.",
+      "problem": "A conversational cart can remain available while its selected variant sells out before the buyer reaches checkout.",
+      "mechanism": "Checkout completion: after the buyer explicitly selects an item, a short real inventory hold protects the handoff and reduces stock-failure abandonment. Benefits must exceed sales displaced by blocked inventory.",
+      "intervention": "Add an idempotent reservation backed by the merchant's inventory system, bound to SKU, quantity, checkout and server expiry. Release on cancellation, payment or timeout; revalidate price and explain any change. Display the actual expiry without resetting it or claiming false scarcity.",
+      "competitorOverlap": "Shopify draft orders already reserve inventory, and native agent Cart MCP already persists carts. The hypothesis is applying a genuine reservation at the right handoff and proving net orders after displacement, not inventing reservations or shared carts.",
+      "edgeHypothesis": "A narrowly triggered, real hold increases total retained orders for high-race inventory more than it costs in blocked stock.",
+      "dataNeeded": [
+        "Stock-failure events between selection and checkout",
+        "Authoritative reservable inventory",
+        "Payment and timeout events",
+        "All-channel retained orders and reservation occupancy"
+      ],
+      "experiment": "Randomize independent merchant/warehouse inventory pools to hold-enabled or current behavior, or use preregistered switchback blocks with a washout longer than all outstanding holds and relevant browsing carryover. Shopper-level randomization alone contaminates the control through shared stock. Primary retained paid orders from AI-origin journeys per pool-period; all-channel contribution is a guardrail. Run enough pool-periods for power across demand peaks.",
+      "metric": "Incremental retained AI-origin orders per randomized inventory pool-period, with total all-channel orders, margin and stock-block minutes reported. A higher held-cart conversion rate alone is insufficient.",
+      "impactEvidence": "Hypothesized; shopify-reserve and shopify-carts establish primitives and existing overlap. No net purchase result is documented here.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown pool-period baseline order count O0, AI handoff stock-failure rate f, hold duration and displaced demand D.",
+        "calculation": "Net merchant value = incremental retained AI-origin contribution minus lost non-AI contribution, integration and holding cost. Zero/negative is possible even when held-cart conversion rises.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 300 per store per month; reject renewal if total merchant contribution falls despite more AI-attributed orders.",
+      "costControl": "Create holds only after explicit selection and release promptly. Cap abuse and reservation occupancy using deterministic rules.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Transactional inventory reservation API",
+        "Idempotency and exactly-once release behavior",
+        "Merchant-approved hold policy",
+        "Cluster experiment with observable all-channel displacement"
+      ],
+      "failureMode": "Holds become free inventory hoarding, deny stock to more committed buyers or outlive checkout failures.",
+      "falsifier": "Total retained order contribution fails the break-even threshold or stock denial offsets all AI-origin gains.",
+      "sourceIds": [
+        "shopify-reserve",
+        "shopify-carts",
+        "cma-urgency"
+      ]
+    },
+    {
+      "id": "temporal-08",
+      "title": "Ask for a refill when the customer's supply will actually run out",
+      "lens": "temporal",
+      "buyer": "Consumable-goods merchants with repeat purchases and dependable product quantities.",
+      "problem": "A fixed postpurchase delay may prompt a refill too early or after the customer has run out and bought elsewhere.",
+      "mechanism": "Repeat purchase: an opt-in, customer-correctable usage clock subtracts real delivery lead time from a declared depletion date, then offers a currently suitable reorder for approval. The proposed gain is retained repeat orders in an AI-origin acquisition cohort.",
+      "intervention": "After an AI-origin purchase, offer an optional supply reminder using pack quantity, customer-entered use rate or preferred refill date and shipping time. Let customers snooze, correct or disable it; suppress after a reorder and require purchase approval. Never infer health needs or sensitive household circumstances.",
+      "competitorOverlap": "Klaviyo already has replenishment flows and repurchase suppression. Its documented general expected-order model is not product-specific. Shop already reorders through agents. The difference proposed is a customer-correctable depletion date plus lead time, not reordering itself.",
+      "edgeHypothesis": "Explicit consumption timing improves retained repurchase versus a well-configured product-cycle replenishment flow.",
+      "dataNeeded": [
+        "Consented merchant order history",
+        "Product quantity and customer-entered usage/refill date",
+        "Delivery lead time",
+        "Reorders, skips, opt-outs and long-horizon retained revenue"
+      ],
+      "experiment": "Randomize consenting customers acquired through AI to current product-specific replenishment timing or the correctable supply clock, with equal contact budgets. Follow at least two expected consumption cycles; primary retained repeat purchase count per randomized customer. Distinguish genuinely incremental demand from purchases merely pulled forward by measuring cumulative contribution over the full horizon.",
+      "metric": "Retained repeat orders per randomized customer in the preidentified AI-origin cohort. Label these as AI-origin cohort repeat revenue, not new AI-discovered orders.",
+      "impactEvidence": "Hypothesized; klaviyo-replenish, klaviyo-predict and shop-personal establish strong adjacent competition and scoped implementation limits.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown N opted-in AI-origin acquired customers, baseline repeat orders r0 over two cycles, average replenishment margin m and consumption-clock accuracy.",
+        "calculation": "Incremental repeat contribution = N*(rT-r0)*m minus communication/integration costs. Zero/negative remains possible; an earlier first reorder is not incremental if the longer-horizon count is unchanged.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 200 per merchant per month; price against incremental retained contribution beyond the existing replenishment platform.",
+      "costControl": "Use deterministic stock-of-supply arithmetic and merchant events. Avoid repeated autonomous shopping or background access through personal-agent accounts.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Explicit reminder consent and easy withdrawal",
+        "Merchant-authorized order data and commercial integration",
+        "Customer correction controls",
+        "A long enough purchase horizon to detect pull-forward"
+      ],
+      "failureMode": "Consumption is too irregular, reminders annoy customers, or current flows already predict the cycle adequately.",
+      "falsifier": "Cumulative retained repeat orders do not increase over the preregistered horizon or higher opt-outs and message cost erase the contribution.",
+      "sourceIds": [
+        "klaviyo-replenish",
+        "klaviyo-predict",
+        "shop-personal",
+        "ico-email"
+      ]
+    },
+    {
+      "id": "temporal-09",
+      "title": "Start an event offer only after its channel state is ready",
+      "lens": "temporal",
+      "buyer": "Merchants running short promotions or product launches with material AI shopping traffic.",
+      "problem": "A truthful sale may start and finish before an external shopping surface has processed the current offer; accepted data uploads are not proof of public availability.",
+      "mechanism": "Discovery and checkout: prepare supported data early, verify actual channel state, and keep public offers and checkout consistent during the event. Recovering usable event hours could generate purchases, if propagation delay currently loses demand.",
+      "intervention": "A merchant-owned release scheduler tracks intended effective time, platform submission, acceptance, observed public state and checkout truth. Preflight compliant future-event data, perform real activation/update/removal jobs at the correct time, and use channel-specific start rules. At expiry, remove the sale rather than extending a countdown.",
+      "competitorOverlap": "Google already separates promotion display/effective dates and has reviews. OpenAI file-upload date fields do not themselves schedule stock changes, sale activation or removal. Native scheduling exists in parts of the stack; the proposed edge is verified cross-channel readiness and paid outcomes.",
+      "edgeHypothesis": "Measured readiness orchestration earns more retained AI-origin purchases across a complete event than a routine launch-day feed update.",
+      "dataNeeded": [
+        "Authoritative offer and checkout effective dates",
+        "Submission/acceptance logs and observed live snapshots",
+        "Per-channel purchase origin where observable",
+        "Discount, margin, return and all-channel order data"
+      ],
+      "experiment": "Randomize comparable merchant-event clusters to standard launch operations or readiness orchestration, stratified by event type and planned demand. Count retained AI-origin orders across the full event plus an equal postevent window. Use many independent events rather than one before/after sale; power includes cluster correlation. Concurrent discounts, ad spend and promotion terms must match.",
+      "metric": "Retained AI-origin orders and contribution per randomized merchant-event, using fixed event windows. Report surface visibility only as a mediator; all-channel contribution catches channel displacement.",
+      "impactEvidence": "Hypothesized; google-promo, google-display, google-recrawl and openai-dates document real asynchronous boundaries. No propagation-to-purchase elasticity is assumed.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown per-event baseline retained orders O0, demand during delayed hours H, current propagation distribution and margin after discount m.",
+        "calculation": "Incremental contribution = randomized event order difference*m minus scheduling/monitoring cost. A recovered hour has no assumed conversion value; effects may be zero or negative if the event demand window shifts or discount costs dominate.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 500 per merchant per event for a managed pilot; recurring pricing requires reproducible contribution over several events.",
+      "costControl": "Use platform events/status APIs where available and bounded public sampling near real transitions. Do not repeatedly request recrawls as an acceleration tactic.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant authority to schedule real offers",
+        "Approved channel access and supported lifecycle operations",
+        "Read-only live verification",
+        "Enough independent events for a credible comparison"
+      ],
+      "failureMode": "Platform lag is uncontrollable, samples misrepresent shopper visibility, or delaying a launch sacrifices more demand than it recovers.",
+      "falsifier": "Orchestration changes logs but not usable live offer time, or retained event contribution fails to improve after full-window follow-up.",
+      "sourceIds": [
+        "google-promo",
+        "google-display",
+        "google-recrawl",
+        "openai-dates",
+        "cma-urgency"
+      ]
+    },
+    {
+      "id": "temporal-10",
+      "title": "Spend catalog repair capacity before the category's buying window",
+      "lens": "temporal",
+      "buyer": "Large seasonal merchants or feed agencies with more fixable defects than their weekly work budget permits.",
+      "problem": "Uniform catalog refreshes can repair a low-demand category while a time-sensitive category still contains a purchase-blocking defect.",
+      "mechanism": "Enabling allocation: move an unchanged repair budget toward verified conversion blockers before the expected buying window, allowing those fixes to affect more real AI-origin purchase opportunities. A demand forecast alone creates no conversion value.",
+      "intervention": "A scheduler ranks verified defects by upcoming eligible demand, observed causal repair value, repair lead time and channel propagation delay. Compare with the merchant's current queue; preserve a minimum service level for low-volume items and exploration for uncertain categories. Do not treat Google category interest as all-AI demand.",
+      "competitorOverlap": "Google Merchant Center already provides popular-product/assortment insights and Google Ads category search interest; feed tools already prioritize work. The proposed edge is choosing repair timing under a fixed budget using purchase evidence and delayed propagation.",
+      "edgeHypothesis": "A purchase-evidence-informed repair schedule creates more retained AI-origin orders than the current queue with the same engineering hours and compute.",
+      "dataNeeded": [
+        "Time-stamped verified defects and repair effort",
+        "Seasonal first-party purchase demand and AI-origin cohort data",
+        "Prior randomized repair effects with uncertainty",
+        "Google category signals as optional proxies",
+        "Propagation and repair lead-time distributions"
+      ],
+      "experiment": "Randomize comparable merchant or independent category clusters to the existing queue or the timing scheduler with identical weekly labor/compute budgets. Evaluate fixed full-season retained AI-origin order counts and total contribution, including postpeak follow-up. Require sufficient clusters and baseline balance; model contamination from substitute products. No assumed power from repeated synthetic shoppers.",
+      "metric": "Incremental retained AI-origin orders per fixed budget per randomized cluster-season. Cost per incremental retained order is secondary and undefined when the causal gain is zero or negative.",
+      "impactEvidence": "Hypothesized allocation benefit; google-demand, google-popular and google-recrawl support inputs and timing constraints. No source proves this scheduler's conversion gain.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown fixed repair budget B, control orders O0, upcoming eligible demand D, verified blocker prevalence f and causal value of each repair. No uplift prior is asserted.",
+        "calculation": "Compare O_scheduler - O_current over the same fixed budget and season. Contribution difference must exceed software/integration cost. Better forecast accuracy or lower model cost alone does not satisfy the claim; zero/negative purchase difference remains possible.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 600 per merchant per month for a high-volume pilot, contingent on incremental contribution at unchanged repair resources.",
+      "costControl": "This is the cost-allocation idea: reuse cheap deterministic defect checks and invoke expensive analysis where a repair can plausibly affect upcoming orders. Do not reduce fulfillment or policy accuracy for low-volume items.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "A backlog of verified, fixable purchase blockers",
+        "Historical or fresh randomized repair evidence",
+        "Adequate category/store experiment units",
+        "Merchant demand and propagation data"
+      ],
+      "failureMode": "The forecast chases noise, seasonal demand changes faster than propagation, or the prioritized defects have no causal effect on purchases.",
+      "falsifier": "At the same total work budget, the scheduler fails to increase retained contribution versus the existing queue over a full preregistered season.",
+      "sourceIds": [
+        "google-demand",
+        "google-popular",
+        "google-recrawl"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "google-delivery",
+      "title": "Set up estimated delivery time",
+      "url": "https://support.google.com/merchants/answer/14949917?hl=en",
+      "type": "official-doc",
+      "claim": "Google delivery estimates use handling, transit, business days and cutoff times. Documents infrastructure and existing functionality, not AI-origin purchase uplift."
+    },
+    {
+      "id": "google-cutoff",
+      "title": "Handling cutoff time [handling_cutoff_time]",
+      "url": "https://support.google.com/merchants/answer/16543665?hl=en",
+      "type": "official-doc",
+      "claim": "Documents cutoff and timezone configuration, including product-level use. This alone does not expose a bespoke shopper deadline to consumer AI."
+    },
+    {
+      "id": "booqable-api",
+      "title": "Booqable API v4 documentation",
+      "url": "https://developers.booqable.com/",
+      "type": "official-doc",
+      "claim": "Availabilities and Inventory availabilities distinguish calendar status from quantity for an exact rental interval and location. Rental availability infrastructure already exists."
+    },
+    {
+      "id": "shopify-preorder",
+      "title": "Shopify Help Center | Pre-orders",
+      "url": "https://help.shopify.com/en/manual/products/purchase-options/pre-orders",
+      "type": "official-doc",
+      "claim": "Preorders support full, partial or no initial payment through apps, with payment-provider limitations. No causal conversion result is supplied."
+    },
+    {
+      "id": "klaviyo-backstock",
+      "title": "Understanding how back in stock flows work",
+      "url": "https://help.klaviyo.com/hc/en-us/articles/360051612551",
+      "type": "official-doc",
+      "claim": "Stock-triggered alerts already exist. The documented flow cannot recheck stock before a second message after the initial alert."
+    },
+    {
+      "id": "google-return",
+      "title": "Merchant return policy (MerchantReturnPolicy) structured data",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/return-policy",
+      "type": "official-doc",
+      "claim": "Documents return-policy conditions and seasonal overrides; offer-level support is narrower than organization-level support. Display is not guaranteed."
+    },
+    {
+      "id": "food-dates",
+      "title": "Understanding food labelling: Best before and use-by dates",
+      "url": "https://www.gov.uk/understanding-food-labelling/best-before-and-use-by-dates",
+      "type": "official-doc",
+      "claim": "Distinguishes use-by safety dates from best-before quality dates. Does not establish any merchant's batch expiry or justify extending a date."
+    },
+    {
+      "id": "ocado-fresh",
+      "title": "T&Cs: Purchase (Consumer and Business Customers)",
+      "url": "https://www.ocado.com/content/terms-conditions-purchase-consumer",
+      "type": "official-doc",
+      "claim": "Ocado's Fresh+ Promise already specifies minimum remaining product life and a refund process. It is an adjacent merchant benchmark, not an uplift study."
+    },
+    {
+      "id": "shopify-reserve",
+      "title": "Shopify Help Center | Creating draft orders",
+      "url": "https://help.shopify.com/en/manual/fulfillment/managing-orders/create-orders/create-draft",
+      "type": "official-doc",
+      "claim": "Draft orders can reserve tracked inventory until a selected time; reserved units cannot be bought by others. Existing primitive, not a promise that all agent carts reserve stock."
+    },
+    {
+      "id": "shopify-carts",
+      "title": "Carts and checkout for agents",
+      "url": "https://shopify.dev/docs/agents/carts-and-checkout",
+      "type": "official-doc",
+      "claim": "Native Cart MCP supports long-running exploratory sessions and checkout handoff. A persistent cart is not novel and is distinct from a committed inventory hold."
+    },
+    {
+      "id": "klaviyo-replenish",
+      "title": "How to create a replenishment flow",
+      "url": "https://help.klaviyo.com/hc/en-us/articles/360003195232",
+      "type": "official-doc",
+      "claim": "Product replenishment flows and repurchase suppression already exist. Describes workflow, not causal results for an AI-origin cohort."
+    },
+    {
+      "id": "klaviyo-predict",
+      "title": "Understanding Klaviyo's predictive analytics",
+      "url": "https://help.klaviyo.com/hc/en-us/articles/360020919731",
+      "type": "official-doc",
+      "claim": "The documented expected-order prediction does not consider the products ordered; separate known-cycle flows are recommended. This is a scoped product limitation, not a claim about every Klaviyo feature."
+    },
+    {
+      "id": "shop-personal",
+      "title": "Shop Help Center | Using Shop with AI agents and agentic platforms",
+      "url": "https://help.shop.app/en/shop/shopping/personal-agents",
+      "type": "official-doc",
+      "claim": "Reordering and return-window checks are native. Personal-agent access does not authorize an unattended commercial background intermediary; businesses are directed to developer integrations."
+    },
+    {
+      "id": "google-promo",
+      "title": "Promotion approval process",
+      "url": "https://support.google.com/merchants/answer/4588464?hl=en",
+      "type": "official-doc",
+      "claim": "Promotions undergo policy and SKU reviews; the documented review window can extend after the effective start. Early submission does not guarantee public visibility."
+    },
+    {
+      "id": "google-display",
+      "title": "Display dates for promotion [promotion_display_dates]",
+      "url": "https://support.google.com/merchants/answer/13861050?hl=en",
+      "type": "official-doc",
+      "claim": "Separates public display dates from promotion effective dates in the promotions source. Platform-specific scheduling semantics must be respected."
+    },
+    {
+      "id": "google-recrawl",
+      "title": "Ask Google to recrawl your URLs",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl",
+      "type": "official-doc",
+      "claim": "Recrawling may take days to weeks, and a request does not guarantee inclusion. Repeated submissions do not accelerate a URL's crawl."
+    },
+    {
+      "id": "openai-dates",
+      "title": "Products - Agentic Commerce",
+      "url": "https://developers.openai.com/commerce/specs/file-upload/products",
+      "type": "official-doc",
+      "claim": "File-upload availability, sale-effective and expiration dates are metadata; they do not imply automatic stock changes, sale activation or removal."
+    },
+    {
+      "id": "google-demand",
+      "title": "Search interest",
+      "url": "https://support.google.com/google-ads/answer/15335651?hl=en",
+      "type": "official-doc",
+      "claim": "Product category insights report dated category search interest. This is a Google demand signal, not a direct measurement of all AI shopping demand."
+    },
+    {
+      "id": "google-popular",
+      "title": "About Popular products in Merchant Center Analytics",
+      "url": "https://support.google.com/merchants/answer/13299535?hl=en",
+      "type": "official-doc",
+      "claim": "Popular-product and assortment insights already exist. Does not establish a causal effect from scheduling merchant maintenance around them."
+    },
+    {
+      "id": "cma-urgency",
+      "title": "Using urgency and price reduction claims online",
+      "url": "https://www.gov.uk/government/publications/using-urgency-and-price-reduction-claims-online",
+      "type": "official-doc",
+      "claim": "CMA guidance warns that urgency and price-reduction claims can mislead or apply unfair pressure. This research proposes truthful deadlines, not a legal compliance guarantee."
+    },
+    {
+      "id": "ico-email",
+      "title": "How do we comply with the PECR electronic mail marketing rules?",
+      "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-direct-marketing-using-electronic-mail/how-do-we-comply-with-the-pecr-electronic-mail-marketing-rules/",
+      "type": "official-doc",
+      "claim": "Electronic-message rules depend on recipient and message context; consent needs specificity. Proposed reminders require express channel-specific permission and withdrawal controls."
+    }
+  ]
+}

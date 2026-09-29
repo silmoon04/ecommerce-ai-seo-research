@@ -1,0 +1,2083 @@
+[
+  {
+    "id": "I01",
+    "title": "Preserve the selected variant from AI link to cart",
+    "lens": "infrastructural",
+    "stage": "Arrival and cart",
+    "priority": "Test first",
+    "horizon": "now",
+    "buyer": "A configurable-goods merchant receiving AI referrals that identify a particular size, pack or regional variant.",
+    "problem": "A shopper chooses one variant in an assistant, then a redirect, locale switch or theme defaults to another. Reconstructing the choice can end the purchase.",
+    "intervention": "Build a merchant-owned resolver that maps observed incoming identifiers to the displayed variant and cart line. Verify image, price, stock and locale together. When the incoming choice is ambiguous, show a selector and ask the shopper to confirm.",
+    "mechanism": "Removing an avoidable choice mismatch lets an already interested shopper continue with the product they intended to buy.",
+    "overlap": "Shopify already supports variant deep links and cart permalinks. Peec already reports product destinations. A correctly configured native link is the baseline, not a blank product page.",
+    "edge": "Earn additional purchasing shoppers by catching real theme, redirect and app failures that persist beyond correct native configuration.",
+    "evidence": "Mechanism evidence only. Shopify documents the relevant link and rendering behavior; Peec documents destination diagnostics. Neither establishes this repair service's purchase effect.",
+    "experiment": "Randomize persistent shoppers at their first observed AI-origin arrival carrying a supported identifier. Compare the resolver with the correctly configured native route. Keep all assigned eligible shoppers, including immediate exits, and follow completed orders through a predeclared buying window and later returns. Audit assignment before interpreting results.",
+    "metric": "Completed purchasing shoppers per all assigned eligible shoppers; deduplicated orders, retained orders and contribution after returns. Track wrong-variant purchases and added latency.",
+    "dependency": "Explicit incoming identifiers, control of redirects and theme behavior, current inventory and an assignment-to-order join. Ongoing pricing needs recurring regressions and affected traffic beyond a one-off repair.",
+    "falsifier": "The native fix eliminates recurring failures, the recoverable population cannot cover delivery costs, or better correctness fails to produce an economically useful purchase gain after returns.",
+    "impactScenario": "Illustration: 5,000 AI visits/month, eligible fraction e, a 2.5% eligible purchase rate and £30 contribution after expected returns imply 125e baseline orders. Assume one visit per shopper. Eligibility is unmeasured; incremental orders could be zero or negative.",
+    "valueScenario": "A £99 monthly test fee requires 3.3 extra completed orders to break even, or 9.9 for a chosen 3x value-to-fee threshold, before integration costs. The fee is unvalidated.",
+    "implementation": "Start with one theme and supported URL format. Probe sampled observed links after releases, compare rendered selection with cart contents, and route exceptions to merchant review.",
+    "costControl": "Use deterministic identifier mappings and changed-page probes; reserve model calls for classifying unfamiliar failures.",
+    "sources": [
+      {
+        "title": "Support product variants",
+        "url": "https://shopify.dev/docs/storefronts/themes/product-merchandising/variants"
+      },
+      {
+        "title": "Create cart permalinks",
+        "url": "https://shopify.dev/docs/apps/build/checkout/create-cart-permalinks"
+      },
+      {
+        "title": "AI Shopping Analytics",
+        "url": "https://peec.ai/blog/ai-shopping-analytics"
+      }
+    ],
+    "candidateIds": [
+      "peec-02",
+      "geoffy-02",
+      "simprosys-02",
+      "tinyseo-03",
+      "google-07",
+      "smartseo-02",
+      "infrastructure-06",
+      "channable-04"
+    ]
+  },
+  {
+    "id": "I02",
+    "title": "Recover unavailable items with requirement-preserving alternatives",
+    "lens": "behavioral",
+    "stage": "Selection recovery",
+    "priority": "Test first",
+    "horizon": "now",
+    "buyer": "A merchant with measurable AI-origin arrivals at unavailable variants and enough genuinely suitable stock to offer alternatives.",
+    "problem": "A recommendation becomes unavailable before arrival. A generic related-products carousel can ignore the requirement that made the original item suitable.",
+    "intervention": "Build a stockout recovery component that checks live alternatives against confirmed requirements. Show exact differences, delivered cost and a truthful wait option. Keep hard constraints intact and require an explicit choice before replacing the original cart line.",
+    "mechanism": "A usable substitute or informed decision to wait can preserve a purchase that the stockout would otherwise lose.",
+    "overlap": "Algolia already implements out-of-stock alternatives and stock filtering, including its documented Co-op deployment. The comparator should be a tuned related-products and waitlist flow.",
+    "edge": "The proposed gain comes from protecting requirements and choosing between substitute, another variant and waiting. An immediate replacement sale alone cannot establish extra demand.",
+    "evidence": "Hypothesis with direct capability overlap. Algolia's vendor case concerns its own shopping experience; it supplies neither randomization details for this policy nor an expected AI-origin lift.",
+    "experiment": "Assign persistent shoppers on their first eligible stockout arrival. Hold prices and available assortment constant between the proposed policy and the tuned baseline. Count all assigned shoppers over 60 days, then mature returns. Power the test on the observed eligible population, not all site traffic.",
+    "metric": "Any completed catalog purchase per all assigned eligible shoppers, plus total orders and retained contribution. Follow later original-item purchases and returns to expose substitution or timing shifts.",
+    "dependency": "Reliable variant stock, defensible restock information, explicit requirements, and identity continuity sufficient for the chosen buying window.",
+    "falsifier": "Substitute sales rise while 60-day purchasing shoppers do not, or unsuitable replacements and returns erase the gain.",
+    "impactScenario": "Illustrative monthly inputs: 5,000 AI visits, unmeasured stockout eligible fraction e, 2.5% eligible purchase rate and £30 contribution after expected returns. Baseline orders equal 125e, assuming one visit per shopper. Incremental orders may be zero or negative.",
+    "valueScenario": "Test a £99 monthly fee against 3.3 additional completed orders for break-even or 9.9 for a 3x value-to-fee threshold, before stock integration and review costs. No willingness to pay is established.",
+    "implementation": "Begin in one category with reviewed substitute relationships. Recheck stock when showing options and adding to cart; disclose unknown restock dates.",
+    "costControl": "Cache stable product relationships while refreshing stock. Rank a small valid set with deterministic rules before considering a learned policy.",
+    "sources": [
+      {
+        "title": "Co-op: Scaling Grocery Search and Improving Basket Sizes With Algolia",
+        "url": "https://www.algolia.com/customers/co-op"
+      },
+      {
+        "title": "Merchandise Recommendations",
+        "url": "https://www.algolia.com/ecommerce-merchandising-playbook/recommendations-rules"
+      }
+    ],
+    "candidateIds": [
+      "algorithmic-04",
+      "peec-03",
+      "burnish-05",
+      "datafeedwatch-05",
+      "channable-02",
+      "simprosys-05",
+      "lilyai-03",
+      "gorgias-05",
+      "behavioral-07"
+    ]
+  },
+  {
+    "id": "I03",
+    "title": "Prove exact compatibility before purchase",
+    "lens": "algorithmic",
+    "stage": "Product qualification",
+    "priority": "Test first",
+    "horizon": "integration-heavy",
+    "buyer": "A parts or accessories merchant with licensed manufacturer data and an expert responsible for compatibility rules.",
+    "problem": "Matching product descriptions cannot establish that an accessory works with a particular model, revision or connector. Uncertainty can block a suitable purchase or cause a wrong one.",
+    "intervention": "Compile manufacturer relationships, exclusions and revision boundaries into a versioned checker. Resolve the buyer's exact model, return supported, incompatible or unknown, and show the source behind the result. Recheck the selected variant when the cart changes.",
+    "mechanism": "An auditable fit answer removes a concrete purchase objection while preventing unsuitable orders that later become returns.",
+    "overlap": "Octane already documents branching, exclusions and exact variant mapping. Partly advertises OEM-based identification, although its Workshop page has mixed launch-status wording. Compare against the merchant's competent fitment finder using equal source data.",
+    "edge": "The checker must add suitable purchasing shoppers through explicit exclusions and revision handling beyond a good finder or faceted search.",
+    "evidence": "Mechanism and competitor evidence only. These sources establish existing approaches; they do not measure the proposed compatibility check's incremental purchase effect.",
+    "experiment": "Randomize persistent AI-origin shoppers when they enter an eligible compatibility journey, before the checker asks anything. Compare with the established finder. Include incomplete model entries and unknown results in the assigned denominator. Follow completed orders through the buying window and subsequent fit-related returns.",
+    "metric": "Purchasing shoppers per all assigned eligible shoppers, with independently reviewed compatibility errors, retained orders and contribution after returns.",
+    "dependency": "Licensed authoritative relationships, model normalization, expert ownership and a cart integration retaining the evidence version. Start outside hazardous equipment.",
+    "falsifier": "The false-compatible rate breaches the predeclared tolerance, or an adequately precise trial excludes the minimum useful retained purchase gain.",
+    "impactScenario": "For illustration, 5,000 monthly AI visits times unknown fit-check eligible fraction e times a 2.5% purchase rate gives 125e orders. At £30 contribution after expected returns, baseline contribution is £3,750e. Assume one visit per shopper; effects can be zero or negative.",
+    "valueScenario": "A £99 monthly fee to test needs 3.3 additional completed orders before costs, or 9.9 for a 3x value-to-fee threshold. Licensing and expert maintenance could dominate that fee.",
+    "implementation": "Choose one bounded accessory family, build expert-reviewed cases including exclusions, and abstain when model or source data is incomplete.",
+    "costControl": "Reuse verified rules and update affected model families only. Do not substitute cheap language similarity for a maintained compatibility relation.",
+    "sources": [
+      {
+        "title": "Partly",
+        "url": "https://www.partly.com/integrations/workshop"
+      },
+      {
+        "title": "Quiz Logic - Product Recommendation Engines | Octane AI",
+        "url": "https://www.octaneai.com/products/quiz-logic"
+      },
+      {
+        "title": "Carts and checkout for agents",
+        "url": "https://shopify.dev/docs/agents/carts-and-checkout"
+      }
+    ],
+    "candidateIds": [
+      "burnish-06",
+      "scrunch-05",
+      "geoffy-04",
+      "datafeedwatch-02",
+      "feedonomics-04",
+      "simprosys-04",
+      "smartseo-04",
+      "shopify-04",
+      "identity-04",
+      "searchpilot-05"
+    ]
+  },
+  {
+    "id": "I04",
+    "title": "Turn a delivery deadline into a feasible purchase plan",
+    "lens": "temporal",
+    "stage": "Fulfilment qualification",
+    "priority": "Test first",
+    "horizon": "integration-heavy",
+    "buyer": "An event, gift or urgent-use merchant with reliable fulfillment systems and meaningful deadline-sensitive demand.",
+    "problem": "An accurate generic delivery range can still leave the buyer unsure whether the whole basket will arrive before an event.",
+    "intervention": "Build a deadline resolver using destination, needed-by date, stock location, handling cutoff, carrier service and capacity. Return feasible shipping or collection choices, then carry the chosen service into checkout and revalidate the whole basket.",
+    "mechanism": "A concrete feasible plan can recover a buyer who would abandon because delivery uncertainty makes the purchase unusable.",
+    "overlap": "Google Merchant Center already models delivery estimates and cutoffs; UCP exposes fulfillment options. Compare against the merchant's accurate existing estimator and checkout, with the same operational inputs.",
+    "edge": "Earlier qualification must produce additional on-time purchasers through a real alternative, such as collection. Merely displaying a date adds little.",
+    "evidence": "Official delivery and protocol documentation supports implementation. No source establishes a purchase percentage for this deadline-preserving flow.",
+    "experiment": "Randomize persistent AI-origin shoppers entering a predeclared deadline-relevant category or route before offering the resolver. Keep every assigned eligible shopper, including those who decline to give a date. Measure completed purchases over the buying cycle and follow actual delivery, cancellations and later returns.",
+    "metric": "Completed purchasers and purchasers receiving the full order by their confirmed deadline per all assigned eligible shoppers. Reconcile retained contribution and late-delivery losses.",
+    "dependency": "Authoritative location stock, handling calendars, timezones, carrier promises, checkout service control and merchant ownership of any guarantee.",
+    "falsifier": "No useful purchase gain against an accurate estimator, or late arrivals and refunds erase the apparent gain. An unhonored service selection invalidates the mechanism.",
+    "impactScenario": "Illustrative inputs are 5,000 AI visits/month, unknown deadline-route eligible fraction e, 2.5% eligible purchase rate and £30 contribution after expected returns. With one visit per shopper, baseline orders are 125e. The effect could be zero or negative.",
+    "valueScenario": "A £99 monthly test fee requires 3.3 extra completed orders, or 9.9 for a 3x value-to-fee threshold, before fulfillment integration and any additional service subsidies. This is a hurdle, not a forecast.",
+    "implementation": "Pilot one region and a small service set. Display timestamped estimates, require confirmation after a material change, and offer guaranteed dates only with an actual merchant commitment.",
+    "costControl": "Compute feasible options from operational rules and cache calendars. Refresh volatile stock and capacity instead of repeatedly generating delivery prose.",
+    "sources": [
+      {
+        "title": "Set up estimated delivery time",
+        "url": "https://support.google.com/merchants/answer/14949917?hl=en"
+      },
+      {
+        "title": "Handling cutoff time [handling_cutoff_time]",
+        "url": "https://support.google.com/merchants/answer/16543665?hl=en"
+      },
+      {
+        "title": "Fulfillment",
+        "url": "https://ucp.dev/specification/shopping/extensions/fulfillment/"
+      }
+    ],
+    "candidateIds": [
+      "temporal-01",
+      "profound-05",
+      "peec-05",
+      "burnish-04",
+      "geoffy-03",
+      "datafeedwatch-04",
+      "channable-03",
+      "simprosys-03",
+      "smartseo-03",
+      "shopify-03",
+      "google-09",
+      "infrastructure-09",
+      "gorgias-06",
+      "searchpilot-04",
+      "behavioral-08",
+      "constructor-06"
+    ]
+  },
+  {
+    "id": "I05",
+    "title": "Build the smallest complete basket that performs the task",
+    "lens": "algorithmic",
+    "stage": "Basket construction",
+    "priority": "Test first",
+    "horizon": "integration-heavy",
+    "buyer": "A specialist merchant selling projects that require several compatible products, with maintained dependency and quantity rules.",
+    "problem": "A plausible shopping list can omit an essential adapter or include equipment the buyer already owns. The customer cannot tell whether paying for the basket will complete the task.",
+    "intervention": "Build a constraint solver that translates a declared job into required capabilities, subtracts owned equipment and selects a minimum sufficient set of compatible variants and quantities within budget. Check live stock and show unresolved requirements and optional extras separately before the buyer approves the cart.",
+    "mechanism": "Verifiable completeness lets a hesitant project buyer commit to a usable purchase without checking every dependency elsewhere.",
+    "overlap": "Constructor ASA already supports multi-item goals and catalog validation. Google supports required-part relationships, and native carts already accept multiple variants. A good merchant kit is another strong comparator.",
+    "edge": "Win more purchasing customers than the same-data agent or competent kit. More items and higher basket value are insufficient.",
+    "evidence": "Existing agent and attribute documentation establishes components of the build. It does not show that the proposed completeness checks create additional purchases.",
+    "experiment": "Randomize persistent AI-origin shoppers at the first eligible project request. Compare the solver with the merchant's best multi-item agent or kit at equal prices and information. Keep all assigned projects, including unresolved ones. Measure completed purchases through a full project-buying window and later missing-part or incompatibility returns.",
+    "metric": "Purchasing shoppers per all assigned eligible shoppers, verified complete orders, retained orders and contribution. Report missing components and unnecessary additions separately.",
+    "dependency": "Expert-owned dependency rules, shared variant identifiers, owned-equipment input, inventory and cart APIs, plus order and return data.",
+    "falsifier": "The solver increases basket size without more purchasers, or completeness errors and returns offset any order gain.",
+    "impactScenario": "Illustration only: 5,000 AI visits/month, unmeasured project eligible fraction e, 2.5% eligible purchase rate and £30 contribution after expected returns imply 125e baseline orders. Assume one visit per shopper. Additional purchases may be zero or negative.",
+    "valueScenario": "Test a £99 monthly fee; 3.3 extra completed orders cover it and 9.9 meet a 3x value-to-fee threshold before rule maintenance and setup. Replace £30 with observed project contribution before pricing.",
+    "implementation": "Start within one merchant and one bounded task family. Validate complete sets in fixtures, then create exact cart lines only after approval.",
+    "costControl": "Use deterministic dependency checks. Limit language generation to interpreting the task and explaining verified choices; avoid expensive open-ended planning for routine kits.",
+    "sources": [
+      {
+        "title": "Learn about AI Shopping Agent",
+        "url": "https://docs.constructor.com/docs/products-ai-shopping-agents-learn-about-ai-shopping-agent"
+      },
+      {
+        "title": "How to use conversational attributes",
+        "url": "https://support.google.com/merchants/answer/17085370"
+      },
+      {
+        "title": "Carts and checkout for agents",
+        "url": "https://shopify.dev/docs/agents/carts-and-checkout"
+      }
+    ],
+    "candidateIds": [
+      "constructor-01",
+      "profound-03",
+      "scrunch-10",
+      "geoffy-05",
+      "channable-08",
+      "feedonomics-05",
+      "smartseo-06",
+      "google-06",
+      "algorithmic-03",
+      "behavioral-06",
+      "gorgias-07",
+      "shopify-07"
+    ]
+  },
+  {
+    "id": "I06",
+    "title": "Keep correctable checkout errors inside the purchase flow",
+    "lens": "infrastructural",
+    "stage": "Checkout recovery",
+    "priority": "Test first",
+    "horizon": "integration-heavy",
+    "buyer": "A merchant checkout engineering team operating an approved agent checkout route connected to legacy commerce systems.",
+    "problem": "A correctable address, delivery or discount issue can reach the buyer as a terminal generic failure, forcing a restart or losing the order.",
+    "intervention": "Build a version-aware adapter mapping known nonpayment validation errors into the negotiated UCP code, field path and severity. Preserve valid checkout state and expose the permitted correction. Leave pricing, fraud rules and purchase eligibility unchanged.",
+    "mechanism": "A buyer can correct one blocking field and finish an otherwise valid order without repeating the purchase flow.",
+    "overlap": "Google already documents canonical errors, recoverable states and checkout continuation. The comparator is the merchant's current standards-compliant adapter, with the same business rules.",
+    "edge": "Additional nonduplicate purchases must come from handling concrete downstream failures more accurately than the existing integration. Correct classification alone is insufficient.",
+    "evidence": "Official UCP guidance explains why unknown codes can cause generic errors and how recovery fields work. It gives no prevalence estimate or expected purchase gain for this merchant.",
+    "experiment": "Assign persistent shoppers when entering the eligible approved checkout route, before any failure occurs. Compare adapters and retain everyone assigned, including sessions without errors. Follow completed orders and later cancellations or returns. Use production-representative error fixtures first; size the live trial using actual eligible traffic.",
+    "metric": "Completed purchasing shoppers per all assigned eligible checkout entrants; deduplicated orders, retained contribution, retry loops and checkout latency. Error-only conversion is secondary.",
+    "dependency": "Merchant error ownership, approved protocol integration, version negotiation and stable checkout-to-order identifiers. Measure recurring recoverable failure volume before subscription pricing. Ambiguous payment completion needs separate reconciliation.",
+    "falsifier": "Most errors are correctly terminal, or the new adapter increases corrections and retries without additional retained purchases.",
+    "impactScenario": "Illustrative common model: 5,000 AI visits/month, unknown route eligible fraction e, 2.5% eligible purchase rate and £30 contribution after expected returns give 125e orders. The 2.5% rate is an assumption, not a checkout benchmark. Effects may be zero or negative.",
+    "valueScenario": "A £99 monthly fee to test needs 3.3 extra completed orders for break-even or 9.9 for a 3x value-to-fee threshold before engineering, monitoring and setup. Measure actual route economics before quoting.",
+    "implementation": "Audit frequent error categories, redact customer details in fixtures, test every correction path, and introduce the adapter behind assignment and rollback controls.",
+    "costControl": "Prioritize frequent recoverable failures and deterministic mappings. Reuse protocol conformance tests; avoid a language model deciding whether to retry payments.",
+    "sources": [
+      {
+        "title": "Error codes",
+        "url": "https://developers.google.com/merchant/ucp/guides/overview/error-codes"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "url": "https://developers.google.com/merchant/ucp/faq"
+      },
+      {
+        "title": "Native checkout REST API implementation",
+        "url": "https://developers.google.com/merchant/ucp/implementation/2026-04-08/native-checkout-api"
+      }
+    ],
+    "candidateIds": [
+      "google-03",
+      "profound-09",
+      "peec-10"
+    ]
+  },
+  {
+    "id": "I07",
+    "title": "Quote the payable total before the buyer commits",
+    "lens": "regulatory",
+    "stage": "Offer qualification",
+    "priority": "Test first",
+    "horizon": "integration-heavy",
+    "buyer": "A merchant whose shipping, tax, duty or mandatory charges materially depend on the chosen variant and destination.",
+    "problem": "A shopper may compare headline prices, invest in a choice and only then discover a different payable total. An earlier accurate quote could prevent that late abandonment.",
+    "intervention": "Add a read-only quote component using exact variant, quantity and buyer-entered destination. Show the payable total, components, assumptions and expiry; carry a quote reference into cart and visibly requote material changes.",
+    "mechanism": "The buyer can choose an affordable offer while alternatives remain available, reducing late surprises among genuinely feasible purchases.",
+    "overlap": "UCP already models fulfillment choices and costs; merchant checkouts already calculate totals. Compare with an accurate native flow that meets the same disclosure requirements.",
+    "edge": "Earlier reconciliation must yield additional retained purchasers where quote timing or disagreement is an observed problem. More attractive headline clicks are not the objective.",
+    "evidence": "CMA guidance supports clear mandatory-charge disclosure and UCP documents fulfillment costs. These are requirements and implementation evidence, not a legal assurance or measured feature lift.",
+    "experiment": "Randomize persistent AI-origin shoppers before quote presentation on a predeclared eligible route. Both arms retain required disclosures and identical prices. Count every assigned shopper, including those who decline destination entry or leave after seeing the total. Follow completed orders through the buying window and later returns.",
+    "metric": "Purchasing shoppers per all assigned eligible shoppers, completed orders and retained contribution after discounts, payment fees and returns. Monitor quote-to-checkout disagreement.",
+    "dependency": "An authoritative quote API, explicit destination input, market rules, checkout reconciliation and merchant-reviewed wording. Uncertain duties must remain labeled estimates.",
+    "falsifier": "Mismatch and timing friction are negligible, or earlier quotes fail to deliver the minimum useful retained purchase gain against the lawful native baseline.",
+    "impactScenario": "Illustration: 5,000 AI visits/month, unknown quote-route eligible fraction e, 2.5% eligible purchase rate and £30 contribution after expected returns imply 125e orders. Assume one visit per shopper. The intervention can have zero or negative purchase effects.",
+    "valueScenario": "An unvalidated £99 monthly fee needs 3.3 extra completed orders for break-even or 9.9 for a 3x value-to-fee threshold, before quote-service and integration costs. Lower margin after subsidies changes this hurdle.",
+    "implementation": "Begin with one region and one charge model. Compare quoted and settled totals in shadow mode before testing the earlier display.",
+    "costControl": "Reuse the merchant's quote engine, cache only within valid price and stock windows, and avoid duplicate tax calculations.",
+    "sources": [
+      {
+        "title": "Providing clear and accurate information about prices: summary",
+        "url": "https://www.gov.uk/government/publications/price-transparency-cma209/providing-clear-and-accurate-information-about-prices-summary"
+      },
+      {
+        "title": "Fulfillment",
+        "url": "https://ucp.dev/specification/shopping/extensions/fulfillment/"
+      }
+    ],
+    "candidateIds": [
+      "scrunch-04",
+      "peec-08",
+      "feedonomics-07",
+      "simprosys-06"
+    ]
+  },
+  {
+    "id": "I08",
+    "title": "Ask only the question that changes the buying decision",
+    "lens": "behavioral",
+    "stage": "Decision support",
+    "priority": "Test first",
+    "horizon": "now",
+    "buyer": "A merchant controlling its shopping agent or landing component, with enough choice complexity that one missing fact can change the recommendation.",
+    "problem": "Before selecting a suitable product, a shopper may be missing one decisive fact. An agent can ask several generic questions yet fail to identify the detail that changes the viable choices.",
+    "intervention": "Build a question-selection policy that identifies a missing fact by checking disagreement among viable candidates. Ask one bounded clarification when the answer would change suitability; otherwise show the provisional shortlist. Explain why the fact matters and allow skipping.",
+    "mechanism": "Obtaining the right missing fact can resolve uncertainty before selection while avoiding irrelevant questions that make the buying task harder.",
+    "overlap": "Constructor already retains conversation context and refines recommendations. Octane already supports branching and variant selection. Compare with the tuned merchant agent and a short fixed quiz.",
+    "edge": "Purchase-tested selection of the next useful question must outperform a simple fixed quiz at equal factual quality and hard-constraint enforcement.",
+    "evidence": "Existing product documentation establishes conversational and branching capability. It does not establish that this policy adds purchases; more completed dialogues would be only a diagnostic.",
+    "experiment": "Randomize persistent AI-origin shoppers before the first eligible decision clarification and retain assignment across turns. Use the same products, facts, prices and post-selection promotional prompts. Include every assigned shopper, including skipped questions and abandoned conversations. Observe completed orders through a prespecified buying window, then reconcile returns.",
+    "metric": "Purchasing shoppers per all assigned eligible shoppers, completed orders and retained contribution. Guard against wrong recommendations, longer journeys and increased abandonment.",
+    "dependency": "Agent policy control, audited hard requirements, comparable candidate attributes and conversation-to-order linkage without assuming access to private external chats.",
+    "falsifier": "The policy cannot beat a competent fixed question or gains disappear after unsuitable-product returns. Lower question count alone does not justify shipping.",
+    "impactScenario": "Illustrative monthly cohort: 5,000 AI visits, unknown clarification eligible fraction e, 2.5% eligible purchase rate and £30 contribution after expected returns. One visit per shopper gives 125e baseline orders; any incremental change may be zero or negative.",
+    "valueScenario": "A £99 monthly test fee requires 3.3 additional completed orders to break even, or 9.9 for a 3x value-to-fee threshold, before serving and experimentation costs. This does not establish demand for the fee.",
+    "implementation": "Start with a rules-based disagreement score and a small reviewed question set. Show useful results immediately and retain confirmed requirements when a question is skipped.",
+    "costControl": "Use candidate differences and a bounded question set before training another model. Spend model calls on facts that can change which products qualify.",
+    "sources": [
+      {
+        "title": "Learn about AI Shopping Agent",
+        "url": "https://docs.constructor.com/docs/products-ai-shopping-agents-learn-about-ai-shopping-agent"
+      },
+      {
+        "title": "Quiz Logic - Product Recommendation Engines | Octane AI",
+        "url": "https://www.octaneai.com/products/quiz-logic"
+      }
+    ],
+    "candidateIds": [
+      "constructor-02",
+      "peec-06",
+      "burnish-08",
+      "lilyai-05",
+      "truefit-03",
+      "algorithmic-02",
+      "gorgias-03",
+      "behavioral-01"
+    ]
+  },
+  {
+    "id": "I09",
+    "title": "Resolve retired recommendations to a documented successor",
+    "lens": "temporal",
+    "stage": "Selection recovery",
+    "priority": "Develop next",
+    "horizon": "now",
+    "buyer": "A merchant still receiving AI referrals for retired models, with manufacturer revision records and available successors.",
+    "problem": "An old recommendation may lead to a dead page or a replacement that quietly lacks the feature the buyer wanted.",
+    "intervention": "Build a versioned predecessor-successor table and a visible replacement comparison. Preserve the retired model's identity, show retained and lost capabilities, explain compatibility changes, and offer remaining stock or a documented successor for explicit selection.",
+    "mechanism": "A shopper arriving with a stale recommendation can find a suitable current purchase without restarting research or mistaking a successor for the original.",
+    "overlap": "Smart SEO already handles archived-product redirects and editable destinations. Schema.org already represents model succession. Compare with a competent manually chosen successor page as well as a generic redirect.",
+    "edge": "Requirement continuity and a precise account of differences must create additional purchasers beyond an ordinary replacement page.",
+    "evidence": "Official redirect documentation and the successorOf property establish existing mechanics. Neither proves that answer engines consume this relationship or that this experience increases purchases.",
+    "experiment": "Randomize persistent shoppers on their first AI-origin arrival for a retired model. Compare the replacement component with the best truthful existing successor flow. Retain all assigned arrivals and follow all catalog orders through a complete buying window and later returns. Keep public feed changes outside this visitor experiment.",
+    "metric": "Completed purchasing shoppers per all assigned retired-model arrivals, retained orders and contribution after returns. Track wrong-model complaints and orders shifted from other current products.",
+    "dependency": "Authoritative lineage, human review of material differences, control of the arrival route and assignment-to-order linkage.",
+    "falsifier": "A well-maintained manual successor page performs equally well within the minimum useful effect, or lost-capability returns cancel the gain.",
+    "impactScenario": "Illustrative inputs: 5,000 AI visits/month, unknown retired-model eligible fraction e, 2.5% eligible purchase rate and £30 contribution after expected returns give 125e baseline orders. Assume one visit per shopper. Extra orders may be zero or negative.",
+    "valueScenario": "Test a £99 monthly fee against 3.3 extra completed orders for break-even or 9.9 for a 3x value-to-fee threshold, before lineage maintenance and setup costs. This is not a validated price.",
+    "implementation": "Start with the most visited retired product family. Store model identity separately from offers and never reuse an old identifier for a replacement.",
+    "costControl": "Review only changed model relationships and high-traffic obsolete destinations. Use deterministic routing once the manufacturer lineage is approved.",
+    "sources": [
+      {
+        "title": "successorOf - Schema.org Property",
+        "url": "https://schema.org/successorOf"
+      },
+      {
+        "title": "Fixing broken links | Sherpas Design Help Center",
+        "url": "https://intercom.help/sherpas-design/en/articles/10602788-fixing-broken-links"
+      }
+    ],
+    "candidateIds": [
+      "profound-06",
+      "scrunch-02",
+      "smartseo-01",
+      "tinyseo-07"
+    ]
+  },
+  {
+    "id": "I10",
+    "title": "Calculate the exact packs and quantities needed for the job",
+    "lens": "psychological",
+    "stage": "Basket construction",
+    "priority": "Develop next",
+    "horizon": "now",
+    "buyer": "A flooring, consumables or materials merchant whose shoppers arrive with a quantity or coverage requirement.",
+    "problem": "A buyer may understand the unit price but still struggle to choose packs that cover the job without excessive surplus or an unexpected total.",
+    "intervention": "Build a deterministic quantity planner that converts the requested amount of one material into valid pack combinations. Show delivered total, unit cost, surplus and any merchant-defined allowance separately. Send the selected combination to exact native cart lines and recheck stock and price.",
+    "mechanism": "Making the required purchase calculable and executable can turn uncertainty about quantities into a completed order.",
+    "overlap": "DataFeedWatch already helps expose pack quantities in product titles, and Shopify already supports variant quantities and cart totals. Good unit-price displays and existing quantity calculators are the baseline.",
+    "edge": "The planner must add purchasing customers through valid combinations and checkout-consistent totals. Selling a larger pack or increasing basket value is not enough.",
+    "evidence": "The DataFeedWatch case supplies adjacent support for pack clarity; Shopify documents cart operations. Neither measures this planner's effect on AI-origin purchases.",
+    "experiment": "Randomize persistent AI-origin shoppers at first entry to the eligible quantity-buying flow, before offering the planner. Compare against the existing calculator and unit-price display with equal pack information. Count every assigned shopper, including incomplete inputs. Follow completed orders over the buying window and then returns.",
+    "metric": "Purchasing shoppers per all assigned eligible shoppers, completed orders, retained contribution and quantity-related returns. Track shortages, surplus complaints and total-price errors.",
+    "dependency": "Reliable units, pack contents, minimum orders, conversion rules, current pricing and native cart access. Physical coverage assumptions need merchant validation.",
+    "falsifier": "The tool raises chosen quantities without additional purchasers, or mistakes and unwanted surplus erase the retained purchase gain.",
+    "impactScenario": "Illustration only: 5,000 AI visits/month, unmeasured quantity-flow eligible fraction e, 2.5% eligible purchase rate and £30 contribution after expected returns yield 125e baseline orders. Assume one visit per shopper. The effect may be zero or negative.",
+    "valueScenario": "At an unvalidated £99 monthly test fee, break-even needs 3.3 extra completed orders; a 3x value-to-fee threshold needs 9.9, before data cleanup and setup. Use actual contribution before selling the service.",
+    "implementation": "Pilot one unit system and a bounded set of pack sizes. Explain rounding and allowances, then verify the resulting basket total against the merchant quote.",
+    "costControl": "Use integer arithmetic and cached pack definitions. A language model may parse the request but should never perform the authoritative calculation.",
+    "sources": [
+      {
+        "title": "[Case Study] Using DataFeedWatch AI to create a scalable title optimization architecture",
+        "url": "https://www.datafeedwatch.com/blog/scaling-title-optimization-using-ai"
+      },
+      {
+        "title": "Carts and checkout for agents",
+        "url": "https://shopify.dev/docs/agents/carts-and-checkout"
+      }
+    ],
+    "candidateIds": [
+      "datafeedwatch-06"
+    ]
+  },
+  {
+    "id": "I11",
+    "title": "Check physical fit and operating clearance in the buyer's space",
+    "lens": "algorithmic",
+    "stage": "Product qualification",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "buyer": "A furniture or appliance merchant with trustworthy dimensions and shoppers whose purchase depends on a specific space.",
+    "problem": "A product can look right in a room render yet fail to fit an alcove, clear a door swing or pass through an opening.",
+    "intervention": "Build a bounded geometry checker using manual measurements or a supported room scan. Check verified product and package dimensions against space, movement clearance and measurement uncertainty. Show checked dimensions and abstain where the margin is insufficient.",
+    "mechanism": "A qualified fit answer can let a hesitant shopper buy while avoiding false reassurance that creates expensive returns.",
+    "overlap": "IKEA Kreativ already places furniture at scale, and Apple RoomPlan supplies room geometry. Compare with scaled visualization plus a simple, well-designed measurement form.",
+    "edge": "The extra value must be demonstrably better fit decisions and more retained purchasers for one specific task. An attractive render is not the differentiator.",
+    "evidence": "Apple and IKEA establish available building blocks and a capable existing experience. Their documentation does not establish this checker's accuracy or purchase effect.",
+    "experiment": "First validate fit judgments against independent measurements. Then randomize persistent AI-origin shoppers entering the declared spatial-fit flow, before scan or measurement completion. Include every assigned shopper, including unsupported devices and abandoned scans. Follow completed purchases through delivery and later fit-related returns.",
+    "metric": "Purchasing shoppers per all assigned eligible shoppers, retained orders and contribution after returns. Monitor independently checked false-fit rates, measurement abandonment and delivery failures.",
+    "dependency": "Verified dimensions, a supported measurement route, merchant-approved tolerances and an explicit abstention policy. Customer measurements remain uncertain.",
+    "falsifier": "False-fit judgments exceed the declared tolerance, or a powered purchase test rules out a useful gain over the simple measurement baseline.",
+    "impactScenario": "Illustrative monthly model: 5,000 AI visits, unknown spatial-fit eligible fraction e, a 2.5% eligible purchase rate and £30 contribution after expected returns imply 125e orders. Assume one visit per shopper. Effects may be zero or negative.",
+    "valueScenario": "A £99 monthly fee to test requires 3.3 extra completed orders, or 9.9 for a 3x value-to-fee threshold, before scan support and dimension maintenance. Actual furniture return costs may materially change the £30 assumption.",
+    "implementation": "Start with shelves inside rectangular alcoves or another bounded task. Ask buyers to confirm critical dimensions and keep uncertain readings visible through cart selection.",
+    "costControl": "Support manual entry first and add scans only when they improve decision accuracy. Reuse checked product geometry across shoppers.",
+    "sources": [
+      {
+        "title": "RoomPlan Overview - Augmented Reality - Apple Developer",
+        "url": "https://developer.apple.com/augmented-reality/roomplan/"
+      },
+      {
+        "title": "Can I resize an item or adjust the dimensions of the room in IKEA Kreativ?",
+        "url": "https://www.ikea.com/us/en/customer-service/knowledge/articles/3d2f761d-842f-4f1f-aa9b-0e3f91330d59.html"
+      }
+    ],
+    "candidateIds": [
+      "algorithmic-05",
+      "psychological-05",
+      "behavioral-03"
+    ]
+  },
+  {
+    "id": "I12",
+    "title": "Offer an explicit compromise when the requested combination is impossible",
+    "lens": "behavioral",
+    "stage": "Selection recovery",
+    "priority": "Develop next",
+    "horizon": "now",
+    "buyer": "A merchant with genuine zero-result shopping requests and enough assortment breadth to offer a useful compromise.",
+    "problem": "A shopper asks for a combination the catalog cannot satisfy. Nearest-match results can silently drop the very requirement that mattered most.",
+    "intervention": "Build a constraint checker that finds a small conflicting set of requested attributes. Separate buyer-marked requirements from negotiable preferences, then show a few purchasable options each changing one permitted preference, with the exact tradeoff and total price visible.",
+    "mechanism": "An understandable, acceptable compromise can rescue a purchase that an unexplained empty result would lose.",
+    "overlap": "Constructor already suggests related items and nearby query alternatives when results are limited. Octane already supports exclusions and branching. Tuned nearest-match recommendations are a capable baseline.",
+    "edge": "The merchant earns additional catalog purchasers only if visible, buyer-approved tradeoffs outperform the same alternatives shown through ordinary relaxed search.",
+    "evidence": "Official agent and quiz documentation establishes overlap. The proposed minimal-conflict explanation remains a purchase hypothesis with no defensible lift estimate.",
+    "experiment": "Randomize persistent AI-origin shoppers after the same pre-treatment query produces zero valid matches and before either recovery policy runs. Compare with tuned nearest-match results at equal assortment and prices. Keep all assigned shoppers, including those refusing every compromise, and follow completed catalog orders and later returns.",
+    "metric": "Purchasing shoppers per all assigned eligible zero-result shoppers, retained orders and contribution. Independently check every recommended purchase against the buyer's unchanged hard requirements.",
+    "dependency": "Trustworthy structured attributes, explicit preference control, current availability and a merchant-owned agent or search interface.",
+    "falsifier": "Alternative clicks increase without more retained purchasers, or the policy achieves sales by violating requirements the buyer never agreed to change.",
+    "impactScenario": "Illustration: 5,000 monthly AI visits, unknown zero-result eligible fraction e, 2.5% eligible purchase rate and £30 contribution after expected returns imply 125e orders. Assume one visit per shopper. Additional orders can be zero or negative.",
+    "valueScenario": "An unvalidated £99 monthly test fee needs 3.3 extra completed orders to cover the fee or 9.9 for a 3x value-to-fee threshold, before catalog normalization and serving costs.",
+    "implementation": "Start with discrete, comparable attributes. Preserve budget, compatibility and safety constraints; any change to a hard requirement requires the shopper's explicit revision.",
+    "costControl": "Solve conflicts deterministically and explain only verified alternatives. Cap the displayed set without hiding the rest of the feasible assortment.",
+    "sources": [
+      {
+        "title": "Learn about AI Shopping Agent",
+        "url": "https://docs.constructor.com/docs/products-ai-shopping-agents-learn-about-ai-shopping-agent"
+      },
+      {
+        "title": "Quiz Logic - Product Recommendation Engines | Octane AI",
+        "url": "https://www.octaneai.com/products/quiz-logic"
+      }
+    ],
+    "candidateIds": [
+      "feedonomics-06"
+    ]
+  },
+  {
+    "id": "I13",
+    "title": "Carry a buyer-approved shopping brief across the AI handoff",
+    "lens": "identity",
+    "stage": "Arrival and cart",
+    "priority": "Conditional bet",
+    "horizon": "frontier",
+    "buyer": "A merchant and cooperating assistant partner whose shoppers lose approved decision context when moving into the store.",
+    "problem": "A prefilled cart preserves products but can lose accepted requirements, rejected alternatives and the unfinished question. The buyer has to repeat the decision.",
+    "intervention": "Build an expiring opaque handoff handle referencing only a buyer-approved shopping brief. Transfer selected variants, accepted constraints and the remaining task. Show an editable summary at the merchant, revalidate current facts and offer a plain-link fallback.",
+    "mechanism": "Preserving useful context can reduce repeated research and prevent the merchant agent from undoing an already qualified choice.",
+    "overlap": "Shopify already supports long-running carts, context and continue_url handoff; Constructor documents thread persistence. Compare against the identical correctly prefilled native cart.",
+    "edge": "Any extra purchasing shoppers must come from preserved approved decision context. Basic variant selection, saved carts and chat memory are existing capabilities.",
+    "evidence": "Native cart and agent documentation supports components. No evidence establishes universal external assistant support or a purchase gain from this cross-party brief.",
+    "experiment": "With a cooperating partner, randomize shoppers at the eligible outbound handoff before merchant arrival. Include failed transfers and non-arrivals in the assigned denominator. Compare with the same prefilled cart and follow completed merchant orders and later returns. A pasted-brief onsite pilot tests only the narrower owned-site mechanism.",
+    "metric": "Completed purchasing shoppers per all assigned eligible handoffs, retained orders and contribution. Track transfer coverage, consent refusal, stale facts and context errors.",
+    "dependency": "Explicit partner support, shopper permission, protected short-lived storage, merchant cart integration and end-to-end outcome linkage. A referrer reveals no private conversation.",
+    "falsifier": "Partner coverage cannot support break-even, or the prefilled-cart control matches the full cohort's retained purchase outcome.",
+    "impactScenario": "Using 5,000 AI visits/month, unknown eligible share e, a 2.5% eligible purchase rate and £30 contribution after expected returns gives a conditional downstream baseline of 125e orders. It cannot quantify outbound-handoff lift: that requires all assigned handoffs, including non-arrivals. Effects may be zero or negative.",
+    "valueScenario": "A £99 monthly fee to test needs 3.3 additional completed orders or 9.9 for a 3x value-to-fee threshold, before partner and integration costs. This hurdle does not imply willingness to pay.",
+    "implementation": "Test a shopper-pasted brief first, then negotiate one supported partner flow. The handle conveys no payment authority; recheck products and obtain buyer approval before checkout.",
+    "costControl": "Transfer a compact structured record, expire it promptly and avoid copying transcripts or repeatedly summarizing full conversations.",
+    "sources": [
+      {
+        "title": "Implement AI Shopping Agent",
+        "url": "https://docs.constructor.com/docs/products-ai-shopping-agents-learn-about-ai-shopping-agent-implement-ai-shopping-agent"
+      },
+      {
+        "title": "Carts and checkout for agents",
+        "url": "https://shopify.dev/docs/agents/carts-and-checkout"
+      }
+    ],
+    "candidateIds": [
+      "constructor-03",
+      "profound-02",
+      "peec-04",
+      "scrunch-03",
+      "burnish-03",
+      "feedonomics-03",
+      "lilyai-06",
+      "shopify-05",
+      "shopify-08",
+      "behavioral-02",
+      "regulatory-08",
+      "gorgias-01"
+    ]
+  },
+  {
+    "id": "I14",
+    "title": "Resume a saved buying decision by reviewing only what changed",
+    "lens": "temporal",
+    "stage": "Decision continuity",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "buyer": "A high-consideration merchant whose AI-origin shoppers usually research across several visits before their first purchase.",
+    "problem": "A saved cart remembers items but may not explain why they were chosen or whether price, stock or suitability changed while the buyer was away.",
+    "intervention": "Offer an opt-in decision record containing accepted requirements, selected and rejected options, dated evidence and the remaining task. On a voluntary return, revalidate facts and show only material changes before resuming the decision.",
+    "mechanism": "The buyer can continue useful prior work without rereading a transcript or unknowingly relying on stale product facts.",
+    "overlap": "Constructor already preserves threads and supports logged-in identifiers across devices. Shopify has persistent exploratory carts. An existing saved cart or chat transcript is the comparison.",
+    "edge": "A focused review of changed facts must produce additional eventual first purchasers from the original cohort. Storage and return-visit engagement alone are insufficient.",
+    "evidence": "Official continuity documentation establishes feasibility and direct overlap. The effect of reviewing changes on completed purchases remains unmeasured.",
+    "experiment": "Randomize persistent AI-origin shoppers before the eligible save offer. Compare the decision record with the existing saved-cart flow and follow everyone assigned, including non-savers and non-returners, through a prespecified long buying window. Mature subsequent returns before judging retained value.",
+    "metric": "First completed purchasing shoppers per all assigned eligible shoppers, plus retained orders and contribution. Report return-visit behavior separately without conditioning the primary denominator on it.",
+    "dependency": "Permission to retain the record, stable assignment, versioned catalog facts and reliable voluntary return identification. Keep records editable and deletable.",
+    "falsifier": "Returning users engage more but the full original cohort produces no economically useful additional purchases, or stale decisions create extra returns.",
+    "impactScenario": "For illustration, 5,000 monthly AI visits, unknown multi-visit eligible fraction e, a 2.5% eligible purchase rate and £30 contribution after expected returns imply 125e orders under a one-visit-per-shopper simplification. Deduplicate actual visitors; purchase effects may be zero or negative.",
+    "valueScenario": "An unvalidated £99 monthly fee requires 3.3 extra completed orders to break even or 9.9 for a 3x value-to-fee threshold, before storage, verification and setup costs. Use matured cohort value, not faster purchases alone.",
+    "implementation": "Begin with one project category and short explicit retention. Reconfirm only material changes; notifications would require a separate channel choice and experiment.",
+    "costControl": "Store structured decisions and fact versions rather than full transcripts. Revalidate on return and changed catalog records instead of polling every saved project.",
+    "sources": [
+      {
+        "title": "Implement AI Shopping Agent",
+        "url": "https://docs.constructor.com/docs/products-ai-shopping-agents-learn-about-ai-shopping-agent-implement-ai-shopping-agent"
+      },
+      {
+        "title": "Identification parameters",
+        "url": "https://docs.constructor.com/docs/integrating-with-constructor-behavioral-tracking-identification-parameters"
+      },
+      {
+        "title": "Carts and checkout for agents",
+        "url": "https://shopify.dev/docs/agents/carts-and-checkout"
+      }
+    ],
+    "candidateIds": [
+      "constructor-04",
+      "burnish-09",
+      "geoffy-07",
+      "behavioral-09"
+    ]
+  },
+  {
+    "id": "I15",
+    "title": "Give decided shoppers a quiet path to payment",
+    "lens": "psychological",
+    "stage": "Checkout completion",
+    "priority": "Develop next",
+    "horizon": "now",
+    "buyer": "A merchant whose ready-to-buy AI referrals still receive optional agent follow-ups, upsells or promotional interruptions.",
+    "problem": "A shopper who has finished deciding can be distracted or delayed by another sales prompt before payment.",
+    "intervention": "Add a readiness control triggered by an explicit request such as buy this or a shopper-selected checkout action. Suppress optional prompts for that session, show a concise order check and continue through the existing checkout route. Keep help and mandatory information accessible.",
+    "mechanism": "Removing unnecessary interruption can help a decided buyer finish a valid order before reconsidering or abandoning.",
+    "overlap": "Gorgias already adapts selling style and assistance to intent. Rebuy already tests cart variants, while Shopify provides checkout continuation. Use the merchant's tuned promotional flow as the baseline.",
+    "edge": "Removing optional interruptions after explicit readiness must add purchasing shoppers while preserving contribution after lost upsell revenue. Keep product selection and decision-clarification policies fixed.",
+    "evidence": "Product documentation establishes control points and an existing experiment comparator. No source establishes the proposed suppression policy's purchase effect.",
+    "experiment": "Randomize persistent AI-origin shoppers immediately after the same explicit readiness cue and before optional promotions appear. Keep selection, clarification policy, offers and prices identical. Count every assigned ready shopper, including those leaving before checkout; follow completed orders and later returns.",
+    "metric": "Purchasing shoppers per all assigned eligible ready shoppers, completed orders and retained contribution. Track help access, accidental checkout starts and revenue lost through fewer optional additions.",
+    "dependency": "Merchant control over all relevant prompts, a clear readiness signal, native checkout continuation and order linkage. Do not infer readiness from emotion or sensitive traits.",
+    "falsifier": "Purchases do not improve enough to clear the declared hurdle, or reduced upsell contribution outweighs the extra orders.",
+    "impactScenario": "Illustrative common inputs: 5,000 AI visits/month, unknown readiness eligible fraction e, a 2.5% eligible purchase rate and £30 contribution after expected returns yield 125e orders. The rate is not a readiness-cohort benchmark. Effects may be zero or negative.",
+    "valueScenario": "A £99 monthly fee to test needs 3.3 extra completed orders or 9.9 for a 3x value-to-fee threshold before implementation costs, assuming unchanged contribution per order. Lost upsells can raise that hurdle.",
+    "implementation": "Audit all automatic prompts after checkout intent, then pilot suppression on one route with a visible way to reopen assistance.",
+    "costControl": "Use explicit events and a simple session rule. Avoid a separate intent model unless it demonstrably improves the purchase decision.",
+    "sources": [
+      {
+        "title": "Shopping Assistant explained",
+        "url": "https://docs.gorgias.com/en-US/shopping-assistant-explained-1216108"
+      },
+      {
+        "title": "A/B Testing | Smart Cart",
+        "url": "https://help.rebuyengine.com/en/articles/10305628-a-b-testing-smart-cart"
+      },
+      {
+        "title": "Carts and checkout for agents",
+        "url": "https://shopify.dev/docs/agents/carts-and-checkout"
+      }
+    ],
+    "candidateIds": [
+      "gorgias-08"
+    ]
+  },
+  {
+    "id": "I16",
+    "title": "Keep a stable, evidence-backed comparison at the decision point",
+    "lens": "psychological",
+    "stage": "Decision support",
+    "priority": "Develop next",
+    "horizon": "now",
+    "buyer": "A merchant receiving AI-origin shoppers who are comparing a small set of products before making a decision.",
+    "problem": "A conversational answer can replace earlier candidates, bury decisive differences or make an uncertain claim appear settled. The buyer must reconstruct the comparison.",
+    "intervention": "Build a persistent comparison board that keeps buyer-selected alternatives stable. Show decisive requirements, verified limitations, relevant proof images and explicit unknowns. Let the shopper replace an option deliberately while keeping the same supported facts visible.",
+    "mechanism": "A stable, legible account of the real differences can reduce comparison effort and resolve a specific objection before purchase.",
+    "overlap": "Constructor already supports modular agent interfaces and product question answering. Comparison tables and review summaries are established. Compare with the current comparison UI using the same recommendations, facts and prices.",
+    "edge": "More purchasing shoppers must result from stability and correct decisive contrast. Better ranking, longer descriptions or higher confidence scores would confound that claim.",
+    "evidence": "Constructor's interface and product-insight documentation establishes capable overlap. The purchase effect of this particular board remains a hypothesis.",
+    "experiment": "Randomize persistent AI-origin shoppers when the common eligibility rule identifies a comparison-stage journey, before displaying either layout. Keep every assigned shopper, including those who never open the board. Measure completed purchases through the buying window and later returns; predeclare mobile usability and factual-error guardrails.",
+    "metric": "Completed purchasing shoppers per all assigned eligible shoppers, retained orders and contribution. Track wrong-product returns, accessibility failures and comparison completion as diagnostics.",
+    "dependency": "Reliable comparable variant attributes, licensed or merchant-owned evidence, agent UI access and purchase joins. Private external-agent reasoning is unavailable.",
+    "falsifier": "At equal recommendations and facts, the trial rules out a useful retained purchase gain or produces a material decline on mobile.",
+    "impactScenario": "Illustration only: 5,000 AI visits/month, unknown comparison eligible fraction e, a 2.5% eligible purchase rate and £30 contribution after expected returns give 125e baseline orders. Assume one visit per shopper. Additional orders may be zero or negative.",
+    "valueScenario": "Test a £99 monthly fee; 3.3 extra completed orders cover it and 9.9 meet a chosen 3x value-to-fee threshold before evidence upkeep and setup. The price is unvalidated.",
+    "implementation": "Start with a narrow category and a few comparable dimensions. Show source dates and unknowns, retain alternatives until the shopper changes them, and test the board on small screens.",
+    "costControl": "Reuse normalized facts and existing images. Generate explanations only when the compared choice or relevant evidence changes.",
+    "sources": [
+      {
+        "title": "Beyond the Search Bar: Enhancing Product Discovery Through AI Agents",
+        "url": "https://constructor.com/blog/enhancing-product-discovery-through-ai-agents"
+      },
+      {
+        "title": "AI Product Insights Agent | Constructor",
+        "url": "https://constructor.com/solutions/product-insights-agent"
+      }
+    ],
+    "candidateIds": [
+      "constructor-05",
+      "profound-07",
+      "scrunch-09",
+      "geoffy-09",
+      "lilyai-09",
+      "truefit-06",
+      "tinyseo-06"
+    ]
+  },
+  {
+    "id": "I17",
+    "title": "Show which choices remain suitable when priorities change",
+    "lens": "psychological",
+    "stage": "Decision support",
+    "priority": "Conditional bet",
+    "horizon": "now",
+    "buyer": "A high-consideration merchant with trustworthy comparable product dimensions and buyers who are unsure about their priorities.",
+    "problem": "A single recommended winner can depend on a fragile assumption, such as how much battery life matters relative to weight. The buyer may reject the recommendation without understanding what would change it.",
+    "intervention": "Build an interactive sensitivity view where shoppers revise consequential assumptions and acceptable preference ranges. Keep hard requirements fixed, show which feasible products remain suitable, and explain the exact tradeoff at which another choice becomes preferable.",
+    "mechanism": "Understanding when a recommendation changes can help a buyer accept a suitable option without pretending uncertain preferences are precise facts.",
+    "overlap": "Zoovu already offers guided buying and configuration; editable filters and comparison matrices are established. Compare against a fixed recommendation and an ordinary editable comparison with the same assortment and facts.",
+    "edge": "The view must produce additional purchasers without making the decision harder. It addresses unstable priorities, separately from missing-fact clarification or presenting current evidence.",
+    "evidence": "Controlled decision-aid research supports a human decision mechanism in a simulated store. Zoovu establishes commercial overlap. Neither supplies contemporary AI-origin purchase lift for this sensitivity view.",
+    "experiment": "Randomize persistent AI-origin shoppers entering the predeclared eligible comparison journey before showing sensitivity controls. Include every assigned shopper, including those leaving controls untouched. Compare completed purchases over the full buying window, then reconcile returns. Run comprehension checks separately before the purchase trial.",
+    "metric": "Purchasing shoppers per all assigned eligible shoppers, retained orders and contribution. Track decision time, abandonment and whether shoppers correctly understand a recommendation reversal.",
+    "dependency": "Comparable units, explicit buyer-controlled preferences, a defensible scoring rule and accessible interaction. Do not claim to expose a private model's reasoning.",
+    "falsifier": "Shoppers cannot explain why the preferred option changes, or the purchase test excludes an economically useful gain over ordinary editable filters.",
+    "impactScenario": "Illustrative inputs: 5,000 AI visits/month, unknown preference-sensitive eligible fraction e, a 2.5% eligible purchase rate and £30 contribution after expected returns imply 125e orders. Assume one visit per shopper. Increased complexity could make the effect zero or negative.",
+    "valueScenario": "A £99 monthly test fee needs 3.3 extra completed orders for break-even or 9.9 for a 3x value-to-fee threshold, before design, evidence maintenance and setup costs. This is not a price-demand finding.",
+    "implementation": "Start with two understandable dimensions and buyer-set acceptable ranges. Keep every feasible alternative accessible and avoid selecting defaults according to merchant margin.",
+    "costControl": "Use deterministic sensitivity calculations over a bounded candidate set. Validate simple controls before adding a conversational explanation layer.",
+    "sources": [
+      {
+        "title": "Consumer Decision Making in Online Shopping Environments: The Effects of Interactive Decision Aids",
+        "url": "https://doi.org/10.1287/mksc.19.1.4.15178"
+      },
+      {
+        "title": "Zoovu: AI Product Discovery",
+        "url": "https://www.zoovu.com/"
+      }
+    ],
+    "candidateIds": [
+      "psychological-02",
+      "psychological-01"
+    ]
+  },
+  {
+    "id": "I18",
+    "title": "Teach the one technical distinction blocking the purchase",
+    "lens": "psychological",
+    "stage": "Decision support",
+    "priority": "Develop next",
+    "horizon": "now",
+    "buyer": "A technical-goods merchant whose first-time buyers repeatedly misunderstand one consequential specification.",
+    "problem": "Someone shopping for a cable may recognize USB-C yet confuse connector shape with charging capability. Another paragraph of specifications leaves the choice unresolved.",
+    "intervention": "Build an optional demonstration for that specific distinction. Let the shopper choose their device and task, then show the consequence using reviewed manufacturer rules. Keep exceptions visible and checkout accessible throughout; an unanswered example must remain unknown.",
+    "mechanism": "Understanding the distinction lets a suitable novice choose and buy, while reducing purchases based on the wrong assumption.",
+    "overlap": "Constructor already answers product questions and refines intent; Zoovu provides guided buying and product advisors. An interactive lesson needs to outperform their configured explanations and the manufacturer's guide.",
+    "edge": "Test whether manipulating one relevant example resolves confusion better than an equally accurate, equally long answer.",
+    "evidence": "Mechanism hypothesis only. The sources establish substantial existing product guidance, not a measured purchase effect from this demonstration. Expected lift is unknown.",
+    "experiment": "Persistently randomize AI-origin novices after they state the confusion but before either explanation. Compare the demonstration with matched factual text. Count every assigned shopper, including those who skip it. Measure completed purchases within 30 days and follow the full return window. Power from actual novice traffic; six weeks alone is no guarantee.",
+    "metric": "Purchasers per all assigned novices, with catalog-wide orders and contribution after returns. Comprehension is diagnostic; incompatibility returns, accessibility and latency are guardrails.",
+    "dependency": "Manufacturer rules, category review, an accessible merchant-controlled widget and reliable assignment-to-order joins.",
+    "falsifier": "Understanding does not improve, or a sufficiently precise purchase test excludes the minimum gain needed to cover delivery costs.",
+    "impactScenario": "Hypothetically, 20% of 5,000 monthly AI visits qualify. At 2.5% purchase probability, an arbitrary 10% relative gain adds 2.5 orders and £75 at £30 contribution after returns. Zero or negative effects remain possible.",
+    "valueScenario": "A £99 monthly test fee needs 3.3 additional orders to break even, or 9.9 for a chosen 3x value-to-cost hurdle, before review and setup costs. This is an unvalidated offer, not willingness-to-pay evidence.",
+    "implementation": "Start with one recurring confusion, a small deterministic example library and a merchant-owned product-page component. Validate exceptions before live assignment.",
+    "costControl": "Reuse reviewed demonstrations and rules instead of generating technical claims for every visitor.",
+    "sources": [
+      {
+        "title": "Learn about AI Shopping Agent",
+        "url": "https://docs.constructor.com/docs/products-ai-shopping-agents-learn-about-ai-shopping-agent"
+      },
+      {
+        "title": "Zoovu: AI Product Discovery",
+        "url": "https://www.zoovu.com/"
+      }
+    ],
+    "candidateIds": [
+      "psychological-03"
+    ]
+  },
+  {
+    "id": "I19",
+    "title": "Show measured performance under the shopper's intended conditions",
+    "lens": "psychological",
+    "stage": "Product qualification",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "buyer": "An equipment merchant with licensed, representative tests of one condition-dependent outcome, such as battery runtime.",
+    "problem": "A headline maximum cannot tell a shopper whether a product will meet their minimum under the load and temperature they expect.",
+    "intervention": "Add a performance comparison using measured ranges under selectable conditions. Show the test count, product revision and supported operating range. Compare the shopper's minimum with the evidence; abstain when their conditions lack coverage. Never present the model's confidence as measured product performance.",
+    "mechanism": "Credible expectations can help suitable buyers proceed and redirect unsuitable buyers before disappointment creates a return.",
+    "overlap": "True Fit already turns apparel outcomes into fit guidance and confidence. Manufacturer test tables are a strong direct comparator for equipment; generic confidence badges offer little differentiation.",
+    "edge": "The narrow bet is a useful, calibrated presentation of non-apparel performance under the buyer's stated conditions.",
+    "evidence": "Hypothesis. Fit-uncertainty research supports the problem, and True Fit documents adjacent practice. Neither establishes purchase lift for this equipment intervention.",
+    "experiment": "Pass independent calibration and subgroup coverage checks first. Randomize eligible AI-origin shoppers to the range display or an accurate specification table using the same facts. Count all assigned shoppers. Measure completed purchases within 30 days, then reconcile returns. Plan enrollment from actual traffic and outcome variance, including enough conditions to detect misleading reassurance.",
+    "metric": "Purchasers per assigned eligible shopper, with retained orders and contribution after returns. Monitor calibration, unsuitable recommendations and performance-related complaints separately.",
+    "dependency": "Representative measurements, reliable condition inputs, expert ownership, version control and return-reason data.",
+    "falsifier": "Held-out measurements fail calibration, or more completed purchases do not survive return and data-acquisition costs.",
+    "impactScenario": "Chosen assumptions: 10% of 5,000 monthly AI visits qualify, their baseline purchase probability is 2.5%, and an arbitrary 20% relative improvement adds 2.5 orders. At £30 after-return contribution that is £75. No gain, or a loss, is possible.",
+    "valueScenario": "An unvalidated £99 monthly fee requires 3.3 extra orders before measurement and integration costs; the 3x hurdle needs 9.9. Expensive testing can make this uneconomic even when the display helps shoppers.",
+    "implementation": "Choose one measurable outcome and one equipment family. Publish reviewed test strata first; introduce statistical interpolation only after independent validation.",
+    "costControl": "License existing tests where suitable and collect new measurements only where missing coverage blocks a material buying decision.",
+    "sources": [
+      {
+        "title": "Fit Intelligence Technical Spec, Data & MCP | True Fit",
+        "url": "https://www.truefit.com/fit-intelligence-spec"
+      },
+      {
+        "title": "Product Fit Uncertainty in Online Markets: Nature, Effects, and Antecedents",
+        "url": "https://doi.org/10.1287/isre.2014.0520"
+      }
+    ],
+    "candidateIds": [
+      "psychological-04"
+    ]
+  },
+  {
+    "id": "I20",
+    "title": "Send a small physical sample that resolves the stated doubt",
+    "lens": "psychological",
+    "stage": "Experiential qualification",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "buyer": "A finish or fabric merchant with representative samples and an existing fulfillment operation.",
+    "problem": "The shopper's remaining doubt is physical: texture, opacity or appearance in their room. More generated copy cannot settle it.",
+    "intervention": "Offer a small comparative kit selected around the shopper's explicit question. Include the actual product identities, neutral comparison instructions and full-size prices. Save their shortlist so they can choose either product or neither after trying it. Samples themselves never count as conversion success.",
+    "mechanism": "A relevant physical comparison may resolve enough uncertainty to create a full-size purchase that a generic sample assortment would miss.",
+    "overlap": "Samplize already supplies physical paint samples. SoPost provides sampling, targeting and purchase pathways. Fulfillment orchestration is established competition; the proposed improvement is the kit's discriminating comparison.",
+    "edge": "Beat a generic kit at equal shopper credit and fulfillment budget on additional full-size purchasing households.",
+    "evidence": "Hypothesized purchase effect. Samplize and SoPost establish operational feasibility and competition, not causal gains from this particular kit design.",
+    "experiment": "Randomize eligible AI-origin households before offering either kit and persist assignment. Include refusals, unclaimed kits and nonresponders. Compare completed full-size purchases within 60 days, followed through returns. Power on independent households and allow shipping time. A separately powered no-kit comparison is needed before expanding sampling to a new population.",
+    "metric": "Full-size purchasing households per all assigned households, with catalog-wide contribution after returns, sample cost, waste and decision delay.",
+    "dependency": "Representative samples, reliable delivery, household deduplication, equal-cost comparator kits and full-size order linkage.",
+    "falsifier": "Sample engagement rises without useful full-size purchase gains, or incremental contribution fails to cover the complete delivery cost.",
+    "impactScenario": "Illustratively, 10% of 5,000 monthly AI visits represent 500 distinct eligible households. At a 2.5% baseline, an arbitrary 20% relative gain adds 2.5 full-size orders and £75 at £30 contribution after returns. The result may be zero or negative.",
+    "valueScenario": "A £99 monthly test fee needs 3.3 extra orders, or 9.9 at 3x value, before incremental kit costs. Equal comparator costs cancel in the difference; rollout feasibility still needs the full sampling bill. Price acceptance is untested.",
+    "implementation": "Begin with one frequent sensory tradeoff and two existing samples, using the merchant's current sample ordering and saved-shortlist flow.",
+    "costControl": "Minimize sample weight and unnecessary variants. Count shipping, handling, credits, waste and amortized integration explicitly.",
+    "sources": [
+      {
+        "title": "Samplize FAQ",
+        "url": "https://samplize.com/pages/faq"
+      },
+      {
+        "title": "Digital Sampling Solutions | SoPost",
+        "url": "https://sopost.com/solutions/"
+      }
+    ],
+    "candidateIds": [
+      "psychological-06"
+    ]
+  },
+  {
+    "id": "I21",
+    "title": "Restore documented risk context before a legitimate checkout is declined",
+    "lens": "algorithmic",
+    "stage": "Checkout completion",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "buyer": "The payments lead at a UCP-enabled retailer with an observed transaction-context mapping defect.",
+    "problem": "The risk provider may receive incomplete documented context from an agent checkout, causing a technical integration failure to resemble a risky purchase.",
+    "intervention": "Build a version-aware adapter that restores only documented context actually supplied by UCP. Shadow-replay redacted cases, then repair the approved mapping with fraud policy unchanged. Never reconstruct missing AVS, CVV or 3DS verification, or interpret null as low risk. Tolerate unknown optional keys.",
+    "mechanism": "Correct context can recover legitimate purchases lost to the defect, provided the additional approvals do not create offsetting fraud losses.",
+    "overlap": "Google supplies contextual signals already, while the merchant's payment and risk provider addresses false declines. A correctly configured native adapter is the active benchmark.",
+    "edge": "This needs a reproducible merchant-specific defect that the current approved integration leaves unresolved.",
+    "evidence": "Hypothesis only. Google's risk, error and lifecycle documents establish the integration contract. They do not establish excess false declines in UCP traffic.",
+    "experiment": "After shadow validation and provider approval, randomize AI-origin buyers at their first eligible low-risk checkout between approved adapters, before the risk decision. Persist buyer assignment and deduplicate retries. Include all assigned buyers. Follow completed settled purchases through returns and chargeback maturity, potentially beyond 90 days; power fraud-loss guardrails separately and report missing legitimacy labels. Define low-risk eligibility using pre-treatment criteria common to both adapters, never treatment-generated scores.",
+    "metric": "Legitimate settled purchasers per assigned eligible buyer, plus total completed orders, mature fraud losses and contribution. Approval rate alone cannot establish success.",
+    "dependency": "Merchant and risk-provider approval, documented capability versions, secure minimized logs and mature dispute labels.",
+    "falsifier": "No defect is confirmed, legitimate purchases do not increase, or added fraud and chargeback costs erase the recovered contribution.",
+    "impactScenario": "The eligible checkout subset of 5,000 monthly AI visits is unknown; applying the 2.5% whole-visit example would misstate it. Hypothetically, D extra legitimate orders yield £30D after ordinary returns, less additional fraud losses F. D can be zero or negative.",
+    "valueScenario": "An unvalidated £99 monthly test fee breaks even when £30D exceeds £99 plus F and implementation cost K. With F=K=0, that is 3.3 orders; 3x value needs 9.9. Delayed losses can reverse an early apparent win.",
+    "implementation": "Start with one provider, one documented field mismatch and an audited adapter release. Avoid changing risk thresholds during the mapping experiment.",
+    "costControl": "Reuse existing risk decisions and deterministic field mapping; avoid building another fraud model. Measure recurring recoverable losses before subscription pricing; a one-time native correction supports project pricing.",
+    "sources": [
+      {
+        "title": "Risk signals implementation",
+        "url": "https://developers.google.com/merchant/ucp/implementation/2026-04-08/risk-signals"
+      },
+      {
+        "title": "Error codes",
+        "url": "https://developers.google.com/merchant/ucp/guides/overview/error-codes"
+      },
+      {
+        "title": "Order lifecycle implementation",
+        "url": "https://developers.google.com/merchant/ucp/implementation/2026-04-08/order-lifecycle"
+      }
+    ],
+    "candidateIds": [
+      "google-10"
+    ]
+  },
+  {
+    "id": "I22",
+    "title": "Explain supported reasons why authentic reviews disagree",
+    "lens": "psychological",
+    "stage": "Decision support",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "buyer": "A merchant with licensed authentic reviews, identifiable product revisions and recurring buyer questions about conflicting experiences.",
+    "problem": "One review praises the product and another rejects it. An average sentiment score does not show whether the disagreement concerns the shopper's intended use.",
+    "intervention": "Build a small comparison of the conflicting evidence, showing exact product version, reported conditions and relevant review counts. Link to the originals and preserve negative findings. Explain a difference only when facts support it; otherwise state that the conflict remains unresolved and offer a factual next check.",
+    "mechanism": "A supported explanation can resolve a specific buying doubt or help the shopper choose a more suitable catalog alternative.",
+    "overlap": "Amazon already presents positive and negative review aspects and source quotations; shopping assistants synthesize reviews. The baseline is a competent aspect summary using the same review set.",
+    "edge": "Expose the conditions behind a real contradiction without inventing reviewer motives or explaining away a defect.",
+    "evidence": "Hypothesis. Amazon documents existing summaries, and fit-uncertainty research motivates the problem. No source supplies this intervention's purchase lift.",
+    "experiment": "Randomize AI-origin shoppers who state a review contradiction before either view appears. Keep review coverage identical and include every assigned shopper. Measure any catalog purchase completed within 30 days, then follow returns. Power from the eligible cohort and independently audit explanations; clicks and helpfulness votes remain secondary.",
+    "metric": "Purchasers per all assigned eligible shoppers, with after-return contribution, omitted-negative audits, unsupported explanations and mismatch complaints.",
+    "dependency": "Review rights, product-version matching, useful context coverage, expert audits and persistent order linkage.",
+    "falsifier": "Explanations require unsupported assumptions, or a precise test excludes useful purchase gains while decision effort or returns rise.",
+    "impactScenario": "Under chosen assumptions, 10% of 5,000 monthly AI visits qualify and buy at 2.5%. An arbitrary 10% relative improvement adds 1.25 orders and £37.50 at £30 contribution after returns. Zero gain and purchase losses remain possible.",
+    "valueScenario": "A £99 monthly pilot would need 3.3 extra orders before review licensing and audits, or 9.9 at a 3x value hurdle. The illustrative gain misses both targets. This price has no demonstrated market acceptance.",
+    "implementation": "Begin with manually reviewed explanations for a handful of recurring product-version disputes. Keep an explicit unresolved state in the interface.",
+    "costControl": "Reuse approved product-level explanations until evidence changes; do not regenerate a speculative story for each visitor.",
+    "sources": [
+      {
+        "title": "How Amazon is making it easier to shop by leveraging GenAI and AgenticAI",
+        "url": "https://www.aboutamazon.com/news/retail/amazon-agentic-ai-gen-ai-shopping"
+      },
+      {
+        "title": "Product Fit Uncertainty in Online Markets: Nature, Effects, and Antecedents",
+        "url": "https://doi.org/10.1287/isre.2014.0520"
+      }
+    ],
+    "candidateIds": [
+      "psychological-08"
+    ]
+  },
+  {
+    "id": "I23",
+    "title": "Route unresolved buying tasks to an available specialist",
+    "lens": "behavioral",
+    "stage": "Assisted conversion",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "buyer": "A high-consideration merchant with staffed product specialists and enough unresolved AI-origin buying tasks to evaluate routing.",
+    "problem": "Repeated bot answers leave the task unfinished; a generic transfer then makes the shopper start again with someone who lacks the right expertise.",
+    "intervention": "Classify the unresolved task from attempted checks, match it to an available specialist and show an honest wait estimate. With the shopper's agreement, transfer a minimal brief containing the candidate products, failed checks and sourced facts. Honor explicit human requests in every arm.",
+    "mechanism": "A specialist who can finish the actual task may recover a purchase before repetition or waiting drives the shopper away.",
+    "overlap": "Gorgias already hands conversations to humans; Intercom Fin supports procedures and escalation. Competent existing routing at equal staffing is the comparator.",
+    "edge": "Better task selection and context transfer must create additional purchasers within the same expert capacity.",
+    "evidence": "Hypothesized effect. Incumbent documentation establishes workflow overlap. Gorgias's assistant attribution excludes human handovers in its stated window, making that metric unsuitable for this experiment.",
+    "experiment": "Randomize independent queue-shift blocks between current routing and the optional proactive policy, with equal scheduled staffing and bounded queue carryover. Enroll all eligible AI-origin users before escalation, including those who decline. Measure completed purchases within 14 days, followed through returns. Power on independent blocks and track wait spillovers into both policies.",
+    "metric": "Purchasers per all eligible assigned users, including human-assisted orders; team-wide completed orders, after-return contribution, handling time and waiting are guardrails.",
+    "dependency": "Real specialist capacity, skills and queue APIs, approved context sharing and purchase linkage across handovers.",
+    "falsifier": "The purchase advantage disappears at equal staffing or after counting abandoned waits, displaced control work and the whole eligible cohort.",
+    "impactScenario": "Illustratively, 10% of 5,000 monthly AI visits qualify, with 2.5% baseline purchasing. An arbitrary one-percentage-point improvement adds five orders and £150 at £30 contribution after returns. Zero or negative effects are possible if queues worsen.",
+    "valueScenario": "A £99 monthly test price needs 3.3 extra orders, or 9.9 at 3x value, before extra labor and integration. Equal staffing controls the trial comparison; any rollout staffing increase must be costed. Willingness to pay is unknown.",
+    "implementation": "Connect one helpdesk to two specialist task types. Replay failed conversations to validate routing before enabling the optional offer.",
+    "costControl": "Transfer usable context and limit duplicate investigation. Do not optimize deflection at the expense of purchases.",
+    "sources": [
+      {
+        "title": "Building Fin Procedures",
+        "url": "https://www.intercom.com/help/en/articles/13449439-building-fin-procedures"
+      },
+      {
+        "title": "Shopping Assistant explained",
+        "url": "https://docs.gorgias.com/en-US/shopping-assistant-explained-1216108"
+      },
+      {
+        "title": "How metrics are calculated: AI & automation",
+        "url": "https://helpcenter.gorgias.com/en-US/how-metrics-are-calculated-ai-and-automation-5666070"
+      }
+    ],
+    "candidateIds": [
+      "behavioral-05",
+      "truefit-08",
+      "gorgias-09"
+    ]
+  },
+  {
+    "id": "I24",
+    "title": "Turn an unanswered buying question into a reusable supplier fact",
+    "lens": "infrastructural",
+    "stage": "Assisted conversion",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "buyer": "A specialist retailer whose staff or suppliers can verify product facts missing from the catalog.",
+    "problem": "A real knowledge gap blocks the purchase, such as an unknown internal width. Repeating a vague answer or opening another full support conversation does not obtain the evidence.",
+    "intervention": "Create a precise SKU-and-revision request for the smallest useful document, photograph or measurement. A specialist supplies evidence and approves the answer. Resume the shopper's saved decision through their chosen channel, then reuse the product fact with provenance and an expiry rule. Preserve unfavorable answers too.",
+    "mechanism": "Obtaining and delivering the missing fact lets shoppers complete a decision; approved reuse can serve later buyers without repeating the investigation.",
+    "overlap": "Intercom Fin can pause for teammate input and resume procedures. Gorgias answers product questions and hands off. A configured support workflow is a stronger comparator than unanswered chat.",
+    "edge": "Acquire useful evidence and return it to the live buying task at a fixed expert budget.",
+    "evidence": "Mechanism hypothesis. The cited helpdesk documentation establishes existing workflow support, not additional purchases from pooling supplier fact requests.",
+    "experiment": "Assign product-question clusters to the evidence request or current support workflow before eligible AI-origin requests arrive. Use broader clusters where one answer would contaminate others. Include all eligible requesters, including unanswered cases. Compare completed purchases within 21 days, followed through returns; power on independent clusters and account for cross-cluster shoppers.",
+    "metric": "Purchasers per all assigned eligible requesters, with catalog-wide orders, after-return contribution, response delay, incorrect reuse and specialist minutes.",
+    "dependency": "Cooperating suppliers, revision identity, acceptable evidence standards, helpdesk access and shopper-approved continuation. Exclude unsupported safety-critical measurements.",
+    "falsifier": "The queue produces no timely usable answers, or reduced support effort fails to produce a useful purchase increase.",
+    "impactScenario": "Assume 5% of 5,000 monthly AI visits qualify and their baseline purchase probability is 2.5%. An arbitrary 20% relative improvement adds 1.25 orders and £37.50 at £30 contribution after returns. Waiting and wrong reuse can make the effect negative; zero is possible.",
+    "valueScenario": "A hypothetical £99 monthly fee needs 3.3 additional orders before new expert work and integration; 9.9 meets the 3x value hurdle with no other costs. The example does not meet either threshold, and willingness to pay is untested.",
+    "implementation": "Start with one supplier and a recurring noncritical question. Require evidence acceptance and a working return path before adding automated prioritization.",
+    "costControl": "Pool genuinely equivalent questions and retain only approved product facts, not shoppers' private context.",
+    "sources": [
+      {
+        "title": "Human-in-the-loop approvals for Fin Procedures",
+        "url": "https://www.intercom.com/help/en/articles/14468561-human-in-the-loop-approvals-for-fin-procedures"
+      },
+      {
+        "title": "Shopping Assistant explained",
+        "url": "https://docs.gorgias.com/en-US/shopping-assistant-explained-1216108"
+      }
+    ],
+    "candidateIds": [
+      "behavioral-04",
+      "datafeedwatch-10",
+      "feedonomics-10",
+      "lilyai-08",
+      "algorithmic-07"
+    ]
+  },
+  {
+    "id": "I25",
+    "title": "Repair product identity collisions across feeds and offers",
+    "lens": "identity",
+    "stage": "Discovery and offer integrity",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "buyer": "A multichannel merchant with reproducible examples of regional models, packs or conditions grouped incorrectly in shopping results.",
+    "problem": "Each feed row can look valid while conflicting identifiers cause an engine to combine materially different offers, concealing the item the shopper could buy.",
+    "intervention": "Trace one published collision through manufacturer identity, registered GTIN, pack content, region, condition and offer IDs. Repair merchant-owned source records with authoritative evidence, submit through supported feeds and check the resulting public representation. Never invent an identifier or treat feed acceptance as proof of corrected exposure.",
+    "mechanism": "Accurate grouping can restore qualified discovery and prevent shoppers reaching an offer that contradicts the product they selected.",
+    "overlap": "DataFeedWatch identity review, GS1 verification and native item/group/offer mappings already address identifiers. The proposed difference is tracing an observed contradiction across individually plausible sources.",
+    "edge": "Resolve a demonstrated grouping failure that a competent existing feed review leaves unresolved.",
+    "evidence": "Hypothesis only. GS1 and OpenAI document identity mechanisms; neither quantifies purchases lost to this defect class.",
+    "experiment": "Randomize sufficiently independent suspect product-family clusters before public changes, comparing investigative workflows at equal labor budgets. Fix confirmed material inaccuracies promptly in both arms. Compare completed AI-origin orders per assigned family-week, with all-channel portfolio orders and returns. Allow recrawl and buying delays; cluster power and substitution checks are required. Do not condition the estimate on post-change arrivals.",
+    "metric": "Completed orders across fixed assigned clusters and weeks, followed through returns and contribution reconciliation. Track attribution coverage, visibility loss and purchases shifting between substitute families.",
+    "dependency": "Observed collisions, rights to correct identifiers, authoritative reference data, supported downstream distinctions and enough independent clusters.",
+    "falsifier": "Native mapping already resolves the defect, or verified representation changes fail to add purchases beyond the incumbent workflow.",
+    "impactScenario": "Use fixed portfolio outcomes because discovery can change arrivals. Hypothetically, five extra completed orders per affected portfolio-month yield £150 at £30 contribution after returns. This is a chosen scenario, not a forecast; zero orders or losses are possible. The 5,000-visit model cannot identify the acquisition effect.",
+    "valueScenario": "An unvalidated £99 monthly fee needs 3.3 extra orders before investigative and integration costs; 3x value needs 9.9. Charge against the additional value over competent feed maintenance, not all sales of repaired products.",
+    "implementation": "Build a collision evidence record and repair one supported export path first. Keep public identity repair separate from arrival variant-state recovery.",
+    "costControl": "Investigate reproducible high-impact conflicts and reuse existing feed tooling instead of replacing every export.",
+    "sources": [
+      {
+        "title": "What is Verified by GS1?",
+        "url": "https://support.gs1.org/support/solutions/articles/43000734077-what-is-verified-by-gs1-"
+      },
+      {
+        "title": "Products",
+        "url": "https://developers.openai.com/commerce/specs/file-upload/products"
+      },
+      {
+        "title": "Pricing - DataFeedWatch",
+        "url": "https://www.datafeedwatch.com/pricing"
+      }
+    ],
+    "candidateIds": [
+      "datafeedwatch-08",
+      "simprosys-08",
+      "identity-01"
+    ]
+  },
+  {
+    "id": "I26",
+    "title": "Keep seller provenance and promises attached to the exact offer",
+    "lens": "identity",
+    "stage": "Trust and terms",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "buyer": "A brand or authorized retailer whose seller-sensitive journeys involve several documented offers or warranty arrangements.",
+    "problem": "The product stays the same while the selected offer changes, leaving the shopper uncertain whose warranty, condition statement or return policy applies.",
+    "intervention": "Bind seller, model, region, condition, warranty provider and policy version to the exact offer ID. Show material differences when the offer changes and let the buyer confirm. Publish authorization evidence only where verified; missing evidence remains unknown. A GTIN match does not authenticate the physical item.",
+    "mechanism": "Knowing which promises accompany the purchasable offer can resolve a trust question before checkout and reduce later disputes.",
+    "overlap": "OpenAI already passes selected merchant offer IDs and requires authoritative offer data. Google supports offer-specific policy overrides. Existing compliant offer presentation and trust evidence are the baseline.",
+    "edge": "Preserve verified promises through a demonstrated handoff failure, beyond merely adding a seller badge.",
+    "evidence": "Hypothesized effect. The native specifications show how identity and policy information can be represented; no purchase gain from this continuity check has been measured.",
+    "experiment": "Persistently randomize eligible AI-origin shoppers before presenting multi-offer choices. Compare current compliant presentation with the continuity check, keeping mandatory disclosures and commercial terms equal. Count all assigned shoppers, not just those switching offers. Measure merchant purchases completed within 30 days and follow the return window; power from actual seller-sensitive traffic.",
+    "metric": "Purchasers per assigned eligible shopper, with retained orders, after-return contribution, disputes and confirmation abandonment. Orders outside the paying buyer's commercial perimeter do not become its sales.",
+    "dependency": "Reliable seller-policy records, stable offer IDs, publication rights and supported merchant or partner checkout access.",
+    "falsifier": "Existing presentation already preserves the promises, or the extra confirmation creates more lost purchases than the check recovers.",
+    "impactScenario": "For illustration, 5% of 5,000 monthly AI visits qualify at a 2.5% baseline purchase probability. An arbitrary 20% relative gain means 1.25 additional orders and £37.50 at £30 after-return contribution. Zero or negative effects remain possible.",
+    "valueScenario": "A £99 monthly test fee requires 3.3 extra orders to break even or 9.9 at 3x value, excluding verification and integration costs. Fewer disputes may add separate value, but cannot replace evidence of added purchases. Price acceptance is unknown.",
+    "implementation": "Start with one known seller or warranty transition on merchant-owned pages. Retain the selected offer and its verified policy version through checkout.",
+    "costControl": "Recheck records when an offer or policy changes, rather than repeating a full provenance investigation each visit.",
+    "sources": [
+      {
+        "title": "Product checkout conversion spec",
+        "url": "https://developers.openai.com/plugins/guides/product-checkout-conversion-spec"
+      },
+      {
+        "title": "Products",
+        "url": "https://developers.openai.com/commerce/specs/file-upload/products"
+      },
+      {
+        "title": "Merchant Return Policy Structured Data",
+        "url": "https://developers.google.com/search/docs/appearance/structured-data/return-policy"
+      }
+    ],
+    "candidateIds": [
+      "searchpilot-07",
+      "smartseo-07",
+      "regulatory-03",
+      "identity-02"
+    ]
+  },
+  {
+    "id": "I27",
+    "title": "Repair an exact partner-offer failure after incumbent routing",
+    "lens": "infrastructural",
+    "stage": "Selection recovery",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "buyer": "A manufacturer with partner order-receipt agreements and a documented failure in its configured retailer-routing service.",
+    "problem": "The brand's locator points to the wrong regional model or stale offer even though a partner can fulfill the exact requested product.",
+    "intervention": "Add a final, authoritative partner check for the exact regional SKU, condition, authorization, stock and destination before handoff. If the selected offer fails, show verified alternatives with explicit prices and terms. Preserve buyer choice and distinguish unknown stock from unavailable stock.",
+    "mechanism": "Repairing an observed final-handoff defect may create a brand purchase that the existing locator would otherwise lose.",
+    "overlap": "PriceSpider/Wayvia already provides retailer routing, inventory-aware experiences and purchase tracking. Its current page explicitly addresses AI shopping. Generic stock checks, pickup and attribution cannot be sold as the edge.",
+    "edge": "Proceed only after proving a model, region or freshness failure beyond a correctly configured incumbent on the same retailer network.",
+    "evidence": "Conditional hypothesis. Vendor documentation establishes strong overlap and tracking capabilities, not an incremental purchase effect for this repair.",
+    "experiment": "Randomize AI-origin shoppers at the brand's page, after pre-treatment direct-unavailability eligibility but before routing, to configured PriceSpider/Wayvia or the added check. Include everyone assigned. Compare completed brand purchases across direct and participating retail channels over a full buying cycle, then returns. Power from eligible shoppers and receipt coverage; keep missing retailer outcomes unknown.",
+    "metric": "Brand purchasing shoppers per all assigned eligible shoppers, with total brand orders and the manufacturer's channel-specific contribution. Retailer clicks, seller switching and shifted direct orders are not added demand.",
+    "dependency": "A demonstrated incumbent miss, authoritative partner offer APIs, product mapping, permitted receipts and enough cross-channel outcome coverage.",
+    "falsifier": "Correct incumbent configuration fixes the issue, no additional brand purchasers appear, or lost direct margin and data costs erase value.",
+    "impactScenario": "Illustratively, 10% of 5,000 monthly AI visits qualify at 2.5% baseline brand purchasing. An arbitrary 20% relative gain adds 2.5 orders. £75 follows only if the manufacturer's realized contribution after returns is £30 per added order; retail basket value cannot supply that margin. Zero or losses remain possible.",
+    "valueScenario": "At £30 manufacturer contribution, an unvalidated £99 fee needs 3.3 extra brand orders before data costs, or 9.9 at 3x value. Recalculate with actual wholesale and direct margins; moving orders to another retailer creates no automatic benefit.",
+    "implementation": "Pilot one reproducible offer failure and one cooperating partner. Retain the incumbent network and add the verified check immediately before handoff.",
+    "costControl": "Pay for targeted authoritative checks and receipt coverage only where the incumbent gap is demonstrated.",
+    "sources": [
+      {
+        "title": "Shoppable Media & Where to Buy Platform | Wayvia",
+        "url": "https://www.pricespider.com/where-to-buy/"
+      },
+      {
+        "title": "How PriceSpider's Universal Tracking Suite Works",
+        "url": "https://www.pricespider.com/blog/how-pricespiders-universal-tracking-suite-works/"
+      }
+    ],
+    "candidateIds": [
+      "peec-07",
+      "profound-04",
+      "scrunch-07",
+      "channable-09",
+      "regulatory-01"
+    ]
+  },
+  {
+    "id": "I28",
+    "title": "Preserve the organization, quote and approval needed to buy",
+    "lens": "identity",
+    "stage": "Purchase authority",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "buyer": "A B2B distributor with an approved assistant route and failed handoffs between product selection, quotes and purchasing approval.",
+    "problem": "The right products reach an approver under the wrong company location, price list or quote version, so a valid request stalls or must be rebuilt.",
+    "intervention": "Ask the authorized buyer to choose the purchasing location and project. Carry required technical sign-offs into native draft orders and bind approval to the quoted products, quantities, terms and version. Recheck material changes before payment and return changed quotes for approval through the existing authorized flow.",
+    "mechanism": "Preserving the context needed to approve and pay can turn a valid purchasing request into a completed order without changing its commercial terms.",
+    "overlap": "Shopify B2B already contextualizes pricing by company location and supports draft orders for approval. A competent native quote or procurement workflow is the direct benchmark.",
+    "edge": "Fix a demonstrated cross-system loss of purchasing context, beginning with one merchant integration.",
+    "evidence": "Hypothesis. Shopify documents the native primitives; their existence does not establish a remaining defect or additional AI-origin purchases.",
+    "experiment": "Randomize independent organization-location purchasing projects before the handoff; cluster at organization where approvers overlap. Compare current native approval with preserved context at identical terms. Count all eligible assigned requests, including unapproved ones. Measure paid completed orders over the normal buying cycle, then cancellations and returns. Enrollment and power depend on independent organizations and payment maturity.",
+    "metric": "Paid purchasing projects per assigned eligible project, with merchant-wide contribution after returns. Draft acceptance and purchase-order issuance remain leading indicators.",
+    "dependency": "Native B2B permissions, explicit organization delegation, quote-version joins and access to the existing approval system. Only an authorized payer finalizes purchases.",
+    "falsifier": "Native workflows already retain the required context, or better draft completion does not create additional paid orders.",
+    "impactScenario": "Five thousand monthly AI visits cannot establish the number or conversion rate of independent B2B projects. A chosen scenario of five additional paid projects at £30 contribution after returns yields £150; replace that margin and denominator with actual B2B data. Zero and negative outcomes remain possible.",
+    "valueScenario": "An unvalidated £99 monthly test fee requires 3.3 extra orders at £30 contribution before integration and approval work; 3x value requires 9.9. Longer payment cycles delay both verification and payback.",
+    "implementation": "Use native company, contact and location records. Add quote-bound context to one failing handoff; keep cross-distributor procurement outside this pilot.",
+    "costControl": "Reuse the merchant's roles and approval interface, avoiding duplicate organization directories and manually reconstructed quotes.",
+    "sources": [
+      {
+        "title": "Headless with B2B",
+        "url": "https://shopify.dev/docs/storefronts/headless/bring-your-own-stack/b2b"
+      },
+      {
+        "title": "Use draft orders",
+        "url": "https://shopify.dev/docs/apps/build/b2b/draft-orders"
+      }
+    ],
+    "candidateIds": [
+      "identity-07",
+      "behavioral-10"
+    ]
+  },
+  {
+    "id": "I29",
+    "title": "Resolve joint buyers' conflicting requirements before checkout",
+    "lens": "identity",
+    "stage": "Decision support",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "buyer": "A furniture or home-equipment merchant whose adult customers often make a genuinely joint purchase.",
+    "problem": "A promising shortlist leaves another decision maker's objection undiscovered until checkout. A shared chat can still favor whoever states their preferences first.",
+    "intervention": "Offer a voluntary shared decision with private entry of non-negotiable requirements and acceptable tradeoffs. Each participant controls what becomes shared. Compare products satisfying the agreed constraints and show unresolved conflicts plainly. Participants send their own invitations; the service does not infer relationships or payment authority.",
+    "mechanism": "Resolving a concrete disagreement earlier may help a group make a mutually acceptable purchase instead of abandoning the decision.",
+    "overlap": "IKEA Kreativ already supports saved and shared designs. Shared shortlists and collaborative-shopping tools provide a credible baseline; private constraint elicitation needs to earn its added effort.",
+    "edge": "Produce more mutually accepted purchasing groups than the same shortlist, product facts and ordinary group chat.",
+    "evidence": "Hypothesis. The cited collaborative-shopping laboratory study concerns coordination, while IKEA establishes existing sharing. Neither measures this intervention's incremental purchases.",
+    "experiment": "Randomize eligible AI-origin initiating buyers before invitation or preference entry, and persist assignment for their group. Compare private elicitation with a shared shortlist and chat. Include invitations never accepted. Measure completed group purchases within 60 days, followed through returns. Power on independent groups rather than participants and deduplicate orders across group members.",
+    "metric": "Purchasing groups per all assigned initiating groups, with later satisfaction, after-return contribution, time to decision, privacy errors and conflict complaints.",
+    "dependency": "Voluntary adult participation, explicit sharing permissions, group-level assignment, constraint logic and consented shared-order linkage.",
+    "falsifier": "The added process delays or reduces purchases, or a sufficiently precise trial excludes the minimum useful gain over ordinary sharing.",
+    "impactScenario": "Hypothetically, 5% of 5,000 monthly AI visits each initiate a distinct eligible group. At 2.5% baseline purchasing, an arbitrary 20% relative gain adds 1.25 orders and £37.50 at £30 contribution after returns. Nonparticipation can leave no gain; surfaced conflict can reduce purchases.",
+    "valueScenario": "A proposed £99 monthly fee requires 3.3 extra group orders before support and integration costs, or 9.9 at 3x value. These thresholds use one order per additional purchasing group and do not establish willingness to pay.",
+    "implementation": "Start with a saved furniture shortlist and a few explicit dimensions such as size and finish. Keep agreement distinct from authority to pay.",
+    "costControl": "Use deterministic constraint comparisons and task-limited sharing, rather than a persistent social profile or open-ended group agent.",
+    "sources": [
+      {
+        "title": "Let's shop online together: An empirical investigation of collaborative online shopping support",
+        "url": "https://hub.hku.hk/handle/10722/270326"
+      },
+      {
+        "title": "IKEA launches new AI-powered, digital experience",
+        "url": "https://www.ikea.com/us/en/newsroom/corporate-news/ikea-launches-new-ai-powered-digital-experience-empowering-customers-to-create-lifelike-room-designs-pub58c94890/"
+      }
+    ],
+    "candidateIds": [
+      "psychological-09",
+      "identity-08"
+    ]
+  },
+  {
+    "id": "I30",
+    "title": "Keep gift intent separate from the buyer's own preferences",
+    "lens": "identity",
+    "stage": "Personalized selection",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "buyer": "A gift-heavy merchant that controls the inputs and feedback labels used by its shopping personalization.",
+    "problem": "A gift task can inherit the buyer's own tastes and sizes, then incorrectly teach the system that the gift reflects those same preferences.",
+    "intervention": "Add an explicit gift-task flag with temporary editable preferences. Suppress only conflicting self-history features during that task, and label gift events separately when updating the buyer's profile. Let the shopper clear the scope easily. Use the preferences they supply without identifying or building a profile of the recipient.",
+    "mechanism": "Relevant gift choices may create additional purchases, while cleaner feedback can prevent the gift from damaging later self-shopping recommendations.",
+    "overlap": "Constructor already combines purchase history, contextual signals and clickstream personalization. Its tuned existing setup, including any configured gift handling, is the benchmark.",
+    "edge": "Test feature isolation and feedback labeling, rather than treating a gift chat prompt as a new capability.",
+    "evidence": "Hypothesis. Constructor documents the history/context interaction and identifiers. The sources do not establish that its current gift handling is defective or quantify purchase gains.",
+    "experiment": "Among AI-origin shoppers who explicitly declare a gift task, persistently randomize account or browser assignment before recommendations. Compare current personalization with isolated task features. Count all assigned shoppers, including those who abandon or clear the scope. Measure gift purchases completed within 14 days, returns and all self-shopping purchases over 60 days. Power from eligible gift traffic and stratify seasonal periods.",
+    "metric": "Gift purchasers per assigned eligible shopper, with total account orders and after-return contribution. Later self-shopping regression is a release guardrail.",
+    "dependency": "Control over personalization features and training labels, explicit task context, stable assignment and reliable order linkage.",
+    "falsifier": "Current context already handles gifts adequately, or more gift orders are offset by worse total purchasing outcomes.",
+    "impactScenario": "Choose 20% eligibility among 5,000 monthly AI visits and a 2.5% eligible purchase probability. An arbitrary 10% relative gain adds 2.5 orders and £75 at £30 contribution after returns. This is a sensitivity calculation; zero or negative effects are possible when useful history is suppressed.",
+    "valueScenario": "An unvalidated £99 monthly fee needs 3.3 extra orders before implementation costs, or 9.9 for 3x value. Do not count a speculative future personalization benefit as measured contribution or market willingness to pay.",
+    "implementation": "Start with one gift-heavy category and a small set of demonstrably conflicting history features. Audit downstream training labels as well as the live recommendations.",
+    "costControl": "Reuse the existing recommendation engine and event stream; avoid a separate recipient profile or model for every gift.",
+    "sources": [
+      {
+        "title": "Learn about AI Shopping Agent",
+        "url": "https://docs.constructor.com/docs/products-ai-shopping-agents-learn-about-ai-shopping-agent"
+      },
+      {
+        "title": "Identification parameters",
+        "url": "https://docs.constructor.com/docs/integrating-with-constructor-behavioral-tracking-identification-parameters"
+      }
+    ],
+    "candidateIds": [
+      "constructor-08"
+    ]
+  },
+  {
+    "id": "I31",
+    "title": "Refresh fit advice when the garment's construction changes",
+    "lens": "temporal",
+    "stage": "Product qualification",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "buyer": "An apparel brand that reuses style names and can identify manufacturing revisions to cut or fabric.",
+    "problem": "A previously successful garment becomes a misleading size reference after its construction changes, while familiar names make the old advice appear relevant.",
+    "intervention": "Tie reference-garment advice to the actual manufacturing revision. When a declared change or outcome alert appears, obtain an independent sample measurement before invalidating old links. Quarantine unsupported references and publish revised fit advice with its evidence version. Customer-mix changes alone cannot confirm garment drift.",
+    "mechanism": "Current fit evidence may let suitable shoppers buy confidently instead of abandoning after inconsistent advice or buying a size that disappoints.",
+    "overlap": "True Fit already learns from purchase and return outcomes and offers dynamic size charts. Whether it already handles the merchant's revision boundary is unknown; test against its configured current model.",
+    "edge": "Act on a verified construction change sooner and more accurately than existing fit guidance, without excessive false alerts.",
+    "evidence": "Hypothesized purchase effect. True Fit's specification and shopping-agent page establish mature outcome-based competition, not superiority for the proposed revision handling.",
+    "experiment": "Before rollout, identify genuine revision cohorts using manufacturing records and blinded measurements. Randomize independent product-version clusters to revised handling or current guidance, balancing category and launch timing. Count all eligible AI-origin shoppers assigned at first exposure. Measure completed purchases over the buying window, then full returns; plan cluster power and account for shoppers crossing product groups.",
+    "metric": "Purchasers per all assigned eligible shoppers, plus suitable retained orders, after-return contribution, false alerts and sizing complaints. Fewer returns alone are not additional purchases.",
+    "dependency": "Reliable version identities, manufacturing cooperation, independent measurements, enough revised-product traffic and mature order/return joins.",
+    "falsifier": "Measurements fail to confirm the alerts, or genuine-change cohorts show no useful purchase gain over current True Fit guidance.",
+    "impactScenario": "Assume 5% of 5,000 monthly AI visits encounter eligible changed garments and purchase at 2.5%. An arbitrary 20% relative gain adds 1.25 orders and £37.50 at £30 contribution after returns. No gain or harm from false invalidation remains possible.",
+    "valueScenario": "A £99 monthly test price requires 3.3 extra orders before measurement and integration costs; 9.9 meets 3x value. Any separate return saving must be reconciled without double-counting the £30 contribution. Willingness to pay is unknown.",
+    "implementation": "Pilot one repeated style with trustworthy revision records. Invalidate only stale garment references; leave generic catalog enrichment outside the product.",
+    "costControl": "Use targeted sample measurements when evidence suggests a real change, rather than remeasuring the whole assortment.",
+    "sources": [
+      {
+        "title": "Fit Intelligence Technical Spec, Data & MCP | True Fit",
+        "url": "https://www.truefit.com/fit-intelligence-spec"
+      },
+      {
+        "title": "AI Shopping Agent for Apparel & Footwear | True Fit",
+        "url": "https://www.truefit.com/conversation-fit-agent"
+      }
+    ],
+    "candidateIds": [
+      "truefit-04"
+    ]
+  },
+  {
+    "id": "I32",
+    "title": "Make a no-match garment purchasable through a real alteration",
+    "lens": "behavioral",
+    "stage": "Assortment extension",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "buyer": "An apparel merchant with an operating alteration service, reliable capacity and clear remedy terms.",
+    "problem": "An otherwise suitable in-stock garment fails the shopper's length requirement, so the assistant rejects it before considering the merchant's real shortening service.",
+    "intervention": "Search allowable garment-and-service combinations against the stated finished length and deadline. Show finished-dimension tolerance, service price, lead time and applicable return terms. Require confirmation before adding the existing alteration option. Shortening must never stand in for an incompatible waist, rise or cut.",
+    "mechanism": "A feasible alteration turns some real no-match tasks into purchasable options without inventing stock or promising unsupported tailoring.",
+    "overlap": "UNIQLO already offers online alterations on eligible bottoms; True Fit supplies fit guidance. Compare with competent product search plus the merchant's existing alteration offer.",
+    "edge": "Discover the feasible combined option early enough to prevent a no-match abandonment, while delivering the promised result.",
+    "evidence": "Mechanism hypothesis. UNIQLO establishes that this service exists and carries operational terms; it provides no causal lift estimate for agent discovery.",
+    "experiment": "Randomize adult AI-origin shoppers with a pre-treatment no-match length constraint before presenting alternatives. Keep access to the existing alteration service in both arms and count every assigned shopper. Measure completed purchases within 30 days, then delivery, satisfaction, remakes and returns. Power from eligible no-match traffic and include service-capacity effects across arms.",
+    "metric": "Purchasers per all assigned eligible shoppers, with delivered satisfactory purchases and contribution after service, remakes and returns. Restricted returns cannot establish improved satisfaction or retention.",
+    "dependency": "Supported garment dimensions, trustworthy target measurements, actual alteration capacity, order integration and clear remedies.",
+    "falsifier": "Few eligible garments are truly alterable, or additional paid orders fail delivery and satisfaction checks or lose money after rework.",
+    "impactScenario": "Illustratively, 2% of 5,000 monthly AI visits qualify at a 2.5% baseline purchase probability. An arbitrary one-percentage-point gain adds one order. That yields £30 only if contribution after alteration and returns is £30. Zero or negative outcomes remain possible.",
+    "valueScenario": "At £30 net contribution, an unvalidated £99 monthly fee needs 3.3 additional orders or 9.9 at 3x value, before integration costs. Service and remake costs must already be deducted from the order contribution used here.",
+    "implementation": "Begin with one merchant-approved shortening operation and eligible trouser styles. Verify the service line and finished specification survive checkout and fulfillment.",
+    "costControl": "Reuse the existing alteration operation and deterministic feasibility rules; do not subsidize an uneconomic service to manufacture conversions.",
+    "sources": [
+      {
+        "title": "UNIQLO UK | Online Alterations | Customer Service",
+        "url": "https://faq-uk.uniqlo.com/pkb_Home?fs=RelatedArticle&id=kA0Vh0000001Mui&l=en_US"
+      },
+      {
+        "title": "Fit Intelligence Technical Spec, Data & MCP | True Fit",
+        "url": "https://www.truefit.com/fit-intelligence-spec"
+      }
+    ],
+    "candidateIds": [
+      "truefit-07"
+    ]
+  },
+  {
+    "id": "I33",
+    "title": "Apply a verified existing benefit before budget filtering",
+    "lens": "identity",
+    "stage": "Offer qualification",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "buyer": "A merchant with a real benefit program and an owned or approved partner agent that can request prices before filtering.",
+    "problem": "A public price can eliminate an affordable offer before a shopper applies an existing loyalty or verified benefit. A later coupon prompt cannot recover every excluded option.",
+    "intervention": "Offer optional verification before the controlled agent applies the shopper's budget. Use the existing issuer flow, bind its result to program, offer and expiry, and retrieve a live eligible total. Keep documents with the verifier, preserve guest browsing and revalidate at checkout. No new discount is introduced.",
+    "mechanism": "Earlier access to a genuine eligible quote may keep a suitable offer in consideration and produce an additional purchase.",
+    "overlap": "SheerID already verifies eligibility and issues offer codes. UCP supports consented identity linking and benefits. The comparator provides the same benefit through a competent existing flow.",
+    "edge": "Test quote timing and proof continuity at identical eligibility standards and commercial terms.",
+    "evidence": "Hypothesis. Official documents establish the required verification and linking mechanisms, not purchase gains or access to private consumer-agent decisions.",
+    "experiment": "In the owned or approved agent, randomize persistent program-relevant shopping tasks before budget filtering or verification. Compare early lookup with the current flow, including opt-outs, failed checks and people never reaching the merchant. Count completed merchant purchases within 30 days, then returns. Power from the assigned task population. A landing-page-only test could establish only downstream affordability reconsideration.",
+    "metric": "Purchasers per all assigned eligible tasks, with all-channel merchant orders, after-return contribution, verification burden and discount leakage. Verified shoppers alone are a selected denominator.",
+    "dependency": "A real program, issuer trust, supported pre-comparison price lookup, optional linking and assignment-to-order coverage.",
+    "falsifier": "Benefits already enter comparison, or earlier lookup adds no purchases and merely discounts orders that would have occurred anyway.",
+    "impactScenario": "A chosen 1,000-task cohort at 2.5% purchasing gains 2.5 orders under an arbitrary 10% relative improvement. £75 assumes unchanged £30 contribution after discounts and returns. The 5,000 observed-visit reference cannot supply this upstream denominator. Zero or negative contribution effects are possible.",
+    "valueScenario": "A £99 monthly test fee needs 3.3 extra orders or 9.9 at 3x value only when contribution remains £30 and other costs are zero. Include verification, integration and margin changes across all orders. Paid acceptance is untested.",
+    "implementation": "Start with one program and an approved agent's price lookup. Return minimal eligibility and quote data, with clear benefit and expiry information.",
+    "costControl": "Reuse valid issuer results within their permitted scope; avoid repeated verification or copying identity documents.",
+    "sources": [
+      {
+        "title": "Secure Verification Creation - SheerID Developer Center",
+        "url": "https://developer.sheerid.com/tutorials/secure-verification-creation"
+      },
+      {
+        "title": "Setting Up Webhooks - SheerID Developer Center",
+        "url": "https://developer.sheerid.com/tutorials/verifications/webhooks"
+      },
+      {
+        "title": "Identity Linking - Universal Commerce Protocol (UCP)",
+        "url": "https://ucp.dev/2026-08-25/specification/common/identity-linking/"
+      }
+    ],
+    "candidateIds": [
+      "identity-05",
+      "scrunch-06",
+      "google-05",
+      "regulatory-02",
+      "gorgias-04"
+    ]
+  },
+  {
+    "id": "I34",
+    "title": "Choose a purchase route that supports the actual cart",
+    "lens": "infrastructural",
+    "stage": "Checkout routing",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "buyer": "A merchant with customization or extension-dependent carts and control of an approved agent integration.",
+    "problem": "The selected cart needs an option or validation that its proposed checkout route cannot provide, so the shopper encounters a preventable dead end.",
+    "intervention": "Preflight the actual cart against tested channel capabilities and installed merchant requirements. Choose a supported direct checkout or a preserved storefront continuation, explain the remaining action and retain selections. Recheck after material cart changes. Mandatory validations still apply; unsupported external interfaces cannot be made to render a merchant extension.",
+    "mechanism": "Choosing a viable route before failure may preserve a purchase that would be lost during a broken checkout attempt.",
+    "overlap": "Shopify already documents continuation, escalation and preserved context, while its Google channel has explicit constraints. Correct native eligibility checks and fallback are the direct competitor.",
+    "edge": "Earn an advantage on a demonstrated merchant-specific cart requirement that current routing handles poorly; a capability manifest alone is insufficient.",
+    "evidence": "Hypothesis. Official Shopify documentation establishes available routes and limitations, not mismatch prevalence or additional purchases from this preflight.",
+    "experiment": "Randomize persistent AI-origin buyers with pre-treatment complex-cart eligibility before route selection. Compare preflight with correctly configured native routing and fallback. Include everyone assigned and deduplicate checkout retries. Measure any completed merchant purchase within seven days, followed through returns. Power from affected-cart traffic and allow a full buying cycle; monitor latency and purchases completed through other routes.",
+    "metric": "Purchasers per all assigned eligible buyers, with merchant-wide orders and after-return contribution. Route success is diagnostic; validation failures, lost customization and duplicate charges are guardrails.",
+    "dependency": "Supported integration access, merchant configuration visibility, tested capabilities, cart continuation and reliable server-side order joins.",
+    "falsifier": "Native fallback already recovers the carts, or extra preflight work loses as many completed purchases as it saves.",
+    "impactScenario": "Assume 10% of 5,000 monthly AI visits qualify and buy at 2.5%. An arbitrary 20% relative improvement adds 2.5 orders and £75 at £30 contribution after returns. Actual cart conversion must be measured; zero or negative effects remain possible.",
+    "valueScenario": "A £99 monthly test fee needs 3.3 additional orders before conformance testing and integration, or 9.9 at 3x value. These are required outcomes for an unvalidated offer, not a forecast or demonstrated willingness to pay.",
+    "implementation": "Start with one observed route mismatch and supported continuation path. Validate the selected cart after a merchant app update; keep preflight separate from post-error recovery.",
+    "costControl": "Cache versioned capability results and rerun conformance checks when relevant configuration changes, while retaining a cheap live cart check. Measure recurring recoverable losses before subscription pricing; a one-time native correction supports project pricing.",
+    "sources": [
+      {
+        "title": "Carts and checkout for agents",
+        "url": "https://shopify.dev/docs/agents/carts-and-checkout"
+      },
+      {
+        "title": "Selling on Google AI Mode and Gemini",
+        "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/google"
+      },
+      {
+        "title": "Checkout MCP server",
+        "url": "https://shopify.dev/docs/agents/carts-and-checkout/checkout-mcp"
+      }
+    ],
+    "candidateIds": [
+      "shopify-02",
+      "simprosys-09"
+    ]
+  },
+  {
+    "id": "I35",
+    "title": "Finish an ambiguous checkout exactly once",
+    "lens": "infrastructural",
+    "stage": "Checkout recovery",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "buyer": "A merchant or integrator whose payment and order systems sometimes disagree after a lost checkout response.",
+    "problem": "The buyer approved one purchase, but a timeout leaves its status uncertain. Support may find an existing order, or a genuinely incomplete purchase may never finish.",
+    "intervention": "Build a durable coordinator mapping one logical purchase to its idempotency key, payment status and order ID. Distinguish completed with a missing receipt, accepted and processing, and genuinely incomplete with a supported continuation.",
+    "mechanism": "Resolve genuinely incomplete transactions without asking the shopper to repeat payment. Discovering an already completed order faster creates no extra purchase; recovery speed is a separate benefit.",
+    "overlap": "UCP already specifies accepted completion and lost-response recovery. Stripe requires idempotent approval handling. Safe native recovery and competent manual reconciliation are the baseline.",
+    "edge": "Recover more eventual, nonduplicate purchases across a heterogeneous merchant stack than that baseline, without broadening the buyer's authorization.",
+    "evidence": "Hypothesized purchase effect. The UCP and Stripe contracts establish feasible recovery states, but provide no prevalence or incremental-order estimate for this merchant.",
+    "experiment": "Assign persistent buyers at their first eligible AI-origin arrival through the affected integration, before any failure. Compare the coordinator with safe native recovery, retaining every assignment. Use 30-day completed purchases as the primary outcome; 24-hour resolution is secondary. Inject faults only in a sandbox. Enroll to the required sample and mature later refunds.",
+    "metric": "Purchasers with one valid completed logical order per assigned buyer, deduplicated across payment and commerce IDs. Report later cancellations, returns, contribution and duplicate captures separately.",
+    "dependency": "Reliable status reads, stable idempotency mapping, concurrency control and permission limited to the original purchase are mandatory.",
+    "falsifier": "Reject the conversion claim if eventual purchases merely occur or become visible sooner, or if the useful-effect interval excludes enough extra orders to cover costs. Stop on duplicate charging.",
+    "impactScenario": "Chosen sensitivity, not forecast: 5,000 AI visits/month, 20% eligible, a 2.5% eligible purchase baseline and GBP30 contribution per completed order after returns. A chosen 10% relative increase gives 2.5 extra orders and GBP75. Zero and negative effects remain possible.",
+    "valueScenario": "An unvalidated GBP99 monthly fee needs 3.3 extra orders to break even or 9.9 for a 3x value-to-cost hurdle before other costs. Reconciliation engineering raises both requirements; willingness to pay is unknown.",
+    "implementation": "Start with one processor and commerce pair. Return missing receipts, observe processing orders, and continue genuinely incomplete purchases only when authoritative state permits. Never probe status with a new payment attempt.",
+    "costControl": "Reuse native state machines and bounded polling. Measure recurring defect incidence and maximum recoverable orders before charging a subscription; a one-time correction may justify only project work.",
+    "sources": [
+      {
+        "title": "Checkout Capability",
+        "url": "https://ucp.dev/specification/shopping/checkout/"
+      },
+      {
+        "title": "Manage your agentic commerce integration",
+        "url": "https://docs.stripe.com/agentic-commerce/for-sellers/manage"
+      },
+      {
+        "title": "Order Capability",
+        "url": "https://ucp.dev/specification/shopping/order/"
+      }
+    ],
+    "candidateIds": [
+      "infrastructure-04"
+    ]
+  },
+  {
+    "id": "I36",
+    "title": "Complete checkout decisions before the platform timeout",
+    "lens": "infrastructural",
+    "stage": "Checkout completion",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "buyer": "A checkout engineering team with measured approval-hook deadline misses on an approved agent integration.",
+    "problem": "The buyer is ready, but sequential dependency reads exceed the approval hook's deadline and cause an otherwise valid payment to be declined.",
+    "intervention": "Implement a deadline-aware hook executor: map dependency order, run independent reads concurrently, remove optional calls from the critical path and retain the authoritative final checks.",
+    "mechanism": "Return the same valid business decision before the platform abandons or declines checkout, allowing an existing purchase intention to complete.",
+    "overlap": "Stripe provides live hooks; Google supplies UCP latency logging. Performance tools already identify slow services. A competent, tuned native hook is the comparator.",
+    "edge": "Recover completed purchases by changing the backend decision path while preserving stock truth, security and pricing. Faster pages belong to I49.",
+    "evidence": "Hypothesized effect. Stripe documents four-second deadlines, feed fallback for the availability hook and checkout decline for an approval timeout. Those different failure modes must remain distinct.",
+    "experiment": "First shadow both paths to check decision parity. Then randomize buyers at eligible AI-origin entry before hook execution, keeping assignment across retries. Count all assigned buyers, including those who never reach checkout. Run across peak and ordinary periods to a powered sample, with a fixed purchase window and complete return follow-up.",
+    "metric": "Completed, nonduplicate purchases per assigned buyer. Reconcile refunds and contribution later; monitor oversells, wrong totals, fraud loss and decision disagreement. Hook latency and timeout rate explain results but cannot replace purchases.",
+    "dependency": "Merchant implementation control, bounded source freshness, supported fallback behavior and authoritative inventory and payment checks.",
+    "falsifier": "The new path misses the same deadlines, changes decisions incorrectly, or cannot deliver economically useful additional purchases against the tuned comparator. Lower latency alone fails the commercial test.",
+    "impactScenario": "Sensitivity only: of 5,000 monthly AI visits, choose 20% as eligible, with a 2.5% purchase baseline and GBP30 contribution after returns. A chosen 10% relative change adds 2.5 completed orders and GBP75. It could instead add none or lose orders.",
+    "valueScenario": "GBP99/month is an unvalidated test price: 3.3 extra orders cover the fee and 9.9 meet a 3x value-to-cost hurdle, with no other costs. Include infrastructure and implementation expense before setting a real price.",
+    "implementation": "Begin with one approval hook missing its four-second deadline. Set lower internal budgets and cache only explicitly valid facts. If required facts remain unavailable, follow the platform's documented failure behavior.",
+    "costControl": "Keep inexpensive request telemetry and sample detailed traces. Price recurring operation only against recurring recoverable timeout losses; a one-off native performance correction may justify project work.",
+    "sources": [
+      {
+        "title": "Manage your agentic commerce integration",
+        "url": "https://docs.stripe.com/agentic-commerce/for-sellers/manage"
+      },
+      {
+        "title": "Use BigQuery to store and analyze UCP events (optional)",
+        "url": "https://developers.google.com/merchant/ucp/guides/tools/bq-storage"
+      },
+      {
+        "title": "Frequently Asked Questions - Google Universal Commerce Protocol Guide",
+        "url": "https://developers.google.com/merchant/ucp/faq"
+      }
+    ],
+    "candidateIds": [
+      "infrastructure-05"
+    ]
+  },
+  {
+    "id": "I37",
+    "title": "Repair legacy basket mappings into approved checkout channels",
+    "lens": "infrastructural",
+    "stage": "Arrival and cart",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "buyer": "A complex-goods retailer moving baskets between a legacy system and an approved agent or browser checkout.",
+    "problem": "A legacy pack or measured quantity can map into a schema-valid but commercially wrong basket, causing rejection, an incorrect total or an unwanted order.",
+    "intervention": "Build a typed mapping for one documented legacy-to-channel defect. Preserve the merchant's pack meaning, units, scale, currency and fulfillment IDs, then read back the authoritative basket and reconcile differences with the buyer.",
+    "mechanism": "Carry the intended purchasable basket through a transition that currently loses its meaning, so buyers can finish with the correct quantity and total.",
+    "overlap": "Current UCP already defines quantity units, scale, increments, authoritative sale basis and visible conversions. Stripe ACS spans protocols; Shopify provides persistent carts and replacement semantics. These capabilities are established.",
+    "edge": "Beat a correct current UCP or Stripe ACS implementation on a demonstrated legacy mapping defect. Adding units or recoverable quantity errors already specified by UCP is insufficient.",
+    "evidence": "Hypothesized effect. The current UCP contract explicitly prohibits silent quantity conversion. The opportunity is merchant-specific failures beyond that contract, not a missing protocol feature.",
+    "experiment": "Reproduce the defect and difficult reference baskets in a sandbox. Randomize persistent buyers before their first eligible complex-basket transition to a competent native correction or the checked adapter. Retain all assigned buyers. Measure seven-day completed purchases and later returns; power from actual eligible volume and include an adapter migration where practical.",
+    "metric": "Buyers completing an accurately priced order for their confirmed quantity per assigned buyer. Report any-order completion alongside wrong-unit orders, refunds, overcharges and contribution.",
+    "dependency": "Documented legacy semantics, version-pinned approved channel access, reference merchant totals and a supported browser continuation for unrepresentable merchandise.",
+    "falsifier": "Correct native adapters already handle the observed cases, or checks add friction without extra accurate purchases. Any silent quantity change invalidates the claimed benefit.",
+    "impactScenario": "Chosen sensitivity: 5,000 AI visits/month, 10% eligible complex journeys, a 2.5% eligible purchase rate and GBP30 after-return contribution. A 10% relative increase would add 1.25 orders and GBP37.50. These are arithmetic assumptions; zero or negative impact is possible.",
+    "valueScenario": "An unvalidated GBP99 monthly fee needs 3.3 extra orders for break-even or 9.9 for a 3x value-to-cost hurdle before costs. Recurring pricing needs recurring defects; a one-off native correction supports a project fee.",
+    "implementation": "Start with one pack-versus-unit defect. Compare requested meaning with the merchant's returned sale basis and totals. Request confirmation for material changes; route unsupported merchandise through the permitted merchant handoff.",
+    "costControl": "Keep the adapter small, generate cases from real failures and reuse native representations. Publication ordering and concurrent cart edits are separate problems.",
+    "sources": [
+      {
+        "title": "Sell through agents",
+        "url": "https://docs.stripe.com/agentic-commerce/for-sellers"
+      },
+      {
+        "title": "Carts and checkout for agents",
+        "url": "https://shopify.dev/docs/agents/carts-and-checkout"
+      },
+      {
+        "title": "Overview - Google Universal Commerce Protocol Guide",
+        "url": "https://developers.google.com/merchant/ucp/guides/overview"
+      },
+      {
+        "title": "Checkout Capability - Universal Commerce Protocol",
+        "url": "https://ucp.dev/specification/shopping/checkout/"
+      }
+    ],
+    "candidateIds": [
+      "infrastructure-08",
+      "infrastructure-01",
+      "google-02",
+      "datafeedwatch-03"
+    ]
+  },
+  {
+    "id": "I38",
+    "title": "Repair false blocks of verified buyer-directed shopping agents",
+    "lens": "infrastructural",
+    "stage": "Access and discovery",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "buyer": "A merchant with verified buyer-directed agent requests falsely blocked by its own edge policy.",
+    "problem": "A legitimate partner can read one product route but encounter a challenge at a locale redirect or cart endpoint, ending the buyer's purchase attempt before arrival is logged.",
+    "intervention": "Trace the signed partner journey and repair the exact supported WAF rule or signature-policy configuration. Apply route-specific permissions, expiry and rate limits while preserving transaction authorization.",
+    "mechanism": "Restore a permitted route through product selection and checkout so previously blocked buyer intentions can become completed purchases.",
+    "overlap": "Cloudflare already verifies agent identity and supports merchant policies. Platform authentication already exists. The comparator is the merchant's competent, narrowly configured current policy.",
+    "edge": "Recover purchases at matched fraud and load limits by fixing a proven configuration error. A user-agent string never establishes identity, and a verified operator never supplies payment authority.",
+    "evidence": "Hypothesized. Cloudflare documents signed verification and currently warns that its verifier does not deduplicate nonces. Merchant replay protection remains necessary for writes.",
+    "experiment": "Assign verified partner shopping sessions at ingress before the WAF decision, using a partner-issued experiment key. Include blocked sessions and nonarrivals in both arms. If pre-ingress session assignment is unavailable, randomize independent merchants before exposure and allow propagation. Compare completed orders across a fixed window, followed by returns; never analyze only admitted visitors.",
+    "metric": "Completed orders per all assigned partner sessions, or per fixed merchant-period for cluster assignment. Report all-channel orders, refunds, contribution, unauthorized writes, fraud and infrastructure load. Without sufficient origin linkage, the AI-specific causal effect remains unidentified.",
+    "dependency": "Merchant edge control, supported partner verification, an assignment identifier available before blocking and separate buyer authorization.",
+    "falsifier": "No genuine false blocks are found, extra admission adds no orders, or fraud and load losses outweigh recovered contribution.",
+    "impactScenario": "Reference arithmetic only: 5,000 monthly AI visits at 2.5% purchase and GBP30 after-return contribution. The blocked opportunity count is unknown, so acquisition lift cannot be inferred from arrivals. A chosen five additional completed orders after displacement would yield GBP150; zero or losses are possible.",
+    "valueScenario": "GBP99/month is an unvalidated price, requiring 3.3 extra orders for break-even or 9.9 for a 3x value-to-cost hurdle before edge and support costs.",
+    "implementation": "Shadow-test genuine signed, expired and unauthorized requests on merchant endpoints, then deploy the smallest rule correction. Retain a normal buyer continuation.",
+    "costControl": "Use the existing verifier and affected routes only. A fixed configuration repair supports project pricing; recurring fees require recurring false blocks and measured native maintenance costs.",
+    "sources": [
+      {
+        "title": "Web Bot Auth",
+        "url": "https://developers.cloudflare.com/bots/reference/bot-verification/web-bot-auth/"
+      },
+      {
+        "title": "Verified bots",
+        "url": "https://developers.cloudflare.com/bots/concepts/bot/verified-bots/"
+      },
+      {
+        "title": "Frequently Asked Questions - Google Universal Commerce Protocol Guide",
+        "url": "https://developers.google.com/merchant/ucp/faq"
+      }
+    ],
+    "candidateIds": [
+      "infrastructure-10",
+      "identity-10"
+    ]
+  },
+  {
+    "id": "I39",
+    "title": "Keep newer offers from being overwritten by stale publications",
+    "lens": "infrastructural",
+    "stage": "Offer integrity",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "buyer": "A multichannel merchant whose competing feed writers produce measured stock or price regressions.",
+    "problem": "A later stock correction can be overwritten by an older import, leaving an available product hidden or presenting an offer checkout cannot honor.",
+    "intervention": "Create a merchant-controlled publication coordinator with source sequence numbers, coalesced changes and one active import per destination. Reconcile source truth, accepted destination state, observed display and checkout independently.",
+    "mechanism": "Keep valid offers available by preventing stale publications, then verify that restored availability creates additional completed purchases.",
+    "overlap": "Stripe ACS and OpenAI support catalog updates and live checks; managed feed tools already synchronize offers. The comparator is well-configured scheduling with native live validation.",
+    "edge": "Coordinate every merchant writer and repair harmful ordering failures that survive that competent baseline. Unlike I37, the changed state is a published offer, not a buyer's basket.",
+    "evidence": "Hypothesized purchase impact. Stripe explicitly says asynchronous feed imports need not finish in submission order. Accepted updates do not establish when an agent saw them or whether orders increased.",
+    "experiment": "Randomize merchants or genuinely independent inventory-and-substitution pools before publication changes. Preserve mandatory truth corrections in both arms. Use measured propagation wash-in and fixed cohort-period order counts, not conversion among resulting visitors. Run across several stock cycles with cluster-level power and later return reconciliation.",
+    "metric": "Completed orders across all assigned pools, with observed AI-origin orders reported separately. Include all-channel displacement, cancellations and contribution. The total effect can be identified while the AI-influenced component remains unknown if origin is missing.",
+    "dependency": "Control over every publisher, admitted destination APIs, authoritative stock events and usable status/readback semantics. Uncontrolled writers can invalidate the ordering guarantee.",
+    "falsifier": "Native scheduling already prevents the failures, publication differences never reach shoppers, or completed-order gains disappear after substitutions and cancellations.",
+    "impactScenario": "Chosen sensitivity: affected pools contain 20% of 5,000 pre-treatment monthly AI visits; at a 2.5% purchase baseline that is 25 orders. GBP30 contribution after returns makes five additional completed orders worth GBP150. This assumes a net gain, not shifted channel credit; zero or negative gains are possible.",
+    "valueScenario": "An unvalidated GBP99 monthly fee needs 3.3 additional orders for break-even or 9.9 for a 3x value-to-cost hurdle, before connector and operating costs.",
+    "implementation": "Begin with one destination and a recorded stale-overwrite case. Use documented activation and removal operations, bounded reconciliation and a visible exception when live state cannot be verified.",
+    "costControl": "Coalesce superseded events and use permitted readback. Price against recurring harmful writer conflicts; if one native scheduling fix resolves them permanently, charge for that project instead.",
+    "sources": [
+      {
+        "title": "Sell through agents",
+        "url": "https://docs.stripe.com/agentic-commerce/for-sellers"
+      },
+      {
+        "title": "Products - Agentic Commerce",
+        "url": "https://developers.openai.com/commerce/specs/api/products"
+      },
+      {
+        "title": "Manage your agentic commerce integration",
+        "url": "https://docs.stripe.com/agentic-commerce/for-sellers/manage"
+      }
+    ],
+    "candidateIds": [
+      "infrastructure-02",
+      "google-04"
+    ]
+  },
+  {
+    "id": "I40",
+    "title": "Hold inventory only when the buyer genuinely starts committing",
+    "lens": "temporal",
+    "stage": "Checkout completion",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "buyer": "A merchant with documented checkout stock races and a supported reservation engine.",
+    "problem": "Exploratory carts can hoard inventory, while waiting until payment can lose stock during an ordinary buyer review. Either policy can prevent purchases.",
+    "intervention": "Add a coordinator that acquires a real SKU/location hold only at explicit buyer commitment, carries its lease through the supported handoff, and releases it on completion, cancellation or expiry.",
+    "mechanism": "Protect a credible purchase attempt long enough to finish while returning abandoned stock promptly to other buyers.",
+    "overlap": "commercetools already supplies expiring cart and on-demand reservations, and merchants have native stock policies. The experiment must beat that existing machinery's best practical configuration.",
+    "edge": "Choose better hold timing for agent journeys. Giving the last unit to an AI visitor creates no additional order when another customer would have bought it.",
+    "evidence": "Hypothesized. Native documentation establishes reservations and expiry behavior, not incremental purchases from this timing policy.",
+    "experiment": "Randomize independent inventory pools or merchants before any holds, with equal prices and inventory budgets. Include every channel and all assigned pool-days, including periods without agent checkout. Run across replenishment cycles and the complete buying window, then mature cancellations and returns. Buyer-level randomization is unsuitable when arms compete for the same stock.",
+    "metric": "Total fulfilled completed orders and unique purchasers per assigned pool-period; report AI-origin orders separately, held-stock time, denied non-AI orders, refunds and contribution.",
+    "dependency": "Atomic supported reservations, shared inventory across channels, explicit buyer intent and reliable lease release. Additional total orders must be plausible through better availability over time, rather than reassignment of certain sellouts.",
+    "falsifier": "Gains for AI shoppers are offset by other buyers' losses, holds increase unavailable stock, or native timing already performs equally well at lower cost.",
+    "impactScenario": "Sensitivity only: affected pools receive a chosen 20% of 5,000 AI visits/month; a 2.5% baseline implies 25 AI-origin purchases. At GBP30 contribution after returns, five net additional fulfilled orders across all channels yield GBP150. Zero or negative net orders remain possible.",
+    "valueScenario": "GBP99/month is an unvalidated fee: 3.3 net extra orders cover it and 9.9 meet a 3x value-to-cost hurdle before reservation integration and carrying costs.",
+    "implementation": "Start with one replenished product family. Browsing and crawler reads create no holds. Show the actual expiry, cap renewal, and check the authoritative reservation before payment.",
+    "costControl": "Reuse native leases and event handlers; instrument failures rather than polling every cart. Reject policies that need excessive reserved capacity to show a conversion gain.",
+    "sources": [
+      {
+        "title": "Inventory overview",
+        "url": "https://docs.commercetools.com/api/inventory-overview"
+      },
+      {
+        "title": "Checkout Capability",
+        "url": "https://ucp.dev/specification/shopping/checkout/"
+      }
+    ],
+    "candidateIds": [
+      "infrastructure-03",
+      "peec-09",
+      "burnish-10",
+      "feedonomics-02",
+      "shopify-10",
+      "truefit-02",
+      "temporal-07"
+    ]
+  },
+  {
+    "id": "I41",
+    "title": "Honor a genuine quoted price through checkout",
+    "lens": "temporal",
+    "stage": "Offer integrity",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "buyer": "A merchant with verified abandonment between an authorized item-price quote and its redemption.",
+    "problem": "A genuine quoted offer expires or changes during an AI handoff, and the buyer must contact support to receive a price the merchant would already honor.",
+    "intervention": "Issue an expiring merchant-authorized price receipt bound to item, currency, quantity, quote version and terms. Redeem it through supported discounts or draft-order pricing after validation.",
+    "mechanism": "Remove the support detour for an eligible quote, allowing the same approved offer to become a completed purchase.",
+    "overlap": "Shopify already supports draft-order price locks and discounts. Native promotion scheduling, refreshed prices and a competent exception process form the comparator.",
+    "edge": "Preserve and redeem the actual shown quote across the handoff at the same discount budget. A timer, unsupported screenshot or new discount subsidy is not the advantage.",
+    "evidence": "Hypothesized purchase effect. Shopify documents price locks and warns that Smart Pricing experiments do not propagate their prices across sales channels. Neither establishes the frequency of recoverable quote disagreements.",
+    "experiment": "Assign buyers when a legitimate eligible quote is issued, before a discrepancy or support request. Compare automatic receipt redemption with the current lawful price-honor process at equal final-price eligibility. Keep all assigned buyers; measure seven-day completed purchases and later returns, allowing sufficient volume and a full promotion cycle.",
+    "metric": "Purchasers per assigned quote recipient, plus contribution after honored discounts, cancellations and returns. Track replay abuse and total merchant purchases to detect timing or channel substitution.",
+    "dependency": "Merchant authority to honor the quote, a cooperating distribution route and a supported redemption mechanism. Shipping and tax stay separate unless genuinely included.",
+    "falsifier": "Existing locks already solve the journey, extra purchases vanish when discount budgets match, or honoring quotes costs more than the resulting retained contribution.",
+    "impactScenario": "Chosen sensitivity, not forecast: 5,000 monthly AI visits, 10% eligible quote recipients, 2.5% purchase baseline and GBP30 contribution after returns. A 10% relative increase adds 1.25 completed orders and GBP37.50. Any price subsidy must be included; zero or negative value is possible.",
+    "valueScenario": "An unvalidated GBP99 monthly fee needs 3.3 extra orders to break even and 9.9 for a 3x value-to-cost hurdle before operational costs. Measure actual after-discount contribution before pricing.",
+    "implementation": "Pilot one offer family, validate receipts server-side and cap redemption to the original terms. Request buyer approval for material changes; use reviewed price-history facts for any savings claim.",
+    "costControl": "Reuse native pricing and one receipt validator. Avoid building a new promotion engine or manually reviewing every ordinary quote.",
+    "sources": [
+      {
+        "title": "Creating draft orders",
+        "url": "https://help.shopify.com/en/manual/fulfillment/managing-orders/create-orders/create-draft"
+      },
+      {
+        "title": "Create a pricing experiment in the Smart Pricing app",
+        "url": "https://help.shopify.com/en/manual/products/details/product-pricing/smart-pricing/create-experiment"
+      },
+      {
+        "title": "Carts and checkout for agents",
+        "url": "https://shopify.dev/docs/agents/carts-and-checkout"
+      }
+    ],
+    "candidateIds": [
+      "shopify-09",
+      "channable-07",
+      "regulatory-10"
+    ]
+  },
+  {
+    "id": "I42",
+    "title": "Quote the return terms and practical route for this exact purchase",
+    "lens": "regulatory",
+    "stage": "Trust and terms",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "buyer": "A bulky-goods merchant whose shoppers need a practical return route before deciding to buy.",
+    "problem": "A correct generic policy still leaves the customer unsure whether this exact item can be collected from their address, when, and at what cost.",
+    "intervention": "Build an item-and-location return evaluator that issues applicable terms and, where supported, a real collection quote. Save its version with the order and link the actual request route.",
+    "mechanism": "Resolve a concrete cost and logistics objection before purchase while giving the merchant an offer it can honor if a return is requested.",
+    "overlap": "Narvar already configures product/order policies, fees and collection methods; native assistants answer policy questions. Accurate policy Q&A and a configured returns provider are the baseline.",
+    "edge": "Provide a usable pre-purchase service commitment for the exact basket and destination. More readable policy markup alone adds little.",
+    "evidence": "Hypothesized. Narvar establishes existing functionality. Your Europe distinguishes statutory remedies, voluntary guarantees and withdrawal rules; applicability still needs merchant review in the chosen jurisdiction.",
+    "experiment": "Randomize buyers before the optional address/terms check, using a predeclared bulky-item AI-origin cohort. Compare the current accurate policy and existing services with the exact-purchase quote. Preserve required information in both arms. Count every assignment over a fixed buying window, then observe the full return period and costs.",
+    "metric": "Completed purchasers per assigned buyer, with retained orders, collection expenses, refunds and contribution reconciled later. Increased purchases that are fully returned do not establish retained value.",
+    "dependency": "Current carrier coverage, dimensions, product conditions, relevant dates and a merchant commitment to quoted terms. Statutory remedies, voluntary policy and optional convenience must remain distinct.",
+    "falsifier": "Quotes cannot be honored, reassurance merely attracts unprofitable returns, or a competent existing returns flow earns the same purchases more cheaply.",
+    "impactScenario": "Chosen sensitivity: 5,000 monthly AI visits, 20% eligible, a 2.5% purchase baseline and GBP30 contribution after returns. A chosen 10% relative increase gives 2.5 extra completed orders and GBP75 before any new service cost not already included. Zero or negative value is possible.",
+    "valueScenario": "GBP99/month is an unvalidated test fee, requiring 3.3 extra orders for break-even or 9.9 for a 3x value-to-cost hurdle when no other costs apply. Added collection costs raise the threshold.",
+    "implementation": "Start with one bulky category and collection partner. Evaluate the exact dates and exceptions, show quote expiry, and keep optional collection separate from free statutory remedies.",
+    "costControl": "Cache stable policy rules; query variable carrier prices only when needed. Gift-date return windows reuse the same evaluator.",
+    "sources": [
+      {
+        "title": "Narvar Return Overview",
+        "url": "https://support.narvar.com/hc/en-us/articles/11307520101651-Narvar-Return-Overview"
+      },
+      {
+        "title": "Your rights when shopping in the EU - Your Europe",
+        "url": "https://europa.eu/youreurope/citizens/consumers/shopping/shopping-consumer-rights/index_en.htm"
+      }
+    ],
+    "candidateIds": [
+      "regulatory-09",
+      "burnish-07",
+      "geoffy-06",
+      "simprosys-07",
+      "smartseo-05",
+      "google-08",
+      "temporal-05",
+      "constructor-09",
+      "searchpilot-08"
+    ]
+  },
+  {
+    "id": "I43",
+    "title": "Turn a known safety specification into an evidence-complete order",
+    "lens": "regulatory",
+    "stage": "Product qualification",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "buyer": "A specialist distributor serving buyers who already have an approved product safety specification.",
+    "problem": "A purchasing team must reconcile model numbers, standard versions and performance codes across documents before ordering, even when its required specification is settled.",
+    "intervention": "Build a deterministic matcher over distributor-reviewed manufacturer records. For each buyer-supplied requirement, return satisfied, contradicted or unestablished evidence, then attach the exact model and document versions to the proposed order.",
+    "mechanism": "Remove document ambiguity and avoidable expert-support delay so an already qualified purchasing requirement can become an accurate paid order.",
+    "overlap": "Manufacturers such as uvex already publish standards, sizes, performance codes and conformity documents. Competent distributor search and qualified staff can assemble the same evidence.",
+    "edge": "Preserve exact evidence-to-order continuity across supported brands and live inventory. Document extraction alone is a feature of existing product-data workflows.",
+    "evidence": "Hypothesized purchase effect. EU PPE rules and uvex product records establish an authoritative documentation baseline. They do not prove suitability for a particular workplace or this workflow's conversion benefit.",
+    "experiment": "Within one reviewed jurisdiction and product category, randomize purchasing accounts before their first eligible lookup. Compare the matcher with normal document access and qualified support. Keep required safety information and restrictions universal. Count all assigned accounts over a full procurement cycle, including those without matches, then follow returns and cancellations.",
+    "metric": "Completed purchasers per assigned account, with document-to-model mismatches as a stop guardrail. Report later retained orders and contribution; a match certifies neither the worksite requirement nor safety.",
+    "dependency": "A competent requirement owner, licensed current documents, explicit version relationships and expert escalation. The system must abstain when evidence cannot establish a requirement.",
+    "falsifier": "The competent existing workflow yields the same eventual purchases at lower cost, or any incorrect qualification makes the proposed automation unacceptable.",
+    "impactScenario": "Reference sensitivity only: 5,000 AI visits/month, a chosen 10% eligible population, 2.5% purchase baseline and GBP30 contribution after returns. A 10% relative increase gives 1.25 extra orders and GBP37.50. Actual account-cycle economics replace these assumptions; zero or negative value is possible.",
+    "valueScenario": "The unvalidated GBP99 monthly test fee requires 3.3 extra orders for break-even or 9.9 for a 3x value-to-cost hurdle before expert-review and integration costs.",
+    "implementation": "Pilot a small reviewed glove catalog and one approved requirement template. Validate exact article/model identity, retain evidence versions with the cart and require qualified resolution of unknowns.",
+    "costControl": "Use rules for approved evidence, with human review when documents change. Do not turn this into a general hazard-assessment or compliance-advice product.",
+    "sources": [
+      {
+        "title": "Regulation (EU) 2016/425 on personal protective equipment",
+        "url": "https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A32016R0425"
+      },
+      {
+        "title": "uvex unipur 6639 safety glove",
+        "url": "https://www.uvex-safety.com/en/products/safety-gloves/uvex-unipur-6639-safety-glove-6024806/"
+      }
+    ],
+    "candidateIds": [
+      "regulatory-04",
+      "profound-08",
+      "datafeedwatch-07"
+    ]
+  },
+  {
+    "id": "I44",
+    "title": "Make repairability resolve to a real service the buyer can use",
+    "lens": "regulatory",
+    "stage": "Trust and terms",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "buyer": "An electronics retailer with participating repairers and buyers who explicitly care about usable repair support.",
+    "problem": "A repairability score does not tell a buyer whether someone serving their location can repair this exact regional model or what a defined repair currently costs.",
+    "intervention": "Join the exact model's applicable repair information to a participating provider's current coverage, parts access, scoped quote and booking route. Display the quote's date and limitations beside the device offer.",
+    "mechanism": "Replace an unresolved longevity objection with a service the shopper can actually access, helping the device purchase proceed.",
+    "overlap": "EPREL already provides model-level repairability information. Samsung's UK service pages show existing repair estimates and booking options. These are substantial native and adjacent baselines.",
+    "edge": "Beat correct required labels and existing repair information by resolving the buyer's own service route before device purchase. Merely linking a repairability badge is insufficient.",
+    "evidence": "Hypothesized conversion effect. Commission and EPREL sources establish product information; Samsung demonstrates executable service routes in its market. None supplies purchase uplift for this proposed retailer integration.",
+    "experiment": "Choose one market and supported model family. Randomize AI-origin shoppers with declared longevity intent before showing either flow. Keep required labels and device prices equal. Count every assignment over the complete buying window, then observe device returns and any service subsidy. Power on this narrow cohort, not the entire catalog.",
+    "metric": "Completed device purchasers per assigned shopper, reconciled to retained orders and contribution after returns. A repair booking or paid service add-on is not an additional device purchaser.",
+    "dependency": "Accurate regional model identity, current provider coverage and quotes, merchant-reviewed applicable information and ownership of any service promise.",
+    "falsifier": "Shoppers cannot use the displayed repair route, the normal manufacturer route resolves the objection equally well, or added service costs erase extra purchase contribution.",
+    "impactScenario": "Chosen sensitivity: 5,000 monthly AI visits, 10% eligible, a 2.5% eligible purchase baseline and GBP30 contribution after returns. A chosen 10% relative increase adds 1.25 device orders and GBP37.50. Zero or negative impact is possible.",
+    "valueScenario": "GBP99/month is an unvalidated price. At GBP30 per extra order, 3.3 cover the fee and 9.9 meet a 3x value-to-cost hurdle before integration or service costs.",
+    "implementation": "Start with one defined repair and real provider availability. A current quote does not promise future parts, capacity or prices. Any future guarantee needs a funded provider commitment and its cost included; statutory rights stay separate.",
+    "costControl": "Reuse official model records and existing repair booking systems. Refresh volatile quotes only when a shopper requests a service route.",
+    "sources": [
+      {
+        "title": "Smartphones and Tablets - European Commission",
+        "url": "https://energy-efficient-products.ec.europa.eu/product-list/smartphones-and-tablets_en"
+      },
+      {
+        "title": "EPREL public smartphone and slate-tablet product record 2347994",
+        "url": "https://eprel.ec.europa.eu/screen/product/smartphonestablets20231669/2347994?navigatingfrom=qr"
+      },
+      {
+        "title": "Your rights when shopping in the EU - Your Europe",
+        "url": "https://europa.eu/youreurope/citizens/consumers/shopping/shopping-consumer-rights/index_en.htm"
+      },
+      {
+        "title": "How much will it cost to repair my phone screen? - Samsung UK",
+        "url": "https://www.samsung.com/uk/support/mobile-devices/how-much-will-it-cost-to-repair-my-phone-screen/"
+      }
+    ],
+    "candidateIds": [
+      "regulatory-05"
+    ]
+  },
+  {
+    "id": "I45",
+    "title": "Verify that the buyer can actually use the refill or take-back program",
+    "lens": "regulatory",
+    "stage": "Offer qualification",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "buyer": "A brand with an operating refill or take-back service and customers who want to participate.",
+    "problem": "A supported reuse claim can still leave a buyer unable to obtain the right refill or return the packaging from their location.",
+    "intervention": "Build an optional serviceability check using exact refill compatibility, delivery coverage, collection routes, deposit rules and accepted condition. Present the serviceable starter order with the applicable terms.",
+    "mechanism": "Resolve whether the reuse program will work for this buyer before the first purchase, avoiding a practical objection that a general claim cannot answer.",
+    "overlap": "Provenance already validates scoped claims and distributes them to retailers and AI discovery channels. Evidence badges and claims ledgers are established capabilities.",
+    "edge": "Connect the buyer's actual location and product to an operating service and purchasable refill. The advantage requires functional program access beyond truthful claim presentation.",
+    "evidence": "Hypothesized. Provenance documents claim evidence and scope; current Commission guidance establishes relevant environmental-claim constraints. Neither proves purchase uplift for the proposed serviceability flow.",
+    "experiment": "Randomize eligible AI-origin shoppers before they choose whether to check their location. Compare the current truthful claim and normal checkout with the optional check. Keep prices, required information and subscription choice equal. Include all assigned shoppers, including unsupported addresses. Follow completed first purchases through returns and record refill behavior separately at 90 days.",
+    "metric": "First completed purchasers per assigned shopper, later retained contribution, failed deposits and unusable collection requests. Refill orders are a secondary repeat-purchase outcome; starter and refill lines never count as two converted people.",
+    "dependency": "A functioning service, maintained compatibility and locality data, actual deposit settlement and merchant-reviewed claims for the chosen jurisdiction. Location checking needs no compelled marketing consent.",
+    "falsifier": "Coverage is too sparse, the normal ordering path already answers these questions, or higher first purchases lead to unresolved deposits and unprofitable returns.",
+    "impactScenario": "Chosen sensitivity, not forecast: 5,000 AI visits/month, 20% eligible, a 2.5% purchase baseline and GBP30 after-return contribution. A chosen 10% relative increase adds 2.5 orders and GBP75. Collection subsidies may reduce that value; zero and negative outcomes remain possible.",
+    "valueScenario": "The unvalidated GBP99 monthly fee needs 3.3 additional orders for break-even or 9.9 for a 3x value-to-cost hurdle before operating costs. There is no observed willingness-to-pay claim.",
+    "implementation": "Pilot one starter/refill pair and one collection network. Show narrow supported claims and the real route; program availability does not establish whole-product environmental superiority.",
+    "costControl": "Reuse partner coverage tables and existing claims evidence. Refresh changes centrally instead of rechecking every stable locality on every visit.",
+    "sources": [
+      {
+        "title": "The proof behind product claims - Provenance",
+        "url": "https://www.provenance.org/"
+      },
+      {
+        "title": "Understanding the evidence requirements - Provenance",
+        "url": "https://knowledge.provenance.org/ensure-you-meet-the-evidence-requirements"
+      },
+      {
+        "title": "Sustainable consumption - European Commission",
+        "url": "https://commission.europa.eu/topics/consumers/consumer-rights-and-complaints/sustainable-consumption_en"
+      }
+    ],
+    "candidateIds": [
+      "regulatory-06"
+    ]
+  },
+  {
+    "id": "I46",
+    "title": "Make the entire handoff and extension step accessible",
+    "lens": "regulatory",
+    "stage": "Checkout completion",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "buyer": "A merchant and extension provider with an observed accessibility failure in the purchase handoff.",
+    "problem": "The cart survives, but a variant selector, validation error or authentication step loses entered information or focus, stopping a keyboard or screen-reader user's purchase.",
+    "intervention": "Repair the exact integrated journey with semantic controls, preserved entries, announced errors and predictable focus. Include a resumable assistance route and validate the whole purchase task with consenting assistive-technology users.",
+    "mechanism": "Let shoppers finish an intended purchase across the merchant and extension boundary without repeating steps or losing the state they need.",
+    "overlap": "Native checkouts already cover many accessible controls, and Deque offers automated, guided and manual testing. Shopify documents that its WebMCP tools do not cover app-defined checkout extension interactions.",
+    "edge": "Fix a reproducible end-to-end task failure beyond an accessible native base checkout and a competently tested extension. An automated accessibility score is not the product outcome.",
+    "evidence": "Hypothesized purchase effect. Shopify establishes a specific integration boundary; WCAG supplies complete-process engineering criteria. Neither an audit nor this proposal guarantees legal compliance.",
+    "experiment": "Correct required or blocking defects for everyone first. Compare two usable baseline routes, randomizing before the extension step to the existing accessible flow or improved state-preserving transition. Predeclare a consenting assistive-technology cohort without inferring disability. Retain every assignment, measure completed purchases across the buying window and mature later returns; sparse cohorts may need several merchants.",
+    "metric": "Completed purchasers per assigned shopper, with subgroup uncertainty, retained contribution and task abandonment reported separately. Authentication remains intact; successful scripted clicks are only diagnostics.",
+    "dependency": "Cooperating provider, deployment access, real assistive-technology testing and merchant review of the applicable requirements.",
+    "falsifier": "The native and current extension flow already completes the task equally well, or the new handoff adds no economically useful purchases after adequate testing.",
+    "impactScenario": "Sensitivity only: 5,000 monthly AI visits, a chosen 5% eligible cohort, 2.5% purchase baseline and GBP30 contribution after returns. A 10% relative increase adds 0.625 completed orders and GBP18.75. That small cohort could also see zero or negative change.",
+    "valueScenario": "An unvalidated GBP99 monthly fee requires 3.3 extra orders for break-even or 9.9 for a 3x value-to-cost hurdle before implementation and human-testing costs. Accessibility duties are not contingent on this sales calculation.",
+    "implementation": "Begin with one failing selector or validation transition. Test keyboard, screen-reader and ordinary purchase paths through confirmation, with preserved state on recoverable errors.",
+    "costControl": "Reuse native semantic controls and shared provider fixes. Automated checks catch regressions; targeted human task sessions verify the difficult boundary.",
+    "sources": [
+      {
+        "title": "Carts and checkout for agents - Shopify",
+        "url": "https://shopify.dev/docs/agents/carts-and-checkout"
+      },
+      {
+        "title": "Digital accessibility in retail and ecommerce - Deque",
+        "url": "https://www.deque.com/retail-ecommerce-accessibility/"
+      },
+      {
+        "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+        "url": "https://www.w3.org/TR/WCAG22/"
+      }
+    ],
+    "candidateIds": [
+      "regulatory-07",
+      "tinyseo-04"
+    ]
+  },
+  {
+    "id": "I47",
+    "title": "Test a small real assortment against unmet shopping requirements",
+    "lens": "algorithmic",
+    "stage": "Demand fulfilment",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "buyer": "A retailer with verified unsatisfied shopping needs, supplier access and authority for a bounded inventory pilot.",
+    "problem": "Some buyers cannot find a product because the assortment genuinely lacks their required combination of attributes. Better retrieval cannot sell stock that does not exist.",
+    "intervention": "Deduplicate failed human shopping requests, verify the supply gap against the real catalog, and select a small buy of actual supplier SKUs under a fixed working-capital budget.",
+    "mechanism": "Put a previously missing, suitable product into saleable inventory so unmet purchase intentions can become additional orders.",
+    "overlap": "Google Merchant Center already suggests popular products to stock; established assortment methods account for substitution. Competent buyers and allocation software form the comparator.",
+    "edge": "Use verified requirement-level gaps to improve one buying decision beyond popularity and existing forecasts. Synthetic prompts are not evidence of customer demand.",
+    "evidence": "Hypothesized. Google's assortment tooling and published joint assortment/inventory research establish a strong baseline, but do not validate this input signal or its purchase effect.",
+    "experiment": "Randomize matched, independently stocked market-category cells before any pilot buy. Give both selection policies equal working capital and marketing support. Include every assigned cell over a full replenishment and selling cycle, then mature returns. Count total affected-catalog orders, including displaced existing SKUs; do not condition analysis on shoppers who arrive after new stock appears.",
+    "metric": "Completed purchasers and orders per assigned cell-period, with contribution, unsold inventory, carrying costs and write-downs. Report observed AI-origin outcomes separately; the AI-influenced causal component may remain unidentified.",
+    "dependency": "Real deduplicated demand, reliable retrieval diagnostics, purchasable supplier stock and enough independent inventory cells. Pilot only one stock actuator: a small assortment buy.",
+    "falsifier": "The apparent gap was a retrieval defect, the normal buyer selects equal or better stock, or new-SKU sales merely displace existing orders and leave costly leftovers.",
+    "impactScenario": "Chosen sensitivity: affected cells receive 20% of 5,000 pre-treatment monthly AI visits, with a 2.5% purchase baseline. At GBP30 contribution after returns, five net additional completed orders yield GBP150 before new carrying and write-down costs. Zero or negative net value is possible.",
+    "valueScenario": "An unvalidated GBP99 monthly fee needs 3.3 extra orders for break-even or 9.9 for a 3x value-to-cost hurdle before other costs. Stock risk makes the true threshold higher; no demand or willingness-to-pay estimate is asserted.",
+    "implementation": "Choose one repeated missing requirement and a few supplier SKUs. Record buyer approval, inventory cost, delivery dates and treatment availability before the selling period.",
+    "costControl": "Cap quantities and exposure, reuse normal purchasing systems and stop replenishing a failed pilot. Judge value across the portfolio rather than celebrating the new SKU's sales.",
+    "sources": [
+      {
+        "title": "About popular products in Merchant Center Analytics",
+        "url": "https://support.google.com/merchants/answer/13299535?hl=en-IE"
+      },
+      {
+        "title": "Joint assortment and inventory planning for heavy tailed demand",
+        "url": "https://www.amazon.science/publications/joint-assortment-and-inventory-planning-for-heavy-tailed-demand"
+      }
+    ],
+    "candidateIds": [
+      "algorithmic-06",
+      "geoffy-08"
+    ]
+  },
+  {
+    "id": "I48",
+    "title": "Match the intended use date to a fulfilable usable-life promise",
+    "lens": "temporal",
+    "stage": "Fulfilment qualification",
+    "priority": "Conditional bet",
+    "horizon": "integration-heavy",
+    "buyer": "A perishable-goods merchant able to honor batch allocation or a minimum remaining-life promise.",
+    "problem": "A product can arrive on time yet be unsuitable for the customer's intended use date. A general freshness claim leaves that uncertainty unresolved.",
+    "intervention": "Match the shopper's declared use date to an allocatable batch or enforceable minimum-life promise, then carry the condition into the fulfillment instruction and final allocation check.",
+    "mechanism": "Offer a basket the buyer can use when intended, reducing uncertainty that an arrival-date estimate cannot settle.",
+    "overlap": "Ocado already publishes a Fresh+ minimum-life promise tied to delivery. Accurate life labels and a well-run existing freshness commitment are the comparator.",
+    "edge": "Resolve a specific future use date and honor the resulting condition through picking. Another freshness badge or unsupported shelf-life calculation is insufficient.",
+    "evidence": "Hypothesized. Ocado's terms establish a real incumbent commitment; official food guidance distinguishes use-by safety dates from best-before quality dates. Neither provides an AI purchase uplift estimate.",
+    "experiment": "Randomize independently stocked delivery pools before either qualification flow is exposed, with equal inventory budgets. Retain every assigned pool-period and count all-channel orders, since preferential allocation of fresher stock can harm other buyers. Record the predeclared AI-origin/date-intent cohort separately. Enroll across replenishment cycles and mature refunds; power at pool level.",
+    "metric": "Fulfilled completed orders per assigned pool-period, alongside kept orders, waste, unmet-life promises and contribution. Report observed AI-origin results without claiming unobserved AI influence.",
+    "dependency": "User-supplied dates, appropriate storage conditions, reliable batch data or an enforceable promise, and a picker workflow that honors it.",
+    "falsifier": "Fulfillment cannot meet the condition, the existing minimum-life promise already resolves the objection, or gains come at the cost of other orders and excess waste.",
+    "impactScenario": "Sensitivity only: eligible pools receive a chosen 20% of 5,000 monthly AI visits, with a 2.5% purchase baseline. Five net additional completed orders at GBP30 contribution after returns yield GBP150 before additional waste or fulfillment costs. The assumptions are not forecasts; zero or losses remain possible.",
+    "valueScenario": "GBP99/month is an unvalidated fee. It needs 3.3 net extra orders for break-even or 9.9 for a 3x value-to-cost hurdle before other costs.",
+    "implementation": "Pilot one dated category. Respect the product's actual dates and storage instructions; never extend them. If allocation fails, obtain approval for a truthful alternative or cancel under the existing process.",
+    "costControl": "Use warehouse batch events and existing picking rules. Query detailed allocation only for date-constrained purchases; measure waste rather than hiding it in a conversion rate.",
+    "sources": [
+      {
+        "title": "Understanding food labelling: Best before and use-by dates",
+        "url": "https://www.gov.uk/understanding-food-labelling/best-before-and-use-by-dates"
+      },
+      {
+        "title": "T&Cs: Purchase (Consumer and Business Customers)",
+        "url": "https://www.ocado.com/content/terms-conditions-purchase-consumer"
+      }
+    ],
+    "candidateIds": [
+      "temporal-06"
+    ]
+  },
+  {
+    "id": "I49",
+    "title": "Make the cold AI referral page ready for an actual purchase",
+    "lens": "infrastructural",
+    "stage": "Arrival and cart",
+    "priority": "Develop next",
+    "horizon": "now",
+    "buyer": "A merchant with measured slow AI-referral entry paths and control over its theme and apps.",
+    "problem": "An external referral opens an uncached product page where the correct image, variant selector or add-to-cart is not ready. Faster later navigation cannot rescue that first attempt.",
+    "intervention": "Optimize the exact cold entry path: deliver the necessary product image and semantic controls early, defer nonessential scripts and keep variant selection and cart submission functional.",
+    "mechanism": "Give the referred shopper a usable purchase path before delay or interface failure causes abandonment.",
+    "overlap": "Smart SEO already optimizes images and offers navigation preloading; speed apps and native theme tuning are mature. Shopify Rollouts can test supported theme changes.",
+    "edge": "Choose and validate changes through cold-entry purchase outcomes per engineering budget, against a competent speed app and tuned native theme.",
+    "evidence": "Adjacent measured evidence exists in the Google/Vodafone landing-page case, but its paid traffic and 2021 baseline cannot predict AI-referral results. The proposed merchant effect remains unknown.",
+    "experiment": "Randomize persistent buyers at their first AI-origin arrival on predeclared affected routes, before page rendering. Compare visually and functionally equivalent theme versions, stratifying on known source and device. Keep every assignment, including script failures. Measure seven-day purchases, then later returns; determine duration from actual cohort volume and include ordinary and peak traffic.",
+    "metric": "Completed purchasers per assigned buyer, with contribution after cancellations and returns. Field loading times, usable variant controls, image adequacy and accessibility explain the mechanism; lab scores and add-to-cart alone cannot establish success.",
+    "dependency": "Theme/app access, reliable assignment before rendering, server-side order joins and representative mobile field measurements.",
+    "falsifier": "The tuned existing stack delivers equal purchases for less engineering cost, speed gains do not reach the cold path, or deferred code breaks buyer decisions.",
+    "impactScenario": "Chosen sensitivity: 5,000 AI visits/month, 50% on eligible routes, a 2.5% purchase baseline and GBP30 contribution after returns. A chosen 10% relative increase adds 6.25 completed orders and GBP187.50. This is arithmetic, not an expected lift; zero or negative change remains possible.",
+    "valueScenario": "An unvalidated GBP99 monthly fee needs 3.3 extra orders to break even or 9.9 for a 3x value-to-cost hurdle before engineering and hosting costs. A one-off fix may warrant project pricing.",
+    "implementation": "Start with one product template and its incoming variant URL. Check a cold mobile load through order confirmation, preserve image detail, and roll back errors using the platform's supported theme experiment.",
+    "costControl": "Use a small performance budget and sampled field traces. Reuse native deployment tooling; add recurring monitoring only where app changes repeatedly reintroduce measured defects.",
+    "sources": [
+      {
+        "title": "Page speed | Sherpas Design Help Center",
+        "url": "https://intercom.help/sherpas-design/en/articles/10602873-page-speed"
+      },
+      {
+        "title": "Vodafone: A 31% improvement in LCP increased sales by 8% | web.dev",
+        "url": "https://web.dev/case-studies/vodafone"
+      },
+      {
+        "title": "Shopify Help Center | Types of rollouts and changes",
+        "url": "https://help.shopify.com/en/manual/markets/rollouts/rollout-types"
+      }
+    ],
+    "candidateIds": [
+      "smartseo-08",
+      "tinyseo-01",
+      "tinyseo-02"
+    ]
+  },
+  {
+    "id": "I50",
+    "title": "Make simulation earn a role in choosing purchase-producing changes",
+    "lens": "measurement",
+    "stage": "Experiment selection",
+    "priority": "Develop next",
+    "horizon": "integration-heavy",
+    "buyer": "An agency or experimentation team with enough merchant trials and permission to reconcile orders and returns.",
+    "problem": "A simulator can prefer an edited result without production engines retrieving it or real customers buying. Selecting work from that score may waste the release budget.",
+    "intervention": "Build a registry pairing frozen replay predictions with independently randomized merchant purchase effects. Train and validate an intervention-selection policy on held-out merchants, intent families and future periods, allowing it to abstain.",
+    "mechanism": "The policy creates value only by choosing deployable changes that produce more real purchases within the same total budget.",
+    "overlap": "Shopify SimGym simulates shoppers, Rollouts runs live tests, and Lily Max advertises testing and approved deployment. Experienced operators using these tools and simple defect rules are strong comparators.",
+    "edge": "Show prospectively that adding simulation improves the selection policy's cumulative purchase outcome beyond that competent workflow. Simulation plus an A/B dashboard is already established.",
+    "evidence": "Purchase impact is hypothesized. SimGym explicitly warns that simulated and actual behavior can differ. Public function tools permit controlled replay, but cannot reproduce proprietary consumer retrieval, ranking, memory or checkout.",
+    "experiment": "Randomize independent merchant portfolios before selection to the simulation-informed policy or rules/experienced operators at equal total compute, labor, implementation and testing budgets. Both arms run properly assigned live tests. Include nulls, harms and a random exploration sample. Count every assigned portfolio across a fixed deployment and buying horizon, then reconcile returns.",
+    "metric": "Total completed purchases per assigned portfolio-period and contribution after returns, including all channels and test-period losses. AI-attributed purchases are separate; upstream changes can increase attribution share without increasing portfolio purchases. Analyze at the policy-assignment level.",
+    "dependency": "Enough independent real trials and portfolios, deployable interventions, order/refund permission, stable outcome definitions and untouched validation data. Fifty model reruns of one intent are not fifty independent buyers.",
+    "falsifier": "Held-out predictions add no useful selection information, or the policy fails to create more real purchases than rules or operators at equal budget. A better simulation score cannot rescue it.",
+    "impactScenario": "Reference sensitivity only: choose all 5,000 monthly AI visits as eligible, a 2.5% purchase baseline and GBP30 contribution after returns. Five additional completed portfolio orders would yield GBP150. Acquisition opportunities and actual eligibility remain unmeasured; zero or negative policy gains are possible.",
+    "valueScenario": "An unvalidated GBP99 monthly fee requires 3.3 extra orders for break-even or 9.9 for a 3x value-to-cost hurdle before delivery costs. A portfolio study will often cost much more.",
+    "implementation": "Start with one deployable intervention family. Freeze tool payloads and model versions, treat rank swaps as sensitivity tests, and validate selected releases against actual orders.",
+    "costControl": "Reuse retrieval fixtures and bound simulation runs. Require purchase noninferiority before claiming a cheaper selection process.",
+    "sources": [
+      {
+        "title": "Shopify Help Center | SimGym",
+        "url": "https://help.shopify.com/en/manual/online-store/simgym"
+      },
+      {
+        "title": "Shopify Help Center | Types of rollouts and changes",
+        "url": "https://help.shopify.com/en/manual/markets/rollouts/rollout-types"
+      },
+      {
+        "title": "How Lily Max Works | Agentic Product Intelligence",
+        "url": "https://www.lily.ai/how-it-works/"
+      },
+      {
+        "title": "External Validity: From Do-Calculus to Transportability Across Populations",
+        "url": "https://arxiv.org/abs/1503.01603"
+      },
+      {
+        "title": "Function calling",
+        "url": "https://developers.openai.com/api/docs/guides/function-calling"
+      }
+    ],
+    "candidateIds": [
+      "measurement-01",
+      "profound-01",
+      "peec-01",
+      "scrunch-08",
+      "burnish-01",
+      "burnish-02",
+      "geoffy-10",
+      "datafeedwatch-01",
+      "feedonomics-01",
+      "simprosys-10",
+      "smartseo-10",
+      "tinyseo-09",
+      "shopify-01",
+      "google-01",
+      "lilyai-10",
+      "truefit-10",
+      "algorithmic-08",
+      "temporal-10",
+      "measurement-02",
+      "measurement-03",
+      "measurement-04",
+      "measurement-05",
+      "measurement-06",
+      "measurement-07",
+      "measurement-08",
+      "measurement-09",
+      "measurement-10",
+      "constructor-07",
+      "searchpilot-01",
+      "searchpilot-02",
+      "searchpilot-03",
+      "searchpilot-09",
+      "searchpilot-10"
+    ]
+  }
+]

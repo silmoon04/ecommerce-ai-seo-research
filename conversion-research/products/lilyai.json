@@ -1,0 +1,673 @@
+{
+  "id": "lilyai",
+  "name": "Lily AI / Lily Max",
+  "benchmarkType": "vertical",
+  "winningEvidence": [
+    "A relevant vertical benchmark because Lily connects consumer-language product data to search, recommendations, merchandising and demand planning. Its current Lily Max offer also includes controlled optimization. This establishes competitive scope, not company profitability.",
+    "Vendor-reported thredUP split-test sell-through gains and conversion claims support testing richer retrieval inputs in resale; publication omits sample counts, duration and confidence intervals.",
+    "The Certona case reports +0.65% revenue per visit and explicitly unchanged orders and conversion. Its $20-30M incremental-demand number is a projection, not proof of additional purchase events.",
+    "A 26-day paid-shopping case reports +7.3% revenue per product per day and a separate +4.7% difference-in-differences estimate. Neither estimates the effect of this proposed product or causal AI-shopping conversion."
+  ],
+  "currentOffer": "Verified 2026-09-29: product intelligence for retailers, brands, performance marketers and feed teams, especially fashion, footwear, beauty and home. Lily Max enriches catalog records and runs controlled optimization across Google Ads, Meta Ads, AI discovery and retailer-owned commerce. Pricing is a custom quote by catalog, use cases, markets and channel/spend scope; no public currency-denominated rate verified. The homepage advertises a free 30-day trial on 500 products; eligibility and contract terms require checking.",
+  "conversionMechanism": "Customer-language attributes can make genuinely suitable products retrievable, support accurate filtering, explain relevant differences and supply recommendation inputs. They only produce additional purchases when a previously lost shopper finds a suitable, available, affordable item and completes checkout. Larger baskets, faster setup, forecast improvements, recommendation visibility and extra product views are separate outcomes. Cross-channel spillovers and substitution can make SKU sales gains exceed merchant-wide incremental orders.",
+  "harness": {
+    "offlineSimulation": "not_found",
+    "liveMonitoring": "documented",
+    "randomizedExperiment": "unclear",
+    "purchaseMeasurement": "documented",
+    "details": "Reviewed current platform, onsite, AI-discovery, pricing and FAQ pages; the controlled-test guide; and cases dated 2023-2026 or undated on the current site. Lily documents controlled A/B tests, matched product groups, spend controls, holdouts, DiD and purchase/revenue reporting. Split-test and conversion-lift language establishes testing, but the reviewed public pages do not expose random-assignment records or enough details to verify every named case as a randomized experiment. AI recommendation analysis and revenue tracking are advertised; prompt panels, coverage, cadence and attribution completeness remain unspecified. No public frozen-tool replay or shopper-agent simulator documentation was found in this search; that is not proof of absence. Public controlled paid/site results do not establish a causal live-ChatGPT purchase lift."
+  },
+  "strengths": [
+    "An established consumer-language taxonomy with dated first-party claims about expert curation, synonyms, styles and occasions.",
+    "Existing integrations use enriched records inside search and recommendation systems; replacing the retailer's search engine is unnecessary.",
+    "Documents behavior-derived intent, changing shopper terminology and demand forecasting, so these are existing capabilities to benchmark.",
+    "Current controlled optimization and human approval materially overlap a generic enrichment-test-deploy proposal.",
+    "Named thredUP and A.L.C. cases plus detailed anonymous examples give commercially relevant evidence with explicit measurement limits."
+  ],
+  "limits": [
+    "Vendor-authored outcomes are not independently audited. Most reviewed case pages lack sample size, interval bounds, assignment procedure and a merchant-wide substitution analysis.",
+    "The demand-forecasting revenue range is projected. A.L.C.'s large net-sales percentage mixes historical progress and recent testing without enough published design detail for a causal estimate.",
+    "Revenue, revenue per visit, order size, sell-through, order count, model recommendation frequency and contribution profit must not be interchanged.",
+    "Style similarity and consumer language do not establish physical measurements, fabric composition, waterproofing, care requirements or fit for a particular person.",
+    "Lily's August 2026 attribute guide says dimensions lack a native field and that Google's full conversational field names are unpublished; current Google documentation contradicts those statements. Verify platform facts with the platform owner.",
+    "Catalog enrichment cannot force proprietary search retrieval, model ranking, personalization or checkout selection. Lily itself disclaims guaranteed AI placement."
+  ],
+  "improve": [
+    "Require evidence for literal constraints and represent unknown separately from false before optimizing persuasive language.",
+    "Target a specific lost-purchase mechanism, such as unavailable variants or unresolved fit, and compare against an already enriched catalog.",
+    "Connect offline diagnoses to prospective shopper experiments with kept purchase endpoints; measure whether simulation predicts lift on unseen merchants.",
+    "Track total merchant orders and contribution after returns so basket expansion and product substitution cannot masquerade as added purchase events.",
+    "Acquire the small set of missing manufacturer facts that blocks valuable intents, using observed demand to allocate verification effort."
+  ],
+  "ideas": [
+    {
+      "id": "lilyai-01",
+      "title": "Make explicit exclusions survive product retrieval",
+      "lens": "algorithmic",
+      "buyer": "Apparel search and ecommerce teams receiving descriptive queries from AI-origin visitors or their own shopping assistant.",
+      "problem": "A query such as straight-leg black trousers, not tapered can retrieve visually similar items that violate the shopper's exclusion. More synonyms can expand this error.",
+      "mechanism": "Discovery and selection: preserve the shopper's hard exclusions, retrieve only supported matches, and keep unknowns visibly separate. Fewer false candidates can prevent abandonment and lead to additional kept purchases.",
+      "intervention": "Compile explicit positive and negative requirements into typed constraints with true, false and unknown evidence states. Apply them to variant records, then rank acceptable candidates by stated soft preferences. Show why an item qualified; allow the shopper to relax a constraint explicitly.",
+      "competitorOverlap": "Lily already supplies consumer-language attributes and search inputs. The proposed difference is enforceable exclusion semantics and audited unknown handling, not more tags.",
+      "edgeHypothesis": "Constraint preservation will improve purchases in exclusion-heavy queries after ordinary enrichment has already improved recall.",
+      "dataNeeded": [
+        "Pre-assignment queries and explicit exclusions",
+        "Manufacturer-backed category attributes and variant identifiers",
+        "Search exposures, inventory and completed orders",
+        "Returns and cancellation outcomes",
+        "Pre-assignment source or assistant exposure, with unknown origin preserved"
+      ],
+      "experiment": "Randomize shoppers on their first qualifying query, keep assignment across visits, and compare against the same enriched catalog with ordinary semantic retrieval. Primary endpoint: a paid order placed within seven days and retained through the merchant return window. Enroll for at least four weeks; size from baseline and minimum worthwhile effect, then allow outcome maturation. Guardrails: overall conversion, zero-results, relevance audits, latency and false qualification.",
+      "metric": "Retained paid purchasers divided by all randomized eligible shoppers, intention-to-treat; also report total merchant orders to detect substitution. AI-origin eligibility must be observed before assignment. Report observed external-AI handoffs and merchant-owned assistant traffic as separate strata; unknown origins stay unknown.",
+      "impactEvidence": "Hypothesized. Adjacent vendor case lily-luxury reports retrieval and conversion gains from enrichment, not the incremental effect of exclusion handling.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen placeholders: 30,000 eligible shoppers/month, 2% retained-purchase rate, USD 30 contribution per extra retained order; USD 900 monthly fee.",
+        "calculation": "Baseline is 600 retained purchasers. Break-even requires 900/30 = 30 additional retained orders, or 30/30,000 = 0.001 absolute rate increase (0.10 percentage points), before integration costs.",
+        "range": "No empirical lift range. The effect may be zero or negative if unknown handling removes acceptable choices."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: USD 900/month; require measured incremental contribution above the fee and implementation cost.",
+      "costControl": "Parse only queries with explicit constraints; cache category rules and rerank a bounded candidate set.",
+      "feasibility": "now",
+      "dependencies": [
+        "Merchant-controlled search or assistant",
+        "Reliable evidence fields",
+        "Persistent experiment assignment",
+        "Order and return joins"
+      ],
+      "failureMode": "Overly strict filtering suppresses valid products when data is incomplete or language is ambiguous.",
+      "falsifier": "A powered test finds no worthwhile purchase improvement, or gains disappear once identical retrieval coverage is supplied to the comparator.",
+      "sourceIds": [
+        "lily-onsite",
+        "lily-taxonomy",
+        "lily-luxury"
+      ]
+    },
+    {
+      "id": "lilyai-02",
+      "title": "Resolve fit doubt with verified garment evidence",
+      "lens": "algorithmic",
+      "buyer": "Fashion merchants losing shoppers over leg opening, inseam, rise, sleeve length or size-specific fit.",
+      "problem": "Aesthetic labels such as relaxed or straight-leg do not answer a shopper's physical fit requirements. A photograph cannot establish an item's measurements.",
+      "mechanism": "Selection: combine factual garment measurements with optional shopper-supplied reference-garment dimensions or fit preferences. Reducing unresolved fit uncertainty can create kept purchases rather than speculative multi-size orders.",
+      "intervention": "Build a variant-level fit evidence service with units, measurement method, source and tolerance. Compare requested dimensions to verified item specs; show uncertainty and ask for the missing measurement when needed. Learn from consented keep/return outcomes without treating purchase behavior as a physical measurement.",
+      "competitorOverlap": "True Fit already uses purchase/return evidence and size guidance; Lily supplies fit attributes. Compete on auditable garment-constraint evidence and explicit abstention, or integrate existing fit services.",
+      "edgeHypothesis": "Exact, source-backed fit answers add value in high-constraint categories where generic size recommendations leave the buying question unresolved.",
+      "dataNeeded": [
+        "Maker or measured garment specifications by size",
+        "Opt-in reference-garment dimensions or preferences",
+        "True size/variant inventory",
+        "Kept orders, exchanges and reason-coded returns",
+        "Pre-assignment source or assistant exposure, with unknown origin preserved"
+      ],
+      "experiment": "Randomize eligible shoppers before fit guidance is displayed; compare existing size charts and any installed fit tool against the added evidence service. Primary endpoint: purchase within seven days retained after the applicable return window. Enroll four to eight weeks, depending on power, and wait for returns. Guardrails: fit returns, multi-size bracketing, accessibility, latency and measurement error.",
+      "metric": "Retained purchasers/all assigned fit-eligible shoppers; distinguish measured dimensions, inferred fit probability and shopper-stated preference. Do not use only tool interactors as denominator. Report observed external-AI handoffs and merchant-owned assistant traffic as separate strata; unknown origins stay unknown.",
+      "impactEvidence": "Hypothesized incremental effect. truefit-data and truefit-fit establish existing adjacent workflows, not this feature's lift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen placeholders: 20,000 eligible shoppers/month, 3% retained-purchase rate, USD 50 contribution/order; USD 1,500 fee.",
+        "calculation": "Baseline is 600 retained purchasers. Fee-only break-even is 1,500/50 = 30 extra retained orders, equivalent to 0.15 percentage points; specification acquisition costs raise the threshold.",
+        "range": "No empirical range. Incorrect measurements can produce negative purchase and return outcomes."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: USD 1,500/month plus explicitly scoped measurement acquisition.",
+      "costControl": "Start with categories and measurements named repeatedly in failed searches; obtain a maker specification once per variant family and verify reuse rules.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Manufacturer or warehouse measurement access",
+        "Size and variant normalization",
+        "Consent and deletion controls",
+        "Returns integration"
+      ],
+      "failureMode": "Measurements are inconsistent, shoppers measure reference garments differently, or evidence adds effort without resolving fit.",
+      "falsifier": "The feature increases checkout orders but not retained purchasers, or cannot outperform the merchant's installed fit service on the targeted constraint cohort.",
+      "sourceIds": [
+        "truefit-data",
+        "truefit-fit",
+        "google-dimensions",
+        "lily-attributes"
+      ]
+    },
+    {
+      "id": "lilyai-03",
+      "title": "Recover sold-out AI landings with valid substitutes",
+      "lens": "infrastructural",
+      "buyer": "Retailers whose AI-referred shoppers reach unavailable sizes, colors or one-of-a-kind resale items.",
+      "problem": "An assistant may recommend a product that is unavailable when the shopper arrives; visually similar substitutes often break the original requirements.",
+      "mechanism": "Landing and checkout: preserve the required attributes of the missing item, verify alternatives are purchasable now, and move the shopper to a valid variant before the journey ends.",
+      "intervention": "Add an availability-triggered recovery service that reads explicit carried requirements or lets shoppers select must-haves. Rank alternatives by constraint satisfaction, actual variant stock and delivered cost. Resolve the exact variant link and revalidate at cart creation; use stock holds only where the merchant already supports them.",
+      "competitorOverlap": "Lily enriches recommendation inputs; True Fit advertises available-size filtering, and Stylitics has inventory-aware recommendations. Exact requirement-preserving recovery at a stale AI landing is the narrower hypothesis.",
+      "edgeHypothesis": "A valid replacement at the moment of stock failure will recover more purchase events than generic related products.",
+      "dataNeeded": [
+        "Requested product/variant and pre-existing requirements",
+        "Low-latency stock and price",
+        "Substitute compatibility rules",
+        "Observed AI entry source or signed handoff",
+        "Orders, cancellations and returns",
+        "Pre-assignment source or assistant exposure, with unknown origin preserved"
+      ],
+      "experiment": "Randomize shoppers at the first verified unavailable landing; compare the existing stockout page and recommendation module with valid-substitute recovery. Primary endpoint: any retained merchant purchase within seven days. Run at least four weeks plus returns, with power determined by eligible stockout traffic. Guardrails: false availability, substitutions that violate must-haves, cancellation and full-store conversion.",
+      "metric": "Retained purchasers/all assigned unavailable-landing shoppers. Count merchant-wide orders, not just suggested substitutes, so diversion from another purchase is not called recovery. Report observed external-AI handoffs and merchant-owned assistant traffic as separate strata; unknown origins stay unknown.",
+      "impactEvidence": "Hypothesized. thredUP's single-SKU context establishes relevance of perishable inventory; no reviewed source measures this recovery intervention.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen placeholders: 10,000 stockout visitors/month, 1% retained-purchase rate, USD 30 contribution/order; USD 600 fee.",
+        "calculation": "Baseline is 100 retained purchasers. Fee-only break-even requires 20 more orders, equivalent to a 0.20 percentage-point absolute improvement.",
+        "range": "No empirical range. Effects can be zero or negative if replacements disappoint or distract shoppers who would buy elsewhere on the same site."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: USD 600/month; price against verified recovered contribution.",
+      "costControl": "Run only on genuine availability failures; cache stable substitute relations and refresh transactional fields separately.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Stock API",
+        "Variant deep links",
+        "Cart revalidation",
+        "Requirement capture"
+      ],
+      "failureMode": "Stock updates arrive late or the substitute preserves appearance while losing a critical physical or functional property.",
+      "falsifier": "Suggested-item orders rise without a lift in total retained merchant purchasers.",
+      "sourceIds": [
+        "lily-thredup",
+        "truefit-home",
+        "stylitics-outfits",
+        "google-conversational"
+      ]
+    },
+    {
+      "id": "lilyai-04",
+      "title": "Build an outfit that can actually arrive together",
+      "lens": "psychological",
+      "buyer": "Fashion merchants serving event-based shopping journeys from AI assistants.",
+      "problem": "A shopper can like an outfit yet abandon because one required piece is unavailable, the total exceeds budget, or deliveries miss the event.",
+      "mechanism": "Selection and checkout: turn a collection of attractive items into a feasible purchase plan. A complete, affordable, timely outfit can convert shoppers who otherwise cannot assemble a workable set.",
+      "intervention": "Offer a constraint solver for a shopper-declared occasion, total budget, needed-by date and optional already-owned pieces. Validate every recommended size, delivery estimate and combined cost. Explain tradeoffs, allow individual swaps, and recheck the whole set before cart creation.",
+      "competitorOverlap": "Stylitics already offers styling, shoppable outfits, live inventory and testing. The proposed edge is whole-outfit feasibility against explicit budget, owned pieces and delivery constraints.",
+      "edgeHypothesis": "Joint feasibility will lift purchase incidence for event shoppers beyond the basket-size effects of ordinary outfit recommendations.",
+      "dataNeeded": [
+        "Explicit occasion and deadline",
+        "Optional shopper-entered owned items",
+        "Size availability and delivery quotes",
+        "Stylist-approved compatibility rules",
+        "Orders, delivery and returns",
+        "Pre-assignment source or assistant exposure, with unknown origin preserved"
+      ],
+      "experiment": "Randomize event-intent shoppers before presentation; compare against the merchant's existing outfitting experience with the same candidate pool. Primary endpoint: retained purchase within seven days, with on-time receipt for declared deadlines. Enroll four to eight weeks and complete delivery/return follow-up. Guardrails: total cost, missed deadlines, partial cancellations, purchase incidence and margin.",
+      "metric": "Retained purchasers/all assigned event-intent shoppers; report complete-outfit fulfillment separately from units per order and AOV. Report observed external-AI handoffs and merchant-owned assistant traffic as separate strata; unknown origins stay unknown.",
+      "impactEvidence": "Hypothesized. Stylitics documents adjacent outfitting. lily-certona demonstrates why higher basket value cannot be assumed to mean more orders.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen placeholders: 8,000 event shoppers/month, 4% retained-purchase rate, USD 60 contribution per extra order; USD 1,200 fee.",
+        "calculation": "Baseline is 320 purchasers. Fee-only break-even requires 20 extra retained orders or 0.25 percentage points; basket expansion is excluded from this purchase-count case.",
+        "range": "No empirical range. Stricter feasibility or higher combined prices can reduce purchases."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: USD 1,200/month; require purchase-incidence evidence before charging for claimed conversion gains.",
+      "costControl": "Precompute style-compatible sets, then solve transactional constraints only for shopper-requested combinations.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Inventory and delivery services",
+        "Composable cart",
+        "Explicit shopper context",
+        "Styling quality review"
+      ],
+      "failureMode": "Delivery promises are unreliable, outfit constraints are overrestrictive, or the experience produces only higher spend among existing buyers.",
+      "falsifier": "AOV rises but retained purchase incidence does not, or deadline failures offset extra purchases.",
+      "sourceIds": [
+        "stylitics-outfits",
+        "lily-certona"
+      ]
+    },
+    {
+      "id": "lilyai-05",
+      "title": "Ask one question only when it changes the shortlist",
+      "lens": "behavioral",
+      "buyer": "Retailers with ambiguous natural-language searches and high conversational abandonment.",
+      "problem": "Queries such as a lighter jacket leave several interpretations; assistants either guess or turn shopping into a long interview.",
+      "mechanism": "Understanding and selection: a single useful clarification can remove the ambiguity that blocks a good purchase, while avoiding unnecessary conversation.",
+      "intervention": "Estimate how candidate eligibility changes under plausible answers, then ask the one optional question with the largest expected decision value. Show useful provisional results immediately. Learn the question policy from randomized purchase outcomes, not dialogue length or answer rate.",
+      "competitorOverlap": "Lily documents session-based intent and behavior-derived language; True Fit asks for context when helpful. Purchase-optimized question selection requires validation beyond generic personalization.",
+      "edgeHypothesis": "An information-value policy creates more purchases than either immediate guessing or a fixed questionnaire.",
+      "dataNeeded": [
+        "Pre-treatment ambiguous query clusters",
+        "Candidate attributes and uncertainty",
+        "Optional answers",
+        "Question exposure and abandonment",
+        "Purchase and return outcomes",
+        "Pre-assignment source or assistant exposure, with unknown origin preserved"
+      ],
+      "experiment": "Randomize shoppers among immediate results, a fixed question, and the optional selected question; keep product candidates, prices and stock comparable. Primary endpoint: retained purchase within seven days. Run at least four weeks with multiplicity-aware power for three arms and return maturation. Guardrails: time to results, abandonment, accessibility and sensitive-question exclusions.",
+      "metric": "Retained purchasers/all assigned ambiguous-query shoppers; unanswered questions stay in the assigned denominator. Report observed external-AI handoffs and merchant-owned assistant traffic as separate strata; unknown origins stay unknown.",
+      "impactEvidence": "Hypothesized. lily-behavior and truefit-home support adjacent capabilities, not a measured value-of-information effect.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen placeholders: 25,000 eligible shoppers/month, 2% retained-purchase rate, USD 30 contribution/order; USD 600 fee.",
+        "calculation": "Baseline is 500 purchasers. Fee-only break-even requires 20 extra purchases or 0.08 percentage points.",
+        "range": "No empirical range. Question friction may outweigh relevance gains and lower conversion."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: USD 600/month, conditional on an intention-to-treat purchase result.",
+      "costControl": "Ask only in known ambiguous clusters; precompute branch differences and cap the flow at one optional question.",
+      "feasibility": "now",
+      "dependencies": [
+        "Merchant-controlled assistant/search UI",
+        "Query uncertainty model",
+        "Fast candidate retrieval",
+        "Persistent assignment"
+      ],
+      "failureMode": "The policy asks questions that change model confidence but do not change shopper decisions.",
+      "falsifier": "Answer rate or satisfaction rises without additional retained purchases, or the fixed-question comparator performs equally well.",
+      "sourceIds": [
+        "lily-behavior",
+        "truefit-home",
+        "lily-winter"
+      ]
+    },
+    {
+      "id": "lilyai-06",
+      "title": "Carry the shopper's chosen requirements into checkout",
+      "lens": "identity",
+      "buyer": "Retailers and shopping-assistant partners with measurable handoff traffic.",
+      "problem": "The shopper explains a need in an assistant, then lands on a generic page and must repeat size, budget, exclusions and chosen variants.",
+      "mechanism": "Landing and checkout: retain explicitly chosen task context across an authorized handoff so the shopper sees the right variant and consistent tradeoffs with less repeated work.",
+      "intervention": "Create an opt-in, expiring intent token containing only approved shopping constraints and product references. Show an editable summary at the merchant; validate variants and offers before cart use. Provide revoke/delete controls and a context-free path. Do not infer protected traits or join unrelated browsing identities.",
+      "competitorOverlap": "Lily advertises AI-ready feeds and pages; True Fit provides returning-shopper guidance. The proposed capability is user-controlled task continuity across cooperating assistant and merchant, not covert profiling.",
+      "edgeHypothesis": "Preserving a shopping task will reduce handoff loss for visitors who already completed meaningful comparison work.",
+      "dataNeeded": [
+        "Explicitly approved task context",
+        "Signed source and product/variant references",
+        "Consent/expiry records",
+        "Handoff, cart and paid-order events",
+        "Minimal experiment identifiers",
+        "Pre-assignment source or assistant exposure, with unknown origin preserved"
+      ],
+      "experiment": "Randomize eligible users before the handoff invitation: standard deep link versus optional context transfer. Primary endpoint: retained merchant purchase within seven days of handoff. Compare all invited users, not only those accepting transfer. Enroll four to eight weeks, size for eligible traffic, and mature returns. Guardrails: consent comprehension, context errors, latency and deletion success.",
+      "metric": "Retained purchasers/all randomized eligible handoff users. Signed partner context verifies this origin cohort; missing referrals remain unknown rather than attributed to AI. Report observed external-AI handoffs and merchant-owned assistant traffic as separate strata; unknown origins stay unknown.",
+      "impactEvidence": "Hypothesized. No reviewed Lily source establishes cross-assistant consented requirement portability or its purchase lift; absence of documentation is not proof of missing capability.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen placeholders: 10,000 eligible handoffs/month, 3% retained-purchase rate, USD 30 contribution/order; USD 750 fee.",
+        "calculation": "Baseline is 300 purchasers. Fee-only break-even requires 25 added orders, a 0.25 percentage-point absolute increase.",
+        "range": "No empirical range. Consent friction or stale task context can cause negative effects."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: USD 750/month per integrated merchant, plus separately scoped partner integration.",
+      "costControl": "Transfer a small structured token; avoid copying entire conversations or rebuilding a permanent shopper profile.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Assistant partnership or merchant-owned assistant",
+        "Consent UX",
+        "Token signing and expiry",
+        "Variant resolution",
+        "Order measurement"
+      ],
+      "failureMode": "Platforms do not support the handoff, shoppers reject it, or stale requirements preselect the wrong item.",
+      "falsifier": "Purchase gains vanish when the comparator receives an equally accurate variant deep link, showing context transfer adds no value.",
+      "sourceIds": [
+        "lily-ai-discovery",
+        "truefit-home",
+        "openai-functions"
+      ]
+    },
+    {
+      "id": "lilyai-07",
+      "title": "Move stock toward verified unmet shopping intents",
+      "lens": "temporal",
+      "buyer": "Multi-location retailers with inventory stranded away from observed AI/search demand.",
+      "problem": "Search data can reveal suitable products that cannot be purchased locally or delivered in time. Better wording cannot fix that supply constraint.",
+      "mechanism": "Availability: distinguish no-demand products from products whose sales are censored by missing stock, then move suitable inventory to where shoppers can buy it. Purchases require the transfer to finish while demand remains.",
+      "intervention": "Join qualified failed searches with variant stock, service regions, delivery cutoffs and transfer lead times. Recommend reversible inventory transfers or small replenishment tests for supported demand clusters. Require merchant operational approval and preserve donor-location availability.",
+      "competitorOverlap": "Lily already documents visual-similarity demand forecasting; its dollar outcome is projected. This proposal closes the loop from observed unmet intent to fulfilled orders and measures net gains across donor and receiving locations.",
+      "edgeHypothesis": "Demand-constrained stock movement will add more purchases than enrichment-only work for merchants with sufficient inventory imbalance.",
+      "dataNeeded": [
+        "Deduplicated qualified failed searches",
+        "Variant stock by location",
+        "Demand seasonality and baseline forecast",
+        "Transfer cost and lead time",
+        "Donor and recipient purchases, returns and markdowns",
+        "Pre-assignment source or assistant exposure, with unknown origin preserved"
+      ],
+      "experiment": "Randomize matched location-category inventory pools to existing allocation or intent-informed transfer recommendations, with the same working-capital limit. Primary endpoint: additional retained paid orders from observed AI-origin shoppers across the entire donor/recipient pool; total pool orders provide the substitution guardrail. Run a full replenishment cycle, usually eight to twelve weeks plus returns; power by independent pools. Guardrails: donor stockouts, cancellations, delivery, markdowns and contribution.",
+      "metric": "Total retained orders per randomized inventory pool and per eligible demand opportunity; report cluster-adjusted treatment effect, not recipient-only sales. Report observed external-AI handoffs and merchant-owned assistant traffic as separate strata; unknown origins stay unknown.",
+      "impactEvidence": "Hypothesized. lily-demand supports adjacent forecasting capability and explicitly projected revenue; no measured transfer-policy effect is established.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen placeholders: 100,000 qualified opportunities/month, 2% retained-purchase rate, USD 25 contribution/order before transfer costs; USD 3,000 fee and USD 2,000 added transfer expense.",
+        "calculation": "Baseline is 2,000 purchasers. Break-even requires (3,000+2,000)/25 = 200 extra retained orders across donor and recipient pools, equivalent to 0.20 percentage points; working capital and markdown costs can raise this.",
+        "range": "No empirical range. Net orders can fall if transfer latency or donor shortages dominate."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: USD 3,000/month for a controlled allocation pilot; require net contribution after operational costs.",
+      "costControl": "Recommend moves only where estimated lead time precedes observed demand expiry and existing stock can satisfy the request.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "OMS/WMS integration",
+        "Merchant operations approval",
+        "Inventory-pool experiments",
+        "Cost accounting",
+        "Reliable demand qualification"
+      ],
+      "failureMode": "Searches are aspirational, demand changes before stock arrives, or transfers merely relocate purchases.",
+      "falsifier": "Receiving stores sell more but pooled retained orders or contribution do not improve.",
+      "sourceIds": [
+        "lily-demand",
+        "lily-winter",
+        "lily-thredup"
+      ]
+    },
+    {
+      "id": "lilyai-08",
+      "title": "Buy the missing fact that is blocking purchases",
+      "lens": "infrastructural",
+      "buyer": "Catalog operations teams with more missing facts than they can afford to verify.",
+      "problem": "Completeness scores treat a missing decorative tag like a missing dimension that repeatedly prevents a buying decision.",
+      "mechanism": "Discovery and selection, enabled by evidence acquisition: resolve factual gaps associated with real qualified demand, publish the verified answer, and make an otherwise uncertain product purchasable. Cheaper verification matters only if it releases more conversion-generating work.",
+      "intervention": "Rank unresolved product questions by observed qualified demand, plausible inventory coverage and verification cost. Request maker documentation or a physical measurement for the smallest decisive fact; record provenance and publish the supported result through current fields. Keep unsupported materials, dimensions and performance claims unknown.",
+      "competitorOverlap": "Lily already detects and prioritizes catalog gaps. The proposed edge is a purchase-tested procurement queue for missing ground truth, not another generated enrichment score.",
+      "edgeHypothesis": "A fixed verification budget allocated to decision-blocking facts will produce more retained purchases than allocating it to generic catalog completeness.",
+      "dataNeeded": [
+        "Failed searches and unanswered product questions",
+        "Evidence provenance and acquisition prices",
+        "Catalog inventory and margin",
+        "Current platform field specifications",
+        "Cluster-level orders and returns",
+        "Pre-assignment source or assistant exposure, with unknown origin preserved"
+      ],
+      "experiment": "Randomize independent merchant-category clusters to demand-prioritized or completeness-prioritized evidence collection at equal labor and cash budgets, with the same factual quality threshold. Primary endpoint: incremental retained purchases across each cluster, using a concurrent shopper holdout where feasible. Run eight to twelve weeks plus returns; account for cluster count, indexing delay and spillovers. Guardrails: factual accuracy, total catalog orders and budget.",
+      "metric": "Incremental retained purchases per equal verification budget and per eligible cluster shopper; separately report verified answers and engineer hours as process measures. Report observed external-AI handoffs and merchant-owned assistant traffic as separate strata; unknown origins stay unknown.",
+      "impactEvidence": "Hypothesized. lily-attributes and google-dimensions demonstrate why source-backed field handling matters; neither quantifies this allocation policy's conversion effect.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen placeholders: 50,000 eligible shoppers/month, 2% retained-purchase rate, USD 30 contribution/order; USD 1,000 fee and USD 500 incremental verification cost.",
+        "calculation": "Baseline is 1,000 purchasers. Break-even requires 1,500/30 = 50 extra retained orders or 0.10 percentage points. Any verification expense shared with the comparator should be excluded from incremental cost.",
+        "range": "No empirical range. Resolving truthful gaps may reveal unsuitable products and initially reduce their sales."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: USD 1,000/month, with pass-through verification costs disclosed.",
+      "costControl": "Reuse approved manufacturer evidence within valid product families; stop work when the demand-adjusted value is below the cost of acquiring the fact.",
+      "feasibility": "now",
+      "dependencies": [
+        "Query and support-question access",
+        "Supplier or measurement workflow",
+        "Provenance store",
+        "Current feed/schema mapping",
+        "Experiment clusters"
+      ],
+      "failureMode": "The ranking mistakes curiosity for purchase intent or buys facts that existing pages already answer adequately.",
+      "falsifier": "Verified-field coverage improves but the fixed-budget program produces no more retained purchases than completeness-led work.",
+      "sourceIds": [
+        "lily-attributes",
+        "google-dimensions",
+        "google-qa",
+        "lily-how"
+      ]
+    },
+    {
+      "id": "lilyai-09",
+      "title": "Show the tradeoff that decides between two products",
+      "lens": "psychological",
+      "buyer": "Retailers whose shoppers compare near-identical products before abandoning.",
+      "problem": "Long attribute lists do not identify which difference matters to the shopper's stated task.",
+      "mechanism": "Selection: present a short, factual comparison of the differences that affect a shopper's requirements. Clear tradeoffs can resolve indecision and produce a purchase without pushing a predetermined winner.",
+      "intervention": "Generate a comparison card for an explicitly selected pair or shortlist. Separate must-have compliance from preference differences, include verified unknowns and total price, and explain which requirement would change the choice. Use the same evidence in the merchant assistant and landing page.",
+      "competitorOverlap": "Lily documents comparison readiness and structured product data. The proposal tests task-specific tradeoff explanations against a fully populated standard comparison table.",
+      "edgeHypothesis": "A brief explanation of decisive differences will outperform adding more descriptive content among shoppers already comparing suitable products.",
+      "dataNeeded": [
+        "Shopper-selected items and stated criteria",
+        "Verified attributes and prices",
+        "Comparison exposures",
+        "Completed and retained orders",
+        "Complaint and return reasons",
+        "Pre-assignment source or assistant exposure, with unknown origin preserved"
+      ],
+      "experiment": "Randomize comparison-eligible shoppers before showing either a conventional attribute table or the task-specific card, with identical products, prices and factual coverage. Primary endpoint: retained purchase within seven days. Enroll at least four weeks with power determined in advance, then mature returns. Guardrails: comprehension errors, abandonment, product diversity and evidence accuracy.",
+      "metric": "Retained purchasers/all assigned comparison-eligible shoppers; total merchant orders rather than clicks on the recommended option. Report observed external-AI handoffs and merchant-owned assistant traffic as separate strata; unknown origins stay unknown.",
+      "impactEvidence": "Hypothesized. The sources establish product comparison inputs, not a measured effect of this explanation design.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen placeholders: 10,000 comparison shoppers/month, 3% retained-purchase rate, USD 30 contribution/order; USD 600 fee.",
+        "calculation": "Baseline is 300 purchasers. Fee-only break-even requires 20 extra retained orders, equivalent to 0.20 percentage points.",
+        "range": "No empirical range. Explanations can overload shoppers or surface real drawbacks and lower immediate conversion."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: USD 600/month for a defined comparison cohort.",
+      "costControl": "Compute pairwise factual differences once; generate only the short task-specific explanation at request time.",
+      "feasibility": "now",
+      "dependencies": [
+        "Comparison UI or assistant",
+        "Verified product evidence",
+        "Explicit criteria",
+        "Experiment and order events"
+      ],
+      "failureMode": "The assistant invents a difference, hides uncertainty or uses framing that steers shoppers away from their own priorities.",
+      "falsifier": "The same complete facts in a plain comparison table perform equally well, or return-adjusted outcomes erase the purchase gain.",
+      "sourceIds": [
+        "lily-ai-discovery",
+        "lily-attributes",
+        "google-qa"
+      ]
+    },
+    {
+      "id": "lilyai-10",
+      "title": "Learn when a simulated shopper result transfers to purchases",
+      "lens": "measurement",
+      "buyer": "Agencies and retail experimentation teams choosing which AI-discovery interventions deserve live traffic.",
+      "problem": "A controllable product-search replay can make model recommendations move without changing real consumer discovery or purchases.",
+      "mechanism": "An enabling measurement system improves purchases only if it allocates a fixed live-testing budget to interventions that create more incremental orders than the existing selection process.",
+      "intervention": "Store paired offline diagnoses and controlled live purchase effects with intervention, merchant, intent cluster, model/version and source-state metadata. Fit a conservative transfer model on prior experiments, validate on unseen merchants, and refuse a purchase forecast outside supported domains. Preserve separate replay, live-monitoring, merchant-experiment and order ledgers.",
+      "competitorOverlap": "Lily Max already offers controlled optimization; this proposal's edge is prospective validation of whether an offline proxy helps choose live purchase interventions. Public replay documentation was not found.",
+      "edgeHypothesis": "A calibrated, abstaining simulation filter will outperform generic AI scores or expert-only triage at equal live-test and deployment cost.",
+      "dataNeeded": [
+        "Frozen retrieved products and tool outputs",
+        "Diverse independent real-intent clusters",
+        "Model/version and treatment receipts",
+        "Prospective merchant randomization and purchase outcomes",
+        "Return-adjusted contribution and test costs",
+        "Pre-assignment source or assistant exposure, with unknown origin preserved"
+      ],
+      "experiment": "First train on completed experiments and freeze the selection rule. Prospectively randomize independent merchant/category portfolios to calibrated triage or current expert triage at equal total budget; each selected intervention must retain its own randomized shopper holdout. Primary endpoint: summed incremental retained purchases across portfolios. Run at least eight to twelve weeks plus returns, extending for enough independent portfolios; use nested uncertainty and control multiple selection. Guardrails: factual errors, negative deployments and latency.",
+      "metric": "Incremental retained purchases per portfolio and per equal total experiment budget, derived from live controls. Replay recommendation frequency and live AI visibility remain diagnostics; repeated samples of one prompt are not independent shoppers. Report observed external-AI handoffs and merchant-owned assistant traffic as separate strata; unknown origins stay unknown.",
+      "impactEvidence": "Hypothesized. openai-functions supports controlled application tool outputs; lily-method and lily-apparel establish adjacent live testing, not simulation-to-purchase validity.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen placeholders: 100,000 eligible portfolio shoppers/month, 2% retained-purchase rate, USD 40 contribution/order; USD 2,000 incremental monthly calibration cost, with other program spending held equal.",
+        "calculation": "Baseline is 2,000 purchasers. Calibration must create 2,000/40 = 50 additional retained orders beyond expert triage, or 0.05 percentage points, to cover its incremental cost.",
+        "range": "No empirical range. Transfer may be zero or negative; overfitting can systematically fund the wrong live changes."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: USD 2,000/month for a multi-merchant validation program; charge for an auditable experiment service before any forecast accuracy is established.",
+      "costControl": "Use replay to reject factual or constraint failures cheaply; do not spend repeated model calls on an intervention whose human-purchase transfer is unvalidated.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "Multiple consenting merchants",
+        "Live experimentation access",
+        "Unseen-merchant validation",
+        "Order and return joins",
+        "Sufficient independent experiments"
+      ],
+      "failureMode": "A model learns the experiment corpus, the platform changes, or proxy gains reflect artificial rank manipulation.",
+      "falsifier": "Prospective held-out portfolios show no better purchase yield per budget than expert triage, or effect signs fail to transfer reliably.",
+      "sourceIds": [
+        "openai-functions",
+        "lily-method",
+        "lily-apparel",
+        "lily-ai-discovery"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "lily-home",
+      "title": "Lily AI: Agentic Product Intelligence for AI Commerce",
+      "url": "https://www.lily.ai/",
+      "type": "official-doc",
+      "claim": "Current Lily Max positioning, trial advertisement, multi-channel scope and reported headline outcomes. Marketing claims are not independent validation."
+    },
+    {
+      "id": "lily-pricing",
+      "title": "Pricing that scales with your catalog and ad spend | Lily AI",
+      "url": "https://www.lily.ai/pricing",
+      "type": "official-doc",
+      "claim": "Custom quote variables and advertised testing inclusion; no public currency-denominated rate verified on 2026-09-29."
+    },
+    {
+      "id": "lily-how",
+      "title": "How Lily Max Works | Agentic Product Intelligence",
+      "url": "https://www.lily.ai/how-it-works",
+      "type": "official-doc",
+      "claim": "Gap detection, hypotheses, matched experiments, DiD, human approval and deployment are already advertised."
+    },
+    {
+      "id": "lily-onsite",
+      "title": "Onsite Search & PDP Optimization | Lily Max",
+      "url": "https://www.lily.ai/onsite",
+      "type": "official-doc",
+      "claim": "Search, facets, recommendations, PDPs and controlled onsite experiments; anonymous +28.3% revenue claim without public full statistical record."
+    },
+    {
+      "id": "lily-ai-discovery",
+      "title": "AI Discovery & Agentic Commerce | Lily Max",
+      "url": "https://www.lily.ai/ai-discovery",
+      "type": "official-doc",
+      "claim": "Feed/page enrichment, recommendation analysis and AI-revenue tracking are advertised; placement guarantees are explicitly rejected."
+    },
+    {
+      "id": "lily-taxonomy",
+      "title": "Retail AI Experts On What Differentiates Lily AI’s Training Data and Why It Matters",
+      "url": "https://www.lily.ai/blog/retail-ai-experts-training-data",
+      "type": "official-doc",
+      "claim": "March 2024 account of curated taxonomy exceeding 20,000 attributes, synonyms and trends, with product text, images and consumer behavior. Dated vendor claim, not measured current accuracy."
+    },
+    {
+      "id": "lily-behavior",
+      "title": "Boost Your Beauty Product Attribution: Part 1",
+      "url": "https://www.lily.ai/blog/boost-your-beauty-product-attribution-part-one",
+      "type": "official-doc",
+      "claim": "May 2022 description of session-viewed attribute patterns informing recommendations. Establishes a documented behavior/intent mechanism, not authorization for sensitive profiling."
+    },
+    {
+      "id": "lily-winter",
+      "title": "Lily AI’s Winter 2025 Release Is Here",
+      "url": "https://www.lily.ai/blog/see-whats-new-lily-ais-winter-2025-release",
+      "type": "official-doc",
+      "claim": "January 2025 release describes search-behavior analysis and dynamic terminology updates to feeds and PDPs."
+    },
+    {
+      "id": "lily-attributes",
+      "title": "Product attributes: which ones each discovery surface reads, and what a good one looks like",
+      "url": "https://www.lily.ai/blog/product-attributes-101",
+      "type": "official-doc",
+      "claim": "August 2026 taxonomy of identity, physical, descriptive, contextual, style and compatibility attributes. Some platform-field statements conflict with current Google docs; examples are not a source of actual product facts."
+    },
+    {
+      "id": "lily-thredup",
+      "title": "thredUP increases sell-through by 15% with enriched product data",
+      "url": "https://www.lily.ai/case-studies/thredup-sell-through-15-percent",
+      "type": "vendor-case",
+      "claim": "March 2023 named case: early split-test 4-15% sell-through lift and later cohort conversion claims. Missing assignment, sample, duration and interval detail limits causal interpretation."
+    },
+    {
+      "id": "lily-certona",
+      "title": "Lily AI recommendations increase RPV by 0.65%, driving $20-30M in incremental demand",
+      "url": "https://www.lily.ai/case-studies/multi-brand-retailer-rpv-recommendations",
+      "type": "vendor-case",
+      "claim": "May 2023 case explicitly reports unchanged orders/CVR with higher basket size and RPV; dollar demand is projected."
+    },
+    {
+      "id": "lily-demand",
+      "title": "Lily AI demand forecasting drives 7-8 digit revenue lift with accuracy at scale",
+      "url": "https://www.lily.ai/case-studies/demand-forecasting-accuracy-at-scale",
+      "type": "vendor-case",
+      "claim": "Visual-similarity forecasting and cycle-time claims; USD 7-48M is projected revenue, not a measured incremental-purchase result."
+    },
+    {
+      "id": "lily-apparel",
+      "title": "How a fast-growing performance apparel brand turned product data into a 7.3% revenue lift on Google Shopping",
+      "url": "https://www.lily.ai/case-studies/performance-apparel-google-shopping-revenue-lift",
+      "type": "vendor-case",
+      "claim": "26-day matched paid-shopping test, +7.3% revenue/product/day and separate +4.7% DiD claim. Public counts, pretrend checks and intervals absent."
+    },
+    {
+      "id": "lily-home-case",
+      "title": "How a global home furnishings retailer grew Google Shopping revenue 5.7%, while clicks went down",
+      "url": "https://www.lily.ai/case-studies/home-furnishings-google-shopping-revenue-lift",
+      "type": "vendor-case",
+      "claim": "28-day matched paid-shopping test reports +5.7% revenue/product and -1.3% clicks; does not establish AI-origin conversion."
+    },
+    {
+      "id": "lily-luxury",
+      "title": "A global luxury retailer increases relevant results for descriptive searches by up to 30x",
+      "url": "https://www.lily.ai/case-studies/luxury-retailer-descriptive-search-30x",
+      "type": "vendor-case",
+      "claim": "Descriptive-query enrichment case and vendor +3.5% online-order-conversion headline. Relevant-results multiplier is a retrieval metric, with limited published experimental detail."
+    },
+    {
+      "id": "lily-alc",
+      "title": "How A.L.C. boosted full-catalog product discovery on Google",
+      "url": "https://www.lily.ai/case-studies/alc-full-catalog-discovery-on-google",
+      "type": "vendor-case",
+      "claim": "Named merchant's +129% net-sales and +81% net-item claims; historical trend plus recent testing are discussed without a complete causal design."
+    },
+    {
+      "id": "lily-beauty",
+      "title": "How a global prestige beauty company turned product content into cross-channel performance and AI-recommendation visibility",
+      "url": "https://www.lily.ai/case-studies/prestige-beauty-cross-channel-ai-visibility",
+      "type": "vendor-case",
+      "claim": "Paid Google/Meta tests are described separately from stronger AI recommendation visibility; AI purchase incrementality is not reported."
+    },
+    {
+      "id": "lily-method",
+      "title": "Does feed optimization increase sales? The anatomy of a controlled test",
+      "url": "https://www.lily.ai/blog/does-feed-optimization-increase-sales",
+      "type": "official-doc",
+      "claim": "August 2026 guide describes stratification, fixed window, controls, DiD and limits. These are vendor methodology claims, not raw experiment data or verified parallel-trend assumptions."
+    },
+    {
+      "id": "google-conversational",
+      "title": "How to use conversational attributes",
+      "url": "https://support.google.com/merchants/answer/17085370?hl=en-GB",
+      "type": "official-doc",
+      "claim": "Current Google specification confirms six optional conversational fields; native availability undermines a claim that field mapping alone is novel."
+    },
+    {
+      "id": "google-qa",
+      "title": "Question and answer [question_and_answer]",
+      "url": "https://support.google.com/merchants/answer/17085211?hl=en",
+      "type": "official-doc",
+      "claim": "Product Q&A requirements include correct information, no keyword lists, and exclusion of time-related prices/dates; do not duplicate information already supplied."
+    },
+    {
+      "id": "google-dimensions",
+      "title": "Product length [product_length], product width [product_width], product height [product_height], product weight [product_weight]",
+      "url": "https://support.google.com/merchants/answer/11018531?hl=en",
+      "type": "official-doc",
+      "claim": "Native product measurement fields, units, actual assembled weight and consistency requirements; dimensions still require factual merchant evidence."
+    },
+    {
+      "id": "truefit-home",
+      "title": "True Fit | Fit & Sizing Intelligence for Retailers, Enhanced by AI",
+      "url": "https://www.truefit.com/",
+      "type": "official-doc",
+      "claim": "Current adjacent fit guidance, purchase/keep/return inputs, available-size filtering and optional context questions. Vendor lift claims are not adopted here."
+    },
+    {
+      "id": "truefit-data",
+      "title": "Shopify Data Requirements",
+      "url": "https://help.truefit.com/app-data-requirements",
+      "type": "official-doc",
+      "claim": "Product catalog and order data requirements; optional returns data and performance measurement establish existing fit-service integrations."
+    },
+    {
+      "id": "truefit-fit",
+      "title": "Fit Consistency Report",
+      "url": "https://help.truefit.com/fit-consistency-report",
+      "type": "official-doc",
+      "claim": "August 2026 report uses purchase sizing patterns to identify fit-guidance issues. Behavior is evidence about choices, not direct physical garment measurement."
+    },
+    {
+      "id": "stylitics-outfits",
+      "title": "AI Outfitting for Athletic & Athleisure | Stylitics",
+      "url": "https://stylitics.com/solutions/outfitting-for-athletic-brands/",
+      "type": "official-doc",
+      "claim": "Outfitting, live inventory, shoppable looks and A/B tools already exist; generic outfit generation or inventory awareness is not a unique claim."
+    },
+    {
+      "id": "openai-functions",
+      "title": "Function calling",
+      "url": "https://developers.openai.com/api/docs/guides/function-calling",
+      "type": "official-doc",
+      "claim": "Application code can execute a function and send tool output back to a model. This permits controlled replay, not exact replication of consumer ChatGPT retrieval or human purchase behavior."
+    }
+  ]
+}

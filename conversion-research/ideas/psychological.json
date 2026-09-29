@@ -1,0 +1,580 @@
+{
+  "lens": "psychological",
+  "ideas": [
+    {
+      "id": "psychological-01",
+      "title": "Let the shopper edit the recommendation's assumptions",
+      "lens": "psychological",
+      "buyer": "Electronics and hobby-equipment merchants receiving AI-assisted comparison traffic.",
+      "problem": "A recommendation can be factually accurate but depend on an unstated assumption, such as valuing portability over repairability. The shopper rejects the recommendation without being able to correct that assumption.",
+      "mechanism": "Selection and purchase: visible control over decision assumptions may make the recommendation usable, while substantive corrections improve product fit. More suitable purchases must survive returns; increased obedience alone is not the objective.",
+      "intervention": "On the merchant's assistant or comparison page, show the three assumptions in its own recommendation model that actually change the recommended SKU. Let the shopper replace one, mark it unknown, or veto it. Recompute the shortlist and identify the consequential change. A referral does not reveal the outside AI's hidden reasoning; requirements must come from explicit shopper input or data the merchant actually has. Keep full-catalog access and prices.",
+      "competitorOverlap": "ChatGPT shopping research already accepts preference feedback; Constructor supports conversational refinement; Zoovu offers guided buying. The proposed difference is an inspectable, editable assumption-to-SKU dependency, not another conversation box. Equivalent vendor functionality may exist and needs a demo comparison.",
+      "edgeHypothesis": "For explicitly uncertain shoppers, correcting a consequential assumption produces more retained purchases than asking another broad preference question.",
+      "dataNeeded": [
+        "Referred SKU or voluntary shortlist and requirements; no assumed access to an external chat",
+        "Grounded product constraints and attributes",
+        "Explicit shopper priorities and unknowns",
+        "Recomputation trace linking changed assumptions to different eligible products",
+        "Persistent assignment, orders, refunds and contribution"
+      ],
+      "experiment": "Randomize eligible unique human AI referrals before first exposure, with assignment persisting across sessions. Compare standard conversational clarification with the editable-assumption panel using the same catalog and recommendation engine. Primary endpoint is any completed purchase retained through the standard return window within 30 days of assignment. Accrue for at least six weeks and extend to the preregistered sample required by merchant baseline and minimum meaningful effect; mature returns afterward. Guardrails: factual accuracy, hard-budget violations, returns, latency and decision effort.",
+      "metric": "Intention-to-treat difference in retained purchasers divided by all randomized eligible humans, with total-catalog orders and net contribution as checks. Do not compare editors with non-editors or call this an AI acquisition effect.",
+      "impactEvidence": "Hypothesized purchase effect. alg-edit provides adjacent human forecasting evidence: control over forecasts increased algorithm use, not ecommerce purchasing. No transfer percentage is defensible.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen monthly assumptions only: N=10000 eligible unique humans, retained-purchase rate 2%, contribution GBP 40 per additional retained order. None is an observed merchant baseline.",
+        "calculation": "Monthly fee GBP 500 plus GBP 0.02 per eligible visitor at rollout costs GBP 700. Break-even requires 17.5 additional retained orders, or 0.175 percentage points of retained-purchase rate, assuming one order per additional purchaser and unchanged basket mix. This is an economic threshold, not a predicted effect or a powered sample size.",
+        "range": "Unknown. Zero and negative effects remain possible; the proposed experiment must estimate the effect and its uncertainty."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP 500/month plus implementation agreed separately; ask merchants to renew only against a retained-purchase holdout.",
+      "costControl": "Precompute which assumptions can change the result; use deterministic constraint recomputation and call a model only to explain the changed choice.",
+      "feasibility": "now",
+      "dependencies": [
+        "Merchant-controlled landing or assistant UI",
+        "Reliable constraint model",
+        "Persistent experiment assignment",
+        "Return-matured order join"
+      ],
+      "failureMode": "The panel becomes homework, users misunderstand causal importance, or edits steer them away from a genuinely suitable item.",
+      "falsifier": "A powered trial rules out the merchant's minimum economically useful retained-purchase gain, or corrections increase returns despite increasing raw checkout.",
+      "sourceIds": [
+        "alg-edit",
+        "openai-shopping",
+        "constructor",
+        "zoovu"
+      ]
+    },
+    {
+      "id": "psychological-02",
+      "title": "Show where a choice stays good as preferences vary",
+      "lens": "psychological",
+      "buyer": "Specialist merchants with expensive products that trade off two or three meaningful attributes.",
+      "problem": "An AI declares one winner even when tiny changes to uncertain preferences reverse the ranking. A shopper then keeps searching because the apparent precision is unconvincing.",
+      "mechanism": "Comparison and purchase: understanding which options remain suitable across a reasonable preference range may reduce unnecessary search and regret. It also exposes genuinely fragile choices before checkout.",
+      "intervention": "Create an interactive comparison in which the buyer marks a range of acceptable weights rather than exact priorities. Show which eligible products remain acceptable throughout that range and exactly when another product becomes preferable. Keep all feasible alternatives accessible. Never remove an option solely because it earns less margin.",
+      "competitorOverlap": "Comparison matrices, guided selling and preference-weighted recommendation are established, including decision-aids and Zoovu. The testable edge is understandable sensitivity to uncertain preferences, compared with the merchant's best existing comparison tool. Vendor support for this exact presentation is unknown.",
+      "edgeHypothesis": "A stable set of acceptable choices outperforms a brittle single winner for high-consideration decisions without making the choice feel more complex.",
+      "dataNeeded": [
+        "Verified comparable attributes",
+        "A transparent utility or constraint model with uncertainty bounds",
+        "Shopper-declared acceptable ranges",
+        "Search, orders, cancellations and returns"
+      ],
+      "experiment": "Randomize unique AI-referred shoppers between the sensitivity view and the same products in the existing comparison table. Keep candidate count and prices constant so the experiment does not confound option reduction. Use 30-day retained purchase through the full return window as primary endpoint; six-week minimum accrual plus a preregistered power target. Measure comprehension, time, full-catalog net contribution and regret-related returns as guardrails.",
+      "metric": "Retained purchasers per all assigned eligible shoppers; supplementary choice-stability and comprehension measures are mediators, not conversion. Count catalog-wide retained purchases so switching products is not mistaken for incremental demand.",
+      "impactEvidence": "Hypothesized. decision-aids supports human decision-aid mechanisms in a simulated store. choice-meta warns that fewer options has no reliable universal effect; this proposal does not assume one.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen monthly assumptions only: N=10000 eligible unique humans, retained-purchase rate 2%, contribution GBP 40 per additional retained order. None is an observed merchant baseline.",
+        "calculation": "Monthly fee GBP 500 plus GBP 0.02 per eligible visitor at rollout costs GBP 700. Break-even requires 17.5 additional retained orders, or 0.175 percentage points of retained-purchase rate, assuming one order per additional purchaser and unchanged basket mix. This is an economic threshold, not a predicted effect or a powered sample size.",
+        "range": "Unknown. Zero and negative effects remain possible; the proposed experiment must estimate the effect and its uncertainty."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 500/month for a category with enough traffic to measure retained purchases.",
+      "costControl": "Compute frontiers and dominance relationships once per catalog update; avoid an LLM call on each slider movement.",
+      "feasibility": "now",
+      "dependencies": [
+        "Comparable units and trustworthy specifications",
+        "Explicit consumer-controlled tradeoffs",
+        "Accessible comparison UI",
+        "Experiment and returns data"
+      ],
+      "failureMode": "A formal model invents precision or omits the shopper's actual concern; sensitivity graphics add confusion.",
+      "falsifier": "Humans cannot correctly explain a ranking reversal, or a powered purchase test excludes an economically useful gain versus the ordinary comparison table.",
+      "sourceIds": [
+        "decision-aids",
+        "choice-meta",
+        "zoovu",
+        "evaluability"
+      ]
+    },
+    {
+      "id": "psychological-03",
+      "title": "Teach the one specification that blocks the choice",
+      "lens": "psychological",
+      "buyer": "Merchants selling unfamiliar technical categories to first-time buyers.",
+      "problem": "The shopper knows a specification matters but cannot translate it into a consequence. Additional accurate product copy repeats the same incomprehensible number.",
+      "mechanism": "Comprehension to suitable purchase: a short demonstration supplies the missing mental model, allowing the person to select the cheaper or more capable product that actually meets their goal.",
+      "intervention": "Add an optional, category-specific mini-demonstration for one concept, such as the difference between a USB-C connector, charging wattage and data bandwidth. Let the shopper test their own device-and-task combination against sourced compatibility rules. Show why two apparently similar products behave differently. Do not gate checkout on passing a quiz.",
+      "competitorOverlap": "Constructor and Zoovu already translate intent and explain products. Generic buying guides and FAQs are widespread. The proposed edge is a measurable, interactive comprehension intervention chosen from the shopper's stated uncertainty, not a longer AI explanation.",
+      "edgeHypothesis": "Correct understanding of a consequential concept yields more retained purchases among novices than an equally long text answer.",
+      "dataNeeded": [
+        "Manufacturer-backed concept and compatibility rules",
+        "Observed or consented indication of uncertainty",
+        "Optional comprehension check in a research subsample",
+        "Orders and reason-coded returns"
+      ],
+      "experiment": "Before the explanation is shown, randomize eligible humans to the interactive demonstration or a matched-length, fact-equivalent text explanation. Predefine novice eligibility without post-treatment filtering. Primary endpoint: purchase within 30 days retained through the category return period; accrue at least six weeks and to a power target based on actual traffic. Guardrails include comprehension, factual errors, accessibility, latency and incompatibility returns.",
+      "metric": "Difference in retained purchasers/all randomized novices. Report any optional comprehension-subsample results separately because taking a quiz can itself change behavior.",
+      "impactEvidence": "Hypothesized purchase effect. evaluability demonstrates that the ability to interpret attributes changes evaluation; it does not show this widget increases live sales. constructor establishes substantial adjacent competition.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen monthly assumptions only: N=10000 eligible unique humans, retained-purchase rate 2%, contribution GBP 40 per additional retained order. None is an observed merchant baseline.",
+        "calculation": "Monthly fee GBP 300 plus GBP 0.01 per eligible visitor at rollout costs GBP 400. Break-even requires 10 additional retained orders, or 0.100 percentage points of retained-purchase rate, assuming one order per additional purchaser and unchanged basket mix. This is an economic threshold, not a predicted effect or a powered sample size.",
+        "range": "Unknown. Zero and negative effects remain possible; the proposed experiment must estimate the effect and its uncertainty."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot price: GBP 300/month per technical category, conditional on measured purchase value rather than quiz completion.",
+      "costControl": "Use a small reviewed library of demonstrations and deterministic rules. Generate no unverified per-session technical claims.",
+      "feasibility": "now",
+      "dependencies": [
+        "Category expert review",
+        "Authoritative device or product specifications",
+        "Optional user input and accessible rendering",
+        "Order-to-return measurement"
+      ],
+      "failureMode": "The concept is irrelevant, the demonstration oversimplifies an exception, or the extra step deters experienced buyers.",
+      "falsifier": "The demonstration fails to improve factual understanding, or improved understanding produces no economically meaningful retained-purchase gain in a powered test.",
+      "sourceIds": [
+        "evaluability",
+        "constructor",
+        "zoovu"
+      ]
+    },
+    {
+      "id": "psychological-04",
+      "title": "Show the spread of likely ownership outcomes",
+      "lens": "psychological",
+      "buyer": "Electronics, outdoor-equipment and appliance merchants with condition-dependent performance.",
+      "problem": "A single battery-life or performance number hides variation across actual uses. The shopper cannot tell whether the product will meet their own threshold often enough.",
+      "mechanism": "Expectation calibration to retained purchase: credible distributions reduce uncertainty for suitable buyers and redirect unsuitable buyers to alternatives, with fewer disappointment-driven returns.",
+      "intervention": "For one measurable outcome, display an independently validated range or distribution under user-selected conditions: for example, runtime under their chosen load and temperature. Show sample size, test conditions and when data do not support a personal estimate. Let shoppers state the minimum outcome they need. Distinguish tested performance variation from a model's confidence in its own answer.",
+      "competitorOverlap": "True Fit already provides outcome-based apparel guidance, confidence and MCP integration. That is direct overlap with generic fit-confidence proposals. This experiment extends calibrated, task-specific expectation presentation to non-apparel performance; neither novelty nor vendor absence is established.",
+      "edgeHypothesis": "A calibrated outcome distribution is more useful than an unsupported confidence badge or a headline maximum specification, especially when a buyer has a hard minimum requirement.",
+      "dataNeeded": [
+        "Licensed independent tests or representative merchant measurements",
+        "Relevant operating conditions",
+        "Held-out outcome data for calibration",
+        "Explicit user threshold",
+        "Purchases, refunds and performance-related return reasons"
+      ],
+      "experiment": "Randomize eligible unique humans between the outcome distribution and the merchant's current accurate specification display. Use the same underlying known facts and reveal essential conditions in both arms. Primary endpoint: 30-day purchases retained through the full return window. Run at least eight weeks of accrual, with an independent calibration gate and category-specific power plan. Guardrails: miscalibration, unsuitable recommendations, return reasons, contribution and latency.",
+      "metric": "Retained purchaser rate on all randomized visitors, plus calibration error on held-out real outcomes. More confidence without calibration or kept purchases is not success.",
+      "impactEvidence": "Hypothesized non-apparel effect. fit-rct is direct apparel field evidence for providing useful fit information, not evidence for generic probabilities. fit-uncertainty motivates the problem; truefit-spec shows mature adjacent competition.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen monthly assumptions only: N=10000 eligible unique humans, retained-purchase rate 2%, contribution GBP 40 per additional retained order. None is an observed merchant baseline.",
+        "calculation": "Monthly fee GBP 1000 plus GBP 0.03 per eligible visitor at rollout costs GBP 1300. Break-even requires 32.5 additional retained orders, or 0.325 percentage points of retained-purchase rate, assuming one order per additional purchaser and unchanged basket mix. This is an economic threshold, not a predicted effect or a powered sample size.",
+        "range": "Unknown. Zero and negative effects remain possible; the proposed experiment must estimate the effect and its uncertainty."
+      },
+      "willingnessToPay": "Unvalidated pilot price: GBP 1,000/month for a high-return category, excluding measurement and data-licensing costs.",
+      "costControl": "Start with one costly uncertainty and an existing test dataset; cache distributions and abstain when coverage is inadequate.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Representative performance measurements",
+        "Conditions that shoppers can supply reliably",
+        "Statistical calibration and drift monitoring",
+        "Sufficient retained-order data"
+      ],
+      "failureMode": "Sparse or selected outcomes masquerade as individual probabilities; apparent rigor makes false reassurance more persuasive.",
+      "falsifier": "Predictions fail prespecified calibration or subgroup coverage tests, or the live test rules out a purchase gain after accounting for performance-related returns and data costs.",
+      "sourceIds": [
+        "fit-rct",
+        "fit-uncertainty",
+        "truefit-spec"
+      ]
+    },
+    {
+      "id": "psychological-05",
+      "title": "Rehearse the product's movement in the actual room",
+      "lens": "psychological",
+      "buyer": "Furniture and large-appliance merchants losing AI-referred customers to uncertainty about practical fit.",
+      "problem": "A static image shows that an item occupies the available footprint but does not show whether its door opens, a chair pulls out, or the buyer can still use the surrounding space.",
+      "mechanism": "Fit comprehension to retained purchase: a buyer sees that the proposed item works in their own setting, or identifies a better-fitting alternative before placing a costly order.",
+      "intervention": "Use an optional room scan or entered measurements to animate verified operating clearances, such as opening a cabinet door and pulling out a dining chair. Show measurement tolerance and unresolved obstructions. Compare two products against the same movements and keep a manual measurement route. Do not claim building-code or accessibility certification.",
+      "competitorOverlap": "IKEA Kreativ already provides scanning, dimensions, product placement, comparison and sharing; current help also supports building a room from dimensions. The proposed comparison is incremental dynamic-use validation against an existing static room preview, not generic AR. Similar specialist features may exist.",
+      "edgeHypothesis": "Operational-fit rehearsal adds retained-purchase value beyond attractive room visualization for products with a documented clearance-related failure rate.",
+      "dataNeeded": [
+        "Accurate product geometry and operating clearances",
+        "User-entered or consented scan measurements with tolerances",
+        "Clearance-related cancellation and return reasons",
+        "Persistent assignment and orders"
+      ],
+      "experiment": "Randomize eligible households before opening the preview: ordinary scaled placement versus the same placement plus dynamic-use checks. Household assignment prevents shared-room crossover. Primary endpoint: any furniture/appliance order within 60 days retained through its return window. Accrue at least eight weeks and to the category's power requirement. Guardrails: measurement errors, failed deliveries, returns, scan abandonment, load time and net contribution.",
+      "metric": "Retained purchasing households/all randomized eligible households. Include all catalog purchases and failed-delivery costs; visualize-completion rate is diagnostic only.",
+      "impactEvidence": "Hypothesized dynamic-clearance gain. ar-retail is adjacent cosmetics evidence with different products and usage selection. ikea and ikea-room establish existing visualization capabilities but no causal lift for this added feature.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen monthly assumptions only: N=10000 eligible unique humans, retained-purchase rate 2%, contribution GBP 80 per additional retained order. None is an observed merchant baseline.",
+        "calculation": "Monthly fee GBP 750 plus GBP 0.05 per eligible visitor at rollout costs GBP 1250. Break-even requires 15.625 additional retained orders, or 0.156 percentage points of retained-purchase rate, assuming one order per additional purchaser and unchanged basket mix. This is an economic threshold, not a predicted effect or a powered sample size.",
+        "range": "Unknown. Zero and negative effects remain possible; the proposed experiment must estimate the effect and its uncertainty."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 750/month plus a defined geometry setup charge; price must be tested against avoided failed purchases and added retained orders.",
+      "costControl": "Cover only products with known clearance failures; reuse merchant 3D assets and use local geometric checks rather than repeated image generation.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable dimensional assets",
+        "Merchant permission for the preview",
+        "Privacy-preserving scan handling",
+        "Returns and failed-delivery records"
+      ],
+      "failureMode": "A visually convincing scan is dimensionally wrong, or the setup effort overwhelms the value for inexpensive products.",
+      "falsifier": "The preview misses prespecified known conflicts, or a powered trial finds no economically useful retained-purchase gain over static placement after geometry and delivery costs.",
+      "sourceIds": [
+        "ikea",
+        "ikea-room",
+        "ar-retail"
+      ]
+    },
+    {
+      "id": "psychological-06",
+      "title": "Send the smallest sample that resolves the actual doubt",
+      "lens": "psychological",
+      "buyer": "Home-finish, fabric, fragrance and other sensory-product merchants with costly uncertain choices.",
+      "problem": "The unresolved question is experiential, such as texture or scent, and more AI-generated explanation cannot answer it.",
+      "mechanism": "Preference formation to full-size purchase: a diagnostic trial converts an uncertain preference into an experienced one, enabling a suitable purchase that the shopper would otherwise defer or return.",
+      "intervention": "After the shopper explicitly identifies the unresolved sensory tradeoff, offer a small two-option kit designed to discriminate that tradeoff. For fabric, compare the two relevant textures under the buyer's intended use. Include a neutral test protocol, the true product identities and full-size prices, and a route to either product or neither. Exclude sample orders from conversion success.",
+      "competitorOverlap": "Samplize already sells physical paint samples; SoPost already orchestrates sampling, feedback and purchase pathways. The edge is choosing a minimal comparative trial from a stated decision uncertainty and measuring full-size retained purchases, rather than distributing a general promotional sample. Competitors may already offer comparable targeting.",
+      "edgeHypothesis": "A diagnostic two-sample kit produces more profitable retained full-size orders than a generic sample offer with the same shopper credit and fulfillment budget.",
+      "dataNeeded": [
+        "Actual sample availability and representativeness",
+        "Explicit unresolved preference",
+        "Kit delivery and cost",
+        "Full-size SKU mapping",
+        "Purchase, cancellation and return linkage"
+      ],
+      "experiment": "Randomize eligible human households before offering a kit, with one persistent allocation per household. Compare diagnostic kits with generic kits of equal cost and, in a separately powered arm, the ordinary product page with equal monetary credit. Primary endpoint: retained full-size purchase within 60 days, matured through returns. Accrue at least eight weeks and to a predeclared power target; account for shipping lag. Guardrails: total kit cost, sample waste, complaints, time to purchase and net contribution.",
+      "metric": "Retained full-size purchasing households/all households randomized to the offer. Never report purchasers/sample claimants as causal conversion. Count substitutions across the catalog and all kit costs.",
+      "impactEvidence": "Hypothesized diagnostic-kit effect. sampling-study models in-store category sales, not this online mechanism. samplize and sopost prove existing sampling workflows, not incremental causal value.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen rollout assumptions: 10,000 eligible households/month; 2% retained full-size purchase rate; 10% accept a kit; GBP 4 incremental kit and fulfillment cost; GBP 60 contribution per incremental retained order; one such order per added purchaser.",
+        "calculation": "GBP 500 software fee + (10,000 x 10% x GBP 4) = GBP 4,500 incremental monthly cost. Break-even requires 75 additional retained orders, equal to +0.75 percentage points on all eligible households. This is a demanding cost threshold, not an uplift forecast; comparator costs must be subtracted when comparing equal-cost kits.",
+        "range": "Unknown; zero or negative net gain is plausible, especially for low-margin products, existing buyers who would have purchased anyway, and expensive shipping."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 500/month software plus transparent sample fulfillment at cost; willingness depends on incremental full-size contribution.",
+      "costControl": "Use existing swatches or samples, minimize kit weight, and offer only where a shopper names a sensory uncertainty. Do not ration by sensitive inferred characteristics.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Physical samples and fulfillment",
+        "Comparable kit designs",
+        "Household-level assignment",
+        "Full-size order and returns join"
+      ],
+      "failureMode": "Samples attract freebie demand, do not represent the full product, delay an already likely sale, or cost more than the incremental contribution.",
+      "falsifier": "A powered equal-cost comparison rules out useful retained-order gains, or observed full-size contribution fails to cover the incremental kit cost even when sample engagement is high.",
+      "sourceIds": [
+        "samplize",
+        "sopost",
+        "sampling-study",
+        "fit-uncertainty"
+      ]
+    },
+    {
+      "id": "psychological-07",
+      "title": "Rehearse one ordinary day of ownership",
+      "lens": "psychological",
+      "buyer": "Merchants selling appliances and hobby equipment with meaningful setup, cleaning or maintenance effort.",
+      "problem": "AI comparisons emphasize attractive benefits while the buyer cannot imagine the actual effort of owning the product. Late realization creates hesitation, cancellations or returns.",
+      "mechanism": "Expectation formation to retained purchase: making a realistic ownership task understandable may identify a workable choice and reduce post-purchase disappointment. It can also expose a poor fit and reduce immediate sales.",
+      "intervention": "Offer a short, optional walkthrough of one normal ownership task, such as cleaning the coffee machine after use. Use verified steps, required space, consumables and effort. Let the person indicate what is acceptable and compare a simpler alternative. Include benefits and constraints in balanced form; avoid imagined luxury scenes or emotional pressure.",
+      "competitorOverlap": "Manufacturer demonstrations, buying guides, product questions and Constructor's knowledge-based agent already cover usage. The proposed intervention is an interactive neutral task rehearsal against an equally informative manual or video, not a generic lifestyle narrative.",
+      "edgeHypothesis": "Among shoppers uncertain about effort, a short rehearsal increases retained catalog purchases by finding an acceptable usage routine or better-suited alternative.",
+      "dataNeeded": [
+        "Reviewed manuals and actual task demonstrations",
+        "Time estimates with source and variability",
+        "Consented tolerance for the task",
+        "Orders and effort-related returns"
+      ],
+      "experiment": "Randomize unique eligible AI-referred humans between a brief task rehearsal and a matched-information usage video or manual summary. Keep essential facts accessible in both. Primary endpoint: 30-day purchases retained through the return window; six-week minimum accrual plus actual power requirements. Prespecify uncertain-about-effort eligibility before assignment. Guardrails: postponement, decision effort, raw sales, returns, support and contribution.",
+      "metric": "Retained purchasers/all randomized eligible people, measured across the catalog. Rehearsal completion and stated confidence are secondary; fewer returns alone does not prove added purchases.",
+      "impactEvidence": "Hypothesized. mental-simulation supports context-dependent changes in preferences, while mental-cost provides contrary evidence that process thinking can increase difficulty and postponement. Neither supplies a retained-sales percentage.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen monthly assumptions only: N=10000 eligible unique humans, retained-purchase rate 2%, contribution GBP 40 per additional retained order. None is an observed merchant baseline.",
+        "calculation": "Monthly fee GBP 300 plus GBP 0.01 per eligible visitor at rollout costs GBP 400. Break-even requires 10 additional retained orders, or 0.100 percentage points of retained-purchase rate, assuming one order per additional purchaser and unchanged basket mix. This is an economic threshold, not a predicted effect or a powered sample size.",
+        "range": "Unknown. Zero and negative effects remain possible; the proposed experiment must estimate the effect and its uncertainty."
+      },
+      "willingnessToPay": "Unvalidated category pilot: GBP 300/month plus a bounded cost to produce a verified task walkthrough.",
+      "costControl": "Reuse manufacturer media and reviewed task models. Cap the experience at one relevant task and cache product-specific steps.",
+      "feasibility": "now",
+      "dependencies": [
+        "Verified operating instructions",
+        "A short accessible interactive presentation",
+        "Category-specific return reasons",
+        "Human experiment infrastructure"
+      ],
+      "failureMode": "The rehearsal magnifies manageable drawbacks, makes decisions harder, or encourages a hypothetical preference that does not survive actual use.",
+      "falsifier": "The predeclared trial rules out a useful retained-purchase increase or shows more postponement without enough subsequent retained orders to offset it.",
+      "sourceIds": [
+        "mental-simulation",
+        "mental-cost",
+        "constructor"
+      ]
+    },
+    {
+      "id": "psychological-08",
+      "title": "Explain why credible reviews disagree",
+      "lens": "psychological",
+      "buyer": "Merchants whose AI-recommended products have mixed reviews arising from different usage conditions.",
+      "problem": "A shopper sees the assistant recommend a product while apparently credible reviews contradict it. A sentiment average does not explain whether the disagreement matters for their use.",
+      "mechanism": "Evidence comprehension to purchase: contextualizing authentic disagreement may resolve a specific uncertainty without hiding negative experiences, allowing suitable buyers to proceed and unsuitable buyers to select another item.",
+      "intervention": "Build a small evidence comparison around the shopper's stated concern. Show the product version and usage context of conflicting reviews, the number of relevant reviews, and source links. Offer an explanation only when the evidence supports one; otherwise preserve the uncertainty and suggest a factual way to test it. Never fabricate an owner, rewrite a review's meaning, or selectively omit relevant negative evidence.",
+      "competitorOverlap": "Amazon already presents product-aspect positive and negative sentiment and quotations, and shopping assistants synthesize reviews. The proposed edge is exposing the conditions under which a contradiction holds, with an explicit unresolved state. That is incremental to mature review summaries; absence elsewhere is unknown.",
+      "edgeHypothesis": "A grounded explanation of context-dependent disagreement outperforms aggregate sentiment for shoppers who have explicitly encountered a contradiction.",
+      "dataNeeded": [
+        "Licensed authentic reviews with SKU/version and context where available",
+        "Transparent relevance rules and sampling coverage",
+        "Manufacturer facts for disputed claims",
+        "Orders, refunds and evidence error audits"
+      ],
+      "experiment": "Randomize eligible unique humans to the contextual disagreement view or the existing aspect-summary view, drawing on the same reviews. Predefine the contradiction cohort before treatment and maintain assignment. Primary endpoint is a retained catalog purchase within 30 days, matured through the full return period. Run at least six weeks and to a preregistered power target. Guardrails: hallucinated reconciliation, omitted negatives, decision effort, complaint rate and contribution.",
+      "metric": "Retained purchasers divided by all assigned eligible humans. Evidence comprehension and clicks on reviews do not substitute for purchase; product-level sales shifts without catalog-level gains do not count.",
+      "impactEvidence": "Hypothesized. two-sided finds conditional effects on communication outcomes, not a universal purchase benefit. fit-uncertainty motivates contextual fit. amazon-ai establishes existing summaries with both sentiment directions.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen monthly assumptions only: N=10000 eligible unique humans, retained-purchase rate 2%, contribution GBP 40 per additional retained order. None is an observed merchant baseline.",
+        "calculation": "Monthly fee GBP 500 plus GBP 0.02 per eligible visitor at rollout costs GBP 700. Break-even requires 17.5 additional retained orders, or 0.175 percentage points of retained-purchase rate, assuming one order per additional purchaser and unchanged basket mix. This is an economic threshold, not a predicted effect or a powered sample size.",
+        "range": "Unknown. Zero and negative effects remain possible; the proposed experiment must estimate the effect and its uncertainty."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 500/month plus review-license costs only where incremental retained contribution can be measured.",
+      "costControl": "Resolve recurring product-level contradictions once with human review; reuse the explanation and show unresolved evidence rather than running an open-ended model chain.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Review rights and provenance",
+        "Version resolution and honest context coverage",
+        "Human audit of explanations",
+        "Persistent assignment and return-matured purchases"
+      ],
+      "failureMode": "The system invents a story that reconciles genuine defects, highlights unrepresentative comments, or makes a minor disagreement loom too large.",
+      "falsifier": "Independent audit finds unsupported causal explanations, or a powered test rules out the purchase threshold while complaints or mismatch returns rise.",
+      "sourceIds": [
+        "amazon-ai",
+        "two-sided",
+        "fit-uncertainty"
+      ]
+    },
+    {
+      "id": "psychological-09",
+      "title": "Give joint buyers a private veto before negotiating",
+      "lens": "psychological",
+      "buyer": "Furniture, home-equipment and shared-hobby merchants whose purchases involve multiple adult decision makers.",
+      "problem": "One shopper's AI recommendation never resolves the other buyer's hidden objection. Public discussion can converge prematurely on the most vocal person's preference.",
+      "mechanism": "Joint choice to retained purchase: independently revealing practical constraints before negotiation may find an option all actual users accept, reducing abandoned group decisions and disagreement-driven returns.",
+      "intervention": "Create a voluntary shared decision space from the proposed shortlist. Each invited participant privately marks non-negotiable constraints and acceptable tradeoffs. Reveal only the information each person has agreed to share, then show options satisfying the combined constraints and explain unresolved conflicts. The buyer sends any invitation themselves. Do not infer relationships, budgets or sensitive traits.",
+      "competitorOverlap": "Shared design tools such as IKEA Kreativ already let people share choices. shared-shopping demonstrates research on shared navigation. The proposed edge is consented private elicitation followed by conflict resolution, not a shared cart, wishlist or group account. Equivalent commercial support is unverified.",
+      "edgeHypothesis": "For genuinely joint purchases, private constraint elicitation produces more mutually accepted retained purchases than a shared shortlist and chat alone.",
+      "dataNeeded": [
+        "Voluntary group membership and permissions",
+        "Independent declared constraints",
+        "Group-level exposure and assignment",
+        "Order ownership, cancellations and return reasons"
+      ],
+      "experiment": "Randomize eligible initiating buyers before invitations or preference entry; persist that allocation for every participant who later consents to join their group. Compare private elicitation with an ordinary shared shortlist and identical product information. Primary endpoint: one or more retained group purchases within 60 days, matured through returns. Accrue at least eight weeks; power uses independent initiating groups, not participants. Guardrails: privacy mistakes, participation drop-off, conflict reports, returns and contribution.",
+      "metric": "Retained purchasing groups/all groups randomized, including groups whose invitees never participate. Count a shared order once; report total catalog contribution per group.",
+      "impactEvidence": "Hypothesized. shared-shopping offers laboratory evidence for coordination, not purchase gains or private-veto elicitation. ikea proves existing sharing. The proposed mechanism remains an empirical question.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen monthly assumptions: 2,000 eligible independent groups, 4% retained-purchase rate, one order per incremental purchaser, GBP 100 contribution per retained order.",
+        "calculation": "GBP 750 monthly fee + GBP 0.10 per group = GBP 950. Break-even requires 9.5 additional retained purchasing groups or +0.475 percentage points. This is a cost threshold, not a forecast; clustering and nonparticipation affect power.",
+        "range": "Unknown; zero or negative effects are plausible if the flow creates work or surfaces irreconcilable conflict."
+      },
+      "willingnessToPay": "Unvalidated merchant pilot price: GBP 750/month for a high-consideration joint-purchase category.",
+      "costControl": "Use deterministic constraint intersections and a limited explanatory model call. Keep preference storage short-lived and avoid a general social network.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Voluntary group sharing and permissions",
+        "Group-level experiment assignment",
+        "Explicit tradeoff model",
+        "Shared-order deduplication"
+      ],
+      "failureMode": "Invitations add friction, privacy expectations are violated, or structured negotiation intensifies disagreement rather than resolving it.",
+      "falsifier": "After sufficient independent groups and purchase maturation, the trial excludes the minimum useful retained-purchase gain or privacy/conflict guardrails fail.",
+      "sourceIds": [
+        "shared-shopping",
+        "ikea",
+        "decision-aids"
+      ]
+    },
+    {
+      "id": "psychological-10",
+      "title": "Test an honest 'keep what you have' recommendation",
+      "lens": "psychological",
+      "buyer": "Repeat-purchase merchants with enough customer continuity to measure whether credible advice earns future business.",
+      "problem": "A buyer suspects every assistant answer will lead to a new sale, even when their existing product already meets the stated need. That suspicion can weaken later recommendations.",
+      "mechanism": "Long-horizon confidence to future retained purchases: a truthful outside option may make later useful recommendations more credible. Immediate sales can fall; the proposal is viable only if cumulative incremental retained purchases and contribution eventually increase.",
+      "intervention": "Where verified facts show the existing product meets every stated requirement, display a 'keep what you have' option beside relevant replacements, with the exact reason and a clear condition that would justify upgrading. A shopper may ignore it. Use only voluntarily supplied ownership information. Do not invent a deficiency to create a later upsell or send follow-up marketing without permission.",
+      "competitorOverlap": "Conversational assistants can already discuss tradeoffs and alternatives; a do-nothing option is not technically novel. The proposed edge is a merchant incentive and evaluation contract that allows honest abstention and tests cumulative retained purchases. No claim is made that competitors always push purchases.",
+      "edgeHypothesis": "In a repeat-shopping category, demonstrably useful advice when no purchase is needed increases later voluntary use and sufficiently many retained purchases to offset foregone immediate sales.",
+      "dataNeeded": [
+        "Consented existing-product capability information",
+        "Verifiable upgrade requirements",
+        "Stable long-horizon experiment assignment",
+        "All catalog orders, returns, incentives and contribution for at least 180 days"
+      ],
+      "experiment": "Randomize eligible consenting customers, persistently, between current accurate product advice and the same advice with an explicit factual outside option. Never conceal essential fit limitations in the control. Primary endpoint: cumulative retained order count per assigned customer over 180 days, followed by return maturation; retain a 365-day exploratory holdout if feasible. Size the test for an economically meaningful long-horizon difference and account for attrition. Guardrails: immediate and cumulative contribution, inappropriate upsells, consent and data deletion.",
+      "metric": "Intention-to-treat difference in cumulative retained orders/all randomized customers. Voluntary return visits and trust ratings are mediators. Reduced returns, lower costs, or shifting purchases later without more cumulative retained orders cannot alone satisfy this purchase objective.",
+      "impactEvidence": "Frontier hypothesis with no direct retained-purchase evidence found. two-sided concerns credibility and conditional persuasion, not proof that advising against a purchase creates future orders. This is a reserve experiment, not a launch claim.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Chosen six-month cohort: 10,000 eligible customers, 0.15 retained orders per customer over 180 days, GBP 40 contribution per incremental retained order. These are invented planning assumptions.",
+        "calculation": "Six months at GBP 500/month plus GBP 0.03 per eligible customer costs GBP 3,300. Break-even requires 82.5 more cumulative retained orders, or +0.00825 retained orders per customer, after counting any immediate orders forgone. This is not a predicted loyalty lift.",
+        "range": "Unknown, with a substantial negative possibility. If cumulative orders fall, the idea fails the stated objective even when customers prefer the advice."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 500/month only for a merchant willing to maintain the long holdout; a short-term conversion buyer is a poor fit.",
+      "costControl": "Start with narrow, verifiable upgrade rules rather than a broad ownership graph. Stop expansion until the long-horizon purchase signal justifies it.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "Repeat-purchase merchant and measurement continuity",
+        "Consented ownership facts",
+        "Commercial willingness to accept honest abstention",
+        "Adequately powered long-horizon holdout"
+      ],
+      "failureMode": "Foregone sales never return, customers buy from competitors, or a truthful no-buy message is received as dismissive rather than useful.",
+      "falsifier": "The prespecified long-horizon trial rules out an economically useful increase in cumulative retained orders, or the effect exists only in stated trust with no purchase consequence.",
+      "sourceIds": [
+        "two-sided",
+        "openai-shopping",
+        "constructor"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "alg-edit",
+      "title": "Overcoming Algorithm Aversion: People Will Use Imperfect Algorithms If They Can (Even Slightly) Modify Them",
+      "url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2016/08/Dietvorst-Simmons-Massey-2018.pdf",
+      "type": "research",
+      "claim": "Human forecasting experiments show greater algorithm use when participants can adjust forecasts. This is evidence about control and reliance, not shopping conversion or whether edits improve the algorithm itself."
+    },
+    {
+      "id": "choice-meta",
+      "title": "Can There Ever Be Too Many Options? A Meta-Analytic Review of Choice Overload",
+      "url": "https://doi.org/10.1086/651235",
+      "type": "research",
+      "claim": "Across 63 conditions from 50 experiments with 5,036 participants, average choice-overload effect was virtually zero with substantial heterogeneity. Fewer options is not a universal conversion prescription."
+    },
+    {
+      "id": "decision-aids",
+      "title": "Consumer Decision Making in Online Shopping Environments: The Effects of Interactive Decision Aids",
+      "url": "https://doi.org/10.1287/mksc.19.1.4.15178",
+      "type": "research",
+      "claim": "A controlled simulated-store experiment tested recommendation agents and comparison matrices, finding changes in search effort and decision quality. It does not establish contemporary live ecommerce revenue lift."
+    },
+    {
+      "id": "evaluability",
+      "title": "The Evaluability Hypothesis: An Explanation for Preference Reversals between Joint and Separate Evaluations of Alternatives",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0749597896900771/pdf",
+      "type": "research",
+      "claim": "Experiments support the claim that attributes which are difficult to interpret alone can cause preferences to differ between separate and joint evaluation. No AI-shopping purchase effect is supplied."
+    },
+    {
+      "id": "fit-rct",
+      "title": "The Value of Fit Information in Online Retail: Evidence from a Randomized Field Experiment",
+      "url": "https://pubsonline.informs.org/doi/pdf/10.1287/msom.2017.0686",
+      "type": "research",
+      "claim": "Randomized apparel field experiments report greater conversion and order value and lower fulfillment costs from returns and ordering multiple sizes. Evidence is direct for those fit-information interventions, not for arbitrary confidence labels or non-apparel extensions."
+    },
+    {
+      "id": "fit-uncertainty",
+      "title": "Product Fit Uncertainty in Online Markets: Nature, Effects, and Antecedents",
+      "url": "https://doi.org/10.1287/isre.2014.0520",
+      "type": "research",
+      "claim": "Distinguishes uncertainty about a product's suitability for personal preferences from general product quality. Supports the problem definition, not a percentage forecast for these proposals."
+    },
+    {
+      "id": "ar-retail",
+      "title": "Augmented Reality in Retail and Its Impact on Sales",
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/0022242921995449",
+      "type": "research",
+      "claim": "Cosmetics retailer mobile-app data associate AR use with higher sales in particular uncertainty-heavy contexts. Category, adoption selection, and research design limit transfer to room-planning or merchant AI referrals."
+    },
+    {
+      "id": "two-sided",
+      "title": "Two-sided advertising: A meta-analysis",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0167811606000267",
+      "type": "research",
+      "claim": "Message-sidedness effects vary with message and recipient characteristics. Credibility effects do not establish retained-purchase gains, and presenting negatives can hurt product evaluations."
+    },
+    {
+      "id": "shared-shopping",
+      "title": "Let's shop online together: An empirical investigation of collaborative online shopping support",
+      "url": "https://hub.hku.hk/handle/10722/270326",
+      "type": "research",
+      "claim": "Institutional record of the authors' laboratory experiment: shared navigation improved coordination relative to separate navigation. The experiment did not establish incremental retained purchases."
+    },
+    {
+      "id": "mental-simulation",
+      "title": "Mental Simulation and Preference Consistency over Time: The Role of Process- versus Outcome-Focused Thoughts",
+      "url": "https://www-2.rotman.utoronto.ca/facbios/file/JMR%20Time%20and%20MS.pdf",
+      "type": "research",
+      "claim": "Two experiments investigate preference consistency and the timing of process versus outcome simulation, including a software-product choice. Supports a mechanism to test, not a general sales benefit."
+    },
+    {
+      "id": "mental-cost",
+      "title": "When Mental Simulation Hinders Behavior: The Effects of Process-Oriented Thinking on Decision Difficulty and Performance",
+      "url": "https://www.researchgate.net/profile/Rebecca-Hamilton/publication/46553732_When_Mental_Simulation_Hinders_Behavior_The_Effects_of_Process-Oriented_Thinking_on_Decision_Difficulty_and_Performance/links/55af8fc108ae11d31037dbaf/When-Mental-Simulation-Hinders-Behavior-The-Effects-of-Process-Oriented-Thinking-on-Decision-Difficulty-and-Performance.pdf?origin=publication_detail",
+      "type": "research",
+      "claim": "Author-hosted paper reports four studies in which process thinking can increase decision difficulty when feasibility and desirability conflict, increasing postponement and weakening commitment. A reason to cap and falsify ownership-rehearsal experiments."
+    },
+    {
+      "id": "sampling-study",
+      "title": "An Assessment of When, Where and Under What Conditions In-Store Sampling is Most Effective",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0022435917300544",
+      "type": "research",
+      "claim": "Models six store-level scanner datasets across four categories and reports immediate and sustained sales effects with contextual moderators. It is not a randomized AI-referral diagnostic-sample experiment."
+    },
+    {
+      "id": "zoovu",
+      "title": "Zoovu: AI Product Discovery",
+      "url": "https://www.zoovu.com/",
+      "type": "official-doc",
+      "claim": "Documents guided buying, configuration, recommendations, conversational discovery and related tools. Marketing outcomes are not used as expected lift here."
+    },
+    {
+      "id": "constructor",
+      "title": "Learn about AI Shopping Agent",
+      "url": "https://docs.constructor.com/docs/products-ai-shopping-agents-learn-about-ai-shopping-agent",
+      "type": "official-doc",
+      "claim": "Documents goal-based conversation, refinement, product suggestions and clickstream-based personalization. Basic goal translation and conversation are existing capabilities."
+    },
+    {
+      "id": "truefit-spec",
+      "title": "True Fit Fit Intelligence: Technical Specification",
+      "url": "https://www.truefit.com/fit-intelligence-spec",
+      "type": "official-doc",
+      "claim": "July 2026 specification describes apparel and footwear fit recommendations, confidence, outcomes data and governed MCP access. Generic fit confidence, portability or MCP is not a novel edge."
+    },
+    {
+      "id": "ikea",
+      "title": "IKEA launches new AI-powered, digital experience empowering customers to create lifelike room designs",
+      "url": "https://www.ikea.com/us/en/newsroom/corporate-news/ikea-launches-new-ai-powered-digital-experience-empowering-customers-to-create-lifelike-room-designs-pub58c94890/",
+      "type": "official-doc",
+      "claim": "IKEA Kreativ supports room scans, placement, swaps, saved designs and sharing. Room visualization and sharing already exist; this source does not prove conversion causality."
+    },
+    {
+      "id": "ikea-room",
+      "title": "How do I build a room in IKEA Kreativ?",
+      "url": "https://www.ikea.com/us/en/customer-service/knowledge/articles/9f1ad433-a13a-43b0-bec3-68e75682e8a2.html",
+      "type": "official-doc",
+      "claim": "Current help documents choosing room shape and dimensions and adding doors and windows. Measured-room planning is already available."
+    },
+    {
+      "id": "samplize",
+      "title": "Samplize FAQ",
+      "url": "https://samplize.com/pages/faq",
+      "type": "official-doc",
+      "claim": "Describes physical repositionable paint samples using manufacturer paint. Establishes a sensory-trial workflow benchmark, not proven conversion uplift or independently verified color accuracy."
+    },
+    {
+      "id": "sopost",
+      "title": "Digital Sampling Solutions",
+      "url": "https://sopost.com/solutions/",
+      "type": "official-doc",
+      "claim": "Documents digital sampling, fulfillment-related product links, feedback, targeting and purchase objectives. Sampling orchestration and post-trial measurement are existing categories."
+    },
+    {
+      "id": "amazon-ai",
+      "title": "How Amazon is using generative and agentic AI to transform the shopping experience",
+      "url": "https://www.aboutamazon.com/news/retail/amazon-agentic-ai-gen-ai-shopping",
+      "type": "official-doc",
+      "claim": "Documents shopping assistance and product-aspect review summaries with positive and negative sentiment and source quotations. The page states Rufus was renamed Alexa for Shopping on 13 May 2026. Generic review summarization is existing functionality."
+    },
+    {
+      "id": "openai-shopping",
+      "title": "Introducing shopping research in ChatGPT",
+      "url": "https://openai.com/index/chatgpt-shopping-research/",
+      "type": "official-doc",
+      "claim": "Documents preference feedback, clarifying questions, comparisons and tradeoffs. Generic editable conversational recommendations already exist. The November 2025 announcement is not used to assert current pricing or exact model infrastructure."
+    }
+  ]
+}

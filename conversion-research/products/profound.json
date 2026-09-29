@@ -1,0 +1,712 @@
+{
+  "id": "profound",
+  "name": "Profound",
+  "benchmarkType": "commercial",
+  "winningEvidence": [
+    "Profound disclosed a USD 180 million Series D at a USD 1.8 billion valuation and 1,000+ enterprise brands on September 15, 2026 (series-d). These show financing and claimed adoption, not ARR, profit or merchant incrementality.",
+    "The Estée Lauder Companies announced portfolio-wide adoption itself on September 14, 2026 (elc), stronger evidence of a real enterprise buyer than a logo alone. Commercial terms and order results were not disclosed.",
+    "GR0's vendor-hosted case reports an unnamed DTC client's monthly LLM-attributed revenue increasing from about USD 1,000 to over USD 100,000 within months (gr0). Multiple content and placement actions, missing holdouts and undisclosed attribution prevent a causal Profound uplift claim."
+  ],
+  "currentOffer": "Observed September 29, 2026: enterprise AI marketing platform combining sampled answer-engine/shopping analytics, prompt research, infrastructure traffic analysis, FactCheck, agents and AI Marketer. Current Brands pricing is a free seven-day trial with 50 daily prompts, then custom Enterprise; no public Enterprise currency price. Shopping and GA4 data feed Agent workflows. Ads Studio has documented invite/private-beta availability, so access must be verified rather than assumed (pricing, shopping, agents, changelog, ads).",
+  "conversionMechanism": "Profound can identify unmet shopping questions or inaccurate offers, help a team change owned content or campaigns, and observe downstream outcomes. Purchases require those changes to reach actual retrieval or buyer touchpoints, improve suitability or completion, and survive cancellations, returns and channel substitution. Its revenue attribution helps measure observed orders but does not alone establish incrementality.",
+  "harness": {
+    "offlineSimulation": "not_found",
+    "liveMonitoring": "documented",
+    "randomizedExperiment": "documented",
+    "purchaseMeasurement": "documented",
+    "details": "Public product/help/developer and research pages reviewed September 29, 2026. No frozen search_products replay with validated shopper-to-purchase transfer was located; not_found is a search result, not proof of absence. Live tracked-prompt Shopping capture is documented. The randomized designation refers to Profound's published 381-page, six-site Markdown/HTML research with bot visits as endpoint, not a verified customer-facing purchase experiment service. Historical A/B roadmap wording and before/after citation categories do not establish such a service. GA4-linked revenue measurement is documented, conditional on merchant tracking. Consumer checkout orders, dark referrals and causal order lift need further instrumentation/design (shopping, markdown-rct, roadmap, ga4, doc-index)."
+  },
+  "strengths": [
+    "Named enterprise adoption and a workflow product already used to turn analysis into publishing and campaign activity.",
+    "Shopping observations distinguish product, seller and shopping-mode occurrence, avoiding a brand-only view (shopping).",
+    "Agents combine integrations, branching and batch execution; repeating this generic workflow capability would not differentiate a new product (agents).",
+    "FactCheck already relates inaccurate AI claims to source material; accuracy detection alone is occupied territory (factcheck).",
+    "Published research includes an inconclusive randomized result and explicit observational limitations, useful discipline for evaluating claims (markdown-rct, retrieval-shift)."
+  ],
+  "limits": [
+    "No reviewed source establishes Profound profitability or an audited standalone revenue figure.",
+    "The GR0 result is attributed revenue from an unnamed client, not experimental incremental profit.",
+    "The 56-person behavioral study observes choices rather than paid orders and acknowledges task-level independence problems (shortlist).",
+    "Tracked prompts and repeated synthetic shoppers do not reproduce representative live buyers, private context or proprietary production search.",
+    "Public API function tools permit controlled inputs but do not expose an exact replica of consumer product ranking, memory, retrieval or checkout (function-calling, web-search, openai-shopping).",
+    "Research about feed retrieval is time-sensitive and observational; source changes can invalidate a replay's external validity (retrieval-shift).",
+    "Native mapping, bundles, cart links, fulfillment and checkout protocols already cover many proposed primitives; conversion evidence must justify an added layer."
+  ],
+  "improve": [
+    "Connect proposed changes to retained paid orders with concurrent randomized controls and stable origin instrumentation, rather than stopping at recommendations or citations.",
+    "Keep offline replay, live monitoring, merchant experiment and purchase result as separate evidence records, joined by a versioned intervention.",
+    "Treat product selection, merchant selection, exact variant and successful fulfillment as distinct failure points.",
+    "Use buyer-consented requirements and merchant source data to repair concrete selection or handoff failures.",
+    "Publish availability and pricing boundaries clearly, including beta entitlements, effective dates and experiment endpoints.",
+    "Control compute and integration costs only after identifying which work produces additional purchases; fixed-budget policy comparisons can test that allocation."
+  ],
+  "ideas": [
+    {
+      "id": "profound-01",
+      "title": "Calibrate replay predictions against retained-order experiments",
+      "lens": "measurement",
+      "buyer": "Multi-brand ecommerce teams and agencies deciding which Profound-generated changes deserve implementation.",
+      "problem": "A simulated shopper can prefer an edited tool response even when production retrieval never sees it or real buyers do not purchase.",
+      "mechanism": "Enabling stage: a calibrated selection rule redirects a fixed implementation budget toward interventions that cause more retained AI-origin orders. Simulation alone creates no purchases.",
+      "intervention": "Build versioned, paired product-response replays with distinct consented buyer tasks, then join each predicted effect to a preregistered merchant experiment. Preserve retrieval source, model/version, timestamps, prompt family, product identity and uncertainty. Rank deployable changes by out-of-sample order evidence; quarantine rank-swaps as sensitivity tests.",
+      "competitorOverlap": "Profound has live monitoring, a published crawler RCT and revenue attribution; DataFeedWatch already tests feed titles. A customer-facing purchase-calibrated replay release gate was not located in reviewed documentation. That gap is unverified, not a claim of absence.",
+      "edgeHypothesis": "Across held-out merchants and model versions, replay predictions select better purchase-producing changes than a factual-defect/frequency baseline at the same engineering budget.",
+      "dataNeeded": [
+        "Consented distinct buyer tasks and hard constraints",
+        "Immutable control/treatment retrieval payloads and model versions",
+        "Randomized live deployment assignments and propagation dates",
+        "Merchant paid, canceled and refunded orders with stable origin instrumentation",
+        "Implementation and inference costs"
+      ],
+      "experiment": "First estimate transfer using randomized product-family clusters within merchants, keeping competing variants in one cluster. Then randomize matched merchant-category portfolios to replay-guided versus defect-priority selection at equal implementation hours. Primary endpoint is retained confirmed AI-origin orders per assigned portfolio over 12-16 weeks plus the return window. Power at portfolio level before starting; sparse order volume makes this a validation pilot. Keep all mandatory factual/safety corrections universal and record cross-category substitution.",
+      "metric": "Intention-to-treat difference in retained AI-origin order counts per fixed portfolio-week, with clustered intervals; total retained merchant orders and net contribution are guardrails. Report simulation recommendation rates separately, never as shopper conversion. Unknown origins remain unknown.",
+      "impactEvidence": "Hypothesized purchase effect. markdown-rct documents causal testing of bot traffic only; gr0 provides adjacent attributed revenue, not an expected lift; function-calling establishes technical feasibility of a proxy.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured traffic or conversion baseline. Chosen monthly fee GBP 900, amortized implementation GBP 300 and net contribution GBP 30 per incremental retained order.",
+        "calculation": "Break-even = (900 + 300) / 30 = 40 additional retained orders per month versus the equal-budget selection baseline.",
+        "range": "No predicted uplift range. Zero is plausible if replay adds no selection information; a negative result is plausible if it promotes persuasive but misleading changes."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP 900/month per multi-brand pilot, contingent on access to enough live experiment volume. Profound's custom Enterprise offer is a budget proxy, not proof of demand.",
+      "costControl": "Reuse frozen retrieval payloads, test few orthogonal changes, and stop replaying stable failures. Preserve a small rotating holdout of new intents so caching does not hide model drift.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant experimentation and order-data access",
+        "Enough independent product clusters or portfolios",
+        "Stable origin logging",
+        "Deployable merchant-controlled interventions",
+        "Calibration across future engine updates"
+      ],
+      "failureMode": "Overfit simulations reward wording that performs only inside the custom tool; low volume or selection leakage creates false confidence.",
+      "falsifier": "On a held-out live portfolio, replay-guided selection fails to improve retained orders over the cheaper baseline at equal implementation cost, or its predicted signs are no better than chance.",
+      "sourceIds": [
+        "markdown-rct",
+        "ga4",
+        "gr0",
+        "function-calling",
+        "web-search",
+        "dfw-ab",
+        "retrieval-shift"
+      ]
+    },
+    {
+      "id": "profound-02",
+      "title": "Carry consented shopping constraints into the exact cart",
+      "lens": "identity",
+      "buyer": "Merchants selling configurable products through their own shopping assistant or an approved AI shopping integration.",
+      "problem": "A buyer selects a product for a specific size, budget and use case, then lands on a generic page and must reconstruct the decision.",
+      "mechanism": "Handoff stage: preserving voluntarily supplied constraints and the chosen variant reduces reselection errors and repeat work, allowing more existing AI-origin buying intentions to become retained orders.",
+      "intervention": "Create an expiring, opaque intent token in an integration we control. With buyer consent, it links a minimal constraint receipt to the selected variant, quantities and locale. Open a matching cart with a short fit summary and highlight any price or availability changes before checkout. Do not infer private chat content from a referrer.",
+      "competitorOverlap": "Shopify cart permalinks already preload variants and support attribution. OpenAI checkout integrations already carry transaction state. The proposed addition is consented constraint continuity and explicit mismatch resolution; access to native third-party conversations is not assumed.",
+      "edgeHypothesis": "Exact variant plus a visible explanation of preserved requirements produces more purchases than a plain preloaded cart, beyond the benefit of deep linking alone.",
+      "dataNeeded": [
+        "Buyer-consented non-sensitive constraints",
+        "Exact variant IDs and live pricing",
+        "Signed token lifecycle and consent records",
+        "Cart changes and paid/refunded orders",
+        "Identical AI-origin tagging in both arms"
+      ],
+      "experiment": "Within the controlled shopping integration, randomize eligible shoppers before handoff to the same preloaded cart with or without the constraint receipt and mismatch UI. Keep each shopper in one assignment. Primary endpoint is retained paid orders within 14 days per randomized shopper. Run 6-8 weeks plus returns, or longer if the power calculation requires; test no automatic substitutions, unexpected charges or personal data in URLs.",
+      "metric": "Retained paid-order rate = shoppers with at least one retained order / all randomized eligible shoppers. Estimate the treatment difference, including failed token opens. Measure exact-variant errors and total contribution alongside it.",
+      "impactEvidence": "Hypothesized. permalinks and acp document underlying handoff mechanisms; neither source supplies causal evidence for constraint receipts.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed traffic or order rate. Chosen fee GBP 300/month, amortized setup GBP 150/month, contribution GBP 30 per additional retained order.",
+        "calculation": "(300 + 150) / 30 = 15 additional retained orders/month to cover these chosen costs.",
+        "range": "No forecast. Effect can be zero if buyers already know the variant, or negative if the receipt adds friction or exposes stale assumptions."
+      },
+      "willingnessToPay": "Unvalidated pilot price: GBP 300/month for one storefront plus separately agreed setup. Test against a free plain-permalink implementation.",
+      "costControl": "Store only short-lived references; use deterministic variant checks and existing cart APIs. Avoid an LLM call on every checkout.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Controlled assistant or approved partner integration",
+        "Explicit shopper consent",
+        "Cart API and order webhooks",
+        "Expiry, deletion and authorization controls"
+      ],
+      "failureMode": "The extra explanation interrupts a ready buyer, or stale constraints select the wrong variant.",
+      "falsifier": "Against the identical preloaded-cart control, the receipt does not improve retained-order rate or produces more variant-related returns.",
+      "sourceIds": [
+        "permalinks",
+        "acp",
+        "openai-shopping",
+        "checkout-access"
+      ]
+    },
+    {
+      "id": "profound-03",
+      "title": "Build complete compatible carts for task-based shoppers",
+      "lens": "behavioral",
+      "buyer": "Electronics, hobby, repair and home-office merchants whose customers need several interoperable components.",
+      "problem": "AI recommends an attractive anchor product but leaves buyers unsure which cables, mounts, consumables or dimensions are necessary to complete their task.",
+      "mechanism": "Selection-to-cart stage: a verified complete setup lowers unresolved compatibility uncertainty and prevents a buyer postponing the whole purchase. More items in existing orders alone does not satisfy the purchase objective.",
+      "intervention": "Compile a merchant-reviewed compatibility graph and an executable task-to-cart solver. For a declared job and existing equipment, return the minimum complete set, optional additions clearly separated, incompatibilities, total delivered price and a stock-checked cart. Expose through an owned tool and crawlable configuration examples.",
+      "competitorOverlap": "Shopify already provides bundles, related products and complementary quick-add. The proposed solver must verify required functional dependencies under buyer constraints rather than rebrand cross-selling or a fixed discounted kit.",
+      "edgeHypothesis": "Customers with unresolved setup requirements complete more orders when they can verify a whole working configuration, even without a bundle discount.",
+      "dataNeeded": [
+        "Manufacturer compatibility and fit specifications",
+        "Required versus optional component graph",
+        "Buyer-declared existing equipment",
+        "Inventory and delivered prices",
+        "Task-specific support contacts, return reasons and orders"
+      ],
+      "experiment": "Randomize eligible AI-origin shoppers in the owned configurator to the existing complementary-product UI or the compatibility-checked task cart. Keep prices and discounts equal. Primary endpoint is retained paid orders per randomized shopper within 14 days; run 8-12 weeks plus returns, sized from the unresolved-task cohort. Guard against unnecessary accessories, false compatibility and a rise in total checkout price that depresses purchases.",
+      "metric": "Difference in retained-order rate per all randomized eligible shoppers. Secondary metrics are complete-working-setup rate from voluntary follow-up, incompatibility returns and contribution; AOV is not counted as an extra purchase.",
+      "impactEvidence": "Hypothesized. bundles and recommendations establish substantial existing competition and integration primitives, not a measured effect of this solver.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No known purchase rate. Chosen monthly fee GBP 500, amortized setup GBP 250, contribution GBP 30 per incremental retained order.",
+        "calculation": "(500 + 250) / 30 = 25 additional retained orders/month, excluding any AOV-only gain.",
+        "range": "No forecast; zero or negative order impact is possible when larger carts overwhelm buyers or compatibility data is incomplete."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 500/month for one technically complex category, compared with native bundle and recommendation tools.",
+      "costControl": "Cache approved compatibility edges and solve constraints deterministically. Reserve expert review for new models and conflicting specifications.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable technical source data",
+        "Variant-level compatibility review",
+        "Cart and inventory integration",
+        "Enough task-based AI traffic"
+      ],
+      "failureMode": "Incomplete specifications falsely assure compatibility, or the minimum set is more expensive than buying elsewhere.",
+      "falsifier": "Only basket size rises while the number of retained purchasing shoppers is unchanged, or incompatibility returns erase any order gain.",
+      "sourceIds": [
+        "bundles",
+        "recommendations",
+        "permalinks",
+        "openai-feed"
+      ]
+    },
+    {
+      "id": "profound-04",
+      "title": "Route unmet brand demand to a verified seller with stock",
+      "lens": "identity",
+      "buyer": "Consumer brands distributed through multiple authorized retailers.",
+      "problem": "An AI recommendation reaches an unavailable, wrong-market or misidentified offer while another authorized seller could fulfill the same product.",
+      "mechanism": "Offer-selection stage: correctly linking the exact product to a feasible seller preserves otherwise lost brand demand. Moving an existing purchase from a retailer to DTC is channel redistribution, not incrementality.",
+      "intervention": "Extend merchant observations into a permissioned product-and-seller identity graph: GTIN, model, pack size, region, seller authorization, warranty conditions, live stock and checkout links. Publish accurate seller facts to supported feeds and an owned purchase resolver. The resolver offers the buyer verified alternatives when the original offer cannot fulfill.",
+      "competitorOverlap": "Profound already exposes the merchant layer; Shopify Catalog groups identical products; PriceSpider already provides retailer routing and availability. The edge must be agent-callable identity verification and measured recovery of unmet demand, not another where-to-buy widget.",
+      "edgeHypothesis": "A brand can recover more fulfilled purchases by resolving actual offer failures across retailers than by maximizing DTC checkout-link share.",
+      "dataNeeded": [
+        "Brand-approved seller roster",
+        "GTIN/model/pack and regional identity mappings",
+        "Retailer availability and allowed checkout links",
+        "Consented referral tokens",
+        "Participating retailer order and return reports"
+      ],
+      "experiment": "Randomize eligible unresolved-offer shoppers in the owned resolver to the existing retailer list or verified in-stock alternatives. Use identical disclosure and no paid ordering bias. Primary endpoint is retained brand purchases across participating sellers per randomized shopper within 14 days. Run 8-12 weeks plus returns after checking cross-retailer match coverage and power. Report missing retailer outcomes separately and guard against DTC cannibalization and extra travel/shipping burdens.",
+      "metric": "Intention-to-treat difference in shoppers with a retained same-brand purchase / all randomized unresolved-offer shoppers. Deduplicate cross-retailer purchases where consent and data allow; otherwise bound the result rather than fabricate unique buyers.",
+      "impactEvidence": "Hypothesized. shopping, pricespider and shopify-mapping document adjacent capabilities; no direct measured incremental brand-order effect was found.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed failure prevalence or traffic. Chosen fee GBP 1,000/month, integration amortization GBP 500/month, brand contribution GBP 20 per additional sell-through order.",
+        "calculation": "(1,000 + 500) / 20 = 75 incremental retained brand orders/month across participating retailers, not 75 shifted DTC orders.",
+        "range": "No forecast. Net brand effect may be zero despite more tracked referrals; misrouting or stale stock can make it negative."
+      },
+      "willingnessToPay": "Unvalidated brand pilot price: GBP 1,000/month plus integration, justified only if cross-retailer order access exists. Existing PriceSpider deployments are competition and potential integration partners.",
+      "costControl": "Buy or integrate existing availability infrastructure. Refresh fast-selling or recently failed offers more often than stable long-tail products.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Retailer data agreements and seller authorization evidence",
+        "Product identity resolution",
+        "Order reporting coverage",
+        "Supported feed or owned-tool access"
+      ],
+      "failureMode": "Retailers will not share order outcomes, stock is stale, or apparent gains merely reallocate existing brand sales.",
+      "falsifier": "Total retained brand purchasing shoppers do not rise under complete reporting even though DTC share or resolver clicks increase.",
+      "sourceIds": [
+        "shopping",
+        "pricespider",
+        "shopify-mapping",
+        "openai-shopping"
+      ]
+    },
+    {
+      "id": "profound-05",
+      "title": "Make delivery deadlines usable during AI product selection",
+      "lens": "temporal",
+      "buyer": "Gift, event, travel and replacement-parts merchants with meaningful delivery urgency.",
+      "problem": "A buyer's real requirement is arrival before a date; generic shipping text or stale AI summaries leave this unresolved until checkout.",
+      "mechanism": "Discovery-to-checkout stage: a truthful, location-specific delivery estimate makes otherwise ambiguous products eligible for time-bound needs and reduces late checkout abandonment.",
+      "intervention": "Expose a delivery-eligibility service in approved tools and merchant pages, using a buyer-supplied postcode and deadline. Return a timestamped estimate, order cutoff, shipping cost and honest confidence range, then revalidate at cart creation. Reuse the merchant's fulfillment system and invalidate affected promises when inventory or carrier conditions change.",
+      "competitorOverlap": "Narvar already predicts delivery dates across PDP/cart/checkout and ACP carries fulfillment options. The proposed extension moves deadline qualification into the AI-origin selection flow and tests retained orders; prediction alone is not novel.",
+      "edgeHypothesis": "Providing the same accurate estimate before shortlist completion recovers more deadline-sensitive purchases than first revealing it at checkout.",
+      "dataNeeded": [
+        "Fulfillment-location stock",
+        "Merchant dispatch cutoffs and carrier estimates",
+        "Voluntarily supplied destination and deadline",
+        "Order-time quotes and actual delivery events",
+        "Orders, cancellations, returns and shipping subsidies"
+      ],
+      "experiment": "In an owned or approved shopping integration, randomize eligible deadline-sensitive shoppers before selection to early delivery qualification or the same estimate shown only at checkout. Primary endpoint is retained paid orders per shopper; predeclare on-time delivery as a critical guardrail. Run 6-10 weeks covering weekdays and peaks, plus delivery/return follow-up; size from the deadline cohort, not all traffic. Do not invent scarcity or overpromise dates.",
+      "metric": "Retained-order rate per all randomized deadline-sensitive shoppers, with on-time retained orders and contribution after express-shipping costs reported separately. A more conservative estimate may lower raw orders while improving kept, on-time orders.",
+      "impactEvidence": "Hypothesized for AI shopping. narvar supplies adjacent vendor conversion claims without a transferable effect size; acp supplies technical fulfillment fields.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured deadline demand or failure prevalence. Chosen fee GBP 500/month, integration GBP 250/month amortized, contribution GBP 25 per incremental retained on-time order after shipping.",
+        "calculation": "(500 + 250) / 25 = 30 additional retained on-time orders/month.",
+        "range": "No forecast. Zero is possible if deadlines are rare; negative contribution is possible if higher shipping costs or late deliveries exceed recovered orders."
+      },
+      "willingnessToPay": "Unvalidated pilot price: GBP 500/month, on top of any existing delivery-estimate provider. Test value against moving the merchant's current estimate earlier.",
+      "costControl": "Integrate existing delivery providers, cache by origin/destination/service within a short validity window, and refresh on meaningful stock or carrier events.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Fulfillment and carrier data",
+        "Approved tool or merchant-controlled entry flow",
+        "Destination consent",
+        "Quote invalidation and delivery tracking"
+      ],
+      "failureMode": "Estimates are stale, cache geography is wrong, or early shipping costs discourage buyers.",
+      "falsifier": "Early qualification does not increase retained on-time orders relative to showing the identical estimate at checkout, or late-delivery complaints increase.",
+      "sourceIds": [
+        "narvar",
+        "acp",
+        "openai-shopping"
+      ]
+    },
+    {
+      "id": "profound-06",
+      "title": "Resolve obsolete AI recommendations to an explicit successor",
+      "lens": "algorithmic",
+      "buyer": "Electronics, appliances and equipment brands with annual models or discontinued products that still appear in AI recommendations.",
+      "problem": "Old comparisons and product identities send buyers to a discontinued model, while the current replacement's differences remain unclear.",
+      "mechanism": "Discovery-to-selection stage: preserving the old model's identity and presenting a verified successor lets buyers complete a relevant purchase instead of hitting a dead end. Substitution requires the buyer's agreement.",
+      "intervention": "Build a versioned model-lineage graph from manufacturer records. Add visible predecessor/successor pages with exact differences, retained/lost compatibility, price changes and stock. Resolve an old model to a choice between remaining stock and a supported successor in owned tools; update supported feeds without reusing old item IDs.",
+      "competitorOverlap": "Schema.org already represents ProductModel successors, and ordinary ecommerce redirects/product recommendations handle replacements. Profound FactCheck detects outdated claims. The proposed value is verified lineage plus explicit difference-aware choice and a live order test, not adding schema alone.",
+      "edgeHypothesis": "A precise successor comparison converts more high-intent visits from obsolete AI recommendations than a generic redirect or generic related-product list.",
+      "dataNeeded": [
+        "Manufacturer release and discontinuation records",
+        "Model/variant/GTIN lineage",
+        "Compatibility and specification deltas",
+        "Old-model AI referral and owned-tool events",
+        "Orders and wrong-model returns"
+      ],
+      "experiment": "Randomize AI-origin visitors arriving at known obsolete-model pages before rendering to the existing discontinued-product experience or the successor comparison. Keep every arm truthful and preserve required safety/recall information. Primary endpoint is retained paid orders per visitor within 30 days. Run 8-12 weeks plus returns; cluster returning users and power from obsolete-model traffic. Measure all replacement purchases, not only the featured successor.",
+      "metric": "Retained-order rate per randomized obsolete-model entrant and model-confusion return rate. Public feed/lineage publication, if separately tested, needs randomized model families and fixed family-week order counts because it can change incoming traffic.",
+      "impactEvidence": "Hypothesized. successor establishes a representation, factcheck establishes adjacent diagnostics, and openai-feed establishes stable identity requirements; none proves conversion improvement.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed obsolete-referral volume. Chosen fee GBP 250/month, amortized curation GBP 100/month, contribution GBP 35 per additional retained order.",
+        "calculation": "(250 + 100) / 35 = 10 incremental retained orders/month.",
+        "range": "No forecast. Zero is plausible when legacy demand is tiny; negative effects arise when a successor loses a feature that made the original relevant."
+      },
+      "willingnessToPay": "Unvalidated price: GBP 250/month per frequently refreshed product family portfolio, with setup charged against measured lineage complexity.",
+      "costControl": "Review only actual model changes and observed legacy demand. Use deterministic ID joins after a human approves ambiguous lineage.",
+      "feasibility": "now",
+      "dependencies": [
+        "Accurate manufacturer lineage",
+        "Merchant control of obsolete product pages",
+        "Persistent shopper assignment and order tracking",
+        "Human review of material product differences"
+      ],
+      "failureMode": "A related product is mistaken for a true successor, or the replacement no longer satisfies the original task.",
+      "falsifier": "The experience produces no retained-order gain over truthful existing replacement pages, or wrong-model returns offset the gain.",
+      "sourceIds": [
+        "successor",
+        "factcheck",
+        "openai-feed"
+      ]
+    },
+    {
+      "id": "profound-07",
+      "title": "Show an evidence-backed fit verdict for an unfamiliar product",
+      "lens": "psychological",
+      "buyer": "Challenger brands whose products appear in AI shortlists but face buyer uncertainty at the first merchant visit.",
+      "problem": "An AI-generated 'best for' label gives the buyer a reason to look, but the merchant page often cannot verify the exact benefit or explain the tradeoff.",
+      "mechanism": "Evaluation stage: a short, checkable fit verdict reduces justified uncertainty and helps a suitable buyer decide. It should also steer unsuitable buyers away, limiting regret and returns.",
+      "intervention": "Create a compact decision component from verified product tests and specifications: meets, does not meet, and unknown for buyer-selected requirements, with evidence links and a plainly stated downside. Use the same facts in readable comparison pages. Compare real alternatives fairly and avoid invented reviews or claims about why a private AI chat chose the product.",
+      "competitorOverlap": "Profound already has FactCheck and comparison-content workflows. The proposed intervention is a shopper-controlled fit decision with honest unknowns, tested against the existing PDP; evidence links alone are not a differentiated business.",
+      "edgeHypothesis": "For unfamiliar products with a clear use-case match, verifiable tradeoffs increase retained orders more than generic persuasive copy and reduce fit-related returns.",
+      "dataNeeded": [
+        "Merchant-approved specifications and test records",
+        "Buyer-selected requirements",
+        "Existing PDP and price parity",
+        "Orders, return reasons and support questions",
+        "Document version and evidence expiry"
+      ],
+      "experiment": "Randomize identified AI-origin PDP entrants to the current page or the fit component, with assignment before requirement entry. Keep mandatory disclosures in both. Primary endpoint is retained paid orders within 14 days per randomized entrant. Run 6-8 weeks plus returns, powered for the unfamiliar-product cohort; analyze users who decline the component as assigned. Guard against false reassurance and artificially negative competitor descriptions.",
+      "metric": "Intention-to-treat retained-order-rate difference per all randomized AI-origin entrants. Report fit-related returns and contribution, and distinguish comprehension improvement from a purchase effect.",
+      "impactEvidence": "Hypothesized purchase impact. shortlist supplies adjacent observations about comparative decision behavior, not sales causality; factcheck documents substantial existing overlap.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed AI traffic or baseline conversion. Chosen fee GBP 250/month, evidence review GBP 100/month, contribution GBP 35 per additional retained order.",
+        "calculation": "(250 + 100) / 35 = 10 additional retained orders/month; returns must already be deducted from contribution.",
+        "range": "No forecast. The component can have zero effect or reduce orders by introducing friction; fewer unsuitable purchases may improve returns without increasing purchases."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 250/month for one category, compared with a merchant-written fit table and existing CRO tooling.",
+      "costControl": "Use deterministic requirement matching for approved facts; update only affected evidence when the product or test record changes.",
+      "feasibility": "now",
+      "dependencies": [
+        "Substantiated product evidence",
+        "Merchant PDP control",
+        "Enough AI-origin entrants",
+        "Order/return tracking"
+      ],
+      "failureMode": "The component becomes another marketing badge, adds cognitive work, or falsely resolves unknown requirements.",
+      "falsifier": "Only engagement or confidence rises, while retained-order rate and net contribution do not improve against a simple factual table.",
+      "sourceIds": [
+        "shortlist",
+        "factcheck",
+        "agents"
+      ]
+    },
+    {
+      "id": "profound-08",
+      "title": "Attach the correct helmet-standard evidence to the exact product",
+      "lens": "regulatory",
+      "buyer": "US adult bicycle-helmet brands and authorized specialist retailers with complete product testing records.",
+      "problem": "A buyer or assistant cannot confidently distinguish a bicycle helmet's actual standard, use limits and manufacturing identity from generic safety language or a similarly named variant.",
+      "mechanism": "Requirement qualification stage: accessible, correctly scoped evidence helps genuinely suitable products survive hard-filter shopping and reduces uncertainty before purchase. Documentation never makes an unsuitable or recalled product safe.",
+      "intervention": "Build a supplier-reviewed evidence dossier linked to model, intended use, production identification and applicable manufacturer/importer certification records. Publish accurate, human-readable claims and source links on the PDP and approved tool output. Return unknown when identity or evidence does not match; never label a product 'CPSC approved' based on our software.",
+      "competitorOverlap": "Profound FactCheck already compares claims with a source of truth. Suppliers already maintain compliance information. The extension is exact-product applicability and buyer-accessible evidence, not automated legal certification or a generic accuracy score.",
+      "edgeHypothesis": "For shoppers explicitly requiring a US bicycle standard, precise supporting evidence increases retained suitable-product purchases over equally compliant pages with only the existing standard statement.",
+      "dataNeeded": [
+        "Manufacturer/importer-approved records and labeling information",
+        "Model/lot applicability and intended-use boundaries",
+        "Current product status and safety notices",
+        "Buyer-declared standard/use requirements",
+        "Order, return and complaint outcomes"
+      ],
+      "experiment": "All mandatory warnings, required labels, recall actions and factual corrections remain in both arms. Randomize eligible AI-origin adult-helmet shoppers to standard compliant PDPs or those pages plus the optional evidence dossier. Primary endpoint is retained paid orders per randomized shopper within 14 days. Run 8-12 weeks plus returns, sized from this narrow cohort. Stop for any incorrect applicability or misleading safety claim; no experiment withholds necessary safety information.",
+      "metric": "Retained-order-rate difference among all randomized shoppers in the predeclared standard-seeking cohort. Track evidence errors, wrong-use purchases and complaints as critical guardrails; do not treat a certificate download as conversion.",
+      "impactEvidence": "Hypothesized commercial effect. cpsc verifies the regulatory context and documentation requirements as checked September 29, 2026. It does not endorse this service or establish that an evidence display increases sales.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured standards-led traffic or conversion. Chosen fee GBP 750/month, specialist review GBP 250/month, contribution GBP 25 per incremental retained order.",
+        "calculation": "(750 + 250) / 25 = 40 incremental retained orders/month to cover the chosen service and review costs.",
+        "range": "No sales forecast. Zero is plausible if the existing label is sufficient; negative impact is possible from confusion or slow evidence review."
+      },
+      "willingnessToPay": "Unvalidated pilot price: GBP 750/month for a specialist category. Price must include qualified supplier review; do not charge for a claimed compliance guarantee.",
+      "costControl": "Reuse approved evidence across genuinely identical models and lots while keeping applicability explicit. Avoid generating new legal interpretations with each request.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Qualified manufacturer/importer review",
+        "Current official requirements and product status",
+        "Exact identity matching",
+        "No publication without evidence approval"
+      ],
+      "failureMode": "A model-level document is wrongly applied to a different product, or shoppers mistake the display for regulator endorsement.",
+      "falsifier": "Correctly matched dossiers produce no retained-order gain against a compliant control, or applicability errors cannot be kept at zero.",
+      "sourceIds": [
+        "cpsc",
+        "factcheck",
+        "openai-feed"
+      ]
+    },
+    {
+      "id": "profound-09",
+      "title": "Recover valid AI-origin checkout sessions after a handoff error",
+      "lens": "infrastructural",
+      "buyer": "Merchants with approved agentic checkout or owned assistant-to-store integrations.",
+      "problem": "A chosen product can fail at checkout because the quoted state expired, a region is unsupported, authentication is needed or a recoverable message is not actionable.",
+      "mechanism": "Checkout stage: identifying the exact recoverable condition and returning the buyer to an authoritative existing session can rescue genuine buying intent without duplicating charges or silently changing the order.",
+      "intervention": "Build a checkout adapter and conformance suite that compares discovery offers with current merchant state, preserves session identity, translates structured errors into one clear correction, and provides a safe merchant-checkout fallback. Require explicit acceptance of changed price, item or fulfillment. Keep payment handling in the merchant's existing system.",
+      "competitorOverlap": "ACP already defines authoritative checkout state, structured errors and retry keys; Shopify already supplies cart links. The product is a tested merchant adapter plus recovery UX and order evidence, not invention of those protocol features. Access is partner-dependent.",
+      "edgeHypothesis": "A merchant-specific adapter recovers more retained orders than current generic error handling among valid sessions with remediable faults.",
+      "dataNeeded": [
+        "Sanitized discovery/checkout state snapshots",
+        "Structured error and capability logs",
+        "Session and idempotency identifiers",
+        "Approved fallback URLs",
+        "Payment/order confirmations, refunds and duplicate-charge reports"
+      ],
+      "experiment": "Test protocol correctness in a merchant sandbox first. For live recoverable errors, randomize shopper sessions before displaying either existing safe error handling or the improved correction/fallback. Both arms retain essential retry safety and required disclosures. Primary endpoint is retained paid orders within seven days per randomized error session. Run 8-12 weeks plus returns or longer if faults are rare; reject any duplicate charge, unauthorized substitution or consent regression.",
+      "metric": "Retained-order rate per all randomized eligible error sessions, counting at most one order per original purchase intent. Also report whole-funnel orders per AI-origin shopper so a changing error denominator cannot manufacture success.",
+      "impactEvidence": "Hypothesized. acp documents the state/error machinery, and checkout-access documents access limitations. No causal sales result for this adapter has been measured.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed error rate. Chosen fee GBP 500/month, adapter maintenance GBP 250/month, contribution GBP 30 per recovered retained order.",
+        "calculation": "(500 + 250) / 30 = 25 additional retained orders/month. Feasibility requires enough remediable failures to make even that ceiling possible.",
+        "range": "No forecast. Zero if native error handling already works; negative if extra round trips, expired state or incorrect fallback reduce completion."
+      },
+      "willingnessToPay": "Unvalidated price: GBP 500/month per integration, with custom initial work. First sell only after a read-only fault audit establishes a plausible recoverable-order ceiling.",
+      "costControl": "Use a finite-state adapter and deterministic validation; reserve model assistance for drafting reviewed messages. Sample telemetry rather than store complete private conversations.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Approved commerce integration",
+        "Merchant checkout engineering access",
+        "Current protocol-version contract tests",
+        "Safe sandbox and authoritative order status"
+      ],
+      "failureMode": "The adapter adds latency or stale state; an uncertain completion is retried as a new payment.",
+      "falsifier": "The upper bound on recoverable retained orders is below break-even, or the live adapter fails to beat existing safe recovery without any safety regression.",
+      "sourceIds": [
+        "acp",
+        "checkout-access",
+        "permalinks",
+        "openai-feed"
+      ]
+    },
+    {
+      "id": "profound-10",
+      "title": "Allocate AI ad spend using incremental orders alongside organic coverage",
+      "lens": "algorithmic",
+      "buyer": "Larger ecommerce advertisers with both organic AI visibility and access to AI search advertising.",
+      "problem": "High ad-attributed sales can include buyers who would already have bought through an organic AI recommendation or another channel.",
+      "mechanism": "Demand allocation stage: move a fixed media budget toward conversations/categories where paid exposure creates additional purchases, using organic coverage as one input rather than treating low visibility as automatic justification to spend.",
+      "intervention": "Build an allocator that combines pre-period organic observations, product margin/stock and randomized paid-lift estimates. Maintain an exploration and holdout budget, separate sponsored creative from organic product claims, and feed retained-order outcomes back into the spending rule.",
+      "competitorOverlap": "Profound Ads Studio already connects organic insight, paid share of voice, relevance scoring and campaign action. The proposed improvement is causal marginal-order allocation with retained-order holdouts, not a paid/organic dashboard or creative generator.",
+      "edgeHypothesis": "At equal total media spend, purchase-calibrated allocation yields more retained AI-origin orders and higher total merchant contribution than relevance/attributed-ROAS allocation.",
+      "dataNeeded": [
+        "Platform-permitted targeting and experiment controls",
+        "Pre-period organic observations by market/category",
+        "Paid exposure and click data where available",
+        "Fixed geo/category assignments and budgets",
+        "Orders across channels, returns, margins and promotion calendars"
+      ],
+      "experiment": "Randomize matched non-overlapping geo-category cells to the current allocation policy or the proposed equal-spend policy; preserve a platform-supported no-added-spend holdout where feasible. Assign before launch, keep organic work fixed, and analyze fixed cells. Primary endpoint is retained confirmed AI-origin order count per cell-week, with all-channel orders and contribution testing cannibalization. Run 8-12 weeks plus returns after cell-level power analysis; if platform controls cannot sustain assignments, no causal claim. Audit spillover, stock and promotions.",
+      "metric": "Incremental retained AI-origin orders per fixed randomized cell-week and per GBP of fixed media spend; require no offsetting fall in total retained orders/contribution. Ad-attributed ROAS and share of voice are secondary diagnostics.",
+      "impactEvidence": "Hypothesized. ads and changelog establish existing commercial workflow and beta limits. Neither publishes randomized retained-order incrementality for this allocation rule.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed traffic, conversion or media efficiency. Both policies use the same media budget. Chosen incremental software fee GBP 600/month, operations GBP 400/month, contribution GBP 40 per additional retained order.",
+        "calculation": "With equal media costs, (600 + 400) / 40 = 25 extra retained orders/month versus the existing allocation policy. Any increased media spend must be added to the numerator.",
+        "range": "No forecast. Zero if organic observations add no allocation value; negative if withholding ads loses profitable demand or noisy lift estimates misallocate spend."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 600/month plus an agreed experiment operations budget. Existing Ads Studio is direct competition; value must survive an equal-spend comparison.",
+      "costControl": "Use coarse, adequately powered cells and scheduled reallocation rather than high-frequency model-driven bidding. Preserve exploration so cheap exploitation does not lock in a false winner.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "AI ad account access and permitted experiment controls",
+        "Sufficient independent cells and order volume",
+        "Stable cross-channel order capture",
+        "Stock and margin feeds"
+      ],
+      "failureMode": "Organic monitoring poorly represents actual ad audiences, geo spillover contaminates controls, or attributed gains hide channel cannibalization.",
+      "falsifier": "At equal spend the rule fails to improve retained orders or contribution versus current allocation, or all apparent improvement disappears after measuring total merchant sales.",
+      "sourceIds": [
+        "ads",
+        "changelog",
+        "ga4",
+        "credits",
+        "openai-shopping"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "series-d",
+      "title": "Profound Raises $180M Series D at $1.8B Valuation to Build the AI Platform For Marketing Teams",
+      "url": "https://www.tryprofound.com/newsroom/profound-raises-usd180m-series-d-at-usd1-8b-valuation-to-build-the-ai-platform-for-marketing-teams",
+      "type": "official-doc",
+      "claim": "September 15, 2026 company disclosure of financing, 1,000+ enterprise brands, and AI Marketer/Context Manager expansion; not audited financial performance."
+    },
+    {
+      "id": "elc",
+      "title": "The Estée Lauder Companies Announces Partnership with Profound to Expand AI Visibility Across Its Global Brand Portfolio",
+      "url": "https://investors.elcompanies.com/en/news-and-media/newsroom/press-releases/2026/09-14-2026-173210983",
+      "type": "official-doc",
+      "claim": "A named merchant independently announces portfolio-wide adoption on September 14, 2026; no contract value or purchase uplift disclosed."
+    },
+    {
+      "id": "gr0",
+      "title": "How GR0 took a client from $1K to $100K/Month in AI-driven sales using Profound",
+      "url": "https://www.tryprofound.com/customers/gr0",
+      "type": "vendor-case",
+      "claim": "Unnamed DTC client's LLM-attributed monthly revenue reportedly grew from about $1,000 to over $100,000 following multiple agency interventions; no randomized holdout or profit calculation."
+    },
+    {
+      "id": "pricing",
+      "title": "Pricing - Profound",
+      "url": "https://www.tryprofound.com/pricing",
+      "type": "official-doc",
+      "claim": "Brands offer observed September 29, 2026: free seven-day trial, 50 daily prompts, then custom Enterprise; does not publish an Enterprise currency amount."
+    },
+    {
+      "id": "agents",
+      "title": "About Agents",
+      "url": "https://help.tryprofound.com/articles/9762251986-agents-overview",
+      "type": "official-doc",
+      "claim": "Workflow canvas supports model, data, web, CMS, branching, iterations and spreadsheet runs; automation is an existing capability."
+    },
+    {
+      "id": "changelog",
+      "title": "Changelog - Profound",
+      "url": "https://product.tryprofound.com/changelog",
+      "type": "official-doc",
+      "claim": "September 25 adds Shopping data and GA4 nodes to Agents. August 21 describes Ads Studio as private beta; entitlement should not be assumed universal."
+    },
+    {
+      "id": "shopping",
+      "title": "About Shopping",
+      "url": "https://help.tryprofound.com/articles/8862399588-about-shopping",
+      "type": "official-doc",
+      "claim": "Tracked-prompt ChatGPT Shopping observations include SKU, merchant, attribute and shopping-mode data; this is sampled exposure, not a census of shoppers."
+    },
+    {
+      "id": "analytics",
+      "title": "About Agent Analytics",
+      "url": "https://docs.tryprofound.com/agent-analytics/overview",
+      "type": "official-doc",
+      "claim": "CDN/server request monitoring and crawler classification; bot requests do not establish human demand or orders."
+    },
+    {
+      "id": "ga4",
+      "title": "Close the attribution gap with Google Analytics and Profound",
+      "url": "https://www.tryprofound.com/blog/google-analytics",
+      "type": "official-doc",
+      "claim": "GA integration attributes tracked revenue events to AI referrals. It depends on merchant tracking and is not a causal estimator."
+    },
+    {
+      "id": "markdown-rct",
+      "title": "We ran a controlled experiment on markdown vs. HTML for AI bots. Here's what happened",
+      "url": "https://www.tryprofound.com/blog/does-markdown-increase-ai-bot-traffic",
+      "type": "research",
+      "claim": "Vendor randomized 381 pages on six websites over three weeks; bot-visit differences were inconclusive. No purchase endpoint."
+    },
+    {
+      "id": "shortlist",
+      "title": "The shortlist is the new shelf",
+      "url": "https://www.tryprofound.com/blog/the-shortlist-is-the-new-shelf",
+      "type": "research",
+      "claim": "56 participants, 221 codable tasks, correlations with choices and attention; task instructions and repeated participants limit generalization. Completed purchases were not the measured endpoint."
+    },
+    {
+      "id": "retrieval-shift",
+      "title": "ChatGPT 5.6 has transformed Shopping mode",
+      "url": "https://www.tryprofound.com/blog/chatgpt-5.6-shopping-transformation",
+      "type": "research",
+      "claim": "September 3 vendor observational analysis reports large July changes in feed versus web retrieval; useful evidence of nonstationarity, not proof that feed integration causes a specific sales lift."
+    },
+    {
+      "id": "roadmap",
+      "title": "Introducing templates for AEO content creation",
+      "url": "https://www.tryprofound.com/blog/introducing-actions-templates",
+      "type": "official-doc",
+      "claim": "A historical post lists A/B testing new pages as future work; roadmap text does not verify a currently shipped randomized purchase-experiment product."
+    },
+    {
+      "id": "doc-index",
+      "title": "Profound developer documentation index",
+      "url": "https://docs.tryprofound.com/llms.txt",
+      "type": "official-doc",
+      "claim": "Public documentation index checked alongside help, product and research pages; no customer-facing frozen product-tool replay specification located. Absence of documentation is not absence of capability."
+    },
+    {
+      "id": "factcheck",
+      "title": "About FactCheck",
+      "url": "https://help.tryprofound.com/articles/5793584301-about-factcheck",
+      "type": "official-doc",
+      "claim": "Existing accuracy workflow compares AI claims with brand source material and identifies contributing citations; simply detecting wrong claims is already covered."
+    },
+    {
+      "id": "ads",
+      "title": "Profound Launches Ads Studio, Helping Marketers Generate and Optimize Advertising Campaigns Across AI Search Platforms",
+      "url": "https://www.globenewswire.com/news-release/2026/07/07/3323259/0/en/profound-launches-ads-studio-helping-marketers-generate-and-optimize-advertising-campaigns-across-ai-search-platforms.html",
+      "type": "official-doc",
+      "claim": "Vendor release describes paid share of voice, relevance scoring, creative generation and launch in invite-only beta; no randomized incremental-order result supplied."
+    },
+    {
+      "id": "credits",
+      "title": "Pricing: Agents credits",
+      "url": "https://help.tryprofound.com/articles/9359511602-profound-agents-credits",
+      "type": "official-doc",
+      "claim": "Agent runs consume estimated/actual credits, with configurable overage or pause behavior. Supports budget controls, not knowledge of vendor unit costs."
+    },
+    {
+      "id": "openai-shopping",
+      "title": "Shopping with ChatGPT Search",
+      "url": "https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search",
+      "type": "official-doc",
+      "claim": "Selection can use intent, context and provider data; price/shipping updates can lag. Merchant ranking and product selection are distinct. Shopify Catalog is integrated."
+    },
+    {
+      "id": "function-calling",
+      "title": "Function calling",
+      "url": "https://developers.openai.com/api/docs/guides/function-calling",
+      "type": "official-doc",
+      "claim": "Applications can provide functions and return their results to models. This enables our controlled proxy, without promising equivalence to ChatGPT's production shopping system."
+    },
+    {
+      "id": "web-search",
+      "title": "Web search",
+      "url": "https://developers.openai.com/api/docs/guides/tools-web-search",
+      "type": "official-doc",
+      "claim": "Responses API offers built-in search and search/open/find events; public controls do not expose full consumer retrieval, ranking, memory and checkout internals."
+    },
+    {
+      "id": "openai-feed",
+      "title": "Products",
+      "url": "https://developers.openai.com/commerce/specs/file-upload/products",
+      "type": "official-doc",
+      "claim": "Stable discovery-feed fields, identity/variant conventions and separate checkout requirements; draft schemas are not supported production integrations."
+    },
+    {
+      "id": "shopify-mapping",
+      "title": "Shopify Help Center | Mapping your product data sources for Shopify Catalog",
+      "url": "https://help.shopify.com/en/manual/shopify-catalog/mapping",
+      "type": "official-doc",
+      "claim": "Native mapping already supports preferred data sources, metafields and variant grouping; generic mapping is not a unique product."
+    },
+    {
+      "id": "permalinks",
+      "title": "Create cart permalinks",
+      "url": "https://shopify.dev/docs/apps/build/checkout/create-cart-permalinks",
+      "type": "official-doc",
+      "claim": "Single-merchant carts can be preloaded with exact variants and attribution attributes; does not give third parties access to private ChatGPT intent."
+    },
+    {
+      "id": "bundles",
+      "title": "Shopify Help Center | Eligibility and considerations for using product bundles",
+      "url": "https://help.shopify.com/en/manual/products/bundles/eligibility-and-considerations",
+      "type": "official-doc",
+      "claim": "Native fixed/multipack bundles and inventory handling already exist. A proposed compatibility solver must exceed ordinary bundling."
+    },
+    {
+      "id": "recommendations",
+      "title": "Shopify Help Center | Customize product recommendations with Shopify Search & Discovery",
+      "url": "https://help.shopify.com/en/manual/online-store/storefront-search/search-and-discovery-recommendations",
+      "type": "official-doc",
+      "claim": "Native related/complementary recommendations and quick-add exist; no novelty claim for accessory recommendations alone."
+    },
+    {
+      "id": "pricespider",
+      "title": "Where to Buy Shoppable Solutions - Instantly Shoppable | PriceSpider",
+      "url": "https://www.pricespider.com/where-to-buy/",
+      "type": "official-doc",
+      "claim": "Existing retailer routing, online/local availability and purchase measurement. These are adjacent capabilities, not unoccupied territory."
+    },
+    {
+      "id": "narvar",
+      "title": "Narvar Promise | AI Powered Estimated Delivery Dates",
+      "url": "https://corp.narvar.com/promise",
+      "type": "official-doc",
+      "claim": "Existing delivery-date prediction at PDP/cart/checkout. Vendor conversion claims are adjacent ecommerce claims, not a forecast for AI shopping."
+    },
+    {
+      "id": "successor",
+      "title": "successorOf - Schema.org Property",
+      "url": "https://schema.org/successorOf",
+      "type": "official-doc",
+      "claim": "ProductModel can point to its predecessor; publishing this relation alone does not show that any answer engine consumes it."
+    },
+    {
+      "id": "cpsc",
+      "title": "Bicycle Helmets Business Guidance",
+      "url": "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Bicycle-Helmets",
+      "type": "official-doc",
+      "claim": "US bicycle helmet requirements include testing, certification labels and production identification under 16 CFR Part 1203. A proposed evidence display is not certification or a legal assurance."
+    },
+    {
+      "id": "acp",
+      "title": "Checkout | Agentic Commerce Protocol",
+      "url": "https://www.agenticcommerce.dev/docs/reference/checkout",
+      "type": "official-doc",
+      "claim": "Merchant-owned checkout state, fulfillment choices, recoverable messages and optional idempotency keys are protocol features; implementation and engine access remain prerequisites."
+    },
+    {
+      "id": "checkout-access",
+      "title": "Plugin guidelines",
+      "url": "https://developers.openai.com/plugins/app-guidelines",
+      "type": "official-doc",
+      "claim": "Instant Checkout remains beta for select marketplace partners; public documentation is not merchant approval or universal availability."
+    },
+    {
+      "id": "dfw-ab",
+      "title": "A/B Testing Product Titles for Better Ads Performance",
+      "url": "https://www.datafeedwatch.com/blog/ab-testing-product-titles",
+      "type": "official-doc",
+      "claim": "DataFeedWatch already splits product titles across IDs and tracks URL performance for feeds, historically shopping ads. This does not validate organic AI purchase uplift."
+    }
+  ]
+}

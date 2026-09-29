@@ -1,0 +1,658 @@
+{
+  "lens": "regulatory",
+  "ideas": [
+    {
+      "id": "regulatory-01",
+      "title": "Recover destination-rejected baskets with a lawful local offer",
+      "lens": "regulatory",
+      "buyer": "Cross-border merchants and distributors whose AI-originated buyers hit unsupported destinations or product restrictions.",
+      "problem": "A shopping assistant can select the right model from an offer that the buyer cannot receive. A product ban, a platform restriction, an unavailable carrier and a missing address are different failures, yet each can end the purchase.",
+      "mechanism": "Selection and checkout. Determine the actual failure before recommending; when a permitted same-model local-stock offer exists, present it with the real seller and destination terms. Fewer dead ends may produce additional completed orders rather than wasted product clicks.",
+      "intervention": "Connect the merchant's approved SKU-by-destination rules, carrier acceptance and stock to a resolver that returns allowed, unavailable or needs-review with evidence timestamps. Where authorized distribution partners agree, resolve a permitted local offer and preserve the chosen variant in its checkout. Request the intended delivery destination; never infer nationality or bypass a restriction.",
+      "competitorOverlap": "Shopify Managed Markets already restricts and hides products by market and supports re-review [markets]. Shopify has agent carts and continue_url [cart]. The proposed gap is reason-specific recovery into another permitted offer. No absence of equivalent partner routing is established.",
+      "edgeHypothesis": "A network of local sellers plus auditable rule reasons recovers purchases that simple hiding loses. Its advantage should be greatest where identical models have different stock locations and commercial delivery coverage.",
+      "dataNeeded": [
+        "Exact SKU/model and merchant-of-record identity",
+        "Merchant-approved destination/category policy with source and review date",
+        "Carrier and platform restriction reasons separate from legal status",
+        "Local partner stock, price, delivery and order/refund feeds"
+      ],
+      "experiment": "Randomize eligible AI-originated shoppers before destination resolution, keeping the current lawful restrictions in both arms. Compare existing platform-supported availability UX with the optional local-offer recovery. Measure paid orders retained 45 days across participating sellers. Run at least eight weeks, then mature returns; power from observed failure prevalence and baseline, not a fixed promised lift. Guard against restricted sales, destination errors, silent seller swaps and extra fees.",
+      "metric": "Retained orders per all randomized destination-query shoppers, including those for whom no route exists. Report merchant share separately from network-wide additional purchases; a seller switch alone is not incremental demand.",
+      "impactEvidence": "Hypothesized. [markets] establishes a real restriction workflow; [geo] distinguishes delivery area from nationality; [gpsr] establishes relevant EU offer information. No causal purchase effect found for this proposed routing extension.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed traffic or conversion baseline. Choose EUR 600 monthly fee and EUR 40 contribution per additional retained order only for a break-even test.",
+        "calculation": "600 / 40 = 15 additional retained orders per month before integration costs. With onboarding cost I amortized over H months, threshold is (600 + I/H) / 40.",
+        "range": "Unknown. Zero or negative effects are possible if no permitted alternative exists, routing adds friction, or orders merely move between sellers."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: EUR 600 per month for one origin/destination corridor; require contribution-based payback after returns and partner fees.",
+      "costControl": "Reuse platform restriction states and cache unchanged source rules. Pay for human review only on high-intent ambiguous SKU/destination pairs; never resolve uncertainty by making a sale.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Approved local seller partnerships",
+        "A merchant compliance owner for country/product decisions",
+        "Native commerce access and carrier integrations",
+        "Clear offer ownership and lawful data sharing"
+      ],
+      "failureMode": "A stale permission or misleading local-seller substitution creates unfulfillable orders. Blanket residence filtering may conflict with EU geo-blocking protections.",
+      "falsifier": "No meaningful recoverable permitted-offer population, or an adequately powered test produces no additional retained network purchases after margin and cancellation costs.",
+      "sourceIds": [
+        "gpsr",
+        "gpsr-start",
+        "geo",
+        "markets",
+        "cart"
+      ]
+    },
+    {
+      "id": "regulatory-02",
+      "title": "Carry a verified discount entitlement through the agent handoff",
+      "lens": "regulatory",
+      "buyer": "Merchants running genuine student or professional discount programs that rely on third-party verification.",
+      "problem": "A shopper qualifies for a gated offer, but crossing from an assistant to a merchant checkout loses the verification result or triggers another document request.",
+      "mechanism": "Checkout eligibility. Reuse a short-lived, merchant-accepted proof for the same offer so a qualified customer sees and redeems the promised price without another verification loop.",
+      "intervention": "Create an offer-scoped proof exchange between an existing verification provider, a participating assistant and the merchant's discount extension. Bind proof to offer, expiry, audience and redemption limits; accept only issuer-approved claims, not an assistant's self-asserted status. Keep raw identity documents with the verifier. Always retain the normal verification path.",
+      "competitorOverlap": "SheerID already verifies eligibility and integrates gated offers [sheerid]. Shopify already supports discounts and agent checkout, but documents that WebMCP does not cover app-defined checkout extension interactions [cart]. W3C credentials supply an existing representation, not merchant trust [vc].",
+      "edgeHypothesis": "Bridging a specific verification extension produces fewer legitimate redemption failures than adding a generic wallet or another discount code. Cross-merchant reuse is valuable only when each merchant explicitly trusts the issuer and the claim scope.",
+      "dataNeeded": [
+        "Offer eligibility and discount rules",
+        "Issuer authorization, expiry and revocation/status mechanisms",
+        "Merchant acceptance contracts",
+        "Verification failure reasons and order-level fraud, discount and refund outcomes"
+      ],
+      "experiment": "Randomize shoppers when they request an eligible offer, before verification succeeds. Control uses the merchant's existing verification flow; treatment offers accepted proof reuse and the same fallback. Hold discount amount, products and expiry constant. Primary endpoint is retained paid orders per assigned shopper after 45 days. Run eight weeks plus maturation; calculate power from actual repeat-verification incidence. Guardrails include unauthorized redemptions, false refusals and identity disclosure.",
+      "metric": "Intention-to-treat retained purchase rate among everyone requesting the offer, including failed checks. Report saved verification steps separately; do not compare successful verifiers with unverified users.",
+      "impactEvidence": "Hypothesized. [sheerid], [cart] and [vc] support the workflow and implementation boundary. No measured incremental purchase result for this handoff adapter was located.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured funnel baseline. Choose EUR 400 monthly fee and EUR 25 contribution per retained order after discount and fraud cost.",
+        "calculation": "400 / 25 = 16 extra retained orders per month; add provider verification fees and integration amortization before declaring payback.",
+        "range": "Unknown; zero if repeat verification is rare, negative if proof reuse causes fraud or its extra consent step deters buyers."
+      },
+      "willingnessToPay": "Unvalidated test price: EUR 400 per month plus disclosed provider usage, tested against recovered contribution rather than gross discounted revenue.",
+      "costControl": "Use established verification providers and reuse only unexpired authorized proofs. Avoid building document verification or retaining raw documents.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Verifier cooperation",
+        "Merchant discount-extension integration",
+        "Secure audience-bound proofs",
+        "Appropriate consent and lawful-basis design for each processing purpose"
+      ],
+      "failureMode": "A credential format is mistaken for trusted eligibility, or a broad reusable identifier enables tracking across merchants. The extra proof UX may be slower than a working native flow.",
+      "falsifier": "The native verifier already preserves eligibility reliably, or reuse fails to increase retained orders without unacceptable unauthorized discounts.",
+      "sourceIds": [
+        "sheerid",
+        "vc",
+        "cart",
+        "consent"
+      ]
+    },
+    {
+      "id": "regulatory-03",
+      "title": "Bind the recommended seller to verifiable product provenance",
+      "lens": "regulatory",
+      "buyer": "Brands and authorized specialist retailers competing with visually identical offers whose seller or product provenance is unclear.",
+      "problem": "An assistant merges product evidence across sellers. The buyer sees a known model and assumes every linked offer has the same origin, support and condition, then hesitates or purchases from an unsuitable seller.",
+      "mechanism": "Selection and retailer choice. Present evidence tied to the exact seller/model offer, then preserve that identity through checkout. Reduced uncertainty may recover purchases from buyers who would otherwise abstain.",
+      "intervention": "Build a revocable brand-to-seller attestation for a scoped range of models and dates, plus exact GTIN/model matching and verified seller contact details. Offer a plain evidence view stating what was checked and what remains unknown. Where genuine serial or lot evidence exists, link it without treating a barcode match as physical authentication. Apply known recall blocks to every arm.",
+      "competitorOverlap": "Verified by GS1 already resolves identifier ownership [gs1], and Digital Link connects product IDs to information [digital-link]. GPSR already requires certain offer details [gpsr]. The extension is brand-confirmed seller scope plus preservation of that proof across AI recommendation and cart; other authentication platforms may already supply it.",
+      "edgeHypothesis": "Exact seller provenance matters more than another product-level trust badge when the same model appears through many retailers. Brand attestations should resolve ambiguity without excluding lawful independent resellers by default.",
+      "dataNeeded": [
+        "Brand-issued seller attestations and withdrawal dates",
+        "GTIN/model/condition-to-offer mapping",
+        "Current seller identity and support terms",
+        "Recall feeds and lot scope where available",
+        "Seller-specific order/refund/chargeback outcomes"
+      ],
+      "experiment": "Randomize eligible AI-originated shoppers viewing identical-model offers between the lawful current offer information and the scoped evidence view. Keep price, stock and ranking fixed. Primary endpoint is any retained network purchase after 45 days, with authorized-merchant share secondary. Run eight weeks plus returns; power around measured provenance-related hesitation. Never show recalled inventory or fabricate missing evidence.",
+      "metric": "Retained purchases per randomized shopper, plus seller-mismatch and authenticity-related return rates. Attribute seller shifts separately from recovered category purchases.",
+      "impactEvidence": "Hypothesized. [gs1] and [digital-link] support identity infrastructure; [gpsr] supports offer-information obligations. No source establishes a conversion effect for this attestation design.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed conversion or authenticity-failure baseline. Choose EUR 800 monthly brand-network fee and EUR 50 contribution per extra retained network order.",
+        "calculation": "800 / 50 = 16 additional retained orders per month, excluding issuance and investigation costs.",
+        "range": "Unknown. Zero if consumers already trust the seller; negative if ambiguous evidence is presented as suspicion or lawful resellers are wrongly excluded."
+      },
+      "willingnessToPay": "Unvalidated test price: EUR 800 monthly for one brand and a bounded seller network. Charge for measured recovered demand, not a badge sold as certification.",
+      "costControl": "Verify seller relationships once per scope/expiry and use revocation events. Do not repeatedly call a model to re-interpret unchanged attestations.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Brand participation",
+        "Seller identity and model resolution",
+        "Revocation and dispute process",
+        "A clear distinction between authorization, authenticity, condition and safety"
+      ],
+      "failureMode": "A stolen or overbroad attestation becomes false reassurance. A lack of attestation is incorrectly described as counterfeit or illegal.",
+      "falsifier": "The evidence view changes seller allocation but does not increase retained purchases or reduce material mismatches, or brands will not supply credible attestations.",
+      "sourceIds": [
+        "gpsr",
+        "gs1",
+        "digital-link",
+        "cart"
+      ]
+    },
+    {
+      "id": "regulatory-04",
+      "title": "Turn an approved PPE specification into an evidence-complete order",
+      "lens": "regulatory",
+      "buyer": "Workwear distributors serving small business buyers with an already approved equipment specification.",
+      "problem": "A purchaser knows the required standard, version, performance code and size, but must cross-check PDFs and ask support before ordering. Search often treats related standard names as interchangeable.",
+      "mechanism": "Qualification and checkout. Match exact user-supplied requirements to model-specific evidence, available sizes and quantities; a purchase that would wait for a manual document exchange can proceed with its evidence packet.",
+      "intervention": "Create a deterministic requirement matcher over distributor-approved declarations and product records. It returns satisfied, contradicted or not established for each supplied requirement, with exact document/model/version links, then builds the matching order and purchasing evidence packet. A competent person must set the worksite requirement; the system does not perform the hazard assessment or certify PPE.",
+      "competitorOverlap": "Manufacturers such as uvex already publish standards, performance codes and conformity documents [uvex]. The EU PPE declaration is established infrastructure [ppe]. The hypothesized extension is a multi-brand, inventory-aware evidence packet matched to a purchaser's approved requirement, not standards-name extraction.",
+      "edgeHypothesis": "Eliminating model/version ambiguity and support waits helps buyers with known requirements complete purchases. It can also make documented equivalent products saleable when the first choice is out of stock.",
+      "dataNeeded": [
+        "Exact approved purchasing requirements",
+        "Model-specific current declarations and manufacturer instructions",
+        "Structured performance codes without conflating standard versions",
+        "Size/quantity inventory and procurement order outcomes"
+      ],
+      "experiment": "Randomize purchasing accounts before their first specification lookup; compare normal distributor search/document access with the evidence-complete matcher. Apply the same product/safety restrictions and human escalation in both arms. Primary endpoint is paid orders whose selected models match the supplied documentary requirements, retained after 60 days per account. This is a document match, not a safety assurance. Run twelve weeks or the power-derived procurement cycle. Guardrails include document mismatch, unsafe substitutions and incorrect requirement interpretation.",
+      "metric": "Retained order rate per randomized account and time from specification entry to paid order. Count a bundled purchase once; report line-item units separately.",
+      "impactEvidence": "Hypothesized. [ppe] and [uvex] establish the documents and incumbent information available. No direct conversion experiment located for this proposed procurement flow.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured purchasing baseline. Choose EUR 900 monthly fee and EUR 90 contribution per additional retained account order.",
+        "calculation": "900 / 90 = 10 extra retained orders monthly, before expert document review and integration amortization.",
+        "range": "Unknown. Zero if procurement delays come from budgets or approvals; negative if overstrict matching wrongly rejects acceptable documented products."
+      },
+      "willingnessToPay": "Unvalidated test price: EUR 900 per distributor per month for one PPE class and a bounded approved library.",
+      "costControl": "Start with one well-defined class and parse source documents once with human validation. Use deterministic comparisons at runtime and route novel document versions for review.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Competent buyer-provided specification",
+        "Distributor-approved evidence library",
+        "Manufacturer permissions and document freshness",
+        "Procurement-account experimentation and inventory access"
+      ],
+      "failureMode": "Matching a standard is confused with suitability for a hazard. A declaration for a different model or old performance code gets attached to the order.",
+      "falsifier": "Expert review finds unreliable exact-model matches, or completed orders do not improve after document wait time falls.",
+      "sourceIds": [
+        "ppe",
+        "uvex"
+      ]
+    },
+    {
+      "id": "regulatory-05",
+      "title": "Sell a repairable device with a repair route the buyer can actually use",
+      "lens": "regulatory",
+      "buyer": "Electronics retailers and repair networks serving EU buyers who care about longevity and repair cost.",
+      "problem": "An official repairability class is useful, but a buyer still does not know whether a local or mail-in service can repair this exact model, what common repairs cost, or whether parts are obtainable.",
+      "mechanism": "Selection and purchase. Combine comparable official model information with a real current repair-service quote and terms. Buyers who hesitate because future service is vague can choose an offer with a usable repair route.",
+      "intervention": "Resolve the exact regional model to EPREL where in scope, expose the required label correctly, then request live indicative or binding repair quotes from participating repairers for predefined operations. Show quote date, geography, parts availability and limitations. If the seller offers a genuine funded future price cap or service commitment, disclose it distinctly from statutory rights. Add DPP records only where available and applicable.",
+      "competitorOverlap": "EPREL already exposes repairability data and source links [phone-label, eprel]. The DPP framework standardizes access for selected categories [dpp]. This proposal adds executable local service availability, not a new repairability badge or a claim every product needs a passport.",
+      "edgeHypothesis": "Repairability influences purchases more when converted into a concrete accessible service and understandable cost exposure. The opportunity depends on high-value buyers who actively ask longevity questions.",
+      "dataNeeded": [
+        "Exact model/region and EPREL mapping",
+        "Parts catalogs and current repair-provider coverage",
+        "Quote scope, expiry, exclusions and funded guarantee terms",
+        "Device orders, service redemptions, returns and contribution"
+      ],
+      "experiment": "Randomize AI-originated shoppers expressing longevity intent before their first comparison; both arms retain required labels and legal notices. Compare ordinary model/repair information with the optional live repair-route offer at the same device price. Primary endpoint is device orders retained after 60 days per assigned shopper; monitor contribution and any subsidized service cost. Run eight to twelve weeks plus maturation, powered from actual longevity-intent volume. No obligation to purchase an add-on.",
+      "metric": "Retained device purchases per randomized longevity-intent shopper. Report repair-service orders and device orders separately and avoid counting an add-on as another new shopper purchase.",
+      "impactEvidence": "Hypothesized. Official sources establish available labels and category-specific rules, not willingness to pay or causal purchase lift. Commission population-level savings projections are not used as our forecast.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured conversion baseline. Choose EUR 500 monthly fee and EUR 50 additional-order contribution after expected service commitment cost.",
+        "calculation": "500 / 50 = 10 extra retained device orders per month, plus integration and quote-operation costs.",
+        "range": "Unknown. Zero or negative device-order effects are possible if transparency favors keeping an existing device, increases perceived repair cost or shifts purchases between models."
+      },
+      "willingnessToPay": "Unvalidated test price: EUR 500 monthly for one device family and one repair network, excluding separately priced real service obligations.",
+      "costControl": "Cache official model data by version; quote only the operations and location the buyer requests. Reuse repair-network integrations instead of running a speculative insurance pool.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "EPREL/model reconciliation",
+        "Repairer capacity and quote API",
+        "Clear service-contract ownership",
+        "Product-specific legal scope and required display review"
+      ],
+      "failureMode": "An indicative current quote becomes a misleading long-term guarantee, or a high repairability score is mistaken for guaranteed cheap repairs.",
+      "falsifier": "No reliable service offer can be fulfilled, or the added assurance does not improve retained contribution after service costs.",
+      "sourceIds": [
+        "phone-label",
+        "eprel",
+        "dpp",
+        "guarantees"
+      ]
+    },
+    {
+      "id": "regulatory-06",
+      "title": "Make a refill or take-back claim resolve to a usable purchase route",
+      "lens": "regulatory",
+      "buyer": "Brands selling reusable packaging, refill systems or goods with a real take-back program.",
+      "problem": "A product can have a supported refill or take-back claim while the buyer cannot obtain compatible refills or access the collection route in their location. The shopper's actual condition is practical reuse, not an abstract green score.",
+      "mechanism": "Qualification and repeat purchase. Match the exact starter product to available compatible refills and the buyer's real return or collection options. The buyer can choose and complete a working system rather than abandon over unclear participation.",
+      "intervention": "Add an opt-in locality check that returns compatible refill SKUs, real delivery coverage, deposits, collection costs and accepted return condition. Build the initial order only after the chosen loop is serviceable. Present narrow supported environmental claims with scope and evidence; never infer that a reuse option proves a lower total footprint.",
+      "competitorOverlap": "Provenance already provides validated claims for product pages and AI discovery [provenance], including careful recycling-claim boundaries [provenance-evidence]. A generic claims ledger is direct overlap. The proposed extension is fulfillment of the buyer's local reuse condition and exact refill compatibility; equivalent service integrations remain unverified.",
+      "edgeHypothesis": "Practical participation availability resolves a buying objection that evidence badges cannot answer. It may raise first purchases and genuine repeat refill orders where a program already operates reliably.",
+      "dataNeeded": [
+        "Exact starter/refill compatibility",
+        "Program coverage, acceptance rules and current delivery stock",
+        "Deposit and return cost terms",
+        "Claim-specific evidence and scope",
+        "Initial and 90-day repeat paid order/refund outcomes"
+      ],
+      "experiment": "Randomize eligible AI-originated shoppers before locality checking. Compare the current truthful claim and normal ordering path with the optional serviceability check and compatible cart. Keep prices and mandatory information equal. Primary endpoint is first order retained after 45 days per assigned shopper; secondary is additional paid refill orders at 90 days. Run twelve weeks plus follow-up, with power based on true program demand. Guard against unsupported green claims, unusable deposits and forced subscriptions.",
+      "metric": "First retained purchases per randomized shopper, followed by separately reported incremental refill orders per original assigned shopper. Do not call a starter-plus-refill bundle two converted buyers.",
+      "impactEvidence": "Hypothesized. [green] and [green-start] establish current EU claim constraints; [provenance] establishes direct incumbent capability. No measured purchase effect found for the local serviceability extension.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured traffic or program-failure prevalence. Choose EUR 450 monthly fee and EUR 15 contribution per additional retained first order, excluding unobserved future repeats.",
+        "calculation": "450 / 15 = 30 additional retained first orders monthly. Count repeat contribution only when observed against the randomized holdout.",
+        "range": "Unknown. Zero or negative if locality checks reveal poor coverage, logistics costs exceed margin, or customers would have reordered anyway."
+      },
+      "willingnessToPay": "Unvalidated test price: EUR 450 monthly for one established program; test payment against first-order contribution before adding long-term value assumptions.",
+      "costControl": "Integrate existing program coverage and inventory tables. Recheck only changed regions/SKUs; no generic LLM judgment of environmental merit.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "A functioning refill/take-back operation",
+        "Exact compatibility and geographic coverage",
+        "Merchant-owned truthful claims and national implementation review",
+        "Retention measurement without compelled marketing consent"
+      ],
+      "failureMode": "A narrow recycling or refill attribute is presented as proof the whole product is sustainable. A service map is outdated and the customer pays for an unusable loop.",
+      "falsifier": "Program availability is already clear and complete, or the extension adds no retained first-order or repeat-order contribution against the competent baseline.",
+      "sourceIds": [
+        "green",
+        "green-start",
+        "provenance",
+        "provenance-evidence"
+      ]
+    },
+    {
+      "id": "regulatory-07",
+      "title": "Complete the inaccessible extension step after an AI cart handoff",
+      "lens": "regulatory",
+      "buyer": "Merchants whose otherwise working agent checkout escalates to a third-party identity, warranty, consent or payment-related interface.",
+      "problem": "The agent preserves the cart, but an extension's focus order, error recovery or authentication challenge leaves a keyboard or screen-reader user unable to finish the same purchase.",
+      "mechanism": "Checkout completion. Preserve the cart and provide an equally capable accessible route through the specific escalation step, so successful product discovery becomes an order.",
+      "intervention": "Map the real escalation step, integrate an audited semantic form with the provider, preserve selected variant and entered data, announce validation results and return focus predictably. Include a resumable human-assisted option when required. Test the entire purchase process with consenting assistive-technology users. Never bypass authentication or label an automated score as compliance.",
+      "competitorOverlap": "Shopify already has Cart MCP, WebMCP and continue_url, while explicitly excluding app-defined extension interactions from its WebMCP tools [cart]. Deque already provides retail accessibility testing [deque]. The opportunity is an executable adapter for a specific failing extension, not a generic accessibility audit or shared cart.",
+      "edgeHypothesis": "Fixing the merchant-to-extension transition will recover measurable purchases among users who can select a product but fail at that step. An accessible base checkout alone does not establish that every integrated provider journey works.",
+      "dataNeeded": [
+        "Actual extension states and handoff contracts",
+        "Keyboard and screen-reader usability findings",
+        "State-preservation and provider completion events",
+        "Consented user-research cohort and paid order/refund outcomes"
+      ],
+      "experiment": "Fix known unlawful or blocking defects for everyone first. Randomize eligible shoppers between two usable compliant baseline routes, with treatment offering the improved state-preserving accessible transition. Pre-register a consenting assistive-technology subgroup without covert disability inference. Primary endpoint is paid orders retained after 45 days per assigned shopper. Run eight to twelve weeks, allowing sparse subgroup power; task completion is diagnostic, not a purchase substitute.",
+      "metric": "Retained purchase rate for all assigned shoppers and the pre-specified opt-in subgroup. Report extension abandonment separately and do not sum subgroup and overall effects.",
+      "impactEvidence": "Hypothesized. [cart] documents the native interface boundary; [wcag], [eaa] and Netherlands-specific [acm] establish relevant process considerations. No direct incremental purchase result found for the adapter.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured defect rate or assisted-technology population estimate. Choose EUR 700 monthly service fee and EUR 35 contribution per additional retained order.",
+        "calculation": "700 / 35 = 20 additional retained orders monthly, before initial engineering and ongoing human testing costs.",
+        "range": "Unknown. Zero if the extension is already usable; negative if the adapter introduces slower validation or divergent cart totals."
+      },
+      "willingnessToPay": "Unvalidated test price: EUR 700 monthly plus a separately quoted extension integration. Commercial payback is separate from the merchant's existing accessibility obligations.",
+      "costControl": "Reuse the provider's approved APIs and test one high-volume extension end to end. Keep automated checks for regression detection and reserve human testing for changed interactions.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Provider integration access",
+        "Merchant ability to deploy equivalent accessible interfaces",
+        "Consenting human usability panel",
+        "Country-specific applicability review and complete-process testing"
+      ],
+      "failureMode": "An extra interface becomes an inaccessible parallel checkout or silently loses changes. An overlay masks defects without fixing the full process.",
+      "falsifier": "Human participants cannot reliably complete the full flow, or a powered comparison finds no retained-purchase improvement over an already accessible competent baseline.",
+      "sourceIds": [
+        "cart",
+        "deque",
+        "eaa",
+        "acm",
+        "wcag"
+      ]
+    },
+    {
+      "id": "regulatory-08",
+      "title": "Transfer a private shopping brief without creating another profile",
+      "lens": "regulatory",
+      "buyer": "Merchants in considered-purchase categories where customers arrive with detailed requirements but refuse account creation or broad data reuse.",
+      "problem": "A buyer supplies furniture dimensions, connector requirements or delivery constraints to an assistant, then repeats them at each retailer. Sending the whole conversation would expose unrelated personal context.",
+      "mechanism": "Selection continuity. A customer-controlled minimal brief preserves the actual buying requirements at the chosen merchant. Less repetition and less pressure to disclose unrelated context may retain shoppers who would otherwise leave.",
+      "intervention": "Create an explicit export of selected, editable non-sensitive requirements, encrypted to the chosen merchant and valid for one shopping session. Show recipient, fields, purpose and deletion/expiry before release; provide a plain manual path. The merchant returns matching products or a scoped clarification. Keep marketing, account creation and analytics choices separate. A consent receipt records the choice but is not a universal permission token.",
+      "competitorOverlap": "Shop Pay already carries payment/address identity [shop-pay]; native carts preserve items and context [cart]; True Fit already minimizes and scopes agent access to fit intelligence [truefit]. This proposal targets a no-account, user-authored cross-assistant brief outside fit, with per-recipient release and no central persistent profile. That narrower advantage is unproven.",
+      "edgeHypothesis": "Explicitly releasing only the necessary non-fit shopping requirements reduces privacy-related abandonment while preserving useful personalization. The benefit depends on actual repeated-input friction, not the novelty of a credential format.",
+      "dataNeeded": [
+        "User-selected requirement schema and exact field meanings",
+        "Recipient identity, purpose, expiry and deletion behavior",
+        "Merchant matching and clarification outcomes",
+        "Consent/fallback usability and minimal order outcome events"
+      ],
+      "experiment": "Randomize shoppers who choose to carry requirements into a participating merchant before any brief import. Compare ordinary editable manual entry with optional minimal import; both allow the same purchase without account or marketing consent. Primary endpoint is retained paid orders per assigned shopper after 45 days. Run eight weeks plus maturation, powering from actual transfer intent. Audit no cross-merchant correlation, involuntary data release or differential prices based on refusal.",
+      "metric": "Intention-to-treat retained purchase rate per transfer-intent shopper, including import refusal and manual fallback. Consent acceptance and saved keystrokes are secondary and cannot be the success metric.",
+      "impactEvidence": "Hypothesized. [consent] supports purpose-specific genuine choice, while [shop-pay], [cart] and [truefit] establish substantial existing continuity and privacy features. No causal purchase evidence found for the remaining non-fit brief exchange.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No observed privacy-abandonment rate. Choose EUR 350 monthly fee and EUR 35 contribution per additional retained order.",
+        "calculation": "350 / 35 = 10 extra retained orders monthly, before partner adoption, encryption and support costs.",
+        "range": "Unknown. Zero if buyers are happy to re-enter details; negative if the explanation and release step are more cumbersome than manual entry."
+      },
+      "willingnessToPay": "Unvalidated test price: EUR 350 monthly per merchant for one considered-purchase category, conditional on a distribution partner bringing measurable transfer-intent traffic.",
+      "costControl": "Use deterministic schemas and local field selection; no storage of full conversations. Start with one assistant/merchant pair and reuse existing carts.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "Participating assistants and merchants",
+        "Interoperable non-fit requirement semantics",
+        "Correct controller/lawful-basis and storage/access analysis",
+        "Meaningful deletion, expiry and plain fallback"
+      ],
+      "failureMode": "A nominally single-use brief becomes a tracking identifier or a consent banner grants broad unseen processing. Unsupported requirements lose meaning across merchants.",
+      "falsifier": "No repeated-input or privacy-sensitive abandonment is observed, partner adoption is unavailable, or optional import fails to improve retained purchases.",
+      "sourceIds": [
+        "consent",
+        "shop-pay",
+        "cart",
+        "truefit"
+      ]
+    },
+    {
+      "id": "regulatory-09",
+      "title": "Quote the actual return route before the customer buys",
+      "lens": "regulatory",
+      "buyer": "Furniture, bulky-goods and higher-value retailers where return logistics or support jurisdiction makes buyers hesitate.",
+      "problem": "A generic returns page leaves a buyer unsure how they would return this exact item from this address, what collection costs, or who handles a fault. Statutory rights and optional convenience services are often mixed.",
+      "mechanism": "Risk comprehension and checkout. A truthful address/item-specific return-service quote and clear seller responsibility reduce uncertainty for a buyer willing to purchase only when the practical exit route is manageable.",
+      "intervention": "Evaluate exact item dimensions, destination, condition rules and carrier coverage to issue a merchant-bound return-service quote alongside the offer. Separate change-of-mind policy, statutory remedies and optional collection convenience. Preserve the quoted applicable terms with the order and expose the actual request route. Reserve a carrier capacity option only if commercially real; do not invent insurance or make free legal rights a paid add-on.",
+      "competitorOverlap": "Narvar already provides self-service returns, configurable product/order rules and fees [narvar]. Native agent checkout already preserves an order path [cart]. The proposed extension is a precise pre-purchase logistics commitment carried through the AI offer, not publishing a friendlier generic policy.",
+      "edgeHypothesis": "Buyers of difficult-to-return goods value a real actionable service quote more than policy copy. The service must improve retained contribution after collection costs and any increase in returns.",
+      "dataNeeded": [
+        "Product shipping/return dimensions and condition rules",
+        "Customer-supplied destination",
+        "Carrier collection prices, coverage and service terms",
+        "Seller identity, statutory information and optional service distinctions",
+        "Mature order, cancellation, return and collection-cost outcomes"
+      ],
+      "experiment": "Randomize eligible AI-originated shoppers before quoting, comparing the current lawful full policy with optional item/address-specific service terms. Keep mandatory rights, item price and access to existing services equal. Primary endpoint is retained paid orders after a category-appropriate 60- or 90-day return window per assigned shopper. Run twelve weeks plus maturation; power and economic threshold include additional return costs. No withholding required rights or false unconditional-return claims.",
+      "metric": "Retained orders per all randomized quote-eligible shoppers and net contribution after return logistics. Report gross orders, return rate and support contacts separately.",
+      "impactEvidence": "Hypothesized. [guarantees] establishes distinctions and exceptions in EU rights; [narvar] establishes current returns tooling. No randomized incremental-purchase evidence located for this exact pre-purchase commitment.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured returns-hesitation baseline. Choose EUR 600 monthly fee and EUR 60 contribution per additional retained order after expected incremental collection costs.",
+        "calculation": "600 / 60 = 10 extra retained orders monthly. If the service changes return cost on existing orders, subtract that cohort-wide cost before applying the threshold.",
+        "range": "Unknown. Gross orders can rise while retained orders or contribution fall; zero and negative outcomes are explicitly possible."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: EUR 600 per month plus actual carrier charges, with a mature net-contribution check before renewal.",
+      "costControl": "Use existing return rules and carrier rate engines. Quote only for opted-in high-intent shoppers and cache product dimensions; do not add speculative free-return promises.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Return provider/carrier API",
+        "Merchant willingness to honor quoted terms",
+        "Jurisdiction and product-exception review",
+        "Complete mature return-cost ledger"
+      ],
+      "failureMode": "A convenient quote is mistaken for a restriction on statutory rights, or the quoted collection route cannot be fulfilled. Extra returns erase the sale benefit.",
+      "falsifier": "No retained contribution improvement after the return window, even if initial checkout conversion increases.",
+      "sourceIds": [
+        "guarantees",
+        "narvar",
+        "cart",
+        "green-start"
+      ]
+    },
+    {
+      "id": "regulatory-10",
+      "title": "Keep a genuine sale offer redeemable across price-history rules",
+      "lens": "regulatory",
+      "buyer": "EU merchants running variant-level promotions across feeds, AI recommendations and checkout.",
+      "problem": "A sale annotation can be valid under a platform's history rule while its advertised reference price does not meet the applicable legal rule. Separately, an assistant can carry an expired or wrong-variant offer into checkout.",
+      "mechanism": "Price comprehension and purchase. Maintain a trustworthy seller/variant price history and a live offer commitment so a buyer sees a genuine savings claim and can pay the quoted currently valid price.",
+      "intervention": "Maintain separate legal prior-price and platform-annotation evaluations over authoritative variant/channel history. Publish only reviewed applicable reduction claims and exact sale windows. At merchant-owned or approved partner recommendation time, issue an explicit time-limited quote for the selected variant that the merchant actually honors; refresh expired quotes before confirmation without fabricated urgency. Missing history yields no savings claim, not a guessed reference price.",
+      "competitorOverlap": "Google already supports sale effective dates [sale-date], validates annotations and applies market-specific history rules [sale-badge]. Merchant-authoritative checkout is native in OpenAI's approved-partner spec [openai-checkout] and Shopify [cart]. The gap is reconciling legally distinct histories with a genuine commitment across the recommendation-to-checkout interval.",
+      "edgeHypothesis": "Fewer unsupported savings claims and price mismatches increase retained purchases from real deal-intent shoppers. The effect must exceed what competent native sale scheduling and price refresh already achieve.",
+      "dataNeeded": [
+        "Authoritative variant, seller, currency and channel price events",
+        "Jurisdiction-reviewed prior-price rule and exceptions",
+        "Platform annotation rules and actual rendered offers",
+        "Quote issuance, expiry, redemption and order/refund records"
+      ],
+      "experiment": "First correct any unlawful reference-price claims for everyone. Randomize eligible AI-originated deal-intent shoppers between two lawful current-price experiences: standard native sale/checkout behavior and the optional evidenced-history plus honored-quote flow. Keep the economic offer equal except for a pre-funded quote-honor cost that is measured. Primary endpoint is retained paid orders after 45 days per assigned shopper. Run across at least two genuine promotion cycles, powering from actual mismatch prevalence; guardrails include margin, honest urgency and no discriminatory surprise pricing.",
+      "metric": "Retained orders per all randomized deal-intent shoppers, plus net contribution after price-honor costs. Annotation eligibility and model recommendation rates remain intermediate measures.",
+      "impactEvidence": "Hypothesized. [prior-price] and [sale-badge] establish different legal/platform reference frameworks; [sale-date] and [openai-checkout] establish a strong native baseline. No direct incremental purchase evidence located for this combined extension.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured stale-price or history-error rate. Choose EUR 300 monthly fee and EUR 20 contribution per extra retained order after quote-honor cost.",
+        "calculation": "300 / 20 = 15 extra retained orders monthly; also subtract any quote-honor subsidy spent on orders that would have happened anyway.",
+        "range": "Unknown. Zero if native scheduling and checkout already work; negative if price guarantees subsidize existing buyers or genuine discount evidence reduces perceived savings."
+      },
+      "willingnessToPay": "Unvalidated test price: EUR 300 monthly for one jurisdiction and promotion stack, with actual incremental contribution as the renewal criterion.",
+      "costControl": "Use append-only price events and deterministic rule evaluation. Reuse native feeds and checkout; call models only to assess buyer understanding in offline diagnostics.",
+      "feasibility": "now",
+      "dependencies": [
+        "Complete and accurate price history",
+        "Jurisdiction-specific review of Article 6a scope and exceptions",
+        "Merchant authority to honor quotes",
+        "Native feed and checkout integrations"
+      ],
+      "failureMode": "Google's 30-in-200-days annotation condition is mistaken for the EU legal prior-price rule, or the system presents a stale quote as a current public offer.",
+      "falsifier": "A competent native comparator already prevents meaningful mismatch, or the intervention does not increase retained contribution after subsidy.",
+      "sourceIds": [
+        "prior-price",
+        "sale-date",
+        "sale-badge",
+        "openai-checkout",
+        "cart"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "gpsr",
+      "title": "Regulation (EU) 2023/988, consolidated version of 29 May 2026",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/988",
+      "type": "official-doc",
+      "claim": "EU general product safety framework. Article 19 specifies information in distance-sale offers, including manufacturer, responsible person where applicable, identifiers and warnings. Indexed official text was retrieved; direct opens encountered bot checks. Applicability depends on product scope and other sector rules; these fields do not establish safety or a right to sell."
+    },
+    {
+      "id": "gpsr-start",
+      "title": "The new General Product Safety Regulation: consumer protection factsheet",
+      "url": "https://commission.europa.eu/document/download/a281b150-19fd-44f9-bef8-c6018f9c4792_en?filename=new_general_product_safety_regulation_-_factsheet.pdf",
+      "type": "official-doc",
+      "claim": "Commission factsheet identifies 13 December 2024 as the GPSR application date. It does not determine a particular merchant's or product's obligations."
+    },
+    {
+      "id": "geo",
+      "title": "Geo-blocking: Council adopts regulation to remove barriers to e-commerce",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2018/02/27/geo-blocking-council-adopts-regulation-to-remove-barriers-to-e-commerce/",
+      "type": "official-doc",
+      "claim": "EU rules restrict unjustified geographic discrimination but do not oblige a trader to deliver outside the areas it serves. Residency, delivery availability, product restrictions and carrier policy must be evaluated separately."
+    },
+    {
+      "id": "markets",
+      "title": "Prohibited and restricted items on Managed Markets",
+      "url": "https://help.shopify.com/en/manual/international/managed-markets/prohibited-items",
+      "type": "official-doc",
+      "claim": "Shopify already hides unsupported products by destination, gives review states and reasons, and permits improved metafields to trigger re-review. Carrier, payment and platform restrictions can differ from law. No custom rescue-flow conversion evidence established."
+    },
+    {
+      "id": "vc",
+      "title": "Verifiable Credentials Data Model v2.0",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/",
+      "type": "official-doc",
+      "claim": "W3C Recommendation of 15 May 2025 describes credentials, presentations, selective disclosure and verifier validation. Format conformance does not establish issuer trust, unlinkability or acceptance by a merchant."
+    },
+    {
+      "id": "sheerid",
+      "title": "Frequently Asked Questions - SheerID",
+      "url": "https://www.sheerid.com/faq/",
+      "type": "official-doc",
+      "claim": "SheerID offers instant consumer verification and integrations for gated offers, with shopper information requirements. This establishes direct competition in verification, not a measured effect for portable agent-to-checkout proof reuse."
+    },
+    {
+      "id": "gs1",
+      "title": "Verified by GS1",
+      "url": "https://www.gs1.org/services/verified-by-gs1",
+      "type": "official-doc",
+      "claim": "GS1's service verifies identity and ownership of GS1 identifiers using data-owner information. A valid identifier does not authenticate a physical item, prove an authorized seller relationship or rule out a recall."
+    },
+    {
+      "id": "digital-link",
+      "title": "GS1 Digital Link",
+      "url": "https://www.gs1.org/standards/gs1-digital-link",
+      "type": "official-doc",
+      "claim": "GS1 Digital Link connects identifiers with online information; published URI syntax version 1.6.0 is dated April 2025. It is an existing connection standard, not product certification or direct conversion evidence."
+    },
+    {
+      "id": "ppe",
+      "title": "Regulation (EU) 2016/425 on personal protective equipment",
+      "url": "https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A32016R0425",
+      "type": "official-doc",
+      "claim": "EU PPE regulation, Article 15 and Annex IX, requires model-specific declarations of conformity with manufacturer responsibility. Declaration presence and standards names alone do not establish suitability for a worksite or user."
+    },
+    {
+      "id": "uvex",
+      "title": "uvex unipur 6639 safety glove",
+      "url": "https://www.uvex-safety.com/en/products/safety-gloves/uvex-unipur-6639-safety-glove-6024806/",
+      "type": "official-doc",
+      "claim": "Manufacturer already publishes product article numbers, performance codes, standards versions, sizes and access to conformity declarations. This is the concrete incumbent information baseline, not evidence our workflow adds purchases."
+    },
+    {
+      "id": "phone-label",
+      "title": "Smartphones and Tablets - European Commission",
+      "url": "https://energy-efficient-products.ec.europa.eu/product-list/smartphones-and-tablets_en",
+      "type": "official-doc",
+      "claim": "EU ecodesign and energy-labelling rules apply from 20 June 2025 for covered devices placed on the market; scopes differ. EPREL contains model information including repairability class. Category exclusions and exact model matter. Population-level projected savings are not our conversion forecast."
+    },
+    {
+      "id": "eprel",
+      "title": "EPREL public smartphone and slate-tablet product record 2347994",
+      "url": "https://eprel.ec.europa.eu/screen/product/smartphonestablets20231669/2347994?navigatingfrom=qr",
+      "type": "official-doc",
+      "claim": "Example official model record exposes repairability information and links for spare parts, instructions and indicative prices. This demonstrates a source format; it does not verify a local repairer, stock, serial condition or service availability."
+    },
+    {
+      "id": "dpp",
+      "title": "Digital Product Passport - European Commission",
+      "url": "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en",
+      "type": "official-doc",
+      "claim": "DPP introduction is progressive and requirements come from product-specific delegated acts or separate legislation. The framework is not a universal present-day passport obligation, and planned act dates are not blanket market application dates."
+    },
+    {
+      "id": "green",
+      "title": "Directive (EU) 2024/825 on empowering consumers for the green transition",
+      "url": "https://eur-lex.europa.eu/eli/dir/2024/825",
+      "type": "official-doc",
+      "claim": "EU directive restricts generic environmental claims without relevant recognized excellent performance and overstating an aspect as a whole-product or whole-business claim. Indexed official clauses were read; direct opens encountered bot checks. National implementation and the specific claim require review."
+    },
+    {
+      "id": "green-start",
+      "title": "Sustainable consumption - European Commission",
+      "url": "https://commission.europa.eu/topics/consumers/consumer-rights-and-complaints/sustainable-consumption_en",
+      "type": "official-doc",
+      "claim": "Commission states Directive 2024/825 application began 27 September 2026, following transposition deadline 27 March 2026. It also describes legal-guarantee notice and durability-guarantee label changes."
+    },
+    {
+      "id": "provenance",
+      "title": "The proof behind product claims - Provenance",
+      "url": "https://www.provenance.org/",
+      "type": "official-doc",
+      "claim": "Provenance advertises validated product claims, retailer distribution and use in AI recommendations. Direct overlap with generic evidence-backed AI shopping facts; its current page alone does not establish randomized retained-order lift."
+    },
+    {
+      "id": "provenance-evidence",
+      "title": "Understanding the evidence requirements - Provenance",
+      "url": "https://knowledge.provenance.org/ensure-you-meet-the-evidence-requirements",
+      "type": "official-doc",
+      "claim": "Provenance distinguishes claim evidence from certificate evidence and scopes its curbside-recyclable packaging Proof Points. Source supports meaningful existing specificity, not a claim that the proposed local service eligibility check is absent."
+    },
+    {
+      "id": "eaa",
+      "title": "European Accessibility Act (EAA) - European Commission",
+      "url": "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en",
+      "type": "official-doc",
+      "claim": "EU EAA includes e-commerce among covered services, with national transposition and implementation. Its commercial relevance is access to the buying process; an automated test result is not legal assurance."
+    },
+    {
+      "id": "acm",
+      "title": "Accessibility of e-commerce services and electronic communications services - ACM",
+      "url": "https://www.acm.nl/en/accessibility/accessibility-e-commerce-services-and-electronic-communications-services",
+      "type": "official-doc",
+      "claim": "Dutch regulator describes service obligations since 28 June 2025, scope including selection/login/payment and exceptions including microenterprises. This page is Netherlands implementation guidance, not a universal rule for all jurisdictions."
+    },
+    {
+      "id": "wcag",
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "type": "official-doc",
+      "claim": "W3C Recommendation dated 12 December 2024 includes complete-process conformance, redundant entry and accessible authentication criteria. Useful engineering test reference, not by itself proof of satisfying all national EAA duties."
+    },
+    {
+      "id": "deque",
+      "title": "Digital accessibility in retail and ecommerce - Deque",
+      "url": "https://www.deque.com/retail-ecommerce-accessibility/",
+      "type": "official-doc",
+      "claim": "Deque already supplies automated, guided and manual testing for retail experiences. Our proposed handoff flow must beat this competent baseline rather than claim testing is new."
+    },
+    {
+      "id": "consent",
+      "title": "Guidelines 05/2020 on consent under Regulation 2016/679, version 1.1",
+      "url": "https://www.dpa.gr/sites/default/files/2020-07/edpb_guidelines_202005_consent_en.pdf",
+      "type": "official-doc",
+      "claim": "EDPB guidance adopted 4 May 2020, hosted by the Greek data protection authority, explains genuine choice, specific purposes, granular consent and withdrawal. Consent is one lawful basis; storage/access rules and other obligations still require independent assessment."
+    },
+    {
+      "id": "truefit",
+      "title": "True Fit Fit Intelligence: Technical Specification",
+      "url": "https://www.truefit.com/fit-intelligence-spec",
+      "type": "official-doc",
+      "claim": "July 2026 specification already offers scoped/revocable agent access, minimized outputs, fit recommendations and zero-profile fallback. Generic fit passports and consent wrappers are direct overlap; broad transport beyond fit is an unvalidated extension."
+    },
+    {
+      "id": "shop-pay",
+      "title": "Shop Pay accelerated checkout for fast, secure payments",
+      "url": "https://help.shopify.com/en/manual/payments/shop-pay",
+      "type": "official-doc",
+      "claim": "Shop Pay already saves customer email, payment and shipping/billing details across participating purchases. Account or identity continuity alone is not a novel intervention."
+    },
+    {
+      "id": "cart",
+      "title": "Carts and checkout for agents - Shopify",
+      "url": "https://shopify.dev/docs/agents/carts-and-checkout",
+      "type": "official-doc",
+      "claim": "Existing Cart MCP, checkout, continue_url, discount support and long-running carts cover basic agent purchase continuity. Documentation says WebMCP does not cover app-defined checkout extension interactions and lists unsupported checkouts. This specific limitation motivates testing specialized handoff adapters."
+    },
+    {
+      "id": "openai-checkout",
+      "title": "Product checkout conversion spec - OpenAI Developers",
+      "url": "https://developers.openai.com/plugins/guides/product-checkout-conversion-spec",
+      "type": "official-doc",
+      "claim": "Checkout integration documentation is an incumbent merchant-authoritative checkout baseline, with partner availability constraints. It does not imply arbitrary third-party eligibility, provenance or return-service adapters will be accepted or improve ranking."
+    },
+    {
+      "id": "guarantees",
+      "title": "Your rights when shopping in the EU - Your Europe",
+      "url": "https://europa.eu/youreurope/citizens/consumers/shopping/shopping-consumer-rights/index_en.htm",
+      "type": "official-doc",
+      "claim": "Official consumer guidance distinguishes trader purchases, private sellers, statutory guarantees, commercial warranties and withdrawal exceptions. EU minimum rights are not optional paid benefits; country and product exceptions matter."
+    },
+    {
+      "id": "narvar",
+      "title": "Narvar Return Overview",
+      "url": "https://support.narvar.com/hc/en-us/articles/11307520101651-Narvar-Return-Overview",
+      "type": "official-doc",
+      "claim": "Narvar already provides self-service returns and configurable policies, rules and fees by order, product and other variables. Precise pre-purchase return-service offer and integration availability require direct validation."
+    },
+    {
+      "id": "prior-price",
+      "title": "Guidance on the interpretation and application of Article 6a of Directive 98/6/EC (2021/C 526/02)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A52021XC1229%2806%29",
+      "type": "official-doc",
+      "claim": "Commission guidance explains that the prior price for an announced reduction generally refers to the lowest trader price in at least the preceding 30 days; applicability, exceptions and national options matter. This is distinct from platform badge rules."
+    },
+    {
+      "id": "sale-date",
+      "title": "Sale price effective date [sale_price_effective_date] - Google Merchant Center Help",
+      "url": "https://support.google.com/merchants/answer/6324460?hl=en",
+      "type": "official-doc",
+      "claim": "Google already supports variant sale windows with times and time zones. Providing a date does not prove timely propagation into every AI shopping output."
+    },
+    {
+      "id": "sale-badge",
+      "title": "About sale price annotations - Google Merchant Center Help",
+      "url": "https://support.google.com/merchants/answer/9017019?hl=en",
+      "type": "official-doc",
+      "claim": "Google applies country/channel-specific history thresholds and validates website prices; display is not guaranteed. For several markets the stated history rule is 30 days in 200, which is not the legal prior-price rule in EU Article 6a."
+    }
+  ]
+}

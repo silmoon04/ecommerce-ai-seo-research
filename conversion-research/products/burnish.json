@@ -1,0 +1,672 @@
+{
+  "id": "burnish",
+  "name": "Burnish",
+  "benchmarkType": "workflow",
+  "winningEvidence": [
+    "Selected for unusually complete documented monitoring, diagnosis, mutation and remeasurement, not for proven profitability.",
+    "The vendor's case-study page has no published customer results as checked 2026-09-29; Threshold Footwear is representative demo data.",
+    "The Shopify listing has two five-star reviews after seven and eight days of use. These support early perceived usefulness, not retention or incremental purchases."
+  ],
+  "currentOffer": "Shopify AI visibility and catalog/content optimization for merchants and agencies. Checked 2026-09-29: Presence USD149/month, Authority USD299/month, Omnipresence USD649/month, with tiered monitoring and execution allowances. Published offer and price are verified; adoption, profitability and plan-level ROI are unknown.",
+  "conversionMechanism": "Better-supported, retrievable product facts could earn qualified discovery; correct offer and policy information could reduce hesitation. Burnish then observes AI-associated orders. Each link requires validation: catalog readiness, engine exposure, referral traffic and incremental purchases are different outcomes.",
+  "harness": {
+    "offlineSimulation": "not_found",
+    "liveMonitoring": "documented",
+    "randomizedExperiment": "not_found",
+    "purchaseMeasurement": "documented",
+    "details": "Reviewed product, methodology, engine, help, changelog and case-study pages. Live answer sampling and order-linked attribution are documented; controlled tool-response replay was not found. The methodology explicitly says there is no randomized control group. 'Not found' describes this source search, not all private capability. Its named model samplers do not establish exact production consumer-shopping parity."
+  },
+  "strengths": [
+    "Source-grounded brand facts and separate identity/accuracy checks are already part of the documented workflow.",
+    "Existing approval gates, dependency checks and recorded undo state set the implementation baseline; those controls alone are not whitespace.",
+    "Public methodology distinguishes readiness from observed visibility and qualifies its observational measurement.",
+    "Order-source corroboration and published caveats are more useful than an unsupported promise of guaranteed AI placement."
+  ],
+  "limits": [
+    "No public causal purchase result or verified financial success was established; no product was installed or tested hands-on.",
+    "A bootstrap interval describes estimator uncertainty; it cannot remove campaign, seasonal, inventory or model-change confounding.",
+    "Repeated answers and correlated measurement windows require clustered analysis; their count does not equal independent consumer demand.",
+    "Missing AI referrers and simultaneous changes limit attribution. Public cohort documentation does not make overlap handling auditable.",
+    "Pricing lists 50/100/500 prompts, while engine and methodology pages list 50/50/100 discovery questions. Catalog page retains a 7,000-product ceiling that the July 28 changelog says was removed.",
+    "Public sampler documentation does not establish consumer ChatGPT query rewriting, ranking, personalization or checkout equivalence."
+  ],
+  "improve": [
+    "Choose interventions by expected additional paid purchases and verify allocation against a fixed-capacity comparator.",
+    "Treat offline replay as a hypothesis filter, then calibrate it against held-out merchant purchase experiments.",
+    "Extend into actual selection and checkout failures: variant continuity, delivery deadlines, compatibility and truthful return eligibility.",
+    "Preserve native Shopify capabilities as the comparator and measure all-channel displacement where inventory is shared."
+  ],
+  "ideas": [
+    {
+      "id": "burnish-01",
+      "title": "Prioritize fixes by recoverable paid orders",
+      "lens": "algorithmic",
+      "buyer": "A Shopify growth lead with more proposed fixes than implementation capacity.",
+      "problem": "Readiness gaps do not identify the most valuable blocked purchase journeys; low-demand products can consume the action allowance.",
+      "mechanism": "Allocate the same implementation capacity to evidenced purchase blockers on products with real AI-origin demand. If those repairs remove binding constraints, more shoppers complete orders. This is an enabling allocation mechanism and has no purchase value unless deployed repairs work.",
+      "intervention": "Build an action queue ranked by estimated recoverable paid orders, using observed AI-arrival demand, specific failure prevalence, inventory and conservative treatment evidence. Keep exploration slots for uncertain products. Mandatory truth or safety corrections always ship separately.",
+      "competitorOverlap": "Burnish already prioritizes projected readiness lift and offers cohort ROI. Constructor already evaluates behavioral search against purchase metrics. The narrower hypothesis is incremental value from purchase-loss allocation across merchant changes; equivalent private tooling is unknown.",
+      "edgeHypothesis": "Under a fixed number of implemented actions, a queue driven by recoverable order loss produces more incremental AI-origin purchases than readiness-gap ordering.",
+      "dataNeeded": [
+        "Consented or otherwise permitted AI-source event classification with missing-source rates",
+        "Action-to-product dependency graph",
+        "Inventory and price history",
+        "Paid orders, cancellations and matured returns",
+        "Baseline demand and available implementation capacity"
+      ],
+      "experiment": "Randomize disjoint product-family clusters within stores to purchase-loss scheduling or readiness-gap scheduling, with equal action capacity and stratification by baseline demand. Primary endpoint: deduplicated paid, non-test AI-origin orders per assigned family-week. Keep competing campaign changes logged and shared-page changes out of the trial. Allow ingestion wash-in, then at least eight full weeks subject to a cluster-level power plan; low order counts remain inconclusive. Guardrails: all-channel orders, retained orders, margins and urgent corrections.",
+      "metric": "Intention-to-treat difference in paid AI-origin orders per randomized family-week; missing referrers remain unknown, not labelled AI. Report all-channel orders as a sensitivity check and separate margin from the primary purchase objective.",
+      "impactEvidence": "Hypothesized. b-catalog and b-cohort establish the existing allocation baseline; constructor is adjacent vendor evidence that onsite purchase comparisons are feasible, not a transferable uplift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume an unvalidated USD300 monthly fee and USD40 contribution per additional retained order; no traffic or uplift assumption.",
+        "calculation": "Break-even retained orders = 300 / 40 = 7.5, so eight additional orders per month before extra implementation cost.",
+        "range": "No supportable lift range. Zero if the competing queues choose equally valuable work; negative if noisy demand estimates displace effective repairs."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: USD300/store/month, within Burnish's published USD149 to USD649 monthly price band; offer only to stores with enough measurable order opportunity.",
+      "costControl": "Reuse existing change execution and spend investigation effort on uncertainty that could change action order; do not save money by skipping high-value repairs.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable action lineage",
+        "Merchant order and inventory access",
+        "Enough independent product clusters",
+        "A delivery team or execution integration"
+      ],
+      "failureMode": "Biased attribution or low volumes favor already popular products, while spillover between products makes effects hard to isolate.",
+      "falsifier": "At equal implementation capacity, a powered trial excludes the preregistered minimum purchase gain, or readiness ordering wins on retained orders.",
+      "sourceIds": [
+        "b-catalog",
+        "b-cohort",
+        "constructor"
+      ]
+    },
+    {
+      "id": "burnish-02",
+      "title": "Calibrate simulated winners against purchase holdouts",
+      "lens": "measurement",
+      "buyer": "An agency or optimization platform choosing which proposed catalog changes deserve live deployment.",
+      "problem": "A synthetic shopper's recommendation rate can improve without any consumer engine discovering the change or any human buying.",
+      "mechanism": "Learn which offline effects transfer to actual orders, then use that evidence to select interventions. More effective changes reach production; misleading simulation winners stop consuming merchant effort.",
+      "intervention": "Create a registry linking frozen tool-response experiments, model/tool versions and unchanged result sets to prospectively randomized live merchant trials. Estimate transfer by intervention class on held-out stores and time periods. Keep rank moves as sensitivity tests, never deployable gains.",
+      "competitorOverlap": "Burnish documents live observations and directional before/after measurement but no randomized control group. OpenAI supports function tools and eval design; Constructor demonstrates adjacent purchase A/B testing. A calibrated public-AI-to-orders registry was not found in the Burnish pages reviewed.",
+      "edgeHypothesis": "A transfer-calibrated selection rule chooses a better portfolio of deployable changes than selecting by raw simulated recommendation increase.",
+      "dataNeeded": [
+        "Frozen retrieval fixtures and exact intervention bytes",
+        "Independent, consented shopper intent samples",
+        "Model, tool, locale and timestamp versions",
+        "Human judgments for factual comprehension",
+        "Live randomization assignments and paid-order outcomes"
+      ],
+      "experiment": "At the portfolio level, randomize disjoint store/category clusters to changes selected by the calibrated rule or raw simulation ranking, holding implementation budget fixed. Primary endpoint: AI-origin paid orders per assigned cluster-week, corroborated by all-channel orders. Use held-out merchants, ingestion wash-in and a preregistered power horizon, likely multiple months for low AI volumes. Cluster repeated model outputs by intent; they are not independent shoppers. Guardrails: factual accuracy, refunds and zero hidden changes to live third-party tools.",
+      "metric": "Purchase treatment effect from live assignments is primary. Offline recommendation rate uses independent intent fixtures as the denominator and is reported only as a simulation metric; its correlation with held-out treatment effects is a separate calibration metric.",
+      "impactEvidence": "Hypothesized. oa-tools establishes controllable application output; oa-evals supports representative data and human calibration. b-method explicitly rules out causal trial interpretation for Burnish's present method.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume an unvalidated USD1,000 agency-month fee and USD40 contribution per additional retained order across the participating portfolio; no empirical transfer rate is assumed.",
+        "calculation": "Break-even = 1,000 / 40 = 25 additional retained portfolio orders/month, plus the cost of running sufficient live experiments.",
+        "range": "Zero if simulated effects carry no actionable information; negative if false positives displace useful changes or trials cost more than the value created."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot: USD1,000/agency/month. A paid pilot must prove improvement in selected interventions, not just more detailed evaluation reports.",
+      "costControl": "Use offline runs to screen inexpensive hypotheses, but preserve live trial budgets and independent validation sets. Stop repeated identical runs once Monte Carlo uncertainty is below decision uncertainty.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Consenting merchant cohort",
+        "First-party experiment deployment",
+        "Order instrumentation",
+        "Time for ingestion and purchase maturation"
+      ],
+      "failureMode": "The calibration overfits engines, merchants or seasons; apparent transfer comes from leakage between training and held-out stores.",
+      "falsifier": "Out-of-sample simulation rankings fail to predict useful purchase effects, and calibrated selection does not outperform an equally resourced simple rule.",
+      "sourceIds": [
+        "b-method",
+        "oa-tools",
+        "oa-search",
+        "oa-evals",
+        "constructor"
+      ]
+    },
+    {
+      "id": "burnish-03",
+      "title": "Carry the selected variant and constraints into checkout",
+      "lens": "infrastructural",
+      "buyer": "A merchant or shopping-agent operator losing buyers between a recommendation and its storefront.",
+      "problem": "An AI shopper may select a precise size, color or model, yet the link opens a generic page or a checkout whose selection no longer matches.",
+      "mechanism": "Preserve the selected product and verify its critical constraints at handoff so the buyer avoids repeating selection or accidentally buying the wrong variant. Reduced handoff failure can increase completed purchases.",
+      "intervention": "Add a short-lived signed handoff record for variant ID, quantity, market and explicitly shared constraints, with source timestamp. Revalidate it against the live cart; show any changed term and request buyer acceptance before proceeding. Use native Shopify cart tools underneath.",
+      "competitorOverlap": "Shopify already offers variant checkout_url values, Cart MCP and cart permalinks. Burnish edits catalogs. The additional proposition is constraint continuity and a readable discrepancy check; a prefilled cart alone is already native.",
+      "edgeHypothesis": "For qualifying AI handoffs with demonstrable variant loss, a verified handoff record increases paid-order completion over the existing native link flow.",
+      "dataNeeded": [
+        "Variant and market identifiers",
+        "Partner-supplied or buyer-confirmed constraints, never an assumed hidden prompt",
+        "Live cart response and warnings",
+        "Permitted source marker and experiment assignment",
+        "Orders and wrong-variant return reasons"
+      ],
+      "experiment": "Randomize eligible AI handoffs before landing to current native cart/permalink behavior or verified handoff, with sticky buyer assignment where consent permits. Primary endpoint: paid non-test orders within seven days per assigned handoff. Run at least four complete weeks and the sample required by a preset minimum effect; exclude incompatible subscription paths until supported. Guardrails: checkout latency, selection changes, duplicate carts and wrong-variant returns.",
+      "metric": "Paid buyers divided by all randomized eligible handoffs, including failed revalidations and abandoned notices. This tests post-discovery conversion, not increased AI visibility.",
+      "impactEvidence": "Hypothesized; shop-cart and shop-link establish feasible native primitives and substantial existing overlap. No measured uplift for the added verification layer was found.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume USD200/month and USD40 contribution per extra retained order; actual handoff failure prevalence must be measured first.",
+        "calculation": "Break-even = 200 / 40 = five additional retained orders/month. Addressable orders cannot exceed the measured handoffs affected by a recoverable mismatch.",
+        "range": "Zero if native links already preserve choices correctly; negative if the discrepancy screen adds friction to otherwise successful checkouts."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD200/store/month after a diagnostic identifies enough failed handoffs to exceed the five-order illustrative break-even.",
+      "costControl": "Validate only volatile or decision-critical fields, batch cart reads and reuse provider links. Do not cache price or stock beyond their permitted freshness.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "A controllable agent or link integration",
+        "Shopify cart access",
+        "Stable variant mapping",
+        "Explicit shopper confirmation when terms change"
+      ],
+      "failureMode": "Most external assistants do not pass intent, so coverage is narrow; an extra handoff screen can lower conversion.",
+      "falsifier": "Mismatch prevalence is negligible, or a powered comparison against native cart links shows no improvement in paid orders.",
+      "sourceIds": [
+        "shop-cart",
+        "shop-link",
+        "b-catalog"
+      ]
+    },
+    {
+      "id": "burnish-04",
+      "title": "Qualify offers against the buyer's delivery deadline",
+      "lens": "temporal",
+      "buyer": "A gift, event, replacement-part or travel-goods merchant with time-sensitive purchases.",
+      "problem": "A relevant, in-stock product can be useless to the buyer if it arrives after the required date, creating late checkout abandonment.",
+      "mechanism": "Answer whether this exact offer can meet a volunteered deadline before the buyer commits. Surface truthful feasible options sooner and reduce abandonment caused by an unusable delivery promise.",
+      "intervention": "Expose a merchant-owned offer tool that combines a selected variant, coarse destination supplied by the buyer, available inventory, fulfillment cutoff and current delivery estimates. Return qualifying options, uncertainty and expiration; recheck before checkout. Never label an estimate guaranteed unless the merchant actually guarantees it.",
+      "competitorOverlap": "Narvar already sells delivery estimates and conversion analysis; Shopify agent carts already expose commerce context. The testable extension is deadline qualification in AI selection plus a consistent handoff, not another estimated-date badge.",
+      "edgeHypothesis": "Deadline-aware qualification yields more completed, on-time orders per time-sensitive shopping session than recommending first and revealing shipping later.",
+      "dataNeeded": [
+        "Buyer-volunteered deadline and destination",
+        "Inventory by fulfillment location",
+        "Carrier and warehouse performance",
+        "Merchant delivery promises and cutoff calendars",
+        "Paid orders, delivery events and cancellations"
+      ],
+      "experiment": "Within a controllable merchant assistant or partner agent, randomize deadline-bearing sessions to current product selection or deadline-qualified offers. Primary endpoint: paid orders within seven days per assigned session; preregister delivered-on-time orders as a guardrail. Run across at least four full weeks and a power-derived sample, stratifying peak periods. Avoid geographic randomization if inventory pools interfere; monitor warehouse capacity and latency.",
+      "metric": "Paid orders per all randomized deadline-bearing sessions, including sessions with no qualifying offer. Also report fulfilled on-time orders and cancellations; do not count unavailable alternatives as successful recommendations.",
+      "impactEvidence": "Hypothesized extension. narvar provides adjacent vendor support for the importance and commercialization of delivery estimates, not causal evidence for an AI recommendation tool.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume USD300/month and USD40 contribution per extra retained order; neither deadline-intent share nor abandonment reduction is assumed.",
+        "calculation": "Break-even = 300 / 40 = 7.5, rounded to eight retained orders/month. Potential benefit is bounded by measured time-sensitive sessions with feasible inventory.",
+        "range": "Zero if delivery is already clear or no offer meets deadlines; negative if uncertain estimates overpromise or qualification hides acceptable products."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD300/store/month, tested against existing delivery-promise software plus a small custom integration.",
+      "costControl": "Use existing logistics providers and cache nonvolatile warehouse calendars; refresh the actual promise at checkout even when it costs another request.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Fulfillment and carrier integrations",
+        "Partner agent or merchant assistant",
+        "Volunteered destination data",
+        "Merchant-approved promise policy"
+      ],
+      "failureMode": "Carrier shocks invalidate predictions; false exclusions reduce selection and false promises create cancellations.",
+      "falsifier": "No incremental paid orders after a powered test, or the rate of missed promised dates increases enough to erase retained-order gains.",
+      "sourceIds": [
+        "narvar",
+        "shop-cart"
+      ]
+    },
+    {
+      "id": "burnish-05",
+      "title": "Recover stale AI links without losing the buyer's requirements",
+      "lens": "behavioral",
+      "buyer": "A merchant whose AI-referred landing pages frequently lead to sold-out or discontinued variants.",
+      "problem": "Generic related-product recommendations can offer visually similar alternatives that fail the requirement behind the original recommendation.",
+      "mechanism": "When a linked product is unavailable, preserve the buyer's stated nonnegotiable constraints while presenting purchasable alternatives. Recover buyers who would otherwise leave because the recommended product cannot be bought.",
+      "intervention": "Build a fallback selector triggered by a verified unavailable variant. Let the buyer confirm key constraints when intent is unknown; test alternatives against those constraints and inventory, disclose differences, and require an explicit choice. Keep the original product's unavailable status visible.",
+      "competitorOverlap": "Shopify Search & Discovery already has related products, manual alternatives and stock filtering. The proposed edge is constraint-preserving recovery at stale AI links; existing recommendation apps may implement similar rules.",
+      "edgeHypothesis": "A constrained recovery flow beats native related products for completed orders among AI-origin visitors landing on unavailable items.",
+      "dataNeeded": [
+        "Unavailable-variant landing frequency by source",
+        "Original product's verified attributes",
+        "Buyer-confirmed hard constraints",
+        "Alternative inventory and price",
+        "Orders and mismatch return reasons"
+      ],
+      "experiment": "Randomize eligible AI-origin visitors at the unavailable landing page to native related products or constrained alternatives, before they answer any question. Primary endpoint: any paid non-test order within seven days per assigned visitor. Run at least four full weeks and the preset powered sample. Count buyers who decline clarification in the denominator. Guardrails: substitution returns, price surprises and disclosure accuracy.",
+      "metric": "Incremental paid-order rate over all randomized unavailable-item arrivals, with alternatives and other store purchases deduplicated. No claim of rescuing all simulated stock failures.",
+      "impactEvidence": "Hypothesized. shop-related documents a strong native comparator, including stock-aware recommendations; it does not establish extra value from preserving AI-era constraints.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume USD150/month and USD30 contribution per extra retained order; measure unavailable AI-arrival volume rather than assume it.",
+        "calculation": "Break-even = 150 / 30 = five additional retained orders/month. If fewer than five recoverable arrivals exist, this sensitivity cannot break even even at perfect rescue.",
+        "range": "Zero if native recommendations already solve the need; negative if constrained selection wrongly excludes acceptable alternatives or adds too much effort."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD150/store/month, compared directly with configuring free native recommendations.",
+      "costControl": "Precompute safe substitute candidates, then filter fresh stock and price at request time. Use a model only when structured matching cannot resolve a relevant requirement.",
+      "feasibility": "now",
+      "dependencies": [
+        "Variant-level stock events",
+        "Verified substitute attributes",
+        "Merchant UI or controlled agent integration",
+        "Enough affected AI-origin traffic"
+      ],
+      "failureMode": "The original intent is unknown and asking again costs more than the alternative is worth; near matches are misrepresented as equivalent.",
+      "falsifier": "Native recommendations match or exceed paid-order completion, or substitution returns erase the recovered orders.",
+      "sourceIds": [
+        "shop-related",
+        "shop-cart"
+      ]
+    },
+    {
+      "id": "burnish-06",
+      "title": "Attach an executable compatibility witness to each recommendation",
+      "lens": "algorithmic",
+      "buyer": "A parts, accessories or equipment merchant where buyers need an exact technical match.",
+      "problem": "Readable product facts still leave buyers uncertain whether an item works with the exact device, version or setup they own.",
+      "mechanism": "Resolve a real compatibility requirement with source-backed rules and show the condition that makes the product fit. This can convert buyers who otherwise abandon to research elsewhere and can prevent mistaken purchases.",
+      "intervention": "Compile manufacturer compatibility tables, dimensions and exclusions into versioned predicates. Given a buyer-supplied model/version, return supported, unsupported or unknown, with the source and rule used. Carry the witness into the cart and recheck variant changes; never infer safety-critical compatibility from similar wording.",
+      "competitorOverlap": "Burnish already grounds content in merchant facts. Partly documents specialized OEM-data parts identification, and Octane supports variant mapping. The possible advantage is an auditable compatibility result carried from AI recommendation through purchase for an underserved category.",
+      "edgeHypothesis": "In a narrowly chosen catalog with verified rules, executable compatibility evidence increases completed suitable purchases compared with searchable prose specifications or a conventional quiz.",
+      "dataNeeded": [
+        "Licensed manufacturer compatibility records",
+        "Exact product and device/version identifiers",
+        "Authoritative exclusions",
+        "Buyer-volunteered equipment identity",
+        "Orders, support escalations and wrong-fit returns"
+      ],
+      "experiment": "Randomize eligible AI-origin visitors seeking compatibility to existing specifications/quiz or the witness tool. Primary endpoint: paid orders within 14 days per visitor assigned before tool use. Stratify by category and known/unknown model. Run through the power-derived enrollment horizon, at least four weeks, and mature returns. Guardrails: wrong-fit returns, false-compatible verdicts and escalation for unknowns; hazardous categories require expert-validated rules before participation.",
+      "metric": "Paid-order rate among all prequalified visitors, with retained compatible orders reported after the return window. Tool users are not the denominator, and prevented wrong purchases are reported separately rather than called incremental sales.",
+      "impactEvidence": "Hypothesized. partly establishes adjacent specialized competition; octane establishes variant mapping. No source establishes the proposed witness layer's incremental purchase effect.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume USD500/month and USD50 contribution per additional retained compatible order; no compatibility-uncertainty prevalence is assumed.",
+        "calculation": "Break-even = 500 / 50 = ten additional retained orders/month, plus data licensing and rule-maintenance costs.",
+        "range": "Zero if specifications already resolve the question; negative if false matches cause returns or correct exclusions reduce purchases without enough newly confident buyers."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot: USD500/store/month for one category with licensed data; validate against the merchant's existing fitment supplier and quiz tools.",
+      "costControl": "Evaluate compiled rules deterministically and reserve model calls for extracting questions or routing unknowns. Do not lower the evidence threshold to reduce maintenance.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Authoritative category data",
+        "Licensing rights",
+        "Stable model/version normalization",
+        "Domain expert validation",
+        "Cart integration"
+      ],
+      "failureMode": "Identifier ambiguity or stale source tables silently produce false compatibility; many categories lack maintainable ground truth.",
+      "falsifier": "No increase in retained compatible orders versus the existing tool, or the false-compatible rate exceeds the preregistered safety threshold.",
+      "sourceIds": [
+        "partly",
+        "octane",
+        "b-manifesto",
+        "shop-cart"
+      ]
+    },
+    {
+      "id": "burnish-07",
+      "title": "Quote return eligibility for this basket before purchase",
+      "lens": "regulatory",
+      "buyer": "A cross-border merchant with product, country, sale-item or seasonal exceptions in its return policy.",
+      "problem": "A broad statement such as '30-day returns' may not tell the buyer whether this exact purchase qualifies or what returning it would cost.",
+      "mechanism": "Resolve a relevant policy uncertainty before payment using the actual basket and market. Buyers with a suitable offer can decide confidently, while misleading promises and later disputes decline.",
+      "intervention": "Build a prospective return-policy evaluator using merchant-approved rules for SKU, condition, destination, promotion and purchase date. Show the applicable window, fees and exceptions alongside source links, and preserve the quoted policy version with the order. Route unresolved statutory-right questions to the merchant's qualified reviewer; do not generate legal assurances.",
+      "competitorOverlap": "Burnish already checks live policy claims; ReturnGO evaluates return eligibility; Google supports country policies and product overrides. The proposed difference is consistency between AI-facing offer, pre-purchase eligibility quote and the later return workflow.",
+      "edgeHypothesis": "Specific, truthful eligibility information improves paid-order completion for shoppers who are uncertain about returns without increasing disputes or reducing retained contribution.",
+      "dataNeeded": [
+        "Merchant-approved return rules and policy history",
+        "SKU, market, promotion and date context",
+        "Return platform eligibility semantics",
+        "Customer-selected return concern without sensitive profiling",
+        "Paid orders, returns, fees and support disputes"
+      ],
+      "experiment": "After fixing any incorrect policy claims for everyone, randomize eligible AI-origin visitors to the existing accurate policy presentation or the prospective quote. Primary endpoint: paid orders within 14 days per assigned visitor. Run at least four full weeks and a power-derived sample, then observe the complete relevant return window. Guardrails: complaint rate, legally required disclosures, refund timeliness and retained orders. Never withhold statutory information in the control.",
+      "metric": "Intention-to-treat paid-order conversion for the predeclared policy-sensitive entry cohort; policy comprehension and return disputes are secondary. Increased gross purchases with worse retained outcomes do not validate value.",
+      "impactEvidence": "Hypothesized. returngo and google-returns prove adjacent capability; eu-returns supports the need to distinguish rules and exceptions, not a compliance certification or conversion forecast.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume USD300/month and USD30 contribution per additional retained order, after return costs; traffic and return behavior are unknown.",
+        "calculation": "Break-even = 300 / 30 = ten additional retained orders/month. Incremental return-handling cost must be deducted before using the USD30 assumption.",
+        "range": "Zero if policy uncertainty is uncommon; negative if accurate exceptions deter more purchases than clarity creates, or the quote creates disputes."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD300/store/month for reconciliation with an existing return platform; compare with configuring its current rules and storefront messaging.",
+      "costControl": "Reuse a merchant's approved rules rather than generate bespoke prose per session. Spend review effort on unresolved rule conflicts that affect purchasing.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Returns platform integration",
+        "Merchant policy owner",
+        "Qualified review for applicable legal questions",
+        "Versioned order terms",
+        "Market-aware cart context"
+      ],
+      "failureMode": "The prospective quote diverges from the actual returns system, or a simplified rule mishandles a statutory exception.",
+      "falsifier": "No positive retained-order effect, or any systematic contradiction between the quote, actual eligibility and required rights.",
+      "sourceIds": [
+        "b-workflow",
+        "returngo",
+        "google-returns",
+        "eu-returns"
+      ]
+    },
+    {
+      "id": "burnish-08",
+      "title": "Ask one decisive question before showing more products",
+      "lens": "psychological",
+      "buyer": "A merchant receiving broad AI referrals into a category with a few decisive purchase constraints.",
+      "problem": "A shopper may already have a shortlist but still be unable to choose because one unresolved requirement matters more than additional product descriptions.",
+      "mechanism": "Identify and resolve the most consequential uncertainty with minimal effort, then explain the resulting tradeoff. Reduced decision effort can lead to a suitable completed purchase.",
+      "intervention": "Add a clarification policy that chooses at most one question when its expected decision value exceeds its friction cost. Use buyer-stated intent and verified product differences; allow 'skip' and show a useful answer immediately. Compare candidates on that requirement, including reasons a product would not fit.",
+      "competitorOverlap": "Octane already offers branching, exclusions, scoring and variant mapping; Burnish has FAQ and comparison actions. The proposed edge is a measured decision to ask nothing or one question at an AI handoff, rather than merely adding a product quiz.",
+      "edgeHypothesis": "Selective clarification outperforms both a fixed quiz and immediate generic recommendations on paid purchases for ambiguous but high-intent arrivals.",
+      "dataNeeded": [
+        "Volunteered intent or a short buyer confirmation",
+        "Verified distinguishing product attributes",
+        "Historical question response and abandonment rates",
+        "Paid orders and return reasons",
+        "Independent comprehension judgments"
+      ],
+      "experiment": "Randomize qualifying AI-origin visitors before any clarification to three arms: existing product list, the merchant's existing quiz, or selective one-question flow. Primary endpoint: paid orders within seven days per randomized visitor. Prespecify comparisons and multiplicity handling; run at least four complete weeks and enough visitors for the chosen effect size. Guardrails: mobile latency, skip success, accessibility, support burden and mismatch returns.",
+      "metric": "Paid buyers per assigned visitor; answer rate and simulated recommendation confidence are diagnostic only. Keep visitors who skip or abandon in the purchase denominator.",
+      "impactEvidence": "Hypothesized. octane establishes meaningful current competition; b-catalog establishes existing content and comparison features. No psychological uplift percentage is assumed.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume USD200/month and USD40 contribution per extra retained order. The share of visitors with one resolvable decision blocker is unknown.",
+        "calculation": "Break-even = 200 / 40 = five additional retained orders/month; measuring blocker prevalence comes before estimating scale.",
+        "range": "Zero if shoppers already know what to choose; negative if asking the question interrupts decisive buyers or frames the wrong tradeoff."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD200/store/month; require improvement over the merchant's current quiz or native filters, not a comparison only with a weak control.",
+      "costControl": "Learn reusable category question policies and use deterministic attribute splits when sufficient. Preserve live validation of which questions actually help buyers.",
+      "feasibility": "now",
+      "dependencies": [
+        "A controllable landing experience",
+        "Reliable product attributes",
+        "Enough eligible traffic",
+        "A merchant-owned quiz/list comparator"
+      ],
+      "failureMode": "The system asks a question the external AI already answered, or converts preferences into unjustified hard exclusions.",
+      "falsifier": "The selective flow fails to outperform the better existing comparator on paid and retained purchases at the preregistered threshold.",
+      "sourceIds": [
+        "octane",
+        "b-catalog",
+        "oa-evals"
+      ]
+    },
+    {
+      "id": "burnish-09",
+      "title": "Let buyers carry an editable shortlist between sessions",
+      "lens": "identity",
+      "buyer": "A merchant or agent platform selling considered purchases that span devices, assistants or visits.",
+      "problem": "Returning shoppers lose their earlier comparison, selected constraints or rationale and must rebuild the decision before buying.",
+      "mechanism": "Restore a shopper's deliberately saved decision state, with current prices and availability, so a return visit can continue toward purchase without repeating research.",
+      "intervention": "Create an opt-in, buyer-controlled decision record containing shortlist IDs, explicit non-sensitive preferences and unresolved questions. Share it through a revocable link or authorized account connection. Reconfirm changed facts on reopening; disclose which merchant receives which fields. Do not infer private consumer-assistant history or track users across sites covertly.",
+      "competitorOverlap": "Shopify cart tools retain commerce context and Octane captures preferences. This proposal extends continuity to buyer-owned reasoning and unresolved criteria across approved touchpoints; persistent carts and zero-party data alone are established capabilities.",
+      "edgeHypothesis": "Among considered AI-origin shopping journeys, portable decision state increases eventual paid purchases more than a standard saved cart.",
+      "dataNeeded": [
+        "Buyer-approved shortlist and preference fields",
+        "Consent, revocation and access records",
+        "Stable product IDs and live offers",
+        "Order outcomes with permitted identity linkage",
+        "Baseline revisit and saved-cart usage"
+      ],
+      "experiment": "Randomize eligible AI-origin visitors to availability of the decision record or the existing saved-cart experience before they opt in. Primary endpoint: paid purchase within 30 days per assigned visitor, not per saver. Run through a power-derived enrollment period and the full follow-up window. Use a subset with predeclared considered-purchase intent; guardrails include mistaken account linking, stale facts, deletion success and support contacts.",
+      "metric": "Thirty-day paid-order conversion from the original assigned visitor cohort, with cross-device orders included only where linkage is authorized. Unlinked orders stay unknown; repeat visits do not become new independent participants.",
+      "impactEvidence": "Hypothesized. shop-cart and octane establish adjacent continuity and preference-capture primitives; no source validates the proposed portability advantage.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume USD250/month and USD50 contribution per additional retained considered-purchase order; revisit rate and adoption are unmeasured.",
+        "calculation": "Break-even = 250 / 50 = five additional retained orders/month. Benefits are limited by the fraction of visitors who actually return and can resume.",
+        "range": "Zero if saved carts already suffice or adoption is low; negative if the save step interrupts purchase or resurrects stale expectations."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD250/store/month, contingent on incremental 30-day purchases over saved carts rather than an opt-in-rate target.",
+      "costControl": "Store a small explicit record and refresh only shortlisted offers. Do not reduce verification to preserve a stale low-cost snapshot.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Buyer-controlled identity or revocable token flow",
+        "Permissioned agent/merchant integration",
+        "Durable product resolution",
+        "Consent-respecting order linkage"
+      ],
+      "failureMode": "External assistants do not participate, buyers do not want another saved state, or identity continuity creates privacy and stale-data problems.",
+      "falsifier": "No added 30-day retained purchases versus saved carts, or portability adoption is too low to cover the cost without aggressive prompting.",
+      "sourceIds": [
+        "shop-cart",
+        "shop-link",
+        "octane"
+      ]
+    },
+    {
+      "id": "burnish-10",
+      "title": "Offer a real short inventory hold during the AI handoff",
+      "lens": "temporal",
+      "buyer": "A merchant with genuine stock races during multi-step AI-assisted purchases and inventory that is not predictably sold out regardless.",
+      "problem": "Availability can change while a shopper moves from a valid recommendation through clarification and payment, causing failed purchases.",
+      "mechanism": "A real, brief merchant-backed reservation can keep the selected item available while the buyer completes a chosen checkout. It creates incremental purchases only if rescued orders exceed displaced purchases elsewhere.",
+      "intervention": "Integrate an explicit buyer-requested reservation with expiration, release and abuse limits. Use a supported inventory or draft-order reservation path, verify compatibility with the intended checkout, and show truthful hold status. Do not simulate scarcity, reserve on crawler traffic, or treat an ordinary cart as a stock hold.",
+      "competitorOverlap": "Shopify's DraftOrderInput already supports reserveInventoryUntil. The work is an agent handoff policy, checkout compatibility and an all-channel incrementality test; reservation as a primitive is not novel.",
+      "edgeHypothesis": "For catalogs with recoverable stock races and spare aggregate supply, properly limited holds increase completed AI-origin orders without reducing total purchases across the shared inventory pool.",
+      "dataNeeded": [
+        "Inventory pool and concurrent demand history",
+        "Stock-race failure events",
+        "Reservation, release and expiration logs",
+        "AI-source handoff and paid orders",
+        "All-channel fulfilled units and refunds"
+      ],
+      "experiment": "Randomize whole disjoint inventory pools or SKU-by-time blocks to holds enabled versus existing availability rechecks, with blocks longer than hold duration and a release washout. Primary endpoint: paid AI-origin orders per assigned pool-day, with a required no-harm and incremental check on total paid orders across the same pool. Run through multiple restock cycles and a cluster-power plan. Guardrails: non-AI conversion, hoarding, hold abuse, expired inventory and payment failures.",
+      "metric": "Count paid orders across the full shared inventory pool, not merely reservation users. Report AI-origin order gains alongside all-channel order changes; channel substitution alone is not an incremental-purchase success.",
+      "impactEvidence": "Hypothesized. shop-reserve supports technical feasibility of one reservation primitive; shop-cart documents agent checkout options. Neither supplies evidence for the proposed reservation policy's net purchase effect.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Assume USD300/month and USD40 contribution per genuinely additional retained order; inventory is not assumed plentiful and must be audited.",
+        "calculation": "Break-even = 300 / 40 = 7.5, rounded to eight additional retained orders/month, after subtracting displaced orders and operating costs.",
+        "range": "Zero if all units would sell anyway, making this only a timing or channel shift; negative if holds block more ready buyers than they rescue."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot: USD300/store/month only after measuring stock-race losses and excluding always-sold-out inventory pools.",
+      "costControl": "Create holds only after explicit high-intent requests and expire them automatically. Avoid running a costly model to decide stock ownership.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant-approved reservation policy",
+        "Supported inventory/draft-order APIs",
+        "Compatible checkout path",
+        "Shared-inventory experiment design",
+        "Abuse controls"
+      ],
+      "failureMode": "Holds merely redistribute scarce inventory, obstruct other buyers or break native checkout features.",
+      "falsifier": "AI-source completion rises but total inventory-pool purchases do not, or displaced sales and operational cost erase the gain.",
+      "sourceIds": [
+        "shop-reserve",
+        "shop-cart"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "b-pricing",
+      "title": "Burnish Pricing",
+      "url": "https://useburnish.com/pricing/",
+      "type": "official-doc",
+      "claim": "Published plan prices and allowances as checked 2026-09-29; these establish an offer, not willingness to pay or business success."
+    },
+    {
+      "id": "b-listing",
+      "title": "Burnish: AI SEO, AEO & ChatGPT - The autonomous agent that gets your store recommended by AI. | Shopify App Store",
+      "url": "https://apps.shopify.com/burnish",
+      "type": "merchant-review",
+      "claim": "USD billing, launch date and two early-use merchant reviews; neither review establishes incremental orders or renewal."
+    },
+    {
+      "id": "b-workflow",
+      "title": "How Burnish works.",
+      "url": "https://useburnish.com/what-it-does/",
+      "type": "official-doc",
+      "claim": "Source-attached fact spine, recognition and accuracy judges, action loop, earned autonomy and bootstrap confidence interval claim. Vendor documentation, not a hands-on audit."
+    },
+    {
+      "id": "b-catalog",
+      "title": "Forty-one fixes. Twenty-nine ask first.",
+      "url": "https://useburnish.com/features/catalog/",
+      "type": "official-doc",
+      "claim": "41 fix types, approval defaults, dependency checks, rollback coverage and readiness-based prioritization. Representative interface data are not merchant outcomes."
+    },
+    {
+      "id": "b-method",
+      "title": "Show the working.",
+      "url": "https://useburnish.com/methodology/",
+      "type": "official-doc",
+      "claim": "Index weighting, readiness projection, repeated sampling and explicit absence of randomized controls; also documents provisional visibility weighting."
+    },
+    {
+      "id": "b-engines",
+      "title": "Five engines, read on a schedule.",
+      "url": "https://useburnish.com/engines/",
+      "type": "official-doc",
+      "claim": "Model names, fixed reputation battery and discovery sampling. Its question allowances conflict with the pricing page."
+    },
+    {
+      "id": "b-chatgpt",
+      "title": "What ChatGPT says about your store, on the record.",
+      "url": "https://useburnish.com/engines/chatgpt/",
+      "type": "official-doc",
+      "claim": "Names GPT-5.4 mini as sampler and describes published-content changes followed by observation; does not establish exact consumer ChatGPT shopping parity."
+    },
+    {
+      "id": "b-revenue",
+      "title": "A sensor in your storefront, not a guess.",
+      "url": "https://useburnish.com/features/revenue/",
+      "type": "official-doc",
+      "claim": "Pixel events, order corroboration, 30-day before/after comparison and observational limitations; Threshold Footwear figures are labelled representative demo."
+    },
+    {
+      "id": "b-cases",
+      "title": "No customer results yet.",
+      "url": "https://useburnish.com/case-studies/",
+      "type": "vendor-case",
+      "claim": "Explicitly states that no customer results have been published. Its stated future case-study standard is not evidence of achieved uplift."
+    },
+    {
+      "id": "b-lift",
+      "title": "Reading per-action lift",
+      "url": "https://useburnish.com/help/revenue-attribution/per-action-lift/",
+      "type": "official-doc",
+      "claim": "Before/after lift, a 95% confidence range, minimum elapsed time and Authority availability."
+    },
+    {
+      "id": "b-cohort",
+      "title": "The cohort ROI table",
+      "url": "https://useburnish.com/help/revenue-attribution/cohort-roi/",
+      "type": "official-doc",
+      "claim": "Groups eligible changes by type and month and combines their measured lift; public detail does not establish deconfounding or overlap adjustment."
+    },
+    {
+      "id": "b-manifesto",
+      "title": "What's in your manifesto",
+      "url": "https://useburnish.com/help/manifesto/whats-in-your-manifesto/",
+      "type": "official-doc",
+      "claim": "Brand identity includes domain, legal entity and namesake distinctions, plus shipping, warranty and return facts."
+    },
+    {
+      "id": "b-attribution-help",
+      "title": "How AI revenue attribution works",
+      "url": "https://useburnish.com/help/revenue-attribution/how-attribution-works/",
+      "type": "official-doc",
+      "claim": "Attribution help acknowledges direct-labelled AI traffic and correlation rather than a controlled experiment."
+    },
+    {
+      "id": "b-changelog",
+      "title": "Changelog",
+      "url": "https://useburnish.com/changelog/",
+      "type": "official-doc",
+      "claim": "July 28 entry says the 7,000-product scan ceiling was removed; this conflicts with the catalog feature page."
+    },
+    {
+      "id": "oa-tools",
+      "title": "Function calling | OpenAI API",
+      "url": "https://developers.openai.com/api/docs/guides/function-calling",
+      "type": "official-doc",
+      "claim": "An application can execute a function and return tool output to a model. This enables controlled replay, not replication of consumer search infrastructure."
+    },
+    {
+      "id": "oa-search",
+      "title": "Web search | OpenAI API",
+      "url": "https://developers.openai.com/api/docs/guides/tools-web-search",
+      "type": "official-doc",
+      "claim": "Hosted web search is a distinct tool with configurable inputs such as approximate location; public APIs do not document a way to reproduce all consumer shopping context."
+    },
+    {
+      "id": "oa-evals",
+      "title": "Evaluation best practices | OpenAI API",
+      "url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices",
+      "type": "official-doc",
+      "claim": "Warns against datasets that fail to reflect production traffic and recommends calibration against human evaluation."
+    },
+    {
+      "id": "shop-cart",
+      "title": "Carts and checkout for agents",
+      "url": "https://shopify.dev/docs/agents/carts-and-checkout",
+      "type": "official-doc",
+      "claim": "Native Cart MCP, per-variant checkout links and checkout tools already support agent commerce. Availability and permissions must be checked per integration."
+    },
+    {
+      "id": "shop-link",
+      "title": "Create cart permalinks",
+      "url": "https://shopify.dev/docs/apps/build/checkout/create-cart-permalinks",
+      "type": "official-doc",
+      "claim": "Native preselected variants, quantities, locale and attribution parameters; a new handoff product must add more than a cart URL."
+    },
+    {
+      "id": "shop-related",
+      "title": "Shopify Help Center | Customize product recommendations with Shopify Search & Discovery",
+      "url": "https://help.shopify.com/en/manual/online-store/storefront-search/search-and-discovery-recommendations",
+      "type": "official-doc",
+      "claim": "Native related/complementary recommendations, manual overrides and stock eligibility already exist."
+    },
+    {
+      "id": "shop-reserve",
+      "title": "DraftOrderInput - GraphQL Admin",
+      "url": "https://shopify.dev/docs/api/admin-graphql/latest/input-objects/draftorderinput",
+      "type": "official-doc",
+      "claim": "reserveInventoryUntil is an available draft-order input; it is not evidence that ordinary carts reserve stock or that all checkout paths are interchangeable."
+    },
+    {
+      "id": "narvar",
+      "title": "Narvar Promise | AI Powered Estimated Delivery Dates",
+      "url": "https://corp.narvar.com/promise",
+      "type": "official-doc",
+      "claim": "Existing delivery-estimation product and conversion measurement offer. Performance claims are vendor statements, not an expected uplift for the proposed product."
+    },
+    {
+      "id": "partly",
+      "title": "Partly",
+      "url": "https://www.partly.com/integrations/workshop",
+      "type": "official-doc",
+      "claim": "Official indexed page describes OEM diagrams, enriched parts data and AI identification. Direct page fetch failed; use only this narrow published overlap."
+    },
+    {
+      "id": "returngo",
+      "title": "Return Eligibility Conditions",
+      "url": "https://support.returngo.ai/eligibility-rules",
+      "type": "official-doc",
+      "claim": "Rules already determine return eligibility from customer, order and item properties. The proposed difference is a verified prospective quote at the buying decision."
+    },
+    {
+      "id": "google-returns",
+      "title": "Merchant Return Policy Structured Data (MerchantReturnPolicy) | Google Search Central | Documentation | Google for Developers",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/return-policy",
+      "type": "official-doc",
+      "claim": "Supports applicable-country policies and product-specific overrides. Structured markup does not itself establish legal compliance or conversion lift."
+    },
+    {
+      "id": "eu-returns",
+      "title": "Returns and the right of withdrawal - Your Europe",
+      "url": "https://europa.eu/youreurope/citizens/consumers/shopping/returns/indexamp_en.htm",
+      "type": "official-doc",
+      "claim": "EU consumer guidance distinguishes withdrawal rights, exceptions and return costs. Used to motivate separate merchant-approved policy rules, not to automate legal determinations."
+    },
+    {
+      "id": "octane",
+      "title": "Quiz Logic - Product Recommendation Engines | Octane AI",
+      "url": "https://www.octaneai.com/products/quiz-logic",
+      "type": "official-doc",
+      "claim": "Existing branching, scoring, exclusions and variant mapping. Neither clarification nor preference capture alone is novel."
+    },
+    {
+      "id": "constructor",
+      "url": "https://constructor.com/customers/saatchi-art-constructor",
+      "type": "vendor-case",
+      "claim": "Describes a live A/B comparison of onsite search against an incumbent. Adjacent evidence for purchase-based evaluation, not evidence of AI referral or proposed-product uplift."
+    }
+  ]
+}

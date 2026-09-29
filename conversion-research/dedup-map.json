@@ -1,0 +1,1562 @@
+[
+  {
+    "candidateId": "profound-01",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "profound-02",
+    "selectedId": "I13",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I13 (Carry a buyer-approved shopping brief across the AI handoff). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "profound-03",
+    "selectedId": "I05",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I05 (Build the smallest complete basket that performs the task). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "profound-04",
+    "selectedId": "I27",
+    "decision": "merged",
+    "reason": "Related component of I27 retained only within the narrowed canonical scope. Existing native or incumbent routing/semantic contracts are the active baseline; this broad candidate does not establish a generic missing feature."
+  },
+  {
+    "candidateId": "profound-05",
+    "selectedId": "I04",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I04 (Turn a delivery deadline into a feasible purchase plan). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "profound-06",
+    "selectedId": "I09",
+    "decision": "selected",
+    "reason": "Primary provenance for I09. Preserve the identity of a discontinued model and explain the exact differences, lost capabilities and compatibility of an available successor."
+  },
+  {
+    "candidateId": "profound-07",
+    "selectedId": "I16",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I16 (Keep a stable, evidence-backed comparison at the decision point). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "profound-08",
+    "selectedId": "I43",
+    "decision": "merged",
+    "reason": "Exact helmet-model evidence is a category-specific instance of I43's approved requirement-to-document matching. Applicable law and allowed claims must remain category-specific."
+  },
+  {
+    "candidateId": "profound-09",
+    "selectedId": "I06",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I06 (Keep correctable checkout errors inside the purchase flow). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "profound-10",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: paid-AI spend allocation is a distinct commercial bet requiring admitted ad inventory, sufficient spend and incrementality tests. It is not evidence that the selected conversion interventions work."
+  },
+  {
+    "candidateId": "peec-01",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "peec-02",
+    "selectedId": "I01",
+    "decision": "selected",
+    "reason": "Primary provenance for I01. An explicit size, pack or regional variant can be lost at redirects, rendering or add-to-cart. A merchant-owned resolver and release probes can repair a visible purchase failure."
+  },
+  {
+    "candidateId": "peec-03",
+    "selectedId": "I02",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I02 (Recover unavailable items with requirement-preserving alternatives). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "peec-04",
+    "selectedId": "I13",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I13 (Carry a buyer-approved shopping brief across the AI handoff). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "peec-05",
+    "selectedId": "I04",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I04 (Turn a delivery deadline into a feasible purchase plan). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "peec-06",
+    "selectedId": "I08",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I08 (Ask only the question that changes the buying decision). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "peec-07",
+    "selectedId": "I27",
+    "decision": "selected",
+    "reason": "Primary provenance for I27. At a demonstrated wrong-model, wrong-region or stale-stock handoff, recheck the exact permitted offer against partner evidence and repair that specific route before the buyer leaves. Conditional on the narrowed incumbent-gap test."
+  },
+  {
+    "candidateId": "peec-08",
+    "selectedId": "I07",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I07 (Quote the payable total before the buyer commits). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "peec-09",
+    "selectedId": "I40",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I40 (Hold inventory only when the buyer genuinely starts committing). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "peec-10",
+    "selectedId": "I06",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I06 (Keep correctable checkout errors inside the purchase flow). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "scrunch-01",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: a constraint-preserving summary compiler is useful only after proving truncation causes live purchase loss. Scrunch AXP and native representation tools are strong incumbents; semantic compression alone is not a purchase result."
+  },
+  {
+    "candidateId": "scrunch-02",
+    "selectedId": "I09",
+    "decision": "merged",
+    "reason": "Broad stale-link candidate includes stockout recovery. Its retired-identity and documented-successor mechanism is merged once into I09; do not count it again in I02."
+  },
+  {
+    "candidateId": "scrunch-03",
+    "selectedId": "I13",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I13 (Carry a buyer-approved shopping brief across the AI handoff). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "scrunch-04",
+    "selectedId": "I07",
+    "decision": "selected",
+    "reason": "Primary provenance for I07. Resolve the chosen variant, quantity and destination into shipping, tax, duty and mandatory charges while the shopper is still comparing feasible offers."
+  },
+  {
+    "candidateId": "scrunch-05",
+    "selectedId": "I03",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I03 (Prove exact compatibility before purchase). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "scrunch-06",
+    "selectedId": "I33",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I33 (Apply a verified existing benefit before budget filtering). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "scrunch-07",
+    "selectedId": "I27",
+    "decision": "merged",
+    "reason": "Related component of I27 retained only within the narrowed canonical scope. Existing native or incumbent routing/semantic contracts are the active baseline; this broad candidate does not establish a generic missing feature."
+  },
+  {
+    "candidateId": "scrunch-08",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "scrunch-09",
+    "selectedId": "I16",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I16 (Keep a stable, evidence-backed comparison at the decision point). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "scrunch-10",
+    "selectedId": "I05",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I05 (Build the smallest complete basket that performs the task). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "burnish-01",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "burnish-02",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "burnish-03",
+    "selectedId": "I13",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I13 (Carry a buyer-approved shopping brief across the AI handoff). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "burnish-04",
+    "selectedId": "I04",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I04 (Turn a delivery deadline into a feasible purchase plan). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "burnish-05",
+    "selectedId": "I02",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I02 (Recover unavailable items with requirement-preserving alternatives). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "burnish-06",
+    "selectedId": "I03",
+    "decision": "selected",
+    "reason": "Primary provenance for I03. Compile licensed manufacturer relationships, exclusions and version boundaries into supported, incompatible or unknown results. Resolve the customer's exact model before recommending a purchasable variant."
+  },
+  {
+    "candidateId": "burnish-07",
+    "selectedId": "I42",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I42 (Quote the return terms and practical route for this exact purchase). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "burnish-08",
+    "selectedId": "I08",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I08 (Ask only the question that changes the buying decision). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "burnish-09",
+    "selectedId": "I14",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I14 (Resume a saved buying decision by reviewing only what changed). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "burnish-10",
+    "selectedId": "I40",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I40 (Hold inventory only when the buyer genuinely starts committing). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "geoffy-01",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: cross-hop offer tracing can support I39 and other repairs, but observation is a different actuator from ordered publication. Do not count another diagnostic as a new conversion product."
+  },
+  {
+    "candidateId": "geoffy-02",
+    "selectedId": "I01",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I01 (Preserve the selected variant from AI link to cart). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "geoffy-03",
+    "selectedId": "I04",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I04 (Turn a delivery deadline into a feasible purchase plan). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "geoffy-04",
+    "selectedId": "I03",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I03 (Prove exact compatibility before purchase). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "geoffy-05",
+    "selectedId": "I05",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I05 (Build the smallest complete basket that performs the task). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "geoffy-06",
+    "selectedId": "I42",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I42 (Quote the return terms and practical route for this exact purchase). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "geoffy-07",
+    "selectedId": "I14",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I14 (Resume a saved buying decision by reviewing only what changed). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "geoffy-08",
+    "selectedId": "I47",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I47 (Test a small real assortment against unmet shopping requirements). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "geoffy-09",
+    "selectedId": "I16",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I16 (Keep a stable, evidence-backed comparison at the decision point). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "geoffy-10",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "datafeedwatch-01",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "datafeedwatch-02",
+    "selectedId": "I03",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I03 (Prove exact compatibility before purchase). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "datafeedwatch-03",
+    "selectedId": "I37",
+    "decision": "merged",
+    "reason": "Related component of I37 retained only within the narrowed canonical scope. Existing native or incumbent routing/semantic contracts are the active baseline; this broad candidate does not establish a generic missing feature."
+  },
+  {
+    "candidateId": "datafeedwatch-04",
+    "selectedId": "I04",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I04 (Turn a delivery deadline into a feasible purchase plan). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "datafeedwatch-05",
+    "selectedId": "I02",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I02 (Recover unavailable items with requirement-preserving alternatives). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "datafeedwatch-06",
+    "selectedId": "I10",
+    "decision": "selected",
+    "reason": "Primary provenance for I10. Turn a requested amount or coverage into valid pack combinations, showing full cost, unit cost, surplus and delivery implications before creating exact cart lines."
+  },
+  {
+    "candidateId": "datafeedwatch-07",
+    "selectedId": "I43",
+    "decision": "merged",
+    "reason": "Variant-specific safety records supply I43's evidence-to-order mechanism. Document handling does not certify compliance or create another standalone trust badge."
+  },
+  {
+    "candidateId": "datafeedwatch-08",
+    "selectedId": "I25",
+    "decision": "selected",
+    "reason": "Primary provenance for I25. Trace an observed wrong grouping to conflicting model, region, pack, condition or offer identifiers; repair the source evidence and verify permitted downstream representation."
+  },
+  {
+    "candidateId": "datafeedwatch-09",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: scarce-update-budget scheduling differs from I39's correctness under out-of-order writes. First establish a real quota or latency bottleneck and beat the feed manager's native scheduler."
+  },
+  {
+    "candidateId": "datafeedwatch-10",
+    "selectedId": "I24",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I24 (Turn an unanswered buying question into a reusable supplier fact). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "channable-01",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: demand-weighted refresh priority shares the reserve update-budget hypothesis with datafeedwatch-09. It is not the same failure as an older writer overwriting current state in I39."
+  },
+  {
+    "candidateId": "channable-02",
+    "selectedId": "I02",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I02 (Recover unavailable items with requirement-preserving alternatives). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "channable-03",
+    "selectedId": "I04",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I04 (Turn a delivery deadline into a feasible purchase plan). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "channable-04",
+    "selectedId": "I01",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I01 (Preserve the selected variant from AI link to cart). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "channable-05",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: garment measurement and reserve-to-try have plausible value but overlap mature fit and store-service workflows. A physical try-on intervention is distinct from the selected revision-invalidation and sample-kit mechanisms."
+  },
+  {
+    "candidateId": "channable-06",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: paid product exploration requires approved ad access and a tuned incumbent baseline. Organic publication does not provide control of third-party ranking, so the two routes cannot share one uplift claim."
+  },
+  {
+    "candidateId": "channable-07",
+    "selectedId": "I41",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I41 (Honor a genuine quoted price through checkout). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "channable-08",
+    "selectedId": "I05",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I05 (Build the smallest complete basket that performs the task). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "channable-09",
+    "selectedId": "I27",
+    "decision": "merged",
+    "reason": "Related component of I27 retained only within the narrowed canonical scope. Existing native or incumbent routing/semantic contracts are the active baseline; this broad candidate does not establish a generic missing feature."
+  },
+  {
+    "candidateId": "channable-10",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: the paid-media factorial is a useful experimental design, not a separate product edge. It can be commissioned within I50 when that interaction is the actual decision."
+  },
+  {
+    "candidateId": "feedonomics-01",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "feedonomics-02",
+    "selectedId": "I40",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I40 (Hold inventory only when the buyer genuinely starts committing). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "feedonomics-03",
+    "selectedId": "I13",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I13 (Carry a buyer-approved shopping brief across the AI handoff). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "feedonomics-04",
+    "selectedId": "I03",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I03 (Prove exact compatibility before purchase). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "feedonomics-05",
+    "selectedId": "I05",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I05 (Build the smallest complete basket that performs the task). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "feedonomics-06",
+    "selectedId": "I12",
+    "decision": "selected",
+    "reason": "Primary provenance for I12. Explain the smallest conflicting set of requested preferences, then show a few feasible options each changing one buyer-marked negotiable requirement."
+  },
+  {
+    "candidateId": "feedonomics-07",
+    "selectedId": "I07",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I07 (Quote the payable total before the buyer commits). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "feedonomics-08",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: cross-distributor entitlement and requisition interoperability is broader than I28's organization-and-quote continuity. It needs separate supplier contracts and settled network order visibility."
+  },
+  {
+    "candidateId": "feedonomics-09",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: this is an opt-in repurchase journey after ownership, not new external-AI discovery purchasing. A full consumption-cycle experiment must separate extra orders from timing shifts."
+  },
+  {
+    "candidateId": "feedonomics-10",
+    "selectedId": "I24",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I24 (Turn an unanswered buying question into a reusable supplier fact). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "simprosys-01",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: catalog-wide dependency expiry is broader than I31's garment-revision mechanism. It needs observed stale semantic facts and a competent source-versioning comparator before becoming a standalone product."
+  },
+  {
+    "candidateId": "simprosys-02",
+    "selectedId": "I01",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I01 (Preserve the selected variant from AI link to cart). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "simprosys-03",
+    "selectedId": "I04",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I04 (Turn a delivery deadline into a feasible purchase plan). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "simprosys-04",
+    "selectedId": "I03",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I03 (Prove exact compatibility before purchase). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "simprosys-05",
+    "selectedId": "I02",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I02 (Recover unavailable items with requirement-preserving alternatives). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "simprosys-06",
+    "selectedId": "I07",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I07 (Quote the payable total before the buyer commits). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "simprosys-07",
+    "selectedId": "I42",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I42 (Quote the return terms and practical route for this exact purchase). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "simprosys-08",
+    "selectedId": "I25",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I25 (Repair product identity collisions across feeds and offers). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "simprosys-09",
+    "selectedId": "I34",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I34 (Choose a purchase route that supports the actual cart). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "simprosys-10",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "smartseo-01",
+    "selectedId": "I09",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I09 (Resolve retired recommendations to a documented successor). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "smartseo-02",
+    "selectedId": "I01",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I01 (Preserve the selected variant from AI link to cart). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "smartseo-03",
+    "selectedId": "I04",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I04 (Turn a delivery deadline into a feasible purchase plan). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "smartseo-04",
+    "selectedId": "I03",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I03 (Prove exact compatibility before purchase). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "smartseo-05",
+    "selectedId": "I42",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I42 (Quote the return terms and practical route for this exact purchase). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "smartseo-06",
+    "selectedId": "I05",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I05 (Build the smallest complete basket that performs the task). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "smartseo-07",
+    "selectedId": "I26",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I26 (Keep seller provenance and promises attached to the exact offer). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "smartseo-08",
+    "selectedId": "I49",
+    "decision": "selected",
+    "reason": "Primary provenance for I49. Optimize the exact uncached arrival path until the correct image, variant control and add-to-cart work, deferring nonessential scripts while preserving product-detail recognition."
+  },
+  {
+    "candidateId": "smartseo-09",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: a portable equipment record is adjacent to I03 and I13 but mainly helps later accessory journeys. Partner support and repeated-source attribution remain separate from the selected first-purchase mechanisms."
+  },
+  {
+    "candidateId": "smartseo-10",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "tinyseo-01",
+    "selectedId": "I49",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I49 (Make the cold AI referral page ready for an actual purchase). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "tinyseo-02",
+    "selectedId": "I49",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I49 (Make the cold AI referral page ready for an actual purchase). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "tinyseo-03",
+    "selectedId": "I01",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I01 (Preserve the selected variant from AI link to cart). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "tinyseo-04",
+    "selectedId": "I46",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I46 (Make the entire handoff and extension step accessible). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "tinyseo-05",
+    "selectedId": null,
+    "decision": "rejected",
+    "reason": "Rejected as a standalone idea in this purchase-focused portfolio: preserving authored edits is sound implementation hygiene, but approvals, provenance and rollback already exist and no separate purchase bottleneck is established."
+  },
+  {
+    "candidateId": "tinyseo-06",
+    "selectedId": "I16",
+    "decision": "merged",
+    "reason": "Selecting a supported proof image is a presentation component of I16's decisive evidence comparison. It is not a second image-generation or compression product."
+  },
+  {
+    "candidateId": "tinyseo-07",
+    "selectedId": "I09",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I09 (Resolve retired recommendations to a documented successor). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "tinyseo-08",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: restoring missing crawlable image evidence is a discovery repair, whereas I49 accelerates an already functioning purchase path. It needs an observed rendering defect and live exposure-to-order evidence."
+  },
+  {
+    "candidateId": "tinyseo-09",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "tinyseo-10",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: ordinary saved-selection transfer is already close to native persistent carts. I14 retains the stronger distinct hypothesis of resuming unresolved decisions after reviewing changed facts."
+  },
+  {
+    "candidateId": "shopify-01",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "shopify-02",
+    "selectedId": "I34",
+    "decision": "selected",
+    "reason": "Primary provenance for I34. Check the cart's required options, validations and checkout extensions against the supported agent route, then choose a valid direct route or a preserved storefront handoff."
+  },
+  {
+    "candidateId": "shopify-03",
+    "selectedId": "I04",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I04 (Turn a delivery deadline into a feasible purchase plan). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "shopify-04",
+    "selectedId": "I03",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I03 (Prove exact compatibility before purchase). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "shopify-05",
+    "selectedId": "I13",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I13 (Carry a buyer-approved shopping brief across the AI handoff). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "shopify-06",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: replacing an already ordered delayed item can save a retained order, but it does not create a new purchase event. Report post-purchase retention separately if tested."
+  },
+  {
+    "candidateId": "shopify-07",
+    "selectedId": "I05",
+    "decision": "merged",
+    "reason": "Whole-basket feasibility is the same core mission-solving mechanism as I05. Cross-seller execution is conditional and does not receive a second idea slot."
+  },
+  {
+    "candidateId": "shopify-08",
+    "selectedId": "I13",
+    "decision": "merged",
+    "reason": "A signed decision receipt is one form of I13's buyer-approved context handoff. Its explanatory display is not counted separately in I16."
+  },
+  {
+    "candidateId": "shopify-09",
+    "selectedId": "I41",
+    "decision": "selected",
+    "reason": "Primary provenance for I41. Issue a merchant-authorized expiring item-price receipt for an eligible offer and redeem it through a supported discount or draft-order path."
+  },
+  {
+    "candidateId": "shopify-10",
+    "selectedId": "I40",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I40 (Hold inventory only when the buyer genuinely starts committing). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "google-01",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "google-02",
+    "selectedId": "I37",
+    "decision": "merged",
+    "reason": "Related component of I37 retained only within the narrowed canonical scope. Existing native or incumbent routing/semantic contracts are the active baseline; this broad candidate does not establish a generic missing feature."
+  },
+  {
+    "candidateId": "google-03",
+    "selectedId": "I06",
+    "decision": "selected",
+    "reason": "Primary provenance for I06. Translate known ERP, address, delivery and discount failures into accurate recoverable checkout states so a buyer can correct one field and continue."
+  },
+  {
+    "candidateId": "google-04",
+    "selectedId": "I39",
+    "decision": "merged",
+    "reason": "Version-consistent source, page and checkout updates support I39. The candidate also mentions reservations; those are separately sourced for I40, and this candidate is not counted twice."
+  },
+  {
+    "candidateId": "google-05",
+    "selectedId": "I33",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I33 (Apply a verified existing benefit before budget filtering). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "google-06",
+    "selectedId": "I05",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I05 (Build the smallest complete basket that performs the task). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "google-07",
+    "selectedId": "I01",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I01 (Preserve the selected variant from AI link to cart). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "google-08",
+    "selectedId": "I42",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I42 (Quote the return terms and practical route for this exact purchase). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "google-09",
+    "selectedId": "I04",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I04 (Turn a delivery deadline into a feasible purchase plan). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "google-10",
+    "selectedId": "I21",
+    "decision": "selected",
+    "reason": "Primary provenance for I21. Map supported agent transaction context into the merchant's existing risk provider so a technical context gap does not cause an otherwise legitimate purchase to fail."
+  },
+  {
+    "candidateId": "lilyai-01",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: typed negative-constraint filtering is broader than I03's source-backed compatibility relation. It needs a direct test against tuned semantic search, facets and Lily's existing enrichment."
+  },
+  {
+    "candidateId": "lilyai-02",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: verified garment dimensions address present fit uncertainty, not the changed-product failure selected in I31. True Fit is a strong active comparator; do not count ordinary fit evidence twice."
+  },
+  {
+    "candidateId": "lilyai-03",
+    "selectedId": "I02",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I02 (Recover unavailable items with requirement-preserving alternatives). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "lilyai-04",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: outfit-wide style, size and delivery feasibility is adjacent to I05 and I04 but combines distinct requirements. It needs an apparel-specific comparator and proof of more purchasing customers rather than larger outfits."
+  },
+  {
+    "candidateId": "lilyai-05",
+    "selectedId": "I08",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I08 (Ask only the question that changes the buying decision). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "lilyai-06",
+    "selectedId": "I13",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I13 (Carry a buyer-approved shopping brief across the AI handoff). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "lilyai-07",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: moving existing inventory is a different actuator from I47's small new-assortment pilot. Preserve it for a retailer with measurable location imbalance and enough independent inventory pools."
+  },
+  {
+    "candidateId": "lilyai-08",
+    "selectedId": "I24",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I24 (Turn an unanswered buying question into a reusable supplier fact). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "lilyai-09",
+    "selectedId": "I16",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I16 (Keep a stable, evidence-backed comparison at the decision point). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "lilyai-10",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "truefit-01",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: a scoped fit receipt is close to True Fit's documented governed MCP and native handoff capabilities. First identify a concrete context-loss defect beyond ordinary fit portability."
+  },
+  {
+    "candidateId": "truefit-02",
+    "selectedId": "I40",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I40 (Hold inventory only when the buyer genuinely starts committing). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "truefit-03",
+    "selectedId": "I08",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I08 (Ask only the question that changes the buying decision). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "truefit-04",
+    "selectedId": "I31",
+    "decision": "selected",
+    "reason": "Primary provenance for I31. Tie measurements and reference-garment advice to the actual product revision; invalidate stale evidence after a material cut or fabric change and obtain a targeted independent measurement."
+  },
+  {
+    "candidateId": "truefit-05",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: adult recipient authorization is a distinct permissioned gifting experiment. It should not be forced into I13's shopper brief or I30's gift-personalization isolation."
+  },
+  {
+    "candidateId": "truefit-06",
+    "selectedId": "I16",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I16 (Keep a stable, evidence-backed comparison at the decision point). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "truefit-07",
+    "selectedId": "I32",
+    "decision": "selected",
+    "reason": "Primary provenance for I32. Combine an eligible garment with the merchant's actual shortening service, finished-dimension tolerance, price and capacity to meet a stated length and deadline."
+  },
+  {
+    "candidateId": "truefit-08",
+    "selectedId": "I23",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I23 (Route unresolved buying tasks to an available specialist). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "truefit-09",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: size replenishment is an operational buying decision distinct from I47's unmet-assortment pilot. Validate real fit-qualified human demand and net inventory-pool orders before promotion."
+  },
+  {
+    "candidateId": "truefit-10",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "searchpilot-01",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "searchpilot-02",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "searchpilot-03",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "searchpilot-04",
+    "selectedId": "I04",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I04 (Turn a delivery deadline into a feasible purchase plan). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "searchpilot-05",
+    "selectedId": "I03",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I03 (Prove exact compatibility before purchase). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "searchpilot-06",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: concurrent cart revision conflicts are different from I37's protocol semantic mapping. A native-correct reconciliation comparison can become a separate checkout bet once real conflicts are measured."
+  },
+  {
+    "candidateId": "searchpilot-07",
+    "selectedId": "I26",
+    "decision": "selected",
+    "reason": "Primary provenance for I26. Bind seller identity, model, region, condition, warranty provider and policy version to the offer; disclose material changes if the shopper changes seller."
+  },
+  {
+    "candidateId": "searchpilot-08",
+    "selectedId": "I42",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I42 (Quote the return terms and practical route for this exact purchase). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "searchpilot-09",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "searchpilot-10",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "constructor-01",
+    "selectedId": "I05",
+    "decision": "selected",
+    "reason": "Primary provenance for I05. Translate a declared project into required capabilities, compatible components and quantities, subtract what the shopper already owns, then validate a complete purchasable set."
+  },
+  {
+    "candidateId": "constructor-02",
+    "selectedId": "I08",
+    "decision": "selected",
+    "reason": "Primary provenance for I08. Choose between one bounded clarification, a provisional shortlist and proceeding. Use disagreement among viable options and prior failed searches to decide whether another question is worth its friction."
+  },
+  {
+    "candidateId": "constructor-03",
+    "selectedId": "I13",
+    "decision": "selected",
+    "reason": "Primary provenance for I13. Transfer the selected products, accepted requirements and unfinished decision through an expiring opaque handle, then show an editable, revalidated summary at the merchant."
+  },
+  {
+    "candidateId": "constructor-04",
+    "selectedId": "I14",
+    "decision": "selected",
+    "reason": "Primary provenance for I14. Save chosen products, rejected options and the remaining task with permission. On a voluntary return, revalidate facts and present only material changes before resuming."
+  },
+  {
+    "candidateId": "constructor-05",
+    "selectedId": "I16",
+    "decision": "selected",
+    "reason": "Primary provenance for I16. Keep selected alternatives stable while showing decisive requirements, verified limitations, relevant proof images and explicit unknowns."
+  },
+  {
+    "candidateId": "constructor-06",
+    "selectedId": "I04",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I04 (Turn a delivery deadline into a feasible purchase plan). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "constructor-07",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "constructor-08",
+    "selectedId": "I30",
+    "decision": "selected",
+    "reason": "Primary provenance for I30. Let the shopper explicitly mark a task as a gift, use temporary editable preferences and prevent gift activity from automatically training the buyer's self-preference profile."
+  },
+  {
+    "candidateId": "constructor-09",
+    "selectedId": "I42",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I42 (Quote the return terms and practical route for this exact purchase). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "constructor-10",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: selective model reasoning is primarily a serving-cost and latency policy. Prove noninferior or better purchases against Constructor's current routing before treating cost savings as value."
+  },
+  {
+    "candidateId": "gorgias-01",
+    "selectedId": "I13",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I13 (Carry a buyer-approved shopping brief across the AI handoff). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "gorgias-02",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: auditing a shopper-volunteered external recommendation is a distinct contradiction-recovery flow. It is not simply I16's stable comparison presentation and needs a measured false-claim cohort."
+  },
+  {
+    "candidateId": "gorgias-03",
+    "selectedId": "I08",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I08 (Ask only the question that changes the buying decision). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "gorgias-04",
+    "selectedId": "I33",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I33 (Apply a verified existing benefit before budget filtering). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "gorgias-05",
+    "selectedId": "I02",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I02 (Recover unavailable items with requirement-preserving alternatives). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "gorgias-06",
+    "selectedId": "I04",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I04 (Turn a delivery deadline into a feasible purchase plan). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "gorgias-07",
+    "selectedId": "I05",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I05 (Build the smallest complete basket that performs the task). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "gorgias-08",
+    "selectedId": "I15",
+    "decision": "selected",
+    "reason": "Primary provenance for I15. After an explicit readiness cue, suppress optional agent follow-ups and promotional interruptions, show a concise order check and open the existing checkout route."
+  },
+  {
+    "candidateId": "gorgias-09",
+    "selectedId": "I23",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I23 (Route unresolved buying tasks to an available specialist). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "gorgias-10",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: learning a limitation policy from mature returns is distinct from displaying the same evidence in I16. It may reduce unsuitable purchases rather than create additional purchasing customers."
+  },
+  {
+    "candidateId": "algorithmic-01",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: the broad typed shopping-constraint compiler spans compatibility, exclusions and empty-result explanations. I03 selects only exact compatibility; do not count this broad candidate in several slots."
+  },
+  {
+    "candidateId": "algorithmic-02",
+    "selectedId": "I08",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I08 (Ask only the question that changes the buying decision). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "algorithmic-03",
+    "selectedId": "I05",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I05 (Build the smallest complete basket that performs the task). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "algorithmic-04",
+    "selectedId": "I02",
+    "decision": "selected",
+    "reason": "Primary provenance for I02. Recover shoppers who hit a real stockout by comparing available substitutes with their confirmed requirements and the option to wait."
+  },
+  {
+    "candidateId": "algorithmic-05",
+    "selectedId": "I11",
+    "decision": "selected",
+    "reason": "Primary provenance for I11. Combine manual dimensions or a supported room scan with verified product geometry, packaging and movement clearances. Explain measurement uncertainty and abstain near unsafe margins."
+  },
+  {
+    "candidateId": "algorithmic-06",
+    "selectedId": "I47",
+    "decision": "selected",
+    "reason": "Primary provenance for I47. Distinguish a genuine assortment gap from retrieval failure, then fund a small real-stock or honestly described preorder pilot from deduplicated failed human shopping intents."
+  },
+  {
+    "candidateId": "algorithmic-07",
+    "selectedId": "I24",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I24 (Turn an unanswered buying question into a reusable supplier fact). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "algorithmic-08",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "algorithmic-09",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: decision-stability compute routing shares the cost-allocation hypothesis with constructor-10. It is useful only after purchase parity, latency and full-cost tests; cheaper tokens alone miss the objective."
+  },
+  {
+    "candidateId": "algorithmic-10",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: constrained product exploration is a mature recommender problem with strong Constructor and search incumbents. Require logged eligible exploration and a demonstrated purchaser gain before advancing."
+  },
+  {
+    "candidateId": "behavioral-01",
+    "selectedId": "I08",
+    "decision": "merged",
+    "reason": "Failed-query history is a signal for I08's bounded clarification policy. It does not require a second selected conversation-repair product."
+  },
+  {
+    "candidateId": "behavioral-02",
+    "selectedId": "I13",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I13 (Carry a buyer-approved shopping brief across the AI handoff). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "behavioral-03",
+    "selectedId": "I11",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I11 (Check physical fit and operating clearance in the buyer's space). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "behavioral-04",
+    "selectedId": "I24",
+    "decision": "selected",
+    "reason": "Primary provenance for I24. Send a precise SKU-and-revision question to staff or a supplier, request the smallest useful measurement or document, then resume the shopper's saved decision and reuse the approved product fact."
+  },
+  {
+    "candidateId": "behavioral-05",
+    "selectedId": "I23",
+    "decision": "selected",
+    "reason": "Primary provenance for I23. Recognize the unresolved task and failed checks, offer an honest wait estimate and transfer a minimal approved brief to a specialist who can finish it."
+  },
+  {
+    "candidateId": "behavioral-06",
+    "selectedId": "I05",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I05 (Build the smallest complete basket that performs the task). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "behavioral-07",
+    "selectedId": "I02",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I02 (Recover unavailable items with requirement-preserving alternatives). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "behavioral-08",
+    "selectedId": "I04",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I04 (Turn a delivery deadline into a feasible purchase plan). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "behavioral-09",
+    "selectedId": "I14",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I14 (Resume a saved buying decision by reviewing only what changed). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "behavioral-10",
+    "selectedId": "I28",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I28 (Preserve the organization, quote and approval needed to buy). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "infrastructure-01",
+    "selectedId": "I37",
+    "decision": "merged",
+    "reason": "Related component of I37 retained only within the narrowed canonical scope. Existing native or incumbent routing/semantic contracts are the active baseline; this broad candidate does not establish a generic missing feature."
+  },
+  {
+    "candidateId": "infrastructure-02",
+    "selectedId": "I39",
+    "decision": "selected",
+    "reason": "Primary provenance for I39. Coordinate every writer with source versions, coalesced updates and explicit deletion; reconcile source truth, accepted state, observed display and checkout separately."
+  },
+  {
+    "candidateId": "infrastructure-03",
+    "selectedId": "I40",
+    "decision": "selected",
+    "reason": "Primary provenance for I40. Acquire a real bounded reservation after explicit buyer commitment, share its lease across the handoff and release it reliably on completion, cancellation or expiry."
+  },
+  {
+    "candidateId": "infrastructure-04",
+    "selectedId": "I35",
+    "decision": "selected",
+    "reason": "Primary provenance for I35. Reconcile one logical purchase across commerce state, payment state, provider receipts and order IDs after a lost response or delayed webhook."
+  },
+  {
+    "candidateId": "infrastructure-05",
+    "selectedId": "I36",
+    "decision": "selected",
+    "reason": "Primary provenance for I36. Budget the hook's dependency path, parallelize independent reads, remove optional delays and keep an authoritative final check so valid purchases are not lost to deadline misses."
+  },
+  {
+    "candidateId": "infrastructure-06",
+    "selectedId": "I01",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I01 (Preserve the selected variant from AI link to cart). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "infrastructure-07",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: minimized failure replay is useful engineering support, but it has a different actuator from I50's simulation-selection policy. Keep as an implementation tool until equal-budget repair productivity is established."
+  },
+  {
+    "candidateId": "infrastructure-08",
+    "selectedId": "I37",
+    "decision": "selected",
+    "reason": "Primary provenance for I37. Map a merchant's documented legacy units, pack meanings and totals into an approved checkout contract, then read back the basket and reconcile the intended quantity and authoritative price. Conditional on the narrowed incumbent-gap test."
+  },
+  {
+    "candidateId": "infrastructure-09",
+    "selectedId": "I04",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I04 (Turn a delivery deadline into a feasible purchase plan). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "infrastructure-10",
+    "selectedId": "I38",
+    "decision": "selected",
+    "reason": "Primary provenance for I38. Trace a verified partner through product and cart routes, then correct supported WAF or signature-policy configuration at the exact false-block point."
+  },
+  {
+    "candidateId": "regulatory-01",
+    "selectedId": "I27",
+    "decision": "merged",
+    "reason": "Related component of I27 retained only within the narrowed canonical scope. Existing native or incumbent routing/semantic contracts are the active baseline; this broad candidate does not establish a generic missing feature."
+  },
+  {
+    "candidateId": "regulatory-02",
+    "selectedId": "I33",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I33 (Apply a verified existing benefit before budget filtering). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "regulatory-03",
+    "selectedId": "I26",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I26 (Keep seller provenance and promises attached to the exact offer). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "regulatory-04",
+    "selectedId": "I43",
+    "decision": "selected",
+    "reason": "Primary provenance for I43. Match buyer-supplied approved requirements to exact product, model and document versions, show satisfied, contradicted or unestablished evidence, and prepare the purchasing packet."
+  },
+  {
+    "candidateId": "regulatory-05",
+    "selectedId": "I44",
+    "decision": "selected",
+    "reason": "Primary provenance for I44. Join an exact device model and applicable repair information to a participating repairer's current coverage, scoped quote, parts access and service terms."
+  },
+  {
+    "candidateId": "regulatory-06",
+    "selectedId": "I45",
+    "decision": "selected",
+    "reason": "Primary provenance for I45. Check exact refill compatibility, local delivery and collection coverage, deposits and acceptance terms before proposing the starter purchase."
+  },
+  {
+    "candidateId": "regulatory-07",
+    "selectedId": "I46",
+    "decision": "selected",
+    "reason": "Primary provenance for I46. Repair the actual variant, validation and extension journey with semantic controls, preserved entries, announced errors and predictable focus, validated by consenting assistive-technology users."
+  },
+  {
+    "candidateId": "regulatory-08",
+    "selectedId": "I13",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I13 (Carry a buyer-approved shopping brief across the AI handoff). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "regulatory-09",
+    "selectedId": "I42",
+    "decision": "selected",
+    "reason": "Primary provenance for I42. Resolve the item, destination, condition and relevant dates into the applicable return terms and, where available, a usable collection route and real cost."
+  },
+  {
+    "candidateId": "regulatory-10",
+    "selectedId": "I41",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I41 (Honor a genuine quoted price through checkout). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "psychological-01",
+    "selectedId": "I17",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I17 (Show which choices remain suitable when priorities change). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "psychological-02",
+    "selectedId": "I17",
+    "decision": "selected",
+    "reason": "Primary provenance for I17. Let the shopper revise consequential assumptions and acceptable preference ranges, then show which eligible products remain suitable and exactly when the choice changes."
+  },
+  {
+    "candidateId": "psychological-03",
+    "selectedId": "I18",
+    "decision": "selected",
+    "reason": "Primary provenance for I18. Offer an optional short demonstration of a consequential concept, then let the shopper check their device or task against sourced rules."
+  },
+  {
+    "candidateId": "psychological-04",
+    "selectedId": "I19",
+    "decision": "selected",
+    "reason": "Primary provenance for I19. Present a validated range of real performance, such as runtime under a selected load, so the buyer can compare it with an explicit minimum requirement."
+  },
+  {
+    "candidateId": "psychological-05",
+    "selectedId": "I11",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I11 (Check physical fit and operating clearance in the buyer's space). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "psychological-06",
+    "selectedId": "I20",
+    "decision": "selected",
+    "reason": "Primary provenance for I20. Offer a comparative sample kit chosen to answer one explicit sensory question, with real product identities, neutral instructions and a route to either full-size product or neither."
+  },
+  {
+    "candidateId": "psychological-07",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: an ownership-task rehearsal is deployable, but adjacent research includes increased difficulty and postponement. It is less direct than the selected risk-context repair and needs a matched-information purchase test."
+  },
+  {
+    "candidateId": "psychological-08",
+    "selectedId": "I22",
+    "decision": "selected",
+    "reason": "Primary provenance for I22. Compare conflicting reviews by exact product version and relevant usage context, preserve contrary evidence and state when no supported reconciliation exists."
+  },
+  {
+    "candidateId": "psychological-09",
+    "selectedId": "I29",
+    "decision": "selected",
+    "reason": "Primary provenance for I29. Create a voluntary shared decision where participants privately state non-negotiable requirements and decide what to share, then compare options satisfying the agreed constraints."
+  },
+  {
+    "candidateId": "psychological-10",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: honest advice to keep an adequate owned product is useful consumer guidance, but its proposed payoff is speculative later trust and repurchase. It does not meet the current first-purchase objective without long-term order evidence."
+  },
+  {
+    "candidateId": "temporal-01",
+    "selectedId": "I04",
+    "decision": "selected",
+    "reason": "Primary provenance for I04. Use the shopper's destination and needed-by date with actual stock locations, cutoffs and capacity. Offer a valid shipping or collection choice and preserve it through checkout."
+  },
+  {
+    "candidateId": "temporal-02",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: interval-aware rental booking is a viable adjacent market, but a rental booking is not a new product purchase. Keep its market, endpoint and economics separate."
+  },
+  {
+    "candidateId": "temporal-03",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: horizon-qualified preorders are plausible actual purchases but overlap mature preorder operations. Require final payment and fulfilment, not deposits or promises, before claiming added purchases."
+  },
+  {
+    "candidateId": "temporal-04",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: need-aware restock notifications can serve an original AI-origin cohort, but are a separate permissioned reactivation product with strong existing messaging tools. Distinguish new orders from merely accelerated later demand."
+  },
+  {
+    "candidateId": "temporal-05",
+    "selectedId": "I42",
+    "decision": "merged",
+    "reason": "Gift-date eligibility is a concrete input to the same return-rule evaluator selected in I42, not a separate policy product."
+  },
+  {
+    "candidateId": "temporal-06",
+    "selectedId": "I48",
+    "decision": "selected",
+    "reason": "Primary provenance for I48. Qualify dated products using the customer's use date and an allocatable batch or enforceable minimum-life promise, then preserve that condition through fulfilment."
+  },
+  {
+    "candidateId": "temporal-07",
+    "selectedId": "I40",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I40 (Hold inventory only when the buyer genuinely starts committing). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "temporal-08",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: consumption-timed reminders concern repeat purchases, not new external-AI acquisition. A full-cycle experiment must establish more retained orders rather than earlier ordering."
+  },
+  {
+    "candidateId": "temporal-09",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: coordinating event activation and expiry is distinct from I39's monotonic offer publication. It needs evidence of lost event orders beyond competent native scheduling and feed updates."
+  },
+  {
+    "candidateId": "temporal-10",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "identity-01",
+    "selectedId": "I25",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I25 (Repair product identity collisions across feeds and offers). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "identity-02",
+    "selectedId": "I26",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I26 (Keep seller provenance and promises attached to the exact offer). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "identity-03",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: line-to-wearer binding is a specific fit-account defect, not I30's recipient-task personalization. Confirm prevalence against the existing fit provider before creating another identity feature."
+  },
+  {
+    "candidateId": "identity-04",
+    "selectedId": "I03",
+    "decision": "merged",
+    "reason": "Confirming an owned model from a plate or receipt is an input step to I03's exact compatibility check. A reusable ownership passport is not separately selected."
+  },
+  {
+    "candidateId": "identity-05",
+    "selectedId": "I33",
+    "decision": "selected",
+    "reason": "Primary provenance for I33. With permission, resolve an existing loyalty or verified-discount entitlement and show the eligible live price before the agent rejects the offer as unaffordable."
+  },
+  {
+    "candidateId": "identity-06",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: safe account-switch recovery is important but distinct from protocol translation in I37. A measured transition defect and native account/cart baseline are needed for a standalone claim."
+  },
+  {
+    "candidateId": "identity-07",
+    "selectedId": "I28",
+    "decision": "selected",
+    "reason": "Primary provenance for I28. Carry the authorized purchasing location, project, required technical sign-offs and quote version through native drafts and approval, then recheck material changes before payment."
+  },
+  {
+    "candidateId": "identity-08",
+    "selectedId": "I29",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I29 (Resolve joint buyers' conflicting requirements before checkout). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "identity-09",
+    "selectedId": null,
+    "decision": "reserve",
+    "reason": "Reserve: recipient-approved gift substitutions are distinct from generic stockout recovery and gift personalization. It requires recipient permissions, list integration and duplicate-purchase reconciliation that have not been established."
+  },
+  {
+    "candidateId": "identity-10",
+    "selectedId": "I38",
+    "decision": "merged",
+    "reason": "Same core intervention and purchase failure as I38 (Repair false blocks of verified buyer-directed shopping agents). Category, channel or interface variations are merged; the native comparator and deployment limits in the canonical record still apply."
+  },
+  {
+    "candidateId": "measurement-01",
+    "selectedId": "I50",
+    "decision": "selected",
+    "reason": "Primary provenance for I50. Pair frozen replay predictions with independently assigned merchant purchase tests, then determine whether those predictions improve intervention selection at a fixed total budget on held-out merchants."
+  },
+  {
+    "candidateId": "measurement-02",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "measurement-03",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "measurement-04",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "measurement-05",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "measurement-06",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "measurement-07",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "measurement-08",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "measurement-09",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  },
+  {
+    "candidateId": "measurement-10",
+    "selectedId": "I50",
+    "decision": "merged",
+    "reason": "Supporting selection policy, validation method or experiment-infrastructure component of I50. It is not counted as a separate conversion product, and no statistical method by itself establishes an order advantage."
+  }
+]

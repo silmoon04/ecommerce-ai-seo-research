@@ -1,0 +1,572 @@
+{
+  "lens": "identity",
+  "ideas": [
+    {
+      "id": "identity-01",
+      "title": "Repair cross-channel product identity collisions before checkout",
+      "lens": "identity",
+      "buyer": "Multi-brand retailers whose AI referrals span merchant SKUs, global identifiers and regional variants.",
+      "problem": "An AI agent can identify the intended product family but resolve a different edition, pack size or regional variant when it follows an offer into checkout. Actual prevalence must be audited.",
+      "mechanism": "Selection-to-cart: preserve the exact trade item across discovery and handoff, preventing an apparent match from becoming a wrong-item landing or abandoned cart. Product identity is separate from seller and shopper identity.",
+      "intervention": "Create a contradiction-aware crosswalk among manufacturer model/GTIN, merchant variant ID and offer ID. A resolver returns an exact match only when region, edition and pack quantity agree; otherwise it requests one discriminating choice. Test the ID chain at search, product, cart and order boundaries.",
+      "competitorOverlap": "OpenAI already models product/variant/offer identifiers; GS1 already verifies identifier ownership. Generic catalog mapping overlaps. The remaining hypothesis is cross-channel contradiction detection and repair, not generating more identifiers.",
+      "edgeHypothesis": "A focused resolver can rescue observed wrong-variant handoffs that clean feeds and native variant grouping still leave unresolved.",
+      "dataNeeded": [
+        "Merchant-authorized variant and offer exports",
+        "Manufacturer model/GTIN evidence including edition, region and pack quantity",
+        "Consented or non-personal transaction lineage for comparing selected and ordered items"
+      ],
+      "experiment": "First replay known ID collisions and honest unknowns offline. Then randomize eligible users of a merchant-owned AI shopping flow to the existing resolver or the contradiction-aware resolver, keeping factual inventory/prices equal. Primary endpoint is paid, non-cancelled purchases retained at 30 days. Plan 6 to 8 weeks of enrollment, extend only under a pre-set power rule; protect latency and wrong-item returns. External engine monitoring is a separate transfer check.",
+      "metric": "Retained purchases per all randomized eligible shoppers, with one stable first-party assignment per shopper where consent permits; otherwise session-level inference is labelled. Count all merchant purchases to detect SKU substitution, and separately report exact-item success.",
+      "impactEvidence": "Hypothesized purchase effect. openai-feed and gs1 establish available identity mechanisms, not lift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion or fault-prevalence baseline has been measured. N is the number of eligible AI shopping entrants; pC and pT are randomized retained-purchase probabilities.",
+        "calculation": "Incremental retained purchases = N * (pT - pC). Break-even requires N * (pT - pC) * g > GBP 400 + V, where g is contribution per incremental retained purchase and V is incremental verification, integration amortization and operating cost. Fee is an unvalidated test price; no uplift assumption is supplied.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated value-based test: GBP 400 per merchant per month after an observed collision audit; charge only if retained contribution can plausibly cover the fee.",
+      "costControl": "Use deterministic key checks first, cache manufacturer mappings by version and send only genuine contradictions for manual review.",
+      "feasibility": "now",
+      "dependencies": [
+        "Merchant feed/cart access",
+        "Authoritative variant evidence",
+        "A controlled AI entry point or deployable merchant handoff adapter"
+      ],
+      "failureMode": "Over-conservative matching removes legitimate offers or adds clarification friction; false confidence sends shoppers to the wrong product.",
+      "falsifier": "A sampled audit finds negligible resolvable identity errors, or a powered trial excludes the merchant's break-even retained-purchase effect.",
+      "sourceIds": [
+        "openai-feed",
+        "gs1"
+      ]
+    },
+    {
+      "id": "identity-02",
+      "title": "Bind an authorized seller claim to the exact regional offer",
+      "lens": "identity",
+      "buyer": "Specialist electronics, camera, audio and other retailers where manufacturer support depends on seller or region.",
+      "problem": "A legitimate retailer's AI offer can be indistinguishable from an unverified seller or can inherit a warranty claim that applies to a different country. A valid GTIN alone does not answer this.",
+      "mechanism": "Comparison-to-purchase: source-backed seller identity and applicable support terms remove a specific unresolved trust question before the buyer abandons or chooses a different retailer.",
+      "intervention": "Publish a dated evidence record linking brand confirmation, legal seller, selling domain, product scope and territory. Show the applicable warranty source beside the actual offer and recheck changes. Use brand attestations or authoritative dealer records; never treat an absent record as proof of counterfeiting.",
+      "competitorOverlap": "Bose already publishes authorized-dealer lookup and counterfeit guidance. GS1 verifies identifier/company ownership, which is a different check. Seller badges alone are established; a maintained offer-level evidence link is the proposed addition.",
+      "edgeHypothesis": "For queries that explicitly care about authorization or local warranty, attaching the evidence to the purchasable offer reduces uncertainty more than a generic trust badge.",
+      "dataNeeded": [
+        "Brand-confirmed seller/domain relationships",
+        "Product- and territory-specific dealer scope",
+        "Current manufacturer warranty/support wording and timestamp",
+        "Merchant order/refund outcomes"
+      ],
+      "experiment": "Randomize consenting merchant AI sessions expressing an authorization/warranty requirement to existing offer presentation or the sourced seller/territory explanation. Both receive accurate material terms. Primary endpoint is 30-day retained purchases per assigned session. Use a 6 to 10 week planning window with sample size based on observed traffic; guard against inaccurate endorsements, lower margin and delayed cancellations.",
+      "metric": "Difference in retained purchase probability across all assigned qualifying sessions, plus contribution after returns. Revenue moving between a merchant's authorized offers is not automatically incremental.",
+      "impactEvidence": "Hypothesized. bose-dealers and bose-counterfeit show a real brand-owned verification workflow, not conversion improvement from this intervention.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion or fault-prevalence baseline has been measured. N is the number of eligible qualifying AI comparison sessions; pC and pT are randomized retained-purchase probabilities.",
+        "calculation": "Incremental retained purchases = N * (pT - pC). Break-even requires N * (pT - pC) * g > GBP 500 + V, where g is contribution per incremental retained purchase and V is incremental verification, integration amortization and operating cost. Fee is an unvalidated test price; no uplift assumption is supplied.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated test: GBP 500 per month for a specialist retailer or brand-authorized dealer network; validate willingness against verified retained contribution.",
+      "costControl": "Refresh on dealer or policy changes, reuse verified brand-domain relationships, and reserve human work for changed or conflicting records.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Brand participation or permitted use of authoritative dealer data",
+        "Territorial product/warranty mapping",
+        "A merchant or partner agent able to consume the evidence record"
+      ],
+      "failureMode": "Stale authorization misleads shoppers; overly broad badges imply endorsement or guarantees the brand never granted.",
+      "falsifier": "Shoppers rarely have unresolved seller questions, or an accurate source-linked explanation fails to beat the merchant's existing dealer badge.",
+      "sourceIds": [
+        "gs1",
+        "bose-dealers",
+        "bose-counterfeit"
+      ]
+    },
+    {
+      "id": "identity-03",
+      "title": "Keep each cart line attached to its actual wearer",
+      "lens": "identity",
+      "buyer": "Apparel and uniform merchants serving shoppers who buy for several consenting adults in one cart.",
+      "problem": "A signed-in buyer is not necessarily the person wearing every garment. Account-level fit context can contaminate a mixed-person basket; whether a given fit provider already solves this must be checked.",
+      "mechanism": "Sizing-to-purchase: resolving wearer identity for each line prevents a confident recommendation for the wrong person, increasing purchases that survive the return window.",
+      "intervention": "Add a wearer selector with explicit permission for each invited adult. Bind an opaque wearer reference, provider recommendation and product version to each cart line; recompute only the affected line when the wearer changes. Keep raw measurements inside the selected provider and do not overwrite the purchaser's default profile.",
+      "competitorOverlap": "True Fit already offers MCP, fit confidence, controlled access, stock filtering and exchange guidance. The comparator uses that existing intelligence. Public documentation checked here does not settle support for mixed-wearer cart identity, so the idea proceeds only after an integration audit.",
+      "edgeHypothesis": "A missing line-to-wearer binding, if observed, is a narrower and more valuable defect to repair than another fit passport.",
+      "dataNeeded": [
+        "Explicit wearer invitations/permission and revocation",
+        "Opaque fit-provider profile handles",
+        "Variant-level fit outputs and confidence",
+        "Line-level purchase and fit-return outcomes"
+      ],
+      "experiment": "Recruit consenting multi-wearer shopping sessions and randomize at buyer-group level to the current fit-provider integration or explicit line-level wearer binding. Primary endpoint is paid orders with no fit-related return at 45 days; report total retained orders as a second purchase endpoint. Plan 8 to 12 weeks plus follow-up, with power based on actual group count. Guard profile leakage, extra prompts and mistaken wearer switches.",
+      "metric": "Retained orders per randomized multi-wearer group, with line-level wrong-wearer recommendations as a diagnostic. Do not compare voluntary fit users with non-users as if randomized.",
+      "impactEvidence": "Hypothesized for this specific identity defect. truefit-spec describes adjacent capabilities and vendor outcomes; none establish the incremental effect of line-to-wearer binding.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion or fault-prevalence baseline has been measured. N is the number of eligible consenting multi-wearer groups; pC and pT are randomized retained-purchase probabilities.",
+        "calculation": "Incremental retained purchases = N * (pT - pC). Break-even requires N * (pT - pC) * g > GBP 300 + V, where g is contribution per incremental retained purchase and V is incremental verification, integration amortization and operating cost. Fee is an unvalidated test price; no uplift assumption is supplied.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated test: GBP 300 per month above existing fit-provider fees, conditional on an observed mixed-wearer defect and adequate traffic.",
+      "costControl": "Reuse a fit provider; cache by wearer, garment version and permission expiry, and avoid copying underlying body data.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Provider support for permissioned opaque wearer references",
+        "Cart line metadata",
+        "Adult participants' explicit opt-in",
+        "Merchant returns data"
+      ],
+      "failureMode": "The native provider already handles the case; inviting wearers costs more conversions than it saves; revocation or line switching is mishandled.",
+      "falsifier": "Provider audit shows no missing wearer binding, or a controlled trial shows no economically useful increase in retained orders.",
+      "sourceIds": [
+        "truefit-spec"
+      ]
+    },
+    {
+      "id": "identity-04",
+      "title": "Resolve the exact owned appliance before suggesting accessories",
+      "lens": "identity",
+      "buyer": "Replacement-part and accessory merchants with model-revision compatibility data.",
+      "problem": "A shopper asks for a part for 'my mixer' or a familiar model name, while compatibility depends on a suffix or production revision. Prior purchase identity may be missing because the appliance came from another retailer.",
+      "mechanism": "Need-to-selection: a user-confirmed equipment identity makes a compatible accessory purchasable without a long search or a wrong-part return. Ownership context is voluntarily supplied, never inferred from browsing.",
+      "intervention": "Let the shopper select an existing saved appliance or submit its model plate/receipt for this task. Extract only the necessary model/revision, ask the user to confirm it, and resolve compatible parts against manufacturer evidence. Save a reusable item card only with separate permission; purchase history is not required.",
+      "competitorOverlap": "Bosch already provides E-Nr-based parts lookup, and Shopify agents already support reorder. The remaining test is cross-retailer recovery of a precise equipment identity inside the AI discovery flow, with manufacturer-backed compatibility rather than generic recommendations.",
+      "edgeHypothesis": "Preserving the confirmed model suffix into the AI search and cart will outperform repeating a manual model lookup on the merchant site.",
+      "dataNeeded": [
+        "User-provided model identifier or selectively redacted document",
+        "Manufacturer compatibility matrix with revision coverage",
+        "Stock and exact part identifiers",
+        "Wrong-part returns and purchase outcomes"
+      ],
+      "experiment": "Randomize qualifying AI-origin accessory shoppers before requesting model information to the existing model-lookup flow or the task-scoped equipment card. Primary endpoint is a paid compatible-part order retained at 30 days. Use 6 to 10 weeks plus return maturation and a pre-set power target. Guard extraction error, unsafe unsupported compatibility claims and document retention.",
+      "metric": "Retained compatible-part orders per all randomized qualifying shoppers, including those who decline sharing. Track basket contribution and wrong-part return rates; model capture rate is secondary.",
+      "impactEvidence": "Hypothesized. bosch-parts demonstrates the existing exact-model workflow; shopify-shop establishes reorder competition. Neither proves AI-specific uplift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion or fault-prevalence baseline has been measured. N is the number of eligible AI-origin accessory shopping entrants; pC and pT are randomized retained-purchase probabilities.",
+        "calculation": "Incremental retained purchases = N * (pT - pC). Break-even requires N * (pT - pC) * g > GBP 400 + V, where g is contribution per incremental retained purchase and V is incremental verification, integration amortization and operating cost. Fee is an unvalidated test price; no uplift assumption is supplied.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated test: GBP 400 per month for an accessory merchant; data licensing or manufacturer integration priced separately and included in break-even.",
+      "costControl": "Prefer typed/scanned model numbers, perform deterministic compatibility joins, and expire source documents after confirmed extraction.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Manufacturer-authorized compatibility data",
+        "Exact revision-level stock mapping",
+        "Task-scoped user permission",
+        "Merchant fulfillment/returns feedback"
+      ],
+      "failureMode": "An apparently similar revision is treated as compatible; the library omits aftermarket options the buyer would prefer; capture friction suppresses purchase.",
+      "falsifier": "Existing lookup already resolves the need with little abandonment, or the new path does not improve retained compatible purchases.",
+      "sourceIds": [
+        "bosch-parts",
+        "shopify-shop"
+      ]
+    },
+    {
+      "id": "identity-05",
+      "title": "Apply verified eligibility before an agent rejects the price",
+      "lens": "identity",
+      "buyer": "Merchants with legitimate student, trade or membership offers whose eligible shoppers arrive through AI search.",
+      "problem": "The public price can fail a shopper's stated budget before the shopper reaches an existing eligibility offer. Verification and coupon activation can also become disconnected from the chosen cart.",
+      "mechanism": "Budget screening-to-checkout: with explicit shopper permission, an applicable verified benefit produces an accurate final quote early enough for an affordable offer to remain in consideration.",
+      "intervention": "Offer a voluntary 'check my existing eligibility' action only where a real merchant program exists. Reuse its verification flow, bind the result to that program and cart, and retrieve a live net quote. The agent receives eligibility/quote outputs, not identity documents. Keep public-price browsing available and request fresh verification when required.",
+      "competitorOverlap": "SheerID already provides verification, offer codes and conversion tracking; UCP supports identity-linked benefits. The proposed edge is quote timing and cart-specific redemption continuity, tested against the merchant's current program, not a new identity network.",
+      "edgeHypothesis": "Showing a validated eligible total before budget filtering recovers purchases otherwise lost during AI comparison without increasing discount leakage.",
+      "dataNeeded": [
+        "Published program terms and applicable products",
+        "Permissioned verification outcome and expiry",
+        "Live cart quote including offer applicability",
+        "Paid orders, discount cost and contribution"
+      ],
+      "experiment": "Randomize relevant AI shopping entrants to the existing discount-discovery path or an optional early eligibility check; maintain the same offer and verification standard in both arms. Primary endpoint is 30-day retained purchases per entrant. Plan 6 to 10 weeks and power using actual eligible-intent traffic. Include opt-outs and failed verification in intention-to-treat; guard margin, subsidy to would-have-bought customers, access errors and verification burden.",
+      "metric": "Retained-purchase risk difference for all assigned entrants, plus incremental contribution after discount and verification fees. Verified-user conversion alone is selection-biased; coupon redemptions are not incremental purchases.",
+      "impactEvidence": "Hypothesized. sheerid-create, sheerid-webhooks, sheerid-conversion and ucp-identity show implementation and attribution capabilities, not a causal purchase result.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion or fault-prevalence baseline has been measured. N is the number of eligible program-relevant AI shopping entrants; pC and pT are randomized retained-purchase probabilities.",
+        "calculation": "Incremental retained purchases = N * (pT - pC). Break-even requires N * (pT - pC) * g > GBP 500 + V, where g is contribution per incremental retained purchase and V is incremental verification, integration amortization and operating cost. Fee is an unvalidated test price; no uplift assumption is supplied.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated test: GBP 500 per month plus disclosed verification costs; merchant must evaluate contribution after discounts.",
+      "costControl": "Recheck a valid program-scoped result where permitted, call verification only after opt-in, and avoid storing identity evidence in the shopping layer.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant-approved eligibility program",
+        "Verification-provider contract",
+        "Fresh merchant quote API",
+        "Partner agent support for a voluntary verification handoff"
+      ],
+      "failureMode": "Early verification deters shoppers, exposes unnecessary personal data, or mostly discounts purchases that would have happened at full price.",
+      "falsifier": "Eligibility is already applied before comparison, or incremental retained contribution remains below verification and product cost.",
+      "sourceIds": [
+        "sheerid-create",
+        "sheerid-webhooks",
+        "sheerid-conversion",
+        "ucp-identity"
+      ]
+    },
+    {
+      "id": "identity-06",
+      "title": "Recover an account switch without losing the selected cart",
+      "lens": "identity",
+      "buyer": "Merchants and AI shopping integrations with measurable cart failures around login, token expiry or an explicit account switch.",
+      "problem": "Native long-running carts exist, but an integration can drop buyer context, selected variants or discounts while replacing cart state or recovering an expired account link. The correct account must be confirmed before private data returns.",
+      "mechanism": "Handoff-to-purchase: preserve the buyer's selections through a legitimate reauthentication boundary, then recompute account-dependent terms, so a repairable account failure does not require rebuilding the basket.",
+      "intervention": "Add a server-side cart checkpoint and transition assertions around reauthentication/account switching. Retain non-sensitive selections, clear previous-account fields, relink through the supported flow, retrieve current full cart state before replacement updates, and show the buyer any price or entitlement change before continuation.",
+      "competitorOverlap": "Shopify already has buyer-linked Shop tokens, logged-in checkoutUrl, long-running carts and continue_url. Cart MCP replacement semantics can remove omitted fields. This is a fault-specific recovery layer for an observed integration defect, not a new shared-cart feature.",
+      "edgeHypothesis": "A verified stale-link or wrong-account recovery defect can be fixed without adding a second authentication step to successful journeys.",
+      "dataNeeded": [
+        "Non-secret cart state/version checkpoints",
+        "Explicit account-change or authentication-failure events",
+        "Scoped token status without logging token values",
+        "Cart/order linkage and current authoritative prices"
+      ],
+      "experiment": "Use authorized test accounts to replay expiry, logout and replacement-update cases. In live eligible recovery sessions, randomize users to the currently approved fallback or repaired recovery; never relax authentication. Primary endpoint is retained paid purchase within 7 days, matured for 30-day returns. Plan 4 to 8 weeks but enroll until the pre-specified rare-failure power target or stop as underpowered. Guard cross-account disclosure and duplicate orders.",
+      "metric": "Retained purchases per all randomized eligible failed-handoff shoppers, plus overall purchase effect weighted by the separately measured natural fault rate. Synthetic failure frequency is not the population baseline.",
+      "impactEvidence": "Hypothesized recovery benefit. shopify-buyer-token, shopify-agent-cart and shopify-cart establish existing primitives and an exact update hazard; they do not establish its production prevalence.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion or fault-prevalence baseline has been measured. N is the number of eligible naturally occurring eligible failed-handoff shoppers; pC and pT are randomized retained-purchase probabilities.",
+        "calculation": "Incremental retained purchases = N * (pT - pC). Break-even requires N * (pT - pC) * g > GBP 500 + V, where g is contribution per incremental retained purchase and V is incremental verification, integration amortization and operating cost. Fee is an unvalidated test price; no uplift assumption is supplied.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated test: GBP 500 per month for a merchant integration with observed failures; no fee case if the native flow already works.",
+      "costControl": "Run deterministic transition checks, retain short-lived minimal checkpoints, and focus testing on observed failing paths instead of replaying every cart.",
+      "feasibility": "now",
+      "dependencies": [
+        "Merchant/agent adapter access",
+        "Supported account-linking implementation",
+        "A reproducible authorized failure",
+        "Server-side idempotent order handling"
+      ],
+      "failureMode": "Recovery resurrects stale prices, links the wrong account, duplicates orders or causes needless consent prompts.",
+      "falsifier": "No meaningful natural failure cohort exists, the vendor's latest native adapter already repairs it, or the repaired flow fails the retained-purchase break-even test.",
+      "sourceIds": [
+        "shopify-buyer-token",
+        "shopify-agent-cart",
+        "shopify-cart",
+        "ucp-identity"
+      ]
+    },
+    {
+      "id": "identity-07",
+      "title": "Bind a professional purchase to the right organization and approver",
+      "lens": "identity",
+      "buyer": "B2B merchants whose buyers represent multiple locations or require another person to approve the purchase.",
+      "problem": "The logged-in contact may act for several legal or company locations. A quote for the wrong location, price list or approver can become an abandoned or rejected order even when the selected products are correct.",
+      "mechanism": "Quote-to-purchase: explicit purchasing authority and location produce a usable draft; the authorized approver receives the same product/version/price context, reducing quote reconstruction and rejection.",
+      "intervention": "Require the buyer to select an authorized purchasing location and project. Carry that context into native drafts, bind approval to a specific quote version, and recompute after material price/quantity changes. Use existing organization roles and a user-authorized handoff; do not infer employment or send messages without explicit user action.",
+      "competitorOverlap": "Shopify already supports B2B context, purchasing entities and draft orders for approval. The remaining defect to test is losing location or quote identity across an AI-to-human approval handoff. Native support may already cover a merchant's flow.",
+      "edgeHypothesis": "Where cross-system handoffs lose purchasing context, maintaining quote-bound authority converts more valid requests into paid orders without changing commercial terms.",
+      "dataNeeded": [
+        "Merchant-approved organization/contact/location relationships",
+        "Role and approval policy",
+        "Versioned quote and draft identifiers",
+        "Accepted purchase order, settlement and cancellation records"
+      ],
+      "experiment": "Randomize at organization-location purchasing-project level to existing B2B draft approval or context-preserving handoff, avoiding spillover between requester and approver. Primary endpoint is paid, non-cancelled orders within the merchant's normal buying cycle, with accepted purchase orders only a secondary leading measure. Plan a 10 to 16 week enrollment pilot and power by organization clusters. Guard unauthorized commitments, quote changes and purchase concentration.",
+      "metric": "Paid retained orders per assigned qualified purchasing project; attribute using purchasingEntity and project rather than personal contact. Report total account purchases to detect timing shifts or internal substitution.",
+      "impactEvidence": "Hypothesized. shopify-b2b, shopify-drafts and shopify-b2b-attribution establish native workflows and the company/contact distinction, not incremental AI purchase effects.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion or fault-prevalence baseline has been measured. N is the number of eligible qualified B2B purchasing projects; pC and pT are randomized retained-purchase probabilities.",
+        "calculation": "Incremental retained purchases = N * (pT - pC). Break-even requires N * (pT - pC) * g > GBP 1500 + V, where g is contribution per incremental retained purchase and V is incremental verification, integration amortization and operating cost. Fee is an unvalidated test price; no uplift assumption is supplied.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated test: GBP 1500 per month for a B2B merchant with sufficient lost quotes; procurement integration costs must enter the value test.",
+      "costControl": "Reuse native company roles and drafts, cache only valid policy versions, and ask an approver again only when their actual authorization no longer covers the quote.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant B2B plan/API capabilities",
+        "Organization's explicit delegation policy",
+        "Procurement/approval integration where used",
+        "Sufficient independent organization clusters"
+      ],
+      "failureMode": "The extra context step slows simple orders; cached roles become stale; a draft is mistaken for approval or payment authorization.",
+      "falsifier": "Native quote workflows preserve the full context already, or improved draft completion produces no increase in paid orders over a full buying cycle.",
+      "sourceIds": [
+        "shopify-b2b",
+        "shopify-drafts",
+        "shopify-b2b-attribution"
+      ]
+    },
+    {
+      "id": "identity-08",
+      "title": "Resolve a household veto before generating the final shortlist",
+      "lens": "identity",
+      "buyer": "Furniture and home-improvement merchants serving jointly decided, high-consideration purchases.",
+      "problem": "A single shopper's AI conversation may omit a consenting co-buyer whose dimensions, budget or material requirements later rule out the shortlist. Shared browsing history is not permission to infer a household.",
+      "mechanism": "Shortlist-to-purchase: explicitly collecting each participant's required constraints reduces late rejection and repeated search, allowing the group to choose a purchase that all decision-makers accept.",
+      "intervention": "Create a voluntary, task-limited buying project. Each invited adult supplies chosen constraints and decides what other participants can see. Resolve conflicts through explicit edits or trade-offs, then show only products satisfying agreed requirements and preserve the approved decision into checkout. Invitations occur only through a participant's explicit action.",
+      "competitorOverlap": "Pinterest already supports collaborative boards, favorites and permissions; shared wishlists are established. The proposed addition is agreed constraint resolution tied to purchasable inventory and measured orders, not another shared board.",
+      "edgeHypothesis": "For purchases with a real second decision-maker, surfacing a concrete conflicting constraint before the shortlist beats passing links between people after selection.",
+      "dataNeeded": [
+        "Explicit participant invitations and per-project permissions",
+        "Voluntarily supplied budget, dimensions and non-sensitive product preferences",
+        "Agreed constraint version and optional approvals",
+        "Paid and returned orders at project level"
+      ],
+      "experiment": "Recruit AI-origin projects with two or more self-declared adult decision-makers, then randomize the whole project to a usual shareable shortlist or the constraint-resolution flow. Primary endpoint is a paid order retained at 45 days. Plan 8 to 12 weeks plus returns, power by independent projects and keep invitations identical where possible. Guard participation burden, private preference leakage and coerced agreement.",
+      "metric": "Retained orders per all randomized projects, including projects where the invite is declined. Multiple participants or model reruns do not increase the independent sample count.",
+      "impactEvidence": "Hypothesized. pinterest-groups provides an adjacent collaboration comparator; no direct purchase-lift evidence was located for this particular intervention.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion or fault-prevalence baseline has been measured. N is the number of eligible consenting joint-buying projects; pC and pT are randomized retained-purchase probabilities.",
+        "calculation": "Incremental retained purchases = N * (pT - pC). Break-even requires N * (pT - pC) * g > GBP 400 + V, where g is contribution per incremental retained purchase and V is incremental verification, integration amortization and operating cost. Fee is an unvalidated test price; no uplift assumption is supplied.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated merchant test: GBP 400 per month; consumer willingness is not assumed and collaboration should remain optional.",
+      "costControl": "Use a structured constraint solver, query inventory only when constraints change, and avoid permanent household graphs or cross-session inference.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "Adoption by all participating adults",
+        "A merchant-owned project interface or cooperating shopping agents",
+        "Granular permission and revocation model",
+        "Live dimensions, availability and fulfillment data"
+      ],
+      "failureMode": "The coordination step is more work than sending a link; participants disagree on sharing; the solver hides good compromises.",
+      "falsifier": "Late household vetoes are uncommon in consented research, or the flow improves shortlist agreement without increasing retained purchases.",
+      "sourceIds": [
+        "pinterest-groups"
+      ]
+    },
+    {
+      "id": "identity-09",
+      "title": "Use recipient-approved substitutions when a gift-list item is unavailable",
+      "lens": "identity",
+      "buyer": "Gift and registry merchants whose AI shopping visitors encounter unavailable or unsuitable listed items.",
+      "problem": "A wish-list item can be unavailable, while the buyer lacks permission or enough context to choose a substitute. Inferring the recipient's interests from public profiles would be a poor substitute for explicit preference sharing.",
+      "mechanism": "Unavailable selection-to-purchase: a recipient-approved alternative policy lets a giver find an acceptable in-stock gift without exposing private recipient data or abandoning the task.",
+      "intervention": "Let an adult recipient opt into a limited substitution policy for a list item, such as approved product families, colors, maximum duplicates and forbidden alternatives. A permissioned resolver returns only acceptable available choices. Use reservation expiry and merchant-confirmed purchase events to prevent duplicate gifts; keep delivery information with the merchant.",
+      "competitorOverlap": "Giftster already has group visibility and reservation/purchased states. A basic private wishlist is not new. This idea tests recipient-authorized substitute selection and reliable completed-purchase reconciliation; a public Giftster API or missing feature is not assumed.",
+      "edgeHypothesis": "When the exact listed item fails, a bounded recipient-approved alternative can convert a stalled gift session more reliably than a generic recommendation or asking the recipient again.",
+      "dataNeeded": [
+        "Recipient's explicit item-level substitution permission",
+        "Inventory and product equivalence facts",
+        "Permission-scoped registry/reservation identifiers",
+        "Merchant-confirmed order/cancellation events"
+      ],
+      "experiment": "Randomize at gift occasion/list cluster after a genuine unavailable-item trigger, comparing existing wishlist fallback with the approved-substitution flow. Keep the original recipient requirements equally visible where permission allows. Primary endpoint is a paid gift order retained at 30 days; duplicate purchases and recipient rejection are guardrails. Plan 8 to 12 weeks across enough independent occasions, account for seasonality and avoid mixing treatment within one list.",
+      "metric": "Retained gift purchases per randomized failed-item occasion, plus total occasion spending and duplication. Reservation clicks are not purchases and fewer duplicate purchases can lower gross orders while improving retained value.",
+      "impactEvidence": "Hypothesized. giftster-sharing establishes existing list-sharing and reservation workflows, not this substitution mechanism's purchase effect.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion or fault-prevalence baseline has been measured. N is the number of eligible eligible unavailable-gift occasions; pC and pT are randomized retained-purchase probabilities.",
+        "calculation": "Incremental retained purchases = N * (pT - pC). Break-even requires N * (pT - pC) * g > GBP 400 + V, where g is contribution per incremental retained purchase and V is incremental verification, integration amortization and operating cost. Fee is an unvalidated test price; no uplift assumption is supplied.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated test: GBP 400 per month for a registry merchant; platform adoption and any integration fee remain unknown.",
+      "costControl": "Evaluate simple approved substitution rules before using a model, cache public product equivalence, and release stale reservations deterministically.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "Recipient opt-in before the unavailable-item event",
+        "Registry/merchant partnership or a first-party registry",
+        "Live inventory and purchase confirmation",
+        "Private fulfillment handoff supported by the merchant"
+      ],
+      "failureMode": "The substitute is technically allowed but unwanted; stale reservations suppress good purchases; permissions reveal recipient information to the giver.",
+      "falsifier": "Recipients rarely authorize substitutes, or a controlled trial does not improve retained purchases after a failed wish-list item.",
+      "sourceIds": [
+        "giftster-sharing"
+      ]
+    },
+    {
+      "id": "identity-10",
+      "title": "Recover verified shopping agents blocked between discovery and cart",
+      "lens": "identity",
+      "buyer": "Merchants whose permitted AI shopping agents encounter documented false bot blocks or challenges.",
+      "problem": "An agent may authenticate successfully at one commerce endpoint and lose the recognized identity path at a redirect, proxy or protected cart endpoint. A signed agent is not automatically a user-authorized purchaser.",
+      "mechanism": "Access-to-purchase: repair a proven identity-verification interruption for permitted shopping actions so legitimate purchase intent can reach a valid cart, while leaving consumer authorization and payment checks intact.",
+      "intervention": "Trace an approved agent through merchant-controlled entry, redirect and cart endpoints using test identities. Locate where trusted signature verification or recognized endpoint routing fails; implement the vendor-supported configuration repair. If trust cannot be established, offer a normal human continuation with selected items. Never whitelist by user-agent text or bypass a legitimate denial.",
+      "competitorOverlap": "Visa Trusted Agent Protocol and Cloudflare already provide signed-agent recognition. The remaining product is fault-specific diagnosis and conversion validation across a merchant's actual integration, not an invented agent identity standard.",
+      "edgeHypothesis": "Merchants with verified false blocks can recover retained orders through narrow supported configuration fixes without increasing abuse losses.",
+      "dataNeeded": [
+        "Merchant-authorized endpoint and edge logs with secrets removed",
+        "Approved agent key/issuer and verification status",
+        "Explicit shopper action/session authorization where required",
+        "Purchase outcomes, fraud losses and server load"
+      ],
+      "experiment": "Replay known authorized and denied cases in a merchant-controlled environment. Then randomize verified, policy-eligible agent shopping sessions between the existing safe fallback and the repaired route. Primary endpoint is paid orders retained at 30 days; fraud, chargebacks, denied-request acceptance and resource abuse are hard guardrails. Plan 6 to 10 weeks, with power based on natural false-block traffic. Do not manufacture or probe failures on third-party systems.",
+      "metric": "Retained orders per randomized verified eligible shopping session, with effects weighted by the independently measured natural block prevalence for an all-traffic estimate. A fall in challenge rate alone is not conversion lift.",
+      "impactEvidence": "Hypothesized incremental effect. visa-tap and cloudflare-agents establish recognition mechanisms and existing competition, not the prevalence or revenue cost of any merchant's false blocks.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic, conversion or fault-prevalence baseline has been measured. N is the number of eligible naturally affected policy-eligible agent shopping sessions; pC and pT are randomized retained-purchase probabilities.",
+        "calculation": "Incremental retained purchases = N * (pT - pC). Break-even requires N * (pT - pC) * g > GBP 1000 + V, where g is contribution per incremental retained purchase and V is incremental verification, integration amortization and operating cost. Fee is an unvalidated test price; no uplift assumption is supplied.",
+        "range": null
+      },
+      "willingnessToPay": "Unvalidated test: GBP 1000 per month for a merchant with enough verified lost purchases; compare against its existing edge vendor's included troubleshooting.",
+      "costControl": "Fix repeatable configuration faults rather than buying repeated simulated purchases; use sampled request traces and deterministic verification diagnostics.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant control over its edge and commerce endpoints",
+        "Supported registered agent/issuer relationship",
+        "Edge-vendor cooperation where required",
+        "No relaxation of shopper consent or payment authority"
+      ],
+      "failureMode": "The alleged block is intentional policy, the fix admits abuse, or traffic is too small to justify a separate product.",
+      "falsifier": "No reproducible permitted identity interruption exists, the edge vendor fixes it within current support, or incremental retained contribution is erased by abuse and operating cost.",
+      "sourceIds": [
+        "visa-tap",
+        "cloudflare-agents",
+        "shopify-agent-cart"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "openai-feed",
+      "title": "Products",
+      "url": "https://developers.openai.com/commerce/specs/file-upload/products",
+      "type": "official-doc",
+      "claim": "Documents distinct product, variant-group and offer identifiers. Identifiers and acceptance rules do not establish ranking or purchase lift."
+    },
+    {
+      "id": "openai-acp",
+      "title": "Key concepts",
+      "url": "https://developers.openai.com/commerce/guides/key-concepts",
+      "type": "official-doc",
+      "claim": "Documents merchant-controlled checkout state and approved-partner access for Instant Checkout. Does not promise universal consumer-surface availability."
+    },
+    {
+      "id": "gs1",
+      "title": "Verified by GS1 | Barcode GTIN GLN Company Lookup Verification",
+      "url": "https://www.gs1.org/services/verified-by-gs1",
+      "type": "official-doc",
+      "claim": "Verifies GS1 identifier assignment and available owner-supplied product/company data. This does not itself prove that a reseller is authorized or an individual physical item is genuine."
+    },
+    {
+      "id": "bose-dealers",
+      "title": "Authorized Dealers & Resellers Hub | Bose",
+      "url": "https://www.bose.com/support/authdealers",
+      "type": "official-doc",
+      "claim": "An existing manufacturer-owned authorized-dealer lookup, a direct workflow comparator for seller verification."
+    },
+    {
+      "id": "bose-counterfeit",
+      "title": "Counterfeit Products | Bose",
+      "url": "https://www.bose.com/legal/be-aware-of-counterfeit-products",
+      "type": "official-doc",
+      "claim": "Bose describes the authenticity and limited-warranty significance of purchasing from Bose or an authorized dealer. Brand-specific evidence, not a universal warranty rule."
+    },
+    {
+      "id": "truefit-spec",
+      "title": "Fit Intelligence Technical Spec, Data & MCP | True Fit",
+      "url": "https://www.truefit.com/fit-intelligence-spec",
+      "type": "official-doc",
+      "claim": "July 2026 vendor specification describes fit MCP, confidence, scoped/revocable access, size-aware stock filtering and exchange use cases. Multi-wearer line binding is not established by this page; absence is unknown."
+    },
+    {
+      "id": "bosch-parts",
+      "title": "Kitchen Machine Spare Parts | Bosch UK",
+      "url": "https://www.bosch-home.co.uk/customer-service/spare-parts/kitchen_machines",
+      "type": "official-doc",
+      "claim": "Bosch already identifies compatible spare parts using the appliance E-Nr. This supports exact-model lookup as an existing workflow, not a measured AI conversion effect."
+    },
+    {
+      "id": "shopify-shop",
+      "title": "Shopify Help Center | Shop app customer experience",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/shop/customer-experience",
+      "type": "official-doc",
+      "claim": "Shop experiences and personal-agent skills already support shopping, reordering and order tracking. A basic reorder assistant is not a novel proposal."
+    },
+    {
+      "id": "sheerid-create",
+      "title": "Secure Verification Creation - SheerID Developer Center",
+      "url": "https://developer.sheerid.com/tutorials/secure-verification-creation",
+      "type": "official-doc",
+      "claim": "Documents backend-created verification and continuation through a hosted form using verificationId. No universal eligibility wallet is established."
+    },
+    {
+      "id": "sheerid-webhooks",
+      "title": "Setting Up Webhooks - SheerID Developer Center",
+      "url": "https://developer.sheerid.com/tutorials/verifications/webhooks",
+      "type": "official-doc",
+      "claim": "Verification events carry a minimal identifier; authorized detail retrieval can provide offer codes. Consumer details require the relevant PII role."
+    },
+    {
+      "id": "sheerid-conversion",
+      "title": "Conversion Tracking - SheerID Developer Center",
+      "url": "https://developer.sheerid.com/tutorials/conversion-tracking",
+      "type": "official-doc",
+      "claim": "Supports reporting purchase amounts against a verificationId. This is attribution instrumentation, not evidence that verification caused the purchase."
+    },
+    {
+      "id": "ucp-identity",
+      "title": "Identity Linking - Universal Commerce Protocol (UCP)",
+      "url": "https://ucp.dev/2026-08-25/specification/common/identity-linking/",
+      "type": "official-doc",
+      "claim": "Current specification documents consented identity linking, scoped user context and optional authenticated benefits. Merchant policy and implemented platform capabilities govern availability."
+    },
+    {
+      "id": "shopify-buyer-token",
+      "title": "Create a buyer-linked token",
+      "url": "https://shopify.dev/docs/agents/profiles/buyer-linked-tokens",
+      "type": "official-doc",
+      "claim": "Shopify documents linking an existing signed-in Shop identity through delegated IdP flow. A basic buyer-linked token or avoided second login is already native."
+    },
+    {
+      "id": "shopify-agent-cart",
+      "title": "Carts and checkout for agents",
+      "url": "https://shopify.dev/docs/agents/carts-and-checkout",
+      "type": "official-doc",
+      "claim": "Native long-running carts, checkout handoffs and continue_url already exist. Cart update uses replacement semantics; omitted fields are removed. Signed/authenticated checkout access is documented."
+    },
+    {
+      "id": "shopify-cart",
+      "title": "Create and update a cart with the Storefront API",
+      "url": "https://shopify.dev/docs/storefronts/headless/building-with-the-storefront-api/cart/manage",
+      "type": "official-doc",
+      "claim": "Documents cart buyerIdentity, contextual pricing and logged-in checkoutUrl. Existing native primitives are the baseline comparator."
+    },
+    {
+      "id": "shopify-b2b",
+      "title": "Headless with B2B",
+      "url": "https://shopify.dev/docs/storefronts/headless/bring-your-own-stack/b2b",
+      "type": "official-doc",
+      "claim": "B2B context combines customer authorization and company location to return relevant product/pricing data. This is already a platform capability."
+    },
+    {
+      "id": "shopify-drafts",
+      "title": "Use draft orders",
+      "url": "https://shopify.dev/docs/apps/build/b2b/draft-orders",
+      "type": "official-doc",
+      "claim": "Documents company/contact/location purchasing entities and draft orders for approval. Does not establish AI purchase uplift or every external procurement integration."
+    },
+    {
+      "id": "shopify-b2b-attribution",
+      "title": "Attribute B2B orders",
+      "url": "https://shopify.dev/docs/apps/build/orders-fulfillment/order-management-apps/attribute-b2b-orders",
+      "type": "official-doc",
+      "claim": "Explains why purchasingEntity, rather than the individual contact alone, identifies the B2B purchasing company/location."
+    },
+    {
+      "id": "pinterest-groups",
+      "title": "Create and manage group boards | Pinterest help",
+      "url": "https://help.pinterest.com/en/article/group-boards",
+      "type": "official-doc",
+      "claim": "Existing group boards support invitations, favorites and collaborator permissions. Evidence of a collaboration workflow, not of purchase conversion."
+    },
+    {
+      "id": "giftster-sharing",
+      "title": "Share a wish list - Giftster Help",
+      "url": "https://help.giftster.com/article/40-how-to-share-a-wish-list",
+      "type": "official-doc",
+      "claim": "Existing gift lists support group visibility and reservation/purchased states. A public integration API or recipient-approved substitution protocol was not established."
+    },
+    {
+      "id": "visa-tap",
+      "title": "Specifications - Trusted Agent Protocol",
+      "url": "https://developer.visa.com/capabilities/trusted-agent-protocol/trusted-agent-protocol-specifications",
+      "type": "official-doc",
+      "claim": "Documents signed agent recognition and verification including replay/relay considerations. Agent recognition and consumer/payment authorization are distinct."
+    },
+    {
+      "id": "cloudflare-agents",
+      "title": "Securing agentic commerce: helping AI Agents transact with Visa and Mastercard",
+      "url": "https://blog.cloudflare.com/secure-agentic-commerce/",
+      "type": "official-doc",
+      "claim": "Cloudflare describes Web Bot Auth and payment-network agent authentication. Basic authenticated-agent admission is established competition, not a new invention."
+    }
+  ]
+}

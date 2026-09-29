@@ -1,0 +1,691 @@
+{
+  "id": "shopify",
+  "name": "Shopify native agentic commerce",
+  "benchmarkType": "native",
+  "winningEvidence": [
+    "Selected because it owns merchant catalog, checkout and order records and distributes eligible stores through native agentic channels. This is a native competitive benchmark, not proof of a superior conversion rate or standalone profitability.",
+    "Native simulation and experimentation overlap is material: SimGym runs AI shoppers and Rollouts runs control/treatment experiments; simply bundling a simulator with an A/B dashboard is insufficient differentiation.",
+    "Current official documentation establishes channel-attributed orders and sales. No causal percentage uplift from the proposed ideas, and no validation that SimGym or a custom proxy predicts consumer ChatGPT purchase behavior, was found."
+  ],
+  "currentOffer": "Snapshot 2026-09-29. Shopify supplies Catalog Mapping, agentic channel management, search previews, Knowledge Base, Sidekick, transaction APIs and reporting. ChatGPT refers US-selling eligible merchants to their full storefront checkout. Google direct checkout is rolling out for US merchants and US buyers; Copilot direct checkout serves US buyers; Meta direct checkout serves eligible buyers in the US, Canada and Mexico. Channel pages state no extra channel-selling fee beyond normal payment processing. Knowledge Base is free on all Shopify plans. SimGym, in AI Research Preview for non-private Liquid stores with SNI enabled, includes an unspecified monthly allowance, then costs USD 0.75 per single-theme simulation or USD 1.50 per comparison. Rollouts experiments require Grow or higher. Agentic-plan external stores need separate setup and identity verification. Base subscription pricing was not evaluated.",
+  "conversionMechanism": "Shopify can make eligible products discoverable, help agents answer questions, move selected items into a valid checkout and record resulting orders. Mapping and distribution can affect candidate inclusion; accurate facts can affect selection; checkout continuity can affect purchase completion. Native analytics establishes attributed sales, not incremental sales caused by any edit. Different stages must not be added as independent uplift.",
+  "harness": {
+    "offlineSimulation": "documented",
+    "liveMonitoring": "documented",
+    "randomizedExperiment": "documented",
+    "purchaseMeasurement": "documented",
+    "details": "Simulation: SimGym documents prelaunch AI shopper/theme comparisons with simulated add-to-cart, not an offline frozen replay of consumer AI search or a validated paid-purchase predictor. Knowledge Base has test queries. Monitoring: native Catalog preview, query logs and per-channel performance are documented; Catalog results can be reranked by downstream channels. Experiments: Rollouts offers control/treatment testing and Smart Pricing explicitly randomizes 50/50 online-store visitors, with early-access US/volume requirements; these do not establish arbitrary live AI discovery randomization. Purchases: agentic admin reports sales/orders, combining referral and direct checkout; online-store conversion denominator is sessions, not all AI impressions. Headless agentic analytics is unavailable, external Agentic-plan ChatGPT order history is outside Shopify, and direct checkouts lack ordinary client-side pixels. A test claiming causality needs an independent assignment record and real paid-order reconciliation."
+  },
+  "strengths": [
+    "Native catalog-to-checkout-to-order integration, including supported agent continuation and order state.",
+    "Mapping already accepts preferred metafield/metaobject sources and custom grouping; native discovery files remove a basic app use case.",
+    "Knowledge Base exposes unanswered questions, matched sources and test questions; Sidekick provides reviewed operational changes.",
+    "Low-cost shopper simulation and native live experiments reduce the value of a generic third-party testing wrapper."
+  ],
+  "limits": [
+    "Country, merchant and product eligibility differ by channel; direct checkout lacks some products, delivery methods and checkout UI.",
+    "Global Catalog specifically labels personalized search coming soon, although auth overview text describes buyer-aware results; use the narrower availability statement.",
+    "Universal Cart is early access. Purchase completion and Order MCP require appropriate credentials/permissions; agent order access covers its own orders.",
+    "UCP order webhooks currently need partner-manager registration. Public documentation does not promise that any independent app can observe every platform's agent sessions.",
+    "Observed orders, Catalog ranking and repeated simulated shoppers do not establish causal incremental purchases.",
+    "Some Global Catalog fields are inferred and may vary in accuracy. Source mapping is an input with delayed processing, not a guarantee that downstream wording or rank is unchanged.",
+    "Meta product-source language differs across the reviewed overview/privacy and channel pages. Validate each specific discovery route and merchant setup rather than assuming one feed controls all Meta experiences."
+  ],
+  "improve": [
+    "Treat native tools as the baseline comparator and charge for verified extra purchase value or materially better allocation of conversion work.",
+    "Start with merchant-authorized referral/checkout failures whose prevalence and real order outcome can be measured; use partner agents where arbitrary consumer-engine intervention is unavailable.",
+    "Build calibration, attribution reconciliation and source-version tracking before selling a synthetic recommendation score as a forecast.",
+    "Preserve payment authority, explicit buyer choices and refund outcomes when connecting identity, personalization or fulfillment recovery."
+  ],
+  "ideas": [
+    {
+      "id": "shopify-01",
+      "title": "Calibrate simulator decisions against AI-originated paid orders",
+      "lens": "measurement",
+      "buyer": "Agencies and multi-store Shopify operators choosing which AI acquisition or landing changes to deploy.",
+      "problem": "A simulated winner can consume development budget while failing to improve real purchases. Shopify already sells inexpensive simulations and supplies native experiments.",
+      "mechanism": "Stage: selection of conversion work. A model that abstains when synthetic evidence does not transfer could prioritize changes with better real purchase outcomes, increasing purchases per fixed engineering budget.",
+      "intervention": "Create a versioned registry linking frozen retrieval/tool-response tests, SimGym results where available, the proposed edit, and a preregistered live experiment. Learn which signal families predict effect direction across held-out merchants; show an abstention when support is weak.",
+      "competitorOverlap": "SimGym already simulates shoppers; Rollouts already compares control and treatment. Agentic admin already reports channel performance. A cross-merchant calibration system for AI-originated purchase effects was not found in the reviewed docs; that is not proof it is absent.",
+      "edgeHypothesis": "Out-of-store validation and calibrated abstention select a better portfolio of changes than using a simulator's top score or merchant judgment alone.",
+      "dataNeeded": [
+        "Consented merchant experiment assignments and eligible AI-origin cohorts",
+        "Frozen tool inputs, model versions and independent intent clusters",
+        "Paid orders, refunds, margins, engineering time and untreated comparisons"
+      ],
+      "experiment": "Randomize merchant-by-decision-cycle clusters to calibrated selection or existing simulator/manual selection with equal implementation budgets. Run underlying visitor experiments for the selected changes. Primary endpoint is retained AI-originated paid orders per assigned merchant-cycle, adjusted by prespecified baseline strata. Start with 8-12 weeks; power on independent stores/cycles, not repeated agent runs. Monitor margin, returns and all-channel displacement.",
+      "metric": "Difference in retained paid orders per randomized merchant-cycle at equal spend; report cost per incremental retained order only when a positive effect is supported. Synthetic recommendation rate is a separate diagnostic denominator.",
+      "impactEvidence": "Hypothesized. simgym and rollouts establish existing tools; rollout-analytics and agentic-admin establish measurements, not transfer validity or our expected lift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured baseline. Let K be assigned merchant-cycles and d the causal retained-order difference per cycle.",
+        "calculation": "Incremental retained orders = K*d. Net value = K*d*m - implementation and research costs, where m is contribution per retained order.",
+        "range": "No evidence-based lift range. Zero or negative effects remain possible; estimate from the specified randomized purchase endpoint."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: USD 499/month per agency workspace. Test against the value of avoided failed deployments; cheap native simulations make a per-run premium difficult.",
+      "costControl": "Use deterministic checks and inexpensive replay first; spend human review and live-test traffic only on decisions whose expected information value warrants them.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Enough independent merchant experiments",
+        "Lawful order and cohort access",
+        "Stable definitions of AI origin and retained purchase",
+        "No claim of exact ChatGPT or Google replication"
+      ],
+      "failureMode": "Training selects only successful or high-volume stores; model drift destroys transfer; reported uplift is merely improved attribution.",
+      "falsifier": "Held-out calibrated selection does not outperform native simulation plus manual selection on retained purchases at equal total cost.",
+      "sourceIds": [
+        "simgym",
+        "rollouts",
+        "rollout-analytics",
+        "agentic-admin"
+      ]
+    },
+    {
+      "id": "shopify-02",
+      "title": "Choose a valid purchase route before a cart hits an unsupported checkout",
+      "lens": "infrastructural",
+      "buyer": "Merchants with customizable products, pickup needs or checkout applications, and shopping-agent developers who control the referral interface.",
+      "problem": "A recommended product can require capabilities that a direct AI checkout cannot provide. Native fallback exists, but the buyer can still encounter an unsuitable route before discovering that limitation.",
+      "mechanism": "Stage: checkout completion. Detecting the actual cart's requirements before routing it should reduce repeated forms, missing options and abandoned handoffs while retaining valid orders.",
+      "intervention": "Build a tested capability manifest for each merchant, cart type and channel. An authorized agent chooses an allowed direct checkout or a prefilled storefront handoff, explains any required action, and preserves the selected variant and attribution. Do not change third-party routing without a supported integration.",
+      "competitorOverlap": "Shopify already provides continuation URLs, escalation and preserved-cart fallback; Google/Copilot support some blocking extensions. The proposed edge is proactive merchant-specific conformance and route evaluation, not inventing fallback.",
+      "edgeHypothesis": "Preflight based on the actual cart and installed checkout requirements prevents more abandonments than generic channel eligibility checks.",
+      "dataNeeded": [
+        "Checkout app and product-type capability inventory",
+        "Buyer-approved fulfillment requirements",
+        "Observed handoff failures, valid cart IDs and terminal order state"
+      ],
+      "experiment": "In a controlled partner agent, randomize eligible shopping missions before route selection to preflight policy or current native route/fallback. Primary endpoint: at least one paid order per assigned mission within 7 days. Run at least 4 weeks and power on the affected-cart subgroup; do not count repeat attempts as independent buyers. Guard against validation bypass, extra latency, returns and channel substitution.",
+      "metric": "Paid purchasing missions / all randomized eligible missions, including missions that never reach checkout. Report missing-configuration errors separately.",
+      "impactEvidence": "Hypothesized. google, copilot, meta and cart-checkout document constraints and fallback, not how often failures occur or a measured recovery rate.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Let N be eligible AI missions, f the measured share encountering route mismatch and r the net purchase recovery among that share.",
+        "calculation": "Potential added paid missions = N*f*r, before subtracting failures caused by additional routing. Measure f and r; neither is supplied here.",
+        "range": "No evidence-based lift range. Zero or negative effects remain possible; estimate from the specified randomized purchase endpoint."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot: USD 299/month per merchant, justified only if net incremental contribution exceeds the fee and implementation cost.",
+      "costControl": "Cache capability checks by app/configuration version and revalidate on changes; avoid creating payment sessions merely to inspect a browsing cart.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Control of the agent or supported channel integration",
+        "Merchant app/configuration access",
+        "Supported checkout escalation and buyer confirmation"
+      ],
+      "failureMode": "An extra handoff slows working checkouts; manifests become stale; channels already solve the issue for most carts.",
+      "falsifier": "Affected missions show no positive purchase effect, or gains disappear after counting purchases through alternative channels.",
+      "sourceIds": [
+        "google",
+        "copilot",
+        "meta",
+        "cart-checkout",
+        "checkout-mcp"
+      ]
+    },
+    {
+      "id": "shopify-03",
+      "title": "Offer a verified arrival plan for deadline-driven shopping",
+      "lens": "temporal",
+      "buyer": "Merchants selling gifts, event supplies or urgent replacement parts to AI shoppers who provide a delivery deadline.",
+      "problem": "Generic shipping FAQs cannot determine whether a particular variant can reach a particular buyer before the event. Overconfident promises can cause cancellations and returns.",
+      "mechanism": "Stage: selection and fulfillment. Restricting recommendations to executable fulfillment plans can convert otherwise uncertain shopping missions into paid purchases that arrive in time.",
+      "intervention": "Combine merchant inventory, warehouse cutoff, carrier service and buyer-provided destination into an expiring plan. Distinguish ship date from estimated arrival. Refresh the plan at purchase and offer honest alternatives if it fails; show a guarantee only where the merchant actually underwrites it.",
+      "competitorOverlap": "Shopify already has live stock, cart context, shipping calculations and Knowledge Base policies. The hypothesized edge is validating a specific buyer deadline against fulfillment evidence, rather than adding an estimated-delivery sentence.",
+      "edgeHypothesis": "Deadline feasibility explains a material abandonment segment and improves on-time retained purchases more than generic shipping copy.",
+      "dataNeeded": [
+        "Opt-in delivery deadline and destination at minimum needed precision",
+        "Inventory by fulfillment location, cutoffs and carrier performance",
+        "Quoted versus actual dispatch/delivery, paid orders, cancellations and returns"
+      ],
+      "experiment": "Randomize deadline-bearing missions in an owned/partner agent to verified plan or current accurate shipping estimate. Primary endpoint: paid orders delivered by the requested date and retained after the return window per assigned mission. Enroll across 6-8 weeks including ordinary periods; power on actual deadline demand. Both arms must use truthful promises. Guard margins, expedited shipping cost and late deliveries.",
+      "metric": "On-time retained paid purchases / randomized deadline-bearing missions. Total paid-order rate and deadline failure rate are secondary; do not add them as separate uplift.",
+      "impactEvidence": "Hypothesized. cart-checkout and kb-faq document inputs and native overlap. ftc-shipping supports the need for a reasonable basis for shipment promises, not a conversion estimate or an arrival guarantee.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No empirical baseline. Let N be deadline missions, pT and pC their on-time retained purchase rates, m contribution and c extra fulfillment cost.",
+        "calculation": "Net value = N*(pT-pC)*m - c - service cost. An increase in checkout completions alone is insufficient.",
+        "range": "No evidence-based lift range. Zero or negative effects remain possible; estimate from the specified randomized purchase endpoint."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot: USD 399/month plus separately agreed integration work; merchant tests willingness using retained contribution rather than gross revenue.",
+      "costControl": "Use cached service calendars for initial filtering and obtain a live quote only for shortlisted, purchase-ready items.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable OMS/carrier integrations",
+        "Explicit buyer deadline",
+        "Merchant authority to make or amend promises",
+        "Supported agent presentation"
+      ],
+      "failureMode": "Overly conservative filtering hides products that would arrive; expensive shipping erases margin; promised arrival exceeds available evidence.",
+      "falsifier": "The verified plan does not improve on-time retained purchase rate or costs more contribution than it creates.",
+      "sourceIds": [
+        "cart-checkout",
+        "kb-faq",
+        "ftc-shipping"
+      ]
+    },
+    {
+      "id": "shopify-04",
+      "title": "Prove a replacement part fits before recommending a substitute",
+      "lens": "algorithmic",
+      "buyer": "Parts, accessories and technical-product merchants whose AI shoppers have an exact compatibility requirement.",
+      "problem": "Similarity, normalized catalog attributes or frequently bought-together data can suggest a plausible item that does not fit the customer's existing equipment.",
+      "mechanism": "Stage: product selection. Verified compatibility and constrained substitution can turn an unavailable exact item into an acceptable paid replacement while avoiding mismatch returns.",
+      "intervention": "Build a merchant/manufacturer-supported graph of compatibility conditions, exclusions and valid substitutions. Require an exact model or buyer-confirmed measurements, cite the supporting record, and abstain when evidence is incomplete. Use catalog search to retrieve candidates, then a deterministic verifier to qualify them.",
+      "competitorOverlap": "Shopify already groups variants and offers related/complementary recommendations. Global Catalog marks some technical fields as inferred. The added capability is evidence-backed constraint checking, not another recommendation carousel; specialist fitment vendors may already serve each vertical.",
+      "edgeHypothesis": "A narrow vertical with well-maintained compatibility records has enough avoidable mismatch and unavailable-item abandonment to support a verified substitution layer.",
+      "dataNeeded": [
+        "Licensed manufacturer fitment tables and version identifiers",
+        "SKU/variant identity crosswalks and stock state",
+        "Buyer-confirmed device/model requirements",
+        "Paid orders and reason-coded incompatibility returns"
+      ],
+      "experiment": "Randomize compatibility-bearing AI missions to verified substitutes or current merchant recommendation flow, with both arms displaying existing warnings. Primary endpoint: paid order without compatibility return per mission after the category's return window. Plan 6-12 weeks plus outcome maturation; cluster repeated users. Guard installation safety, support load and unsupported compatibility claims.",
+      "metric": "Retained compatible paid orders / all assigned eligible missions; report false-fit rate and margin separately.",
+      "impactEvidence": "Hypothesized. recommendations, mapping and global-catalog establish native overlap and inferred-data limits. No direct conversion evidence was found for this proposed system.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Let N be compatibility missions, a the observed share currently ending without an acceptable item, and r the net share rescued by a verified substitute.",
+        "calculation": "Potential retained purchases = N*a*r minus any extra false-fit returns and displaced existing purchases. Values must be measured in the pilot.",
+        "range": "No evidence-based lift range. Zero or negative effects remain possible; estimate from the specified randomized purchase endpoint."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 599/month for a narrowly scoped parts catalog; test against incremental contribution plus avoided return handling, without double counting.",
+      "costControl": "Pay for authoritative fitment data and deterministic validation first; use language models for request normalization and explanations, not as the source of compatibility truth.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Authoritative licensed fitment evidence",
+        "Exact variant identity",
+        "Merchant confirmation of permitted claims",
+        "Narrow initial vertical"
+      ],
+      "failureMode": "Catalog identities drift, evidence is incomplete, or the real barrier is price rather than fit confidence.",
+      "falsifier": "No gain in compatible retained orders after returns, or the verifier cannot maintain a tolerable false-fit rate.",
+      "sourceIds": [
+        "recommendations",
+        "mapping",
+        "global-catalog"
+      ]
+    },
+    {
+      "id": "shopify-05",
+      "title": "Let buyers carry an editable purchase brief across permitted agents",
+      "lens": "identity",
+      "buyer": "Shopping-agent platforms and merchants serving repeat shoppers with explicit recurring requirements.",
+      "problem": "Account continuity does not necessarily preserve the buyer's current budget, fit constraints, intended recipient or previous rejected options. Repeating those details can derail a later purchase.",
+      "mechanism": "Stage: repeat discovery and selection. Reusing a buyer-approved brief reduces repeated clarification and wrong recommendations, which could increase completed purchases per genuine shopping mission.",
+      "intervention": "Offer a revocable, versioned brief containing only user-selected hard requirements, preferences, exclusions and expiry. Present a short confirmation before reuse. Connect to supported identity flows without exporting entire chat histories or granting payment authority by implication.",
+      "competitorOverlap": "Shopify already documents buyer-linked Shop token exchange. Its Global Catalog page labels personalized search coming soon, despite broader language in the auth overview. The edge is explicit portable intent with expiry and correction, beyond login or inferred personalization.",
+      "edgeHypothesis": "User-controlled intent transfer outperforms account identity alone for shoppers whose requirements recur but can change between missions.",
+      "dataNeeded": [
+        "Buyer consent and brief version/expiry",
+        "Confirmed hard versus soft constraints",
+        "Agent/merchant interoperability and scope logs",
+        "Randomized mission assignments and retained paid orders"
+      ],
+      "experiment": "Randomize consenting returning buyers to ordinary supported identity or identity plus reusable brief. Primary endpoint: retained paid purchases per randomized buyer over 8 weeks. Stratify by prior shopping frequency, analyze intention to treat even if no new mission begins, and power on buyers rather than prompts. Guard consent withdrawals, unwanted disclosure, wrong-recipient purchases and returns.",
+      "metric": "Retained purchases per assigned buyer and contribution per buyer; per-mission conversion is secondary because the brief may change mission frequency.",
+      "impactEvidence": "Hypothesized. buyer-token, auth and global-catalog establish existing identity and availability constraints. They provide no measured value for a portable preference brief.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Let B be assigned returning buyers and qT-qC the measured difference in retained purchases per buyer over the observation window.",
+        "calculation": "Incremental retained purchases = B*(qT-qC). Subtract integration, support and consent-management costs from the resulting contribution.",
+        "range": "No evidence-based lift range. Zero or negative effects remain possible; estimate from the specified randomized purchase endpoint."
+      },
+      "willingnessToPay": "Unvalidated B2B pilot price: USD 750/month per agent integration. The buyer sees a free optional feature; willingness depends on demonstrated partner purchase value.",
+      "costControl": "Store compact explicit constraints and reusable identifiers instead of entire transcripts; refresh only expired or changed facts.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "Multiple willing agent/merchant partners",
+        "Revocation and deletion mechanisms",
+        "Supported identity scopes",
+        "Explicit user choice rather than covert sensitive profiling"
+      ],
+      "failureMode": "Few buyers reuse briefs, requirements become stale, privacy friction outweighs saved effort, or platforms keep intent inside their own systems.",
+      "falsifier": "Returning-buyer retained purchases do not improve or brief reuse causes more requirement mismatches and returns.",
+      "sourceIds": [
+        "buyer-token",
+        "auth",
+        "global-catalog",
+        "privacy"
+      ]
+    },
+    {
+      "id": "shopify-06",
+      "title": "Recover delayed AI orders with a truthful replacement choice",
+      "lens": "regulatory",
+      "buyer": "US merchants whose AI-originated physical-goods orders encounter fulfillment delays.",
+      "problem": "A delayed order can become a refund even when a buyer would prefer an available, suitable alternative. Required delay notices and refund choices must remain clear.",
+      "mechanism": "Stage: post-purchase retention. Timely, accurate alternatives with explicit buyer choice could preserve paid purchases that would otherwise be cancelled; this is retained-order value, not new customer acquisition.",
+      "intervention": "On a forecast missed ship promise, prepare the existing delay/refund options plus a verified in-stock replacement with its price difference and supported ship estimate. Obtain explicit acceptance before editing the order or collecting more payment. Preserve the original promise, notice and choice record; never obstruct a refund.",
+      "competitorOverlap": "Shopify already supplies order lifecycle state and editing workflows, and ordinary support teams offer replacements. The edge is evidence-checked alternatives tied to the original AI shopping requirements and a timely choice workflow. End-to-end support for this exact workflow was not established in reviewed native docs.",
+      "edgeHypothesis": "Merchants can retain more satisfactory paid orders by offering an acceptable available alternative at the same moment they disclose a delay.",
+      "dataNeeded": [
+        "Original item, buyer-approved requirements and ship promise",
+        "OMS delay forecasts and authoritative substitute stock",
+        "Notice timestamps, explicit choices, refunds and fulfillment outcomes"
+      ],
+      "experiment": "Randomize affected AI-originated orders to the merchant's timely compliant delay/refund notice or the same options plus a verified replacement. Primary endpoint: paid orders fulfilled and retained after the replacement return window per assigned affected order. Enroll 8-12 weeks or until powered. Both arms receive required disclosures and refund rights; monitor complaints, unwanted substitutions and support effort.",
+      "metric": "Retained fulfilled paid orders / all randomized delay-affected orders. Report refund processing time and satisfaction alongside it; do not count an edited order as a second purchase.",
+      "impactEvidence": "Hypothesized. ftc-shipping establishes shipment-promise/delay/refund duties in its stated US scope, not legal approval of this design. order-webhooks and order-mcp establish technical state access, with authorization constraints.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Let D be delay-affected AI orders and rT-rC the difference in legitimately retained fulfilled-order probability.",
+        "calculation": "Retained purchases = D*(rT-rC). Value subtracts substitute cost, extra shipping, refunds and service expense. Acquisition uplift is zero by definition for this retention intervention.",
+        "range": "No evidence-based lift range. Zero or negative effects remain possible; estimate from the specified randomized purchase endpoint."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 199/month per merchant, evaluated against incremental retained contribution and operating cost.",
+      "costControl": "Deterministically match stock and constraints; route ambiguous substitutions to staff. Use lifecycle events instead of polling order APIs.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant-approved notice requirements and refund process",
+        "Explicit customer acceptance",
+        "OMS and order-edit integration",
+        "Partner-manager setup for UCP order webhooks, or authorized merchant order access"
+      ],
+      "failureMode": "Alternatives disappoint buyers or create pressure to accept; delays are rare; operational cost exceeds retained contribution.",
+      "falsifier": "No improvement in satisfactory retained orders, slower refunds, or any systematic increase in unwanted substitutions.",
+      "sourceIds": [
+        "ftc-shipping",
+        "order-webhooks",
+        "order-mcp",
+        "recommendations"
+      ]
+    },
+    {
+      "id": "shopify-07",
+      "title": "Optimize an entire shopping mission across executable baskets",
+      "lens": "behavioral",
+      "buyer": "Independent shopping agents or merchant consortia serving multi-item missions such as furnishing a room or assembling a kit.",
+      "problem": "Individually attractive recommendations can become an unaffordable or incomplete basket after shipping, compatibility constraints and unavailable components are considered.",
+      "mechanism": "Stage: basket formation. A complete feasible plan reduces arithmetic and coordination work, allowing more buyers to purchase the mission they actually intended to complete.",
+      "intervention": "Compare a small set of whole-basket plans under the buyer's budget, delivery and substitution permissions. Calculate current seller-specific shipping/discount totals, explain tradeoffs, and preserve separate seller commitments. Use merchant-scoped checkouts now; integrate Universal Cart only after approved access.",
+      "competitorOverlap": "Shopify already has cart tools, complementary recommendations and an early-access Universal Cart offering. The additional hypothesis is a constraint-aware whole-mission optimizer, not merely a shared cart or extra add-ons.",
+      "edgeHypothesis": "Whole-basket feasibility can recover missions that product-by-product ranking loses, without increasing buyer spend through unnecessary items.",
+      "dataNeeded": [
+        "Buyer-confirmed mission components and total budget",
+        "Cross-seller SKU identity, permitted substitutes and compatibility",
+        "Executable shipping/discount quotes",
+        "Paid line items, returns and mission completion"
+      ],
+      "experiment": "Randomize multi-item missions in a controlled agent to current product-by-product recommendations or a complete-basket comparison. Primary endpoint: an agreed complete basket purchased and retained per assigned mission. Run 6-8 weeks plus return maturation; power on missions. Track spending against stated budget, margin by seller, return rates and abandoned partial purchases.",
+      "metric": "Completed retained paid baskets / randomized eligible missions. Do not claim uplift from splitting one basket into more orders; report component purchases only as secondary.",
+      "impactEvidence": "Hypothesized. agents, cart-checkout and recommendations document adjacent infrastructure, not a causal basket-planning benefit.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Let N be eligible missions and bT-bC the causal difference in complete retained basket purchase probability.",
+        "calculation": "Added completed purchases = N*(bT-bC). Evaluate merchant contribution across all participating sellers and subtract integration/service cost.",
+        "range": "No evidence-based lift range. Zero or negative effects remain possible; estimate from the specified randomized purchase endpoint."
+      },
+      "willingnessToPay": "Unvalidated pilot: USD 1,000/month per agent platform or consortium. Validate payment against measured mission completion and transparent commercial terms.",
+      "costControl": "Prune infeasible combinations using deterministic bounds and cached catalogs; live-quote only the few complete plans the buyer could reasonably choose.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "Cross-merchant commercial cooperation",
+        "Current totals and permissible cart creation",
+        "A workable sequence of individual checkouts or Universal Cart early access",
+        "Explicit substitution approval"
+      ],
+      "failureMode": "The plan optimizes a measurable budget while missing taste; multi-checkout friction remains; benefits accrue to consumers or rivals without a paying buyer.",
+      "falsifier": "Complete retained purchase probability fails to rise, or apparent gains come only from more split orders or unwanted items.",
+      "sourceIds": [
+        "agents",
+        "cart-checkout",
+        "recommendations",
+        "checkout-mcp"
+      ]
+    },
+    {
+      "id": "shopify-08",
+      "title": "Carry verified decision reasons into the product handoff",
+      "lens": "psychological",
+      "buyer": "Merchants receiving AI referrals for considered purchases, partnered with agents that can send a buyer-approved brief.",
+      "problem": "After an AI shortlist, a generic product page makes the buyer re-check which exact variant satisfies their criteria and which compromise they accepted.",
+      "mechanism": "Stage: referral-to-purchase. Preserving factual reasons for the selected variant can reduce repeated comparison and support an informed final choice.",
+      "intervention": "Attach an optional, signed decision receipt containing the selected variant, buyer-approved criteria, cited merchant/manufacturer evidence, explicit tradeoffs and timestamps. At the landing page, revalidate those facts and let the buyer revise any requirement. Do not imply the merchant knows the user's private conversation.",
+      "competitorOverlap": "Shopify already provides product facts, FAQs, variant selection and prefilled cart links. The edge is continuity of verified selection reasons across an authorized handoff. Consumer ChatGPT does not expose arbitrary conversation context to a merchant by default.",
+      "edgeHypothesis": "A compact, correct explanation of why this exact variant fits outperforms a generic landing for high-consideration AI referrals.",
+      "dataNeeded": [
+        "Buyer-approved non-sensitive decision criteria",
+        "Variant-level evidence and current price/stock",
+        "Permitted agent-to-merchant handoff token",
+        "Paid orders, return reasons and receipt interactions"
+      ],
+      "experiment": "Randomize eligible partner-agent referrals before handoff to the ordinary product page or the verified receipt page, with equal product, price and checkout. Primary endpoint: retained paid purchases per assigned referral within a prespecified 30-day buying window and subsequent return period. Run 6-8 weeks or to power; guard page speed, comprehension and false claims.",
+      "metric": "Retained paid purchases / all randomized eligible referrals. Comprehension and checkout starts diagnose the mechanism but do not substitute for purchases.",
+      "impactEvidence": "Hypothesized. chatgpt documents the storefront handoff, while kb and cart-checkout establish existing facts and cart continuity. No measured receipt effect was found.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Let N be eligible partner referrals and pT-pC the retained purchase difference; no assumed baseline conversion.",
+        "calculation": "Added retained purchases = N*(pT-pC). Net contribution subtracts evidence maintenance and additional page/agent cost.",
+        "range": "No evidence-based lift range. Zero or negative effects remain possible; estimate from the specified randomized purchase endpoint."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 149/month per merchant with an integration-ready referrer; reject demand based solely on merchants wanting an AI badge.",
+      "costControl": "Render short receipts from existing verified fields and deterministic checks; refresh only changed evidence rather than regenerate prose on every visit.",
+      "feasibility": "now",
+      "dependencies": [
+        "A controlled or cooperative AI referrer",
+        "Explicit brief-sharing choice",
+        "Verifiable factual criteria",
+        "Merchant landing-page integration"
+      ],
+      "failureMode": "The receipt adds reading, repeats obvious details, becomes stale, or overstates suitability and increases returns.",
+      "falsifier": "Retained purchase rate does not improve after controlling for page speed, or explanations increase wrong-item returns.",
+      "sourceIds": [
+        "chatgpt",
+        "kb",
+        "cart-checkout",
+        "global-catalog"
+      ]
+    },
+    {
+      "id": "shopify-09",
+      "title": "Honor the buyer's valid quoted item price without a support detour",
+      "lens": "infrastructural",
+      "buyer": "Merchants with frequent promotions or price experiments whose AI-referral shoppers see different price versions.",
+      "problem": "A shopper can encounter one product price in an AI result and another at the merchant. Manual price-honor policies add friction even when the merchant is willing to honor a valid earlier quote.",
+      "mechanism": "Stage: checkout completion. Automatically recognizing a legitimate quote can preserve trust and remove a support interruption, increasing paid purchases at the same agreed economics.",
+      "intervention": "Issue a merchant-authorized, expiring item-price receipt in cooperating agent flows. Bind SKU, currency, quantity, quote version and redemption conditions; revalidate at checkout and honor it through an approved discount or draft-order route. State shipping and taxes separately unless actually quoted. Never fabricate an AI-displayed price.",
+      "competitorOverlap": "Shopify has discounts and draft-order price locks. Smart Pricing explicitly warns that online-store test prices do not flow to other channels. The proposed edge is automatic provenance and redemption of the actual shown quote across an AI handoff.",
+      "edgeHypothesis": "Quote-related support detours represent enough lost purchases to fund reliable automatic honoring without increasing the discount subsidy.",
+      "dataNeeded": [
+        "Authentic quote records and published terms",
+        "SKU/currency identity and price-version history",
+        "Redemption outcomes, support contacts and purchase/refund data",
+        "Existing merchant price-honor policy and margin limits"
+      ],
+      "experiment": "Randomize legitimate quote-bearing AI missions to current manual price-honor/refresh process or automatic honoring, with the same eligible final prices and buyer rights in both arms. Primary endpoint: retained paid purchases per mission within 7 days. Run 4-8 weeks and power on real quote disagreements; guard abuse, margin and currency errors. Do not manufacture inaccurate quotes for the test.",
+      "metric": "Retained paid purchases / randomized valid-quote missions; contribution net of identical price policy and actual fraud losses. Report time-to-purchase separately.",
+      "impactEvidence": "Hypothesized. smart-pricing documents channel inconsistency risk; draft-orders documents existing price controls. Neither supplies fault prevalence or expected recovery.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Let Q be valid-quote missions, d the purchase-rate improvement and m contribution under the unchanged price-honor policy.",
+        "calculation": "Incremental contribution = Q*d*m - added fraud, integration and service costs. If treatment has more generous prices, separate subsidy from friction effects.",
+        "range": "No evidence-based lift range. Zero or negative effects remain possible; estimate from the specified randomized purchase endpoint."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: USD 249/month per merchant; validate using contribution recovered and support effort saved.",
+      "costControl": "Verify signed quote metadata deterministically; use one-time redemption and cached public price versions, without model calls in the price authorization path.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant-approved quote and honoring policy",
+        "Cooperative agent distribution",
+        "Supported checkout pricing mechanism",
+        "Fraud limits and expiry"
+      ],
+      "failureMode": "Quote issuance is too narrow, coupons leak, native prices change faster than receipts can be honored, or discounts erase contribution.",
+      "falsifier": "At equal eligible final prices, automation does not increase retained purchases or costs exceed recovered contribution.",
+      "sourceIds": [
+        "smart-pricing",
+        "draft-orders",
+        "checkout-mcp",
+        "cart-checkout"
+      ]
+    },
+    {
+      "id": "shopify-10",
+      "title": "Test honest inventory holds without mistaking displacement for growth",
+      "lens": "temporal",
+      "buyer": "Merchants with scarce variants and considered AI shopping missions that take time to complete.",
+      "problem": "A product can sell out during a lengthy decision, but reserving stock can deprive other buyers of the same unit. More conversions among held carts need not mean more merchant purchases.",
+      "mechanism": "Stage: decision-to-checkout. A buyer-requested, short inventory hold might keep a feasible purchase alive; merchant-wide experiments must show that recovered sales exceed displaced sales.",
+      "intervention": "Use native reservations for explicit buyer-requested holds, with transparent expiry and no urgency copy. Add a bounded allocation policy based on stock depth, expected replenishment and a buyer-selected decision window. Release unused holds promptly and do not fabricate scarcity.",
+      "competitorOverlap": "Shopify draft orders already reserve inventory and expose expiry. The new hypothesis is a demand-aware allocation policy evaluated against total retained orders across affected stock, not a hold button or countdown.",
+      "edgeHypothesis": "Some inventory pools can support bounded decision time while increasing total fulfilled purchases, rather than merely reallocating the last unit to another buyer.",
+      "dataNeeded": [
+        "SKU-level available/committed inventory and restock times",
+        "Buyer-requested hold duration",
+        "Hold expiry, redemption and other-channel lost-sales signals",
+        "All-channel retained purchases for affected inventory pools"
+      ],
+      "experiment": "Randomize comparable SKU-inventory-pool by week clusters to the bounded hold policy or existing no-hold/manual-hold process; avoid individual randomization because units are shared. Primary endpoint: all-channel retained paid orders from each assigned pool, with AI-origin orders separately reported. Run across several replenishment cycles, typically 8-12 weeks, and power on pools. Guard stock starvation, bot abuse and customer fairness.",
+      "metric": "Retained paid orders per randomized inventory-pool period, adjusted by prespecified stock exposure. AI hold redemption is diagnostic only; it cannot establish incrementality.",
+      "impactEvidence": "Hypothesized. draft-orders confirms the reservation primitive. No evidence currently establishes that an agent-specific allocation policy increases total purchases.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Let R be recovered AI purchases, L displaced purchases from all other buyers and U additional losses from unusable held stock, all measured over the same replenishment window.",
+        "calculation": "Incremental retained purchases = R - L - U. A high hold redemption rate can coexist with zero or negative incrementality.",
+        "range": "No evidence-based lift range. Zero or negative effects remain possible; estimate from the specified randomized purchase endpoint."
+      },
+      "willingnessToPay": "Unvalidated pilot price: USD 299/month per merchant. Charge only where all-channel contribution supports the cost; scarce-stock stores may have no incremental-demand opportunity.",
+      "costControl": "Use inventory events and a deterministic allocation policy; reserve modeling effort for pools where stockout timing and buyer delays overlap.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant-approved reservation policy",
+        "Shared inventory accounting across channels",
+        "Abuse controls and transparent expiry",
+        "Enough independent inventory pools for a credible experiment"
+      ],
+      "failureMode": "Every held unit would otherwise sell, holds starve faster buyers, or lower-priority merchants cannot support the necessary measurement.",
+      "falsifier": "All-channel retained purchases do not rise, even if AI-attributed hold conversions increase.",
+      "sourceIds": [
+        "draft-orders",
+        "order-mcp",
+        "agentic-admin"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "agentic",
+      "title": "Shopify agentic storefronts",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts",
+      "type": "official-doc",
+      "claim": "Native distribution and order attribution; no causal lift estimate."
+    },
+    {
+      "id": "agentic-admin",
+      "title": "Managing agentic storefronts",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/agentic-home",
+      "type": "official-doc",
+      "claim": "Catalog preview and per-channel performance reports; headless exclusion and reranking caveat."
+    },
+    {
+      "id": "mapping",
+      "title": "Mapping your product data sources for Shopify Catalog",
+      "url": "https://help.shopify.com/en/manual/shopify-catalog/mapping",
+      "type": "official-doc",
+      "claim": "Preferred sources, metafields, metaobjects, variant grouping and delayed processing already native."
+    },
+    {
+      "id": "catalog",
+      "title": "Shopify Catalog and product discovery for agentic storefronts",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/products",
+      "type": "official-doc",
+      "claim": "Native discovery files, crawling versus feed boundaries and D2C eligibility."
+    },
+    {
+      "id": "chatgpt",
+      "title": "Selling on ChatGPT",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/chatgpt",
+      "type": "official-doc",
+      "claim": "US-selling eligibility; storefront referral checkout and no additional channel fee."
+    },
+    {
+      "id": "google",
+      "title": "Selling on Google AI Mode and Gemini",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/google",
+      "type": "official-doc",
+      "claim": "US merchant/buyer rollout, Merchant Center discovery, direct-checkout constraints and missing client pixels."
+    },
+    {
+      "id": "copilot",
+      "title": "Selling on Microsoft Copilot",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/microsoft",
+      "type": "official-doc",
+      "claim": "US buyers, direct-checkout support and limitations."
+    },
+    {
+      "id": "meta",
+      "title": "Selling on Meta",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/meta",
+      "type": "official-doc",
+      "claim": "US/Canada/Mexico buyers, preserved-cart fallback and channel attribution."
+    },
+    {
+      "id": "privacy",
+      "title": "Data sharing and privacy for selling with agentic storefronts",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/data-privacy",
+      "type": "official-doc",
+      "claim": "Channel data scope, controls and distinction from access to the entire customer database."
+    },
+    {
+      "id": "agentic-plan",
+      "title": "Setting up agentic storefronts for stores on the Agentic plan",
+      "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts/agentic-plan-setup",
+      "type": "official-doc",
+      "claim": "External-store identity verification, default direct-checkout opt-in and missing Shopify ChatGPT order history."
+    },
+    {
+      "id": "kb",
+      "title": "Shopify Knowledge Base",
+      "url": "https://help.shopify.com/en/manual/promoting-marketing/knowledge-base",
+      "type": "official-doc",
+      "claim": "FAQ accuracy support; explicit statement that this does not increase appearance frequency."
+    },
+    {
+      "id": "kb-faq",
+      "title": "Managing your store FAQs using the Shopify Knowledge Base app",
+      "url": "https://help.shopify.com/en/manual/promoting-marketing/knowledge-base/managing-faqs",
+      "type": "official-doc",
+      "claim": "Test questions, source matching, custom FAQs and per-store/language limits."
+    },
+    {
+      "id": "kb-metrics",
+      "title": "Understanding your store FAQ metrics using the Shopify Knowledge Base app",
+      "url": "https://help.shopify.com/en/manual/promoting-marketing/knowledge-base/understanding-faq-metrics",
+      "type": "official-doc",
+      "claim": "Observed question logs with agent, source match and time; not purchase-causal attribution."
+    },
+    {
+      "id": "kb-free",
+      "title": "Optimizing your store for AI",
+      "url": "https://help.shopify.com/en/manual/promoting-marketing/seo/optimizing-store-for-ai",
+      "type": "official-doc",
+      "claim": "Knowledge Base is a free first-party app on all plans."
+    },
+    {
+      "id": "sidekick",
+      "title": "Sidekick",
+      "url": "https://help.shopify.com/en/manual/ai-powered-tools/sidekick",
+      "type": "official-doc",
+      "claim": "Native analysis, content, task completion, app creation and reviewed changes."
+    },
+    {
+      "id": "sidekick-apps",
+      "title": "Generating apps with Sidekick",
+      "url": "https://help.shopify.com/en/manual/ai-powered-tools/sidekick/generate-apps",
+      "type": "official-doc",
+      "claim": "Generated apps run inside admin; excludes customer-visible theme, checkout and account apps."
+    },
+    {
+      "id": "simgym",
+      "title": "SimGym",
+      "url": "https://help.shopify.com/en/manual/online-store/simgym",
+      "type": "official-doc",
+      "claim": "Prelaunch AI shoppers, simulated add-to-cart comparison, eligibility, caveat and USD prices."
+    },
+    {
+      "id": "rollouts",
+      "title": "Types of rollouts and changes",
+      "url": "https://help.shopify.com/en/manual/markets/rollouts/rollout-types",
+      "type": "official-doc",
+      "claim": "Native control/treatment experiments for Grow+ stores, including theme, checkout and catalog changes."
+    },
+    {
+      "id": "rollout-analytics",
+      "title": "Rollout analytics",
+      "url": "https://help.shopify.com/en/manual/markets/rollouts/analytics",
+      "type": "official-doc",
+      "claim": "Experiment purchase-related metrics, fixed reporting and limited included storefront traffic."
+    },
+    {
+      "id": "rollout-eligibility",
+      "title": "Requirements and considerations for using rollouts",
+      "url": "https://help.shopify.com/en/manual/markets/rollouts/requirements-and-considerations",
+      "type": "official-doc",
+      "claim": "Plan/access constraints for native rollouts; verify store-specific eligibility."
+    },
+    {
+      "id": "smart-pricing",
+      "title": "Create a pricing experiment in the Smart Pricing app",
+      "url": "https://help.shopify.com/en/manual/products/details/product-pricing/smart-pricing/create-experiment",
+      "type": "official-doc",
+      "claim": "Randomized 50/50 online-store price experiments; limited US early access and channel price mismatch."
+    },
+    {
+      "id": "agents",
+      "title": "Agentic commerce",
+      "url": "https://shopify.dev/docs/agents",
+      "type": "official-doc",
+      "claim": "Public UCP tools and Universal Cart early-access waitlist; not consumer-engine replication."
+    },
+    {
+      "id": "auth",
+      "title": "Auth and rate limiting",
+      "url": "https://shopify.dev/docs/agents/profiles/auth-and-rate-limiting",
+      "type": "official-doc",
+      "claim": "Trust tiers, purchase permission and restricted order access. Personalization overview needs narrower feature-specific caveat."
+    },
+    {
+      "id": "buyer-token",
+      "title": "Create a buyer-linked token",
+      "url": "https://shopify.dev/docs/agents/profiles/buyer-linked-tokens",
+      "type": "official-doc",
+      "claim": "Authorized Shop identity exchange, scoped server-side tokens and expiry."
+    },
+    {
+      "id": "global-catalog",
+      "title": "Global Catalog MCP",
+      "url": "https://shopify.dev/docs/agents/catalog/global-catalog",
+      "type": "official-doc",
+      "claim": "Personalized search is coming soon; inferred fields are not merchant-authored verified facts."
+    },
+    {
+      "id": "cart-checkout",
+      "title": "Carts and checkout for agents",
+      "url": "https://shopify.dev/docs/agents/carts-and-checkout",
+      "type": "official-doc",
+      "claim": "Cart continuation, merchant-scoped permalinks, escalation, context and attribution preservation."
+    },
+    {
+      "id": "checkout-mcp",
+      "title": "Checkout MCP server",
+      "url": "https://shopify.dev/docs/agents/carts-and-checkout/checkout-mcp",
+      "type": "official-doc",
+      "claim": "Checkout context, attribution, idempotency and escalation; access permission matters."
+    },
+    {
+      "id": "order-webhooks",
+      "title": "Order webhooks",
+      "url": "https://shopify.dev/docs/agents/orders/order-webhooks",
+      "type": "official-doc",
+      "claim": "Lifecycle state for agent-originated orders; partner-manager registration is required and no self-serve subscription API is documented."
+    },
+    {
+      "id": "order-mcp",
+      "title": "Order MCP server",
+      "url": "https://shopify.dev/docs/agents/orders/order-mcp",
+      "type": "official-doc",
+      "claim": "Fresh state and adjustments only for orders placed through the authorized agent."
+    },
+    {
+      "id": "recommendations",
+      "title": "Product recommendations",
+      "url": "https://shopify.dev/docs/storefronts/themes/product-merchandising/recommendations",
+      "type": "official-doc",
+      "claim": "Native related/complementary suggestions and recommendation conversion tracking."
+    },
+    {
+      "id": "draft-orders",
+      "title": "Creating draft orders",
+      "url": "https://help.shopify.com/en/manual/fulfillment/managing-orders/create-orders/create-draft",
+      "type": "official-doc",
+      "claim": "Native inventory reservation and pricing controls; holds already exist."
+    },
+    {
+      "id": "ftc-shipping",
+      "title": "Mail, Internet, or Telephone Order Merchandise Rule",
+      "url": "https://www.ftc.gov/legal-library/browse/rules/mail-internet-or-telephone-order-merchandise-rule",
+      "type": "official-doc",
+      "claim": "US shipment-promise, delay consent and refund obligations; not a general compliance guarantee."
+    }
+  ]
+}

@@ -1,0 +1,567 @@
+{
+  "lens": "behavioral",
+  "ideas": [
+    {
+      "id": "behavioral-01",
+      "title": "Repair the second failed query without dropping a hard constraint",
+      "lens": "behavioral",
+      "buyer": "Merchants with complex catalogs and a measurable stream of shoppers arriving from AI shopping or search.",
+      "problem": "A shopper repeatedly rewords the same need, gets no valid result, and leaves. Ordinary query expansion can remove the very constraint that made the product hard to find.",
+      "mechanism": "Discovery recovery: recognize the failed edit sequence, preserve explicit requirements, resolve one ambiguity, and retrieve a genuinely purchasable match. A useful match can turn an otherwise abandoned AI-origin journey into an order.",
+      "intervention": "Add a repair mode after two failed searches or explicit rejection of all results. Show the requirements retained, identify the unresolved distinction, ask at most one necessary question, and rerun against live eligible variants. Keep ordinary search available and record which attempted repair failed.",
+      "competitorOverlap": "Algolia already suggests queries; Constructor already supports conversational refinement and catalog validation. The edge is a bounded recovery policy across failed edits. Whether their deployed products already handle this equally well is unknown and requires comparison.",
+      "edgeHypothesis": "At the same retrieval quality and latency budget, using the sequence of failed edits will recover more valid purchases than an isolated-query suggestion.",
+      "dataNeeded": [
+        "Consented first-party query and result sequences",
+        "Explicit hard requirements and rejection reasons",
+        "Variant availability and search-result eligibility",
+        "Verified AI-origin referral or partner session",
+        "Assignment-linked paid orders and returns"
+      ],
+      "experiment": "Persistently randomize eligible shoppers at their first qualifying failed-search sequence to the repair mode or current search assistance. Primary endpoint: any paid merchant order within 14 days that is neither canceled nor fully refunded by day 45. Recruit for at least four weeks and until the preregistered purchase-powered sample is reached. Guardrails: hard-constraint violations, search latency, complaints and total merchant contribution.",
+      "metric": "Retained purchasers divided by every randomized eligible AI-origin shopper, including those who ignore the prompt; report absolute intention-to-treat difference. Purchases through any later merchant path count. Successful query reformulation is diagnostic only.",
+      "impactEvidence": "Adjacent measured purchase evidence: beh-fang supports query refinement, but not this sequence-specific repair or external-AI transfer. Our incremental effect is hypothesized.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured AI-origin baseline. Measure N eligible people per month, control retained-purchase probability p0, contribution m per retained purchase, and all-in incremental monthly cost C.",
+        "calculation": "For a stable population and contribution mix, extra retained purchasers = N * (pT - pC). Incremental contribution = N * (pT - pC) * m - C. Break-even absolute probability gain = C / (N * m). C includes software, inference, integration amortization and extra human work. ",
+        "range": "No empirical range estimated. Zero and negative effects remain possible; a gain among users who engage cannot replace the effect across all assigned eligible users."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP 300 per merchant per month after a measured purchase pilot; require incremental contribution above the full operating cost.",
+      "costControl": "Use deterministic failure triggers and cached catalog constraints before calling a model. Limit the repair to one question; measure whether the cap loses purchases.",
+      "feasibility": "now",
+      "dependencies": [
+        "Merchant search instrumentation",
+        "Reliable variant eligibility",
+        "Enough qualifying AI-origin traffic"
+      ],
+      "failureMode": "The question adds work, misreads a legitimate exploratory search, or silently relaxes a non-negotiable requirement.",
+      "falsifier": "No economically useful retained-purchase difference against current query assistance at the preregistered precision, or more requirement violations despite better click rates.",
+      "sourceIds": [
+        "beh-fang",
+        "beh-algolia",
+        "beh-constructor"
+      ]
+    },
+    {
+      "id": "behavioral-02",
+      "title": "Continue the AI recommendation at the exact variant and unfinished step",
+      "lens": "behavioral",
+      "buyer": "Merchants and shopping-assistant partners that control referral links and can share shopper-approved shopping context.",
+      "problem": "An AI recommendation leads to a generic product page, a default variant, or a fresh chat. The shopper repeats sizing, color, budget or delivery questions already settled upstream.",
+      "mechanism": "Arrival continuity: preserve the selected option and the one decision still open, then verify current commercial terms. Less repeated work may retain shoppers who would otherwise restart search or abandon.",
+      "intervention": "Attach a short-lived opaque reference to partner links. On arrival, resolve a consented structured brief containing selected variant, explicit requirements and unfinished task. Display the exact current variant and continue that task; request clarification when context is absent. Recheck stock, price and delivery before cart creation.",
+      "competitorOverlap": "Shopify already has long-running agent carts and checkout continuation; Constructor maintains conversational intent. A persistent cart or preselected variant alone is not an edge. Cross-surface completion of a particular unresolved step must outperform native continuation.",
+      "edgeHypothesis": "Carrying unresolved work, in addition to cart contents, reduces duplicated decisions and increases retained purchases compared with the same native cart link.",
+      "dataNeeded": [
+        "Partner-issued AI session and referral IDs",
+        "Explicitly approved minimal brief",
+        "Canonical variant and offer identifiers",
+        "Arrival-to-action events",
+        "Orders across all later merchant sessions"
+      ],
+      "experiment": "Within one cooperating AI partner, randomize users before referral to native cart or product links versus links with task continuation. Keep offered products, price and recommendation ranking fixed. Primary endpoint is retained purchase within 14 days, matured through day 45. Recruit at least four weeks and power on partner users assigned before clicking. Monitor context exposure, wrong variants and checkout failure.",
+      "metric": "Retained purchasers per all eligible partner users randomized before referral. A separate arrival-conditioned rate diagnoses landing quality but is not the main causal denominator.",
+      "impactEvidence": "Hypothesized. beh-journeys observes chat/search interleaving; beh-carts establishes available plumbing. Neither proves a benefit from this brief transfer.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured AI-origin baseline. Measure N eligible people per month, control retained-purchase probability p0, contribution m per retained purchase, and all-in incremental monthly cost C.",
+        "calculation": "For a stable population and contribution mix, extra retained purchasers = N * (pT - pC). Incremental contribution = N * (pT - pC) * m - C. Break-even absolute probability gain = C / (N * m). C includes software, inference, integration amortization and extra human work. N must include users who never click the partner link.",
+        "range": "No empirical range estimated. Zero and negative effects remain possible; a gain among users who engage cannot replace the effect across all assigned eligible users."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP 500 monthly per connected merchant, with a separate fixed integration quote only after the required data access is confirmed.",
+      "costControl": "Transfer a small structured brief instead of replaying full conversations. Resolve public facts once while validating volatile offers at arrival.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "AI partner cooperation",
+        "Shopper consent for context sharing",
+        "Merchant landing extension",
+        "Native cart integration"
+      ],
+      "failureMode": "Context is unavailable, stale, invasive or wrong; the special landing creates more friction than native checkout.",
+      "falsifier": "Task continuation does not beat an otherwise identical native cart link on retained purchases, or most actual AI referrals cannot carry the required context.",
+      "sourceIds": [
+        "beh-journeys",
+        "beh-carts",
+        "beh-constructor"
+      ]
+    },
+    {
+      "id": "behavioral-03",
+      "title": "Replace a repeated comparison loop with a concrete product check",
+      "lens": "behavioral",
+      "buyer": "Merchants selling technical, bulky or compatibility-sensitive products.",
+      "problem": "A shopper alternates between the same two products and repeats a question because the answer does not establish the one fact that determines suitability.",
+      "mechanism": "Evaluation completion: make the unresolved requirement explicit, run a concrete check against verifiable product evidence, and let the shopper rule an option in or out. This can end an unproductive loop while avoiding a purchase that would later be returned.",
+      "intervention": "Offer a check only after an explicit repeated unresolved question, not dwell time alone. For example, ask for the available shelf depth and compare it with the appliance's installation clearance from its manual. Show evidence, assumptions and unknowns; retain ruled-out reasons so later suggestions do not reintroduce failed options.",
+      "competitorOverlap": "Constructor Product Insights and Gorgias already answer comparison and compatibility questions. Our test is an evidence-backed pass/fail check with persistent exclusion reasons, not another generated comparison table. Equivalent existing capability is possible.",
+      "edgeHypothesis": "For questions answerable by a concrete check, a concise verified result will produce more retained purchases and fewer repeated support contacts than another conversational comparison.",
+      "dataNeeded": [
+        "Repeated-question state",
+        "Shopper-supplied measurement or device model",
+        "Manufacturer specifications and revision dates",
+        "Current candidate variants",
+        "Orders, returns and compatibility complaints"
+      ],
+      "experiment": "Randomize shoppers with a qualifying unresolved comparison to current product assistant or concrete-check mode. Stratify by product category. Use retained merchant purchase within 14 days, matured through day 45, as primary. Recruit at least six weeks or the required sample; monitor false passes, returns and latency. Replay held-out real questions first to reject unsafe checks.",
+      "metric": "All-category retained purchasers per assigned eligible AI-origin shopper. Reduced back-and-forth and test completion are mediators, not purchase conversion.",
+      "impactEvidence": "Hypothesized exact intervention. beh-livestream is adjacent randomized evidence for timely shopping information; beh-insights and beh-gorgias establish direct competition.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured AI-origin baseline. Measure N eligible people per month, control retained-purchase probability p0, contribution m per retained purchase, and all-in incremental monthly cost C.",
+        "calculation": "For a stable population and contribution mix, extra retained purchasers = N * (pT - pC). Incremental contribution = N * (pT - pC) * m - C. Break-even absolute probability gain = C / (N * m). C includes software, inference, integration amortization and extra human work. A purchase prevented because the item is unsuitable is not a conversion failure; report return-adjusted contribution and false-pass harm.",
+        "range": "No empirical range estimated. Zero and negative effects remain possible; a gain among users who engage cannot replace the effect across all assigned eligible users."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 400 monthly per catalog category with sufficient traffic and authoritative technical data.",
+      "costControl": "Use deterministic calculations for dimensions and compatibility rules. Model calls identify the relevant test; they do not invent the measurement or outcome.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Authoritative specifications",
+        "Bounded supported check types",
+        "Clear shopper input validation"
+      ],
+      "failureMode": "The check asserts compatibility from incomplete specifications or creates false confidence in a bad purchase.",
+      "falsifier": "Improved conversation completion has no retained-purchase benefit, or compatibility returns and false passes exceed the predefined guardrail.",
+      "sourceIds": [
+        "beh-livestream",
+        "beh-insights",
+        "beh-gorgias"
+      ]
+    },
+    {
+      "id": "behavioral-04",
+      "title": "Turn an unanswered question into a reusable supplier fact request",
+      "lens": "behavioral",
+      "buyer": "Specialist retailers whose staff or suppliers can establish product facts missing from public documentation.",
+      "problem": "The assistant reaches a genuine knowledge gap, repeats vague language, and loses the shopper. Several shoppers may ask the same unresolved question, wasting specialist time.",
+      "mechanism": "Evidence acquisition: route a specific purchase-blocking fact to someone who can verify it, then return the answer to the shopping task. Reuse a versioned fact for equivalent later questions so human effort can support additional purchases.",
+      "intervention": "Create a structured request containing exact SKU revision, required fact and acceptable evidence, such as a measured internal width or a connector photo. A specialist returns evidence and an answer; the assistant resumes the saved comparison. With merchant approval, cache only the product fact and provenance, never the shopper's private context.",
+      "competitorOverlap": "Intercom Fin already pauses for teammate decisions and resumes procedures. Gorgias already supports human handover. The proposed distinction is pooling equivalent product-fact requests, evidence requirements and invalidation by product revision; superiority over configured incumbent workflows is unproven.",
+      "edgeHypothesis": "A fact-request queue will produce more retained purchases per specialist minute than sending every shopper into a full support conversation.",
+      "dataNeeded": [
+        "Unanswerable question and exact product revision",
+        "Evidence request and specialist completion time",
+        "Question-equivalence clusters",
+        "Saved shopper task and approved return channel",
+        "All requester purchases and refunds"
+      ],
+      "experiment": "Randomize product-question clusters to the fact-request workflow or existing support, keeping ordinary help available. Cluster allocation prevents a newly shared answer contaminating control. Primary is retained purchase within 21 days, matured through day 60, among all eligible AI-origin requesters. Recruit at least eight weeks and power on clusters; measure queue delays, incorrect reuse and incremental specialist minutes.",
+      "metric": "Retained purchasers per eligible requester, analyzed with cluster-aware uncertainty. Also report contribution per incremental specialist hour; do not divide only by answered tickets.",
+      "impactEvidence": "Hypothesized. beh-fin-human documents feasibility. General assistant evidence does not establish this human fact-sharing mechanism.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured AI-origin baseline. Measure N eligible people per month, control retained-purchase probability p0, contribution m per retained purchase, and all-in incremental monthly cost C.",
+        "calculation": "For a stable population and contribution mix, extra retained purchasers = N * (pT - pC). Incremental contribution = N * (pT - pC) * m - C. Break-even absolute probability gain = C / (N * m). C includes software, inference, integration amortization and extra human work. For clusters, estimate N and p using all requesters and cluster-aware inference. Human verification cost belongs in C.",
+        "range": "No empirical range estimated. Zero and negative effects remain possible; a gain among users who engage cannot replace the effect across all assigned eligible users."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 750 monthly per merchant plus transparent specialist labor; accept a paid pilot only where question volume and margin can support the break-even test.",
+      "costControl": "Deduplicate genuinely equivalent facts, batch supplier requests and invalidate cached answers when a product revision changes. Keep the evidence check even if it costs more.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Cooperating merchant specialists",
+        "Helpdesk integration",
+        "Evidence provenance and revision matching",
+        "Shopper-approved continuation channel"
+      ],
+      "failureMode": "Answers arrive after the shopper has moved on, or a cached answer is applied to a different product revision.",
+      "falsifier": "Specialist effort falls but retained purchases do not improve, or error and waiting costs erase any incremental contribution.",
+      "sourceIds": [
+        "beh-fin-human",
+        "beh-gorgias"
+      ]
+    },
+    {
+      "id": "behavioral-05",
+      "title": "Route failed assistance to the specialist who can finish the purchase task",
+      "lens": "behavioral",
+      "buyer": "Merchants with staffed product advice teams and enough AI-origin pre-sale conversations to test routing.",
+      "problem": "A support bot treats repeated answers as progress, or a generic handoff makes the shopper explain the same issue again. High purchase intent does not identify which expert can actually resolve the blockage.",
+      "mechanism": "Human collaboration: detect a failed attempted action, route the concrete unresolved task to a suitably skilled human, and preserve the work already done. Faster competent resolution may recover purchases otherwise lost in an assistance loop.",
+      "intervention": "Build routing rules around unresolved task type and failed action history: installation, component compatibility, delivery feasibility or quote exception. Give the specialist the candidate set, failed checks and cited evidence. Honor all explicit human requests immediately; test only the optional proactive-routing policy.",
+      "competitorOverlap": "Intercom already escalates repetitive loops and supports teammate involvement; Gorgias already hands off. Our edge would be task-specific skill matching and causal allocation of scarce expert time, not generic loop detection.",
+      "edgeHypothesis": "At the same staffing budget, task-based routing will create more retained purchases than current intent or sentiment-based routing.",
+      "dataNeeded": [
+        "Failed actions rather than only message sentiment",
+        "Specialist skill and capacity map",
+        "Queue wait and handling time",
+        "Full AI-human conversation linkage",
+        "Orders including every human-assisted outcome"
+      ],
+      "experiment": "Use randomized queue-shift blocks or a capacity-aware user experiment to avoid treatment consuming the control team's capacity. Compare new routing with current escalation at equal scheduled staffing. Primary is retained purchase within 14 days, matured through day 45. Run at least six weeks and power on independent blocks. Keep explicit human access equal; monitor waits and service failures in both arms.",
+      "metric": "Retained purchasers per all eligible AI-origin users assigned to each policy, including handovers. Report total team contribution and staffing hours. Never exclude human-assisted purchases from the causal endpoint.",
+      "impactEvidence": "Hypothesized incremental routing effect. beh-fang finds no significant chatbot sales advantage over human replies; beh-gorgias-metrics illustrates why assistant-only attribution can mismeasure this idea.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured AI-origin baseline. Measure N eligible people per month, control retained-purchase probability p0, contribution m per retained purchase, and all-in incremental monthly cost C.",
+        "calculation": "For a stable population and contribution mix, extra retained purchasers = N * (pT - pC). Incremental contribution = N * (pT - pC) * m - C. Break-even absolute probability gain = C / (N * m). C includes software, inference, integration amortization and extra human work. Use equal staffing in the first experiment; later test cost reduction only after purchase non-inferiority is established.",
+        "range": "No empirical range estimated. Zero and negative effects remain possible; a gain among users who engage cannot replace the effect across all assigned eligible users."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 1,000 monthly per advice team, justified only by measured incremental contribution or a later purchase-preserving staffing benefit.",
+      "costControl": "Escalate where a specialist can complete a specific action. Reuse context to reduce handling time; do not optimize deflection at the expense of purchases.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Staffed specialists",
+        "Routing and queue APIs",
+        "Purchase linkage across human handover",
+        "Capacity-aware experiment"
+      ],
+      "failureMode": "More transfers overload specialists, lengthen waits or merely move already-converting shoppers into an expensive channel.",
+      "falsifier": "No retained-purchase gain at equal staffing, or the gain disappears when all eligible users and queue spillovers are counted.",
+      "sourceIds": [
+        "beh-fin-procedures",
+        "beh-fin-human",
+        "beh-fang",
+        "beh-gorgias-metrics"
+      ]
+    },
+    {
+      "id": "behavioral-06",
+      "title": "Check that a project basket can actually complete the shopper's task",
+      "lens": "behavioral",
+      "buyer": "DIY, electronics, sports and hobby merchants where several compatible items are needed for one task.",
+      "problem": "A goal-based assistant generates a plausible product list, but the basket omits a necessary component, duplicates equipment the shopper owns, or contains incompatible parts.",
+      "mechanism": "Task completion: establish the minimum workable set, verify dependencies, and repair the basket before purchase. The shopper can buy with a credible route to accomplishing the intended job.",
+      "intervention": "Start from an explicit task and shopper-confirmed owned equipment. Build a checklist of required capabilities, map basket items to them, validate compatibility and quantity, and show the smallest necessary additions or substitutions. Optional extras remain off by default. Begin with one merchant and a bounded project category.",
+      "competitorOverlap": "Constructor already provides goal-oriented multi-item shopping; Instacart already makes lists shoppable. The proposed edge is whole-basket dependency checking and exclusion of unnecessary products, measured against these existing goal-to-cart workflows.",
+      "edgeHypothesis": "A basket that demonstrably completes the task will increase retained purchase incidence, even when the minimum basket is cheaper than the incumbent recommendation.",
+      "dataNeeded": [
+        "Task definition and customer-owned items",
+        "Compatibility and quantity rules",
+        "Basket and live inventory",
+        "Required versus optional component labels",
+        "Order, return and missing-component complaint data"
+      ],
+      "experiment": "Randomize qualifying AI-origin project shoppers to current goal-based suggestions or a validated minimum basket. Freeze merchandising incentives across arms. Primary is a retained paid project order within 14 days, matured through day 45; total merchant retained-purchase incidence is a co-reported endpoint. Recruit at least six weeks and power on shoppers. Guard against unnecessary-item additions and incomplete-task complaints.",
+      "metric": "Eligible assigned shoppers with a paid, retained task basket divided by all assigned eligible project shoppers. Report any merchant purchase separately to reveal cannibalization. AOV is secondary.",
+      "impactEvidence": "Hypothesized. beh-constructor and beh-instacart-list prove existing workflow overlap and integration routes, not causal purchase uplift from dependency checks.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured AI-origin baseline. Measure N eligible people per month, control retained-purchase probability p0, contribution m per retained purchase, and all-in incremental monthly cost C.",
+        "calculation": "For a stable population and contribution mix, extra retained purchasers = N * (pT - pC). Incremental contribution = N * (pT - pC) * m - C. Break-even absolute probability gain = C / (N * m). C includes software, inference, integration amortization and extra human work. Contribution m may decrease if unnecessary items are removed; measure it rather than assuming a constant basket value.",
+        "range": "No empirical range estimated. Zero and negative effects remain possible; a gain among users who engage cannot replace the effect across all assigned eligible users."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 600 per category per month, with setup priced separately after verifying usable compatibility data.",
+      "costControl": "Compile common tasks into reusable deterministic checklists. Use AI for interpreting unusual goals and explaining failed checks.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Category experts",
+        "Compatibility data",
+        "Owned-item input",
+        "Single-merchant cart integration"
+      ],
+      "failureMode": "The system mistakes a typical bundle for a required kit, or overcomplicates a simple purchase with a long questionnaire.",
+      "falsifier": "Task checklists improve engagement without more retained purchases, or added components increase returns and reduce contribution.",
+      "sourceIds": [
+        "beh-constructor",
+        "beh-instacart-list"
+      ]
+    },
+    {
+      "id": "behavioral-07",
+      "title": "Repair a stockout by replacing only the blocked component",
+      "lens": "behavioral",
+      "buyer": "Merchants with frequent variant stockouts and meaningful interchangeable-product ranges.",
+      "problem": "A selected product becomes unavailable after AI discovery or basket creation. Generic alternatives restart the whole choice process and can violate the original compatibility, size or budget requirement.",
+      "mechanism": "Availability recovery: preserve the shopper's chosen task and all unaffected basket decisions, replace only the unavailable item with a verified acceptable option, and complete a viable order.",
+      "intervention": "On an authoritative stock failure, compare alternatives against explicit hard constraints and the other basket items. Explain only the differences that matter. Let the shopper choose a named substitute, wait, or stop; never infer substitution consent from silence. Revalidate stock and price immediately before checkout.",
+      "competitorOverlap": "Instacart already supports explicit replacements, best-match review and refund preferences; Constructor validates catalog availability. Our edge must be constraint-preserving repair for complex products and baskets, not replacement suggestions themselves.",
+      "edgeHypothesis": "Showing a small set of compatible repairs, with unchanged decisions preserved, will recover more retained orders than the merchant's current stockout recommendations.",
+      "dataNeeded": [
+        "Authoritative stock-failure event",
+        "Original requirements and chosen variant",
+        "Compatibility relationships and live substitute inventory",
+        "Substitution consent",
+        "Fulfillment, refunds and all merchant purchases"
+      ],
+      "experiment": "Randomize shoppers at the first qualifying stockout to current recovery or constrained component repair, blocked by warehouse and time. Monitor inventory interference and use cluster allocation if material. Primary is a fulfilled retained order within 14 days, matured through day 45. Run at least six weeks or the purchase-powered sample; measure rejected substitutions, complaints and canceled orders.",
+      "metric": "Retained purchasers per every assigned AI-origin shopper with a genuine stock failure. Count whole-merchant orders, not just substitute clicks or accepted replacements.",
+      "impactEvidence": "Hypothesized external-AI purchase effect. beh-instacart-replace establishes a mature comparator but supplies no randomized lift for our constraint-based repair.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured AI-origin baseline. Measure N eligible people per month, control retained-purchase probability p0, contribution m per retained purchase, and all-in incremental monthly cost C.",
+        "calculation": "For a stable population and contribution mix, extra retained purchasers = N * (pT - pC). Incremental contribution = N * (pT - pC) * m - C. Break-even absolute probability gain = C / (N * m). C includes software, inference, integration amortization and extra human work. Estimate N from actual stock failures, not all product-page visits; scarcity-driven spillovers may require cluster-level estimates.",
+        "range": "No empirical range estimated. Zero and negative effects remain possible; a gain among users who engage cannot replace the effect across all assigned eligible users."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 400 monthly per merchant; test only where observed stockout volume can support the contribution break-even.",
+      "costControl": "Precompute constraint-compatible substitute sets, then check only volatile stock and price at the failure event.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Timely inventory service",
+        "Explicit substitution policy",
+        "Compatibility rules",
+        "Stable item and variant identity"
+      ],
+      "failureMode": "Alternatives are unavailable, more expensive than permitted, or incompatible; the repair delays a purchase the shopper could have completed unaided.",
+      "falsifier": "Substitution acceptance increases without additional fulfilled retained orders, or total merchant purchases merely shift between products with worse margin or returns.",
+      "sourceIds": [
+        "beh-instacart-replace",
+        "beh-constructor",
+        "beh-carts"
+      ]
+    },
+    {
+      "id": "behavioral-08",
+      "title": "Turn a failed delivery check into a customer-approved feasible plan",
+      "lens": "behavioral",
+      "buyer": "Merchants with destination restrictions, multiple fulfillment locations or time-sensitive orders.",
+      "problem": "A shopper discovers late that the basket cannot reach the destination, misses the needed date or requires an unavailable delivery method. Repeating checkout does not resolve the task.",
+      "mechanism": "Checkout recovery: identify the specific infeasible constraint and obtain a feasible fulfillment plan from authoritative services, preserving the purchase goal where possible.",
+      "intervention": "After an actual delivery failure, use the current cart and customer-provided destination to request valid shipping, pickup or split-shipment options. Present up to two feasible plans with total cost and honest date bounds. Apply only the customer's selected plan and revalidate before the final purchase confirmation.",
+      "competitorOverlap": "Shopify already exposes destination-linked delivery options and agent carts; native checkout handles delivery selection. The proposed edge is repairing an infeasible basket across available operational choices, not displaying a shipping estimate.",
+      "edgeHypothesis": "A bounded repair workflow will create more delivered retained purchases than the existing checkout error plus shipping-help flow.",
+      "dataNeeded": [
+        "Delivery failure reason",
+        "Customer-provided destination and deadline",
+        "Live fulfillment options and capacity",
+        "Customer-approved cart or method change",
+        "Delivery outcomes, paid orders and refunds"
+      ],
+      "experiment": "Randomize users with a qualifying delivery failure to current recovery or feasible-plan repair. Block by geography and fulfillment location. Primary is a paid order placed within seven days, delivered within the accepted promise and not fully refunded by day 45. Recruit at least six weeks and power on uncommon failures. Monitor promise breaches, extra shipping cost and support contacts.",
+      "metric": "On-time retained purchasers divided by every randomized eligible AI-origin shopper with the failure, including cases where no feasible plan exists. Report any paid purchase separately so delivery mistakes remain visible.",
+      "impactEvidence": "Hypothesized. beh-delivery and beh-carts establish implementation capabilities; they provide no causal purchase estimate for this recovery path.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured AI-origin baseline. Measure N eligible people per month, control retained-purchase probability p0, contribution m per retained purchase, and all-in incremental monthly cost C.",
+        "calculation": "For a stable population and contribution mix, extra retained purchasers = N * (pT - pC). Incremental contribution = N * (pT - pC) * m - C. Break-even absolute probability gain = C / (N * m). C includes software, inference, integration amortization and extra human work. Use contribution after incremental shipping and split-fulfillment costs. An estimated delivery option is not a binding promise unless the fulfillment provider makes it one.",
+        "range": "No empirical range estimated. Zero and negative effects remain possible; a gain among users who engage cannot replace the effect across all assigned eligible users."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 750 monthly per merchant plus integration work, contingent on enough recoverable delivery failures.",
+      "costControl": "Call fulfillment services only after a concrete failure and reuse unchanged cart calculations; never cache delivery capacity beyond its valid window.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Fulfillment and pickup integrations",
+        "Accurate operational promises",
+        "Native checkout controls",
+        "Destination privacy controls"
+      ],
+      "failureMode": "The assistant promises an arrival date the merchant cannot meet or increases operational cost more than the recovered purchase is worth.",
+      "falsifier": "More paid orders fail delivery promises, or on-time retained purchase contribution does not beat existing checkout recovery.",
+      "sourceIds": [
+        "beh-delivery",
+        "beh-carts"
+      ]
+    },
+    {
+      "id": "behavioral-09",
+      "title": "Resume the last unresolved shopping task when the shopper returns",
+      "lens": "behavioral",
+      "buyer": "Merchants with considered purchases that commonly span several sessions.",
+      "problem": "A returning shopper finds a saved cart but has lost the reasoning, rejected options or measurement they still needed to check. Restarting research creates another opportunity to abandon.",
+      "mechanism": "Interruption recovery: restore the unfinished decision at re-entry, update volatile facts and let the shopper continue from that point. The mechanism concerns repeated work, not pressure from reminders.",
+      "intervention": "Offer an explicit save-progress action that records chosen products, rejected alternatives, the unresolved question and any requested next step. At the shopper's next voluntary return, show that task and update price and stock. Test optional notifications separately and only through channels the shopper selected.",
+      "competitorOverlap": "Shopify already supports long-running agent carts, while Klaviyo handles cart recovery. Our proposed edge is the saved unresolved task and reason history compared with the same saved cart and same message schedule.",
+      "edgeHypothesis": "For interrupted decisions, restoring the next piece of work will increase retained purchases more than restoring cart contents alone.",
+      "dataNeeded": [
+        "Explicit save-progress action",
+        "Minimal selected and rejected option state",
+        "Unresolved task and user-supplied answer",
+        "Consented return linkage",
+        "All orders and marketing contacts"
+      ],
+      "experiment": "Randomize at save-progress, before return behavior is known, to native cart persistence or task persistence. Keep communication frequency identical; do not condition analysis on return visits. Primary is any retained merchant purchase within 30 days, matured through day 60. Run at least eight weeks and power on savers. Guardrails include stale claims, consent withdrawal and repeated prompts.",
+      "metric": "Retained purchasers per all randomized eligible AI-origin savers, including non-returners. Return-conditioned completion is only a diagnostic.",
+      "impactEvidence": "Hypothesized resume effect. beh-journeys supports multi-step journeys; beh-retarget warns that recovery contact itself can reduce purchases; beh-stage shows funnel-stage effects differ.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured AI-origin baseline. Measure N eligible people per month, control retained-purchase probability p0, contribution m per retained purchase, and all-in incremental monthly cost C.",
+        "calculation": "For a stable population and contribution mix, extra retained purchasers = N * (pT - pC). Incremental contribution = N * (pT - pC) * m - C. Break-even absolute probability gain = C / (N * m). C includes software, inference, integration amortization and extra human work. N is eligible savers, not returning savers. Unchanged messaging isolates the saved-work mechanism.",
+        "range": "No empirical range estimated. Zero and negative effects remain possible; a gain among users who engage cannot replace the effect across all assigned eligible users."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 350 monthly per merchant. Validate paid demand against the incremental value beyond native saved carts.",
+      "costControl": "Store a compact task state, not a full chat replay. Revalidate only changed facts when the shopper returns.",
+      "feasibility": "now",
+      "dependencies": [
+        "Explicit save and deletion controls",
+        "Stable return linkage",
+        "Native cart persistence",
+        "Fresh stock and price checks"
+      ],
+      "failureMode": "The saved task misrepresents current intent, feels intrusive, or returns the shopper to a choice they deliberately abandoned.",
+      "falsifier": "No retained-purchase gain when communication and cart persistence are held equal, or any observed lift comes only from more messaging.",
+      "sourceIds": [
+        "beh-journeys",
+        "beh-retarget",
+        "beh-stage",
+        "beh-carts",
+        "beh-klaviyo"
+      ]
+    },
+    {
+      "id": "behavioral-10",
+      "title": "Give a buying team the specific approval tasks that block payment",
+      "lens": "behavioral",
+      "buyer": "B2B equipment and specialist-supply merchants serving buyers who need technical, operational or budget sign-off.",
+      "problem": "An AI-assisted researcher has found plausible products, but another person must confirm fit, approve budget or supply a missing specification. The cart stops while screenshots and questions move outside the store.",
+      "mechanism": "Buyer coordination: turn the unfinished purchase into named factual checks and approval decisions, preserve the selected products, and return an approved current order to the person authorized to pay.",
+      "intervention": "Let the initiating buyer create a shareable project brief with a small set of tasks, such as confirm socket type, measure installation space or approve a stated total. They choose who receives the link. Track factual confirmation separately from purchasing authority, refresh offers before order submission, and require the authorized payer's final action.",
+      "competitorOverlap": "SparkLayer already supports quote conversations and limited-user purchase approval; Shopify supports drafts for merchant review. Our edge would be earlier buyer-side technical task completion inside an AI-origin selection journey. A generic approval workflow is not novel.",
+      "edgeHypothesis": "Explicit technical sign-off tasks will turn more AI-origin projects into paid retained orders than the current quote and approval flow, without increasing unauthorized orders.",
+      "dataNeeded": [
+        "Buyer-declared project and participant roles",
+        "Explicitly shared minimal brief",
+        "Required technical and budget decisions",
+        "Current quote and authority state",
+        "Payment, cancellation, fulfillment and return events"
+      ],
+      "experiment": "Randomize at project creation by buying organization to existing quote/approval flow or structured pre-order tasks. Primary is a paid order within 45 days that remains uncanceled and not fully refunded by day 75. Recruit across at least two normal buying cycles and power on organizations, not participants. Guardrails: unauthorized purchases, data disclosure and approval delays.",
+      "metric": "Buying organizations with an eligible AI-origin project producing a paid retained order divided by all randomized eligible organizations. Quotes, draft orders and approvals are not purchases.",
+      "impactEvidence": "Hypothesized. beh-spark and beh-b2b establish close existing workflow competition. No direct causal evidence for the proposed pre-order task design was found in this research.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No measured baseline. Measure N eligible buying organizations per month, retained-purchase probability p, contribution m per completed project and all-in cost C.",
+        "calculation": "Incremental retained buying organizations = N * (pT - pC); incremental contribution = N * (pT - pC) * m - C. Break-even absolute probability gain = C / (N * m). Count all participant and staff time in C.",
+        "range": "No empirical range estimated. Zero or negative impact is possible if formalizing approval adds delay or the existing quote tool already solves the problem."
+      },
+      "willingnessToPay": "Unvalidated value-based test price: GBP 1,000 monthly per merchant; require enough eligible projects and verified contribution to justify a paid deployment.",
+      "costControl": "Generate one structured project brief and deterministic task states; reserve model calls for explaining a changed requirement or conflicting technical answer.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "B2B quote and order system",
+        "Organization-level consent and roles",
+        "Technical evidence",
+        "Payment and fulfillment measurement"
+      ],
+      "failureMode": "The workflow adds bureaucracy, exposes private commercial information, or treats a technical confirmation as permission to purchase.",
+      "falsifier": "Approval completion rises without more paid retained orders, or the existing quote flow is equally effective at lower cost.",
+      "sourceIds": [
+        "beh-spark",
+        "beh-b2b"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "beh-fang",
+      "title": "Generative AI and Sales Productivity: Field Experiments in Online Retail",
+      "url": "https://arxiv.org/html/2510.12049v6",
+      "type": "research",
+      "claim": "Current v6, 29 June 2026. Randomized retail workflows. Query refinement raised purchase incidence 1.2% relatively and sales 2.9%; chatbot sales gain of 16.3% was versus no service, with no significant sales or conversion difference versus human replies. One platform; not external AI referral traffic."
+    },
+    {
+      "id": "beh-journeys",
+      "title": "Shopping with a Platform AI Assistant: Who Adopts, When in the Journey, and What For",
+      "url": "https://arxiv.org/abs/2603.24947",
+      "type": "research",
+      "claim": "Descriptive Ctrip study of 31 million users. Chat and search commonly interleave; use is associated with existing engagement. Travel-platform observations, not causal purchase effects or a demographic targeting recommendation."
+    },
+    {
+      "id": "beh-retarget",
+      "title": "The Double-Edged Effects of E-Commerce Cart Retargeting: Does Retargeting Too Early Backfire?",
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/0022242920959043",
+      "type": "research",
+      "claim": "Randomized field experiments found immediate cart retargeting could reduce purchases. Supports testing the behavior around abandonment; it does not validate any proposed resume workflow."
+    },
+    {
+      "id": "beh-stage",
+      "title": "Retargeted vs. Generic Product Recommendations: When is it Valuable to Present Retargeted Recommendations?",
+      "url": "https://pubsonline.informs.org/doi/10.1287/isre.2020.0560",
+      "type": "research",
+      "claim": "Field experiment found that recommendation effects on impressions and sales differed by purchase-funnel stage. The reported up-to-3% policy gain is a counterfactual simulation, not an observed randomized policy gain."
+    },
+    {
+      "id": "beh-livestream",
+      "title": "Artificial Intelligence (AI) Assistant in Online Shopping: A Randomized Field Experiment on a Livestream Selling Platform",
+      "url": "https://pubsonline.informs.org/doi/10.1287/isre.2023.0103",
+      "type": "research",
+      "claim": "Randomized livestream assistant access increased sales by 3.00% and reduced return rates by 12.55% in that setting. This is adjacent evidence for timely information, not a forecast for merchant assistants or external AI traffic."
+    },
+    {
+      "id": "beh-gorgias",
+      "title": "Shopping Assistant explained",
+      "url": "https://docs.gorgias.com/en-US/shopping-assistant-explained-1216108",
+      "type": "official-doc",
+      "claim": "Gorgias already uses browsing and cart context, answers product questions, recommends products and adapts selling behavior. These capabilities are existing competition, not evidence of incremental purchase lift."
+    },
+    {
+      "id": "beh-gorgias-metrics",
+      "title": "How metrics are calculated: AI & automation",
+      "url": "https://helpcenter.gorgias.com/en-US/how-metrics-are-calculated-ai-and-automation-5666070",
+      "type": "official-doc",
+      "claim": "Defines Shopping Assistant order attribution through a three-day interaction window without human handover. Attribution is not randomized incrementality and this exclusion is unsuitable for evaluating combined AI-human rescue."
+    },
+    {
+      "id": "beh-constructor",
+      "title": "Learn about AI Shopping Agent",
+      "url": "https://docs.constructor.com/docs/products-ai-shopping-agents-learn-about-ai-shopping-agent",
+      "type": "official-doc",
+      "claim": "Constructor already supports goal-oriented, multi-item discovery, conversational context and catalog validation. A generic goal-to-basket agent is not a new category."
+    },
+    {
+      "id": "beh-insights",
+      "title": "Learn about Product Insights Agent",
+      "url": "https://docs.constructor.com/docs/products-ai-shopping-agents-learn-about-product-insights-agent",
+      "type": "official-doc",
+      "claim": "Constructor already provides product-specific questions and answers on detail pages, including comparison questions. Does not establish a randomized purchase effect for the proposed comparison-check workflow."
+    },
+    {
+      "id": "beh-algolia",
+      "title": "Query Suggestions",
+      "url": "https://www.algolia.com/doc/guides/building-search-ui/ui-and-ux-patterns/query-suggestions/in-depth/query-suggestions-faq/angular",
+      "type": "official-doc",
+      "claim": "Algolia already offers query suggestions based on search analytics and indexed results. Our proposed edge concerns recovery across failed edits, not the invention of suggested queries."
+    },
+    {
+      "id": "beh-fin-procedures",
+      "title": "Building Fin Procedures",
+      "url": "https://www.intercom.com/help/en/articles/13449439-building-fin-procedures",
+      "type": "official-doc",
+      "claim": "Intercom supports executable procedures and handoff; documented escalation includes repetitive loops and explicit human requests. Loop detection alone is not novel."
+    },
+    {
+      "id": "beh-fin-human",
+      "title": "Human-in-the-loop approvals for Fin Procedures",
+      "url": "https://www.intercom.com/help/en/articles/14468561-human-in-the-loop-approvals-for-fin-procedures",
+      "type": "official-doc",
+      "claim": "Fin can pause a procedure, request a teammate decision, then resume. This is direct workflow overlap for supplier checks and human collaboration; it does not establish retained-purchase uplift."
+    },
+    {
+      "id": "beh-carts",
+      "title": "Carts and checkout for agents",
+      "url": "https://shopify.dev/docs/agents/carts-and-checkout",
+      "type": "official-doc",
+      "claim": "Shopify already supports agent carts, long-running cart workflows and continuation into checkout. Proposed continuity and resume ideas must beat this native baseline."
+    },
+    {
+      "id": "beh-delivery",
+      "title": "CartDeliveryGroup - Storefront API",
+      "url": "https://shopify.dev/docs/api/storefront/latest/objects/cartdeliverygroup",
+      "type": "official-doc",
+      "claim": "Cart delivery groups expose destination-linked cart lines and available delivery options. This supplies an implementation building block, not a guarantee of arrival date or live capacity."
+    },
+    {
+      "id": "beh-instacart-list",
+      "title": "Create shopping list page",
+      "url": "https://docs.instacart.com/developer_platform_api/api/products/create_shopping_list_page/",
+      "type": "official-doc",
+      "claim": "Instacart supports shareable shopping lists that match products and lead to cart and checkout. List-to-cart conversion is established functionality; exact project dependency validation is a separate proposed test."
+    },
+    {
+      "id": "beh-instacart-replace",
+      "title": "Replacements",
+      "url": "https://docs.instacart.com/storefront/learn_about_your_storefront/cart_and_checkout/replacements/",
+      "type": "official-doc",
+      "claim": "Instacart already supports specific backups, best-match review and refund preferences across the shopping journey. Generic replacement recommendations are not novel."
+    },
+    {
+      "id": "beh-klaviyo",
+      "title": "How to create an abandoned cart flow",
+      "url": "https://help.klaviyo.com/hc/en-us/articles/115002779411",
+      "type": "official-doc",
+      "claim": "Klaviyo supports triggered cart and checkout recovery flows. A reminder sequence is existing competition; the proposed test isolates continuation of unresolved work."
+    },
+    {
+      "id": "beh-spark",
+      "title": "Quoting Engine",
+      "url": "https://docs.sparklayer.io/quoting",
+      "type": "official-doc",
+      "claim": "SparkLayer already supports quote conversations, conversion to orders and limited-user purchase approval. The proposed edge must concern the factual approval tasks before order submission."
+    },
+    {
+      "id": "beh-b2b",
+      "title": "Managing checkout settings in B2B",
+      "url": "https://help.shopify.com/en/manual/b2b/checkout-and-orders/checkout-settings",
+      "type": "official-doc",
+      "claim": "Shopify supports draft submission for merchant review and later payment. Merchant review is not itself proof of buyer-team decision support or paid purchase completion."
+    }
+  ]
+}

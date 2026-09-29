@@ -1,0 +1,663 @@
+{
+  "id": "feedonomics",
+  "name": "Feedonomics",
+  "benchmarkType": "commercial",
+  "winningEvidence": [
+    "Selected as an enterprise execution benchmark: broad managed feed operations, named merchant cases and a documented enterprise Agentic Catalog Exports service. These establish commercial relevance, not audited profitability.",
+    "Evo describes a Google Shopping title split test with +19% ROAS; methods are incomplete. VIETRI reports +80% CVR in a multi-change paid-marketing year-over-year comparison. Neither establishes our expected lift or incremental AI-shopping purchases.",
+    "Current official documentation includes randomized feed testing, BigCommerce order/revenue reporting and AI request monitoring, materially stronger than treating Feedonomics as syndication alone."
+  ],
+  "currentOffer": "As accessed 2026-09-29, enterprise product-feed ingestion, source joining, transformations, channel syndication, enrichment, managed operations and order orchestration for large merchants, brands and agencies. Pricing is custom by SKU/channel/service scope, with no public numeric enterprise price or currency and no revenue percentage according to its pricing page. Dedicated human feed managers and 24/7 support are part of the offer; do not equate it to unattended SaaS.",
+  "conversionMechanism": "Source correctness and channel eligibility can admit more products into discovery; useful product data can improve matching and choice; current offers and order synchronization can reduce failed purchases. Demand, competitive price, merchant execution, engine selection and checkout still mediate every step. Paid-shopping cases and referral-attributed revenue do not establish incremental consumer-AI purchases.",
+  "harness": {
+    "offlineSimulation": "not_found",
+    "liveMonitoring": "documented",
+    "randomizedExperiment": "documented",
+    "purchaseMeasurement": "documented",
+    "details": "No controlled shopper-agent tool-response replay found in reviewed product/docs pages; absence of documentation is not proof of absence. AEO monitoring covers AI site requests/crawls, not verified prompt-level recommendation exposure. Feedonomics documents stable-hash product-group randomization for Google Shopping. Purchase reporting includes BigCommerce-only storefront orders/revenue and Google Ads outcomes; tagging and separate reports have limitations. Public pages reviewed do not specify cross-device attribution, refund treatment, or a controlled AI-purchase result."
+  },
+  "strengths": [
+    "Connects complicated source systems and destination formats; managed staff carry implementation and ongoing exception work.",
+    "Existing export guards, sync, fitment handling and order operations make basic feed repair, compatibility joining and governance weak standalone differentiators.",
+    "Enterprise AI distribution partnerships provide a practical route to participation, though specific merchant/channel eligibility must be confirmed.",
+    "Documents experiment design and warns against conflating AI content activity with revenue."
+  ],
+  "limits": [
+    "Vendor cases rarely disclose full randomization, denominators, attribution settings or uncertainty; paid-channel figures cannot be transferred to AI shopping.",
+    "Dedicated staff, agency coordination and integration work have real recurring cost. No public evidence reviewed establishes Feedonomics margins, profit, CAC or churn.",
+    "Traffic reporting is BigCommerce-only and current paid reporting documents Google Ads; broader customer data access and individual entitlements require confirmation.",
+    "FDX copy enrichment does not create missing structured facts. Broader marketing language should not be read as permission to invent attributes.",
+    "ACE announcement describes mixed crawled/feed implementations and future self-service plans; it does not prove automatic acceptance, preferential ranking or checkout on every listed destination."
+  ],
+  "improve": [
+    "Validate interventions against retained purchases, substitution and propagation lag, while respecting existing randomized-test features.",
+    "Extend beyond feed rows into authoritative offer checks, buyer context, task completion and compatibility decisions using supported merchant/engine integrations.",
+    "Make managed-service labor, evidence acquisition and support costs explicit when judging incremental contribution.",
+    "Use offline replay to identify mechanisms, live observation to check transfer, and randomized merchant experiments to estimate purchase effects."
+  ],
+  "ideas": [
+    {
+      "id": "feedonomics-01",
+      "title": "Measure catalogue experiments against retained orders and substitution",
+      "lens": "measurement",
+      "buyer": "Enterprise growth teams and agencies already paying for managed feeds.",
+      "problem": "A labelled SKU can gain attributed revenue while stealing sales from a sibling product or another channel. Feed acceptance, AI fetches and repeated simulated recommendations do not reveal that.",
+      "mechanism": "Enabling measurement stage: identify interventions that increase retained purchases rather than redistribute them; allocate the next fixed optimization budget to those interventions. Instrumentation creates no sales by itself.",
+      "intervention": "Join experiment assignment, exact exported version, destination acknowledgement and merchant order/refund events. Randomize groups of close substitutes together; record propagation delays and report whole-group orders alongside identified AI referrals.",
+      "competitorOverlap": "Feedonomics already documents randomized product-group feed tests, Google Ads labels, BigCommerce order reporting and AEO activity. The proposed edge is substitution-aware net-order analysis across stores and channels, not inventing A/B testing. Deeper internal capabilities remain unknown.",
+      "edgeHypothesis": "Accounting for substitution and refunds changes which interventions merchants fund and improves purchases generated by a fixed service budget.",
+      "dataNeeded": [
+        "Product substitution graph and variant IDs",
+        "Versioned feed exports and destination receipt timestamps",
+        "Merchant-side order IDs, line items, cancellations and returns",
+        "Consent-respecting referral/session data and campaign change log"
+      ],
+      "experiment": "For each feed intervention, randomize matched substitution clusters within markets; hold other channel exports and campaign settings fixed. Primary endpoint: retained orders per cluster-week, with AI-origin orders separately labelled. Pre-register power from cluster variance and use 8-12 weeks only if sufficient, plus a return window. To test the decision product, randomize matched category teams to ledger-guided or existing prioritization with equal labor; audit contamination and total-store harm.",
+      "metric": "Intention-to-treat difference in retained orders per randomized cluster-week, adjusted by pre-period demand. Report identifiable AI-origin order counts without claiming that referral labels prove incrementality. Deduplicate orders across experiments.",
+      "impactEvidence": "Hypothesized purchase benefit; ab-test, reports, traffic and aeo establish existing instrumentation and its scope. Evo is adjacent paid-shopping evidence, not a forecast for this method.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No traffic or treatment effect assumed. Chosen monthly fee USD 2,000, added analysis labor USD 1,000, contribution per additional retained order USD 50.",
+        "calculation": "Break-even additional retained orders = (2,000 + 1,000) / 50 = 60 per month.",
+        "range": "No empirical lift range. Zero if allocation does not change; negative if noisy trials divert effort from better work."
+      },
+      "willingnessToPay": "Unvalidated value-based test: USD 2,000/month plus disclosed setup; seek paid renewal only after the ledger changes a profitable decision.",
+      "costControl": "Run replay screening cheaply, then reserve live trials and analyst time for interventions with enough order volume to answer the question.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant order/refund access",
+        "Destination change permissions",
+        "Enough independent product clusters",
+        "Agreed attribution and return windows"
+      ],
+      "failureMode": "Related products leak across arms, ingestion lags erase the contrast, or few AI purchases make the result inconclusive.",
+      "falsifier": "Across powered category trials the new decision process produces no more retained orders at equal labor than existing feed management.",
+      "sourceIds": [
+        "ab-test",
+        "reports",
+        "traffic",
+        "aeo",
+        "evo"
+      ]
+    },
+    {
+      "id": "feedonomics-02",
+      "title": "Revalidate a short-lived offer before an AI shopper commits",
+      "lens": "temporal",
+      "buyer": "Retailers with fast stock changes, local inventory or short promotions.",
+      "problem": "A valid recommendation becomes unbuyable between retrieval and checkout because stock, price or fulfillment changed.",
+      "mechanism": "Selection-to-checkout stage: a fresh, feasible offer prevents a failed handoff; an optional inventory hold after explicit buyer intent preserves it long enough to pay.",
+      "intervention": "Expose a merchant-controlled offer check that returns exact variant, current price, available fulfillment and expiry. After buyer intent, request a bounded inventory hold if supported. Refresh expired offers and disclose changes; never manufacture scarcity or promise a reservation the OMS has not granted.",
+      "competitorOverlap": "Feedonomics already synchronizes data, buffers stock and orchestrates orders. UCP already defines checkout expiry and authoritative state. The hypothesis concerns pre-commit coordination across a stale AI recommendation and a merchant OMS, not another stock field.",
+      "edgeHypothesis": "On genuinely volatile offers, the avoided failure rate exceeds the latency and stock-hold costs.",
+      "dataNeeded": [
+        "Inventory and pricing events",
+        "Destination feed/retrieval timestamps",
+        "OMS reservation capability",
+        "Checkout failures and retained order IDs"
+      ],
+      "experiment": "Randomize eligible AI-origin sessions before the offer check to revalidation/optional hold or current checkout. Stratify by independently measured stock volatility. Primary endpoint: paid orders within 24 hours retained past the normal return window per assigned session. Run 4-8 weeks subject to fault prevalence and power; guard latency, inventory stranded by abandoned holds and non-AI shopper conversion.",
+      "metric": "Retained purchases / all randomized eligible sessions, including failed checks; stock mismatch and checkout completion are secondary mediators.",
+      "impactEvidence": "Hypothesized. platform, orders, openai-products and ucp-checkout document the existing infrastructure and update obligations, not measured uplift from the proposed handshake.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Measure eligible sessions and stale-offer prevalence first. Chosen monthly fee USD 1,500 and USD 30 contribution per retained order; hold/latency costs remain separately measured.",
+        "calculation": "Fee-only break-even = 1,500 / 30 = 50 additional retained orders/month; add measured reservation and integration cost before a purchase decision.",
+        "range": "May be zero when feeds are already fresh or negative when latency and holds prevent more purchases than they recover."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 1,500/month for one OMS integration, with implementation quoted separately.",
+      "costControl": "Revalidate high-volatility offers and reuse fresh authoritative responses within their true validity period.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Fast merchant offer API",
+        "Approved agent or handoff integration",
+        "OMS hold semantics",
+        "Release and idempotency support"
+      ],
+      "failureMode": "An expiry label is mistaken for a price guarantee, or unnecessary reservations deny stock to other shoppers.",
+      "falsifier": "Stale-offer failures are too rare to cover cost, or an adequately powered trial finds no net retained-order gain.",
+      "sourceIds": [
+        "platform",
+        "orders",
+        "openai-products",
+        "ucp-checkout"
+      ]
+    },
+    {
+      "id": "feedonomics-03",
+      "title": "Carry the selected variant and agreed constraints into checkout",
+      "lens": "infrastructural",
+      "buyer": "Fashion, configurable-product and multi-variant retailers.",
+      "problem": "An AI-assisted shopper reaches a generic product page, loses the selected option or must repeat the requirements that made the product suitable.",
+      "mechanism": "Landing-to-purchase stage: preserve confirmed choices and make any mismatch visible, reducing reselection effort and accidental wrong-item orders.",
+      "intervention": "Create an opaque, short-lived handoff token bound to validated variant IDs and the buyer's explicitly shared constraints. Restore those choices on the merchant page, revalidate them, and let the shopper edit before purchase. Use only URL context when the originating engine cannot supply an approved handoff.",
+      "competitorOverlap": "Correct variant URLs, native cart permalinks, OpenAI variant feeds and UCP continue_url already cover part of this. The proposed increment is retaining and checking the buyer-confirmed constraint set across supported systems; proprietary consumer-engine context is not assumed accessible.",
+      "edgeHypothesis": "Verified context continuity improves retained orders where basic variant links still lose essential option or fulfillment choices.",
+      "dataNeeded": [
+        "Variant URL/option mapping",
+        "Approved handoff context and consent",
+        "Merchant page/cart state",
+        "Wrong-variant support and return reasons"
+      ],
+      "experiment": "Randomize eligible AI-origin arrivals before rendering to normal deep links or contextual handoff. Primary endpoint: retained paid orders per assigned arrival within 7 days. Run 4-8 weeks if powered, then mature returns. Guard page latency, accidental cart additions, privacy leakage and wrong-variant returns; persist assignment for repeat visits.",
+      "metric": "Retained orders / eligible randomized arrivals; separately report wrong-item returns and successful context restoration. Do not count restored carts as purchases.",
+      "impactEvidence": "Hypothesized. openai-products and ucp-checkout establish existing variant and handoff contracts, so basic links alone are not differentiated.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No assumed frequency of broken handoffs. Chosen fee USD 750/month and retained-order contribution USD 25.",
+        "calculation": "Fee-only break-even = 750 / 25 = 30 additional retained orders/month.",
+        "range": "Zero if links already preserve choices; negative if the confirmation interface adds friction or restores the wrong option."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot: USD 750/month for a single storefront after measuring a recurring handoff fault.",
+      "costControl": "Store only small opaque state references and use deterministic variant validation before involving a model.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Storefront/cart customization",
+        "Supported agent integration for richer context",
+        "Short-lived state storage",
+        "Consent and token isolation"
+      ],
+      "failureMode": "Engines strip context, the storefront cannot restore configuration, or a token leaks private shopping requirements.",
+      "falsifier": "Basic corrected variant links perform equally well and the added constraint handoff has no purchase benefit.",
+      "sourceIds": [
+        "openai-products",
+        "ucp-checkout",
+        "platform"
+      ]
+    },
+    {
+      "id": "feedonomics-04",
+      "title": "Resolve ambiguous fitment before recommending a part",
+      "lens": "algorithmic",
+      "buyer": "Automotive parts and other compatibility-sensitive merchants.",
+      "problem": "A part appears relevant to a model name but fails on an engine, trim or production-year qualifier, or the shopper abandons because compatibility remains uncertain.",
+      "mechanism": "Understanding-to-selection stage: ask the smallest necessary compatibility question, then validate against licensed source records so the shopper can buy the correct item with less uncertainty.",
+      "intervention": "Build a deterministic fitment lookup and ambiguity detector exposed to approved shopping agents. Ask only for unresolved vehicle/device attributes; return compatible, incompatible or unresolved with the source/version. Send the confirmed fitment into checkout.",
+      "competitorOverlap": "Feedonomics already joins and syndicates fitment, expands SKUs and supports auto-parts feeds. Marketplace fitment widgets also exist. The candidate edge is an interactive, qualified decision before an external agent recommends, with unresolved cases kept explicit.",
+      "edgeHypothesis": "A discriminating question plus authoritative lookup closes purchases that accurate but static compatibility prose leaves undecided.",
+      "dataNeeded": [
+        "Licensed fitment application records and qualifiers",
+        "Product/vehicle identity mapping",
+        "Consented shopper responses",
+        "Mismatch returns and purchase outcomes"
+      ],
+      "experiment": "Randomize eligible compatibility-ambiguous AI sessions to current static compatibility data or interactive lookup. Primary endpoint: retained compatible orders per assigned session within 14 days. Run 6-10 weeks or the powered sample, then returns. Compare against the merchant's existing fitment widget, not a deliberately weak baseline; stop on unsafe or incompatible recommendations.",
+      "metric": "Retained compatible purchases / all randomized ambiguous sessions, verified using order fitment and return data; question completion is secondary.",
+      "impactEvidence": "Hypothesized. auto and euro establish incumbent fitment work and adjacent operational results; neither quantifies this interactive intervention's incremental AI orders.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No assumed ambiguity rate. Chosen fee USD 1,500/month plus USD 500 data-license allocation; USD 40 contribution per retained order.",
+        "calculation": "Break-even = (1,500 + 500) / 40 = 50 additional retained compatible orders/month.",
+        "range": "Zero if existing widgets already settle uncertainty; negative if questions frustrate buyers or the source table is wrong."
+      },
+      "willingnessToPay": "Unvalidated test: USD 1,500/month plus explicit license costs for a merchant with documented compatibility losses.",
+      "costControl": "Use indexed deterministic lookups; reserve human review for unresolved qualifiers rather than generating fitment claims.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Licensed authoritative data",
+        "Qualified domain review",
+        "Approved agent tool access",
+        "Order-to-fitment feedback"
+      ],
+      "failureMode": "The source omits exceptions, buyers misidentify the vehicle, or a model ignores an unresolved result.",
+      "falsifier": "The tool fails to improve retained compatible purchases over the existing fitment selector at equal safety.",
+      "sourceIds": [
+        "auto",
+        "euro",
+        "source-data"
+      ]
+    },
+    {
+      "id": "feedonomics-05",
+      "title": "Compile a complete, compatible basket for a stated task",
+      "lens": "behavioral",
+      "buyer": "DIY, electronics, hobby and specialist equipment merchants.",
+      "problem": "A shopper finds the headline product but cannot tell whether the basket includes everything needed to complete the job.",
+      "mechanism": "Selection-to-purchase stage: a verified bill of materials reduces planning effort and fear of missing a necessary component; complete usable baskets can convert where isolated product recommendations stall.",
+      "intervention": "Create a task-to-components graph with quantities, dependencies, items already included, optional upgrades and shopper-owned items. Generate the smallest adequate basket, check cross-item compatibility and availability, and require approval of every added item.",
+      "competitorOverlap": "Feeds already carry product details; Feedonomics orchestrates multi-line orders and native storefront tools build carts. Those do not by themselves establish a task-specific bill of materials. Existing merchant bundle/configurator performance is the comparator, not assumed absent competition.",
+      "edgeHypothesis": "Constraint-checked task completion improves the probability of a retained purchase, beyond merely increasing items or order value.",
+      "dataNeeded": [
+        "Merchant-reviewed task templates",
+        "Compatibility and in-box contents",
+        "Inventory and basket pricing",
+        "Consented owned-item declarations",
+        "Order completion and missing-part returns"
+      ],
+      "experiment": "Randomize eligible task-oriented AI sessions to the current bundle/configurator flow or minimal complete-basket assistance. Primary endpoint: at least one retained task-complete order per assigned session within 14 days. Use 6-10 weeks if powered. Guard total spend, unnecessary items, delivery fragmentation and returns; keep optional extras unselected.",
+      "metric": "Sessions with a retained complete-task purchase / randomized eligible sessions. AOV and attachment rate are secondary; the same basket counts once.",
+      "impactEvidence": "Hypothesized. orders, ucp-fulfillment and b2b-mcp show existing multi-item transport and fulfillment, not evidence for task planning uplift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No assumed incomplete-basket prevalence. Chosen fee USD 1,000/month, task-template maintenance USD 500, contribution per retained complete order USD 50.",
+        "calculation": "Break-even = (1,000 + 500) / 50 = 30 additional retained complete orders/month.",
+        "range": "Zero without planning friction; negative if complexity, unnecessary accessories or delivery costs outweigh the help."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 1,000/month for one well-defined task category, with expert template work costed separately.",
+      "costControl": "Maintain reusable task graphs; use models to interpret the task, not invent necessary parts or compatibility.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant domain experts",
+        "In-box and dependency records",
+        "Cart API",
+        "Cross-item stock/fulfillment checks"
+      ],
+      "failureMode": "Templates over-specify a task, overlook customer-owned components or recommend incompatible items.",
+      "falsifier": "The tool raises basket value but not retained task-complete purchase probability against the current configurator.",
+      "sourceIds": [
+        "orders",
+        "ucp-fulfillment",
+        "b2b-mcp"
+      ]
+    },
+    {
+      "id": "feedonomics-06",
+      "title": "Let shoppers relax one negotiable constraint transparently",
+      "lens": "psychological",
+      "buyer": "Retailers with wide ranges and frequent zero-result shopping requests.",
+      "problem": "A shopper's requested combination has no available product; generic assistants either return unsuitable products or terminate the search.",
+      "mechanism": "Selection stage: make the real tradeoff understandable and preserve the shopper's control, so an acceptable near-match can become a purchase instead of an abandoned search.",
+      "intervention": "Calculate which constraint combinations are infeasible, distinguish buyer-marked hard requirements from preferences, and offer at most a few alternatives changing one permitted preference. State the exact compromise and price; never silently relax safety, compatibility or an explicit spending cap.",
+      "competitorOverlap": "Search filters and conversational clarification are established capabilities, and Feedonomics enriches use-case content. The proposed edge is a deterministic minimal-conflict explanation checked against live merchant facts; a generic chatbot asking more questions is not new.",
+      "edgeHypothesis": "Explicit one-tradeoff choices convert more zero-result sessions than ordinary nearest-match recommendations without increasing dissatisfaction.",
+      "dataNeeded": [
+        "Explicit shopper constraints and hard/soft flags",
+        "Reliable product attributes",
+        "Live stock and total prices",
+        "Current search zero-result logs",
+        "Purchase/return reasons"
+      ],
+      "experiment": "Randomize genuine zero-result AI sessions to the current no-result/alternative flow or transparent single-constraint options. Primary endpoint: retained satisfactory orders per assigned session within 14 days. Run 6-10 weeks subject to power. Guard cap violations, incompatible purchases, returns and user-rated coercion; no fabricated availability.",
+      "metric": "Retained orders meeting all hard requirements / all randomized zero-result sessions; recommendation acceptance alone is not success.",
+      "impactEvidence": "Hypothesized. source-data and openai-products supply factual constraints; functions permits a controlled implementation. No cited source provides a conversion percentage for this intervention.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "First measure zero-result volume. Chosen fee USD 600/month and contribution USD 30 per retained order.",
+        "calculation": "Fee-only break-even = 600 / 30 = 20 additional retained orders/month.",
+        "range": "May be zero because buyers cannot compromise, or negative if alternatives feel irrelevant or pushy."
+      },
+      "willingnessToPay": "Unvalidated pilot price: USD 600/month, conditional on enough zero-result sessions to test.",
+      "costControl": "Use a deterministic constraint solver and cached product facts; a model explains the result after validation.",
+      "feasibility": "now",
+      "dependencies": [
+        "Merchant-controlled assistant or approved tool integration",
+        "Explicit preference consent",
+        "Trustworthy structured attributes",
+        "Purchase feedback"
+      ],
+      "failureMode": "The system mistakes a requirement for a preference or hides a material compromise in fluent prose.",
+      "falsifier": "The trial increases alternative clicks but not retained purchases meeting all hard requirements.",
+      "sourceIds": [
+        "source-data",
+        "openai-products",
+        "functions"
+      ]
+    },
+    {
+      "id": "feedonomics-07",
+      "title": "Expose the payable and returnable offer before cross-border selection",
+      "lens": "regulatory",
+      "buyer": "Cross-border retailers with documented late-stage duty, delivery or returns surprises.",
+      "problem": "A product looks suitable in an AI shortlist but the buyer discovers additional charges, an impossible delivery date or a different returns policy late in checkout.",
+      "mechanism": "Selection-to-checkout stage: calculate the actual available offer early, reduce avoidable uncertainty and send only feasible choices to purchase. Truthful information can also reduce unsuitable orders, so gross conversion is not the sole success measure.",
+      "intervention": "Build a destination-aware offer calculator using merchant-approved tax/duty, delivery and return rules. Return total payable amount or explicitly bounded estimates, assumptions, policy links and eligible fulfillment options. Never infer legal eligibility from generated copy.",
+      "competitorOverlap": "OpenAI product feeds support shipping/returns and UCP supplies fulfillment costs/ETA; Feedonomics already handles regional routing. The hypothesis is an executable, consistent cross-border decision tied to checkout, not adding another policy field.",
+      "edgeHypothesis": "For offers with frequent late surprises, earlier certainty increases retained feasible purchases enough to offset shoppers who correctly reject an unsuitable offer.",
+      "dataNeeded": [
+        "Destination and basket context with consent",
+        "Tax/duty service and delivery APIs",
+        "Versioned merchant returns terms",
+        "Checkout total discrepancies and refusal/return reasons"
+      ],
+      "experiment": "Randomize eligible cross-border AI sessions before offer presentation to existing disclosures or the early calculator. Primary endpoint: retained, deliverable paid orders per assigned session within 14 days. Run 6-12 weeks if powered plus delivery/return maturity. Both arms retain required disclosures; guard estimate error, complaints and total contribution.",
+      "metric": "Retained deliverable orders / all randomized eligible sessions; measure total-price error and refused delivery separately. Do not classify a legal-information score as conversion.",
+      "impactEvidence": "Hypothesized. uk-online establishes relevant UK disclosure requirements only; ucp-fulfillment and openai-products establish implementation overlap. None provides an uplift estimate.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No assumed surprise-charge prevalence. Chosen fee USD 1,000/month, quote-service costs USD 300/month, retained-order contribution USD 40.",
+        "calculation": "Break-even = (1,000 + 300) / 40 = 32.5, rounded up to 33 additional retained orders/month.",
+        "range": "Zero if existing checkout already resolves uncertainty early; negative if slow or inaccurate estimates lose qualified shoppers."
+      },
+      "willingnessToPay": "Unvalidated value-based pilot: USD 1,000/month plus quoted tax/delivery API costs.",
+      "costControl": "Cache stable policy inputs, recalculate volatile amounts only when basket or destination changes, and preserve accuracy over lower API spend.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Reliable tax/duty and carrier integrations",
+        "Merchant legal/policy owner",
+        "Destination context",
+        "Approved external-agent access"
+      ],
+      "failureMode": "Rules become stale, estimates look guaranteed, or local laws differ from the configured jurisdiction.",
+      "falsifier": "A powered trial finds no retained-order benefit, or material quote errors make the intervention unreliable.",
+      "sourceIds": [
+        "uk-online",
+        "ucp-fulfillment",
+        "openai-products",
+        "platform"
+      ]
+    },
+    {
+      "id": "feedonomics-08",
+      "title": "Reconcile buyer entitlements across a distributor network",
+      "lens": "identity",
+      "buyer": "Manufacturers and distributors selling through multiple regional or specialist dealers.",
+      "problem": "An authenticated business buyer can have valid contract terms at several dealers, but an AI shopping journey compares public prices and loses approved quantities or purchasing authority at each handoff.",
+      "mechanism": "Discovery-to-purchase stage: with explicit account linking, compare the buyer's genuinely available offers and prepare a permitted purchase, reducing repeated authentication and quote reconstruction.",
+      "intervention": "Build adapters that read scoped dealer entitlements, pack units, available terms and approval requirements, then prepare a common requisition with dealer-specific checkout links. Every supplier validates its own price and permissions; human approval remains where required.",
+      "competitorOverlap": "UCP already defines consented identity linking; BigCommerce MCP already supports B2B lists, approvals, quotes and checkout. Feedonomics already distributes customized partner data. The candidate increment is reconciliation across heterogeneous authorized dealer systems, not single-store B2B chat.",
+      "edgeHypothesis": "A shared comparison and requisition can convert more qualified AI-origin procurement requests across the distribution network than separate existing portals.",
+      "dataNeeded": [
+        "Consented dealer account connections",
+        "Company permissions and negotiated terms",
+        "Pack/quantity normalization",
+        "Quote expiry and availability",
+        "Network-level accepted orders"
+      ],
+      "experiment": "Randomize consenting buyer-company accounts, not sessions, to existing dealer workflows or the cross-dealer adapter for 8-16 weeks subject to B2B sales-cycle power. Primary endpoint: completed paid and fulfilled orders per eligible procurement request across the network. Guard unauthorized disclosure, price errors, supplier displacement and approval bypass; measure total network purchases.",
+      "metric": "Retained fulfilled orders / all pre-registered eligible procurement requests from randomized companies. Dealer share shifts without a network purchase gain are not incremental conversion.",
+      "impactEvidence": "Hypothesized. ucp-identity and b2b-mcp document substantial native overlap; ace and platform support distribution integration feasibility, not cross-dealer purchase lift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No assumed eligible request volume. Chosen monthly fee USD 3,000 plus amortized integration/support USD 2,000; contribution per incremental fulfilled order USD 200.",
+        "calculation": "Break-even = (3,000 + 2,000) / 200 = 25 additional fulfilled orders/month across the paying network.",
+        "range": "Zero if portals already work well; negative if account-linking friction, stale terms or integration support consume the benefit."
+      },
+      "willingnessToPay": "Unvalidated network-level pilot: USD 3,000/month plus explicitly scoped implementation. Individual dealers may not pay for a tool that redistributes their existing orders.",
+      "costControl": "Start with two systems and a common entitlement model; cost permission maintenance and support as service labor, not negligible software overhead.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "Cooperating dealer network",
+        "Scoped identity integrations",
+        "Contract-price APIs",
+        "Procurement policy owner",
+        "Enough comparable companies"
+      ],
+      "failureMode": "Suppliers refuse comparisons, entitled prices cannot be retrieved safely, or reconciliation duplicates an existing procurement suite.",
+      "falsifier": "Buyers gain convenience but network orders do not rise, or the adapters cannot preserve permissions and accurate terms.",
+      "sourceIds": [
+        "ucp-identity",
+        "b2b-mcp",
+        "ace",
+        "platform",
+        "b2b-distribution"
+      ]
+    },
+    {
+      "id": "feedonomics-09",
+      "title": "Turn a consented owned-product record into a timely reorder",
+      "lens": "temporal",
+      "buyer": "Merchants selling non-medical consumables and replacement parts with recurring need.",
+      "problem": "A previous AI-assisted purchase solves a one-off search, but the shopper later has to reconstruct the exact model, compatible consumable and preferred quantity.",
+      "mechanism": "Repeat-purchase stage: retain a minimal, consented ownership record and buyer-chosen review date; a supported assistant can later present a current compatible reorder with less search effort.",
+      "intervention": "Create an opt-in product record containing model/variant, purchase date and buyer-chosen cadence. At a user-authorized review, recheck the need, stock, compatibility and price, then prepare an editable basket. Never place an automatic order or infer sensitive usage.",
+      "competitorOverlap": "UCP exposes scoped order history and BigCommerce MCP can duplicate shopping lists. Subscription and reorder flows already exist. The proposed edge is model-compatible repeat shopping across supported AI journeys when a fixed subscription is unsuitable.",
+      "edgeHypothesis": "A voluntary, need-checked repeat journey produces additional retained purchases across a full consumption cycle rather than merely pulling the same order forward.",
+      "dataNeeded": [
+        "Consented ownership record and revocable preferences",
+        "Compatibility and replacement options",
+        "Buyer-chosen timing",
+        "Longitudinal order/return history",
+        "Current price and inventory"
+      ],
+      "experiment": "Randomize consenting customer accounts to the normal reorder/subscription options or an assisted ownership record, with equal contact permission. Primary endpoint: retained compatible repeat orders per randomized account over at least two expected consumption cycles, often 90-180 days; size from baseline repeat rates. Guard unwanted prompts, overbuying, cancellations and pull-forward.",
+      "metric": "Retained repeat orders / randomized opted-in accounts across the whole observation window. Report AI-origin repeat sessions separately; do not count an earlier purchase as an incremental later purchase.",
+      "impactEvidence": "Hypothesized. ucp-identity and b2b-mcp establish history and reorder capabilities. No empirical uplift is inferred from those capabilities.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No assumed reorder rate. Chosen fee USD 800/month and USD 20 contribution per truly additional retained repeat order.",
+        "calculation": "Fee-only break-even = 800 / 20 = 40 additional retained repeat orders/month after the full-cycle experiment, not 40 orders merely moved earlier.",
+        "range": "Zero when orders are only accelerated; negative if reminders cause annoyance, excess purchases or retention loss."
+      },
+      "willingnessToPay": "Unvalidated test price: USD 800/month after establishing sufficient repeat-purchase volume and consent.",
+      "costControl": "Use deterministic cadence and compatibility checks; perform fresh model-assisted search only when the previous item is unavailable or preferences change.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Revocable consent and authorized reminder/agent integration",
+        "Order history",
+        "Long observation window",
+        "Merchant-approved compatibility"
+      ],
+      "failureMode": "The buyer's need is misread, the product record is stale or existing subscriptions already provide a better experience.",
+      "falsifier": "No full-cycle retained-order increase over normal reorder tools, even if short-term repeat conversion rises.",
+      "sourceIds": [
+        "ucp-identity",
+        "b2b-mcp",
+        "orders"
+      ]
+    },
+    {
+      "id": "feedonomics-10",
+      "title": "Buy the missing product facts that block real shopper decisions",
+      "lens": "infrastructural",
+      "buyer": "Managed-feed teams and merchants whose products lack decision-critical source facts.",
+      "problem": "Enrichment can restate available facts, but cannot truthfully answer a hard requirement absent from every source, such as a measured internal dimension or a tested compatibility exception.",
+      "mechanism": "Understanding-to-selection stage: allocate a fixed expert/supplier effort budget to obtaining genuinely missing facts that prevent qualified shoppers from buying. Cost control matters only if the acquired facts create additional retained purchases.",
+      "intervention": "Group consented unanswered shopping requirements by product family, verify the source gap, estimate affected demand without inventing uplift, and commission the smallest supplier confirmation or physical measurement. Store the result and scope before publishing; compare its purchase effect with usual manager-selected work.",
+      "competitorOverlap": "Feedonomics already integrates supplemental data, works with dedicated managers and refuses unsupported enrichment facts. A generic extraction or approval queue is not the idea. The candidate edge is an explicit value-of-information budget for acquiring new evidence with purchase-based follow-up.",
+      "edgeHypothesis": "Demand-weighted fact acquisition creates more retained purchases per fixed expert-hour than catalog-wide completeness targets.",
+      "dataNeeded": [
+        "Unanswered requirement events with consent",
+        "Source inventories and actual evidence gaps",
+        "Supplier/measurement costs and lead times",
+        "Qualified session volume by family",
+        "Experiment-linked orders and returns"
+      ],
+      "experiment": "Randomize matched product families with verified missing facts to immediate evidence acquisition or the merchant's normal backlog at equal total expert hours. Primary endpoint: retained purchases per family-week, with AI-origin orders separately identified. Use 8-12 weeks if powered and allow ingestion/return maturity; never fabricate a value for control products or delay a safety-critical correction.",
+      "metric": "Incremental retained orders per randomized family-week; secondary efficiency is additional retained orders per expert-hour and total delivered cost. Completion percentage is not the objective.",
+      "impactEvidence": "Hypothesized. source-data, service and euro establish the source dependency and managed labor already involved; they do not establish the proposed prioritizer's advantage.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "No assumed missing-fact prevalence or buyer demand. Chosen monthly software fee USD 1,000 plus supplier/measurement labor USD 1,000; contribution USD 40 per retained order.",
+        "calculation": "Break-even = (1,000 + 1,000) / 40 = 50 additional retained orders/month attributable to the new evidence.",
+        "range": "Zero if missing facts are not purchase blockers; negative if collection is expensive, slow, wrong or distracts from better work."
+      },
+      "willingnessToPay": "Unvalidated pilot: USD 1,000/month plus a capped, fully disclosed evidence-collection budget.",
+      "costControl": "Reuse a verified family-level measurement only where physically valid; stop buying evidence when the next fact's likely value cannot justify its full acquisition cost.",
+      "feasibility": "now",
+      "dependencies": [
+        "Access to real supplier/merchant experts",
+        "Permission to collect and publish facts",
+        "Family-level source validity",
+        "Enough outcome volume"
+      ],
+      "failureMode": "Questions reflect curiosity rather than demand, one measurement does not generalize to variants, or vendor response time makes the facts arrive too late.",
+      "falsifier": "At equal expert hours, acquired facts improve completeness but not retained purchases versus the existing managed-service backlog.",
+      "sourceIds": [
+        "source-data",
+        "service",
+        "euro"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "platform",
+      "title": "How Feedonomics Works",
+      "url": "https://feedonomics.com/product/how-it-works/",
+      "type": "official-doc",
+      "claim": "Documents ingestion from systems of record, transformations, destination mapping, full/delta updates, alerts, hard stops and inventory buffers. Capability claims, not independent outcome evidence."
+    },
+    {
+      "id": "pricing",
+      "title": "Pricing (Get a Free Feed Audit)",
+      "url": "https://feedonomics.com/pricing/",
+      "type": "official-doc",
+      "claim": "On 2026-09-29, enterprise pricing is quote-based on SKU count, channel type/count and service level; Feedonomics says it takes no revenue percentage. No numeric enterprise price is published here."
+    },
+    {
+      "id": "service",
+      "title": "Expert Product Feed Management Services",
+      "url": "https://feedonomics.com/services/",
+      "type": "official-doc",
+      "claim": "Dedicated managers, onboarding, mapping, rules, QA and 24/7 support establish a software-plus-labor offer. Published survey and average performance claims lack a public causal design on this page."
+    },
+    {
+      "id": "source-data",
+      "title": "What makes good source data",
+      "url": "https://docs.feedonomics.com/product/enrichment/what-makes-good-source-data",
+      "type": "official-doc",
+      "claim": "FDX Enrichment writes from source facts and does not currently infer missing structured attributes or assign taxonomy. Distinguishes this specific feature from wider managed data integration."
+    },
+    {
+      "id": "inputs",
+      "title": "Inputs and what happens to them",
+      "url": "https://docs.feedonomics.com/product/enrichment/inputs",
+      "type": "official-doc",
+      "claim": "Purpose, brand voice, keyword files and context steer generation. Finished config persists; raw briefing uploads and notes are not retained. This is not a claim about all platform data retention."
+    },
+    {
+      "id": "ab-test",
+      "title": "A/B testing enriched content",
+      "url": "https://docs.feedonomics.com/product/enrichment/ab-testing",
+      "type": "official-doc",
+      "claim": "Documents stable-hash product-group randomization, a 50/50 split, custom labels and Google Shopping outcome comparisons. Merchant owns analysis; a playbook is not a published causal result or consumer-AI experiment."
+    },
+    {
+      "id": "reports",
+      "title": "Measuring impact in Analytics",
+      "url": "https://docs.feedonomics.com/product/enrichment/reports",
+      "type": "official-doc",
+      "claim": "Enrichment comparisons require UTM and custom-label setup; Traffic and Paid Media reports remain separate. Notes confounding and distinguishes AI activity from attributed revenue."
+    },
+    {
+      "id": "traffic",
+      "title": "Traffic report",
+      "url": "https://docs.feedonomics.com/product/analytics/traffic-report",
+      "type": "official-doc",
+      "claim": "BigCommerce storefronts only: sessions, orders, revenue and conversion by channel, including AI/LLM arrivals. Attribution window, identity stitching and refund treatment are not specified on this page."
+    },
+    {
+      "id": "paid",
+      "title": "Paid media channels",
+      "url": "https://docs.feedonomics.com/product/analytics/paid-media",
+      "type": "official-doc",
+      "claim": "Google Ads currently supported; customers can onboard paid reporting with SKU, custom-label and outcome breakdowns. Price, stock and landing experience also affect results."
+    },
+    {
+      "id": "aeo",
+      "title": "AEO report",
+      "url": "https://docs.feedonomics.com/product/analytics/aeo-report",
+      "type": "official-doc",
+      "claim": "AI request, URL/image fetch and crawler activity monitoring is documented. These observations do not establish recommendation exposure, search rank or incremental purchases."
+    },
+    {
+      "id": "ace",
+      "title": "Feedonomics Unlocks Agentic Discovery with Agentic Catalog Exports",
+      "url": "https://www.commerce.com/en-GB/press/feedonomics-unlocks-agentic-discovery-with-agentic-catalog-exports/",
+      "type": "official-doc",
+      "claim": "2026-04-27 launch describes enterprise syndication to participating AI destinations, a mixture of crawled/feed experiences, and future self-service plans. Participation is not ranking preference or universal checkout availability."
+    },
+    {
+      "id": "evo",
+      "title": "Title optimization and A/B testing proved to be a winner for Evo.",
+      "url": "https://feedonomics.com/success-stories/outdoor-sports-brand/",
+      "type": "vendor-case",
+      "claim": "Vendor-described Google Shopping title split test: ROAS +19%, impressions +104%, value per click +21%, average CPC -14%. Public assignment, sample and uncertainty details are incomplete."
+    },
+    {
+      "id": "vietri",
+      "title": "A/B testing to drive better ad performance.",
+      "url": "https://feedonomics.com/success-stories/vietri-trellis/",
+      "type": "vendor-case",
+      "claim": "Reports +80% CVR and +37% ROAS across two October-to-January periods, alongside roughly 40% more budget and campaign changes. Overall paid-marketing comparison, not isolated AI conversion uplift."
+    },
+    {
+      "id": "easylife",
+      "title": "Maximising product visibility and performance for Easylife.",
+      "url": "https://feedonomics.com/success-stories/easylife/",
+      "type": "vendor-case",
+      "claim": "Reports roughly 500% YoY shopping-campaign revenue growth and ROAS 4.5 with segmentation and spend scaling. No public controlled estimate for the headline revenue result."
+    },
+    {
+      "id": "euro",
+      "title": "Euro Car Parts boosts ROI with data enrichment for AI visibility",
+      "url": "https://feedonomics.com/success-stories/euro-car-parts/",
+      "type": "vendor-case",
+      "claim": "Combines earlier Google feed results with later enrichment of 25,000 listings. GTIN coverage improved from 58% to 74%; source fitment was reused. Does not isolate purchases from AI shopping."
+    },
+    {
+      "id": "auto",
+      "title": "Auto Parts Feed Management",
+      "url": "https://feedonomics.com/who-we-serve/auto-parts-feed-management/",
+      "type": "official-doc",
+      "claim": "Already joins fitment data to SKUs, expands listings and handles supplier margin, lead-time and feed operations. Compatibility data ingestion is occupied territory."
+    },
+    {
+      "id": "orders",
+      "title": "Order Orchestration & Sync",
+      "url": "https://feedonomics.com/product/order-orchestration/",
+      "type": "official-doc",
+      "claim": "Documents order synchronization, sourcing, splitting and fulfillment routing configured by managed teams. Post-order operations are already in scope."
+    },
+    {
+      "id": "api",
+      "title": "Quick Start",
+      "url": "https://docs.feedonomics.com/developer/docs/overview/quick-start",
+      "type": "official-doc",
+      "claim": "Lists content, event-driven sync and FeedAMP order APIs. Access must be requested; documentation is not evidence that every customer has every integration."
+    },
+    {
+      "id": "openai-products",
+      "title": "Products",
+      "url": "https://developers.openai.com/commerce/specs/file-upload/products",
+      "type": "official-doc",
+      "claim": "Stable upload specification distinguishes product discovery from separately enabled checkout, supports purchasable variants, and requires current offer updates rather than relying on date metadata to schedule changes."
+    },
+    {
+      "id": "ucp-checkout",
+      "title": "Overview - Universal Commerce Protocol (UCP)",
+      "url": "https://ucp.dev/specification/shopping/checkout/",
+      "type": "official-doc",
+      "claim": "Checkout state, expiry, authoritative retrieval and continue_url handoff already exist in the protocol. A specification does not prove a given merchant or consumer engine supports the capability."
+    },
+    {
+      "id": "ucp-fulfillment",
+      "title": "Fulfillment Extension",
+      "url": "https://ucp.dev/specification/shopping/extensions/fulfillment/",
+      "type": "official-doc",
+      "claim": "Defines location-aware fulfillment at catalog discovery and authoritative checkout, including methods, package groups, costs and ETA. Proposed feasibility tools must exceed merely exposing these fields."
+    },
+    {
+      "id": "ucp-identity",
+      "title": "Identity Linking",
+      "url": "https://ucp.dev/specification/common/identity-linking/",
+      "type": "official-doc",
+      "claim": "Defines consented OAuth identity linking, scoped user state and personalized commerce access. Basic account continuity is an existing protocol capability."
+    },
+    {
+      "id": "b2b-mcp",
+      "title": "B2B Storefront",
+      "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/storefront/b2b",
+      "type": "official-doc",
+      "claim": "Already exposes permission-gated shopping lists, approvals, quotes, quote checkout links and repeat lists through MCP. Cross-stack procurement reconciliation remains a hypothesis to validate."
+    },
+    {
+      "id": "uk-online",
+      "title": "Online and distance selling: Online selling",
+      "url": "https://www.gov.uk/online-and-distance-selling-for-businesses/online-selling",
+      "type": "official-doc",
+      "claim": "UK guidance requires clear payment/delivery information, total price or calculation, and consent for optional extras. Supports a bounded information design, not a universal legal-compliance guarantee."
+    },
+    {
+      "id": "functions",
+      "title": "Function calling",
+      "url": "https://developers.openai.com/api/docs/guides/function-calling",
+      "type": "official-doc",
+      "claim": "Custom tools let an application execute retrieval and return controlled tool outputs. This permits replay experiments but does not replicate ChatGPT's production shopping stack."
+    },
+    {
+      "id": "web-search",
+      "title": "Web search",
+      "url": "https://developers.openai.com/api/docs/guides/tools-web-search",
+      "type": "official-doc",
+      "claim": "Documents OpenAI's built-in web-search tool. Its availability does not establish equivalence to consumer ChatGPT shopping retrieval, personalization or ranking."
+    },
+    {
+      "id": "b2b-distribution",
+      "title": "B2B Manufacturers & Distributors",
+      "url": "https://feedonomics.com/who-we-serve/b2b-manufacturers-and-distributors/",
+      "type": "official-doc",
+      "claim": "Documents supplier ingestion, curated partner exports and logic that customizes product information and pricing for distribution partners. Cross-dealer buyer identity reconciliation is not established by this page."
+    }
+  ]
+}

@@ -1,0 +1,699 @@
+{
+  "id": "peec",
+  "name": "Peec AI",
+  "benchmarkType": "commercial",
+  "winningEvidence": [
+    "Peec's 28 May 2026 release reports $10M ARR and 2,500+ customers. This supports selection as a commercial benchmark; it is company-reported, not audited profit, churn or ecommerce ROI (peec-arr).",
+    "The current pricing page says 3,000+ brands/agencies and documents broad plans. That is a vendor adoption claim, not an independently verified paid-customer count (peec-pricing).",
+    "Vendor case studies report Merge's 7x AI demo requests and Mint Position's 16% ChatGPT visibility improvement. Both are adjacent B2B evidence; neither establishes causal incremental ecommerce purchases (peec-merge, peec-mint)."
+  ],
+  "currentOffer": "AI search analytics for brand, SEO and agency teams, with product-level shopping monitoring, action workflows and analytics integrations. Current brand quotas are 50/150/350 prompts and three models per plan, plus custom Enterprise. On 29 September 2026 numeric live price cards were not extractable. A vendor disclosure dated July, confirmed there on 10 July, lists Starter $95, Pro $245 and Advanced $495 monthly; its dollar currency is not explicitly named in retrieved text, so treat these as dated vendor quotes rather than verified current checkout amounts. Shopping docs currently cover ChatGPT; broad brand monitoring covers other engines (peec-pricing, peec-price-disclosure, peec-shopping-docs).",
+  "conversionMechanism": "Observation can reveal an uncompetitive product representation, wrong quote, missing eligibility detail or poor merchant destination. A merchant then makes a real change that may affect discovery, choice or completion. Peec also reports observed downstream revenue when merchant analytics are configured. The reviewed evidence does not establish that observed source use, referral revenue or a completed action caused incremental purchases. A copied monitoring dashboard would leave the causal and operational work unresolved.",
+  "harness": {
+    "offlineSimulation": "unclear",
+    "liveMonitoring": "documented",
+    "randomizedExperiment": "not_found",
+    "purchaseMeasurement": "documented",
+    "details": "Interpret statuses as customer-facing merchant-purchase capabilities. Peec documents scheduled real-interface monitoring, with a logged-out context in its introduction and some API engine options on pricing. Vendor technical articles also report open-reranker passage experiments and randomized synthetic name research, so 'no experiments' would be false. A customer replay/search-proxy product was not established. Reviewed Actions, product docs and documentation index did not document randomized merchant purchase holdouts; Impact charts mark action status on subsequent brand metrics. GA4 purchase reporting is documented but exact-origin coverage and causal measurement are not. My website joins independent signals by page path, not by a shared consumer impression ID. Sources: peec-intro, peec-pricing, peec-rerank, peec-name-study, peec-actions, peec-referrals, peec-mywebsite."
+  },
+  "strengths": [
+    "SKU-level metrics, price comparisons and merchant-destination evidence move beyond brand mentions (peec-shopping).",
+    "Source and query evidence plus action workflow reduce the effort needed to identify and organize interventions (peec-products, peec-actions).",
+    "Referral/order reporting and a community Amplitude workflow already address downstream analysis; copying 'revenue attribution' alone is weak differentiation (peec-referrals, peec-mcp-attribution).",
+    "Commercial adoption disclosures support interviewing its existing buyer category, without assuming private profitability (peec-arr)."
+  ],
+  "limits": [
+    "Monitored prompt samples are not population shopping-impression counts; logged-out results do not capture every personalized context (peec-intro, openai-shopping).",
+    "Configured GA4 key events can be leads or signups, while actual purchase tracking depends on instrumentation. Unknown-origin and Google AI organic traffic prevent an exact census of AI purchases (peec-referrals).",
+    "Page-path joins cannot prove that a sampled answer caused a particular order. Time-series action markers do not create a counterfactual (peec-mywebsite, peec-actions).",
+    "The pricing page lists a visibility lift predictor, but reviewed materials do not validate a causal purchase predictor or establish a randomized purchase-testing product (peec-pricing, peec-actions).",
+    "Public research studies and B2B case studies are useful adjacent evidence, not an expected ecommerce uplift percentage (peec-rerank, peec-name-study, peec-merge, peec-mint).",
+    "Public scope gaps are unknown private capabilities, not proof that Peec cannot implement the proposed integrations."
+  ],
+  "improve": [
+    "Use a merchant order ledger as purchase truth: deduplicate by order/transaction ID, reconcile paid/canceled/refunded state and retain line-item identity. Keep source evidence and unknown attribution separate.",
+    "Validate a frozen search_products replay on real shopper intents, then test deployable changes in live cohorts. Rank manipulation is sensitivity analysis, not an executable ranking improvement.",
+    "Preserve the buyer's chosen product and solve downstream availability, suitability, total-price and checkout failures after a recommendation has already been earned.",
+    "Use inventory/product-family clusters for shared-stock or discovery changes; use stable shopper assignment for post-arrival interfaces. Do not condition primary effects on treatment-created traffic.",
+    "Fund only interventions with enough affected demand, a workable control and a break-even target. Reuse native commerce capabilities and event-driven checks to reduce operating cost."
+  ],
+  "ideas": [
+    {
+      "id": "peec-01",
+      "title": "Choose changes by randomized order lift",
+      "lens": "measurement",
+      "buyer": "Ecommerce growth team or agency already buying Peec and spending time implementing its actions",
+      "problem": "A rise in monitored recommendations can send the next month's work toward changes that do not produce additional paid orders.",
+      "mechanism": "Enabling mechanism at discovery and conversion stages: identify purchase-producing interventions, retire ineffective ones, and redeploy the same implementation budget. The ledger itself creates no purchases; value requires later execution of genuinely better changes.",
+      "intervention": "Add a change registry, stable family/market assignment, order/refund reconciliation and a purchase-based deployment rule around an existing Peec workflow. Lock channel definitions before launch, separate modeled/simulated results from observed orders, and require a control cohort before labeling a change incremental.",
+      "competitorOverlap": "Peec already recommends and tracks actions, charts subsequent brand metrics, reports GA4 revenue and features an Amplitude attribution workflow. Randomized merchant purchase testing was not found in reviewed public product docs. General experimentation systems exist; differentiation needs the AI-to-merchant workflow and outcome discipline.",
+      "edgeHypothesis": "At equal merchant labor and content budget, an order-based deployment policy yields more retained AI-attributable orders than prioritizing action ratings and visibility changes.",
+      "dataNeeded": [
+        "Dated changes and deployment assignments",
+        "Product-family/market mapping with substitution boundaries",
+        "GA4 source events and consent state",
+        "Merchant paid orders, cancellations and line-item refunds",
+        "Implementation hours and actual operating costs"
+      ],
+      "experiment": "Randomize enough independent merchant-category blocks to a purchase-tested prioritization policy or the usual Peec-led action workflow at the same labor budget. Primary endpoint is recorded AI-origin retained orders per assigned block-week, with all-channel retained orders as a required guardrail. Use a preperiod, at least one full buying cycle plus returns, and a fixed analysis horizon; 8 to 12 weeks is a planning window, not a power claim. Analyze intention to treat and spillovers across products; too few clusters means no causal verdict.",
+      "metric": "Difference in mean retained AI-attributable orders per randomized block-week; do not divide by post-change AI sessions when discovery itself changes traffic. Also report total-order effect and the share of orders with unknown origin. Attribution labels identify a measured subset; they do not recover every AI exposure.",
+      "impactEvidence": "Hypothesized. peec-actions and peec-mcp-attribution establish substantial incumbent overlap; peec-referrals and ga4-ecommerce establish reporting prerequisites. No reviewed source measures this policy's incremental purchases.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown block-level order counts, variance, implementation cost and AI attribution coverage; measure before estimating value.",
+        "calculation": "Value = additional retained orders caused by the deployment policy × realized contribution per order - experiment, implementation and subscription costs. Positive visibility change has no assigned cash value.",
+        "range": "No numerical range. Zero or negative value is possible if the policy finds no better actions, delays useful changes, or costs more than the contribution it creates."
+      },
+      "willingnessToPay": "Unvalidated value-based test: GBP 750 per merchant-month, paid only if the pilot produces a defensible decision the buyer will act on; compare renewal against measured contribution and staff time.",
+      "costControl": "Use deterministic order joins, one change registry and fixed prompt strata. Run model diagnostics only for candidate changes that can be deployed and measured.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant order access with permission",
+        "Sufficient independent experiment units",
+        "Stable channel classification and consent handling",
+        "Capacity to execute treatment and control work",
+        "Agreement on outcome window and contribution calculation"
+      ],
+      "failureMode": "Category spillover, low traffic or faulty attribution creates false confidence; measurement work consumes the budget intended for useful changes.",
+      "falsifier": "After adequately powered, balanced cohorts, the policy does not improve retained orders at equal cost, or attribution coverage changes enough to explain the apparent gain.",
+      "sourceIds": [
+        "peec-actions",
+        "peec-referrals",
+        "peec-mywebsite",
+        "peec-mcp-attribution",
+        "ga4-ecommerce"
+      ]
+    },
+    {
+      "id": "peec-02",
+      "title": "Preserve the recommended variant through arrival and cart",
+      "lens": "infrastructural",
+      "buyer": "Apparel, furniture or configurable-goods merchant with AI referrals to multi-variant product pages",
+      "problem": "The shopper chooses a specific size, color or model in an assistant, then lands on a default variant and has to reconstruct the choice.",
+      "mechanism": "Landing correctness: preserve an explicitly known choice, make current price and availability agree with it, and reduce reselection mistakes before the buyer confirms the cart. This can convert already-earned AI visits; it does not increase AI discovery by itself.",
+      "intervention": "Build a verified mapping from supported incoming SKU/variant identifiers to the selected PDP variant, images, locale and buyer-confirmed cart line. Test links observed in Peec, repair owned templates/links, and fall back to a visible choice when identity is ambiguous. Keep canonical product facts the same for humans and crawlers.",
+      "competitorOverlap": "Shopify already supports variant deep links and variant-specific cart permalinks. Peec already reports product and merchant destinations. The proposed advantage is finding and closing observed AI-to-store choice mismatches, not inventing deep linking.",
+      "edgeHypothesis": "Among AI arrivals carrying a verifiable variant choice, preserving that choice raises retained purchase probability enough to justify the connector.",
+      "dataNeeded": [
+        "Observed AI product links with explicit variant evidence",
+        "Catalog-to-variant mapping and URL redirects",
+        "Selected variant, cart line and final paid item",
+        "Refund reasons and wrong-variant support contacts"
+      ],
+      "experiment": "Randomize eligible new AI-origin shoppers on first arrival, before variant handling, to current compliant PDP behavior or verified-choice rendering. Keep assignment across later visits; primary endpoint is a paid order retained after the category return window per assigned shopper. Stratify by device and product family. Run complete weekly cycles until the prespecified sample is reached; a 4 to 8 week pilot may still be underpowered. Guardrails: wrong-variant orders, page latency and all-channel correctness.",
+      "metric": "Retained purchasers / all assigned eligible AI-origin shoppers, intention to treat. Selection-completion and add-to-cart rates are diagnostics only. No gain is claimed for arrivals with unknown variant intent.",
+      "impactEvidence": "Hypothesized purchase gain. shopify-variants and shopify-carts document existing implementation mechanisms; peec-shopping establishes detection overlap.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown eligible arrivals N, current retained purchase rate pC, and prevalence of lost variant choice; audit them first.",
+        "calculation": "Additional retained purchases = N × (pT - pC). Break-even requires their contribution to exceed the connector, support and subscription costs; no improvement percentage is assumed.",
+        "range": "Not estimated; includes zero and negative change if preselection is wrong or makes correction harder."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 149/month for one storefront, contingent on a meaningful population of verified mismatches.",
+      "costControl": "Resolve stable variant IDs deterministically; rerun browser checks only after affected theme, redirect or catalog changes.",
+      "feasibility": "now",
+      "dependencies": [
+        "Explicit incoming variant or partner SKU information",
+        "Merchant theme/link control",
+        "Current variant availability",
+        "Consented shopper assignment and order join"
+      ],
+      "failureMode": "An assistant link identifies only a product family; guessing a variant harms trust and increases returns.",
+      "falsifier": "Verified mismatches are rare, or correctness improves without a retained-order improvement above the merchant's break-even threshold.",
+      "sourceIds": [
+        "peec-shopping",
+        "shopify-variants",
+        "shopify-carts",
+        "ga4-ecommerce"
+      ]
+    },
+    {
+      "id": "peec-03",
+      "title": "Recover stale recommendations with constraint-safe substitutes",
+      "lens": "algorithmic",
+      "buyer": "Merchant whose AI-recommended seasonal or fast-moving variants frequently become unavailable",
+      "problem": "An AI recommendation can remain visible after the recommended item sells out. A generic related-products carousel may ignore the condition that made it suitable.",
+      "mechanism": "Selection recovery: retain a shopper who would otherwise leave by offering an available substitute that satisfies confirmed hard requirements. Measure total retained orders, since switching to another SKU is not automatically an incremental sale.",
+      "intervention": "On an unavailable AI landing, ask the buyer to confirm only essential requirements, then filter merchant-reviewed substitution relationships for size, compatibility, budget and destination availability. Show why each replacement fits and what differs; never replace the cart without the buyer's choice.",
+      "competitorOverlap": "Peec exposes quoted-price and comparison signals; Shopify Search & Discovery already supports related products and availability rules. Hard-constraint guarantees, preserved buyer requirements and AI-arrival purchase testing are the proposed differentiation, not a new generic recommender.",
+      "edgeHypothesis": "For unavailable-item arrivals, a small verified substitute set outperforms the merchant's existing related-products or waitlist flow without increasing returns.",
+      "dataNeeded": [
+        "Unavailable arrival counts by SKU",
+        "Reviewed substitute graph and source specifications",
+        "Shopper-confirmed constraints",
+        "Live inventory and price",
+        "All substitute purchases and returns"
+      ],
+      "experiment": "Randomize AI-origin shoppers who first arrive on an unavailable item to existing recovery experience or the constraint-safe module. Primary endpoint is any retained merchant purchase within a fixed buying window per assigned shopper. Compare against the current related-products flow, not an artificially empty page. Run through replenishment cycles and the return window; power from actual unavailable arrivals. Guardrails: constraint violations, complaints and contribution margin.",
+      "metric": "Retained purchasers / assigned unavailable-item shoppers, with incremental counts across the whole substitute family. Report waitlist outcomes separately; do not count a click or substitute acceptance as a purchase.",
+      "impactEvidence": "Hypothesized. openai-shopping acknowledges update lag; shopify-related documents established substitutes. Neither supplies a causal AI-origin recovery rate.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Measure N unavailable-item AI arrivals, substitution eligibility and pC. Eligibility and fault prevalence are unknown.",
+        "calculation": "Additional retained purchases = N × (pT - pC), analyzed across all eligible substitute SKUs. Contribution subtracts extra returns and any margin loss.",
+        "range": "No numerical estimate; can be zero where substitutes do not exist, or negative when recommendations break a hard requirement."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 199/month plus a separately agreed setup fee for specialist compatibility data.",
+      "costControl": "Use inventory events and deterministic constraint filtering; reserve language models for mapping candidate relationships that a merchant then verifies.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Current inventory feed",
+        "Reliable compatibility and variant data",
+        "Merchandising approval",
+        "Enough unavailable AI arrivals",
+        "Transparent buyer selection"
+      ],
+      "failureMode": "Loose semantic similarity passes a product that does not meet the original purpose; aggressive substitution reduces trust.",
+      "falsifier": "The module does not increase retained total purchases versus existing recommendations, or added returns erase the gain.",
+      "sourceIds": [
+        "openai-shopping",
+        "shopify-related",
+        "peec-shopping",
+        "ga4-ecommerce"
+      ]
+    },
+    {
+      "id": "peec-04",
+      "title": "Carry a buyer-approved comparison brief into the store",
+      "lens": "identity",
+      "buyer": "High-consideration merchant and a participating shopping assistant or comparison app",
+      "problem": "After a detailed assistant conversation, the store sees a referrer and URL but usually not the shopper's chosen constraints or unresolved questions.",
+      "mechanism": "Intent continuity: the shopper voluntarily carries a minimal comparison brief to the merchant, which restores the chosen shortlist and answers the remaining purchase question without restarting discovery. It requires a cooperating assistant or explicit shopper input; a normal referral does not expose private conversation history.",
+      "intervention": "Create an expiring, single-use brief containing buyer-approved product IDs, non-sensitive requirements, comparison status and locale. Transfer through an opaque handle rather than personal data in a URL. Show the buyer what will be shared, support editing/deletion, and offer guest continuation. Add account linking only when the buyer asks to reuse saved merchant state.",
+      "competitorOverlap": "UCP already standardizes consented identity linking and access to saved commerce state; Peec measures referrals. A portable comparison brief is a proposed extension, not an existing UCP field or guaranteed ChatGPT integration.",
+      "edgeHypothesis": "Among shoppers who can opt into a partner handoff, a preserved brief produces more retained purchases than a plain product link after accounting for sharing friction.",
+      "dataNeeded": [
+        "Participating assistant handoff events",
+        "Buyer-approved brief fields and consent record",
+        "Merchant-side brief acceptance and edits",
+        "Order/refund outcomes",
+        "Abandonment during the sharing step"
+      ],
+      "experiment": "Randomize eligible partner-assistant shoppers before the optional sharing offer to brief handoff or an ordinary link. Primary endpoint is retained merchant purchases per assigned shopper, including those who decline sharing or never arrive. Run complete consideration and returns windows; several partner cohorts are needed for generalization. Guardrails: sharing abandonment, accidental disclosure and ability to buy without linking.",
+      "metric": "Retained purchasers / all eligible randomized handoff users. Do not condition on brief accepters, which would select higher-intent users. Report opt-in as a mediator, not a success endpoint.",
+      "impactEvidence": "Hypothesized; ucp-identity supports authorized identity mechanics, while openai-shopping supports context-dependent selection. No public source establishes this brief protocol's purchase effect or consumer-engine support.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown eligible handoffs N, sharing acceptance, baseline retained purchase rate and integration cost.",
+        "calculation": "Incremental purchases = N × (pT - pC), where both rates include sharing-step losses. Revenue is computed from actual retained orders, not brief completions.",
+        "range": "Unestimated; zero if partner reach is absent, negative if the handoff permission step causes more abandonment than continuity prevents."
+      },
+      "willingnessToPay": "Unvalidated partner pilot: GBP 1,500 per month for a merchant cohort; test renewal only after an intention-to-treat purchase result.",
+      "costControl": "Use a compact schema and deterministic expiry/validation; avoid storing full chats or continuously generating summaries after a brief is approved.",
+      "feasibility": "frontier",
+      "dependencies": [
+        "Cooperating assistant or shopper-controlled export",
+        "Merchant acceptance of proposed brief schema",
+        "Explicit data-sharing consent",
+        "Secure opaque-handle exchange",
+        "Optional account linking and deletion controls"
+      ],
+      "failureMode": "Consumer assistants do not adopt the handoff, or buyers see little benefit in sharing context with a merchant.",
+      "falsifier": "No partner can supply enough real handoffs, or the end-to-end randomized purchase rate falls once permission friction is included.",
+      "sourceIds": [
+        "ucp-identity",
+        "openai-shopping",
+        "peec-referrals",
+        "shopify-carts"
+      ]
+    },
+    {
+      "id": "peec-05",
+      "title": "Answer the shopper's real delivery deadline",
+      "lens": "temporal",
+      "buyer": "Gift, event, travel or replacement-parts merchant where arrival date determines whether a product is useful",
+      "problem": "A product can satisfy every specification but miss the buyer's deadline. Static delivery language and stale AI shipping quotes leave that question unresolved.",
+      "mechanism": "Purchase confidence and fulfillment fit: turn a volunteered required-by date and destination into a current, conservative delivery answer, with suitable available alternatives when the date cannot be met. More orders count only if they are delivered and retained; optimistic promises can destroy value.",
+      "intervention": "Connect warehouse stock, carrier service calendars and actual cutoff times to an optional deadline checker on AI landing pages and supported merchant tools. Return estimate range, timestamp and assumptions. Publish matching shipping facts through supported structured data, while treating external-engine adoption as a separate question.",
+      "competitorOverlap": "Google already supports structured shipping destinations, handling/transit periods and cutoff times. Peec monitors quoted commerce facts. The proposed edge is checking the particular deadline with live merchant capacity and validating fulfilled orders, not another shipping-policy field.",
+      "edgeHypothesis": "Explicit deadline fit converts more eligible AI visitors into retained, on-time purchases than a static shipping estimate, without worsening late delivery.",
+      "dataNeeded": [
+        "Buyer-volunteered destination and required-by date",
+        "Warehouse stock and dispatch capacity",
+        "Carrier calendars, cutoffs and actual delivery outcomes",
+        "Paid and retained orders",
+        "Prediction error by service and region"
+      ],
+      "experiment": "Recruit the deadline-shopping cohort through the same optional required-by date and destination input before assignment, then randomize AI-origin shoppers to the merchant's current accurate shipping estimate or an explicit deadline-fit answer with eligible alternatives. Primary endpoint is a paid purchase delivered by that date and retained, per assigned shopper. Run several weekly cutoff cycles plus returns; power from actual cohort traffic and delivery variance. Guardrails: total retained purchase rate, late deliveries, refund cost and latency. Generalization is limited to shoppers willing to state a deadline.",
+      "metric": "Retained on-time purchasers / all randomized deadline shoppers. Also report retained purchases regardless of delivery date. Keep assignment and denominator fixed when a date cannot be met; do not exclude treatment refusals or missing delivery scans.",
+      "impactEvidence": "Hypothesized. google-shipping establishes supported data fields; openai-shopping acknowledges shipping updates can lag. No measured deadline-checker AI conversion effect is available.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown deadline-shopping incidence, feasible delivery share, current retained order rate and forecast error.",
+        "calculation": "Value = additional retained on-time orders × realized contribution - late-delivery compensation - integration/operations cost. A larger promise count has no independent value.",
+        "range": "No forecast; zero if existing delivery presentation already resolves the question, negative if estimates overpromise or extra questions delay buying."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 299/month, excluding carrier/data fees, for a merchant with measured deadline-driven abandonment.",
+      "costControl": "Cache by warehouse, service, postcode region and cutoff interval; recompute on capacity or calendar changes instead of invoking models for every shopper.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant-owned fulfillment data",
+        "Voluntary deadline input or pre-enrolled cohort",
+        "Conservative estimation policy",
+        "Supported publication fields",
+        "Delivery confirmation and returns"
+      ],
+      "failureMode": "Inventory or carrier data are too stale to make useful promises; a reassuring estimate increases late-order complaints.",
+      "falsifier": "Retained on-time purchase rate fails to improve, or additional shipping/support cost exceeds the realized contribution.",
+      "sourceIds": [
+        "google-shipping",
+        "openai-shopping",
+        "ga4-ecommerce"
+      ]
+    },
+    {
+      "id": "peec-06",
+      "title": "Resolve one decisive compatibility doubt before checkout",
+      "lens": "psychological",
+      "buyer": "Technical accessories, furniture-fit or other high-consideration merchant with repeated compatibility questions",
+      "problem": "AI may recommend a plausible product while leaving one decisive question unresolved, such as whether a charger supports the buyer's exact device.",
+      "mechanism": "Comprehension and confidence: a short evidence-backed check resolves a real purchase obstacle. It should also prevent unsuitable orders; the endpoint must count retained suitable purchases rather than reward persuading a buyer into a return.",
+      "intervention": "Use observed comparison dimensions and actual support/return reasons to select the single most informative question for a product. Run a deterministic compatibility check against reviewed specifications, show the supporting fact and material limitation, and keep normal checkout available. No fabricated reassurance or health-based profiling.",
+      "competitorOverlap": "RevenueHunt already offers guided selling and compatibility quizzes; Peec already identifies comparison attributes and objections. The proposed edge is a minimal residual-doubt check tailored to an already-shortlisted product, evaluated against the merchant's existing quiz or specification table.",
+      "edgeHypothesis": "One verified question at the decision point outperforms a general quiz for AI-origin shoppers who have already narrowed their choice.",
+      "dataNeeded": [
+        "Product specifications and compatibility rules",
+        "Aggregated support questions and return reasons",
+        "Voluntary device/model or dimension input",
+        "Existing quiz behavior",
+        "Retained orders and incompatibility returns"
+      ],
+      "experiment": "Randomize AI-origin product-page shoppers to the merchant's current specification/quiz flow or the one-question check, assigned before engagement. Primary endpoint is retained compatible purchases per assigned shopper; verify compatibility only from available declared data, not inferred private traits. Run full decision and return windows, sizing from actual traffic. Guardrails: false pass rate, checkout delay and accessibility.",
+      "metric": "Retained purchasers / all assigned eligible shoppers, accompanied by incompatible-order and unknown-compatibility rates. Compare intention to treat; a high conversion rate among quiz completers alone is not causal evidence.",
+      "impactEvidence": "Hypothesized. revenuehunt documents substantial adjacent guided-selling competition; its vendor multipliers are not adopted as expected lift. peec-products supplies comparison-signal overlap.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown prevalence of unresolved compatibility doubt, current purchase rate and return rate; collect a preperiod.",
+        "calculation": "Net additional retained orders = treatment retained orders at a common assigned population - control retained orders. Contribution must subtract verification maintenance and support cost.",
+        "range": "No numerical range. Zero if doubt is not the real obstacle, negative if the check adds friction or gives a false positive."
+      },
+      "willingnessToPay": "Unvalidated value-based test: GBP 199/month for one product family; paid specialist data maintenance would require a separate quote.",
+      "costControl": "Build a reusable verified rule graph and ask only questions that can change the result. Use a model for drafting explanations after deterministic validation.",
+      "feasibility": "now",
+      "dependencies": [
+        "Reliable manufacturer specifications",
+        "Merchant review of compatibility rules",
+        "A question the buyer can answer accurately",
+        "Relevant support/return evidence",
+        "Enough retained-order observations"
+      ],
+      "failureMode": "The tool invents certainty from incomplete specifications or asks a question the buyer cannot answer.",
+      "falsifier": "It adds no retained purchases against the current quiz/specification flow, or increases incompatible orders.",
+      "sourceIds": [
+        "revenuehunt",
+        "peec-products",
+        "ga4-ecommerce"
+      ]
+    },
+    {
+      "id": "peec-07",
+      "title": "Recover brand demand through an available authorized seller",
+      "lens": "infrastructural",
+      "buyer": "Manufacturer selling through both its own store and retail partners",
+      "problem": "An AI answer can recommend the right brand but send a shopper to an unavailable offer or a seller that cannot fulfill their region.",
+      "mechanism": "Channel completion: at the manufacturer's owned landing, present eligible in-stock authorized sellers and let the buyer choose. Additional brand sell-through matters; moving the same order from direct sales to a dealer does not establish growth.",
+      "intervention": "Map product identity across merchant and retailer offers, validate authorized-seller status, price, stock and delivery eligibility, then provide a transparent where-to-buy module on AI-referred product pages. Join opted-in or contractually supported retailer order receipts to the assigned experiment; keep unobserved seller outcomes explicitly unknown.",
+      "competitorOverlap": "Peec already shows merchant destinations. PriceSpider already offers retailer routing, stock and sales tracking. The hypothesis is a specialized AI-arrival intervention with cross-channel incremental-order measurement, not a new where-to-buy category.",
+      "edgeHypothesis": "For AI-origin visitors unable to buy directly, verified alternative sellers generate additional retained brand purchases that a conventional locator misses.",
+      "dataNeeded": [
+        "Manufacturer-to-retailer product identity map",
+        "Authorized seller registry",
+        "Current seller inventory, delivery and price",
+        "Direct and participating-retailer order/refund receipts",
+        "Coverage rates for unobservable retailers"
+      ],
+      "experiment": "Randomize eligible AI-origin shoppers at the manufacturer's page to the current locator or a verified, availability-ranked choice list. Primary endpoint is any retained brand purchase across participating direct/retail channels per assigned shopper. Follow the full buying and return window; use adequate retailer coverage and hold missing outcomes separate. Guardrails: total contribution, retailer neutrality, stale offers and all-channel cannibalization.",
+      "metric": "Retained brand purchasers / all assigned eligible shoppers in the measurable retailer network. Report coverage, direct-versus-dealer substitution and total units; do not treat outbound clicks as purchases or claim unseen marketplace sales.",
+      "impactEvidence": "Hypothesized incremental AI purchase effect. pricespider establishes strong adjacent competition and transaction-tracking ambitions; peec-shopping documents merchant-destination monitoring.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown direct-unavailability traffic, retailer coverage, baseline cross-channel purchase probability and seller mapping accuracy.",
+        "calculation": "Value = incremental retained brand units across all observed channels × channel-specific realized contribution - routing/data costs. Subtract direct-to-dealer substitution when it only lowers margin.",
+        "range": "No estimated range; zero if buyers would have found the same seller anyway, negative if routing cannibalizes profitable direct orders or introduces bad sellers."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 750/month for one manufacturer and a small retailer network; procurement interest must survive a comparison with PriceSpider.",
+      "costControl": "Start with a few partners providing reliable stock and order APIs; cache product identity and refresh only volatile offers.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Retailer cooperation and data rights",
+        "Reliable product identity resolution",
+        "Sufficient receipt coverage",
+        "Consent where personal joins are required",
+        "Transparent seller ordering"
+      ],
+      "failureMode": "Receipt gaps make success unverifiable, or the product merely shifts existing sales between channels.",
+      "falsifier": "No retained total brand-order increase after accounting for channel substitution, or partner data costs exceed incremental contribution.",
+      "sourceIds": [
+        "peec-shopping",
+        "pricespider",
+        "openai-shopping",
+        "ga4-ecommerce"
+      ]
+    },
+    {
+      "id": "peec-08",
+      "title": "Give the shopper a usable total-price answer before commitment",
+      "lens": "regulatory",
+      "buyer": "Cross-border merchant receiving AI referrals that quote an incomplete or wrong-market price",
+      "problem": "A headline AI price can omit destination-dependent costs. The buyer may discover the actual total late and abandon, or purchase under a misunderstanding and seek a refund.",
+      "mechanism": "Comprehension and trust: provide a truthful destination-specific total or clear calculation inputs early enough to inform the decision. Removing uncertainty can increase retained purchases, while accurately revealing a high cost can also reduce them.",
+      "intervention": "Build a destination-aware landed-price preview that reads the merchant's configured tax/duty/shipping rules, labels estimates, shows unavoidable charges and updates the cart consistently. Flag disagreements with observed AI quotes for investigation. Start with one jurisdiction and merchant-reviewed rules; do not market an automatic legal-compliance guarantee.",
+      "competitorOverlap": "Shopify Markets already handles regional tax display and duty calculation, and Peec monitors quoted prices. The proposed edge is reconciled early-stage price comprehension for AI arrivals and actual retained-order testing; no claim of a unique tax engine.",
+      "edgeHypothesis": "A usable total-price preview reduces avoidable checkout surprises enough to improve retained purchases relative to an already legally compliant standard flow.",
+      "dataNeeded": [
+        "Destination volunteered by the shopper",
+        "Merchant tax, duty, shipping and product-origin configuration",
+        "Current payable cart quote",
+        "Observed AI price and market",
+        "Checkout abandonment, refunds and actual landed-cost discrepancies"
+      ],
+      "experiment": "Randomize eligible AI-origin international shoppers before using the preview to the current legally compliant flow or a clearer interactive total-price presentation. All arms retain required disclosures. Primary endpoint is retained paid purchases per assigned shopper after delivery and returns. Stratify by market; run complete billing/shipping cycles and power from baseline rates. Guardrails: misleading estimates, complaints, contribution and accessibility.",
+      "metric": "Retained purchasers / all assigned eligible international AI-origin shoppers. Separately report quote-to-checkout agreement and refund rates; better disclosure is not automatically a conversion lift.",
+      "impactEvidence": "Hypothesized conversion effect. cma-prices establishes relevant UK disclosure requirements; shopify-markets establishes incumbent computation and estimate limits. Neither establishes a purchase uplift.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown incidence of price surprise, market distribution, pC and support/refund costs.",
+        "calculation": "Value = additional retained orders × realized contribution + measured avoidable support/refund savings - quote service and integration costs. Assign no benefit to a legal-risk estimate without a separate supported model.",
+        "range": "Unestimated; zero or negative conversion is possible when accurate total prices reveal an unattractive offer. Retention and complaints may still improve."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 249/month excluding existing tax-service charges; willingness to pay must be tested against native Shopify Markets capabilities.",
+      "costControl": "Reuse the merchant's tax/shipping engine rather than rebuilding tax logic; cache valid quotes and invalidate when rules, destination or cart change.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant-reviewed market rules",
+        "A trustworthy quote service",
+        "Adequate product origin/classification data",
+        "Jurisdiction-specific review before deployment",
+        "Consistent price presentation and order measurement"
+      ],
+      "failureMode": "An estimate is presented as guaranteed, or a preview diverges from checkout and damages trust.",
+      "falsifier": "Retained purchases do not improve at acceptable cost, or quote discrepancies/complaints rise.",
+      "sourceIds": [
+        "cma-prices",
+        "shopify-markets",
+        "openai-shopping",
+        "peec-products"
+      ]
+    },
+    {
+      "id": "peec-09",
+      "title": "Offer a real, short stock hold after an explicit buyer choice",
+      "lens": "temporal",
+      "buyer": "Merchant with measured stock races between assistant recommendation and checkout",
+      "problem": "A shopper may decide on an available item in an assistant and lose it during handoff. Repeating discovery can lose the purchase.",
+      "mechanism": "Availability continuity: a buyer-requested, time-limited reservation keeps a confirmed choice available through checkout. The gain must exceed displaced purchases from other shoppers; scarce inventory cannot be counted twice.",
+      "intervention": "In a cooperating shopping flow, offer a clearly labeled short reservation only after the shopper selects the item. Integrate a supported inventory-hold mechanism, publish the actual expiry, cap holds per buyer/session, release promptly and honor ordinary checkout confirmation. Never reserve merely because a bot retrieved a listing.",
+      "competitorOverlap": "Shopify draft orders already support reserveInventoryUntil with merchant integration; ordinary cart links do not establish a hold. The proposed edge is bounded assistant-to-checkout continuity with storewide displacement measurement, not invented scarcity.",
+      "edgeHypothesis": "Where stock races genuinely destroy purchases and replenishment exists, a tightly bounded hold improves total retained sales rather than merely reallocating scarce units.",
+      "dataNeeded": [
+        "Observed stock-race failures and timestamps",
+        "Inventory and replenishment events",
+        "Reservation creation/expiry/release",
+        "AI-origin and other-channel paid orders",
+        "Abuse, expiry and displaced-demand estimates"
+      ],
+      "experiment": "Randomize inventory pools or SKU-by-time blocks to optional holds or the existing no-hold flow, with washout longer than maximum hold duration. Primary endpoint is total retained purchases per inventory-pool-hour; identifiable AI-origin retained orders are a subgroup endpoint. Do not randomize individual users sharing the same scarce stock without modeling interference. Run several replenishment cycles; guardrails: other-channel conversion, capacity lockup and fraud.",
+      "metric": "Total retained orders per assigned pool-hour at comparable stock availability, plus AI-origin retained orders and reservation expiry. A rise in AI orders with an equal fall elsewhere fails the incremental-purchase objective.",
+      "impactEvidence": "Hypothesized. shopify-reservation establishes an available reservation mechanism, not demand or a measured sales effect; openai-shopping establishes that commerce information can lag.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown stock-race frequency, available units, replenishment rate, hold acceptance and displaced demand.",
+        "calculation": "Net additional orders = recovered AI-origin retained orders - retained orders displaced in other channels. Value subtracts reservation operations and abuse costs.",
+        "range": "No numerical range; zero under fixed inventory sold out either way, negative if reservations block more real buyers than they help."
+      },
+      "willingnessToPay": "Unvalidated test price: GBP 399/month plus integration, offered only after logs establish stock-race losses and enough replenishment to permit net growth.",
+      "costControl": "Use event-driven inventory updates, hard reservation caps and short expiries; reject unsupported stores rather than simulate a hold in copy.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "Merchant-supported inventory reservation",
+        "Cooperating assistant or owned handoff flow",
+        "Reliable stock and release operations",
+        "Inventory-pool experiment design",
+        "Explicit buyer choice"
+      ],
+      "failureMode": "Holds create artificial shortages, enable abuse or shift purchases without adding any.",
+      "falsifier": "Storewide retained orders fail to increase despite higher AI-origin orders, or hold abuse/displacement consumes the benefit.",
+      "sourceIds": [
+        "shopify-reservation",
+        "openai-shopping",
+        "shopify-carts"
+      ]
+    },
+    {
+      "id": "peec-10",
+      "title": "Resume a failed agent checkout without losing the chosen cart",
+      "lens": "infrastructural",
+      "buyer": "Merchant and commerce connector operating an authorized agent checkout integration",
+      "problem": "Agent checkout can encounter a buyer-review requirement, expired state or an uncertain payment response. Losing the chosen cart or retrying blindly can destroy a ready purchase.",
+      "mechanism": "Checkout completion: a deterministic recovery path preserves valid choices, resolves whether an order already exists and hands the buyer to the merchant for required review. It can rescue a purchase while avoiding duplicate orders or unwanted charges.",
+      "intervention": "Build a conformance and recovery adapter around supported checkout status APIs. On eligible failure, retrieve authoritative state, use the business-provided continuation URL, show material changes for buyer confirmation and resume using correct idempotency. Test failure cases with replayed tool responses before any live cohort; reconcile final merchant receipts.",
+      "competitorOverlap": "UCP already specifies deterministic checkout, escalation and state-preserving continue_url; Shopify supplies cart/checkout links. The opportunity is tested implementation quality across real connectors and purchase outcomes. Peec's public shopping analytics do not establish a checkout execution product, but private scope remains unknown.",
+      "edgeHypothesis": "For merchants with observed recoverable handoff failures, a correct, low-friction implementation produces more retained purchases than the current standards-compliant continuation flow.",
+      "dataNeeded": [
+        "Connector checkout states and versioned error taxonomy",
+        "Cart and quote hashes without payment credentials",
+        "Continuation attempts and buyer approvals",
+        "Idempotency keys and authoritative order status",
+        "Merchant paid-order and refund receipts"
+      ],
+      "experiment": "At the first eligible recoverable checkout error, detected by a common gateway before any recovery treatment, randomize the shopper to current valid recovery or the improved adapter and keep that assignment through retries. Primary endpoint is retained paid purchases per assigned error-affected shopper. Use enough real errors and a full return window; duration follows actual error frequency. Both arms preserve mandatory buyer review and payment safety. Guardrails: duplicate orders, unauthorized changes, latency and support incidents.",
+      "metric": "Retained purchasers / all assigned error-affected shoppers. Eligibility is fixed before treatment; exclude no failed recoveries from the denominator. Paid order IDs are deduplicated across retries and hosted completion.",
+      "impactEvidence": "Hypothesized. ucp-checkout and shopify-carts document the existing technical baseline; no reviewed source measures this adapter's incremental AI purchases.",
+      "impactScenario": {
+        "status": "illustrative sensitivity, not forecast",
+        "baseline": "Unknown number N of eligible error-affected shoppers, current recovery purchase rate and cost per incident.",
+        "calculation": "Additional retained purchases = N × (pT - pC); subtract duplicate-charge remediation, integration and support costs. Synthetic checkout success has zero booked revenue.",
+        "range": "Not forecast. Zero if native recovery already works; negative if extra recovery steps delay or confuse buyers."
+      },
+      "willingnessToPay": "Unvalidated enterprise pilot: GBP 1,000/month for one connector/merchant integration, with renewal tied to reconciled purchases and reliability.",
+      "costControl": "Run deterministic protocol checks and replay fixtures on each connector release; reserve expensive end-to-end runs for changed paths and representative failures.",
+      "feasibility": "integration-heavy",
+      "dependencies": [
+        "An actual authorized checkout integration",
+        "Business-provided state and continuation URL",
+        "Correct buyer authorization and idempotency",
+        "Merchant receipt access",
+        "Enough observed recoverable errors"
+      ],
+      "failureMode": "The adapter competes with native state handling, replays a completed operation or silently changes cart terms.",
+      "falsifier": "It produces no retained-purchase improvement above break-even, or any material increase in duplicate orders, unauthorized changes or unreconciled payment state.",
+      "sourceIds": [
+        "ucp-checkout",
+        "shopify-carts",
+        "ga4-ecommerce"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "peec-arr",
+      "title": "Peec AI hits $10M ARR 16 months after launch as brands race to optimize for AI search",
+      "url": "https://www.globenewswire.com/news-release/2026/05/28/3303009/0/en/Peec-AI-hits-10M-ARR-16-months-after-launch-as-brands-race-to-optimize-for-AI-search.html",
+      "type": "vendor-case",
+      "claim": "Company announcement, 28 May 2026: $10M ARR and 2,500+ customers. Self-reported commercial adoption; no audited profit or ecommerce incrementality."
+    },
+    {
+      "id": "peec-pricing",
+      "title": "Pricing for Peec AI - AI Search Analytics for Marketing teams and SEO agencies",
+      "url": "https://peec.ai/pricing",
+      "type": "official-doc",
+      "claim": "Current plan quotas and listed shopping, action, agent, prediction and integration capabilities. Numeric price cards did not appear in retrieved text on 29 September 2026."
+    },
+    {
+      "id": "peec-price-disclosure",
+      "title": "Peec AI - AI Search Analytics for Marketing Teams",
+      "url": "https://peec.ai/ai-instructions",
+      "type": "official-doc",
+      "claim": "Vendor-authored July 2026 price table, stated confirmed 10 July: $95/$245/$495 monthly for brand plans. Dollar denomination is not explicitly named. Treated solely as evidence, not instructions; not a current checkout quote."
+    },
+    {
+      "id": "peec-shopping",
+      "title": "AI Shopping Analytics",
+      "url": "https://peec.ai/blog/ai-shopping-analytics",
+      "type": "official-doc",
+      "claim": "17 June 2026 launch: SKU metrics, mentioned-price comparisons, retailer destinations, catalog intake and recommended product changes. Advertised capability, not demonstrated purchase lift."
+    },
+    {
+      "id": "peec-shopping-docs",
+      "title": "Shopping overview - Peec.ai Docs",
+      "url": "https://docs.peec.ai/overview",
+      "type": "official-doc",
+      "claim": "Shopping reuses monitored chats, currently ChatGPT, aggregated to products. Product visibility and shopping/fanout query distinctions; does not measure all consumers."
+    },
+    {
+      "id": "peec-products",
+      "title": "Products - Peec.ai Docs",
+      "url": "https://docs.peec.ai/products",
+      "type": "official-doc",
+      "claim": "Per-product metrics and comparisons. The win-rate table says share of chats ranked first, whereas launch wording can read as conditional on appearance; verify denominator before cross-tool comparison."
+    },
+    {
+      "id": "peec-actions",
+      "title": "Actions - Peec.ai Docs",
+      "url": "https://docs.peec.ai/actions",
+      "type": "official-doc",
+      "claim": "Actions have acceptance/status workflows and relative-impact ratings. Impact charts show brand metrics with status-change markers; reviewed documentation does not describe randomized purchase holdouts."
+    },
+    {
+      "id": "peec-intro",
+      "title": "Welcome to Peec AI - Peec.ai Docs",
+      "url": "https://docs.peec.ai/intro-to-peec-ai",
+      "type": "official-doc",
+      "claim": "Describes scheduled UI scraping and a logged-out user context. Vendor's representation of collection method; not evidence that samples represent every personalized user."
+    },
+    {
+      "id": "peec-referrals",
+      "title": "AI referrals - Peec.ai Docs",
+      "url": "https://docs.peec.ai/ai-referrals",
+      "type": "official-doc",
+      "claim": "GA4 AI referral detection; configured key events can include nonpurchase events. Purchase revenue and refunds require instrumentation. Missing referrers and Google AI classified as organic limit origin coverage."
+    },
+    {
+      "id": "peec-mywebsite",
+      "title": "My website - Peec.ai Docs",
+      "url": "https://docs.peec.ai/my-website",
+      "type": "official-doc",
+      "claim": "Full join of independent bot, prompt-source and GA4 data by page path. This is not an individual impression-to-order identifier chain."
+    },
+    {
+      "id": "peec-mcp-attribution",
+      "title": "AI Visibility-to-Revenue Attribution - Peec AI MCP Use Case",
+      "url": "https://peec.ai/mcp-use-cases/ai-visibility-to-revenue-attribution",
+      "type": "official-doc",
+      "claim": "Community-built workflow featured by Peec joins visibility changes and Amplitude funnels. Supports attribution/reporting overlap, not randomized causality."
+    },
+    {
+      "id": "peec-merge",
+      "title": "How Merge drove a 7x increase in demo requests from LLMs with Peec AI",
+      "url": "https://peec.ai/blog/how-merge-drove-a-7x-increase-in-demo-requests-from-llms-with-peec-ai",
+      "type": "vendor-case",
+      "claim": "21 November 2025 B2B vendor case claims 7x demo requests, 10x LLM traffic and 6x higher conversion rates. No ecommerce order experiment or causal control supplied."
+    },
+    {
+      "id": "peec-mint",
+      "title": "How Mint Position helps fintech clients unlock 16% more AI search visibility and secure #1 search positions with Peec AI",
+      "url": "https://peec.ai/blog/how-mint-position-helps-fintech-clients-unlock-16-more-ai-search-visibility-and-secure-1-search-positions-with-peec-ai",
+      "type": "vendor-case",
+      "claim": "20 May 2026 case reports 16% visibility lift and agency revenue growth. A financing-deal anecdote is not ecommerce purchase lift."
+    },
+    {
+      "id": "peec-rerank",
+      "title": "Rerankers for GEO/AEO: How AI search chooses passages and sources",
+      "url": "https://peec.ai/blog/rerankers-for-geo-aeo-how-ai-search-chooses-passages-and-sources",
+      "type": "research",
+      "claim": "Vendor research compares two passages using 12 open rerankers, explicitly separating diagnostic scores from production citation guarantees. Not evidence of a customer replay product."
+    },
+    {
+      "id": "peec-name-study",
+      "title": "AI assistants judge your company by its name",
+      "url": "https://peec.ai/blog/ai-assistants-judge-your-company-by-its-name-i-measured-how-much",
+      "type": "research",
+      "claim": "Vendor publishes a randomized synthetic name study. This prevents a blanket claim that Peec never experiments, but is not a merchant purchase trial."
+    },
+    {
+      "id": "openai-functions",
+      "title": "Function calling | OpenAI API",
+      "url": "https://developers.openai.com/api/docs/guides/function-calling",
+      "type": "official-doc",
+      "claim": "Applications execute declared function calls and return tool outputs. Enables controlled search_products replay; does not grant control over consumer ChatGPT retrieval."
+    },
+    {
+      "id": "openai-web",
+      "title": "Web search | OpenAI API",
+      "url": "https://developers.openai.com/api/docs/guides/tools-web-search",
+      "type": "official-doc",
+      "claim": "Built-in API web search exposes consulted sources. Does not document exact equivalence to consumer shopping ranking or personalization."
+    },
+    {
+      "id": "openai-shopping",
+      "title": "Shopping with ChatGPT Search",
+      "url": "https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search",
+      "type": "official-doc",
+      "claim": "Shopping selection uses intent/context and multiple metadata sources; merchant selection uses factors including availability and price; shipping/price updates can lag. Shopify Catalog is already integrated."
+    },
+    {
+      "id": "ga4-ecommerce",
+      "title": "Measure ecommerce | Google Analytics | Google for Developers",
+      "url": "https://developers.google.com/analytics/devguides/collection/ga4/ecommerce",
+      "type": "official-doc",
+      "claim": "Documents purchase/refund events with transaction and item identifiers. Instrumentation enables reporting, not independent verification or causal attribution."
+    },
+    {
+      "id": "shopify-variants",
+      "title": "Support product variants",
+      "url": "https://shopify.dev/docs/storefronts/themes/product-merchandising/variants",
+      "type": "official-doc",
+      "claim": "Variant deep links and selected-variant rendering are native mechanisms. Supports feasibility of preserving a buyer's exact choice, not a lift claim."
+    },
+    {
+      "id": "shopify-carts",
+      "title": "Create cart permalinks",
+      "url": "https://shopify.dev/docs/apps/build/checkout/create-cart-permalinks",
+      "type": "official-doc",
+      "claim": "Native variant-specific preloaded carts, locale and channel attribution support; selling plans do not work with cart permalinks."
+    },
+    {
+      "id": "shopify-related",
+      "title": "Customize product recommendations with Shopify Search & Discovery",
+      "url": "https://help.shopify.com/en/manual/online-store/storefront-search/search-and-discovery-recommendations",
+      "type": "official-doc",
+      "claim": "Existing related-product/substitution capability with availability rules; core recommendation widgets are established competition."
+    },
+    {
+      "id": "ucp-identity",
+      "title": "Identity Linking Capability - Universal Commerce Protocol (UCP)",
+      "url": "https://ucp.dev/2026-04-08/specification/identity-linking/",
+      "type": "official-doc",
+      "claim": "Versioned authorization and consent semantics for user-authenticated commerce. No standard portable shopper-brief payload is established by this source."
+    },
+    {
+      "id": "google-shipping",
+      "title": "Merchant Shipping Policy Structured Data (ShippingService)",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/shipping-policy",
+      "type": "official-doc",
+      "claim": "Structured handling/transit windows, destinations and cutoff times are supported. This does not promise ingestion or ranking behavior in ChatGPT."
+    },
+    {
+      "id": "revenuehunt",
+      "title": "Guided Selling Quiz - turn online stores into a personalized sales channel",
+      "url": "https://revenuehunt.com/guided-selling-quiz/",
+      "type": "official-doc",
+      "claim": "Existing conditional guided selling and technical compatibility quizzes. Vendor conversion multipliers are not used as causal or AI-channel evidence."
+    },
+    {
+      "id": "pricespider",
+      "title": "Where to Buy Shoppable Solutions - Instantly Shoppable | PriceSpider",
+      "url": "https://www.pricespider.com/where-to-buy/",
+      "type": "official-doc",
+      "claim": "Established inventory-aware retailer routing and purchase tracking offering. Vendor attribution does not establish randomized AI-specific incrementality."
+    },
+    {
+      "id": "shopify-markets",
+      "title": "Setting up duties and taxes for markets",
+      "url": "https://help.shopify.com/en/manual/markets/customizations/duties-and-taxes",
+      "type": "official-doc",
+      "claim": "Existing localized tax display and checkout duty calculation; duty estimates depend on merchant/product/destination data and can differ from actual duties."
+    },
+    {
+      "id": "cma-prices",
+      "title": "Providing clear and accurate information about prices: summary",
+      "url": "https://www.gov.uk/government/publications/price-transparency-cma209/providing-clear-and-accurate-information-about-prices-summary",
+      "type": "official-doc",
+      "claim": "Current UK CMA guidance on total prices, mandatory charges and variable delivery information. Product proposal improves comprehension; this source is not a legal assurance for a deployment."
+    },
+    {
+      "id": "shopify-reservation",
+      "title": "DraftOrderCreatePayload - GraphQL Admin",
+      "url": "https://shopify.dev/docs/api/admin-graphql/2026-01/payloads/DraftOrderCreatePayload",
+      "type": "official-doc",
+      "claim": "Versioned draft-order flow can reserve inventory with reserveInventoryUntil. This is not automatic ordinary-cart reservation and requires merchant integration."
+    },
+    {
+      "id": "ucp-checkout",
+      "title": "Overview - Universal Commerce Protocol (UCP)",
+      "url": "https://ucp.dev/latest/specification/shopping/checkout/",
+      "type": "official-doc",
+      "claim": "Checkout status, buyer-review handoff, continue_url and idempotent recovery requirements. Stateful handoff is already specified; proposed edge is tested recovery across implementations."
+    }
+  ]
+}
