@@ -1,0 +1,37 @@
+# First orders with little marketing cash
+
+Checked 29 September 2026. The UK is a working assumption; selling geography remains unconfirmed. The quantities, hours and spending caps below are proposed choices, not forecasts or supplier quotes.
+
+**Start with one audience and three to five products worth demonstrating.** Existing products can work: explain a useful selection, fit, compatibility or delivery advantage at the actual delivered price. A larger catalogue can follow when customer questions justify it. Cheap page production alone gives us little reason to expect buyers. Professional pages and AI imagery can help present the offer, while real sample photographs and demonstrations establish what the product actually does.
+
+Use the following routes in order of practical readiness. All require human work; none promises free traffic.
+
+| Route | Launch work and current constraints |
+| --- | --- |
+| Google free product listings | Submit accurate products, prices, stock and identifiers through Merchant Center; publish returns information and configure shipping, which is required for UK listings. Eligible products can appear without advertising charges across Google, including Search, Shopping and Gemini. Inclusion is not guaranteed. These listings concern product pages, so collection pages need their own ordinary search strategy. [Google requirements](https://support.google.com/merchants/answer/13889434?hl=en). |
+| Search-focused collections | Create two useful collections answering specific buying questions, such as bags that fit a measured laptop or leggings with measured phone pockets. Include selection criteria and direct product links. Google recommends navigable category-to-product links so crawlers can discover the range. This is groundwork for discovery, with no two-week ranking promise. [Google ecommerce navigation](https://developers.google.com/search/docs/specialty/ecommerce/help-google-understand-your-ecommerce-site-structure). |
+| Short product demonstrations | Record six brief clips from one sample session: fit, scale, use, packing, comparison and a limitation. Publish on one account where the intended audience already spends time. Check the purchase route first: TikTok's official help requires 1,000 followers or a Registered Business Account for a profile website link. A normal business-account switch should not be assumed sufficient. [TikTok profile links](https://support.tiktok.com/en/getting-started/setting-up-your-profile/linking-another-social-media-account). |
+| Pinterest | For a visually useful product, reuse the best photographs or clips as Pins with relevant destination links. Business accounts are free and provide analytics; ordinary Pins can link to the shop. Paid promotion is optional. [Business accounts](https://help.pinterest.com/en/business/article/get-a-business-account), [creating Pins](https://help.pinterest.com/en/guide/guide-to-creating-pins). |
+
+Choose at most two relevant communities. Answer existing questions with measurements or demonstrations, state the relationship to the shop, and share commercial links only where permitted. Ask moderators when rules are unclear. Reddit explicitly prohibits repeated or unsolicited mass engagement and leaves community moderators authority over unwanted promotion. Treat community participation as useful conversation, with sales as a possible result. [Reddit spam policy](https://support.reddithelp.com/hc/en-us/articles/360043504051-Spam).
+
+Real reviews start after real experience. Ask every fulfilled customer for honest feedback, obtain permission for any attributed quotation, and distinguish a gifted tester from a verified purchaser. Publish a review policy and a proportionate process for investigating disputed authenticity. UK CMA guidance covers fake reviews, concealed incentives and misleading review summaries, including material republished from elsewhere. [CMA review guidance](https://www.gov.uk/government/publications/fake-reviews/short-guide-for-businesses-publishing-consumer-reviews-and-complying-with-consumer-protection-law).
+
+For microcreators, shortlist five people already demonstrating this use case. Offer a sample loan or a small disclosed affiliate arrangement with written terms covering returns, payout timing and reuse rights. Acceptance is uncertain, and samples, postage and administration cost money or time. UK affiliate advertising should carry an obvious upfront ad label; a bare "affiliate" label is insufficient. [ASA guidance](https://www.asa.org.uk/advice-online/recognising-ads-social-media.html).
+
+A direct agreement avoids needing an affiliate marketplace. If the shop already uses Shopify, Collabs is an option on plans other than Starter and Retail. Its automatic payment fee is **2.9% of the commission**, with possible currency conversion charges. An illustrative 10% commission on a £30 commissionable sale costs £3 plus approximately £0.09 processing, before FX. Set the commission from actual contribution margin. [Collabs eligibility](https://help.shopify.com/en/manual/promoting-marketing/collabs/merchants), [payment terms](https://help.shopify.com/en/manual/promoting-marketing/collabs/merchants/payments).
+
+The two-week plan begins once a sample, fulfilment route and working checkout exist. If those are missing, establish them before promising delivery.
+
+| Period | Work | Evidence to keep |
+| --- | --- | --- |
+| Days 1–3 | Finish three to five accurate pages, two collections and one test order; submit the product feed. | Delivered price, contribution estimate, checkout result, feed issues. |
+| Days 4–7 | Batch six demonstrations; publish the strongest three; make two useful community contributions where allowed. | Questions asked, relevant visits and time spent per asset. |
+| Days 8–11 | Publish the remaining clips; approach the five suitable creators individually; improve the most confusing product explanation. | Replies, objections, creator terms, add-to-cart and checkout problems. |
+| Days 12–14 | Follow up on deliveries and feedback; reconcile orders and costs; choose one channel to continue. | Fulfilled orders, refunds pending, contribution and acquisition hours. |
+
+Allow roughly **20–30 founder hours**, **£0 paid media**, and **£0 new recurring marketing apps** for this attempt. An optional **£0–£50 sample/postage cap** is a chosen incremental marketing limit, usable only if actual costs fit. Store fees, normal product samples, fulfilment cash and refund reserves sit outside it. Record both cash acquisition cost and hours per order; zero advertising spend is not zero acquisition cost. First orders are the aim, not a promised outcome.
+
+The software lab can learn from five observed shopping sessions, repeated questions, a broken variant link, an incorrect AI product answer, or an actual order's margin. Record the original failure, correction and subsequent observation. Small counts identify useful work; they do not establish a conversion-lift percentage or prove that AI discovery caused a sale. Keep assistant mentions, store visits and fulfilled orders separate.
+
+An owned store supplies end-to-end selling and fulfilment evidence. An existing merchant's authorised demonstration supplies quicker access to established products and possibly traffic, with less cash tied up. A mock catalogue is useful for extraction and interface checks. Label each source of evidence so demonstration results never become claimed retail revenue or cross-merchant proof.

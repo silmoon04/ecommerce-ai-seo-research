@@ -6,6 +6,20 @@ Research checked 29 September 2026. Four GPT-6 Astra agents, each using max reas
 
 The biggest risk is spending months running a small retail business whose traffic never becomes large enough to test the software. We should judge the shop's retail economics, the experiments and demand for the eventual software separately. A useful experiment can lose money. A profitable shop can succeed for reasons that do not transfer to another merchant.
 
+## A cheaper starting point is possible
+
+The £750 envelope later in this report is one proposed 90-day allocation, not a minimum investment. A follow-up with three more research agents examined a simpler route: existing or print-on-demand clothing, gifts and accessories, professional product pages, no paid advertising initially, and learning from the first customer interactions.
+
+There are three practical options. Printify Pop-Up has no setup, listing or monthly platform fees and funds production from the customer's payment. Shopify plus a free POD supplier plan provides a more suitable environment for developing a Shopify app. Shopify Collective lets eligible stores sell other brands' products without buying inventory upfront, with the supplier fulfilling orders. [Printify Pop-Up](https://printify.com/pop-up-store/), [Payment flow](https://help.printify.com/hc/en-us/articles/4483601124113-How-does-the-payment-process-work), [Collective](https://help.shopify.com/en/manual/online-sales-channels/shopify-collective).
+
+Clothing is a valid choice if apparel merchants are the intended software customers. A coherent range of tees, sweatshirts, caps and totes can provide many useful variants without creating fifty unrelated supply chains. Existing garments add other questions about fit, fabric and styling. Gifts and stationery expose personalisation, recipient, occasion and delivery problems. These are candidate store concepts, not proven demand forecasts.
+
+Use AI for artwork and presentation, anchored to the actual product. Reach customers through demonstrations, relevant communities, creators and eligible free product listings. Add an optional video commission when it has a clear purpose. More products are fine when they add a distinct design or buyer need; fifty is not a hard cap.
+
+Early paid orders, questions, objections and returns are useful evidence. We do not need a large controlled trial before making sensible improvements. The sample-size discussion below concerns stronger claims about precise incremental lift.
+
+Read the [full bootstrap assessment](https://silmoon04.github.io/ecommerce-ai-seo-research/bootstrap-store/assessment.md), [clothing routes](https://silmoon04.github.io/ecommerce-ai-seo-research/bootstrap-store/clothing.md), [two-week distribution plan](https://silmoon04.github.io/ecommerce-ai-seo-research/bootstrap-store/distribution.md) and [store comparison](https://silmoon04.github.io/ecommerce-ai-seo-research/bootstrap-store/store-types.md) for current costs, platform limits and concrete starting assortments.
+
 ## What the shop would let us learn
 
 We could trace a proposed correction from its evidence to its publication, its appearance in a live shopping surface and the resulting customer experience. We could also discover ordinary failures that a prompt-only test misses: a wrong variant link, incompatible dimensions, unavailable stock, an unexpected shipping charge or a refund that removes the apparent profit.

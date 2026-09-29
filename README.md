@@ -14,6 +14,8 @@ The complete selected set is downloadable as Markdown, JSON and CSV under `conve
 
 The fourth report, `owned-store-lab.html`, evaluates a proposed owned Shopify store as a research laboratory. Four GPT-6 Astra Max studies cover product niches and suppliers, realistic costs and cash flow, experimental design, and order-level instrumentation. It includes a proposed twelve-week sequence and distinguishes replay results, live discovery, actual purchases and software demand. The budget is a chosen domestic print-on-demand scenario, not a quote for the recommended hobby-storage range. No store has been launched. Source notes and the assessment are in `owned-store/`.
 
+The owned-store report now also includes a bootstrap follow-up with three further studies: low-cost POD clothing and Pop-Up storefronts, a two-week organic distribution attempt, and alternative store types including existing products through Shopify Collective. Notes are in `bootstrap-store/`. The earlier £750 example is explicitly a chosen budget, not a minimum cost or a prerequisite for early learning.
+
 ## Run locally
 
 Open `index.html` in a browser, or serve this directory with a local HTTP server. All presentation assets and dependencies are bundled. No API keys or build step are required.
