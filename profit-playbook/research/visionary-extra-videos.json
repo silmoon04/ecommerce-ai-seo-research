@@ -1,0 +1,434 @@
+[
+  {
+    "id": "y2Kad3L-MCg",
+    "title": "The Best Facebook Ad Creative Strategy For Ecommerce",
+    "url": "https://www.youtube.com/watch?v=y2Kad3L-MCg",
+    "published": "2026-09-15",
+    "views": 498,
+    "access": "English auto-caption VTT retrieved and reviewed end-to-end. Captions can misrecognize words and figures; this digest paraphrases the transcript.",
+    "principles": [
+      "The creator frames an ad concept as persona, angle, and offer, with format as the execution. Changing one strategic dimension makes a different hypothesis; changing only the edit or format does not necessarily make a new concept.",
+      "He recommends grouping tests by concept and using multiple formats to express one angle, then reading performance across the group because ads may assist one another before a purchase.",
+      "His suggested five or more ads per concept and large account structure are agency practices for scaled spend. For a new shop, first test one clear problem and offer through interviews or organic demonstrations, and track spend and contribution rather than copying volume targets."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:02:05",
+        "claim": "Defines the concept variables as persona, angle, and offer."
+      },
+      {
+        "timestamp": "00:04:47",
+        "claim": "Separates UGC or other formats from the underlying concept."
+      },
+      {
+        "timestamp": "00:05:07",
+        "claim": "Recommends organizing an ad set around one concept."
+      },
+      {
+        "timestamp": "00:10:27",
+        "claim": "Says to judge the ad set as a sequence rather than treating last-click ad attribution as the full story."
+      },
+      {
+        "timestamp": "00:12:23",
+        "claim": "Distinguishes new-customer metrics and creative iteration from platform-level reporting."
+      }
+    ],
+    "limitations": "Advice is presented as the agency's operating method, with no controlled evidence in the video. Suggested ad counts and spend-volume rules are not suitable as default budgets for a seller without validated demand."
+  },
+  {
+    "id": "ig5HZk_rwMQ",
+    "title": "Claude Officially Just Changed Ecommerce Forever! (Tutorial)",
+    "url": "https://www.youtube.com/watch?v=ig5HZk_rwMQ",
+    "published": "2026-09-07",
+    "views": 577,
+    "access": "English auto-caption VTT retrieved and reviewed end-to-end. Captions can misrecognize words and figures; this digest paraphrases the transcript.",
+    "principles": [
+      "Demonstrates three AI workflows: analyze a business P&L and Shopify sales export, synthesize market/customer research from brand and product inputs, and draft offers against financial targets.",
+      "The workflow's value depends on clean books and evidence-rich inputs such as product specifications and customer reviews. Outputs are prompts for investigation and review, not verified accounting, demand, or product claims.",
+      "The walkthrough explicitly uses a fictional demo brand for its financial example and promotes downloadable paid-service-adjacent skills. Keep source data traceable, protect customer data, and independently check calculations and claims before acting."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:00:57",
+        "claim": "Describes Claude skills as reusable task recipes and introduces the three workflows."
+      },
+      {
+        "timestamp": "00:03:23",
+        "claim": "Shows the CAC/P&L workflow asking for financial statements and a Shopify sales export."
+      },
+      {
+        "timestamp": "00:04:17",
+        "claim": "States the tutorial's financial example is a fictional demo brand."
+      },
+      {
+        "timestamp": "00:11:27",
+        "claim": "Introduces a market-research workflow and lists product details and customer reviews as inputs."
+      },
+      {
+        "timestamp": "00:17:52",
+        "claim": "Shows offer tiers, estimated contribution, and a guarantee suggestion as generated planning output."
+      }
+    ],
+    "limitations": "The example uses synthetic brand information, so the financial outputs do not validate the workflow's accuracy on a real business. Skills and agency services are promoted by the creator. No evidence here establishes demand for AI tools or AEO software."
+  },
+  {
+    "id": "g8lSZJ-lixw",
+    "title": "Cold Traffic Conversion The 3 Things You Need in 2026",
+    "url": "https://www.youtube.com/watch?v=g8lSZJ-lixw",
+    "published": "2026-05-22",
+    "views": 372,
+    "access": "English auto-caption VTT retrieved and reviewed end-to-end. Captions can misrecognize words and figures; this digest paraphrases the transcript.",
+    "principles": [
+      "For first-time visitors, the creator recommends sending a specific ad to a page that continues its promise and language instead of routing every click to a generic homepage.",
+      "He proposes a page that helps a skeptic decide: clear customer outcome, visible genuine proof, customer-language benefits, direct objection answers, a real reason to act, and accessible calls to action. He also stresses checking the mobile experience.",
+      "He argues to expand one proven ad-and-page combination at a time. The video reports a client CAC and LTV result, but the claim is unaudited and not a forecast for another store."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:01:08",
+        "claim": "Frames acquisition around new customers and compares acquisition cost with lifetime gross profit."
+      },
+      {
+        "timestamp": "00:02:36",
+        "claim": "Explains message match and the risk of sending cold ad clicks to a generic homepage."
+      },
+      {
+        "timestamp": "00:04:15",
+        "claim": "Outlines page content intended to answer cold visitors' doubts."
+      },
+      {
+        "timestamp": "00:06:08",
+        "claim": "Recommends matching the page's copy, visuals, tone, and audience to the ad."
+      },
+      {
+        "timestamp": "00:08:20",
+        "claim": "Gives an agency client example and reports a result after changing the landing page."
+      }
+    ],
+    "limitations": "The client outcome and suggested 3:1 or higher unit-economics thresholds are creator-reported guidance without supporting data in the video. Advice assumes meaningful cold-traffic volume."
+  },
+  {
+    "id": "q4cExahXE-0",
+    "title": "ROAS Is Lying To You (Here’s What Actually Matters)",
+    "url": "https://www.youtube.com/watch?v=q4cExahXE-0",
+    "published": "2026-02-13",
+    "views": 370,
+    "access": "English auto-caption VTT retrieved and reviewed end-to-end. Captions can misrecognize words and figures; this digest paraphrases the transcript.",
+    "principles": [
+      "Defines contribution margin from revenue less variable costs, including goods, payment fees, shipping/fulfillment, discounts, refunds, commissions, and acquisition costs; this reveals the remaining amount available for growth and profit.",
+      "Recommends viewing retention by active subscriber, customer cohort, and time horizon, then comparing lifetime gross profit with the cost of acquiring a new customer before increasing spend.",
+      "Treats platform ROAS as an incomplete attribution view. Its benchmarks and client improvements are the agency's own reported guidance, not universal standards."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:01:18",
+        "claim": "Defines contribution profit and lists variable costs to include."
+      },
+      {
+        "timestamp": "00:02:09",
+        "claim": "Explains why ROAS omits cost and refund differences."
+      },
+      {
+        "timestamp": "00:03:10",
+        "claim": "Discusses retention costs and active-subscriber measures."
+      },
+      {
+        "timestamp": "00:04:49",
+        "claim": "Introduces LTV to new-customer CAC and multiple cohort horizons."
+      },
+      {
+        "timestamp": "00:06:55",
+        "claim": "Defines marketing efficiency ratio and discusses system-level measurement."
+      }
+    ],
+    "limitations": "The client outcomes, healthy ranges, and category benchmarks are self-reported agency claims. Metrics depend on consistent cost definitions, cohort windows, and accurate treatment of refunds and repeat orders."
+  },
+  {
+    "id": "hkxEfhGDlkc",
+    "title": "Why Your Meta Ads Stopped Working And How We Fixed It (Andromeda Update Explained)",
+    "url": "https://www.youtube.com/watch?v=hkxEfhGDlkc",
+    "published": "2025-10-17",
+    "views": 904,
+    "access": "English auto-caption VTT retrieved and reviewed end-to-end. Captions can misrecognize words and figures; this digest paraphrases the transcript.",
+    "principles": [
+      "The creator argues that near-identical ad variations may cluster together in Meta delivery and that bigger conceptual differences provide more distinct signals; this is his explanation of the platform, not an independently verified rule.",
+      "He lays out a creative matrix across format, angle, persona, and awareness, alongside a weekly cycle of ideation, production, launch, winner review, and recording learnings.",
+      "He recommends simplified campaign structure, clean conversion data, and concepts designed around a specific buyer. The video also cautions against flooding an account with thoughtless AI-generated assets."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:02:08",
+        "claim": "Describes retrieval and grouping of similar ads as the creator understands the platform update."
+      },
+      {
+        "timestamp": "00:03:50",
+        "claim": "Contrasts minor hook changes with more distinct concept testing."
+      },
+      {
+        "timestamp": "00:05:28",
+        "claim": "Sets out the format, angle, persona, and awareness framework."
+      },
+      {
+        "timestamp": "00:08:30",
+        "claim": "Describes the weekly creative testing and learning cycle, with a quality-over-volume caveat."
+      },
+      {
+        "timestamp": "00:09:59",
+        "claim": "Lists concept mix, spend distribution, CPM, conversion, and profitability measures."
+      }
+    ],
+    "limitations": "The platform mechanics and 71% month-over-month client growth claim are presented by an agency without independent evidence. This is dated platform advice and should be rechecked before any future implementation."
+  },
+  {
+    "id": "FW3RETboCPQ",
+    "title": "How Magic Spoon Built a $300M+ Cereal Brand (Case Study)",
+    "url": "https://www.youtube.com/watch?v=FW3RETboCPQ",
+    "published": "2026-06-24",
+    "views": 1741,
+    "access": "English auto-caption VTT retrieved and reviewed end-to-end. Captions can misrecognize words and figures; this digest paraphrases the transcript.",
+    "principles": [
+      "The creator audits a funnel built around nostalgic taste cues, a better-for-you positioning, bundles, subscription savings, clear product options, reviews, and a guarantee.",
+      "The walkthrough follows the customer across product page, cart, checkout, emails, listicle, and ads. The useful question is whether the promise and evidence remain consistent at each step, not whether every brand needs every step.",
+      "He observes repeated creative scripts and varied creators, and notes a listicle can educate colder visitors before a direct product offer. The funnel is an observational case study, not a causal test."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:00:45",
+        "claim": "Reviews the homepage's nostalgia and product positioning."
+      },
+      {
+        "timestamp": "00:01:49",
+        "claim": "Discusses bundles as a way to raise average order value for lower-priced products."
+      },
+      {
+        "timestamp": "00:02:41",
+        "claim": "Walks through one-time, bundle, and subscribe-and-save product options."
+      },
+      {
+        "timestamp": "00:06:58",
+        "claim": "Explains the listicle page's educational role in the acquisition path."
+      },
+      {
+        "timestamp": "00:10:41",
+        "claim": "Notes variations of a winning script and the funnel's message consistency."
+      }
+    ],
+    "limitations": "The video documents a snapshot of a large food brand's funnel. Its subscription and bundle economics may not transfer to apparel, durable goods, or a pre-revenue store; claims about funnel performance are not experimentally isolated."
+  },
+  {
+    "id": "oNN_iOt_xZE",
+    "title": "The Most Valuable Ecommerce CRO Training You'll Ever Watch",
+    "url": "https://www.youtube.com/watch?v=oNN_iOt_xZE",
+    "published": "2026-09-01",
+    "views": 397,
+    "access": "English auto-caption VTT retrieved and reviewed end-to-end. Captions can misrecognize words and figures; this digest paraphrases the transcript.",
+    "principles": [
+      "Recommends matching a landing page to the particular ad, offer, or audience that brought the visitor in, then making the first screen quickly explain the product and who it serves.",
+      "Suggests placing substantiated proof and objection answers throughout the page, reducing unnecessary checkout steps, and checking the experience on mobile.",
+      "Warns that conversion rate alone can reward discounting. Revenue per visitor is presented as conversion rate multiplied by average order value; for business decisions, contribution per visitor is a stronger extension because it includes variable costs."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:01:32",
+        "claim": "Shows the consistency between distinct ads and their associated landing pages."
+      },
+      {
+        "timestamp": "00:05:42",
+        "claim": "Explains what the first screen should make clear to a new visitor."
+      },
+      {
+        "timestamp": "00:08:10",
+        "claim": "Reviews evidence and objection content placed throughout a page."
+      },
+      {
+        "timestamp": "00:10:28",
+        "claim": "Discusses checkout friction and direct paths to purchase."
+      },
+      {
+        "timestamp": "00:12:05",
+        "claim": "Explains why revenue per visitor is more informative than conversion rate alone."
+      }
+    ],
+    "limitations": "Examples are visual audits, not controlled experiments. The video reports no sample sizes or statistical uncertainty for its performance claims; revenue per visitor still omits product, fulfilment, refund, and acquisition costs."
+  },
+  {
+    "id": "WeMxfWQ-Uwk",
+    "title": "The Real Reason Your Shopify Brand Isn’t Scaling",
+    "url": "https://www.youtube.com/watch?v=WeMxfWQ-Uwk",
+    "published": "2025-06-10",
+    "views": 397,
+    "access": "English auto-caption VTT retrieved and reviewed end-to-end. Captions can misrecognize words and figures; this digest paraphrases the transcript.",
+    "principles": [
+      "Frames common growth bottlenecks as a weak offer, absent retention, and disconnected messages or systems across ads, pages, and follow-up.",
+      "Distinguishes a product listing from an offer that communicates customer benefit and a reason to act. It names bundles and incentives as possibilities, but does not establish that they improve contribution for every product.",
+      "The operating implication is to test product quality, offer clarity, fulfilment, and customer follow-up before buying more traffic."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:00:32",
+        "claim": "Introduces the idea that infrastructure below advertising may constrain growth."
+      },
+      {
+        "timestamp": "00:01:33",
+        "claim": "Distinguishes an offer from a bare product listing."
+      },
+      {
+        "timestamp": "00:02:16",
+        "claim": "Describes retention as a post-purchase system rather than acquisition alone."
+      },
+      {
+        "timestamp": "00:03:29",
+        "claim": "Explains the harm from inconsistent communication across ads, pages, and email."
+      },
+      {
+        "timestamp": "00:04:13",
+        "claim": "Summarizes offer, retention, and full-funnel coordination as foundations before scaling."
+      }
+    ],
+    "limitations": "The framework is broad agency advice aimed at brands with existing operations. It does not quantify the value of each bottleneck or validate the creator's reported client experience."
+  },
+  {
+    "id": "LcF0ZaYgPJQ",
+    "title": "Grüns Post-Subscription Email Flow Audit: What They Got Right & What You Should Copy",
+    "url": "https://www.youtube.com/watch?v=LcF0ZaYgPJQ",
+    "published": "2025-10-01",
+    "views": 2010,
+    "access": "English auto-caption VTT retrieved and reviewed end-to-end. Captions can misrecognize words and figures; this digest paraphrases the transcript.",
+    "principles": [
+      "The creator documents a subscription journey spanning order confirmation, delivery updates, product-use prompts, early habit formation, expectation setting, social proof, review requests, and referral prompts.",
+      "Post-purchase messages can reduce confusion and help a buyer use a product; for clothing, adapt this to accurate care, fit, delivery, and returns information instead of supplement-style daily reminders.",
+      "Treat the reviewed flow as an observed example, not proof that high email volume reduces churn. Avoid unsupported health claims and never condition a review reward on positive sentiment."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:00:59",
+        "claim": "Explains why post-subscription messages shape first use and expectations."
+      },
+      {
+        "timestamp": "00:04:59",
+        "claim": "Begins the post-purchase sequence with confirmation and delivery communication."
+      },
+      {
+        "timestamp": "00:07:31",
+        "claim": "Shows early messages intended to help establish product use."
+      },
+      {
+        "timestamp": "00:08:33",
+        "claim": "Describes expectation setting over longer use horizons."
+      },
+      {
+        "timestamp": "00:10:30",
+        "claim": "Summarizes delivery ownership, usage guidance, feedback, and referral lessons."
+      }
+    ],
+    "limitations": "The creator's flow inspection is a one-customer observation and the claimed impact on churn or LTV is not verified. The supplement product's efficacy statements need separate evidence and are not transferable to unrelated products."
+  },
+  {
+    "id": "mrgPgi048pw",
+    "title": "How to Choose a Winning E-Commerce Product (Avoid This Mistake!)",
+    "url": "https://www.youtube.com/watch?v=mrgPgi048pw",
+    "published": "2025-03-03",
+    "views": 761,
+    "access": "English auto-caption VTT retrieved and reviewed end-to-end. Captions can misrecognize words and figures; this digest paraphrases the transcript.",
+    "principles": [
+      "Begins product selection by choosing a business model, distinguishing repeat-purchase products, replenishment systems, high-ticket one-offs, fashion, digital goods, personalization, and hobby niches.",
+      "Suggests checking trend persistence and seasonality, competitor presence, keyword/search interest, product reviews, and public discussions to find demand signals and customer complaints.",
+      "Warns against choosing only from founder enthusiasm or assuming everyone is a customer, and recommends documenting research before inventory investment. These checks generate hypotheses; the video does not demonstrate a willingness-to-pay test."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:01:09",
+        "claim": "Introduces the business-model choice as an early product decision."
+      },
+      {
+        "timestamp": "00:01:24",
+        "claim": "Compares several product economics such as consumables, fashion, digital, and niche goods."
+      },
+      {
+        "timestamp": "00:04:19",
+        "claim": "Discusses trend persistence and seasonal demand checks."
+      },
+      {
+        "timestamp": "00:08:13",
+        "claim": "Suggests competitor, search, marketplace, and review research."
+      },
+      {
+        "timestamp": "00:11:08",
+        "claim": "Warns against founder bias and broad, undifferentiated targeting."
+      }
+    ],
+    "limitations": "The methods are secondary indicators, not demand validation. Marketplace visibility and estimated traffic or sales can be incomplete, and a competitor's presence does not show that a new entrant can profitably acquire customers."
+  },
+  {
+    "id": "vTWoMrtz_xM",
+    "title": "Why Most UGC Ads Fail (And the 5-Step Framework That Actually Works)",
+    "url": "https://www.youtube.com/watch?v=vTWoMrtz_xM",
+    "published": "2025-11-05",
+    "views": 154,
+    "access": "English auto-caption VTT retrieved and reviewed end-to-end. Captions can misrecognize words and figures; this digest paraphrases the transcript.",
+    "principles": [
+      "The creator's UGC outline moves from a visual or spoken hook to a customer problem, the product as a solution, objection handling, and a direct CTA.",
+      "Demonstrations, multiple useful shots, and a creator who resembles or credibly understands the intended customer can make product details easier to understand than a static talking-head pitch.",
+      "The framework is a script aid, not a license to invent a competitor villain, unsupported superiority, fake customer story, or untrue offer."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:00:41",
+        "claim": "Explains why vague creator footage may lack a persuasive idea."
+      },
+      {
+        "timestamp": "00:00:59",
+        "claim": "Introduces the five-part ad structure."
+      },
+      {
+        "timestamp": "00:02:47",
+        "claim": "Begins examples applying the structure to products."
+      },
+      {
+        "timestamp": "00:05:03",
+        "claim": "Shows a product demonstration addressing practical objections."
+      },
+      {
+        "timestamp": "00:10:33",
+        "claim": "Recaps the framework, creator fit, and visual coverage."
+      }
+    ],
+    "limitations": "Examples and performance claims come from the service provider and are not controlled tests. Aggressive competitor framing and urgency may be inappropriate unless the comparisons and offer conditions are truthful."
+  },
+  {
+    "id": "uUi4vbijksY",
+    "title": "Stop Tracking ROAS. Track This Instead.",
+    "url": "https://www.youtube.com/watch?v=uUi4vbijksY",
+    "published": "2026-05-14",
+    "views": 99,
+    "access": "English auto-caption VTT retrieved and reviewed end-to-end. Captions can misrecognize words and figures; this digest paraphrases the transcript.",
+    "principles": [
+      "Separates platform CPA, blended CAC, and new-customer CAC. The creator calculates NCAC from period ad spend divided by new customers reported by the store, then compares it with cohort lifetime value or gross profit.",
+      "Warns that returning customers can make platform CPA and ROAS appear efficient even when new-customer acquisition is expensive. Define the time period and customer-count source consistently before using this calculation.",
+      "Recommends considering exclusions, front-end offer, and retention before scaling. Numeric thresholds and before/after examples are not independently supported by underlying data."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:01:29",
+        "claim": "Distinguishes CPA, blended CAC, and new-customer CAC."
+      },
+      {
+        "timestamp": "00:02:34",
+        "claim": "Gives the simple spend divided by store-reported new customers formula."
+      },
+      {
+        "timestamp": "00:04:38",
+        "claim": "Compares acquisition cost with lifetime value across cohort windows."
+      },
+      {
+        "timestamp": "00:05:53",
+        "claim": "Lists exclusions, offer, and retention as steps to investigate before scaling."
+      },
+      {
+        "timestamp": "00:07:31",
+        "claim": "Gives an agency client example and reports subsequent changes."
+      }
+    ],
+    "limitations": "The large gap between platform CPA and NCAC, numeric LTV-to-CAC targets, and reported client improvements are agency examples, not population benchmarks. Store-wide spend and new-customer totals may also include other acquisition channels unless reconciled."
+  }
+]

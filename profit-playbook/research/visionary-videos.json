@@ -1,0 +1,418 @@
+[
+  {
+    "id": "V77dzdX8uQs",
+    "title": "The Psychology of Premium Ecommerce Brands",
+    "url": "https://www.youtube.com/watch?v=V77dzdX8uQs",
+    "published": "2026-09-20",
+    "views": 131430,
+    "access": "English original caption VTT reviewed; chapter metadata also available. Captions are ASR and may contain errors.",
+    "principles": [
+      "Define a premium buyer by the identity, habits, and standards they share, rather than by income alone.",
+      "Use an offer to explain the price, then match proof to the actual promise: evidence that it works and evidence that relevant buyers use it.",
+      "Treat post-purchase delivery and service as part of the value customers paid for and a possible source of referral or repeat behaviour."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:43",
+        "evidence": "Buyer understanding section starts; examples describe customer identity and standards."
+      },
+      {
+        "timestamp": "04:40",
+        "evidence": "Offer and price justification section starts."
+      },
+      {
+        "timestamp": "10:16",
+        "evidence": "Social proof section starts."
+      },
+      {
+        "timestamp": "13:32",
+        "evidence": "Post-purchase experience section starts."
+      }
+    ],
+    "limitations": "The framework comes from an agency's brand examples, not cited consumer research. Examples and reported client outcomes are not independently audited in the video."
+  },
+  {
+    "id": "DdLjsQVgy-E",
+    "title": "How Bloom, Poppi, Grüns and IM8 Built Their Brands (The Four Levers Breakdown)",
+    "url": "https://www.youtube.com/watch?v=DdLjsQVgy-E",
+    "published": "2026-08-12",
+    "views": 22506,
+    "access": "English original caption VTT reviewed; chapter metadata also available. Captions are ASR and may contain errors.",
+    "principles": [
+      "The case studies attribute growth to different mechanisms: founder-led audience building, viral demand, borrowed celebrity credibility, and subscription retention.",
+      "Map a brand's current bottleneck before copying another brand's tactic; the video treats these levers as category- and stage-dependent.",
+      "Retention receives less attention in the video's storytelling, yet the Grüns example frames it as ongoing operational work after acquisition."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:45",
+        "evidence": "Poppi demand-generation case begins."
+      },
+      {
+        "timestamp": "01:24",
+        "evidence": "Bloom founder-led audience case begins."
+      },
+      {
+        "timestamp": "04:26",
+        "evidence": "IM8 celebrity credibility case begins."
+      },
+      {
+        "timestamp": "06:14",
+        "evidence": "Grüns retention case begins."
+      }
+    ],
+    "limitations": "This is a retrospective agency interpretation of four large brands, not a controlled comparison. Their scale, category, distribution, and financing differ from a pre-revenue small store."
+  },
+  {
+    "id": "XtCBHC8cw7k",
+    "title": "The Secret Behind Weirdly Addictive Brands",
+    "url": "https://www.youtube.com/watch?v=XtCBHC8cw7k",
+    "published": "2026-07-31",
+    "views": 22287,
+    "access": "English original caption VTT reviewed; chapter metadata also available. Captions are ASR and may contain errors.",
+    "principles": [
+      "The examples connect differentiated brands to the customer identity or desired life surrounding an ordinary product, not only to product features.",
+      "Creative choices such as the messenger and imagery can reinforce the intended audience and lifestyle; test whether target buyers read them that way.",
+      "The video also points to post-sale habit and retention as a source of durable demand, although it supplies no causal measurement."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "01:07",
+        "evidence": "Identity branding section begins."
+      },
+      {
+        "timestamp": "02:35",
+        "evidence": "Storytelling and value section begins."
+      },
+      {
+        "timestamp": "04:30",
+        "evidence": "Outcome and retention section begins."
+      }
+    ],
+    "limitations": "The 'addictive' framing is a marketing metaphor. Cases such as Dr. Squatch and Grüns illustrate the speaker's interpretation; no evidence establishes that the proposed mechanisms caused their growth."
+  },
+  {
+    "id": "I2gDKOZBJp8",
+    "title": "1000 Hours Studying the Best eCommerce Brands in 34 Minutes",
+    "url": "https://www.youtube.com/watch?v=I2gDKOZBJp8",
+    "published": "2026-07-01",
+    "views": 1461,
+    "access": "English original caption VTT reviewed; chapter metadata also available. Captions are ASR and may contain errors.",
+    "principles": [
+      "Give the homepage a clear orientation job, and use focused landing pages or offers when visitors arrive with a specific intent.",
+      "Make proof and education answer a real objection; organize reviews, creator messages, and email around one new reason to believe at a time.",
+      "Choose an offer and business model that fit the product's margin and natural repeat pattern; the speaker favours focus over trying to sell a large catalogue immediately."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:33",
+        "evidence": "Lesson 1 on homepage purpose begins."
+      },
+      {
+        "timestamp": "02:06",
+        "evidence": "Offer lesson begins."
+      },
+      {
+        "timestamp": "10:24",
+        "evidence": "Abandoned-cart education and objection handling are discussed."
+      },
+      {
+        "timestamp": "13:04",
+        "evidence": "Founder-story lesson begins."
+      },
+      {
+        "timestamp": "17:09",
+        "evidence": "Business-model fit lesson begins."
+      },
+      {
+        "timestamp": "20:16",
+        "evidence": "The speaker compares plain-text and designed email campaigns."
+      }
+    ],
+    "limitations": "The 14 lessons combine different businesses, categories, and funnel stages. Selected tactics (subscriptions, upsells, email) may not suit a low-repeat clothing product or an unvalidated offer."
+  },
+  {
+    "id": "Vz_wxOpYaWw",
+    "title": "How We Actually Use AI To Write Ad Creative",
+    "url": "https://www.youtube.com/watch?v=Vz_wxOpYaWw",
+    "published": "2026-04-15",
+    "views": 134,
+    "access": "English original caption VTT reviewed; chapter metadata also available. Captions are ASR and may contain errors.",
+    "principles": [
+      "Start with audience research and a concrete emotional problem before prompting a model; the speaker identifies weak briefs as the upstream failure.",
+      "Apply a 'so what' check to each proposed claim or hook, then use AI to generate alternatives grounded in actual customer language.",
+      "Use failed as well as successful creative as input so that new drafts respond to evidence rather than producing generic variations."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:00",
+        "evidence": "The speaker's concern about generic, recognizably AI-written ads is introduced."
+      },
+      {
+        "timestamp": "02:18",
+        "evidence": "The bad-brief section begins."
+      },
+      {
+        "timestamp": "03:23",
+        "evidence": "The 'so what' test section begins."
+      },
+      {
+        "timestamp": "04:13",
+        "evidence": "Research before brief-writing is described."
+      },
+      {
+        "timestamp": "06:00",
+        "evidence": "The transcript describes generating research-grounded hooks with AI."
+      },
+      {
+        "timestamp": "06:15",
+        "evidence": "The structured UGC script section begins."
+      }
+    ],
+    "limitations": "This describes the agency's process and asserted client examples; it is not an experiment comparing AI with human-only writing. The transcript does not verify the claimed performance results."
+  },
+  {
+    "id": "B-gcx38_Xiw",
+    "title": "The Complete 2026 Creative System (Just Copy This)",
+    "url": "https://www.youtube.com/watch?v=B-gcx38_Xiw",
+    "published": "2026-03-20",
+    "views": 437,
+    "access": "English original caption VTT reviewed; chapter metadata also available. Captions are ASR and may contain errors.",
+    "principles": [
+      "Separate concept or angle tests from execution tests so that a weak message is not confused with a weak format or creator.",
+      "Treat hooks, body sections, and calls to action as reusable creative components, while preserving a coherent message and audience fit.",
+      "Feed paid-media findings back into production; the proposed engine links research, briefs, creator supply, testing, and replacement cycles."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "01:31",
+        "evidence": "Modular content strategy is described."
+      },
+      {
+        "timestamp": "02:51",
+        "evidence": "Creative angles and execution are distinguished."
+      },
+      {
+        "timestamp": "04:46",
+        "evidence": "Media-buying insights are connected back to creative production."
+      },
+      {
+        "timestamp": "07:02",
+        "evidence": "Creative variation is discussed in relation to platform delivery."
+      },
+      {
+        "timestamp": "09:08",
+        "evidence": "The speaker discusses systematizing high-volume creative production."
+      }
+    ],
+    "limitations": "The system is pitched for agency clients with ongoing ad spend and production capacity. The stated weekly concept volumes and replacement cadence should not be adopted without matching budget, sample size, and actual ad data."
+  },
+  {
+    "id": "kWB-LrCXq2s",
+    "title": "How to Engineer Profitable Offers (Full Training)",
+    "url": "https://www.youtube.com/watch?v=kWB-LrCXq2s",
+    "published": "2026-03-18",
+    "views": 100,
+    "access": "English original caption VTT reviewed; chapter metadata also available. Captions are ASR and may contain errors.",
+    "principles": [
+      "Evaluate a discount, bundle, gift, or subscription as a full delivered offer rather than as a headline price alone.",
+      "Build product, fulfillment, payment, return, and acquisition costs into the offer model before spending; set a maximum affordable CAC from the actual contribution left.",
+      "Use financial guardrails as constraints for a test, not as proof that an offer will convert."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:00",
+        "evidence": "Offer construction is introduced as more than choosing a discount."
+      },
+      {
+        "timestamp": "02:30",
+        "evidence": "The example model includes returned orders and delivery costs."
+      },
+      {
+        "timestamp": "04:30",
+        "evidence": "The speaker connects offer economics to a CAC limit."
+      },
+      {
+        "timestamp": "09:00",
+        "evidence": "The lesson closes by setting financial guardrails before scaling."
+      }
+    ],
+    "limitations": "The worked costs, return assumption, and example businesses are not UK estimates and should not be copied. The video is an agency tutorial with a lead-generation offer."
+  },
+  {
+    "id": "vI_Np8RQikw",
+    "title": "The E-Commerce Profit Framework (Used by 7–8 Figure Brands)",
+    "url": "https://www.youtube.com/watch?v=vI_Np8RQikw",
+    "published": "2026-03-13",
+    "views": 122,
+    "access": "English original caption VTT reviewed; chapter metadata also available. Captions are ASR and may contain errors.",
+    "principles": [
+      "Keep order-level contribution, new-customer acquisition cost, blended efficiency, lifetime gross profit, and cash needs visible together; no single platform metric answers whether to scale.",
+      "Use realized, cohort-based repeat purchases when evaluating lifetime value; the video mostly addresses established brands with historical customer data.",
+      "Connect marketing reports back to the P&L and cash conversion cycle before increasing acquisition spend."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:47",
+        "evidence": "The framework introduces core financial metrics."
+      },
+      {
+        "timestamp": "02:06",
+        "evidence": "Contribution margin is explained at order level."
+      },
+      {
+        "timestamp": "06:00",
+        "evidence": "Marketing performance is tied to the P&L."
+      },
+      {
+        "timestamp": "08:00",
+        "evidence": "Cash flow and scaling constraints are discussed."
+      },
+      {
+        "timestamp": "10:08",
+        "evidence": "The speaker contrasts ROAS with broader efficiency measures."
+      }
+    ],
+    "limitations": "Metric definitions and attribution windows need to match the store's accounting and customer data. A new store cannot validate future LTV from historical cohorts it does not have."
+  },
+  {
+    "id": "TJ45V9hfe4A",
+    "title": "How Small Brands Can Steal From Big Brands",
+    "url": "https://www.youtube.com/watch?v=TJ45V9hfe4A",
+    "published": "2026-03-11",
+    "views": 61,
+    "access": "English original caption VTT reviewed; chapter metadata also available. Captions are ASR and may contain errors.",
+    "principles": [
+      "A small brand can make a category easier to understand by naming a customer problem and a specific alternative, rather than claiming to serve everyone.",
+      "Direct comparisons and an 'us versus them' story can clarify choice, but the comparison must be factual and the challenger must substantiate its superiority claims.",
+      "Carry the same distinct reason to choose from ad through landing page and community work."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "01:01",
+        "evidence": "The video explains educating the market about a problem and solution."
+      },
+      {
+        "timestamp": "02:22",
+        "evidence": "The challenger positioning section begins."
+      },
+      {
+        "timestamp": "04:24",
+        "evidence": "The Dollar Shave Club / Gillette case study is discussed."
+      },
+      {
+        "timestamp": "07:20",
+        "evidence": "The video moves to community and scaling the message."
+      }
+    ],
+    "limitations": "The case-study narratives simplify competitive history and do not establish what caused sales growth. The tactic can backfire when a small brand has no verified difference or makes unsupported comparative claims."
+  },
+  {
+    "id": "UN4vpR3owOM",
+    "title": "Emotion Is Expensive (Here’s Why)",
+    "url": "https://www.youtube.com/watch?v=UN4vpR3owOM",
+    "published": "2026-03-06",
+    "views": 81,
+    "access": "English original caption VTT reviewed; chapter metadata also available. Captions are ASR and may contain errors.",
+    "principles": [
+      "Set a recurring finance review that brings marketing, fulfillment, and leadership onto the same contribution and cash assumptions.",
+      "Calculate break-even acquisition cost from real per-order economics before using platform ROAS to justify more spend.",
+      "Investigate the funnel bottleneck and post-purchase data rather than treating a marketing dashboard as a complete account of profit."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:27",
+        "evidence": "The proposed math-first review is introduced."
+      },
+      {
+        "timestamp": "01:10",
+        "evidence": "The video discusses platform attribution limitations."
+      },
+      {
+        "timestamp": "01:30",
+        "evidence": "Contribution margin and per-unit profitability are explained."
+      },
+      {
+        "timestamp": "02:15",
+        "evidence": "The speaker argues against scaling on ROAS alone."
+      }
+    ],
+    "limitations": "This is a short agency viewpoint piece, not independent measurement evidence. The meeting routine is a management suggestion; its value depends on accurate inputs and decisions made from them."
+  },
+  {
+    "id": "-P3I2vUfrAo",
+    "title": "The Funnel That Turns Cold Traffic Into First Time Buyers",
+    "url": "https://www.youtube.com/watch?v=-P3I2vUfrAo",
+    "published": "2026-02-25",
+    "views": 294,
+    "access": "English original caption VTT reviewed; chapter metadata also available. Captions are ASR and may contain errors.",
+    "principles": [
+      "For unfamiliar visitors, consider a focused page that establishes context, addresses objections, and explains the offer before asking for a first order.",
+      "Build the offer and page around the product's economics; the speaker explicitly treats a discount as only one possible offer mechanic.",
+      "Measure new-customer acquisition separately from existing-customer orders if the question is whether cold acquisition works."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:34",
+        "evidence": "The first-order funnel is introduced."
+      },
+      {
+        "timestamp": "01:06",
+        "evidence": "The dedicated ad landing-page rationale is discussed."
+      },
+      {
+        "timestamp": "02:08",
+        "evidence": "Offer construction beyond a simple percentage discount is covered."
+      },
+      {
+        "timestamp": "03:12",
+        "evidence": "The cold-traffic page's education and objection-handling role is described."
+      },
+      {
+        "timestamp": "05:32",
+        "evidence": "New-customer acquisition measurement is covered."
+      }
+    ],
+    "limitations": "The funnel is framed around paid social and relatively mature brands; its campaign architecture is not useful before there is enough spend and traffic to measure. No conversion lift is established."
+  },
+  {
+    "id": "1Tp9VBVYPDY",
+    "title": "The 6 Steps to Scale Your Ecom Brand to 7+ Figures in 2026",
+    "url": "https://www.youtube.com/watch?v=1Tp9VBVYPDY",
+    "published": "2026-01-07",
+    "views": 139,
+    "access": "English original caption VTT reviewed; chapter metadata also available. Captions are ASR and may contain errors.",
+    "principles": [
+      "The sequence begins with unit economics and measurement, then moves through brand, a hero product, acquisition, systems, and retention.",
+      "Track ad spend against new customers, not only revenue attributed to returning buyers; make the attribution choice explicit.",
+      "Use founder or team presence and creative variety as hypotheses for building trust and reaching different audiences, then verify them with customer evidence."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "01:16",
+        "evidence": "The first pillar covers financials and unit economics."
+      },
+      {
+        "timestamp": "03:58",
+        "evidence": "The brand-building pillar begins."
+      },
+      {
+        "timestamp": "04:30",
+        "evidence": "The speaker discusses founder/team presence as a source of authenticity and trust."
+      },
+      {
+        "timestamp": "06:03",
+        "evidence": "Hero product and full-funnel steps are presented."
+      },
+      {
+        "timestamp": "07:51",
+        "evidence": "Creative diversity is discussed."
+      },
+      {
+        "timestamp": "08:51",
+        "evidence": "Retention and customer-loyalty metrics appear."
+      }
+    ],
+    "limitations": "A broad roadmap for 7-figure growth is not evidence that all six steps should be executed by a pre-revenue seller. The speaker's client experience and performance assertions are self-reported."
+  }
+]

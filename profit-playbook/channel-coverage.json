@@ -1,0 +1,308 @@
+{
+  "retrieved_at": "2026-09-30T01:11:23+00:00",
+  "tool": "yt-dlp",
+  "scope": "Public channel /videos tab only; Shorts and livestream tabs are reported separately when fetched.",
+  "channels": {
+    "thevisionarygrouptx": {
+      "label": "The Visionary Group TX",
+      "channel_id": "UCy9j5kvO1BDxB6ZJ8eAe7lQ",
+      "videos_tab_url": "https://www.youtube.com/@thevisionarygrouptx/videos",
+      "playlist_reported_count": 118,
+      "flat_entries_fetched": 118,
+      "detailed_metadata_records": 118,
+      "flat_listing_complete_by_reported_count": true,
+      "detailed_ids_match_flat_listing": true,
+      "metadata_fields": {
+        "with_title": 118,
+        "with_view_count": 118,
+        "with_upload_date": 118,
+        "with_duration": 118,
+        "with_description": 118
+      },
+      "caption_selection_count": 24,
+      "caption_files_available": 24,
+      "caption_status": [
+        {
+          "video_id": "V77dzdX8uQs",
+          "metadata_found": true,
+          "caption_files": [
+            "V77dzdX8uQs.en-orig.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "DdLjsQVgy-E",
+          "metadata_found": true,
+          "caption_files": [
+            "DdLjsQVgy-E.en-orig.vtt",
+            "DdLjsQVgy-E.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "XtCBHC8cw7k",
+          "metadata_found": true,
+          "caption_files": [
+            "XtCBHC8cw7k.en-orig.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "B-gcx38_Xiw",
+          "metadata_found": true,
+          "caption_files": [
+            "B-gcx38_Xiw.en-orig.vtt",
+            "B-gcx38_Xiw.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "UN4vpR3owOM",
+          "metadata_found": true,
+          "caption_files": [
+            "UN4vpR3owOM.en-orig.vtt",
+            "UN4vpR3owOM.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "TJ45V9hfe4A",
+          "metadata_found": true,
+          "caption_files": [
+            "TJ45V9hfe4A.en-orig.vtt",
+            "TJ45V9hfe4A.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "-P3I2vUfrAo",
+          "metadata_found": true,
+          "caption_files": [
+            "-P3I2vUfrAo.en-orig.vtt",
+            "-P3I2vUfrAo.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "kWB-LrCXq2s",
+          "metadata_found": true,
+          "caption_files": [
+            "kWB-LrCXq2s.en-orig.vtt",
+            "kWB-LrCXq2s.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "vI_Np8RQikw",
+          "metadata_found": true,
+          "caption_files": [
+            "vI_Np8RQikw.en-orig.vtt",
+            "vI_Np8RQikw.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "1Tp9VBVYPDY",
+          "metadata_found": true,
+          "caption_files": [
+            "1Tp9VBVYPDY.en-orig.vtt",
+            "1Tp9VBVYPDY.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "I2gDKOZBJp8",
+          "metadata_found": true,
+          "caption_files": [
+            "I2gDKOZBJp8.en-orig.vtt",
+            "I2gDKOZBJp8.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "Vz_wxOpYaWw",
+          "metadata_found": true,
+          "caption_files": [
+            "Vz_wxOpYaWw.en-orig.vtt",
+            "Vz_wxOpYaWw.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "y2Kad3L-MCg",
+          "metadata_found": true,
+          "caption_files": [
+            "y2Kad3L-MCg.en-orig.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "ig5HZk_rwMQ",
+          "metadata_found": true,
+          "caption_files": [
+            "ig5HZk_rwMQ.en-orig.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "g8lSZJ-lixw",
+          "metadata_found": true,
+          "caption_files": [
+            "g8lSZJ-lixw.en-orig.vtt",
+            "g8lSZJ-lixw.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "q4cExahXE-0",
+          "metadata_found": true,
+          "caption_files": [
+            "q4cExahXE-0.en-orig.vtt",
+            "q4cExahXE-0.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "hkxEfhGDlkc",
+          "metadata_found": true,
+          "caption_files": [
+            "hkxEfhGDlkc.en-orig.vtt",
+            "hkxEfhGDlkc.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "FW3RETboCPQ",
+          "metadata_found": true,
+          "caption_files": [
+            "FW3RETboCPQ.en-orig.vtt",
+            "FW3RETboCPQ.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "oNN_iOt_xZE",
+          "metadata_found": true,
+          "caption_files": [
+            "oNN_iOt_xZE.en-orig.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "WeMxfWQ-Uwk",
+          "metadata_found": true,
+          "caption_files": [
+            "WeMxfWQ-Uwk.en-orig.vtt",
+            "WeMxfWQ-Uwk.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "LcF0ZaYgPJQ",
+          "metadata_found": true,
+          "caption_files": [
+            "LcF0ZaYgPJQ.en-orig.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "mrgPgi048pw",
+          "metadata_found": true,
+          "caption_files": [
+            "mrgPgi048pw.en-orig.vtt",
+            "mrgPgi048pw.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "vTWoMrtz_xM",
+          "metadata_found": true,
+          "caption_files": [
+            "vTWoMrtz_xM.en-orig.vtt",
+            "vTWoMrtz_xM.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "uUi4vbijksY",
+          "metadata_found": true,
+          "caption_files": [
+            "uUi4vbijksY.en-orig.vtt",
+            "uUi4vbijksY.en.vtt"
+          ],
+          "caption_available": true
+        }
+      ],
+      "other_tabs": {
+        "shorts": {
+          "status": "fetched",
+          "reported_count": 294,
+          "entries_fetched": 294,
+          "listing_complete_by_reported_count": true
+        },
+        "streams": {
+          "status": "tab unavailable",
+          "detail": "ERROR: [youtube:tab] @thevisionarygrouptx: This channel does not have a streams tab"
+        }
+      }
+    },
+    "seenarez": {
+      "label": "Seena Rez",
+      "channel_id": "UC8Au7B1AMsnFC6ZTvq6-lzw",
+      "videos_tab_url": "https://www.youtube.com/@seenarez/videos",
+      "playlist_reported_count": 3,
+      "flat_entries_fetched": 3,
+      "detailed_metadata_records": 3,
+      "flat_listing_complete_by_reported_count": true,
+      "detailed_ids_match_flat_listing": true,
+      "metadata_fields": {
+        "with_title": 3,
+        "with_view_count": 3,
+        "with_upload_date": 3,
+        "with_duration": 3,
+        "with_description": 3
+      },
+      "caption_selection_count": 3,
+      "caption_files_available": 3,
+      "caption_status": [
+        {
+          "video_id": "5FokzkHTpc0",
+          "metadata_found": true,
+          "caption_files": [
+            "5FokzkHTpc0.en-orig.vtt",
+            "5FokzkHTpc0.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "eF59p8zhbLM",
+          "metadata_found": true,
+          "caption_files": [
+            "eF59p8zhbLM.en-orig.vtt",
+            "eF59p8zhbLM.en.vtt"
+          ],
+          "caption_available": true
+        },
+        {
+          "video_id": "cZ-Gsow_ULo",
+          "metadata_found": true,
+          "caption_files": [
+            "cZ-Gsow_ULo.en-orig.vtt",
+            "cZ-Gsow_ULo.en.vtt"
+          ],
+          "caption_available": true
+        }
+      ],
+      "other_tabs": {
+        "shorts": {
+          "status": "tab unavailable",
+          "detail": "ERROR: [youtube:tab] @seenarez: This channel does not have a shorts tab"
+        },
+        "streams": {
+          "status": "tab unavailable",
+          "detail": "ERROR: [youtube:tab] @seenarez: This channel does not have a streams tab"
+        }
+      }
+    }
+  }
+}

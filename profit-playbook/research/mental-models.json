@@ -1,0 +1,854 @@
+[
+  {
+    "id": "MODEL-01",
+    "title": "Triangulate clues before commitment",
+    "description": "Independent signals narrow a hypothesis; they still do not prove that customers will pay.",
+    "source_video_ids": [
+      "5FokzkHTpc0"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=5FokzkHTpc0"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Combine research clues.",
+    "our_adaptation": "Use search, actual use and buyer discussion to choose a test. Count reused viral content as one clue, not three.",
+    "clothing": "Compare original quiet motifs using wearer interviews, relevant store offers and observed everyday wardrobes.",
+    "physical": "For a compact desk organiser, compare actual messy setups, existing prices and complaint patterns.",
+    "ai_commerce": "Keep shopper requests, accessible product facts and observed answer inclusion separate.",
+    "saas": "Check a merchant's repeated catalogue errors, native tools and paid workarounds before choosing a feature.",
+    "question": "Which independent observation would kill this idea?",
+    "test": "Record three independent clues and one plausible contradiction for each of three candidates; buy a sample only after identifying the unresolved purchase question.",
+    "trap": "Treating a trend chart, reposts and a creator's video about that chart as independent demand evidence.",
+    "decision_ids": [
+      "PROD-01",
+      "PROD-03",
+      "PROD-05",
+      "PROD-06",
+      "PROD-10",
+      "SAAS-01"
+    ]
+  },
+  {
+    "id": "MODEL-02",
+    "title": "Translate identity into observable choices",
+    "description": "An identity proposition becomes useful when a buyer can recognize it in the product and decide when to use it.",
+    "source_video_ids": [
+      "V77dzdX8uQs",
+      "XtCBHC8cw7k"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=V77dzdX8uQs",
+      "https://www.youtube.com/watch?v=XtCBHC8cw7k"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Premium buyers share standards.",
+    "our_adaptation": "Specify a buyer's desired use and tradeoffs instead of assuming that wealth or fandom guarantees a premium purchase.",
+    "clothing": "Test whether a charcoal crew feels suitable for ordinary outings to adults who want subtle fantasy references.",
+    "physical": "Choose between discreet home utility and expressive desk decoration through observed settings.",
+    "ai_commerce": "Describe the product's actual style and use so a buyer can compare it against a request.",
+    "saas": "Target the operator who owns repeated data mistakes and needs a clear action list.",
+    "question": "What would this person refuse to wear, use or buy?",
+    "test": "Show two plainly labelled concepts to five relevant people; ask where each fits, what they dislike and which alternative they currently use.",
+    "trap": "Inventing a buyer persona that simply restates the founder's own taste.",
+    "decision_ids": [
+      "BRAND-01",
+      "BRAND-03",
+      "BRAND-04",
+      "BRAND-05",
+      "BRAND-09",
+      "PROD-02",
+      "PROD-04",
+      "CREATIVE-04"
+    ]
+  },
+  {
+    "id": "MODEL-03",
+    "title": "Translate a promise into production constraints",
+    "description": "A visual concept is an incomplete product brief until it specifies how the promise survives manufacturing.",
+    "source_video_ids": [
+      "5FokzkHTpc0"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=5FokzkHTpc0"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Document product specifications.",
+    "our_adaptation": "Convert the desired impression into supplier-readable constraints and acceptance checks before polishing mockups.",
+    "clothing": "Specify actual thread colours, design size, placement and readable detail for the two/three-colour embroidery.",
+    "physical": "Specify dimensions, load, contact surfaces and included components for a small organiser.",
+    "ai_commerce": "Keep the accepted production facts consistent across page, markup and feed.",
+    "saas": "Make each diagnostic rule state its input, supported platform, expected output and failure case.",
+    "question": "Which production detail could destroy the apparent benefit?",
+    "test": "Write a one-page specification; have the supplier flag unsuitable details; inspect the sample against the same checklist.",
+    "trap": "Mistaking a convincing render or supplier's generic quality assurance for an accepted finished product.",
+    "decision_ids": [
+      "OPS-02",
+      "OPS-03",
+      "OPS-04",
+      "OPS-08",
+      "OPS-11",
+      "PROD-11",
+      "AI-02",
+      "BRAND-02"
+    ]
+  },
+  {
+    "id": "MODEL-04",
+    "title": "Inspect the object before writing its story",
+    "description": "Personal handling supplies failure evidence that product clips and supplier claims can conceal.",
+    "source_video_ids": [
+      "eF59p8zhbLM"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=eF59p8zhbLM"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Order and inspect first.",
+    "our_adaptation": "Use the sample to choose truthful demonstrations and expose reasons to abandon the product.",
+    "clothing": "Measure, wear and wash the actual crew before claims about fit, softness or durable embroidery.",
+    "physical": "Try the organiser in a realistic setup; inspect instability, awkward reach and unwanted marks.",
+    "ai_commerce": "Photograph and record only attributes confirmed on the offered variant.",
+    "saas": "Run a manual audit on permitted real merchant data before promising automated detection.",
+    "question": "What did the physical or working sample change your mind about?",
+    "test": "Record three promised uses and attempt each; reject any unsupported central benefit before production or marketing spend.",
+    "trap": "Calling an unboxing a quality test.",
+    "decision_ids": [
+      "OPS-05",
+      "OPS-06",
+      "PROD-11",
+      "AI-08",
+      "BRAND-06",
+      "CREATIVE-02"
+    ]
+  },
+  {
+    "id": "MODEL-05",
+    "title": "Ask whether the benefit can be demonstrated",
+    "description": "A demonstration should help a buyer inspect the relevant change, not merely create a watchable transformation.",
+    "source_video_ids": [
+      "eF59p8zhbLM",
+      "vTWoMrtz_xM"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=eF59p8zhbLM",
+      "https://www.youtube.com/watch?v=vTWoMrtz_xM"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Show the product working.",
+    "our_adaptation": "Choose evidence visible in ordinary conditions and show the limitations along with the successful use.",
+    "clothing": "Show scale, stitching and a real wearer rather than a fictional garment transformation.",
+    "physical": "Show the same desk before and after installation with an unchanged camera position.",
+    "ai_commerce": "Add comparison images and exact dimensions that remain meaningful outside the video.",
+    "saas": "Show a real price mismatch detected, corrected and checked again in a named environment.",
+    "question": "Which part of the claimed benefit can the buyer independently inspect?",
+    "test": "Ask five people to explain the benefit after a silent 15-second demonstration; revise if they describe an effect the product does not provide.",
+    "trap": "A dramatic edit implying durability, compatibility or outcomes that were never tested.",
+    "decision_ids": [
+      "CREATIVE-03",
+      "CREATIVE-05",
+      "CREATIVE-09",
+      "STORE-02",
+      "AI-08",
+      "BRAND-07"
+    ]
+  },
+  {
+    "id": "MODEL-06",
+    "title": "Separate concept from execution",
+    "description": "The reason to buy and the way it is filmed are separate uncertainties; varying both hides the lesson.",
+    "source_video_ids": [
+      "B-gcx38_Xiw",
+      "y2Kad3L-MCg",
+      "cZ-Gsow_ULo"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=B-gcx38_Xiw",
+      "https://www.youtube.com/watch?v=y2Kad3L-MCg",
+      "https://www.youtube.com/watch?v=cZ-Gsow_ULo"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Separate angles from execution.",
+    "our_adaptation": "Test buyer reasons first with comparable simple executions, then improve the surviving reason's presentation.",
+    "clothing": "Compare everyday subtlety with original fantasy artistry using the same real garment shots.",
+    "physical": "Compare cleaner setup with easier access using the same organiser demonstration.",
+    "ai_commerce": "Test which concrete product facts answer a request before experimenting with prose formats.",
+    "saas": "Compare time saved with errors prevented using the same scoped manual report.",
+    "question": "Did the message fail, or did the viewer fail to understand the presentation?",
+    "test": "Run three distinct concepts with one common format; record comprehension and qualified intent, then make two executions of the strongest concept.",
+    "trap": "Twenty hook rewrites of one unconvincing offer counted as twenty independent ideas.",
+    "decision_ids": [
+      "CREATIVE-01",
+      "CREATIVE-04",
+      "CREATIVE-07",
+      "CREATIVE-08",
+      "MEASURE-09"
+    ]
+  },
+  {
+    "id": "MODEL-07",
+    "title": "Match proof to the purchase doubt",
+    "description": "Different doubts need different evidence. An attractive person wearing something does not establish its durability.",
+    "source_video_ids": [
+      "V77dzdX8uQs"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=V77dzdX8uQs"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Match proof to promise.",
+    "our_adaptation": "Name the exact doubt and provide evidence capable of reducing it; keep sample tests separate from customer reviews.",
+    "clothing": "Use measured fit and wash evidence for garment uncertainty; real buyer accounts only for actual ownership experience.",
+    "physical": "Use a load or compatibility test for function and an actual user's experience for usability.",
+    "ai_commerce": "Expose measured facts, test conditions and genuine review provenance.",
+    "saas": "Offer a reproducible defect record for detection claims and a paying operator's renewal for ongoing value.",
+    "question": "What precise doubt does this evidence answer?",
+    "test": "Ask five prospects for their main unanswered objection, then add one matching proof item and ask whether the objection changed.",
+    "trap": "Using generic testimonials, follower counts or borrowed celebrity images as universal reassurance.",
+    "decision_ids": [
+      "BRAND-06",
+      "CREATIVE-02",
+      "CREATIVE-06",
+      "CREATIVE-10",
+      "AI-08",
+      "STORE-03"
+    ]
+  },
+  {
+    "id": "MODEL-08",
+    "title": "Evidence must support the exact claim",
+    "description": "A source supporting a broad mechanism does not automatically support the offered product, dose, material or outcome.",
+    "source_video_ids": [
+      "cZ-Gsow_ULo"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=cZ-Gsow_ULo"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Find supporting research.",
+    "our_adaptation": "Audit the scope of any factual claim. Delete claims whose evidence stops before the buyer's actual situation.",
+    "clothing": "A fabric certificate does not prove every decoration is skin-friendly or that the crew lasts years.",
+    "physical": "A category study does not prove this device's safety, performance or compatibility.",
+    "ai_commerce": "State the tested model, variant and condition instead of expanding a general claim in AI-written copy.",
+    "saas": "A local benchmark supports only that harness; it cannot certify live assistant ranking or sales lift.",
+    "question": "Does the evidence cover this exact object and promised outcome?",
+    "test": "Create a claim-to-evidence table for the page; narrow or remove every claim without directly relevant support.",
+    "trap": "Treating the presence of a study, authority or benchmark as permission for a stronger sales claim.",
+    "decision_ids": [
+      "AI-03",
+      "AI-09",
+      "AI-10",
+      "BRAND-08",
+      "BRAND-10",
+      "OPS-01",
+      "OPS-11",
+      "SAAS-09"
+    ]
+  },
+  {
+    "id": "MODEL-09",
+    "title": "Attention is an upstream event",
+    "description": "Watching is a different action from wanting this offer at its delivered price; audience quality changes the economics.",
+    "source_video_ids": [
+      "5FokzkHTpc0"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=5FokzkHTpc0"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Retarget engaged viewers.",
+    "our_adaptation": "Check the next meaningful action before paying to revisit an audience. Consent, platform rules and attribution need separate checks.",
+    "clothing": "A motif animation may attract artists without attracting buyers of a £72 crew.",
+    "physical": "A satisfying organiser clip may attract viewers who already solved the problem cheaply.",
+    "ai_commerce": "An answer mention supplies no evidence of a visit, kept order or contribution.",
+    "saas": "A popular audit post supplies no evidence that operators will connect data or pay.",
+    "question": "Who took a purchase-relevant action after watching?",
+    "test": "Tag a simple product page and compare price-aware enquiries or kept orders from each concept; record unknown attribution honestly.",
+    "trap": "Calling high completion rates a warm buying audience.",
+    "decision_ids": [
+      "MEASURE-02",
+      "MEASURE-03",
+      "MEASURE-05",
+      "DIST-02",
+      "DIST-03",
+      "DIST-09",
+      "DIST-12",
+      "CREATIVE-12"
+    ]
+  },
+  {
+    "id": "MODEL-10",
+    "title": "Use distribution to extend a useful test",
+    "description": "Cheap organic reach can screen presentation, but paid distribution introduces a different audience and a real acquisition cost.",
+    "source_video_ids": [
+      "eF59p8zhbLM"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=eF59p8zhbLM"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Screen organic before paid.",
+    "our_adaptation": "Buy a bounded additional observation only when the offer and measurement can answer it; include production time in the cost.",
+    "clothing": "Try a strong real-sample clip organically, then consider a capped test against the crew's after-labor contribution.",
+    "physical": "Test one useful demonstration before paying to scale views of a generic product.",
+    "ai_commerce": "Improve factual eligibility first; paid shopping performance does not prove organic AI inclusion.",
+    "saas": "Test a scoped audit offer manually before a recurring promotion budget.",
+    "question": "What uncertainty will the next pound resolve?",
+    "test": "Write a spend ceiling, target buyer, meaningful event and stop rule before any future ad test; no spend is authorized by this dossier.",
+    "trap": "Taking a viral post as permission for unlimited acquisition.",
+    "decision_ids": [
+      "DIST-01",
+      "DIST-04",
+      "DIST-05",
+      "DIST-07",
+      "DIST-08",
+      "DIST-11",
+      "DIST-12",
+      "PROD-10"
+    ]
+  },
+  {
+    "id": "MODEL-11",
+    "title": "Diagnose the current constraint",
+    "description": "A tactic that helped a large brand may target a constraint the small business does not yet have.",
+    "source_video_ids": [
+      "DdLjsQVgy-E"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=DdLjsQVgy-E"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Growth mechanisms differ by brand.",
+    "our_adaptation": "Find the first broken step in this business before borrowing a founder audience, celebrity endorsement or retention programme.",
+    "clothing": "First resolve whether the sample and price fit the buyer; loyalty tools cannot repair that uncertainty.",
+    "physical": "Resolve function and delivered economics before multiplying creator placements.",
+    "ai_commerce": "Fix blocked pages or contradictory variant facts before buying a visibility dashboard.",
+    "saas": "Resolve a repeated payable workflow before designing a referral programme.",
+    "question": "Which necessary step currently has the weakest evidence?",
+    "test": "Draw five steps from discovery to retained contribution; attach observations to each and fund only the earliest material uncertainty.",
+    "trap": "Copying a case study's visible tactic while ignoring its capital, audience, category and stage.",
+    "decision_ids": [
+      "PROD-01",
+      "PROD-12",
+      "OPS-10",
+      "DIST-10",
+      "SAAS-11",
+      "SAAS-12",
+      "AI-06"
+    ]
+  },
+  {
+    "id": "MODEL-12",
+    "title": "Make the alternative explicit",
+    "description": "A narrow reason to choose is easier to test when the buyer can compare it with what they currently do.",
+    "source_video_ids": [
+      "TJ45V9hfe4A"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=TJ45V9hfe4A"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Clarify a specific alternative.",
+    "our_adaptation": "Name the substitute and a verifiable tradeoff without inventing an enemy or unsupported superiority.",
+    "clothing": "Compare original restrained art with louder licensed-style graphic apparel through actual product attributes.",
+    "physical": "Compare one organiser with an improvised cable tie or drawer rather than all desk products.",
+    "ai_commerce": "Explain measured compatibility, total cost and limitations beside the obvious competing option.",
+    "saas": "Compare a scoped mismatch report with native diagnostics and manual spreadsheet work.",
+    "question": "What existing solution would the buyer give up?",
+    "test": "Ask five prospects to show their current substitute, then make one truthful comparison addressing the largest remaining dissatisfaction.",
+    "trap": "A challenger identity built from insults or comparisons the product cannot substantiate.",
+    "decision_ids": [
+      "PROD-04",
+      "BRAND-01",
+      "BRAND-09",
+      "AI-07",
+      "SAAS-01",
+      "SAAS-03"
+    ]
+  },
+  {
+    "id": "MODEL-13",
+    "title": "Keep the promise intact across the journey",
+    "description": "A visitor should find the same specific offer after the click; every mismatch creates a new explanation burden.",
+    "source_video_ids": [
+      "TJ45V9hfe4A",
+      "g8lSZJ-lixw",
+      "FW3RETboCPQ"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=TJ45V9hfe4A",
+      "https://www.youtube.com/watch?v=g8lSZJ-lixw",
+      "https://www.youtube.com/watch?v=FW3RETboCPQ"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Carry the same reason through.",
+    "our_adaptation": "Audit the promise as it moves between creative, page, checkout and fulfillment.",
+    "clothing": "A video about subtle embroidered artwork must land on that real crew and its delivered price.",
+    "physical": "An ad showing a two-part organiser must lead to the same pack quantity and dimensions.",
+    "ai_commerce": "Ensure the selected variant, price, stock and policy agree across feed and page.",
+    "saas": "Keep the audit demo, plan limits and delivered report aligned.",
+    "question": "Where does a buyer's expectation first diverge from reality?",
+    "test": "Have a fresh reviewer follow one journey and write expected versus actual product, cost, timing and result at each step.",
+    "trap": "Improving each asset separately while allowing them to promise different things.",
+    "decision_ids": [
+      "STORE-01",
+      "STORE-04",
+      "STORE-05",
+      "STORE-06",
+      "AI-02",
+      "AI-04",
+      "AI-05",
+      "OPS-06"
+    ]
+  },
+  {
+    "id": "MODEL-14",
+    "title": "Give each page one decision job",
+    "description": "A homepage can orient an unfamiliar visitor; an intent-specific page can answer a focused purchase question.",
+    "source_video_ids": [
+      "I2gDKOZBJp8"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=I2gDKOZBJp8"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Homepage and landing pages differ.",
+    "our_adaptation": "Choose the next useful decision for the visitor before adding sections or tools.",
+    "clothing": "Use the homepage to explain the original quiet-fantasy brand; use the crew page for real fit, price and delivery evidence.",
+    "physical": "Let a compatibility query land on the relevant model and exclusions.",
+    "ai_commerce": "Expose a stable product URL with complete facts rather than hiding decisions in navigation.",
+    "saas": "Let an operator evaluate the specific catalogue audit, scope and sample output.",
+    "question": "What should this visitor be able to decide after this page?",
+    "test": "Run a five-person task walkthrough; record whether each can identify product, suitability, total cost and next action without assistance.",
+    "trap": "A beautiful homepage asked to answer every campaign, support and checkout question.",
+    "decision_ids": [
+      "STORE-07",
+      "STORE-08",
+      "STORE-09",
+      "STORE-10",
+      "AI-01",
+      "AI-06",
+      "SAAS-05"
+    ]
+  },
+  {
+    "id": "MODEL-15",
+    "title": "Order evidence by unresolved objections",
+    "description": "More content is useful only when it answers the next doubt blocking a decision.",
+    "source_video_ids": [
+      "I2gDKOZBJp8"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=I2gDKOZBJp8"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Education should answer objections.",
+    "our_adaptation": "Collect actual confusion before writing FAQs, emails or a long sales page. Resolve the highest-risk doubt first.",
+    "clothing": "Place garment measurements and real embroidery close-ups ahead of vague brand philosophy when fit and quality are the concerns.",
+    "physical": "Explain exact compatibility before describing the founder's design journey.",
+    "ai_commerce": "Put included parts, material and exclusions in readable product text.",
+    "saas": "Explain access needs, supported channels and report limits before a long AI narrative.",
+    "question": "What is the visitor still unable to determine?",
+    "test": "Ask five people to attempt a purchase decision and speak their doubts; rewrite the first three unresolved answers, then repeat.",
+    "trap": "Adding an FAQ full of questions that customers never asked.",
+    "decision_ids": [
+      "CREATIVE-10",
+      "STORE-01",
+      "STORE-03",
+      "STORE-04",
+      "STORE-05",
+      "STORE-12",
+      "AI-01",
+      "AI-07"
+    ]
+  },
+  {
+    "id": "MODEL-16",
+    "title": "Model the whole delivered offer",
+    "description": "Discounts, bonuses and bundles change both what the buyer gets and what the business keeps.",
+    "source_video_ids": [
+      "kWB-LrCXq2s"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=kWB-LrCXq2s"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Evaluate the delivered offer.",
+    "our_adaptation": "Count every cost and define the buyer's actual receipt before testing any offer mechanic.",
+    "clothing": "Compare a £72 delivered crew with a bundle only after costs, fees, return scenarios and labor are included.",
+    "physical": "Compare one organiser and a multi-pack against true handling, shipping and replacement costs.",
+    "ai_commerce": "Keep displayed prices and shipping policies consistent with the actual charge.",
+    "saas": "Compare a £49 scoped plan with included checks, support minutes and retries costed.",
+    "question": "What contribution remains if the buyer takes every included benefit?",
+    "test": "Build an offer ledger for two candidates; stress-test refunds and cost overruns; reject any candidate with non-positive contribution before acquisition.",
+    "trap": "Judging a free gift or discount by revenue while ignoring its delivery and support burden.",
+    "decision_ids": [
+      "PRICE-01",
+      "PRICE-02",
+      "PRICE-03",
+      "PRICE-04",
+      "PRICE-05",
+      "PRICE-10",
+      "PRICE-11",
+      "BRAND-11"
+    ]
+  },
+  {
+    "id": "MODEL-17",
+    "title": "Set acquisition limits from retained contribution",
+    "description": "The maximum affordable acquisition cost is a constraint, not a target and not proof of conversion.",
+    "source_video_ids": [
+      "kWB-LrCXq2s"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=kWB-LrCXq2s"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Set an affordable CAC.",
+    "our_adaptation": "Leave a deliberate allowance for fixed costs and profit; calculate using kept customers and all acquisition inputs.",
+    "clothing": "Use the current modeled £26.03 crew after-labor contribution only as a scenario ceiling, then reserve room below it.",
+    "physical": "A cheaper item may have less acquisition room despite lower purchase friction.",
+    "ai_commerce": "A paid channel sale must meet its own margin test regardless of AI visibility.",
+    "saas": "Include sales calls, onboarding and support when estimating the first paid account's contribution.",
+    "question": "How much can acquisition cost before this retained order loses money?",
+    "test": "Calculate break-even and chosen target CAC separately; record gifts, commissions, content rights and spend in the same ledger.",
+    "trap": "Using headline ROAS or a rival's CAC as the store's own affordability rule.",
+    "decision_ids": [
+      "PRICE-07",
+      "PRICE-08",
+      "DIST-06",
+      "PRICE-12",
+      "SAAS-06",
+      "SAAS-10"
+    ]
+  },
+  {
+    "id": "MODEL-18",
+    "title": "Wait for costs that arrive later",
+    "description": "An early sale can look profitable before its refund, replacement or support workload becomes visible.",
+    "source_video_ids": [
+      "vI_Np8RQikw",
+      "q4cExahXE-0"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=vI_Np8RQikw",
+      "https://www.youtube.com/watch?v=q4cExahXE-0"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Track realized cohort value.",
+    "our_adaptation": "Keep provisional and mature contribution separate; choose a maturity window appropriate to the product and policy.",
+    "clothing": "Revisit each order after the applicable cancellation and return period, including replacements.",
+    "physical": "Separate defect returns from changed-mind returns to identify different fixes.",
+    "ai_commerce": "A channel-reported purchase remains provisional until merchant settlement and return reconciliation.",
+    "saas": "Measure renewal and support by join month instead of projecting lifetime value from one payment.",
+    "question": "Which costs have not had time to appear?",
+    "test": "Maintain cohort rows with receipt, fulfillment, fees, refunds, labor and acquisition; mark unfinished windows explicitly.",
+    "trap": "Scaling from launch-week revenue while later losses remain unobserved.",
+    "decision_ids": [
+      "PRICE-06",
+      "PROD-09",
+      "MEASURE-01",
+      "MEASURE-04",
+      "OPS-07",
+      "OPS-12",
+      "SAAS-04"
+    ]
+  },
+  {
+    "id": "MODEL-19",
+    "title": "Profit and available cash use different clocks",
+    "description": "Positive unit contribution cannot pay an invoice before the payout arrives.",
+    "source_video_ids": [
+      "vI_Np8RQikw"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=vI_Np8RQikw"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Watch cash while scaling.",
+    "our_adaptation": "Model payment timing and the worst affordable short gap separately from expected margin.",
+    "clothing": "Reserve cash for supplier orders and refunds during payout delays.",
+    "physical": "Check inventory deposits and replacement shipment timing before accepting a larger batch.",
+    "ai_commerce": "Reconcile channel order exports, fees and settlement timing when checkout occurs elsewhere.",
+    "saas": "Annual receipts can hide months of continuing service obligations; earmark the cost to deliver them.",
+    "question": "What payment comes due before the corresponding money is usable?",
+    "test": "Make a dated cash schedule for a small order burst and one refund scenario; cap volume at the reserve actually available.",
+    "trap": "Spending gross receipts because the contribution spreadsheet is positive.",
+    "decision_ids": [
+      "OPS-09",
+      "PRICE-09",
+      "PRICE-12",
+      "OPS-12",
+      "SAAS-10"
+    ]
+  },
+  {
+    "id": "MODEL-20",
+    "title": "Separate first purchase from repeat purchase",
+    "description": "Existing buyers and new buyers answer different questions about acquisition and business durability.",
+    "source_video_ids": [
+      "-P3I2vUfrAo",
+      "uUi4vbijksY"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=-P3I2vUfrAo",
+      "https://www.youtube.com/watch?v=uUi4vbijksY"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Measure new customers separately.",
+    "our_adaptation": "Use customer-level records where permitted and keep uncertain identity matches unknown.",
+    "clothing": "A returning supporter buying the second motif does not establish profitable cold acquisition.",
+    "physical": "A replacement or extra pack is different from a first customer's initial order.",
+    "ai_commerce": "Track channel-assisted orders without assuming every cited product creates a new customer.",
+    "saas": "Separate first paid activation, renewal and expansion in the account ledger.",
+    "question": "Did this tactic acquire a customer or monetize someone already acquired?",
+    "test": "Report new kept customers, repeat kept orders and contribution separately for each experiment window.",
+    "trap": "Letting existing-customer revenue make an unprofitable new-customer campaign look successful.",
+    "decision_ids": [
+      "MEASURE-04",
+      "MEASURE-06",
+      "MEASURE-10",
+      "DIST-12",
+      "SAAS-04"
+    ]
+  },
+  {
+    "id": "MODEL-21",
+    "title": "Fit retention to the natural use cycle",
+    "description": "Repeat buying depends on the product's real replacement or continuing-service need; it should not be assumed from another category.",
+    "source_video_ids": [
+      "mrgPgi048pw"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=mrgPgi048pw"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Choose the business model first.",
+    "our_adaptation": "Estimate why and when a buyer would need another purchase before building subscriptions, email volume or projected LTV.",
+    "clothing": "A durable crew needs a new compelling design or a different occasion; assume no replenishment until observed.",
+    "physical": "A lasting organiser may be a one-off sale; expansion packs need a distinct use.",
+    "ai_commerce": "A helpful discovery channel does not create repeat need for the product it recommends.",
+    "saas": "A catalogue changes repeatedly; test whether new defects and time saved justify another paid audit.",
+    "question": "What recurring event would make buying again sensible?",
+    "test": "Map the actual use cycle with five users; test a second paid task or purchase only when that need occurs.",
+    "trap": "Borrowing consumable subscription economics for clothing, durable goods or a one-time software report.",
+    "decision_ids": [
+      "SAAS-07",
+      "PROD-07",
+      "PROD-09",
+      "STORE-11",
+      "STORE-12",
+      "BRAND-05"
+    ]
+  },
+  {
+    "id": "MODEL-22",
+    "title": "Repair the research brief before generating more",
+    "description": "AI output cannot supply missing customer evidence by producing more fluent variations.",
+    "source_video_ids": [
+      "Vz_wxOpYaWw"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=Vz_wxOpYaWw"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Research before prompting.",
+    "our_adaptation": "Require an observed problem, a concrete offer, available proof and a forbidden-claims list in each creative brief.",
+    "clothing": "Supply actual wearer comments, sample facts and the artwork's intent before asking for hooks.",
+    "physical": "Supply recorded setup friction and a verified demonstration.",
+    "ai_commerce": "Give the model a controlled product record and original source links.",
+    "saas": "Use permitted merchant examples and measured audit effort when drafting an offer.",
+    "question": "Which sentence in the brief depends on an unverified assumption?",
+    "test": "Write one brief by hand, mark uncertain inputs, then use AI for three different buyer reasons; reject any draft that invents facts.",
+    "trap": "Asking a model to discover an audience and then treating its invented audience as research.",
+    "decision_ids": [
+      "CREATIVE-07",
+      "BRAND-08",
+      "OPS-11",
+      "SAAS-08"
+    ]
+  },
+  {
+    "id": "MODEL-23",
+    "title": "Translate features into a buyer consequence",
+    "description": "A feature matters commercially only if the intended buyer understands what it lets them do or avoid.",
+    "source_video_ids": [
+      "Vz_wxOpYaWw"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=Vz_wxOpYaWw"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Ask why the claim matters.",
+    "our_adaptation": "Connect each true feature to a specific use, then ask the buyer whether that consequence matters enough to affect choice.",
+    "clothing": "Explain a restrained motif through everyday outfit use; test whether the wearer actually values that freedom.",
+    "physical": "Connect dimensions to the user's available desk space and reach.",
+    "ai_commerce": "State compatibility, included parts and total delivered cost in decision language.",
+    "saas": "Connect mismatch detection to fewer manual checks or preventable price errors.",
+    "question": "What changes for this buyer because this feature exists?",
+    "test": "For five important features, write one consequence and ask prospects to rank its importance against price and their current alternative.",
+    "trap": "Inflating every feature into an emotional transformation the buyer never requested.",
+    "decision_ids": [
+      "CREATIVE-01",
+      "CREATIVE-11",
+      "CREATIVE-12",
+      "BRAND-04",
+      "SAAS-03",
+      "SAAS-06"
+    ]
+  },
+  {
+    "id": "MODEL-24",
+    "title": "Spend on distinct questions before cosmetic variants",
+    "description": "Creative variety is useful when it probes different buyer reasons; more assets alone can exceed the business's capacity to learn.",
+    "source_video_ids": [
+      "hkxEfhGDlkc"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=hkxEfhGDlkc"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Vary concepts, not cosmetic details.",
+    "our_adaptation": "Treat agency production volumes as unsuitable defaults. Buy the smallest set of assets that separates meaningful hypotheses.",
+    "clothing": "Test subtle daily wear, visible craft and original lore as different reasons before producing twenty similar edits.",
+    "physical": "Test reduced clutter and easier access separately.",
+    "ai_commerce": "Test dimensions, compatibility and price completeness as distinct information defects.",
+    "saas": "Test operator time saved and error recovery as separate paid jobs.",
+    "question": "How many different uncertainties does this asset set actually test?",
+    "test": "Give each asset a unique hypothesis and planned observation; remove assets that ask the same question without enough traffic to compare execution.",
+    "trap": "Calling slight crop, music or opening-word changes an evidence-backed creative strategy.",
+    "decision_ids": [
+      "CREATIVE-08",
+      "MEASURE-07",
+      "MEASURE-08",
+      "MEASURE-09",
+      "BRAND-07"
+    ]
+  },
+  {
+    "id": "MODEL-25",
+    "title": "Use service to help and diagnose",
+    "description": "Post-purchase communication can improve correct use and reveal which promises did not survive delivery.",
+    "source_video_ids": [
+      "LcF0ZaYgPJQ"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=LcF0ZaYgPJQ"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Help customers after purchase.",
+    "our_adaptation": "Design a small, useful service sequence and log defects; referral effects remain hypotheses until measured.",
+    "clothing": "Send accurate care instructions and delivery updates; ask about fit and embroidery after real use.",
+    "physical": "Explain setup and limits, then ask about wobble, compatibility or damage.",
+    "ai_commerce": "Make fulfillment facts match channel claims and trace stale information complaints.",
+    "saas": "Deliver a fix list, verify the merchant's correction and ask what remains hard.",
+    "question": "What must the buyer know to receive the promised value?",
+    "test": "Use one confirmation, needed delivery notices and one timed feedback request; record contacts, corrections and resolved problems.",
+    "trap": "Copying a supplement brand's repeated email cadence or requesting praise before the customer can judge the item.",
+    "decision_ids": [
+      "STORE-11",
+      "OPS-07",
+      "CREATIVE-11",
+      "SAAS-04",
+      "SAAS-05",
+      "SAAS-08"
+    ]
+  },
+  {
+    "id": "MODEL-26",
+    "title": "Prefer contribution per visitor to conversion alone",
+    "description": "A page can produce more orders while leaving less money after discounts and delivery costs.",
+    "source_video_ids": [
+      "oNN_iOt_xZE"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=oNN_iOt_xZE"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Look beyond conversion rate.",
+    "our_adaptation": "Use revenue per visitor as an intermediate measure, then account for retained contribution and uncertainty.",
+    "clothing": "A discount that raises crew conversion can still reduce kept contribution per visitor.",
+    "physical": "A bundle can raise basket value while increasing shipping or returns.",
+    "ai_commerce": "A citation or click must eventually be connected to retained merchant value before a commercial claim.",
+    "saas": "A higher free-to-paid rate can coexist with costly support and lower contribution per account.",
+    "question": "Did the page change leave more retained contribution for the same opportunity?",
+    "test": "Compare full-price and proposed offers using costed scenarios first; in a later valid test record visitors, kept orders, contribution and confidence limits.",
+    "trap": "Selecting a conversion winner because its acquisition and fulfillment costs are on a different dashboard.",
+    "decision_ids": [
+      "MEASURE-04",
+      "MEASURE-07",
+      "MEASURE-10",
+      "PRICE-04",
+      "PRICE-05",
+      "AI-11"
+    ]
+  },
+  {
+    "id": "MODEL-27",
+    "title": "Keep AI conclusions attached to source facts",
+    "description": "AI-assisted research becomes reviewable when another person can recover the input fact, date and uncertainty.",
+    "source_video_ids": [
+      "ig5HZk_rwMQ"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=ig5HZk_rwMQ"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Give AI source material.",
+    "our_adaptation": "Store source-level evidence and check important outputs against it; a model's confidence is not verification.",
+    "clothing": "Trace fibre, production and care claims to the selected SKU and sample.",
+    "physical": "Verify supplier identity, dimensions and safety evidence independently of a generated product shortlist.",
+    "ai_commerce": "Maintain the exact source for every page/feed fact and log corrections.",
+    "saas": "Return source URL, observed field, rule, timestamp and suggested action in each diagnostic.",
+    "question": "Can a reviewer reproduce this conclusion from its cited inputs?",
+    "test": "Manually audit ten generated statements; fail the workflow on any unsupported material claim and repair the source handling before automation.",
+    "trap": "A polished AI analysis silently mixing a fake demo, obsolete source and live merchant facts.",
+    "decision_ids": [
+      "AI-02",
+      "AI-05",
+      "AI-09",
+      "AI-10",
+      "AI-12",
+      "OPS-11",
+      "SAAS-09",
+      "SAAS-11",
+      "MEASURE-11",
+      "MEASURE-12"
+    ]
+  },
+  {
+    "id": "MODEL-28",
+    "title": "Write the next stop decision before spending",
+    "description": "A test needs a result that can end the idea, not only a reason to keep improving it.",
+    "source_video_ids": [
+      "WeMxfWQ-Uwk",
+      "UN4vpR3owOM",
+      "1Tp9VBVYPDY"
+    ],
+    "source_urls": [
+      "https://www.youtube.com/watch?v=WeMxfWQ-Uwk",
+      "https://www.youtube.com/watch?v=UN4vpR3owOM",
+      "https://www.youtube.com/watch?v=1Tp9VBVYPDY"
+    ],
+    "evidence_status": "transcript-reviewed creator teaching; applications, thresholds and tests are analyst hypotheses",
+    "creator_teaching": "Fix bottlenecks before scaling.",
+    "our_adaptation": "This stop rule is our adaptation: specify what success, failure and inconclusive evidence permit, including a maximum cash and time loss.",
+    "clothing": "Stop a sample path if the stitch test fails or buyers reject both tested prices; diagnose one material issue before repeating.",
+    "physical": "Stop if useful function or safe economics depend on unsupported attributes.",
+    "ai_commerce": "Stop speculative ranking work when the observable outcome is only eligibility or unstable mentions.",
+    "saas": "Stop a pilot if support exceeds its contribution or the merchant declines a second useful paid task.",
+    "question": "What result would make further work a bad use of the next pound?",
+    "test": "Before a test write its decision, cost ceiling, deadline and one allowed revision; log inconclusive separately and spend again only for a named unresolved question.",
+    "trap": "Reframing every failure as an invitation to add features, variants, content or traffic.",
+    "decision_ids": [
+      "PROD-05",
+      "PROD-08",
+      "MEASURE-08",
+      "MEASURE-12",
+      "SAAS-02",
+      "SAAS-10",
+      "SAAS-12",
+      "OPS-10",
+      "BRAND-12"
+    ]
+  }
+]

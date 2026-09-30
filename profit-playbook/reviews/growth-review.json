@@ -1,0 +1,689 @@
+[
+  {
+    "id": "CREATIVE-01",
+    "verdict": "modify",
+    "reason": "The specific, verifiable opening is a sound default. A second opening-line comparison would compete with the more consequential framing question selected in CREATIVE-04.",
+    "changes": [
+      "Use a clear product/use sentence in both initial framing variants.",
+      "Remove the separate two-cycle opening test; retain it as a later candidate if an observed misunderstanding warrants it."
+    ],
+    "final_priority": "now",
+    "decision_override": "Name the real garment and one supportable everyday use in the opening. Use that clarity rule inside CREATIVE-04; do not run another hook experiment in the first batch.",
+    "experiment_override": {
+      "action": "Check the two CREATIVE-04 scripts against the sampled product and use the shared buyer sessions to catch mistaken product expectations.",
+      "metric": "Count accurate product descriptions and material misunderstandings; record price-visible destination visits later without estimating a hook lift.",
+      "guardrail": "No unsupported quality, licensing, fit or outcome claim; do not change the offer between the two framing variants.",
+      "stop_rule": "Correct a credible material misunderstanding before publication. Otherwise retain the clear version without declaring a sales winner.",
+      "cost_note": "No separate allowance. Charge this work once to the shared GBP 50 growth allocation and 20 total retail founder hours; the GBP 250 working-capital/refund reserve is protected."
+    },
+    "evidence_check": "Verified scope: TikTok Creative Codes is guidance for ads, not a causal finding for this garment or a prediction of organic sales. https://ads.tiktok.com/business/en/creative-codes"
+  },
+  {
+    "id": "CREATIVE-02",
+    "verdict": "modify",
+    "reason": "Inspectable evidence is necessary, but withholding useful proof to test its presence has little learning value at this stage. One wash result cannot establish durability, batch quality or willingness to pay GBP 72.",
+    "changes": [
+      "Merge filming and photographs with STORE-02.",
+      "Label measurement method, sample identity and conditions.",
+      "Replace proof-versus-no-proof posting with a factual claim audit and comprehension check."
+    ],
+    "final_priority": "now",
+    "decision_override": "Build one dated sample evidence pack through STORE-02 and use it consistently in the page and all four assets. Claim only the properties the inspected sample and verified supplier facts establish.",
+    "experiment_override": {
+      "action": "Record dimensions, decoration detail and any completed wash procedure. Ask the same shared participants what the evidence establishes and what it leaves unknown.",
+      "metric": "Material expectation mismatches, unsupported claims removed and remaining purchase questions.",
+      "guardrail": "A sample observation is not a batch guarantee, laboratory result or demonstrated premium willingness to pay.",
+      "stop_rule": "Withdraw contradictory claims immediately; do not manufacture a proof-free variant solely to create a test.",
+      "cost_note": "STORE-02 owns the shoot and product/operations owns sample procurement. Reuse both without another sample or photography charge."
+    },
+    "duplicate_of": "STORE-02",
+    "evidence_check": "Baymard directly supports worn product imagery, not the proposed six-second insert or a premium-price effect. https://baymard.com/research-articles/apparel-5-best-practices"
+  },
+  {
+    "id": "CREATIVE-03",
+    "verdict": "defer",
+    "reason": "Keep an honest continuous source recording, but a montage-versus-continuous comparison does not address the first uncertainty: whether relevant shoppers want this garment at the proposed offer.",
+    "changes": [
+      "Capture a usable continuous movement clip during STORE-02 without a second shoot.",
+      "Reopen comparison only if viewers misunderstand an omitted step or a material constraint.",
+      "Replace the two-of-five rule with severity-based correction; one credible false capability inference can matter."
+    ],
+    "final_priority": "next",
+    "decision_override": "Preserve a complete, truthful task recording as source evidence. Defer format comparison until a documented misunderstanding makes it worth testing.",
+    "experiment_override": {
+      "action": "Later, use the same task and offer to check whether a revised edit resolves the specific omitted-step misunderstanding.",
+      "metric": "Correct task interpretation and support questions; sales counts remain descriptive unless a feasible assigned test exists.",
+      "guardrail": "Label speed changes and disclose material setup or manual intervention.",
+      "stop_rule": "Do not produce variants without a named information problem. Correct material deception even if only one participant identifies it.",
+      "cost_note": "GBP 0 now; capture source footage inside the one STORE-02 shoot. Any later edit replaces another batch task."
+    },
+    "evidence_check": "The cited apparel source supports contextual imagery; continuous versus montage performance remains an analyst hypothesis. https://baymard.com/research-articles/apparel-5-best-practices"
+  },
+  {
+    "id": "CREATIVE-04",
+    "verdict": "modify",
+    "reason": "This is the single creative question worth selecting first: everyday clothing appeal versus interest in the original fantasy world. Two organic repeats can identify useful language, but cannot identify a causal winner or validate demand.",
+    "changes": [
+      "Choose this as CREATIVE-08's only comparison.",
+      "Use the shared five buyer sessions instead of adding eight interviews.",
+      "Keep product, actual displayed price, proof and destination stable; alternate posting order.",
+      "Treat repeat direction as a provisional editorial choice, not statistical confirmation."
+    ],
+    "final_priority": "now",
+    "decision_override": "Make four assets from the approved crew: everyday-style and original-world framing, each executed twice. Both show the same real garment, factual proof, price and launch status. Choose later wording from comprehension and observed relevant response while keeping demand unresolved.",
+    "experiment_override": {
+      "action": "After sample and offer readiness, review both frames in the shared sessions and distribute four assets on one provisional account in two rounds. Rotate which frame appears first.",
+      "metric": "Counts of understandable use occasions, relevant product-page visits, price-aware opt-ins, paid orders and settled contribution. Report exposure and source uncertainty.",
+      "guardrail": "No borrowed franchise association or gatekeeping; one fixed offer. Nonrandom organic exposure and repeat viewers prevent causal comparison.",
+      "stop_rule": "Finish one two-week batch or stop at the shared time cap. If reach is sparse, record access unresolved; if comprehension fails, repair it. No automatic paid amplification.",
+      "cost_note": "Use CREATIVE-08's one shoot/edit allocation of at most five hours within the entire 20-hour retail round; no separate participant budget."
+    },
+    "evidence_check": "The supplied psychology studies concern different apparel/status contexts; Baymard does not establish either framing. This is an explicitly unvalidated experiment hypothesis."
+  },
+  {
+    "id": "CREATIVE-05",
+    "verdict": "defer",
+    "reason": "The proposed 18-versus-30-second test spends scarce exposure on a minor editing variable and encourages a directional noninferiority claim that tiny samples cannot support.",
+    "changes": [
+      "Use the shortest natural edit that preserves the actual buying information.",
+      "Do not interpret completion-rate differences as commercial performance.",
+      "Require an observed pacing problem before producing a duration comparison."
+    ],
+    "final_priority": "later",
+    "decision_override": "Keep enough footage to understand the garment, proof, price and next step. Defer duration testing until retention diagnostics and buyer questions identify a specific problem.",
+    "experiment_override": {
+      "action": "Later, recut a demonstrated pacing problem while holding factual content and offer stable; verify comprehension before publication.",
+      "metric": "Comprehension errors and useful destination actions, with duration and audience differences reported.",
+      "guardrail": "No claim that a shorter clip is commercially no worse from a few organic posts.",
+      "stop_rule": "Cancel the test if the change removes material information or competes with unresolved offer/access questions.",
+      "cost_note": "GBP 0 and no extra edit allocation in the first round."
+    },
+    "evidence_check": "TikTok gives creative-format advice; it does not establish either duration as optimal. https://ads.tiktok.com/business/en/creative-codes"
+  },
+  {
+    "id": "CREATIVE-06",
+    "verdict": "defer",
+    "reason": "A founder demonstration is adequate now. The GBP 125 presenter option plus sample and postage has no demonstrated advantage and would consume optional funds needed for first learning.",
+    "changes": [
+      "Remove the standalone commission allowance.",
+      "Separate asset production from creator audience placement.",
+      "Use a written licence and truthful relationship disclosure if commissioning is later funded."
+    ],
+    "final_priority": "later",
+    "decision_override": "Use founder or hands-only footage in the initial batch. Commission no presenter until existing assets have a named unresolved limitation, an all-in quote and a funded role in the single shared ledger.",
+    "experiment_override": {
+      "action": "Later, obtain one scoped quote for the missing demonstration requirement and assess the delivered usable asset against that brief; compare cost with founder production.",
+      "metric": "Usable, factually accurate asset cost and buyer comprehension. Any attributed purchases are descriptive.",
+      "guardrail": "No fabricated purchaser history; explicitly agree edits, channels, term, territory, paid use and relevant appearance/music rights.",
+      "stop_rule": "Decline when the missing information can be filmed adequately with the existing sample or the commitment displaces required readiness work.",
+      "cost_note": "GBP 0 first round. The former GBP 125 plus sample proposal is unfunded; any future contract must fit remaining unprotected funds."
+    },
+    "evidence_check": "CMA guidance covers incentivised promotion; UK IPO says commissioning alone generally does not transfer copyright. https://www.gov.uk/government/publications/reviews-and-social-media-endorsements-guidance-for-businesses-and-brands/social-media-endorsements-guidance-for-brands ; https://www.gov.uk/guidance/ownership-of-copyright-works"
+  },
+  {
+    "id": "CREATIVE-07",
+    "verdict": "modify",
+    "reason": "AI assistance is a reversible working method, not a separate experiment worth recruiting users or buying software for. The review burden belongs in production time.",
+    "changes": [
+      "Use tools already available.",
+      "Record total prompt, edit and correction time on the first real asset.",
+      "Drop the extra five-person AI comparison and GBP 20 software trial."
+    ],
+    "final_priority": "now",
+    "decision_override": "Use existing AI tools for scripts, shot lists and captions only where the verified product remains unchanged. Retain the method if the complete reviewed asset is useful within the shared production timebox.",
+    "experiment_override": {
+      "action": "Log actual prompting, editing and fact-checking minutes for the first asset; compare with a plainly labelled founder estimate or an existing comparable manual edit.",
+      "metric": "Total reviewed production time, extra cash and material errors; no causal productivity claim from unmatched edits.",
+      "guardrail": "Preserve real footage and truthful capabilities; check current platform disclosure requirements before release.",
+      "stop_rule": "Return to a manual template when corrections consume the available time or evidence becomes unreliable.",
+      "cost_note": "GBP 0 software. Work fits the five-hour shared shoot/edit allocation."
+    },
+    "evidence_check": "YouTube distinguishes production assistance from certain realistic synthetic content requiring disclosure. This does not validate product accuracy or labour savings. https://support.google.com/youtube/answer/14328491"
+  },
+  {
+    "id": "CREATIVE-08",
+    "verdict": "modify",
+    "reason": "The small-batch constraint is correct, but it must govern the other eleven cards. Their individual time and cash maxima cannot all be added together.",
+    "changes": [
+      "Exactly four assets, all addressing CREATIVE-04.",
+      "One STORE-02 shoot also supplies the product page.",
+      "Use five shoot/edit hours, not six plus each card's allowance.",
+      "Keep incidentals at GBP 20 within the shared GBP 50 growth allocation."
+    ],
+    "final_priority": "now",
+    "decision_override": "Produce one four-asset batch: CREATIVE-04's two framings, twice each. Reuse STORE-02's real-sample proof and allow no second creative variable until this batch is reviewed.",
+    "experiment_override": {
+      "action": "Prepare one shot list, shoot once, log four assets and their source files, then review questions, relevant visits and any settled orders after the two distribution rounds.",
+      "metric": "Resolved buyer questions, relevant destination visits, order counts and retained contribution alongside total founder hours.",
+      "guardrail": "The initial retail round totals 20 founder hours across product, store, sessions, creative and distribution; one line item cannot claim another fresh allowance.",
+      "stop_rule": "Stop new asset production at five shoot/edit hours or four assets. If readiness work consumes the round, defer distribution instead of extending the matrix.",
+      "cost_note": "At most GBP 20 production incidentals plus GBP 30 shared participant incentives equals GBP 50 growth cash inside the hypothetical GBP 500 total. No ads, presenter, gifted units or software."
+    },
+    "evidence_check": "Four assets, the timebox and cash cap are operating choices. Platform guidance does not establish them as an optimum."
+  },
+  {
+    "id": "CREATIVE-09",
+    "verdict": "modify",
+    "reason": "Accurate neutral imagery is a launch default. A contextual-style A/B test adds another confound to the first framing test and provides little extra information before the sample is understood.",
+    "changes": [
+      "Use the same clear visual treatment in both initial frames.",
+      "Keep atmosphere supplementary and optional.",
+      "Fix any credible material appearance mismatch, not only a two-of-five failure."
+    ],
+    "final_priority": "now",
+    "decision_override": "Use neutral light, visible colour and construction, and a legible worn view for the initial page and batch. Defer a styling comparison until a real visual communication problem warrants it.",
+    "experiment_override": {
+      "action": "During STORE-02's shared check, compare participants' expectations about colour, scale and decoration with the inspected sample.",
+      "metric": "Material visual expectation mismatches and missing views.",
+      "guardrail": "No synthetic or retouched property presented as delivered product evidence.",
+      "stop_rule": "Reshoot a misleading view before publication; accept a clear inexpensive set without requiring a styling winner.",
+      "cost_note": "Reuse STORE-02. No separate GBP 15 location/props allowance."
+    },
+    "duplicate_of": "STORE-02",
+    "evidence_check": "Baymard supports imagery that conveys appearance and fit. It does not establish forest styling or a sales advantage from mood. https://baymard.com/research-articles/apparel-5-best-practices"
+  },
+  {
+    "id": "CREATIVE-10",
+    "verdict": "defer",
+    "reason": "Objection-led content is useful once an objection exists. The fixed three-conversation requirement can ignore one serious issue while turning three convenience comments into a false prevalence signal.",
+    "changes": [
+      "Prioritize severity and independent corroboration rather than treating three comments as a gate.",
+      "Resolve factual omissions directly before testing narrative order.",
+      "Permit only one next comparison after the initial batch."
+    ],
+    "final_priority": "next",
+    "decision_override": "After the initial batch, choose one unresolved material buying question. Answer it directly; test ordering only if comprehension remains uncertain and it becomes the next single funded comparison.",
+    "experiment_override": {
+      "action": "Use actual question records to select the issue; check one revised explanation in a small moderated task before considering live variants.",
+      "metric": "Whether the specific question is answered accurately and what uncertainty remains.",
+      "guardrail": "No invented customer quote or prevalence claim; a single credible material defect is actionable.",
+      "stop_rule": "Do not run an ordering experiment when adding the missing fact solves the problem, or before CREATIVE-04 is reviewed.",
+      "cost_note": "GBP 0 now. Any later planning/edit time replaces the next batch, rather than stacking on it."
+    },
+    "evidence_check": "TikTok's hook/body/close guidance supports a format option; it does not validate the objection threshold or ordering effect. https://ads.tiktok.com/business/en/creative-codes"
+  },
+  {
+    "id": "CREATIVE-11",
+    "verdict": "modify",
+    "reason": "Essential sizing and care information should not wait for three requests. A separate lifecycle content experiment duplicates store readiness and post-purchase operations.",
+    "changes": [
+      "Provide verified care and sizing facts before the first order.",
+      "Use a short FAQ unless motion is needed to explain the answer.",
+      "Merge message delivery with STORE-11; defer any retention-effect study."
+    ],
+    "final_priority": "next",
+    "decision_override": "Put necessary fit and care information into the product page and transactional guidance now. Create an additional video only when an observed support problem needs it.",
+    "experiment_override": {
+      "action": "Check required instructions in the shared store walkthrough; after deliveries, record actual questions and choose a short answer asset only for an unresolved recurring or serious issue.",
+      "metric": "Instruction errors, support minutes and return reasons with order counts; no lift claim from ten deliveries.",
+      "guardrail": "Keep support and lawful returns accessible; do not turn service communication into undisclosed marketing.",
+      "stop_rule": "Correct a harmful instruction immediately. Defer extra production when text already answers the question.",
+      "cost_note": "Use STORE-11's native messages and STORE-02 footage, with no additional platform or production allocation."
+    },
+    "duplicate_of": "STORE-11",
+    "evidence_check": "Shopify describes post-purchase touchpoints, not a transferable retention effect. https://www.shopify.com/blog/post-purchase-experience-ecommerce"
+  },
+  {
+    "id": "CREATIVE-12",
+    "verdict": "modify",
+    "reason": "Truthful price and status disclosure is the correct default. Moving the same disclosure between frames is a lower-priority optimization, and sparse directional purchases cannot decide it reliably.",
+    "changes": [
+      "Show the offer consistently near the first clear product view.",
+      "Keep a proposed-price waitlist distinct from a purchasable offer.",
+      "Remove the initial disclosure-timing comparison."
+    ],
+    "final_priority": "now",
+    "decision_override": "Show the same price, delivery scope and real availability in both CREATIVE-04 variants. Prefer an early readable disclosure and defer timing optimization.",
+    "experiment_override": {
+      "action": "Ask the shared participants what the item costs and whether they can buy it now. Later reconcile page and checkout against the creative.",
+      "metric": "Price/status misunderstandings and mismatched enquiries; track orders separately from waitlist opt-ins.",
+      "guardrail": "No invented stock, urgency or fulfilment date. GBP 72 including UK delivery remains a hypothesis until the offer is verified.",
+      "stop_rule": "Correct any material price or availability mismatch before traffic. Do not infer an optimal timing from four posts.",
+      "cost_note": "One shared caption template; GBP 0 and no separate editing allowance."
+    },
+    "evidence_check": "Baymard supports cost clarity near purchase; video timing is an untested transfer. https://baymard.com/research-articles/current-state-ecommerce-product-page-ux"
+  },
+  {
+    "id": "DIST-01",
+    "verdict": "modify",
+    "reason": "The staged GBP 75/150/250 acquisition ladder leaves room for other cards to add samples, software and content costs. It also offers no precise evidence standard for increasing spend. Replace it with the chief review's one whole-business ledger.",
+    "changes": [
+      "Use one hypothetical GBP 500 retail first round: GBP 150 sample/spec work, GBP 45 shop/domain, GBP 50 growth, GBP 250 protected working-capital/refund float and GBP 5 uncommitted.",
+      "Growth uses GBP 30 sessions and GBP 20 incidentals; every quoted sub-budget is subordinate.",
+      "Keep total founder work within 20 hours and choose only one commercial offer.",
+      "Use finance-reviewed contribution and CAC on a consistent customer/order basis; exclude no costs silently."
+    ],
+    "final_priority": "now",
+    "decision_override": "Start with one organic route and one offer under the shared GBP 500 hypothetical ceiling. Allocate at most GBP 50 to growth; fund no ads, creators, gifts, events or new tools in round one. Review actual evidence and all remaining liabilities before proposing a later replacement allocation.",
+    "experiment_override": {
+      "action": "Prepare the single ledger with cash committed, cash paid, possible affiliate liabilities, protected float and founder hours. Reconcile it before every stage change.",
+      "metric": "Whole-cohort retained contribution after acquisition and delivery labour, cash runway and total founder time. CAC is undefined with zero acquired customers.",
+      "guardrail": "The GBP 250 protected float cannot fund growth. A finance-reviewed CAC ceiling must include overhead/profit headroom and use a denominator consistent with contribution; 50% of G is only a chosen scenario. The twenty-hour figure is a planning cap; accepted customer obligations must still be fulfilled and all actual labour recorded.",
+      "stop_rule": "Stop new commitments at the global cap, when protected cash would be used, or when conservative pre-acquisition contribution is non-positive.",
+      "cost_note": "All stated budgets are proposals for later approval, not authority to spend. Planning time split within 20 hours: four sample/economics, five store/checks, three sessions, five shoot/edit and three distribution."
+    },
+    "evidence_check": "The cap, allocation and provisional CAC rule are analyst operating choices. Google free-listing documentation does not substantiate the budget or profitable acquisition."
+  },
+  {
+    "id": "DIST-02",
+    "verdict": "modify",
+    "reason": "The source asks for six assets while CREATIVE-08 specifies four. Twelve distribution hours also conflict with the whole-round time ceiling. The thirty-visit cutoff is an access heuristic, not enough purchase evidence.",
+    "changes": [
+      "Distribute the four approved assets only.",
+      "Keep Instagram as a reversible access choice and verify its actual link path.",
+      "Reduce publishing/replies/measurement to three hours inside the shared 20 hours.",
+      "Report access and demand separately, without a hard thirty-visit success claim."
+    ],
+    "final_priority": "now",
+    "decision_override": "Use one account with a working phone-to-product link for two rounds of the four CREATIVE-08 assets. Treat the batch as audience-access and comprehension learning; organic reach cannot certify or disprove the offer.",
+    "experiment_override": {
+      "action": "Record the four post URLs, public metric definitions, relevant questions, link arrivals, price-visible opt-ins and any orders over at most two weeks.",
+      "metric": "Counts and denominators for relevant visits, stated-price opt-ins, paid orders and settled contribution; record unknown-source orders separately.",
+      "guardrail": "Do not infer buyer relevance from every reached viewer or treat post ordering as random assignment. Founder/friend tests must be labelled.",
+      "stop_rule": "Stop at the three-hour distribution allocation or two weeks. Sparse arrivals leave demand unresolved and motivate one alternative access route; zero orders alone does not kill the product.",
+      "cost_note": "GBP 0 paid reach; three hours are part of the entire 20-hour round, not a new allowance."
+    },
+    "evidence_check": "Checked private auto-captions at 08:53 to 09:47 of eF59p8zhbLM. This is an unaudited creator strategy, not a predictive test. https://www.youtube.com/watch?v=eF59p8zhbLM&t=533s"
+  },
+  {
+    "id": "DIST-03",
+    "verdict": "defer",
+    "reason": "A permitted community can be the next audience-access route, but running it alongside founder posting would dilute the first comparison and add six unbudgeted hours.",
+    "changes": [
+      "Choose one relevant community only after the first access review.",
+      "Inspect both platform and current local rules.",
+      "Distinguish listening, permitted promotion and direct contact; the current assignment authorizes none of the latter actions."
+    ],
+    "final_priority": "next",
+    "decision_override": "If the first route fails to reach relevant shoppers, select one community that permits the intended commercial contribution. Use it as the next active access test with explicit founder identity.",
+    "experiment_override": {
+      "action": "Later, record the community's current rules and one permitted contribution addressing a real buyer question; observe voluntary referrals and questions.",
+      "metric": "Relevant conversations, permitted destination visits, resulting orders and actual founder time.",
+      "guardrail": "No disguised recommendation, unsolicited message, member harvesting or posting contrary to local AI/content rules.",
+      "stop_rule": "Abandon acquisition use when links are prohibited or a moderator objects. End at the allotted replacement timebox without treating no response as a market verdict.",
+      "cost_note": "GBP 0 cash; replace a later distribution block rather than adding six hours to round one."
+    },
+    "evidence_check": "Reddit's spam policy constrains unwanted mass or repeated promotion; it supplies no evidence of sales effectiveness. https://support.reddithelp.com/hc/en-us/articles/360043504051-Spam"
+  },
+  {
+    "id": "DIST-04",
+    "verdict": "defer",
+    "reason": "Inspecting a hundred ordinary posts and building a creator pipeline precedes evidence of an access problem the founder cannot solve more cheaply. Disclosure rules do not validate creator selection criteria.",
+    "changes": [
+      "Do not build the ten-creator shortlist now.",
+      "Later begin with at most three specific relevant candidates and record unknowns.",
+      "Separate an asset commission from a paid placement and price the required rights."
+    ],
+    "final_priority": "later",
+    "decision_override": "Defer creator selection until there is a named audience-access or content gap. Then compare up to three relevant, permissioned collaboration opportunities using all-in cost and verified scope.",
+    "experiment_override": {
+      "action": "Later, inspect normal recent posts and any legitimately supplied audience data; document geography, product relevance, exact deliverable, licence and quote.",
+      "metric": "Usable asset cost separately from relevant referred visits, paid customers and mature contribution.",
+      "guardrail": "No outreach under this assignment and no assumption that follower totals, medians or creator-supplied demographics predict UK purchases.",
+      "stop_rule": "Decline if essential audience information or deliverables remain unknown, or the quote cannot fit unprotected funds after required work.",
+      "cost_note": "GBP 0 and no first-round shortlist allocation. Quotes are future options, not commitments."
+    },
+    "evidence_check": "CMA/ASA disclosure and UK IPO rights guidance substantiate transaction constraints, not expected creator reach or sales. https://www.gov.uk/guidance/ownership-of-copyright-works"
+  },
+  {
+    "id": "DIST-05",
+    "verdict": "defer",
+    "reason": "An optional gift buys uncertain distribution while consuming the same GBP 50 needed for sessions and production. Loaning the only approved sample can also interrupt proof work or create replacement cost.",
+    "changes": [
+      "Remove the opening seed allocation.",
+      "Include decoration, both-way postage, loss/damage and replacement needs before comparing gift with loan.",
+      "Separate optional feedback from promised placement or licensed content."
+    ],
+    "final_priority": "later",
+    "decision_override": "Send no gifted or loaned unit in round one. Reconsider one seed only after a concrete accepted opportunity, complete cost sheet and available replacement allocation make its learning objective credible.",
+    "experiment_override": {
+      "action": "Later, compare the cheapest truthful way to obtain the missing feedback or audience access; record affirmative acceptance and any separately purchased placement before dispatch.",
+      "metric": "All-in cash and lost sample use, delivered feedback/assets, actual exposure and order outcomes as separate measures.",
+      "guardrail": "No required praise or guaranteed organic post assumed; secure reuse rights separately and use appropriate disclosure.",
+      "stop_rule": "Decline if the gift/loan displaces sample evidence or refund cash, exceeds the remaining allocation, or cannot answer a named question.",
+      "cost_note": "GBP 0 first round. A future unit is charged once at full relevant cost; the old GBP 50 seed cap is not additional money."
+    },
+    "evidence_check": "CMA brand guidance explicitly addresses incentivised posts arising from gifts. It does not promise coverage. https://www.gov.uk/government/publications/reviews-and-social-media-endorsements-guidance-for-businesses-and-brands/social-media-endorsements-guidance-for-brands"
+  },
+  {
+    "id": "DIST-06",
+    "verdict": "defer",
+    "reason": "Affiliate payments are contingent liabilities rather than costless distribution. A fixed round ceiling is not real unless the agreement also limits new obligations while honouring earned commission.",
+    "changes": [
+      "Start with one partner only after direct-order economics and reconciliation work.",
+      "Specify a maximum eligible volume or commission commitment and how future eligibility ends.",
+      "Do not revoke earned commission when a cap is reached.",
+      "Keep attributed sales distinct from incremental demand."
+    ],
+    "final_priority": "later",
+    "decision_override": "Defer affiliates until a fulfilled offer has usable margin evidence. Then propose one written, bounded agreement with a finance-reviewed payout, attribution window, refund treatment and maximum new liability.",
+    "experiment_override": {
+      "action": "Later, reconcile one partner's eligible orders and refunds manually before paying for affiliate software. Track existing customers and code leakage separately.",
+      "metric": "Settled cohort contribution after all commissions, fees, discounts, returns and administration; report attributed customers without claiming incrementality.",
+      "guardrail": "Honour valid earned payouts. Set and communicate prospective limits before referrals occur; no private data sharing or hidden tracking.",
+      "stop_rule": "Stop accepting new eligible referrals before the committed ceiling is exceeded; preserve accrued obligations and resolve disputes under agreed terms.",
+      "cost_note": "GBP 0 first round. Reserve later contingent payments inside the same remaining unprotected budget; 10% of net sales or 25% of G are possible caps, not validated partner incentives."
+    },
+    "evidence_check": "Verified Shopify Collabs automatic commission fee is 2.9% of commission, with possible currency costs; platform compatibility still requires checking. https://help.shopify.com/en/manual/promoting-marketing/collabs/merchants/payments"
+  },
+  {
+    "id": "DIST-07",
+    "verdict": "defer",
+    "reason": "The partner idea is plausible but has no named opportunity and currently adds another route and preparation task. A quote or invitation should make the work concrete before a proposal is drafted.",
+    "changes": [
+      "Require a specific relevant access opportunity before spending proposal time.",
+      "Use one selected retail offer; do not simultaneously create SaaS and physical-product partnership pipelines.",
+      "Keep referral, content licence and stock commitments explicit."
+    ],
+    "final_priority": "later",
+    "decision_override": "Defer partnership execution and speculative proposals until one invited or subsequently authorized opportunity can reach a defined relevant audience at a cost the ledger can support.",
+    "experiment_override": {
+      "action": "Later, write one short scoped proposal for the named opportunity, stating placement, responsibilities, end date, costs, permissions and source evidence.",
+      "metric": "Observed relevant referrals, retained contribution and administration time.",
+      "guardrail": "No contact now, shared subscriber lists, implied endorsement, exclusivity or inventory commitments without an explicit agreement.",
+      "stop_rule": "Decline when the placement or full cost remains unspecified, or the economics depend on an unsupported sales forecast.",
+      "cost_note": "GBP 0 first round; later proposal and placement replace other optional work inside the shared cap."
+    },
+    "evidence_check": "ICO guidance constrains electronic marketing; it does not establish partner conversion or grant contact permission. https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-direct-marketing-using-electronic-mail/"
+  },
+  {
+    "id": "DIST-08",
+    "verdict": "defer",
+    "reason": "Defer the stall as recommended. A GBP 30 event ceiling is not evidence that a suitable event exists, and physical access cannot be funded by adding it to the already allocated growth cash.",
+    "changes": [
+      "Keep all event quotes unverified until a named opportunity is priced.",
+      "Include travel, display, payment costs, damaged sample risk and founder time.",
+      "No extra stock for footfall estimates."
+    ],
+    "final_priority": "later",
+    "decision_override": "Book no event in round one. Consider one small permitted demonstration later only when its audience, complete incremental cost and realistic break-even requirement are known.",
+    "experiment_override": {
+      "action": "For a real later opportunity, compare fully costed attendance with the cheapest way to answer the same handling/fit question before booking.",
+      "metric": "Actual relevant interactions and settled contribution after event costs; observed access is distinct from a sales forecast.",
+      "guardrail": "Event attendance alone is not selling permission or email consent. No current booking, outreach or stock order.",
+      "stop_rule": "Decline if the fixed cost and order-specific fees leave an implausible break-even requirement or consume protected cash.",
+      "cost_note": "GBP 0 first round. Any future event replaces other optional growth spending and needs its own quote."
+    },
+    "evidence_check": "The cited exhibitor page is background access information; it does not substantiate a local GBP 30 quote, relevant attendance or expected orders."
+  },
+  {
+    "id": "DIST-09",
+    "verdict": "accept",
+    "reason": "A single price-visible, explicitly requested launch list preserves a contact route without confusing opt-ins with sales. It is proportionate if existing tooling supports the complete consent and unsubscribe journey.",
+    "changes": [
+      "Keep the setup in the shared store time allocation.",
+      "Preserve the proposed price and launch-status distinction; do not claim confirmed demand.",
+      "Send only the described messages when separately authorized to launch."
+    ],
+    "final_priority": "now",
+    "evidence_check": "Verified ICO guidance requires specific affirmative consent or satisfaction of every applicable soft-opt-in condition. The explicit-consent default is supported. https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-direct-marketing-using-electronic-mail/how-do-we-comply-with-the-pecr-electronic-mail-marketing-rules/"
+  },
+  {
+    "id": "DIST-10",
+    "verdict": "modify",
+    "reason": "Free listings are sensible after offer readiness, but the submission duplicates AI-04 and the two buyer-answer pages add another writing programme. A waitlist concept is not a purchasable merchant offer.",
+    "changes": [
+      "AI-04 owns one feed/eligibility task; AI-02 supplies verified facts.",
+      "Use AI-07 for a later genuinely needed comparison answer instead of automatically writing two pages.",
+      "Add STORE-04, STORE-05 and STORE-07 readiness dependencies.",
+      "Treat Gemini eligibility as possible inclusion, not UK exposure or checkout proof."
+    ],
+    "final_priority": "next",
+    "decision_override": "After the offer is genuinely purchasable, let AI-04 configure one supported free listing route from verified product facts. Add a buyer-question page only when a real unmet question justifies it.",
+    "experiment_override": {
+      "action": "Check purchase readiness and actual seller/market eligibility first; submit one accurate product family through the canonical feed task and inspect diagnostics.",
+      "metric": "Eligible approved products, observed referrals, maintenance effort and settled orders. Preserve unknown/direct sources.",
+      "guardrail": "No fabricated availability, identifiers, ratings or assistant endorsement; a price-visible waitlist does not meet the purchase prerequisite.",
+      "stop_rule": "Repair material data errors before expanding. Thirty days without exposure leaves viability unresolved and gives no reason to buy AEO tools.",
+      "cost_note": "GBP 0 new tools or paid distribution; reuse AI-04 and the existing facts sheet instead of adding four independent hours."
+    },
+    "duplicate_of": "AI-04",
+    "evidence_check": "Google lists eligible surfaces without guaranteed exposure and requires fixed prices and a usable purchase route. https://support.google.com/merchants/answer/13889434?hl=en-A ; https://support.google.com/merchants/answer/12160471?hl=en"
+  },
+  {
+    "id": "DIST-11",
+    "verdict": "defer",
+    "reason": "The CPC/contribution arithmetic is useful, but GBP 100 is a learning-loss cap, not enough evidence to prove CAC or channel profitability. The current round allocates no paid budget.",
+    "changes": [
+      "Keep paid search and paid social mutually exclusive.",
+      "Use a consistent per-acquired-customer/order basis for CPC, conversion and allowable CAC.",
+      "Specify a meaningful price-aware action before the test; clicks alone cannot unlock tranche two.",
+      "Verify actual campaign total/billing limits rather than promising a strict cap from a daily budget."
+    ],
+    "final_priority": "later",
+    "decision_override": "Defer paid search. Later, select it only for a verified buying query and a ready offer, with an explicitly reallocated maximum GBP 100 exposure in two GBP 50 tranches, instead of paid social.",
+    "experiment_override": {
+      "action": "Before any later launch, predeclare queries/exclusions, geography, one destination, finance-reviewed contribution and affordable CAC, then compare observed CPC with the purchase rate required to meet that CAC.",
+      "metric": "Relevant paid visits, price-aware progression, orders, mature cohort contribution and uncertainty. CPC divided by allowable CAC gives a required conversion scenario, not a forecast.",
+      "guardrail": "Use verified billing controls and include applicable charges. No second channel, automatic budget increase or spending from the GBP 250 float.",
+      "stop_rule": "Stop at GBP 50 for irrelevant terms, broken checkout, unsustainable CPC requirements or no predeclared meaningful action. Stop at GBP 100 regardless; wait for returns before assessing expansion.",
+      "cost_note": "GBP 0 first round. Later GBP 100 must replace optional allocations within remaining unprotected funds; it is shared with DIST-12."
+    },
+    "evidence_check": "Google confirms most daily spending limits are twice average daily budget. This does not establish CPC, demand or purchase conversion. https://support.google.com/google-ads/answer/10486637?hl=en"
+  },
+  {
+    "id": "DIST-12",
+    "verdict": "defer",
+    "reason": "Retargeting should remain off. Organic success is neither necessary nor sufficient for paid viability, and one non-friend order cannot validate demand. Requiring an organic purchase can wrongly block an access test when organic reach itself is the problem.",
+    "changes": [
+      "Remove the automatic one-organic-order gate.",
+      "Require sample, contribution, fulfilment, checkout and measurement readiness, plus a named uncertainty a paid access test can answer.",
+      "Use one coherent cold-audience proposition rather than fragmenting GBP 100 into multiple cells.",
+      "Keep platform attribution descriptive and reconcile whole-cohort economics."
+    ],
+    "final_priority": "later",
+    "decision_override": "Defer all paid social and retargeting now. Later, a ready offer may justify one capped cold-audience access diagnostic, even if organic exposure was insufficient, but only as the alternative to DIST-11 and without a scale claim.",
+    "experiment_override": {
+      "action": "Later, predeclare the buyer, one truthful asset/offer, allowable CAC, qualified progression event and spend cap. Reconcile all orders, source uncertainty and refunds after the cohort matures.",
+      "metric": "New paid-customer counts, acquisition cash, mature retained contribution and observed relevance; source-attributed ROAS is not incremental profit.",
+      "guardrail": "Use appropriate consent, licensed assets and disclosure. No retargeting pool is assumed, and an organic winner is not a paid forecast.",
+      "stop_rule": "Stop at the first GBP 50 review for poor relevance, faults or no meaningful price-aware action. Never exceed the shared GBP 100 cap; any further test requires a new evidence-based budget decision.",
+      "cost_note": "GBP 0 first round. Later paid-search OR paid-social maximum is GBP 100 from reallocated unprotected funds, with no second GBP 100 allowance."
+    },
+    "evidence_check": "Checked eF59p8zhbLM at 09:25 to 09:47; no controlled organic-to-paid prediction is supplied. Google explicitly distinguishes attributed and incremental conversions. https://www.youtube.com/watch?v=eF59p8zhbLM&t=565s ; https://support.google.com/google-ads/answer/14102450?hl=en"
+  },
+  {
+    "id": "STORE-01",
+    "verdict": "modify",
+    "reason": "The purchase facts are the right default, but fitting every item into one mobile screen can make the page crowded. Five people can expose failures; they cannot certify a flow or validate the offer.",
+    "changes": [
+      "Keep essentials easy to locate near the buying task without a literal everything-above-the-fold rule.",
+      "Use one shared five-person script for STORE-01 through STORE-07 plus the selected creative comprehension checks.",
+      "Rotate task order and avoid teaching later tasks through earlier answers.",
+      "Do not require success from a representative population the five sessions cannot provide."
+    ],
+    "final_priority": "now",
+    "decision_override": "Make product, price, chosen variant, availability, delivered-cost/timing cue, returns and purchase action clear in the mobile buying area. Put supporting facts in accessible labelled sections and use small sessions to find defects.",
+    "experiment_override": {
+      "action": "Observe five plausible buyers completing a short counterbalanced set of fact-finding, variant and checkout tasks; use a few shared comprehension prompts for the four creative assets.",
+      "metric": "Observed task failures, material misunderstandings and unresolved questions, with participant/task counts.",
+      "guardrail": "Participants' successful tasks and compliments establish neither demand nor a guaranteed usable flow. Manual technical and accessibility checks remain separate.",
+      "stop_rule": "Fix credible material failures before opening orders; retest the affected task. If recruiting or remediation exceeds the round timebox, pause distribution and re-scope.",
+      "cost_note": "One GBP 30 incentive ceiling inside the GBP 50 growth allocation; at most three total session/recruitment/note hours planned within the entire 20-hour retail round."
+    },
+    "evidence_check": "Verified Baymard's total-cost and purchase-information observations. Benchmark problem prevalence is not this store's conversion uplift. https://baymard.com/research-articles/current-state-ecommerce-product-page-ux"
+  },
+  {
+    "id": "STORE-02",
+    "verdict": "accept",
+    "reason": "This is the canonical photo and video acquisition task. A real phone-shot sample can answer the relevant questions without a speculative paid shoot. High confidence concerns evidence integrity, not premium demand.",
+    "changes": [
+      "Reuse this shoot for CREATIVE-02, CREATIVE-09, BRAND-07 and AI-08.",
+      "Record the exact sample/variant, date, known wearer measurements and measured limits.",
+      "Charge sample procurement once to product/operations and capture video during the same shoot."
+    ],
+    "final_priority": "now",
+    "evidence_check": "Baymard directly observes the value of apparel shown on people for appearance and fit judgment; it supplies no premium-price or batch-consistency guarantee. https://baymard.com/research-articles/apparel-5-best-practices"
+  },
+  {
+    "id": "STORE-03",
+    "verdict": "modify",
+    "reason": "The garment-specific chart is worthwhile. The cited source also recommends centimetres and inches, and one measured sample must not imply that every size or manufacturing tolerance has been physically checked.",
+    "changes": [
+      "Add an accurate inch conversion while retaining centimetres as the source unit.",
+      "Distinguish verified sample measurements from supplier-specified grading and tolerances.",
+      "Show garment-versus-body measurement instructions and label any unknowns."
+    ],
+    "final_priority": "now",
+    "decision_override": "Publish a readable garment chart in centimetres and inches beside size selection, with measurement instructions and the source of each size's values. Verify the sampled size and obtain credible supplier grading for unsampled sizes.",
+    "experiment_override": {
+      "action": "Use the shared sessions to check whether participants measure a known garment and interpret the chart correctly; compare selected-size expectations with the available evidence.",
+      "metric": "Garment/body confusion, incorrect unit interpretation and unresolved size questions; later log every fit-related return as a case.",
+      "guardrail": "No blanket guaranteed fit or invented all-size verification. Keep tolerances and sample shrinkage limits visible where relevant.",
+      "stop_rule": "Correct a material measurement error before sale; do not infer a stable return rate from a few orders.",
+      "cost_note": "GBP 0 app spend; chart and sessions reuse the same facts, sample and shared store/session allocations."
+    },
+    "evidence_check": "Verified Baymard explicitly recommends both units and measurement instructions. No return-rate improvement is established for this shop. https://baymard.com/research-articles/apparel-5-best-practices"
+  },
+  {
+    "id": "STORE-04",
+    "verdict": "accept",
+    "reason": "Clear delivered cost and honest production/transit timing prevent a specific purchase surprise. The decision correctly treats included delivery as a presentation choice and supplier shipping as an unverified final-cost proxy.",
+    "changes": [
+      "Align the displayed offer with the finance-reviewed actual destination and fulfilment model.",
+      "Keep the UK-only case and GBP 72 price labelled provisional until verified.",
+      "Include this check in the shared session and checkout script."
+    ],
+    "final_priority": "now",
+    "evidence_check": "Baymard directly recommends a total-cost estimate near buying. Its evidence does not establish an included-delivery conversion lift. https://baymard.com/research-articles/current-state-ecommerce-product-page-ux"
+  },
+  {
+    "id": "STORE-05",
+    "verdict": "accept",
+    "reason": "The rights-first policy and separation of optional free returns from statutory obligations are correct. Standard designs made after order must not automatically be called personalised to avoid cancellation.",
+    "changes": [
+      "Use the confirmed seller/customer jurisdiction and actual product process before final policy wording.",
+      "Model return scenarios consistently with the finance review and protect refund liquidity.",
+      "Escalate only a concrete unresolved classification rather than presuming every launch needs legal spending."
+    ],
+    "final_priority": "now",
+    "evidence_check": "Verified GOV.UK distance-sale cancellation/refund guidance and personalised-item exception. Actual classification is still fact-dependent. https://www.gov.uk/accepting-returns-and-giving-refunds"
+  },
+  {
+    "id": "STORE-06",
+    "verdict": "accept",
+    "reason": "Explicit variants and intentional size choice are inexpensive defaults that prevent wrong-item orders. The task can be checked directly without claims about sales uplift or adding more stock.",
+    "changes": [
+      "Keep approved variants only and preserve valid selections.",
+      "Test a colour change, unavailable combination and cart description in the shared script.",
+      "Include keyboard and screen-reader state checks under STORE-08."
+    ],
+    "final_priority": "now",
+    "evidence_check": "Baymard observes problems with hidden size choices and unavailable variants; this supports the UI default, not a demand estimate. https://baymard.com/research-articles/apparel-5-best-practices"
+  },
+  {
+    "id": "STORE-07",
+    "verdict": "modify",
+    "reason": "Supported checkout and guest access are appropriate. Fault injection should first be deterministic operator QA so the five buyer sessions are not overloaded with technical test cases.",
+    "changes": [
+      "Run sandbox success, decline, bad-address, duplicate-submit and cart-recovery checks before moderated sessions.",
+      "Use buyer sessions for ordinary task completion and any targeted unresolved recovery question.",
+      "Keep checkout platform selection separate and avoid a custom rebuild without a demonstrated blocker."
+    ],
+    "final_priority": "now",
+    "decision_override": "Use the selected platform's supported guest checkout with accurate totals, explicit variants and recoverable errors. Prove order/payment handling in sandbox before showing the flow to potential buyers.",
+    "experiment_override": {
+      "action": "First run labelled sandbox transactions and failures, confirming no duplicate order/payment. Then observe the ordinary mobile buyer task in the shared sessions.",
+      "metric": "Wrong totals or variants, duplicate orders, lost carts, unrecoverable errors and unassisted task completion.",
+      "guardrail": "No real charges or fulfilment during these checks. Use provider-supported test modes and avoid logging payment data.",
+      "stop_rule": "Block accepting orders while a material total, variant, duplicate-payment or recovery defect remains. A five-person pass is not transaction-system certification.",
+      "cost_note": "GBP 0 extensions; QA and configuration fit the shared five-hour store/check allocation, with distribution deferred if unresolved work exceeds it."
+    },
+    "evidence_check": "Verified Baymard directly supports visible guest checkout and clear required/optional fields. No universal screen-count or local conversion effect follows. https://baymard.com/research-articles/current-state-of-checkout-ux"
+  },
+  {
+    "id": "STORE-08",
+    "verdict": "accept",
+    "reason": "Accessibility blockers are defects regardless of traffic. The source correctly distinguishes one target-size criterion from whole-flow conformance and leaves room for testing with relevant users.",
+    "changes": [
+      "Cover size guide, variant state, cart updates and error recovery in the critical task.",
+      "Record input method, device/tool and residual limitations.",
+      "Reuse technical walkthroughs without pretending that five convenience participants represent disabled shoppers."
+    ],
+    "final_priority": "now",
+    "evidence_check": "Verified W3C SC 2.5.8 specifies 24 by 24 CSS pixels with exceptions, including spacing. It is one criterion, not complete WCAG conformance. https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html"
+  },
+  {
+    "id": "STORE-09",
+    "verdict": "modify",
+    "reason": "The performance defaults are sensible, but a normal initial-load lab report cannot stand in for actual interaction latency or field percentiles. Four standalone optimization hours are excessive within the first-round scope.",
+    "changes": [
+      "Start with responsive real images, reserved space and no unneeded media/apps.",
+      "Use an initial one-hour diagnostic/configuration pass inside store work; investigate reproducible task blockers before cosmetic score work.",
+      "Check interactions explicitly and label absent field data."
+    ],
+    "final_priority": "now",
+    "decision_override": "Use lightweight responsive product media and check loading plus actual purchase interactions under a stated mobile profile. Target good field metrics when data exists without treating a lab score as a revenue or ranking result.",
+    "experiment_override": {
+      "action": "Run the same representative mobile profile before and after a necessary media change; exercise size selection, cart and error handling. Inspect real-user distributions only when sufficient appropriate data exists.",
+      "metric": "LCP/CLS in stated lab runs, interaction diagnostics and task failures; report field INP and percentiles separately when available.",
+      "guardrail": "Keep useful detail images. Do not report an initial-load score as measured field INP or a statistical field pass.",
+      "stop_rule": "Fix reproducible task-blocking regressions; stop score chasing when further work would displace sample, offer or purchase readiness.",
+      "cost_note": "GBP 0 performance tools. Begin with one hour inside the shared store allocation, not another four-hour project."
+    },
+    "evidence_check": "Verified Google thresholds: LCP at most 2.5 seconds, INP at most 200 milliseconds and CLS at most 0.1 at the 75th percentile. https://web.dev/articles/vitals"
+  },
+  {
+    "id": "STORE-10",
+    "verdict": "modify",
+    "reason": "Concrete product wording belongs in the first page, while a separate two-message study duplicates the chosen framing comparison. Five to eight extra sessions are unnecessary.",
+    "changes": [
+      "Use factual product identification immediately.",
+      "Keep the same garment facts and chosen framing consistent from creative to landing page.",
+      "Reuse CREATIVE-04 and the shared sessions; create no extra landing pages."
+    ],
+    "final_priority": "now",
+    "decision_override": "Identify the real product and decoration plainly on one landing page. Keep campaign promises consistent with it and use CREATIVE-04's findings to refine wording without multiplying pages or tests.",
+    "experiment_override": {
+      "action": "In the shared sessions, ask what is sold and what someone arriving from each of the two frames expects to receive; check any mismatch against the actual offer.",
+      "metric": "Correct product/offer understanding and missing facts. Purchase and willingness-to-pay evidence remain separate.",
+      "guardrail": "No abstract premium claim as a substitute for inspected properties and no implied assistant endorsement.",
+      "stop_rule": "Correct repeated or credible material misdescription; postpone a causal sales A/B test until its baseline, sample requirement and acquisition cost are feasible.",
+      "cost_note": "GBP 0 extra pages or ads; use the same five participants and shared store/creative time."
+    },
+    "duplicate_of": "CREATIVE-04",
+    "evidence_check": "Baymard informs purchase clarity, but neither proposed slogan nor the transfer to SaaS has direct efficacy evidence. https://baymard.com/research-articles/current-state-ecommerce-product-page-ux"
+  },
+  {
+    "id": "STORE-11",
+    "verdict": "modify",
+    "reason": "Order confirmation, accurate status and support must work before the first order. The separate five-merchant SaaS exercise should not be hidden inside a retail checkout card or consume the retail budget.",
+    "changes": [
+      "Make transactional readiness now.",
+      "Merge CREATIVE-11's necessary care guidance here.",
+      "Route any merchant prototype and activation test to SAAS-05 in the separate software branch.",
+      "Do not claim a retention effect from vendor advice."
+    ],
+    "final_priority": "now",
+    "decision_override": "Before opening retail orders, verify confirmation, truthful production/dispatch status, care information and a working support/return route. Leave merchant onboarding experiments to SAAS-05.",
+    "experiment_override": {
+      "action": "Walk through one labelled test order's complete transactional messages and a simulated support/return question. After deliveries, log real status and care problems.",
+      "metric": "Missing or incorrect transaction information, support-route failures and later contacts/return reasons with counts.",
+      "guardrail": "No invented dispatch, positive-review condition or promotional message disguised as order service.",
+      "stop_rule": "Correct a material confirmation/status/support defect before accepting live orders; defer marketing automation until real need and permission exist.",
+      "cost_note": "Native templates only, GBP 0 new apps. Work is part of the shared store readiness allocation; no five-merchant study is charged to retail."
+    },
+    "evidence_check": "Shopify's post-purchase guidance describes touchpoints rather than this store's retention effect. SaaS first-value transfer remains a separate hypothesis. https://www.shopify.com/blog/post-purchase-experience-ecommerce"
+  },
+  {
+    "id": "STORE-12",
+    "verdict": "defer",
+    "reason": "The initial off state is right. A 30-day reminder programme with a handful of baskets can generate descriptive follow-up counts but cannot justify claims of recovered incremental revenue.",
+    "changes": [
+      "Keep reminders off during first-round validation.",
+      "Use cart persistence and clear onsite recovery first.",
+      "Later define the eligible population and permission evidence before sending; preserve purchased and unsubscribed suppressions.",
+      "Do not condition continuation on platform-attributed recovery revenue alone."
+    ],
+    "final_priority": "later",
+    "decision_override": "Keep automated cart/signup promotions off until real eligible abandonment and a measurable operational reason exist. Later consider one permitted factual reminder, without a default discount or causal recovery claim.",
+    "experiment_override": {
+      "action": "After actual eligible baskets exist, verify consent/soft-opt-in, suppression and the saved-cart journey. If a reminder is funded, log all eligible, sent, resumed and ordered cases within one declared window.",
+      "metric": "Associated settled contribution, workload, complaints and opt-outs; use an adequately designed holdout only if future volume makes it feasible.",
+      "guardrail": "No email-entry-equals-permission assumption, hidden tracking or misleading scarcity; suppress purchasers and opt-outs promptly.",
+      "stop_rule": "Stop on any permission or suppression failure. Defer extra tooling when plausible benefit cannot cover workload without assuming causal recovery.",
+      "cost_note": "GBP 0 first-round setup or subscription spend. Any later configuration replaces other optional work."
+    },
+    "evidence_check": "Verified ICO requires specific consent or all applicable soft-opt-in conditions; merely entering an address is not enough. Google distinguishes attribution from incrementality. https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-direct-marketing-using-electronic-mail/how-do-we-comply-with-the-pecr-electronic-mail-marketing-rules/ ; https://support.google.com/google-ads/answer/14102450?hl=en"
+  }
+]

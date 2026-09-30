@@ -1,0 +1,35 @@
+# Evidence source checks
+
+Checked against primary sources on 30 September 2026. This note verifies the terms and published prices below; it is not legal advice or a forecast of actual costs.
+
+## Shopify merchant-derived data and AI training
+
+The current [Partner Program Agreement](https://www.shopify.com/partners/terms) (last updated 27 February 2026) §9.15 says developers must not use, or enable third parties to use, Merchant Data or Customer Data “including any anonymous, aggregate, or derived forms” to create, develop, train, fine-tune, or improve AI/ML systems, including LLMs. Exceptions are Shopify’s prior written consent, or the relevant merchant’s prior written consent solely for that merchant’s Merchant Data or specific Merchant Store. The PPA also defines Merchant Data broadly (§1) and limits ordinary use/storage to providing services to the merchant concerned (§9.14).
+
+The current [API License and Terms](https://www.shopify.com/legal/api-terms) (last updated 27 February 2026) §3.24 has materially similar text: the restriction covers information derived from the API, Merchant Data, a Merchant Store, the Services, or any aspect of them, including anonymous, aggregate, and derived forms. Its exceptions are Shopify’s prior written consent, or the relevant Merchant’s consent solely with respect to that Merchant’s data or specific Merchant Store. Unlike PPA §9.15, §3.24 does not say that the Merchant’s consent must be prior and written. The API Terms say they govern to the extent needed to resolve a conflict with the PPA (§2.1.3).
+
+**Implication for the dossier:** aggregation or anonymisation may change whether information is personal data under privacy law, but it does not remove Shopify’s separately written contractual restriction: these clauses expressly cover anonymous, aggregate, and derived material. As a conservative operational interpretation, do not pool merchant data for shared model development, training, fine-tuning, or improvement on the assumption that aggregation alone makes it permissible. The clauses do not expressly prohibit every form of evaluation; assess whether a proposed evaluation amounts to creating, developing, training, fine-tuning, or improving an AI/ML system. The merchant-consent exception is scoped to that merchant’s data/store; do not read it as permission to pool multiple merchants’ data. For cross-merchant model development/training/improvement, seek Shopify’s prior written consent or use independently sourced/non-Shopify data. This is an interpretation of the cited terms, not a conclusion about every possible data arrangement.
+
+## ICO statistical-purposes exception under PECR
+
+The ICO’s [final storage and access technologies guidance](https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/) was published 29 April 2026 following the Data (Use and Access) Act changes; its [exceptions section](https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/what-are-the-exceptions/) describes the statistical-purposes exception. It applies only where the operator is an information-society-service provider and the **sole purpose** of storage/access is collecting statistical information about use of that service/site with a view to improving it (exceptions page, “What is the statistical purposes exception?”, paras. 164–79).
+
+Conditions in that guidance include clear and comprehensive information about the purpose, plus a simple, free means to object. The output must be aggregate statistical information that cannot identify people; individual-level personal data may be processed temporarily to aggregate it, but must not be retained longer than necessary for that aggregation. The exception does not cover individual visitor logs/recordings, visitor-ID linkage, tracking/profiling people or groups, cross-service tracking, or advertising-related purposes (paras. 180–209, 220–29). A third-party analytics provider may assist only on the operator’s behalf and to improve that service/site (paras. 238–53). Where personal data is handled before aggregation, UK GDPR obligations continue to apply.
+
+**Implication for the dossier:** qualify the existing advice as setup-specific. The exception is not a general analytics exemption and does not automatically make GA4, Clarity, or session replay exempt. Check the data flows, provider use, retention, purposes, notice and objection path for the actual configuration. The ICO expressly treats individual session recordings/logs as outside this exception.
+
+## GPT-5.6 Luna: public availability, API ID, and price
+
+OpenAI’s [API model page for GPT-5.6 Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna) lists the public API model ID/alias `gpt-5.6-luna`, supported API endpoints, and current text-token list rates per 1 million tokens: **$0.20 input, $0.02 cached input, and $1.20 output**. It states prompts over 272K input tokens are charged at 2× input and 1.5× output for the full request, and cache writes at 1.25× uncached input. OpenAI’s [30 July 2026 pricing announcement](https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/) confirms the reduced $0.20/$1.20 API rates and that Luna remains available in the API, ChatGPT Work and Codex.
+
+OpenAI’s [availability page](https://help.openai.com/en/articles/20001354-gpt-5-6) lists Luna in Work and Codex for Plus, Pro, Business and Enterprise; API access lists Sol, Terra and Luna. These are distinct billing contexts: API list rates are token-metered API prices; Work/Codex consume subscription usage/credits under the applicable plan. **Do not apply the API token rate to Codex/Work consumption or treat the model’s displayed/API alias as proof of a particular internal serving implementation.** The public docs establish availability and a public API identifier, not any hidden/internal name or actual project billing. Actual cost must use the account’s real usage and applicable billing records.
+
+## Source links
+
+- [Shopify Partner Program Agreement](https://www.shopify.com/partners/terms), last updated 27 February 2026, §§1, 9.14–9.15.
+- [Shopify API License and Terms](https://www.shopify.com/legal/api-terms), last updated 27 February 2026, §§2.1.3, 3.24.
+- [ICO final-guidance announcement](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/04/final-storage-and-access-technologies-guidance-published/), 29 April 2026.
+- [ICO guidance: exceptions](https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/what-are-the-exceptions/).
+- [OpenAI API model page: GPT-5.6 Luna](https://developers.openai.com/api/docs/models/gpt-5.6-luna).
+- [OpenAI GPT-5.6 Luna pricing change](https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/), 30 July 2026.
+- [OpenAI model availability in Work, Codex, and API](https://help.openai.com/en/articles/20001354-gpt-5-6).

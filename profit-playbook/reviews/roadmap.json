@@ -1,0 +1,874 @@
+{
+  "review_date": "2026-09-30",
+  "status": "final_chief_review_after_120_domain_verdicts",
+  "scope": "Portfolio choice and dependency order. Research only; no execution or spending authorized.",
+  "objective_default": "Maximize credible learning about contribution profit per pound and founder hour.",
+  "unresolved_user_choices": [
+    "Affordable first-round loss and available cash",
+    "Priority between a creative retail brand and a B2B service/software business",
+    "Founder hours and access to qualified merchant operators",
+    "Selling geography, tax status and fulfilment capacity"
+  ],
+  "portfolio": [
+    {
+      "route": "paid_merchant_catalogue_service",
+      "verdict": "test_first_if_access_and_objective_fit",
+      "objective": "Obtain payment for a costly, inspectable operational job before substantial development.",
+      "condition": "Recent unresolved issue, source access, implementation owner and a buyer willing to pay."
+    },
+    {
+      "route": "original_clothing",
+      "verdict": "optional_separate_retail_test",
+      "objective": "Build a creative brand with viable retained order contribution.",
+      "condition": "Sample quality and paid willingness to buy the feasible offer; may go first if user chooses brand objective."
+    },
+    {
+      "route": "functional_physical_product",
+      "verdict": "reserve_one_candidate",
+      "objective": "Sell a useful object with measured compatibility and defensible delivered economics.",
+      "condition": "Landed quote, verified fit, buyer problem and reason to beat existing substitutes; none validated yet."
+    },
+    {
+      "route": "ai_commerce",
+      "verdict": "supporting_channel_check",
+      "objective": "Verify accessible, accurate product facts and identify observable acquisition where available.",
+      "condition": "Named surface and measurement. Eligibility, answer correctness and sales remain distinct."
+    },
+    {
+      "route": "aeo_saas",
+      "verdict": "defer_public_app",
+      "objective": "Automate an observed repeated merchant job at positive account contribution.",
+      "condition": "Independent paid use, repeat payment, economical support, permitted data access and processing."
+    }
+  ],
+  "concurrency": {
+    "commercial_experiments": 1,
+    "supporting_checks": 1,
+    "supporting_check_hours_cap": 2,
+    "rule": "Use the same offer; pause other revenue experiments until a gate is resolved."
+  },
+  "budget": {
+    "currency": "GBP",
+    "hypothetical_first_round_cash_ceiling": 500,
+    "authorization": "not_authorized_spend",
+    "includes_protected_float": true,
+    "scope": "One shared portfolio ledger. Alternative routes do not each receive this budget. Deduct prior spend and commitments before any release.",
+    "allocations": [
+      {
+        "name": "shared_qualification_customer_sessions_content",
+        "ceiling": 50,
+        "release": "One shared pool across routes. For retail, at most 30 in session incentives and 20 in production incidentals; existing tools first."
+      },
+      {
+        "name": "optional_retail_sample_setup_identical_reorder",
+        "ceiling": 150,
+        "release": "One OPS-03 to OPS-05 envelope; no additive brand sample budget. Actual configured quote must fit."
+      },
+      {
+        "name": "optional_retail_one_shop_cycle_and_domain",
+        "ceiling": 45,
+        "release": "Only after sample and feasible offer pass."
+      },
+      {
+        "name": "ringfenced_retail_fulfilment_refund_cash",
+        "ceiling": 250,
+        "release": "May pay for accepted orders and remedies. Never for ads, content, tools or unrelated experiments."
+      },
+      {
+        "name": "uncommitted_headroom",
+        "ceiling": 5,
+        "release": "Remain uncommitted unless needed for a specific justified cost."
+      }
+    ],
+    "service_success_reallocation": "Fund contracted delivery and credit/refund exposure from uncommitted retail lines, and defer retail spending.",
+    "zero_sales": "Merchant failure stops at the shared 50 qualification/customer-work cap and time gate. Optional retail can lose up to 245 operating cash plus founder time; unused 250 working/refund cash and 5 headroom remain. Combine losses across lanes.",
+    "excluded_additive_pools": [
+      "150 commissioned artwork",
+      "Additional shop cycles",
+      "Creator seeding",
+      "Paid acquisition",
+      "Paid analytics or model subscriptions",
+      "Per-decision API allowances"
+    ],
+    "liquidity_example": {
+      "crew_fulfilment": 35.31,
+      "two_full_refunds_and_two_replacements": 214.62,
+      "working_cash": 250,
+      "remaining_before_extra_fees": 35.38,
+      "nominal_unfunded_orders_before_extra_fees": 1,
+      "ten_unfunded_orders_plus_risk_reserve": 567.72,
+      "rule": "Calculate actual simultaneous intake from available cash less existing commitments, refund reserve, fees and due bills. Ten can be cumulative pilot orders, not an automatic concurrency limit."
+    }
+  },
+  "profit_models": {
+    "status": "sensitivity_cases_not_forecasts",
+    "retail": {
+      "assumptions": {
+        "country": "UK",
+        "not_vat_registered": true,
+        "items_per_order": 1,
+        "price_includes_delivery": true,
+        "full_refund_fraction": 0.08,
+        "extra_replacement_fraction": 0.02,
+        "payment_percent": 0.02,
+        "payment_fixed": 0.25,
+        "variable_order_minutes": 10,
+        "hour_value": 15,
+        "returned_stock_recovery": 0,
+        "supplier_reimbursement": 0,
+        "additional_return_postage": 0,
+        "variable_order_labour": 2.5
+      },
+      "formula_before_cac_and_labour": "0.92 * price - 1.02 * fulfilment - (0.02 * price + 0.25)",
+      "rows": [
+        {
+          "product": "crew",
+          "price": 72,
+          "fulfilment": 35.31,
+          "before_cac_labour_fixed": 28.5338,
+          "after_variable_labour": 26.0338,
+          "after_variable_labour_and_cac_12": 14.0338,
+          "sensitivity_after_labour_4_and_cac_12": 12.5338
+        },
+        {
+          "product": "tee",
+          "price": 45,
+          "fulfilment": 22.57,
+          "before_cac_labour_fixed": 17.2286,
+          "after_variable_labour": 14.7286,
+          "after_variable_labour_and_cac_12": 2.7286,
+          "sensitivity_after_labour_4_and_cac_12": 1.2286
+        },
+        {
+          "product": "tee_with_label",
+          "price": 45,
+          "fulfilment": 24.08,
+          "before_cac_labour_fixed": 15.6884,
+          "after_variable_labour": 13.1884,
+          "after_variable_labour_and_cac_12": 1.1884,
+          "sensitivity_after_labour_4_and_cac_12": -0.3116
+        }
+      ],
+      "crew_sensitivity_after_variable_labour_before_cac": {
+        "ten_percent_price_discount": 19.5538,
+        "fifteen_percent_refunds_four_percent_replacements": 20.2876,
+        "remaining_cac_preserving_18_floor_under_loss_stress": 2.2876
+      },
+      "standalone_break_even_case": {
+        "fixed_cash": 245,
+        "fixed_setup_hours": 20,
+        "base_hour_value": 15,
+        "assumed_cac": 12,
+        "cash_recovery_initial_orders_before_variable_labour": 15,
+        "economic_recovery_initial_orders_after_variable_labour": 39,
+        "higher_labour_sensitivity_economic_orders": 52,
+        "warning": "Expected allowance arithmetic only; CAC 12 exceeds the chosen base operating target. Prior losses and unmodeled costs change the result."
+      },
+      "quotes_required": [
+        "UK Changer 2.0 SKU and colour composition",
+        "Exact decoration and setup",
+        "Chosen size and shipping basket",
+        "Applicable tax and payment account"
+      ],
+      "operating_floors": {
+        "crew_after_cac_and_variable_labour": 18,
+        "labelled_tee_after_cac_and_variable_labour": 8,
+        "base_cac_ceiling_crew": 8,
+        "base_cac_ceiling_labelled_tee": 5,
+        "status": "Chosen PRICE-02 and PRICE-07 rules, not benchmarks. CAC 12 is a stress case above these ceilings."
+      },
+      "labelled_tee_loss_stress": {
+        "fifteen_percent_refunds_four_percent_replacements_after_labour": 9.5568,
+        "remaining_cac_preserving_8_floor": 1.5568
+      },
+      "higher_labour_sensitivity": {
+        "order_minutes": 12,
+        "hour_value": 20,
+        "labour_per_order": 4,
+        "status": "Explicit sensitivity, not the report baseline."
+      }
+    },
+    "service": {
+      "experimental_net_revenue": 150,
+      "collection_credit_allowance": 5,
+      "direct_tooling": 10,
+      "delivery_hours": 4,
+      "base_hour_value": 15,
+      "contribution_after_delivery_labour": 75,
+      "sales_hours_cap": 8,
+      "offer_setup_hours": 2,
+      "fixed_sales_setup_time_value": 150,
+      "equivalent_pilots_to_cover_time_before_other_fixed_costs": 2,
+      "sensitivity_hour_value": 25,
+      "contribution_at_four_hours_and_25_per_hour": 35,
+      "contribution_at_eight_hours_and_25_per_hour": -65,
+      "chosen_contribution_target_fraction": 0.3,
+      "warning": "Net revenue must reflect actual VAT/fees. Price, cost and hours are experimental choices; 150 inclusive of VAT is not 150 net revenue. Scope must clear the chosen contribution target."
+    }
+  },
+  "gates": [
+    {
+      "id": "STRAT-00",
+      "stage": "objective_and_loss_limit",
+      "depends_on": [],
+      "window": "first_30_day_review",
+      "action": "Choose primary objective, available hours, selling geography and affordable loss. Maintain one portfolio cash ledger.",
+      "continue": "A route fits the founder objective and remaining cash.",
+      "stop": "Do not activate a second commercial experiment or spend without scope and authorization.",
+      "decision_ids": [
+        "SAAS-12",
+        "PRICE-12",
+        "OPS-10"
+      ]
+    },
+    {
+      "id": "STRAT-01",
+      "stage": "merchant_access_and_payment",
+      "depends_on": [
+        "STRAT-00"
+      ],
+      "window": "first_30_day_review",
+      "action": "Prepare one scoped offer. After separate authorization hold up to six incident interviews within three hours, then up to five qualified paid quotes, all within eight total selling hours.",
+      "continue": "One qualified independent operator pays for an economical bounded job, even before interview count is reached. Without payment, at least two inspectable unresolved incidents justify progressing from the six-interview screen to quotes.",
+      "stop": "Fewer than two qualifying issues in six interviews prompts segment reconsideration. Five qualified quotes without payment or eight selling hours stops this offer. An incomplete screen is access unresolved, not demand disproven.",
+      "cash_cap": 50,
+      "decision_ids": [
+        "SAAS-01",
+        "SAAS-02",
+        "SAAS-06",
+        "SAAS-09"
+      ]
+    },
+    {
+      "id": "STRAT-02",
+      "stage": "deliver_first_paid_job",
+      "depends_on": [
+        "STRAT-01"
+      ],
+      "window": "following_60_day_review_only_after_payment",
+      "action": "Investigate one known incident across at most ten variants and one authoritative source/destination; compare native workflow, obtain approval and recheck. Access setup and recheck are within four hours.",
+      "continue": "Real fault, useful accepted correction, honest destination status and bounded delivery cost.",
+      "stop": "Native tools already resolve it, access fails, delivery exceeds scope, or buyer sees no useful outcome.",
+      "delivery_hours_cap": 4,
+      "decision_ids": [
+        "SAAS-03",
+        "SAAS-04",
+        "SAAS-05",
+        "SAAS-08",
+        "SAAS-10"
+      ]
+    },
+    {
+      "id": "STRAT-03",
+      "stage": "repeat_external_paid_work",
+      "depends_on": [
+        "STRAT-02"
+      ],
+      "window": "following_60_to_90_day_review",
+      "action": "Complete three independent paid jobs for substantially the same task with accepted receipts and viable recorded costs. Seek repeat payment separately to test recurrence.",
+      "continue": "Three independent completed paid jobs, useful non-native findings and viable delivery/acquisition costs may justify a separately capped internal tool.",
+      "stop": "Missing payment/receipt, native duplicates, unique consulting each time or negative economics without a bounded correction defer reusable build. Lack of renewal alone does not kill a profitable one-off service.",
+      "decision_ids": [
+        "SAAS-11",
+        "SAAS-10"
+      ]
+    },
+    {
+      "id": "STRAT-04",
+      "stage": "internal_automation",
+      "depends_on": [
+        "STRAT-03"
+      ],
+      "window": "90_day_review_or_later_when_dependencies_pass",
+      "action": "After three comparable completed paid jobs, cost a small internal tool for the most repeated expensive step and compare operator effort/errors with the manual baseline. A proposed 20-hour ceiling is a later allocation, not part of the first-round budget.",
+      "continue": "Measured saving after review/support/tooling, without unsupported facts or data reuse.",
+      "stop": "Automation adds cost or errors; keep a profitable manual project if useful. Public SaaS still needs separate support and distribution evidence.",
+      "decision_ids": [
+        "SAAS-08",
+        "SAAS-09",
+        "SAAS-10",
+        "SAAS-11"
+      ]
+    },
+    {
+      "id": "STRAT-05",
+      "stage": "recurring_service_and_subscription_gate",
+      "depends_on": [
+        "STRAT-03"
+      ],
+      "window": "90_day_review_or_later_only_after_paid_recurrence",
+      "action": "Quote a bounded manual monitoring cycle for a real recurring incident/change class, then measure every check, alert and support task. Internal automation is optional, not a prerequisite.",
+      "continue": "At least two independent paid repeats tied to genuine recurring work and viable measured economics may justify subscription development under a new capped allocation.",
+      "stop": "No recurrence or paid second cycle defers subscription work; keep a profitable one-off service when justified. Quiet monitoring does not prove prevented loss.",
+      "decision_ids": [
+        "SAAS-07",
+        "SAAS-10",
+        "SAAS-11"
+      ]
+    },
+    {
+      "id": "STRAT-R1",
+      "stage": "optional_clothing_sample",
+      "depends_on": [
+        "STRAT-00"
+      ],
+      "window": "first_30_day_review_if_retail_chosen",
+      "action": "Sample one original motif on one UK crew; verify exact specification, decoration, measurements, wear/wash result and identical reorder, landed cost and delivery promise.",
+      "continue": "Sample supports offer at feasible delivered price within remaining budget.",
+      "stop": "Failed quality, unachievable artwork, uncertain rights, unviable basket or sample allowance exceeded.",
+      "cash_cap": 150,
+      "decision_ids": [
+        "PROD-01",
+        "PROD-02",
+        "PROD-04",
+        "PROD-10",
+        "PROD-11",
+        "OPS-01",
+        "OPS-02",
+        "OPS-03",
+        "OPS-04",
+        "OPS-05",
+        "PRICE-02",
+        "PRICE-06",
+        "PRICE-07"
+      ]
+    },
+    {
+      "id": "STRAT-R2",
+      "stage": "optional_clothing_paid_offer",
+      "depends_on": [
+        "STRAT-R1"
+      ],
+      "window": "following_30_to_60_day_review_only_after_sample",
+      "action": "Show a real price-visible fulfilable offer to independent target buyers. Count paid, fulfilled, cancelled, refunded and kept orders separately.",
+      "continue": "At least five unrelated kept full-price orders meeting the chosen contribution floor justify one bounded repeat; reconcile ordinary returns and retain later-fault reserves.",
+      "stop": "Zero sales after thirty independent target buyers can inspect the offer, or twenty setup/recruitment hours or operating-cash cap. Diagnose insufficient access separately. Allow at most one concrete-objection revision.",
+      "decision_ids": [
+        "PROD-08",
+        "PRICE-01",
+        "STORE-01",
+        "STORE-02",
+        "STORE-03",
+        "STORE-04",
+        "STORE-05",
+        "STORE-06",
+        "STORE-07",
+        "STORE-08",
+        "STORE-09",
+        "OPS-07",
+        "OPS-08",
+        "OPS-09",
+        "MEASURE-01",
+        "MEASURE-03",
+        "MEASURE-04",
+        "MEASURE-12",
+        "CREATIVE-08",
+        "CREATIVE-04",
+        "DIST-02"
+      ]
+    },
+    {
+      "id": "STRAT-R3",
+      "stage": "optional_clothing_bounded_repeat",
+      "depends_on": [
+        "STRAT-R2"
+      ],
+      "window": "90_day_review_or_later_when_dependencies_pass",
+      "action": "Repeat one product proposition with a second acquisition cohort; mature returns and reconcile contribution before a specific next spend.",
+      "continue": "At least twenty kept orders across two acquisition cohorts, both meeting the chosen contribution floor after acquisition and variable work, plus a remaining-cash plan and no unresolved material obligations permit a bounded next-cycle review.",
+      "stop": "Failed floor, dependence on friendly buyers/discounts, poor fulfilment or unfunded remedies block expansion. Counts are operating gates, not proof of market size or a bulk-order instruction.",
+      "decision_ids": [
+        "PROD-09",
+        "OPS-12",
+        "PRICE-09",
+        "PRICE-12"
+      ]
+    },
+    {
+      "id": "STRAT-P1",
+      "stage": "functional_product_admission",
+      "depends_on": [
+        "STRAT-00"
+      ],
+      "window": "only_when_main_commercial_test_paused_or_complete",
+      "action": "Choose one narrow compatibility problem, obtain a landed quote, inspect substitutes and verify a sample before a paid test.",
+      "continue": "Quoted economics, measured fit and target-buyer problem support a real offer over existing alternatives.",
+      "stop": "Commodity proposition, unquoted supply, expensive compatibility burden or demand based only on search/creator popularity.",
+      "decision_ids": [
+        "PROD-01",
+        "PROD-03",
+        "PROD-04",
+        "PROD-05",
+        "PROD-10",
+        "PROD-11",
+        "AI-02",
+        "AI-09"
+      ]
+    }
+  ],
+  "interpretation_rules": [
+    "Thirty, sixty and ninety days are review windows; missing dependencies shift subsequent work.",
+    "Gate counts, fee levels and spend ceilings are chosen operating rules, not empirically established thresholds.",
+    "Keep service and retail profit ledgers separate, while combining cash exposure at portfolio level.",
+    "A local model replay, feed acceptance or citation is not evidence of live shopping traffic, causal sales lift or profitable demand.",
+    "Do not infer competitor profit from list prices, funding, ARR, reviews or creator revenue claims.",
+    "Shopify-derived or aggregated merchant data must not become a pooled AI-training asset without verified platform and legal rights; merchant-specific consent does not automatically authorize pooling.",
+    "Review windows begin when the chosen route actually starts, not on this report date. Kept orders use the declared reconciliation window; later-fault liabilities remain reserved."
+  ],
+  "sources": [
+    {
+      "label": "Dossier brief",
+      "path": "../BRIEF.md",
+      "type": "scope_and_assumptions"
+    },
+    {
+      "label": "Current SaaS business research",
+      "path": "../research/saas-business.md",
+      "type": "research_synthesis"
+    },
+    {
+      "label": "Product demand research",
+      "path": "../research/product-demand.md",
+      "type": "research_synthesis"
+    },
+    {
+      "label": "Competitor assessment",
+      "path": "../../competitor-deep-dive-2026-09-29/assessment.md",
+      "type": "research_synthesis"
+    },
+    {
+      "label": "Clothing sourcing",
+      "path": "../../quiet-fandom-brand-2026-09-29/sourcing.md",
+      "type": "recorded_supplier_inputs"
+    },
+    {
+      "label": "Shopify pricing",
+      "url": "https://www.shopify.com/uk/pricing",
+      "type": "primary_checked_2026_09_30"
+    },
+    {
+      "label": "Inkthreadable shipping",
+      "url": "https://www.inkthreadable.co.uk/shipping-costs",
+      "type": "primary_checked_2026_09_30"
+    },
+    {
+      "label": "Shopify Catalog Mapping",
+      "url": "https://help.shopify.com/en/manual/shopify-catalog/mapping",
+      "type": "primary_checked_2026_09_30"
+    },
+    {
+      "label": "Shopify agreement update FAQ",
+      "url": "https://help.shopify.com/en/partners/help-support/faq/ppa",
+      "type": "primary_checked_2026_09_30"
+    },
+    {
+      "label": "Shopify Partner Program Agreement",
+      "url": "https://www.shopify.com/partners/terms",
+      "type": "primary_contract_verified_in_evidence_source_review"
+    },
+    {
+      "label": "Shopify API Terms",
+      "url": "https://www.shopify.com/legal/api-terms",
+      "type": "primary_contract_verified_in_evidence_source_review"
+    }
+  ],
+  "time_budget": {
+    "proposed_first_round_hours": 20,
+    "shared_across_routes": true,
+    "merchant_selling_hours": 8,
+    "merchant_offer_preparation_hours": 2,
+    "retail_allocation": {
+      "sample_spec_economics": 4,
+      "store_checkout_privacy_records": 5,
+      "shared_shopper_sessions": 3,
+      "one_shoot_four_assets": 5,
+      "publishing_replies_logging": 3
+    },
+    "rule": "No additive per-decision hours. Use remaining hours when switching routes; reduce optional work if readiness overruns. Log order labour separately and fulfil accepted obligations."
+  },
+  "canonical_aliases": {
+    "AI-11": "MEASURE-10",
+    "AI-12": "MEASURE-04",
+    "CREATIVE-02": "STORE-02",
+    "CREATIVE-09": "STORE-02",
+    "CREATIVE-11": "STORE-11",
+    "DIST-10": "AI-04",
+    "STORE-10": "CREATIVE-04",
+    "PROD-12": "AI-09",
+    "BRAND-03": "PROD-02",
+    "BRAND-06": "AI-08",
+    "BRAND-07": "STORE-02",
+    "BRAND-08": "CREATIVE-08",
+    "BRAND-09": "PROD-08",
+    "BRAND-10": "OPS-01",
+    "PRICE-01": "PROD-08",
+    "PRICE-10": "SAAS-02",
+    "PRICE-11": "SAAS-03"
+  },
+  "alias_rule": "Preserve every reviewed decision ID for traceability. Aliases share execution and evidence; they do not create another task, sample, spend or experiment. DIST-10 buyer-question content goes to AI-07 later.",
+  "shared_work_products": [
+    {
+      "owner": "PRICE-12",
+      "members": [
+        "OPS-09",
+        "MEASURE-04",
+        "DIST-01",
+        "SAAS-10",
+        "SAAS-12"
+      ],
+      "artifact": "One portfolio cash ledger with separate retail and service economics, matured order costs, acquisition costs and obligations."
+    },
+    {
+      "owner": "AI-02",
+      "members": [
+        "OPS-08",
+        "OPS-11",
+        "STORE-03"
+      ],
+      "artifact": "One variant-specific source and claim record, used for size facts, pages, feeds and audit."
+    },
+    {
+      "owner": "OPS-05",
+      "members": [
+        "OPS-03",
+        "OPS-04",
+        "BRAND-06",
+        "AI-08"
+      ],
+      "artifact": "One exact sample and reorder approval pack within the single sample allowance."
+    },
+    {
+      "owner": "STORE-02",
+      "members": [
+        "BRAND-07",
+        "AI-08",
+        "CREATIVE-02"
+      ],
+      "artifact": "One real product shoot and evidence pack. Generated images remain labelled concepts."
+    },
+    {
+      "owner": "CREATIVE-08",
+      "members": [
+        "CREATIVE-04",
+        "DIST-02"
+      ],
+      "artifact": "Exactly four assets from one shoot, two executions each of everyday-style versus original-world framing."
+    },
+    {
+      "owner": "MEASURE-01",
+      "members": [
+        "MEASURE-03",
+        "MEASURE-04",
+        "MEASURE-05",
+        "MEASURE-12",
+        "AI-12"
+      ],
+      "artifact": "Native order/refund/cost and source ledger with essential checkout/privacy QA; two-hour shared measurement preflight inside total readiness time."
+    },
+    {
+      "owner": "AI-04",
+      "members": [
+        "DIST-10",
+        "AI-03",
+        "AI-06"
+      ],
+      "artifact": "One eligible native/free product route after real purchase, checkout and policy readiness; no waitlist-only merchant feed."
+    },
+    {
+      "owner": "SAAS-03",
+      "members": [
+        "PRICE-11",
+        "SAAS-04",
+        "SAAS-05",
+        "SAAS-06",
+        "SAAS-08",
+        "SAAS-10"
+      ],
+      "artifact": "One ten-variant, one-incident, one-destination paid scope, four-hour delivery ceiling with actual net-of-tax economics."
+    }
+  ],
+  "cross_domain_overrides": [
+    {
+      "topic": "governance_before_validation",
+      "rule": "SAAS-12 and PRICE-12 ledgers start before work. SAAS-12 must not depend on later SAAS-11 or SAAS-07 success."
+    },
+    {
+      "topic": "merchant_payment_before_measurement_science",
+      "rule": "SAAS-01 and SAAS-03 do not depend on MEASURE-09/10/11 causal-transfer studies or an owned store."
+    },
+    {
+      "topic": "launch_measurement",
+      "rule": "Defer persistent assignment, A/A, power-driven experiments and holdout plumbing until a feasible causal question. Basic checkout, privacy, authoritative order and refund defects still block selling."
+    },
+    {
+      "topic": "retail_price",
+      "rule": "Use one feasible 72 delivered crew price first; defer 72/78 A/B, shipping-framing and discount experiments. Five orders per arm cannot establish a profit winner."
+    },
+    {
+      "topic": "creative_concurrency",
+      "rule": "CREATIVE-04 is the only chosen first comparison, owned by CREATIVE-08; other creative comparisons are deferred or truthful defaults."
+    },
+    {
+      "topic": "money_denominator",
+      "rule": "Model expected refunds per initial paid order and use initial paid new-customer orders for its CAC comparison. If using retained-customer CAC, convert the entire contribution denominator consistently."
+    },
+    {
+      "topic": "external_platforms",
+      "rule": "Confirm the live seller/customer-market eligibility before channel work. Native feed acceptance, server HTML and downstream ingestion remain separate observations."
+    },
+    {
+      "topic": "paid_access_diagnostic",
+      "rule": "Default first round has zero ads. An organic sale is neither necessary nor sufficient for a later paid access diagnostic. A chosen 100 search OR social test must replace optional spending within remaining unprotected funds and is a learning loss; five kept orders gates repeating a promising offer, not diagnosing failed access."
+    },
+    {
+      "topic": "automation_versus_subscription",
+      "rule": "Three independent completed paid jobs with a repeatable profitable task can justify a separately capped internal tool. Two independent paid repeats gate monitoring/subscription development. Neither count releases spend automatically or proves market size."
+    },
+    {
+      "topic": "canonical_dependency_routing",
+      "rule": "Resolve every dependency on a reviewed duplicate to its canonical owner. Preserve alias cards for traceability, but they do not create extra execution prerequisites. Machine-applicable depends_on replacements are included in decision_overrides."
+    }
+  ],
+  "domain_reviews_read": [
+    {
+      "path": "growth-review.json",
+      "reviewed_ids": 36,
+      "verdicts": {
+        "accept": 6,
+        "modify": 17,
+        "defer": 13
+      },
+      "chief_resolution": "Accept consolidation; clarify that an organic sale does not gate a separately funded later access diagnostic."
+    },
+    {
+      "path": "evidence-review.json",
+      "reviewed_ids": 36,
+      "verdicts": {
+        "accept": 3,
+        "modify": 22,
+        "defer": 9,
+        "reject": 2
+      },
+      "chief_resolution": "Accept consolidation and procedural/evidence limits. Separate internal-tool admission after three completed paid jobs from subscription admission after two paid repeats; retire AI-11/12 as duplicate tasks."
+    },
+    {
+      "path": "product-review.json",
+      "reviewed_ids": 48,
+      "verdicts": {
+        "accept": 6,
+        "modify": 37,
+        "defer": 5
+      },
+      "chief_resolution": "Accept quality, economics and duplicate-work corrections. Apply shared 20-hour envelope and explicit retail operating counts/floors through chief overrides."
+    }
+  ],
+  "retired_standalone_tasks": [
+    "AI-11",
+    "AI-12"
+  ],
+  "decision_overrides": {
+    "PRICE-05": {
+      "depends_on": [
+        "PRICE-02",
+        "PRICE-07"
+      ],
+      "experiment": {
+        "action": "Now verify that the initial public offer has no automatic welcome discount. Only later, after a feasible MEASURE-07 design, a viable PROD-08 baseline and execution authorization, compare one genuine capped promotion with full price.",
+        "metric": "Difference in mature total contribution per eligible assigned visitor, with discounts already deducted.",
+        "guardrail": "No fabricated sale history, stacked codes or routine breach of PRICE-02. Avoid deducting discount expense a second time from after-discount contribution.",
+        "stop_rule": "Keep a promotion only when the evidence supports greater incremental contribution within the floor and cash controls. A ten-order or GBP40 stop is an exposure cap, not proof of a winner.",
+        "cost_note": "GBP40 is only an illustrative maximum forgone margin within the single growth/learning allowance, not an additional approved pool."
+      }
+    },
+    "OPS-10": {
+      "decision": "Choose one active commercial uncertainty and at most one supporting operational check. Use one proposed 20-hour first-round time envelope across the selected route, pending actual founder capacity. Count shared work once, keep a short weekly review inside the envelope, and fulfil existing customer obligations.",
+      "experiment": {
+        "action": "Record one active commercial question, remaining cash, the next evidence and actual hours. Use a proposed 20-hour first-round envelope across the chosen route, with a 30-minute weekly review inside it; external waiting time is recorded separately.",
+        "metric": "Time per useful decision, unresolved reasons and support minutes per order, with waiting time separate.",
+        "guardrail": "The 20 hours are a planning choice pending founder availability, not a second allowance on top of per-card hours. Reuse sessions, sample evidence and content; accepted customer obligations still require completion and all actual order work is logged.",
+        "stop_rule": "Review at the shared cash/hour gate or when a material fact changes. Reduce optional work or re-scope rather than skipping readiness. Waiting for sampling, recruitment, delivery or returns is not evidence of absent demand.",
+        "cost_note": "No separate six-hour weekly budget. All route work competes for the single proposed 20-hour round and actual user-set cash limit; accepted-order labour remains a cost even if it exceeds the plan."
+      }
+    },
+    "PROD-08": {
+      "experiment": {
+        "action": "Prepare one sample-backed offer. After execution authority and OPS-12 readiness, run a bounded GBP72 offer period, record observable exposure/source and reconcile delivery and ordinary cancellation outcomes. Track later fault exposure separately.",
+        "metric": "Paid/retained counts, actual contribution per initial paid order, cohort contribution, founder time and specific objections.",
+        "guardrail": "No fake checkout, invented discount or hidden visitor-specific price. Confirm jurisdiction/VAT; reconcile ordinary return exposure and keep later-fault liabilities and immature losses in the reserve. Five kept orders are a learning gate, not validation of market demand.",
+        "stop_rule": "Pause for quality, remedy, cash or chosen-floor failure. Stop additional offer spending after 30 independently recruited target buyers can inspect the real price-visible offer with zero sales, or at the shared cash/time limit; these are risk limits, not demand estimates. Five unrelated kept full-price orders meeting the chosen floor may justify one bounded repeat. Insufficient access remains unresolved, and any later paid access diagnostic needs its own replacement allocation.",
+        "cost_note": "No paid acquisition allocated initially. Samples, shop and float share one currently unknown user cash limit; this dossier authorizes no sale or spending."
+      }
+    },
+    "PROD-09": {
+      "experiment": {
+        "action": "Run two documented offer cycles with fresh unrelated buyers at the same core price/specification. Exclude gifts/test orders and log source, exposure, paid/fulfilled/kept orders, refunds, costs and founder time. At 20 kept orders across the two cohorts, review whether a specific bounded next cycle is justified.",
+        "metric": "Retained contribution per cycle, acquisition effort per order and repeated buyer objections.",
+        "guardrail": "Twenty kept orders and two cohorts are chosen operating gates, not statistical proof or automatic stock authorization. Preserve later-fault reserves. Report actual counts; organic cohorts differ, so this is repeat-acquisition evidence rather than a causal estimate.",
+        "stop_rule": "Do not increase inventory when either cohort misses the chosen PRICE-02 floor, depends on discounts or personal contacts, or leaves material quality/delivery/remedy problems. Require a funded cash plan and verified batch economics before any inventory commitment.",
+        "cost_note": "Reuse assets and stay within agreed cash exposure. Two cycles are a chosen gate, not product-market-fit proof."
+      },
+      "confidence": "medium"
+    },
+    "AI-04": {
+      "decision": "Check actual seller/customer markets, product restrictions and storefront route. Submit through one supported native/free catalog route only after a genuine purchasable fixed-price offer, supported payment, checkout and policies exist. Defer custom OpenAI feed or checkout engineering until approved access and a specific unmet need exist.",
+      "depends_on": [
+        "AI-02",
+        "AI-03",
+        "AI-06",
+        "STORE-04",
+        "STORE-05",
+        "STORE-07"
+      ],
+      "experiment": {
+        "action": "First check the chosen channel market/product eligibility. Before submission, verify a real fixed-price purchasable offer with supported payment, secure checkout and clear delivery/return terms; a waitlist-only page is insufficient. If ready and eligible, submit one verified product family through an existing route and log acceptance separately from display and orders.",
+        "metric": "Eligible and accepted purchasable records, observed display/route evidence and settled order contribution, each with its own denominator.",
+        "guardrail": "Catalog acceptance does not promise display or ranking. A feed flag does not activate checkout; do not assume the proposed UK market is supported.",
+        "stop_rule": "Stop integration work if access is unavailable, or if more than four hours are needed without a concrete buyer or operational need. Keep initial order observations non-causal.",
+        "cost_note": "GBP 0 paid tools. Eligibility shares the existing supporting-check time; any implementation is a reprioritised route task, not a new four-hour allowance."
+      }
+    },
+    "BRAND-04": {
+      "depends_on": [
+        "BRAND-01",
+        "PROD-02"
+      ]
+    },
+    "BRAND-08": {
+      "depends_on": [
+        "CREATIVE-08",
+        "AI-08",
+        "STORE-02"
+      ]
+    },
+    "BRAND-09": {
+      "depends_on": [
+        "PROD-08",
+        "AI-08"
+      ]
+    },
+    "BRAND-12": {
+      "depends_on": [
+        "PROD-02"
+      ]
+    },
+    "CREATIVE-03": {
+      "depends_on": [
+        "STORE-02"
+      ]
+    },
+    "CREATIVE-04": {
+      "depends_on": [
+        "STORE-02"
+      ]
+    },
+    "CREATIVE-06": {
+      "depends_on": [
+        "STORE-02"
+      ]
+    },
+    "CREATIVE-07": {
+      "depends_on": [
+        "STORE-02"
+      ]
+    },
+    "CREATIVE-08": {
+      "depends_on": [
+        "STORE-02"
+      ]
+    },
+    "CREATIVE-09": {
+      "depends_on": [
+        "STORE-02"
+      ]
+    },
+    "CREATIVE-11": {
+      "depends_on": [
+        "STORE-02"
+      ]
+    },
+    "CREATIVE-12": {
+      "depends_on": [
+        "STORE-02",
+        "CREATIVE-08"
+      ]
+    },
+    "DIST-11": {
+      "depends_on": [
+        "DIST-01",
+        "DIST-09",
+        "AI-04"
+      ]
+    },
+    "PRICE-09": {
+      "depends_on": [
+        "PROD-08",
+        "PRICE-06",
+        "PRICE-12"
+      ]
+    }
+  },
+  "decision_override_reasons": {
+    "PRICE-05": "Immediate truthful default must not depend on a future promotion trial.",
+    "OPS-10": "One shared time allowance replaces additive weekly/card budgets.",
+    "PROD-08": "Align the live card with the chief continuation/stop gates without claiming demand from tiny samples.",
+    "PROD-09": "Align bounded repeat review, contribution floor and actual order counts; lower confidence for the unvalidated operating thresholds.",
+    "AI-04": "A real purchase path is required before merchant listing submission; eligibility inspection can happen earlier."
+  },
+  "review_coverage": {
+    "source_decisions": 120,
+    "domain_verdicts": 120,
+    "unique_reviewed_ids": 120,
+    "domain_verdict_counts": {
+      "modify": 76,
+      "defer": 27,
+      "accept": 15,
+      "reject": 2
+    },
+    "chief_overridden_ids": [
+      "PRICE-05",
+      "OPS-10",
+      "PROD-08",
+      "PROD-09",
+      "AI-04",
+      "BRAND-04",
+      "BRAND-08",
+      "BRAND-09",
+      "BRAND-12",
+      "CREATIVE-03",
+      "CREATIVE-04",
+      "CREATIVE-06",
+      "CREATIVE-07",
+      "CREATIVE-08",
+      "CREATIVE-09",
+      "CREATIVE-11",
+      "CREATIVE-12",
+      "DIST-11",
+      "PRICE-09"
+    ],
+    "rule": "Domain verdict counts describe the domain review layer. Apply decision_overrides last to the effective public cards and show that chief refinements exist.",
+    "chief_policy_refinement_ids": [
+      "PRICE-05",
+      "OPS-10",
+      "PROD-08",
+      "PROD-09",
+      "AI-04"
+    ],
+    "chief_dependency_routing_ids": [
+      "BRAND-04",
+      "BRAND-08",
+      "BRAND-09",
+      "BRAND-12",
+      "CREATIVE-03",
+      "CREATIVE-04",
+      "CREATIVE-06",
+      "CREATIVE-07",
+      "CREATIVE-08",
+      "CREATIVE-09",
+      "CREATIVE-11",
+      "CREATIVE-12",
+      "DIST-11",
+      "PRICE-09"
+    ],
+    "canonical_alias_count": 17
+  }
+}

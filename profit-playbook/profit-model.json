@@ -1,0 +1,379 @@
+{
+  "title": "Illustrative unit economics and SaaS workload model",
+  "as_of": "2026-09-30",
+  "currency": "GBP",
+  "status": "Reproducible scenario arithmetic; not a demand forecast, quote, tax determination, or permission to spend.",
+  "jurisdiction_assumptions": {
+    "physical": "UK-established seller, UK customers, UK fulfilment, adult apparel/ordinary goods, domestic standard card, no VAT registration for the base case; all unconfirmed.",
+    "saas": "UK-established SaaS seller selling UK standard-rated digital service to UK customers; registered VAT case shown for comparability; all unconfirmed.",
+    "tax_scope": "Profit taxes, income tax, corporation tax, National Insurance, duties, foreign sales, and owner drawings excluded. Adult clothing and modeled SaaS treated at standard 20% VAT when registered. Seek qualified advice for actual setup."
+  },
+  "source_inputs": {
+    "changer_crew_product_and_one_decoration_gbp_incl_vat": {
+      "value": 31.53,
+      "source": "ink_catalogue",
+      "evidence": "Published catalogue figure; specific colour/size/artwork checkout quote remains needed."
+    },
+    "freestyler_tee_product_and_one_decoration_gbp_incl_vat": {
+      "value": 19.69,
+      "source": "ink_catalogue",
+      "evidence": "Published catalogue figure; specific colour/size/artwork checkout quote remains needed."
+    },
+    "tee_printed_neck_label_gbp_incl_vat": {
+      "value": 1.51,
+      "source": "ink_pricing",
+      "evidence": "Optional tee label; excluded on crew case."
+    },
+    "extra_print_location_gbp_incl_vat": {
+      "value": 5.04,
+      "source": "ink_pricing",
+      "evidence": "Extra location charge; not included in base products."
+    },
+    "inkthreadable_uk_shipping_tee_0_100g_gbp_incl_vat": {
+      "value": 2.88,
+      "source": "ink_shipping",
+      "evidence": "Current published Royal Mail 48 band; site assigns T-shirts 100g."
+    },
+    "inkthreadable_uk_shipping_crew_101_699g_gbp_incl_vat": {
+      "value": 3.78,
+      "source": "ink_shipping",
+      "evidence": "Current published Royal Mail 48 band; site assigns sweatshirts 200g."
+    },
+    "inkthreadable_uk_shipping_tote_0_100g_gbp_incl_vat": {
+      "value": 2.88,
+      "source": "ink_shipping",
+      "evidence": "Tote bags listed at 100g; shipment class and selected product need final check."
+    },
+    "heavy_tote_product_and_one_decoration_gbp_incl_vat": {
+      "value": 11.13,
+      "source": "ink_tote",
+      "evidence": "Published Stanley/Stella 300gsm Tote Bag catalogue price, embroidery is one listed decoration option."
+    },
+    "shopify_basic_standard_card_rate_percent": {
+      "value": 0.02,
+      "source": "shopify_pricing"
+    },
+    "shopify_basic_standard_card_fixed_gbp": {
+      "value": 0.25,
+      "source": "shopify_pricing"
+    },
+    "shopify_basic_monthly_billed_monthly_gbp": {
+      "value": 25.0,
+      "source": "shopify_pricing"
+    },
+    "stripe_standard_uk_card_rate_percent": {
+      "value": 0.015,
+      "source": "stripe_pricing"
+    },
+    "stripe_standard_uk_card_fixed_gbp": {
+      "value": 0.2,
+      "source": "stripe_pricing"
+    },
+    "vat_standard_percent": {
+      "value": 0.2,
+      "source": "govuk_vat_rates"
+    },
+    "vat_mandatory_threshold_gbp": {
+      "value": 90000,
+      "source": "govuk_vat_registration"
+    },
+    "gpt_5_6_luna_input_usd_per_million_tokens": {
+      "value": 0.2,
+      "source": "openai_model_pricing"
+    },
+    "gpt_5_6_luna_output_usd_per_million_tokens": {
+      "value": 1.2,
+      "source": "openai_model_pricing"
+    }
+  },
+  "assumptions": {
+    "physical_product_prices_gbp_delivered": {
+      "changer_crew": 72.0,
+      "freestyler_tee": 45.0,
+      "heavy_tote": 30.0
+    },
+    "price_status": "Chosen test prices, all-in consumer amounts including standard delivery; willingness to pay untested. No separately added delivery receipt.",
+    "single_item_order": true,
+    "full_refund_probability": 0.08,
+    "replacement_probability_separate": 0.02,
+    "refund_treatment": "Expected full refund returns all checkout receipts, including delivery. Original payment processing charge is retained. No returned stock salvage, supplier reimbursement, replacement refund, or customer-paid/merchant-paid return postage is modeled. Replacement probability adds another full fulfilment cost. Scenario rates, not observed rates.",
+    "payment_fee_model": "Shopify Basic standard online card: 2% of full order amount + £0.25. Fee incurred on the original charge in each order, including refunded orders. Verify actual provider/mix before use; do not stack Stripe and Shopify fees.",
+    "founder_variable_time_minutes_per_order": {
+      "changer_crew": 10,
+      "freestyler_tee": 10,
+      "heavy_tote": 8
+    },
+    "founder_opportunity_cost_gbp_per_hour": 15.0,
+    "fixed_cash_launch_allowance_gbp": 297.24,
+    "fixed_cash_note": "Inherited illustrative POD proof envelope: samples £120 + three months of shop allowance £90 + domain £15 + three delivered Freestyler gifts £72.24. Float and contingency excluded; replace with actual planned spend.",
+    "founder_fixed_setup_hours": 108,
+    "founder_fixed_hours_note": "Illustrative 60 setup hours plus four hours/week for 12 weeks; entirely an opportunity-cost scenario.",
+    "creator_affiliate_percent": 0.1,
+    "creator_affiliate_basis": "Proposed 10% commission is paid only on a non-refunded retained order, using delivered checkout price less the assumed £3.95 delivery allowance. The per-retained-order commission is not the expected fee per initial order; multiply it by (1 - refund rate) for initial-order contribution arithmetic.",
+    "discount_percent": 0.1,
+    "gifted_tee_seeding_count": 3,
+    "gifted_tee_attributable_retained_customers": 5,
+    "gifted_tee_attribution_note": "Arithmetic-only example; no conversion or attribution evidence.",
+    "alternative_functional_product": "Stanley/Stella heavy tote: choose a practical carrying product with a published 300gsm £11.13 decorated catalogue entry, modeled £30 delivered. This product and price are a test hypothesis, not validated demand.",
+    "saas_monthly_price_gbp_inc_vat": 49.0,
+    "saas_monthly_fixed_infra_tools_gbp": 50.0,
+    "saas_fixed_cost_note": "Chosen planning allowance, not a quote. Actual cloud/database/monitoring/support stack, tax on vendor invoices and usage overages are unknown.",
+    "saas_usd_to_gbp_fx_assumption": 0.75,
+    "saas_fx_note": "Chosen simplification, not a verified exchange rate; API spend is small here but must use settlement-date FX and any card FX charge in real operation.",
+    "saas_ai_workload_per_account_per_month": {
+      "input_tokens": 300000,
+      "output_tokens": 50000
+    },
+    "saas_free_active_accounts": 100,
+    "saas_paid_active_accounts": 10,
+    "saas_free_support_minutes_per_account_per_month": 5,
+    "saas_paid_support_minutes_per_account_per_month": 30,
+    "saas_support_opportunity_cost_gbp_per_hour": 15.0,
+    "saas_openai_usage": "Representative text-only model scenario at posted GPT-5.6 Luna rates, with no tools, images, retries, caching, safety/model review or prompt-size growth. Free and paid users receive the same monthly token allowance. Model choice may not suit output quality.",
+    "saas_payment_model": "Stripe standard UK card 1.5% + £0.20 per £49 renewal plus Stripe Billing pay-as-you-go fee of 0.7% of £49 billing volume. Failed-payment recovery, refunds, chargebacks, non-UK cards and foreign exchange excluded.",
+    "saas_paid_accounts_are_retained_and_paid_for_full_month": true,
+    "saas_founder_admin_sales_product_development_cost": "Excluded. Support hours are a direct labor proxy only; fixed engineering/sales/legal/security work is not priced."
+  },
+  "formulas": {
+    "payment_fee": "checkout_price * payment_percent + payment_fixed",
+    "expected_contribution_pre_labor_cac_fixed": "(1 - refund_rate) * checkout_price - (1 + replacement_rate) * fulfilment_cost - payment_fee",
+    "gross_profit_per_order_before_payment_returns_marketing_labor": "checkout_price - fulfilment_cost",
+    "contribution_after_variable_labor": "expected_contribution_pre_labor_cac_fixed - (variable_minutes / 60 * labor_rate)",
+    "allowable_cac_break_even_before_fixed_costs": "contribution_after_variable_labor; spending this entire amount yields £0 toward fixed costs/profit, so working CAC target should be lower",
+    "economic_break_even_orders_no_paid_cac": "ceil((fixed_cash + fixed_founder_hours * labor_rate) / contribution_after_variable_labor)",
+    "economic_break_even_orders_at_CAC": "ceil((fixed_cash + fixed_founder_hours * labor_rate) / (contribution_after_variable_labor - CAC))",
+    "vat_registered_contribution": "(1 - refund_rate) * checkout_price / (1 + VAT_rate) - (1 + replacement_rate) * fulfilment_cost / (1 + VAT_rate) - payment_fee",
+    "discounted_contribution": "apply discount to all-in checkout price; fulfillment unchanged; refund reserve uses discounted checkout price; same payment fee percentage/fixed model",
+    "creator_commission_per_retained_order": "commission_rate * max(0, retained_checkout_price - assumed_delivery_allowance)",
+    "expected_creator_commission_per_initial_order": "(1 - refund_rate) * creator_commission_per_retained_order; subtract from expected contribution per initial order",
+    "saas_api_cost_per_account_gbp": "((input_tokens/1000000*input_USD_rate)+(output_tokens/1000000*output_USD_rate))*USD_GBP",
+    "saas_free_variable_cost_per_account": "free_support_minutes/60*support_rate + API_cost_per_account",
+    "saas_paid_contribution_pre_fixed_infra": "paid_price/(1+VAT_rate) - payment_gateway_fee - Stripe_Billing_fee - paid_support_minutes/60*support_rate - API_cost_per_account",
+    "saas_month_operating_scenario": "paid_accounts*(price/(1+VAT)-gateway fee-Stripe Billing fee-paid support-account API cost) - free_accounts*(free support-account API cost) - monthly fixed infra"
+  },
+  "physical_scenarios": [
+    {
+      "id": "changer_crew_72_delivered",
+      "checkout_gbp": 72,
+      "fulfilment_gbp": 35.31,
+      "payment_fee_gbp": 1.69,
+      "gross_profit_before_returns_payment_marketing_labor_gbp": 36.69,
+      "expected_refund_reserve_gbp": 5.76,
+      "expected_replacement_reserve_gbp": 0.71,
+      "contribution_before_labor_CAC_fixed_gbp": 28.53,
+      "variable_labor_gbp": 2.5,
+      "contribution_after_labor_allowable_break_even_CAC_gbp": 26.03,
+      "economic_break_even_orders_no_CAC": 74,
+      "economic_break_even_orders_at_CAC_8": 107,
+      "vat_registered_contribution_pre_labor_gbp": 23.5,
+      "refund_sensitivity_15pct_contribution_pre_labor_gbp": 23.49,
+      "discount_10pct_contribution_pre_labor_CAC_gbp": 22.05,
+      "creator_commission_10pct_cost_per_retained_order_gbp": 6.81,
+      "expected_creator_commission_10pct_cost_per_initial_order_gbp": 6.26,
+      "after_expected_creator_commission_and_labor_allowable_CAC_gbp": 19.77,
+      "status": "Supplier product and shipping inputs observed in public catalogue/schedule; price and all reserve/labor values are hypotheses."
+    },
+    {
+      "id": "freestyler_tee_45_delivered",
+      "checkout_gbp": 45,
+      "fulfilment_gbp": 24.08,
+      "payment_fee_gbp": 1.15,
+      "gross_profit_before_returns_payment_marketing_labor_gbp": 20.92,
+      "expected_refund_reserve_gbp": 3.6,
+      "expected_replacement_reserve_gbp": 0.48,
+      "contribution_before_labor_CAC_fixed_gbp": 15.69,
+      "variable_labor_gbp": 2.5,
+      "contribution_after_labor_allowable_break_even_CAC_gbp": 13.19,
+      "economic_break_even_orders_no_CAC": 146,
+      "economic_break_even_orders_at_CAC_8": 370,
+      "vat_registered_contribution_pre_labor_gbp": 12.88,
+      "refund_sensitivity_15pct_contribution_pre_labor_gbp": 12.54,
+      "discount_10pct_contribution_pre_labor_CAC_gbp": 11.64,
+      "creator_commission_10pct_cost_per_retained_order_gbp": 4.11,
+      "expected_creator_commission_10pct_cost_per_initial_order_gbp": 3.78,
+      "after_expected_creator_commission_and_labor_allowable_CAC_gbp": 9.41,
+      "status": "Supplier product, optional tee label and shipping inputs observed; price, label choice and reserve/labor values are hypotheses."
+    },
+    {
+      "id": "heavy_tote_functional_30_delivered",
+      "checkout_gbp": 30,
+      "fulfilment_gbp": 14.01,
+      "payment_fee_gbp": 0.85,
+      "gross_profit_before_returns_payment_marketing_labor_gbp": 15.99,
+      "expected_refund_reserve_gbp": 2.4,
+      "expected_replacement_reserve_gbp": 0.28,
+      "contribution_before_labor_CAC_fixed_gbp": 12.46,
+      "variable_labor_gbp": 2.0,
+      "contribution_after_labor_allowable_break_even_CAC_gbp": 10.46,
+      "economic_break_even_orders_no_CAC": 184,
+      "economic_break_even_orders_at_CAC_8": 780,
+      "vat_registered_contribution_pre_labor_gbp": 10.24,
+      "refund_sensitivity_15pct_contribution_pre_labor_gbp": 10.36,
+      "discount_10pct_contribution_pre_labor_CAC_gbp": 9.76,
+      "creator_commission_10pct_cost_per_retained_order_gbp": 2.6,
+      "expected_creator_commission_10pct_cost_per_initial_order_gbp": 2.4,
+      "after_expected_creator_commission_and_labor_allowable_CAC_gbp": 8.06,
+      "status": "Catalogue inputs observed; £30 delivered offer, 8% refund/2% replacement and labor are hypotheses."
+    }
+  ],
+  "sensitivity_examples": {
+    "crew_refunds_0pct_contribution_pre_labor_gbp": 34.29,
+    "crew_refunds_8pct_contribution_pre_labor_gbp": 28.53,
+    "crew_refunds_15pct_contribution_pre_labor_gbp": 23.49,
+    "crew_refunds_25pct_contribution_pre_labor_gbp": 15.09,
+    "tee_refunds_0pct_contribution_pre_labor_gbp": 19.29,
+    "tee_refunds_8pct_contribution_pre_labor_gbp": 15.69,
+    "tee_refunds_15pct_contribution_pre_labor_gbp": 12.54,
+    "tee_refunds_25pct_contribution_pre_labor_gbp": 7.89,
+    "crew_free_delivery_vs_72_delivered_contribution_change_gbp": 0.0,
+    "shipping_charge_included_in_price": "Because £72/£45/£30 are already modeled as the whole customer-paid amount, adding a separate postage charge is double-counting revenue. Free delivery must be funded inside the stated price or raise it.",
+    "affiliate_vs_paid_cac": "At 10% commission paid only on non-refunded orders, commission per retained order is £6.81 crew / £4.11 tee / £2.60 tote. At the assumed 8% refunds, expected commission per initial acquired order is £6.26 / £3.78 / £2.40. Compare CAC and contribution on the same denominator; include gifted stock/postage separately.",
+    "three_gifted_tees_five_customers_cac_gbp": 14.45,
+    "creator_content_rights": "No observed licence rate. Any content reuse fee is an explicit fixed acquisition cost. Add cash fee plus gifted units/postage to CAC; do not imply permission or sales attribution."
+  },
+  "cash_timing": {
+    "supplier": "Inkthreadable publishes 3-5 working days before dispatch; payment is due when the POD fulfilment order is placed (account terms/individual order must be checked).",
+    "processor": "Shopify Payments UK published minimum settlement is 3 business days; bank transfer may take another 1-3 business days. Friday-Sunday capture batches; configured schedule, holidays, verification/risk review and bank timing can extend availability.",
+    "refunds": "Refund reduces next available payout; UK refunds can be debited from linked bank account outside regular payout schedule. A negative balance may delay payouts. Hold a separate refund/replacement float, not merely an accounting reserve.",
+    "cash_rule": "Do not use the full paid order amount as spendable cash before fulfillment, expected refunds and provider fees have been funded. This model has no sale history to calibrate a float."
+  },
+  "saas_scenario": {
+    "free_accounts": 100,
+    "paid_accounts": 10,
+    "price_per_paid_account_gbp_inc_vat": 49,
+    "gross_paid_receipts_gbp": 490,
+    "VAT_included_in_paid_receipts_gbp": 81.67,
+    "revenue_ex_vat_gbp": 408.33,
+    "gateway_fees_paid_accounts_gbp": 9.35,
+    "stripe_billing_fees_paid_accounts_gbp": 3.43,
+    "api_cost_per_account_gbp": 0.09,
+    "free_api_cost_total_gbp": 9.0,
+    "paid_api_cost_total_gbp": 0.9,
+    "free_support_hours": 8.33,
+    "paid_support_hours": 5.0,
+    "free_support_opportunity_cost_gbp": 125.0,
+    "paid_support_opportunity_cost_gbp": 75.0,
+    "free_monthly_cost_including_support_api_gbp": 134.0,
+    "paid_contribution_per_account_before_fixed_infra_gbp": 31.97,
+    "fixed_infra_tools_allowance_gbp": 50.0,
+    "partial_monthly_operating_surplus_after_modeled_direct_costs_free_tier_and_fixed_infra_gbp": 135.65,
+    "paid_accounts_to_cover_fixed_infra_only": 2,
+    "paid_accounts_to_cover_100_free_accounts_plus_fixed_infra": 6,
+    "paid_accounts_to_cover_free_costs_plus_fixed_infra_at_10_free_to_1_paid_ratio": 3,
+    "gross_margin_before_support_proxy_percent": 96.6,
+    "definition_note": "Gross margin proxy subtracts model API usage, Stripe Payments fee and Stripe Billing 0.7% fee; it excludes the £50 shared infrastructure allowance. After support, paid contribution is £31.97/£40.83 ex-VAT revenue (78.3%) before fixed infrastructure and free-tier subsidy. At the fixed 100 free/10 paid mix, the partial monthly operating surplus is £135.65 after modeled payment and billing fees, API use, support proxy, and £50 infra/tools; it excludes founder development/sales/admin, overages, security/legal, failed payments/refunds/chargebacks and profit taxes. It is not net profit or a forecast.",
+    "free_tier_guardrail": "A 5-minute human-support allowance costs £1.25/account/month at £15/hour, about 14x the modeled £0.09 text API workload. At the fixed 100-free-user scenario plus £50 shared fixed infrastructure, six paid accounts at modeled contribution cover those costs. If free accounts grow in a 10-free-to-1-paid ratio, three paid accounts cover that ratio plus £50 fixed infrastructure. Restrict free tier to self-serve/asynchronous support or cap free-account count until actual ticket time supports it.",
+    "paid_support_guardrail": "30 support minutes per £49 account/month costs £7.50 and is material. Track minutes, usage and renewal retention; set included support boundaries before promising service levels.",
+    "VAT_registered_vs_unregistered_note": "The VAT-registered case reduces £49 customer receipt to £40.83 service revenue. A nonregistered case cannot divide receipts by 1.2 or reclaim eligible input VAT. Mandatory registration rules apply at >£90,000 rolling taxable turnover or expectation to exceed in next 30 days; voluntary registration may be chosen below threshold. SaaS tax place-of-supply/customer status can change cross-border outcomes; model only domestic UK assumptions here.",
+    "limitations": "No measured usage, user support rate, retention, conversion, churn, paid/free mix, infrastructure quote, application security/compliance cost or sales cost. Do not derive an LTV/CAC ratio; no lifetime value evidence exists."
+  },
+  "sources": [
+    {
+      "id": "ink_catalogue",
+      "url": "https://www.inkthreadable.co.uk/organic-products",
+      "checked_on": "2026-09-30",
+      "type": "primary",
+      "facts": "Changer 2.0 £31.53 incl VAT and Freestyler £19.69 incl VAT, each with first decoration in prior live review; verify exact variant and selected artwork at order."
+    },
+    {
+      "id": "ink_pricing",
+      "url": "https://help.inkthreadable.co.uk/en/articles/15452531-product-pricing-reward-tiers",
+      "checked_on": "2026-09-30",
+      "type": "primary",
+      "facts": "One decoration location included; extra location £5.04 incl VAT and optional tee printed label £1.51 incl VAT in prior live review."
+    },
+    {
+      "id": "ink_shipping",
+      "url": "https://www.inkthreadable.co.uk/shipping-costs",
+      "checked_on": "2026-09-30",
+      "type": "primary",
+      "facts": "Current published UK Royal Mail 48: 0-100g £2.88, 101-699g £3.78; product weights list T-shirts 100g, sweatshirts 200g, tote bags 100g. Page updated 4 Mar 2026."
+    },
+    {
+      "id": "ink_tote",
+      "url": "https://www.inkthreadable.co.uk/accessories-homeware-tote-bags",
+      "checked_on": "2026-09-30",
+      "type": "primary",
+      "facts": "Stanley/Stella Tote Bag, woven 300gsm, listed £11.13 incl VAT, embroidery available."
+    },
+    {
+      "id": "shopify_pricing",
+      "url": "https://www.shopify.com/uk/pricing",
+      "checked_on": "2026-09-30",
+      "type": "primary",
+      "facts": "Basic online standard cards 2% + 25p; £25 monthly or £19/mo billed yearly. Confirm selected plan/billing."
+    },
+    {
+      "id": "shopify_payout",
+      "url": "https://help.shopify.com/en/manual/payments/shopify-payments/payouts/payout-timing",
+      "checked_on": "2026-09-30",
+      "type": "primary",
+      "facts": "UK minimum settlement 3 business days; bank transfer generally 1-3 additional business days; timing can vary."
+    },
+    {
+      "id": "shopify_refunds",
+      "url": "https://help.shopify.com/en/manual/payments/shopify-payments/payouts/refunds",
+      "checked_on": "2026-09-30",
+      "type": "primary",
+      "facts": "Refunds deduct from payout; UK refund debit can come from linked bank account; bank receipt can take up to 10 business days for customers."
+    },
+    {
+      "id": "govuk_returns",
+      "url": "https://www.gov.uk/accepting-returns-and-giving-refunds",
+      "checked_on": "2026-09-30",
+      "type": "primary",
+      "facts": "Distance-sale cancellation rights apply; standard delivery refund is due. Financial reserve is an analyst scenario, not a substitute for legal duties."
+    },
+    {
+      "id": "govuk_vat_registration",
+      "url": "https://www.gov.uk/register-for-vat",
+      "checked_on": "2026-09-30",
+      "type": "primary",
+      "facts": "Mandatory registration when taxable turnover exceeds £90,000 over previous 12 months or expected over £90,000 next 30 days; voluntary registration below threshold possible."
+    },
+    {
+      "id": "govuk_vat_rates",
+      "url": "https://www.gov.uk/vat-rates",
+      "checked_on": "2026-09-30",
+      "type": "primary",
+      "facts": "Standard VAT rate 20%; most goods and services."
+    },
+    {
+      "id": "govuk_input_vat",
+      "url": "https://www.gov.uk/charge-reclaim-record-vat/reclaim-vat-business-expenses",
+      "checked_on": "2026-09-30",
+      "type": "primary",
+      "facts": "Input VAT recovery is subject to eligibility and valid records/invoices."
+    },
+    {
+      "id": "stripe_pricing",
+      "url": "https://stripe.com/gb/pricing",
+      "checked_on": "2026-09-30",
+      "type": "primary",
+      "facts": "Stripe standard UK cards 1.5% + 20p; used for SaaS subscription example, not stacked on Shopify."
+    },
+    {
+      "id": "openai_model_pricing",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "checked_on": "2026-09-30",
+      "type": "primary",
+      "facts": "GPT-5.6 Luna text token rate £ not stated: USD $0.20/M input and $1.20/M output; API workload is illustration, not the product's chosen/verified model."
+    },
+    {
+      "id": "stripe_billing_pricing",
+      "url": "https://stripe.com/gb/billing/pricing",
+      "checked_on": "2026-09-30",
+      "type": "primary",
+      "facts": "Pay-as-you-go Billing price 0.7% of Billing volume, including Billing transactions on/off Stripe and excluding one-off invoices."
+    }
+  ],
+  "monthly_physical_example": {
+    "orders_per_product": 10,
+    "paid_cac_per_order_gbp": 8,
+    "shopify_basic_monthly_billed_monthly_gbp": 25,
+    "changer_crew_net_operating_result_after_variable_labor_CAC_and_shop_gbp": 155.34,
+    "freestyler_tee_net_operating_result_after_variable_labor_CAC_and_shop_gbp": 26.88,
+    "heavy_tote_net_operating_result_after_variable_labor_CAC_and_shop_gbp": -0.4,
+    "status": "Illustration only: 10 orders of one SKU, £8 CAC per order, modeled variable labor/refund reserve, £25 monthly store fee; excludes fixed setup labor, other overhead and profit taxes. Not a profit forecast."
+  }
+}

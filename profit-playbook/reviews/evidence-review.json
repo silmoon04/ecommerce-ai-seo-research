@@ -1,0 +1,954 @@
+[
+  {
+    "id": "MEASURE-01",
+    "verdict": "modify",
+    "reason": "The commercial record is necessary now; a custom visitor-event system is premature for an unchosen platform and an offer with no sales. The proposed per-decision implementation allowances would consume the retail learning budget.",
+    "changes": [
+      "Start with native order, payment, refund and cost exports plus a small versioned reconciliation sheet.",
+      "Add assignment and exposure records only for a later feasible experiment; retain separate test/simulation labels.",
+      "Share one two-hour initial measurement preflight across MEASURE-01/03/04/05/12, with GBP 0 new tooling."
+    ],
+    "final_priority": "now",
+    "decision_override": "Use the commerce provider's authoritative order, payment and refund records, joined to actual costs in one versioned ledger. Record order/line IDs, status, timestamps, currency, product/variant and offer version. Add visitor assignment and exposure fields only when a feasible, permitted experiment needs them.",
+    "experiment_override": {
+      "action": "Inspect the available native exports and map one controlled order through payment, refund and costs with MEASURE-12. Exercise failed payment and duplicate delivery only where the selected integration supports them; preserve a list of unavailable paths.",
+      "metric": "Controlled paid and refunded amounts reconciled exactly; missing cost fields and unjoined orders reported as counts.",
+      "guardrail": "Do not put addresses, emails or arbitrary query strings in the analytical ledger. Fulfillment records have a separately documented operational purpose.",
+      "stop_rule": "Block order-based performance claims if controlled orders, refunds or currency fail to reconcile. Do not build extra event plumbing until it serves a named decision.",
+      "cost_note": "GBP 0 paid tools and a shared two-hour initial measurement preflight, not two hours per ID. Resolve material defects by reprioritising the existing route budget."
+    },
+    "full_record_override": {
+      "depends_on": [],
+      "confidence": "high"
+    },
+    "evidence_check": "Shopify event and GA4 documentation establish available interfaces, not a requirement to build a custom warehouse. The reduced scope is an analyst choice for this zero-sales launch."
+  },
+  {
+    "id": "MEASURE-02",
+    "verdict": "defer",
+    "reason": "Persistent assignment is sound for a future visitor experiment but adds tracking, QA and engineering before the project has sufficient traffic or a causal question. It must not delay native commercial reporting.",
+    "changes": [
+      "Move implementation to later, after MEASURE-07 passes.",
+      "Make consent and assignment population explicit; an effect among permitted, observed visitors cannot silently become a whole-store effect.",
+      "Do not classify unidentified orders as zero outcomes or recover refused identifiers through fingerprinting."
+    ],
+    "final_priority": "later",
+    "decision_override": "Implement persistent assignment only for an affordable, pre-specified visitor experiment. Assign each eligible, lawfully identifiable observed unit once, retain the original assignment through the purchase window, and disclose cross-device and consent-related coverage limits.",
+    "experiment_override": {
+      "action": "After feasibility and purpose checks pass, test return visits, storage loss, withdrawal and order linkage for the selected assignment unit. Define the buying horizon from observed delays or label the initial assumption.",
+      "metric": "Unexplained arm switches; linkage coverage and missing outcomes by arm; contribution per original assigned eligible unit.",
+      "guardrail": "No fingerprinting or inferred person identity. Zero purchases and unknown purchase linkage are different states.",
+      "stop_rule": "Do not enroll real visitors until deterministic assignment checks pass. Suspend causal reporting for differential missingness or an unexplained arm switch.",
+      "cost_note": "No implementation allocation now. Cost the necessary assignment work inside the eventual approved experiment, without adding a separate identity-service subscription."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "MEASURE-01",
+        "MEASURE-03",
+        "MEASURE-07"
+      ],
+      "confidence": "high"
+    },
+    "evidence_check": "ICO's 2026 exception does not supply blanket permission for visitor-level logs or persistent conversion linkage. Microsoft's SRM research supports assignment checks, not buying an identity system."
+  },
+  {
+    "id": "MEASURE-03",
+    "verdict": "modify",
+    "reason": "The consent-first default is defensible, but the exception needs concrete conditions and must not be read as permission for the ledger's person-level experiment linkage. Privacy design should precede optional collection.",
+    "changes": [
+      "Cite the ICO exceptions page directly.",
+      "State sole statistical service-improvement purpose, aggregate output, notice, free/simple objection, restricted provider use and only transient individual data needed to aggregate.",
+      "Keep visitor logs, replay, profiling and advertising measurement outside this exception; assess UK GDPR separately where personal data is processed."
+    ],
+    "final_priority": "now",
+    "decision_override": "Use a purpose inventory and consent-gated optional browser tracking for the first implementation. Consider the UK statistical-purpose exception only for an exact configuration that meets its conditions, including aggregate service-improvement statistics, clear notice and simple free objection. Keep necessary order administration under a separately documented purpose.",
+    "experiment_override": {
+      "action": "Within the shared preflight, inventory the actual storage/access technologies and provider purposes. Test fresh accept, decline, objection where applicable, and withdrawal paths before optional collection.",
+      "metric": "Unpermitted optional events on controlled declined/objected journeys; documented purpose, retention and provider use for every enabled technology.",
+      "guardrail": "Do not assume GA4, Clarity or any server-side tag is exempt by product name. Do not retain visitor-level analytical records under an aggregate-statistics justification.",
+      "stop_rule": "Keep a discretionary technology disabled until its actual purpose and permission path are documented and tested. If an exception cannot be demonstrated, retain consent gating or aggregate operational reporting.",
+      "cost_note": "GBP 0 new tracking services; share the measurement preflight. Specialist advice, if needed for a chosen exception-dependent design, requires a separately scoped cost."
+    },
+    "full_record_override": {
+      "depends_on": [],
+      "confidence": "high",
+      "evidence": [
+        {
+          "label": "ICO storage/access exceptions; final guidance 29 April 2026, checked 30 September 2026",
+          "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/what-are-the-exceptions/",
+          "type": "primary regulatory guidance"
+        }
+      ]
+    },
+    "evidence_check": "Primary ICO guidance was checked. The exception's conditions are configuration-specific; this review makes no finding that this unbuilt store qualifies."
+  },
+  {
+    "id": "MEASURE-04",
+    "verdict": "modify",
+    "reason": "The contribution outcome is correct, but the first commercial ledger also needs variable founder work and clear fee/tax treatment. The quoted product-minus-shipping subtotal must never become the allowed CAC.",
+    "changes": [
+      "Add variable fulfillment/support labor, nonrefunded fees and replacements; show cash contribution and contribution after owner work separately.",
+      "Use GBP 15/hour as the shared base labor assumption and GBP 25/hour as a labelled stress case until the founder chooses a rate.",
+      "Use per-order reporting before assignment exists; reserve contribution per assigned unit for a defined experiment."
+    ],
+    "final_priority": "now",
+    "decision_override": "Reconcile retained contribution from net receipts, actual product/decoration, fulfillment, payment/billing, returns, replacements and acquisition costs. Show cash contribution and contribution after variable owner work separately. For a later experiment, divide total contribution by every original assigned eligible unit, including nonbuyers; keep unknown linkage visible.",
+    "experiment_override": {
+      "action": "Reconcile the controlled payment/refund trace with the cost ledger, then replace assumed costs with invoices as real orders occur. Distinguish supplier recovery, returned-stock recovery, full refunds, partial refunds and replacement costs.",
+      "metric": "Retained cash contribution and contribution after variable labor per paid order; later contribution per assigned eligible unit, with pending-return exposure.",
+      "guardrail": "No double subtraction of refunds or stacked alternative payment-provider fees. Tax and decoration scope must match the actual quote and seller status.",
+      "stop_rule": "Do not scale an offer from a product-cost subtotal or revenue. Pause further acquisition when reconciled mature contribution after acquisition and variable work is negative.",
+      "cost_note": "Use existing exports within the shared preflight. Refund, return-recovery and labor inputs remain scenarios until observed; fixed setup and administration are additional to contribution."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "MEASURE-01"
+      ],
+      "confidence": "high"
+    },
+    "evidence_check": "Arithmetic in the original gross subtotals is correct, but GA4 documentation does not establish retail profitability. Actual invoices and provider settlements must populate the model."
+  },
+  {
+    "id": "MEASURE-05",
+    "verdict": "modify",
+    "reason": "The attribution boundary is sound. Its dependency on persistent randomization incorrectly blocks a simple descriptive source ledger, and operational source labels should not be described as authenticated without verified channel evidence.",
+    "changes": [
+      "Remove MEASURE-02 as a prerequisite for descriptive reporting.",
+      "Keep platform-verified order-route evidence separate from ordinary referrers/UTMs, buyer self-report and unknown.",
+      "Use the same reconciliation record as MEASURE-01/04; do not create a second AI attribution system."
+    ],
+    "final_priority": "now",
+    "decision_override": "Record platform-verified order-route evidence, observed referrers/UTMs, voluntary buyer self-report and unknown as distinct source types in the existing order ledger. Treat AI-attributed revenue as descriptive. Any incremental contribution claim must come from a separately valid pre-exposure experiment.",
+    "experiment_override": {
+      "action": "Test one tagged landing, an untagged/direct return and the selected checkout route. Verify that source-label changes never alter the authoritative order or refund total.",
+      "metric": "Source-evidence coverage among paid orders, unknown-source share and counts by evidence type; no estimate of all AI shopping opportunities.",
+      "guardrail": "Referrers and UTMs are observations, not verified personal history or model identity. Preserve unknown orders and consent-related gaps.",
+      "stop_rule": "Suspend source ROI claims if classification or order totals cannot be reconciled. Reject causal sales language based only on channel labels.",
+      "cost_note": "GBP 0 new attribution tools; use the shared measurement preflight and existing provider exports."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "MEASURE-01",
+        "MEASURE-03",
+        "MEASURE-04"
+      ],
+      "confidence": "high"
+    },
+    "evidence_check": "OpenAI's publisher FAQ supports observed referral tagging. It does not measure upstream AI influence, identify a consumer model version or establish incrementality."
+  },
+  {
+    "id": "MEASURE-06",
+    "verdict": "modify",
+    "reason": "A stable, truthful offer is a useful baseline. Two weeks is only a calendar checkpoint, and requiring a full A/A phase before first sales would make the baseline unnecessarily expensive.",
+    "changes": [
+      "Use MEASURE-12's basic checkout/privacy QA now, with A/A deferred.",
+      "Keep the first two weeks as a review window rather than a minimum sample or proof of demand.",
+      "Share buyer conversations and cash with AI-01 and the portfolio's single GBP 50 qualification/customer-research allowance."
+    ],
+    "final_priority": "next",
+    "decision_override": "Observe one real, purchasable, accurately described offer after basic checkout and ledger checks pass. Record source access, actual orders, mature contribution, costs and unresolved objections. Review at two weeks, then choose a capped extension or cheaper diagnostic work according to the outcomes actually available.",
+    "experiment_override": {
+      "action": "Use the same first five relevant buyer conversations as AI-01 and observe the launch offer when the product and fulfillment plan are ready. Log verified defects and repairs without preserving a faulty control.",
+      "metric": "Counts of eligible observed visitors, paid buyers, kept orders and repeated objections; retained contribution with immature cohorts labelled.",
+      "guardrail": "No invented conversion baseline, WTP estimate or implied power from two weeks of elapsed time. Sparse nonconversion does not prove no demand.",
+      "stop_rule": "At the route's cash/hour cap, continue only for a named unresolved question with a cheaper or attainable source of evidence. Record inadequate buyer access separately from observed rejection.",
+      "cost_note": "Share the existing customer-research cash allowance and route hours; no additional GBP 50 bucket and no automatic advertising budget."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "MEASURE-01",
+        "MEASURE-03",
+        "MEASURE-04",
+        "MEASURE-12"
+      ],
+      "confidence": "medium"
+    },
+    "evidence_check": "The measurement references support reconciliation and stable definitions. The two-week window, five conversations and budget are operating choices, not empirical sample guarantees."
+  },
+  {
+    "id": "MEASURE-07",
+    "verdict": "defer",
+    "reason": "The illustrative power calculation is correct and already shows that a small paid purchase experiment is unaffordable under its own assumptions. It should prevent premature testing, not trigger enrollment tooling now.",
+    "changes": [
+      "Keep the verified 1,812 and 33,584 visitor examples as illustrative feasibility evidence.",
+      "Move actual purchase-test planning to a merchant/store with observed baseline, attainable independent units and a worthwhile economic effect.",
+      "Remove dependency on implemented MEASURE-02; choose the assignment unit during design, implement it only after feasibility."
+    ],
+    "final_priority": "later",
+    "decision_override": "Defer a live purchase A/B test until measured traffic and contribution variance support an affordable design. Retain the illustrative calculation: moving purchase rate from 2.5% to 5% needs about 1,812 total independent visitors; moving it to 3% needs about 33,584 at the stated 80% power and two-sided 5% significance.",
+    "experiment_override": {
+      "action": "When a real causal decision warrants it, calculate sample size using the observed baseline, planned assignment unit, worthwhile effect and outcome delay; independently check the result before implementation.",
+      "metric": "Required independent assigned units, attainable units and full experiment cost against the economic decision's value.",
+      "guardrail": "Purchase-rate power does not power contribution profit. Include clustering, repeat users, missingness and the cost of obtaining eligible units.",
+      "stop_rule": "Do not launch if the required sample or outcome maturity exceeds the chosen route budget/time. Keep an underfilled study inconclusive.",
+      "cost_note": "No traffic purchase or new GBP 150 allocation. The original GBP 150 at GBP 0.50 per eligible unit buys only 300 units, below either illustrative target."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "MEASURE-03",
+        "MEASURE-04",
+        "MEASURE-06"
+      ],
+      "confidence": "high"
+    },
+    "evidence_check": "Independently reproduced 1,812 and 33,584 with the stated normal approximation. R documents per-group sample size and two-sided testing; the numerical inputs are scenarios, not store evidence."
+  },
+  {
+    "id": "MEASURE-08",
+    "verdict": "defer",
+    "reason": "The anti-peeking rule is correct, but a full analysis protocol is only useful after feasibility. A fixed seven-day purchase horizon and a generic 'positive' interval cannot substitute for observed buying delays and a declared economic threshold.",
+    "changes": [
+      "Choose purchase and refund follow-up for the actual buying/settlement process.",
+      "Define the worthwhile contribution threshold and rollout cost before analysis.",
+      "Allow reversible operational improvements without an uplift claim; reserve causal winner language for an adequately designed experiment."
+    ],
+    "final_priority": "later",
+    "decision_override": "For a feasible live comparison, freeze assignment, primary outcome, economically worthwhile effect, enrollment/cash limits and complete follow-up before exposure. Monitor implementation failures continuously; make efficacy decisions at the planned analysis or use a validated sequential method.",
+    "experiment_override": {
+      "action": "Write one dated protocol after MEASURE-07 passes. State the population, minimum worthwhile net value, missingness handling, stop conditions and rollback; follow all assigned units through the declared outcome horizon.",
+      "metric": "Treatment-control contribution difference and interval at the planned analysis, plus paid-buyer rate and return/accuracy guardrails.",
+      "guardrail": "No post hoc exclusions, endpoint swaps or repeated fixed-horizon significance decisions. Operational rollback is not evidence of benefit.",
+      "stop_rule": "Repair factual or checkout failures immediately. At readout, adopt only when the evidence and expected net value justify the predeclared cost; classify unresolved intervals or incomplete outcomes as inconclusive.",
+      "cost_note": "Use the eventual experiment's single approved cash/time envelope. Do not inherit an additional GBP 150 allowance from this record."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "MEASURE-02",
+        "MEASURE-04",
+        "MEASURE-07",
+        "MEASURE-12"
+      ],
+      "confidence": "high"
+    },
+    "evidence_check": "Johari et al.'s primary paper confirms that outcome-dependent sample stopping invalidates ordinary fixed-horizon inference. It does not validate the dossier's chosen horizon or commercial threshold."
+  },
+  {
+    "id": "MEASURE-09",
+    "verdict": "defer",
+    "reason": "Logging attempted ideas is cheap and useful now; a forty/twenty synthetic holdout program is premature. It risks giving a formal appearance to model tests that have no demonstrated relationship to shoppers.",
+    "changes": [
+      "Keep a simple candidate/result register inside normal work now.",
+      "Defer synthetic holdout construction until AI-10 has an observed QA job and permitted data.",
+      "Treat distinct intent families as units, retain failed variants and retire any holdout used to revise a candidate."
+    ],
+    "final_priority": "later",
+    "decision_override": "Record every attempted candidate and its selection reason. Build a development/holdout split only for a funded, defined evaluation; preserve independent intent or merchant units and use untouched cases for the frozen finalist. Synthetic outcomes remain diagnostic.",
+    "experiment_override": {
+      "action": "For an admitted evaluation, define its target population and rubric before generating candidates; reserve unseen units, record all variants and confirm a frozen finalist once.",
+      "metric": "Factual failures and suitable decisions by independent held-out unit; any purchase claim requires separate live evidence.",
+      "guardrail": "Repeated draws are not new shoppers. Forty development and twenty holdout families are an example, not a powered requirement or a proven optimum.",
+      "stop_rule": "Reject invented product facts. After a holdout influences revision, treat it as development data and require fresh confirmation before a performance claim.",
+      "cost_note": "No extra GBP 25 model allowance now. Reuse the eventual QA or experiment budget and stop at its recorded cap."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "MEASURE-01"
+      ],
+      "confidence": "high"
+    },
+    "evidence_check": "Verified 1 - 0.95^50 = 92.3055% for fifty independent null tests. NIST supports multiple-comparison control; neither it nor sequential-testing research supplies the forty/twenty split."
+  },
+  {
+    "id": "MEASURE-10",
+    "verdict": "defer",
+    "reason": "This is the canonical acquisition-design record. The new one-product store cannot supply independent clusters, and a portfolio total alone does not remove substitution or interference bias.",
+    "changes": [
+      "Merge AI-11 into this record instead of funding a second discovery experiment.",
+      "Require a credible interference map and enough independent assignment units; sizes/colors of the same garment do not become independent families.",
+      "Keep before/after and propagation observations descriptive when randomization or exposure identification is unavailable."
+    ],
+    "final_priority": "later",
+    "decision_override": "Defer causal acquisition claims until a named channel and enough independently assignable product families or merchants permit a powered pre-exposure design. Record propagation, competing products and concurrent changes; use descriptive evidence when interference or channel access prevents identification.",
+    "experiment_override": {
+      "action": "After measured baseline and feasibility work, map substitution and shared stock, select the actual assignment level and pre-register one truthful intervention. Verify delivery to the intended surface before interpreting a null.",
+      "metric": "All-channel mature contribution at the original assignment level, portfolio totals, contamination and uncertainty; AI-attributed orders reported separately.",
+      "guardrail": "Do not select analysis units because they received traffic, drop stockouts after exposure or treat portfolio totals as a cure for uncontrolled interference.",
+      "stop_rule": "Do not launch with too few independent units, unresolved treatment delivery or unbounded carryover. Label a simple before/after result observational even if sales rise.",
+      "cost_note": "GBP 0 acquisition spend now. Use at most a brief feasibility review inside the active route's existing hours; cost any full trial separately."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "MEASURE-03",
+        "MEASURE-04",
+        "MEASURE-05",
+        "MEASURE-06",
+        "MEASURE-07",
+        "MEASURE-12"
+      ],
+      "confidence": "high"
+    },
+    "evidence_check": "Cluster-trial methods support assignment-level analysis and effective-sample-size limits. Their ecommerce application is an analyst inference, with no evidence that this catalog offers independent clusters."
+  },
+  {
+    "id": "MEASURE-11",
+    "verdict": "defer",
+    "reason": "Generalizing measured performance requires replication, but external problem interviews and paid operational pilots can proceed without first proving live acquisition lift. The current dependencies blur those two paths.",
+    "changes": [
+      "Limit this record to transfer of performance claims, leaving SAAS-01/03 payment discovery independent.",
+      "Predefine the population and comparator and report heterogeneity; one noisy sign of lift is not a successful prediction.",
+      "Do not expand the retail assortment merely to manufacture a test sample."
+    ],
+    "final_priority": "later",
+    "decision_override": "Validate a performance mechanism on independent products or merchants before generalizing it. Preserve setting, implementation cost and uncertainty, and compare with the merchant's existing workflow. Run separate problem/payment discovery without waiting for a causal sales experiment.",
+    "experiment_override": {
+      "action": "When completed evidence exists, freeze predictions for genuinely independent validation cases and compare with native tools plus a competent manual audit. Record related stores and owned-store cases separately.",
+      "metric": "Effect estimates and uncertainty for the declared population; merchant value after review/tool costs. Payment and renewal remain separate commercial outcomes.",
+      "guardrail": "Do not count ambiguous live estimates as ground truth, add overlapping lifts, or present three pilots as market validation.",
+      "stop_rule": "Keep claims local if transfer cases are missing or heterogeneous. Stop funding a prediction feature that repeatedly fails a fair comparator or costs more to deliver than it saves.",
+      "cost_note": "No additional GBP 50/six-hour external discovery budget. Problem interviews share the portfolio qualification allowance; any later causal validation gets its own explicit design."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "MEASURE-04",
+        "MEASURE-10"
+      ],
+      "confidence": "medium"
+    },
+    "evidence_check": "The primary methods support limits on inference. Neither the owned store nor three paid pilots establish broad performance, market prevalence, scalable CAC or retention."
+  },
+  {
+    "id": "MEASURE-12",
+    "verdict": "modify",
+    "reason": "Basic checkout, order/refund and privacy checks belong before launch. Persistent-assignment A/A checks belong before a live experiment; combining them creates an unnecessary launch dependency and double-counts work.",
+    "changes": [
+      "Split deterministic commercial/privacy QA now from A/A and assignment diagnostics later.",
+      "Remove MEASURE-02 as a prerequisite for the current launch check.",
+      "Keep p<0.001 explicitly a local diagnostic trigger; Microsoft's cited example uses p<0.0005, so neither threshold is a universal validity certificate."
+    ],
+    "final_priority": "now",
+    "decision_override": "Before taking ordinary orders, verify the selected checkout, payment/refund reconciliation, product/variant identity and privacy choices with controlled traces. Before a later randomized comparison, add arm-persistence, allocation-ratio and linkage checks. Passing sparse A/A data never certifies unbiased measurement.",
+    "experiment_override": {
+      "action": "Within the shared preflight, trace the relevant normal payment, failed payment, variant, refund and declined-tracking paths. Add duplicate and partial-refund cases where the real integration can produce them; document remaining gaps.",
+      "metric": "Exact controlled order/refund reconciliation, duplicate count, wrong-variant count and unpermitted events; later assignment balance and linkage coverage by arm.",
+      "guardrail": "Never require refused analytics to fire, and never turn missing linkage into zero purchases. Keep test traffic labelled outside commercial results.",
+      "stop_rule": "Block the affected launch path for an unexplained duplicated payment, wrong variant, unjoined controlled order or privacy failure. Later investigate the chosen SRM threshold and suspend efficacy claims while a cause is unresolved.",
+      "cost_note": "Share MEASURE-01/03/04/05's two-hour initial preflight and GBP 0 tools. A real payment/fulfillment test needs a costed route; do not buy A/A traffic."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "MEASURE-01",
+        "MEASURE-03",
+        "MEASURE-04"
+      ],
+      "confidence": "high"
+    },
+    "evidence_check": "Microsoft's SRM article was checked and uses p<0.0005 as its own conservative threshold. A/A and deterministic traces detect faults; absence of a detected fault is not proof of perfect instrumentation."
+  },
+  {
+    "id": "AI-01",
+    "verdict": "modify",
+    "reason": "A few buyer questions can guide useful content, but five interviews cannot establish demand or rule out a material need that nobody happens to mention. The same sessions should serve the launch's other content checks.",
+    "changes": [
+      "Use up to three observed jobs instead of requiring three.",
+      "Set confidence to low for the commercial premise until real buyer evidence exists.",
+      "Do not remove essential fit, cost, safety or delivery information because it was absent from five conversations."
+    ],
+    "final_priority": "now",
+    "decision_override": "Identify up to three purchase questions from relevant buyers, record their wording and context, and answer them using verified product facts. Keep these observations separate from analyst-created prompts and untested assumptions about demand.",
+    "experiment_override": {
+      "action": "Use the shared first five buyer conversations to elicit recent buying decisions and unresolved questions without leading. Show a single accurate product page and test understanding of the proposed answers; counterbalance task order where possible.",
+      "metric": "Specific independently raised questions, incorrect product/variant choices and unresolved objections as counts with notes.",
+      "guardrail": "Five people provide qualitative evidence, not search volume, prevalence, conversion or willingness to pay. Necessary disclosures remain even if no participant asks for them.",
+      "stop_rule": "After the existing research time cap, postpone content for unsupported jobs unless a verified product constraint makes it necessary. Revise an answer that causes a wrong choice.",
+      "cost_note": "GBP 0 software; share MEASURE-06's sessions, preparation and the portfolio qualification/customer-research allowance."
+    },
+    "full_record_override": {
+      "confidence": "low",
+      "depends_on": []
+    },
+    "evidence_check": "OpenAI documents intent and context as selection inputs, not demand for this brand. The proposed jobs remain hypotheses until observed buyers supply evidence."
+  },
+  {
+    "id": "AI-02",
+    "verdict": "modify",
+    "reason": "A sourced product record is a useful default before any interviews. Its essential claims should remain accurate and accessible regardless of whether a tiny test demonstrates a sales effect.",
+    "changes": [
+      "Remove AI-01 as a prerequisite for establishing basic facts.",
+      "Use the same record across the product page, variant data, schema, feed and support.",
+      "Retain necessary facts even if a presentation test is inconclusive; test presentation only when the question justifies it."
+    ],
+    "final_priority": "now",
+    "decision_override": "Create one sourced, dated record for the first sellable product's material, actual sample measurements, decoration, fit, care, price, delivery and exclusions. Distinguish supplier specifications, finished-sample observations and unknowns, then reuse that record across every destination.",
+    "experiment_override": {
+      "action": "Check the first SKU against supplier documents and the finished sample. During the shared buyer sessions, observe whether people can find and correctly use the material facts; correct verified errors everywhere.",
+      "metric": "Unsupported or conflicting material claims, wrong choices and unresolved factual questions; later support/return incidents tied to those facts.",
+      "guardrail": "Do not infer missing measurements or preserve a false claim as an experimental control. A correct product fact does not need a conversion-lift result to be disclosed.",
+      "stop_rule": "Block an unsupported material claim until verified or removed. Stop additional copy work when the current fact record answers the observed questions accurately.",
+      "cost_note": "GBP 0 new software; use the existing sample and product-preparation budget. Do not add a separate three-hour research session to AI-01/08/09."
+    },
+    "full_record_override": {
+      "depends_on": [],
+      "confidence": "high"
+    },
+    "evidence_check": "Google's guidance supports original, useful information. It does not establish a recommendation advantage, reduced returns or merchant willingness to pay for this workflow."
+  },
+  {
+    "id": "AI-03",
+    "verdict": "modify",
+    "reason": "Ordinary truthful markup is a low-cost default. Randomizing valid markup across a one-product launch cannot produce a useful sales answer and duplicates the later acquisition experiment.",
+    "changes": [
+      "Keep launch work to ordinary Product/Offer/variant accuracy and official validation.",
+      "Remove the markup-only randomized-rollout experiment from the initial task; refer any later causal question to MEASURE-10.",
+      "Share the crawl/schema audit's two-hour supporting-check cap with AI-06."
+    ],
+    "final_priority": "now",
+    "decision_override": "Validate ordinary product, offer and variant structured data against the actual visible sellable items. Use native output where correct, and omit unsupported ratings, identifiers or special 'AI' markup. Record parser acceptance separately from discovery and sales.",
+    "experiment_override": {
+      "action": "Check launch variants for price, currency, availability, selected URL and visible/schema agreement using official validators and native diagnostics. Repair concrete mismatches.",
+      "metric": "Critical errors and wrong-variant/offer mismatches; later documented crawl or display observations kept separate from sales.",
+      "guardrail": "Do not invent reviews, identifiers or stock. Valid markup supplies eligibility and comprehension, not a guaranteed recommendation.",
+      "stop_rule": "Resolve critical factual contradictions before launch. Finish the bounded validation and defer a markup-specific sales trial unless MEASURE-10 becomes feasible.",
+      "cost_note": "GBP 0 validators/plugins; share AI-06's single two-hour technical discovery audit, within the selected route's existing hours."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "AI-02",
+        "AI-06"
+      ],
+      "confidence": "high"
+    },
+    "evidence_check": "Google's current AI-features guidance explicitly requires no special schema. Product structured-data documentation establishes eligibility rules, not ranking or incremental orders."
+  },
+  {
+    "id": "AI-04",
+    "verdict": "modify",
+    "reason": "The eligibility gate is right. It should be a brief channel check before integration, and it must recognize that a custom storefront has different routes from an eligible Shopify catalog.",
+    "changes": [
+      "Perform the eligibility check without waiting for a completed sales ledger.",
+      "Record discovery-feed access and checkout access separately, with actual seller/customer markets.",
+      "Replace AI-12 dependencies with canonical measurement references only when orders are observed; avoid a custom integration until native routes and demand justify it."
+    ],
+    "final_priority": "next",
+    "decision_override": "Check the actual seller, customer markets, product restrictions and storefront route, then use one supported native/free catalog route if eligible. Defer custom OpenAI feed or checkout engineering until approved access and a specific unmet operational need exist.",
+    "experiment_override": {
+      "action": "Use a short checklist to verify the chosen channel's current market and product access. Only if eligible, publish one verified product family through an existing route, capture acknowledgements and reconcile any resulting orders through MEASURE-01/04/05.",
+      "metric": "Eligible and accepted purchasable records, observed display/route evidence and settled order contribution, each with its own denominator.",
+      "guardrail": "Catalog acceptance does not promise display or ranking. A feed flag does not activate checkout; do not assume the proposed UK market is supported.",
+      "stop_rule": "Stop integration work if access is unavailable, or if more than four hours are needed without a concrete buyer or operational need. Keep initial order observations non-causal.",
+      "cost_note": "GBP 0 paid tools. Eligibility shares the existing supporting-check time; any implementation is a reprioritised route task, not a new four-hour allowance."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "AI-02",
+        "AI-06"
+      ],
+      "confidence": "medium"
+    },
+    "evidence_check": "OpenAI's current onboarding restricts direct feeds to approved partners. Shopify Catalog documentation separates automatic eligibility from each channel's final selection."
+  },
+  {
+    "id": "AI-05",
+    "verdict": "modify",
+    "reason": "Manual reconciliation fits a tiny stable catalog, but four quiet weeks with no changes or exposure cannot demonstrate that monitoring has no value. The automation decision should use real incidents or observed recurring work.",
+    "changes": [
+      "Count actual changes, destinations checked and exposure as well as elapsed weeks.",
+      "Separate a truthful source change, feed acknowledgement and external display observation.",
+      "Do not add monitoring subscriptions or API crawls without measured avoidable work or a consequential mismatch."
+    ],
+    "final_priority": "next",
+    "decision_override": "Check page, schema and any eligible feed after real offer changes using one small log. Automate only a repeated, observable mismatch or costly manual check that existing platform tools do not already handle.",
+    "experiment_override": {
+      "action": "For the first month with genuine catalog changes, log the changed facts, native refresh behavior, any externally observable mismatch, resolution and operator time. If there are no changes, record that lack of opportunity explicitly.",
+      "metric": "Mismatches per checked real change, time to verified repair, avoidable support/cancellation cost and review time.",
+      "guardrail": "Never create stale offers. A lack of observed incidents in an unexposed or unchanged catalog does not establish zero risk.",
+      "stop_rule": "Keep the manual workflow while its cost is small. Stop an alerting trial if false alarms or investigation cost exceed demonstrated avoidable work.",
+      "cost_note": "GBP 0 subscriptions; log changes within routine product operations. Automation requires an agreed incremental cost cap from the existing route budget."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "AI-02",
+        "AI-04"
+      ],
+      "confidence": "medium"
+    },
+    "evidence_check": "OpenAI confirms that merchant updates can lag. It supplies neither an incident rate nor evidence that this store needs paid monitoring."
+  },
+  {
+    "id": "AI-06",
+    "verdict": "accept",
+    "reason": "A bounded audit of intended public access is a defensible launch default. It keeps search and training access distinct and already avoids treating fetches as customer demand.",
+    "changes": [],
+    "final_priority": "now",
+    "evidence_check": "Google confirms indexed, snippet-eligible pages are needed for supporting links and does not promise inclusion. Anthropic documents separate training, user-retrieval and search crawler purposes."
+  },
+  {
+    "id": "AI-07",
+    "verdict": "defer",
+    "reason": "The first product page can answer a tradeoff without funding another content destination. A standalone comparison page is justified only by an observed unresolved decision and adequate first-hand or sourced evidence.",
+    "changes": [
+      "Use a short comparison inside the existing product information first.",
+      "Set confidence to low for commercial benefit.",
+      "Reuse the buyer sessions; do not commission competitor samples or a purchase A/B test merely to populate this decision."
+    ],
+    "final_priority": "later",
+    "decision_override": "Defer a standalone comparison page until buyers repeatedly face a specific tradeoff the current product page does not resolve. Then publish one bounded, honest comparison using supported facts and explicit limits.",
+    "experiment_override": {
+      "action": "First add the smallest accurate comparison needed for an observed buyer task, within the current page. During an existing usability session, check whether it prevents the identified wrong choice; create a separate page only if that task needs one.",
+      "metric": "Correct choices and remaining confusion on the named tradeoff; any later paid effect measured under an independently feasible protocol.",
+      "guardrail": "No invented competitor tests, concealed affiliate interest or generalized 'best' rankings. Buying nothing may be the correct outcome.",
+      "stop_rule": "Defer expansion if no material unresolved question appears. Remove or correct a misleading comparison immediately.",
+      "cost_note": "GBP 0 new tools or samples; reuse the content and research budget rather than allocating another three hours."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "AI-01",
+        "AI-02",
+        "AI-08"
+      ],
+      "confidence": "low"
+    },
+    "evidence_check": "Google's useful-content guidance supports factual originality, not commercial demand for a comparison template. No buyer evidence currently establishes the proposed page's value."
+  },
+  {
+    "id": "AI-08",
+    "verdict": "modify",
+    "reason": "Real sample evidence is necessary for product claims, while its effect on purchases is unmeasured. The experiment should reuse sample-quality work and the same buyer sessions rather than becoming a new content project.",
+    "changes": [
+      "Keep dated real-product photographs and measurement/wash methods linked to the exact sample.",
+      "Separate evidence validity from the choice of presentation; an inconclusive sales result does not license generic unsupported claims.",
+      "Share existing sample checks, documentation and sessions with AI-02 and the product/operations work."
+    ],
+    "final_priority": "now",
+    "decision_override": "Prepare a compact evidence pack from the real finished sample: identifiable photographs, measurements and any recorded wear/wash observations with their conditions. Label founder testing and sample limits, and publish only the claims those observations support.",
+    "experiment_override": {
+      "action": "Reuse the sample-quality checks to document three decision-relevant proof elements. In the shared buyer sessions, test whether their captions and placement lead to correct understanding.",
+      "metric": "Misunderstood or unsupported claims and unresolved material questions; later fact-related support or return incidents.",
+      "guardrail": "AI-generated illustrations and mood images cannot prove the item's construction. One wash or sample does not establish long-term durability or production consistency.",
+      "stop_rule": "Correct any evidence presentation that buyers overinterpret. Commission further proof only for a material unresolved question or a necessary product claim.",
+      "cost_note": "No incremental software or second sample by default. Use the chosen retail sample and founder-hour budget; do not add a separate three-hour content allowance."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "AI-02"
+      ],
+      "confidence": "high"
+    },
+    "evidence_check": "First-hand observations support the conditions actually checked. Google's content guidance does not prove premium WTP or an AI recommendation advantage."
+  },
+  {
+    "id": "AI-09",
+    "verdict": "modify",
+    "reason": "Truthful suitability checks are useful independent of a sales experiment. The current 'per assigned buyer' wording can accidentally exclude nonbuyers, and a quiet month is not a reason to delete necessary exclusions.",
+    "changes": [
+      "Use all assigned eligible visitors as a future commercial denominator.",
+      "Keep necessary exclusions even when nobody asks about them during the first month.",
+      "Reuse observed buyer questions and fact fixtures; no new recommendation service or separate study."
+    ],
+    "final_priority": "next",
+    "decision_override": "Express the product's supported uses, exclusions, total delivered cost and fulfillment limits in a small qualification table. Use supported, unsupported and unknown explicitly, and keep necessary exclusions regardless of observed conversion.",
+    "experiment_override": {
+      "action": "Use up to ten documented cases from real questions and necessary product constraints, including unsuitable uses. Verify each answer against the same fact record, then observe understanding in the existing buyer sessions.",
+      "metric": "False suitability decisions and unresolved constraints by case; later constraint-related returns and contribution per assigned eligible visitor, including nonbuyers.",
+      "guardrail": "Cases are diagnostics, not shoppers. Do not relax a constraint or remove an exclusion to raise a local-model score.",
+      "stop_rule": "Fix any false positive before release. Stop expanding optional qualification content when it answers no material unresolved question; preserve necessary product limits.",
+      "cost_note": "GBP 0 recommendation tooling; share AI-01/02/08 preparation and study time."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "AI-01",
+        "AI-02",
+        "AI-08"
+      ],
+      "confidence": "medium"
+    },
+    "evidence_check": "OpenAI documents relevance to shopper intent but publishes no exploitable weights. Whether clearer exclusions improve this offer's retained contribution remains unmeasured."
+  },
+  {
+    "id": "AI-10",
+    "verdict": "defer",
+    "reason": "A local model can test its supplied facts and constraints; it cannot stand in for live ChatGPT retrieval or actual buyers. The cited GEO study includes visibility benchmarks and a dated live-engine study, neither measuring merchant profit.",
+    "changes": [
+      "Set confidence to low for predictive/commercial transfer.",
+      "Remove live discovery trial completion as a prerequisite for simple factual QA; require an observed repeatable QA need before building.",
+      "Label the GEO source accurately and keep all scores local to the actual prompt/model/catalog configuration."
+    ],
+    "final_priority": "later",
+    "decision_override": "Defer a custom synthetic-shopper system. If repeated factual QA justifies a small local test, use it only to find source and constraint failures. Do not use its recommendation scores to allocate merchant spend until a pre-specified comparison beats a manual checklist on independent, informative real outcomes.",
+    "experiment_override": {
+      "action": "When a repeated QA task exists, compare a minimal versioned model check with deterministic rules/manual review on permissioned unseen cases. Preserve model, prompt, supplied candidates, tools, date and all failures.",
+      "metric": "Missed factual errors, false alarms, review time and total cost per checked case; predictive sales performance requires separate held-out live evidence.",
+      "guardrail": "No supplied ranking, privileged catalog inclusion or synthetic success may be described as attainable production ranking. No merchant-data reuse without SAAS-09 rights checks.",
+      "stop_rule": "Stop after the scoped QA cap if there is no advantage over the manual comparator. Keep shopper, ranking and sales predictions unvalidated when real calibration outcomes are absent or inconclusive.",
+      "cost_note": "No model spend now. Any later four-hour QA prototype must use an explicitly released build allowance; optional API charges share that cap and use actual billing."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "AI-02",
+        "AI-09",
+        "SAAS-09"
+      ],
+      "confidence": "low",
+      "rationale": "A fixed prompt and catalog can expose a model's handling of known facts, but they do not reproduce a production assistant's retrieval, personalization, candidates or shopping rules. Repeated draws estimate variability under that configuration. The GEO paper studies visibility, including a dated live Perplexity test, without establishing purchases or contribution. This project has no calibration showing that local-model priorities transfer to real customers.",
+      "evidence": [
+        {
+          "label": "GEO benchmark and dated live-engine visibility study; no merchant purchase/profit endpoint",
+          "url": "https://arxiv.org/html/2311.09735v3",
+          "type": "primary research; limited transfer"
+        }
+      ]
+    },
+    "evidence_check": "The GEO paper was checked: its outcomes concern source visibility, and it includes Perplexity observations. It does not validate this proposed local shopper simulation or economic prediction."
+  },
+  {
+    "id": "AI-11",
+    "verdict": "reject",
+    "reason": "Reject this as a separately funded decision, not its causal principle. It duplicates MEASURE-10 and would create a second acquisition-design workstream for the same unavailable experiment.",
+    "changes": [
+      "Use MEASURE-10 as the canonical pre-exposure acquisition design.",
+      "Retain the AI-specific ingestion and caching caveats there.",
+      "Do not imply that three merchant payments or an onsite A/B test prove acquisition lift."
+    ],
+    "final_priority": "reject",
+    "decision_override": "Consolidate live discovery causal design into MEASURE-10. The present one-product launch supplies descriptive operational observations; it does not justify a separate AI acquisition trial.",
+    "experiment_override": {
+      "action": "No separate experiment. If discovery testing becomes feasible, follow MEASURE-10 with the actual channel, assignment unit, contamination checks and economic endpoint.",
+      "metric": "Use MEASURE-10's all-channel contribution and uncertainty; keep AI-attributed orders descriptive.",
+      "guardrail": "Arrival-level randomization cannot identify increased upstream acquisition. Never withhold known factual corrections.",
+      "stop_rule": "Keep causal discovery claims deferred until the canonical design passes feasibility and identification checks.",
+      "cost_note": "GBP 0 additional budget or hours for this duplicate."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "MEASURE-10"
+      ],
+      "confidence": "high"
+    },
+    "duplicate_of": "MEASURE-10",
+    "evidence_check": "The cluster-design principle is defensible. There is no current trial or independent-unit sample that makes this a second actionable experiment."
+  },
+  {
+    "id": "AI-12",
+    "verdict": "reject",
+    "reason": "Reject this standalone implementation because it repeats the order, cost, privacy, attribution and QA work in MEASURE-01/03/04/05/12. Keeping two ledgers would cost time and invite inconsistent definitions.",
+    "changes": [
+      "Move the in-assistant/headless checkout and unknown-source cases into the canonical measurement checklist.",
+      "Preserve the separation between attributable orders, incremental contribution and paid SaaS renewal.",
+      "Remove this ID from active integration dependencies."
+    ],
+    "final_priority": "reject",
+    "decision_override": "Use MEASURE-01/03/04/05/12 as the single commercial measurement workflow, including any permitted in-assistant checkout route. Do not create a separate AI order/ROI ledger.",
+    "experiment_override": {
+      "action": "Add any supported assistant checkout route to the canonical controlled order/refund trace; otherwise mark it unavailable.",
+      "metric": "Use the same authoritative order totals, contribution, return maturity and source-coverage definitions as the measurement records.",
+      "guardrail": "A citation, browser event, payment authorization or source tag is not a settled retained order or causal sales effect.",
+      "stop_rule": "Suppress ROI reporting when authoritative orders, costs or refunds cannot be reconciled; retain unknown source and linkage states.",
+      "cost_note": "GBP 0 additional tools and no separate three-hour setup allowance."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "MEASURE-01",
+        "MEASURE-03",
+        "MEASURE-04",
+        "MEASURE-05",
+        "MEASURE-12"
+      ],
+      "confidence": "high"
+    },
+    "duplicate_of": "MEASURE-04",
+    "evidence_check": "GA4 channel definitions and OpenAI purchase-route documentation support descriptive routing limits. They supply no incremental sales estimate or SaaS willingness-to-pay evidence."
+  },
+  {
+    "id": "SAAS-01",
+    "verdict": "modify",
+    "reason": "This is a plausible, narrow starting segment, but the owned clothing project provides expertise rather than external demand evidence. It should be tested without first funding a retail launch or an AI sales experiment.",
+    "changes": [
+      "Set confidence to low for the segment/pain hypothesis.",
+      "Use the shared first screen of six conversations in three hours, followed by at most five concrete quotes within eight total selling hours.",
+      "Separate lack of access from inspected incidents that buyers decline to pay to fix.",
+      "A qualified buyer paying an economical bounded fee can justify the first job before the interview/review counts are filled."
+    ],
+    "final_priority": "now",
+    "decision_override": "Test an apparel catalog operator with a recent consequential source/variant/destination conflict, purchase authority and permission to inspect it. Treat that segment as a hypothesis and qualify the incident before offering software; the owned store is optional preparation, not a prerequisite.",
+    "experiment_override": {
+      "action": "After outreach is authorized, use at most six opt-in conversations within three hours to seek two inspectable unresolved incidents. Offer a specific paid scope to qualified owners, with at most five quotes and eight selling hours in the first screen.",
+      "metric": "Inspectable non-native problems, authorized owners, concrete quotes and collected payments counted separately.",
+      "guardrail": "Do not invent lost sales or treat interest in AI as budget. Record incumbents, relationships, discounts and refusal reasons. One qualified, viable paid job can proceed before the six-conversation/two-incident screen is complete.",
+      "stop_rule": "At the bounded screen, reassess the hypothesis if fewer than two consequential incidents appear and no viable paid job has emerged. Stronger payment evidence can justify first delivery earlier. Report insufficient access separately from qualified price/scope refusal.",
+      "cost_note": "Use existing tools first and the shared GBP 50 qualification/customer-research allowance. Selling hours count in acquisition economics; this record authorizes no contact or spending."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "SAAS-12"
+      ],
+      "confidence": "low"
+    },
+    "evidence_check": "Shopify Catalog confirms substantial native functionality. No interviews, payments or primary evidence currently establish demand for this proposed segment/job."
+  },
+  {
+    "id": "SAAS-02",
+    "verdict": "modify",
+    "reason": "Bounded proof may resolve a credibility objection, but tiny free-versus-paid groups cannot choose an acquisition policy causally. The twenty-minute cap must include preparation and access, not just the call.",
+    "changes": [
+      "Try the paid scoped offer first; use a free example only for a concrete credibility/access obstacle.",
+      "Make twenty minutes the all-in free-work cap per prospect, with three examples maximum.",
+      "Set confidence to low and share the same selling-hour budget as SAAS-01."
+    ],
+    "final_priority": "next",
+    "decision_override": "Offer a paid scoped job first. If a qualified owner needs evidence of the method, use an existing labelled demonstration or at most one read-only product example within twenty minutes of total work. Defer a permanent free tier.",
+    "experiment_override": {
+      "action": "For at most three qualified opt-in prospects, log whether a bounded example resolves the stated obstacle and leads to payment. Count all preparation, permissions, explanation and follow-up.",
+      "metric": "Collected payment per concrete offer and total qualification cost per payer, with zero-payment cases shown explicitly.",
+      "guardrail": "No unsupported claims from a tiny comparison. Do not scan unrelated stores, start a subscription or perform a full free audit.",
+      "stop_rule": "Stop the free path after three examples with no payer. Continue only if measured acquisition cost fits the agreed first-job economics; the proposed 20% contribution ceiling is a local operating choice.",
+      "cost_note": "Maximum one hour of total free delivery, included inside the eight-hour selling screen; GBP 0 incremental tools and no separate research allowance."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "SAAS-01"
+      ],
+      "confidence": "low"
+    },
+    "evidence_check": "Public free scans establish competitor offers, not the best acquisition method. This free-sample choice remains an unvalidated, reversible commercial test."
+  },
+  {
+    "id": "SAAS-03",
+    "verdict": "modify",
+    "reason": "The inspectable concierge job is the right commercial test, but its scope and labor cap must match the portfolio quote and include intake, approval, repair, rechecks and support.",
+    "changes": [
+      "Use one incident, at most ten variants, one storefront and one permitted destination as the canonical scope.",
+      "Reduce the proposed delivery ceiling from six to four total operator hours; rescope if a viable quote cannot cover the job.",
+      "Require SAAS-08/09 before data access/writes and set commercial confidence to low."
+    ],
+    "final_priority": "next",
+    "decision_override": "Quote one paid project for a single agreed conflict across at most ten variants, one storefront and one permitted destination. Include source-backed diagnosis, an approved correction and a recheck within a quoted four-hour total delivery allowance; accept the work only when the scoped fee supports its costs.",
+    "experiment_override": {
+      "action": "Obtain an agreed scope, viable fee and payment before full analysis. Specify the authoritative source, inspectable target, exclusions, refund/credit treatment and acceptance of infeasible or delayed work before accessing the merchant's data.",
+      "metric": "Collected fee, all delivery hours, confirmed fault, approved correction, completed receipt and actual contribution.",
+      "guardrail": "Use only authorized access and approved exact writes with rollback. Do not promise a downstream ranking, repair or publication that the channel cannot support.",
+      "stop_rule": "Pause and rescope when source truth, access or four-hour delivery feasibility fails. Do not incur extra charges or quietly donate additional work.",
+      "cost_note": "Four hours includes setup, review, support and rechecks. A GBP 25 API ceiling is a maximum within the contracted job's budget, not expected spend or a new portfolio allowance; quote via SAAS-06."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "SAAS-01",
+        "SAAS-06",
+        "SAAS-08",
+        "SAAS-09"
+      ],
+      "confidence": "low"
+    },
+    "evidence_check": "Native Google updates and competitor overlap justify inspecting the residual job. They do not establish a viable fee or demand for this ten-variant service."
+  },
+  {
+    "id": "SAAS-04",
+    "verdict": "accept",
+    "reason": "A merchant-confirmed fault, approved change and verified publication receipt form an inspectable paid deliverable. The decision correctly keeps operational acceptance separate from time savings and incremental profit.",
+    "changes": [],
+    "final_priority": "next",
+    "evidence_check": "Shopify's current documentation denies guarantees of placement, ranking or wording. A repair receipt establishes only the agreed operational outcome; its economic benefit still needs merchant evidence."
+  },
+  {
+    "id": "SAAS-05",
+    "verdict": "modify",
+    "reason": "Intake and activation costs must be recorded from the beginning of a pilot. Requiring a completed repair before setting up that measurement reverses the dependency and creates a second version of the same acceptance receipt.",
+    "changes": [
+      "Prepare intake before pilot delivery and reuse SAAS-04's verified-repair receipt as the activation endpoint.",
+      "Remove completed SAAS-04 as a prerequisite; retain privacy/rights and owner qualification requirements.",
+      "Count setup inside the canonical four-hour job and report elapsed waiting separately from operator time."
+    ],
+    "final_priority": "next",
+    "decision_override": "Use one intake checklist for the pilot's incident, source owner, variant identity, permitted destination and approval path. Record merchant and operator time from authorized access to the same verified-repair receipt used in SAAS-04.",
+    "experiment_override": {
+      "action": "Apply the checklist during the first three paid jobs and record blocked permissions, identity conflicts, merchant minutes, operator minutes and calendar delay as they happen.",
+      "metric": "Access-to-receipt elapsed time, setup/operator hours, merchant effort and blocked cases; no separate install/scan success metric.",
+      "guardrail": "Use minimal authorized catalog access or exports. Waiting time and unpaid founder interpretation must remain visible.",
+      "stop_rule": "Defer self-serve onboarding if two of three jobs require over two setup hours or bespoke interpretation. Reprice/rescope sooner if the four-hour whole-job allowance becomes unviable.",
+      "cost_note": "All setup and review are inside SAAS-03's four-hour priced allowance. No separate onboarding build or free implementation budget."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "SAAS-01",
+        "SAAS-08",
+        "SAAS-09"
+      ],
+      "confidence": "medium"
+    },
+    "evidence_check": "Shopify security guidance supports necessary access controls. The activation definition and two-hour/three-pilot gate are chosen workflow tests, not observed product performance."
+  },
+  {
+    "id": "SAAS-06",
+    "verdict": "modify",
+    "reason": "The fixed-scope quote is appropriate, but the formula is ambiguous about VAT and fees and the labor assumption conflicts with the shared model. A candidate fee cannot establish willingness to pay or a profitable business.",
+    "changes": [
+      "Set confidence to low for price acceptance.",
+      "Use net-of-tax, net-of-credit receipts and actual route-specific fees; include all delivery hours.",
+      "Use GBP 15/hour base and GBP 25/hour stress, explicitly assumptions, and treat the 30% target as a local contribution gate rather than a market benchmark."
+    ],
+    "final_priority": "now",
+    "decision_override": "Quote a fixed fee for the actual incident, variants, destination and included repair/rechecks. Estimate the first job transparently, then replace assumptions with actual hours and fees. Accept only a scope that can meet the chosen contribution target without omitting owner work.",
+    "experiment_override": {
+      "action": "Define R as collected service receipts after VAT or other pass-through tax and refunds/credits; F as actual unrecovered billing/payment/platform fees; X as other direct costs; and h*r as all delivery labor. Test a quote only if C = R - F - X - h*r is at least 0.30*R for R>0 under the scoped base case, and record its stress result.",
+      "metric": "Quote acceptance, collected net revenue, contribution after delivery work and the result at the stated higher-time/higher-rate stress case.",
+      "guardrail": "GBP 15/hour base, GBP 25/hour stress and any GBP 150 candidate fee are planning choices, not WTP evidence. Payment fees may apply to gross receipts and must not be approximated as a percentage of net-of-VAT revenue without checking.",
+      "stop_rule": "Rescope, reprice or decline a quote that cannot cover the complete job at the chosen target. Payment by one buyer supports that transaction only; it does not validate market price or recurring margins.",
+      "cost_note": "Include the selected billing product's extra fees, not only card processing. Acquisition, fixed development and administration remain additional to delivery contribution and must be considered before investment."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "SAAS-12"
+      ],
+      "confidence": "low",
+      "rationale": "A fixed project exposes whether a buyer will pay for a specific operational job and whether that payment covers delivery. Variant count alone misses source ambiguity, destination access and human review. Competitor prices are asking prices. The first quote uses labelled workload assumptions, net-of-tax receipts and the actual billing route; neither an accepted fee nor positive delivery contribution establishes full business profit."
+    },
+    "evidence_check": "Shopify publishes 2.9% processing and conditional revenue share; Stripe Billing publishes a separate 0.7% pay-as-you-go charge. Neither applies universally to a standalone concierge invoice."
+  },
+  {
+    "id": "SAAS-07",
+    "verdict": "defer",
+    "reason": "A repaired incident can justify a project without recurring demand. Two second-cycle purchases would support a bounded monitoring test, not a general retention or LTV claim.",
+    "changes": [
+      "Keep recurring-product confidence low and require a real recurring event beyond native diagnostics.",
+      "Price the monitoring scope explicitly, including checks that may find no incident; do not manufacture alerts or imply preventive savings from silence.",
+      "Keep second-cycle payments, useful alerts and renewal economics separate."
+    ],
+    "final_priority": "later",
+    "decision_override": "Defer subscription development until independent paid-pilot merchants face recurring catalog changes and will pay again for a defined monitoring job their existing tools do not cover. Use a manual, capped second cycle before building recurring software.",
+    "experiment_override": {
+      "action": "With permission, inspect recent real catalog changes and quote a bounded thirty-day monitoring period with check frequency, review/support limits and cancellation terms. Compare alerts with native and incumbent tools.",
+      "metric": "Useful incremental alerts, false alarms, merchant action, all review/support minutes, contribution and actual second-period payments.",
+      "guardrail": "An absence of incidents does not prove prevention. Explain what the fee buys even during a quiet period and never auto-renew an unagreed trial.",
+      "stop_rule": "Do not fund subscription build without at least two independent second-cycle payments tied to genuine recurring jobs and viable measured economics. Treat that count as a screen, not retention proof.",
+      "cost_note": "Quote monitoring separately from the completed project and cost every included check/support task. No open-ended free shadow work, model allowance or automatic renewal."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "SAAS-04",
+        "SAAS-10",
+        "SAAS-11"
+      ],
+      "confidence": "low"
+    },
+    "evidence_check": "Google already automates common price/availability/condition updates. No observed recurring incident, paid renewal or retention cohort currently supports this subscription hypothesis."
+  },
+  {
+    "id": "SAAS-08",
+    "verdict": "accept",
+    "reason": "Exact source-backed merchant approval, preview and rollback are proportionate defaults for an unvalidated repair service. The draft also correctly costs review and admits that human approval does not eliminate errors.",
+    "changes": [],
+    "final_priority": "now",
+    "evidence_check": "Native catalog source controls corroborate the factual workflow. High confidence applies to the approval/abstention default, not to a proven commercial differentiator or error-free delivery."
+  },
+  {
+    "id": "SAAS-09",
+    "verdict": "modify",
+    "reason": "Tenant-scoped delivery is defensible; a pooled data asset is presently unsupported. The primary contracts should replace a FAQ-only summary, and their AI-development scope should not become an invented blanket ban on every evaluation.",
+    "changes": [
+      "Cite PPA Part C section 9.15 and API Terms section 3.24, checked 30 September 2026, both updated 27 February 2026.",
+      "Distinguish the PPA's prior written merchant consent wording from the API Terms' merchant-consent wording.",
+      "Remove a broad optional research-consent offer until the exact purpose and all required rights are identified; several merchant consents must not be assumed to authorize a shared training asset."
+    ],
+    "final_priority": "now",
+    "decision_override": "Default to tenant-scoped processing for the contracted job, documented retention/deletion and no pooled model development. Before any reuse, verify merchant, supplier and applicable platform rights for that exact purpose. Anonymisation does not by itself remove Shopify's contractual restrictions.",
+    "experiment_override": {
+      "action": "Use a rights and purpose checklist before pilot access, including source, tenant, authorized processing, provider terms, retention and deletion. Test deletion/export with a fixture. Assess a proposed shared evaluation or training use separately before creating its dataset.",
+      "metric": "Artifacts with documented permitted purpose and source, tenant-boundary/deletion checks and unresolved rights gaps.",
+      "guardrail": "PPA/API restrictions expressly include anonymous, aggregate and derived data for listed AI/ML development activities. A merchant-scoped exception is not assumed to authorize cross-merchant pooling; do not claim every ordinary evaluation or inference use is expressly prohibited.",
+      "stop_rule": "Block a proposed reuse when any required permission is absent or ambiguous. Continue a tenant-only service or use independently authored fixtures without treating a pooled corpus as the business's moat.",
+      "cost_note": "Include the checklist in service preflight and the job's cost record. No data purchase, shared training build or legal commission is authorized here."
+    },
+    "full_record_override": {
+      "depends_on": [],
+      "confidence": "high",
+      "rationale": "Merchant data possession, aggregation and privacy-law anonymisation do not establish contractual reuse rights. Shopify's current PPA and API Terms restrict specified AI/ML development, training, fine-tuning and improvement uses, expressly covering derived or aggregate material. The merchant exception is scoped to that merchant's data/store; this review conservatively refuses to infer a cross-merchant training permission. Whether a specific evaluation falls within those activities depends on its purpose and applicable terms.",
+      "evidence": [
+        {
+          "label": "Shopify PPA Part C section 9.15; updated 27 February 2026, checked 30 September 2026",
+          "url": "https://www.shopify.com/partners/terms",
+          "type": "primary contract"
+        },
+        {
+          "label": "Shopify API Terms section 3.24; updated 27 February 2026, checked 30 September 2026",
+          "url": "https://www.shopify.com/legal/api-terms",
+          "type": "primary contract"
+        },
+        {
+          "label": "Shopify compliance deletion webhooks",
+          "url": "https://shopify.dev/docs/apps/build/compliance/privacy-law-compliance",
+          "type": "primary documentation"
+        }
+      ]
+    },
+    "evidence_check": "Primary PPA/API clauses verified. Contractual restrictions and personal-data anonymisation are separate questions; the no-pooling default is a conservative decision for an unbuilt business."
+  },
+  {
+    "id": "SAAS-10",
+    "verdict": "modify",
+    "reason": "The cost ledger is essential, but it should begin before the first quote and count selling, failed jobs and every billed support task. Three positive delivery margins still do not establish net business profit.",
+    "changes": [
+      "Track all operator work, including onboarding, retries, merchant review, support, repair, rechecks, failed jobs and acquisition.",
+      "Use the canonical four-hour job scope and shared GBP 15/hour base/GBP 25/hour stress assumptions until actual opportunity cost is chosen.",
+      "Keep delivery contribution, acquisition payback and full operating result separate; do not allocate GBP 75 of API spend automatically."
+    ],
+    "final_priority": "now",
+    "decision_override": "Start a per-prospect and per-job cost ledger before quoting. Reconcile collected fees, taxes, refunds/credits, actual billing charges, compute/retrieval, every delivery/support hour and acquisition effort. Use measured economics to reprice or reduce scope before further selling.",
+    "experiment_override": {
+      "action": "Record work and actual charges from first qualification through final recheck, including refused quotes and failed/infeasible jobs. At each pilot close, calculate base contribution and a stress case with twice observed support time; also show the higher labor-rate sensitivity.",
+      "metric": "Net collected receipts, delivery contribution, acquisition cost per payer, owner hours, refunds/credits and stressed contribution; fixed development/admin shown separately.",
+      "guardrail": "Use the account's actual billing records. Do not price Work/Codex usage at an API token rate, omit Stripe Billing where used, stack alternative payment routes, or call contribution net profit.",
+      "stop_rule": "Reprice or rescope the next offer when the actual/stressed current scope is unviable. Repeated misses of the chosen 30% target block recurring build; any intentionally loss-making learning job requires its own capped rationale.",
+      "cost_note": "GBP 25 API spend per contracted pilot is a ceiling inside its costed budget, not expected spend or permission. No automatic three-pilot GBP 75 allocation; founder build, selling, administration and security costs remain additional."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "SAAS-06",
+        "SAAS-12"
+      ],
+      "confidence": "high"
+    },
+    "evidence_check": "The official GPT-5.6 Luna API rates are verified, but the token mix/FX/support assumptions are scenarios. The updated model includes Stripe Billing; its residual surplus still excludes full founder and business overhead."
+  },
+  {
+    "id": "SAAS-11",
+    "verdict": "modify",
+    "reason": "Three independent payments for the same job are a useful admission gate for a small internal tool. They do not prove market size, cheap acquisition, recurring retention or general merchant performance.",
+    "changes": [
+      "Set confidence to low for demand/transfer while retaining the chosen three-case screen.",
+      "Require paid completed receipts and comparable costs, not subsidized friendly use or pending repairs.",
+      "Permit only a separately capped internal tool after repetition; subscription build still needs SAAS-07."
+    ],
+    "final_priority": "next",
+    "decision_override": "Require three independent merchants to pay for and complete substantially the same conflict-and-recheck job, with a useful gap beyond native tools and viable recorded costs, before funding a reusable internal tool. Exclude owned/related stores and keep broad demand and subscription claims unvalidated.",
+    "experiment_override": {
+      "action": "Within the bounded qualification/quote program, retain each merchant's payment, relationship, discounts, source/target, incumbent comparator, receipt and hours. Continue recruitment only through a named, capped next screen after the preceding gate is met.",
+      "metric": "Independent collected payments and accepted receipts, comparable workflow share, bespoke hours and actual/stressed contribution.",
+      "guardrail": "Three cases are a feasibility screen. Do not count native duplicate findings, subsidized friendly jobs, refunded failures or a pending target recheck as ordinary successful adoption.",
+      "stop_rule": "Defer a reusable build when payments/receipts are missing, the job is already solved economically by incumbents, or bespoke work prevents the chosen contribution target. Treat the proposed 20% bespoke-hours rule as a local screening choice.",
+      "cost_note": "Each job shares the ten-variant/four-hour canonical scope and its quoted costs. Any later internal-tool build uses a separate capped allocation; no software budget is released merely by reaching a count."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "SAAS-03",
+        "SAAS-04",
+        "SAAS-05",
+        "SAAS-10"
+      ],
+      "confidence": "low"
+    },
+    "evidence_check": "The owned store cannot establish independent merchant WTP. Shopify's native mapping confirms a comparator exists, not that the remaining job is commercially attractive."
+  },
+  {
+    "id": "SAAS-12",
+    "verdict": "modify",
+    "reason": "The route and stop-ledger decision belongs before customer work. Depending on completed merchant replication and renewal prevents the present governance choice from being made and implies that retail is required for SaaS discovery.",
+    "changes": [
+      "Clear the dependencies on SAAS-11/07.",
+      "Start thirty/sixty/ninety-day reviews from an actual chosen route's launch, with earlier cash/hour stop gates.",
+      "Keep retail, service and software outcomes separate while sharing one portfolio cash/exposure ledger; no automatic GBP 750 lab or per-decision budget."
+    ],
+    "final_priority": "now",
+    "decision_override": "Before execution, choose the active commercial question and record its cash/hour limit, obligations and next stop gate. Keep retail and merchant-service economics separate. Review an active route at thirty, sixty and ninety days or sooner at its cap; require independent paid evidence before software investment.",
+    "experiment_override": {
+      "action": "Create one portfolio decision ledger before outreach, orders or building. At each gate record actual spend/commitments, retained contribution, unresolved obligations, completed learning and the exact next question; choose continue, rescope, service-only or pause.",
+      "metric": "Combined cash at risk, route-specific contribution and owner hours, unresolved customer liabilities and independently paid completed jobs.",
+      "guardrail": "The proposed portfolio budget is not approved spending. The owned shop may be a separate brand experiment; it is never required to interview merchants or proof of SaaS demand.",
+      "stop_rule": "Stop at the chosen cash/hour gate when the next question has no affordable discriminating test. At ninety days, pause further loss-making retail lab investment without a named capped learning job; defer software if external gates fail.",
+      "cost_note": "Use the single hypothetical portfolio envelope, deducting commitments and protected refund/fulfillment float. A later internal-tool ceiling is a proposal after paid repetition, not an allocation now."
+    },
+    "full_record_override": {
+      "depends_on": [],
+      "confidence": "medium",
+      "rationale": "A small shop can teach product accuracy and recordkeeping but may never supply enough traffic for sales-lift inference. Merchant payment tests can happen independently of that shop. Calendar review dates do not release budgets or satisfy dependencies. The earlier GBP 750 lab envelope was only a proposal, and all route spending competes within one explicit portfolio ledger."
+    },
+    "evidence_check": "No live retail contribution, agreed spending limit, independent paying merchant or renewal exists in the evidence. These are reversible governance choices, not proof of either business."
+  }
+]

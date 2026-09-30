@@ -1,0 +1,134 @@
+[
+  {
+    "id": "5FokzkHTpc0",
+    "title": "how I built a $2.7M brand using a.i (my actual product, website, ads, viral videos)",
+    "url": "https://www.youtube.com/watch?v=5FokzkHTpc0",
+    "published": "2025-07-03",
+    "views": 625302,
+    "access": "YouTube English auto-captions retrieved and reviewed end-to-end. Caption text is a private reading aid and may misrecognize words, names or figures.",
+    "principles": [
+      "Combines category growth, niche creator transcripts, search trends and customer language to form a product hypothesis; these clues do not validate purchases.",
+      "Connects Pilates socks to an aspirational identity, then carries it through colours, imagery and store design; test your own visual direction with buyers.",
+      "Covers supplier specs, product imagery, organic video and viewer retargeting. Reported orders, revenue and conversion have no independent verification here."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:01:02",
+        "claim": "Starts research with a growing-market check."
+      },
+      {
+        "timestamp": "00:01:57",
+        "claim": "Uses creator transcripts to find early-adopter products, then checks search trends."
+      },
+      {
+        "timestamp": "00:03:19",
+        "claim": "Links customer identity cues to brand resonance."
+      },
+      {
+        "timestamp": "00:05:35",
+        "claim": "Documents product and supplier specifications."
+      },
+      {
+        "timestamp": "00:08:14",
+        "claim": "Moves from store setup to video creative."
+      },
+      {
+        "timestamp": "00:11:51",
+        "claim": "Reports conversion rate and retargets viewers."
+      }
+    ],
+    "limitations": "Title says $2.7M; spoken intro says $3M. Both are unaudited creator claims, and the combined case cannot isolate causes."
+  },
+  {
+    "id": "eF59p8zhbLM",
+    "title": "$49,140 tiktok dropshipping in 7 days from scratch (showing you my entire process)",
+    "url": "https://www.youtube.com/watch?v=eF59p8zhbLM",
+    "published": "2024-05-16",
+    "views": 216596,
+    "access": "YouTube English auto-captions retrieved and reviewed end-to-end. Caption text is a private reading aid and may misrecognize words, names or figures.",
+    "principles": [
+      "Finds a skincare wand through TikTok content, orders it, then builds a demonstration-led sales video; this workflow does not prove product safety or profit.",
+      "Pairs a problem-led ad with a themed store and screens organic creative before paid promotion; measure buying intent, not views alone.",
+      "Reports $2,900 spend, $22,000 revenue and 319 conversions, then discusses CAC versus gross profit. Figures are unaudited and exclude full contribution costs."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:00:28",
+        "claim": "Finds a product through TikTok content."
+      },
+      {
+        "timestamp": "00:00:58",
+        "claim": "Says he ordered the product himself."
+      },
+      {
+        "timestamp": "00:03:54",
+        "claim": "Introduces a problem-to-product sales narrative."
+      },
+      {
+        "timestamp": "00:04:05",
+        "claim": "Reviews Shopify theme and colour choices."
+      },
+      {
+        "timestamp": "00:06:15",
+        "claim": "Introduces the paid campaign and spend."
+      },
+      {
+        "timestamp": "00:06:23",
+        "claim": "Reports 319 conversions and $22,000 revenue."
+      },
+      {
+        "timestamp": "00:08:59",
+        "claim": "Screens organic creative before paid ads."
+      },
+      {
+        "timestamp": "00:12:40",
+        "claim": "Compares acquisition cost with gross profit."
+      }
+    ],
+    "limitations": "The title and campaign numbers are unaudited; spend, revenue and orders do not establish profit after all costs."
+  },
+  {
+    "id": "cZ-Gsow_ULo",
+    "title": "$1.8m tiktok dropshipping in 30 days (showing you my actual viral videos and how to create them)",
+    "url": "https://www.youtube.com/watch?v=cZ-Gsow_ULo",
+    "published": "2024-04-30",
+    "views": 282446,
+    "access": "YouTube English auto-captions retrieved and reviewed end-to-end. Caption text is a private reading aid and may misrecognize words, names or figures.",
+    "principles": [
+      "Uses differentiated short-form creative for a red-light mask in an already popular TikTok category; the case does not validate the product for others.",
+      "Structures ads around problem, proposed solution, authority, explanation and product. Substantiate every factual and health-related claim independently.",
+      "Tests several hooks against one core video idea, then considers paid distribution. Most attempts fail to go viral; views are not profit."
+    ],
+    "timestamp_evidence": [
+      {
+        "timestamp": "00:00:00",
+        "claim": "Introduces a TikTok product and creative case."
+      },
+      {
+        "timestamp": "00:00:55",
+        "claim": "Presents the mask and intended customer problem."
+      },
+      {
+        "timestamp": "00:04:52",
+        "claim": "Outlines a problem-to-product ad sequence."
+      },
+      {
+        "timestamp": "00:08:49",
+        "claim": "Searches for studies to support a health claim."
+      },
+      {
+        "timestamp": "00:13:44",
+        "claim": "Tests versions with different hooks."
+      },
+      {
+        "timestamp": "00:15:43",
+        "claim": "Says most videos did not go viral."
+      },
+      {
+        "timestamp": "00:16:00",
+        "claim": "Places paid ads after organic videos."
+      }
+    ],
+    "limitations": "The $1.8M and conversion claims are unaudited. Health claims require separate evidence and advertising review."
+  }
+]
