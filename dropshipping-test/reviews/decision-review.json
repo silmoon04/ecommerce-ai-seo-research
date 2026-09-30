@@ -1,0 +1,641 @@
+[
+  {
+    "id": "TEST-01",
+    "verdict": "modify",
+    "reason": "A fixed offer package makes the small test interpretable, but the draft records still imply separate hours and budgets. Establish one retail test identity and one release boundary before the later decisions.",
+    "changes": [
+      "Define one crew, supplier, delivered price, page and source rule.",
+      "Make the £500/20-hour envelope shared across all retail decisions.",
+      "Distinguish planning priorities from authorization to execute."
+    ],
+    "final_priority": "now",
+    "decision_override": "Prepare one versioned retail test card within the shared £500 example and twenty founder hours; authorize no external action through this research.",
+    "experiment_override": {
+      "action": "Record exact SKU, variants, £72 price hypothesis, supplier, page/creative versions, platform, source rule, dates, cash cap, chosen contribution target and release requirements.",
+      "metric": "Complete, dated test card with explicit unknowns and a single ledger ID.",
+      "guardrail": "A result describes this offer and acquisition package; private synthetic rehearsals remain labelled and excluded from actual results.",
+      "stop_rule": "Do not release a dependent action until its factual, budget and authorization requirements are met; material changes create a new version.",
+      "cost_note": "Planning uses the shared four evidence hours and four campaign/ledger hours. No additional decision-by-decision hours or cash."
+    },
+    "full_record_override": {
+      "depends_on": [],
+      "uncertainty": "No budget, £18 residual target, product quote, buyer access or commercial result is confirmed. All proposed external actions require later authorization."
+    }
+  },
+  {
+    "id": "TEST-02",
+    "verdict": "modify",
+    "reason": "The crew is the most prepared retail hypothesis, rather than a demonstrated superior business. The inherited cost belongs to an Inkthreadable Changer basket and cannot be established using Printful examples.",
+    "changes": [
+      "Name the inherited supplier route and preserve exact-quote uncertainty.",
+      "Inspect a first sample and identical reorder before paid exposure.",
+      "Keep the organiser as an unfunded desk-research challenger."
+    ],
+    "final_priority": "now",
+    "decision_override": "Within the retail route, lead with one original embroidered Inkthreadable Changer crew; sample a functional challenger only after a separate replacement decision.",
+    "experiment_override": {
+      "action": "Confirm exact blank, colour, sizing, decoration and delivered quote; after authorization inspect first sample and identical reorder, measurements, embroidery, fit and one care-instruction wash.",
+      "metric": "Product and repeat-sample acceptance record; actual delivered cost; unresolved size and durability limits.",
+      "guardrail": "Original design, sample approval and prior arithmetic establish neither willingness to pay £72 nor every size's quality.",
+      "stop_rule": "Stop before traffic if the garment, rights, repeat quality or revised economics cannot support an honest premium offer.",
+      "cost_note": "Conditional total £83.22: £47.91 first sample and £35.31 identical reorder. Quote setup, VAT and shipping first. Evidence work shares four hours with TEST-03/04/12."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-01"
+      ],
+      "evidence": [
+        {
+          "label": "Inkthreadable embroidery design guidelines",
+          "url": "https://help.inkthreadable.co.uk/en/articles/598083-embroidery-design-guidelines",
+          "type": "supplier documentation"
+        },
+        {
+          "label": "Inkthreadable shipping costs",
+          "url": "https://www.inkthreadable.co.uk/shipping-costs",
+          "type": "supplier documentation"
+        }
+      ],
+      "uncertainty": "£35.31 fulfilment and £12.60 first-design digitisation are inherited conditional inputs, not a locked checkout quote. Paid retail demand remains untested."
+    }
+  },
+  {
+    "id": "TEST-03",
+    "verdict": "modify",
+    "reason": "Supplier verification is essential, but one supplier's averages cannot support another supplier's promise, and a single sample does not establish routine delivery or stock behaviour.",
+    "changes": [
+      "Tie every operating fact to the selected exact supplier.",
+      "Check both sample deliveries and return/remake responsibilities.",
+      "Make liquidity and remedies part of the pre-sale promise."
+    ],
+    "final_priority": "now",
+    "decision_override": "Verify the selected Inkthreadable route's delivered basket, handling, stock, return/remake terms and cash timing before offering the crew.",
+    "experiment_override": {
+      "action": "Record exact supplier terms, dispatch and arrival for both approved sample orders, return address, wrong-size treatment, replacement costs and payout-versus-charge timing.",
+      "metric": "Observed sample outcomes and a dated terms record, with promised service no stronger than the evidence.",
+      "guardrail": "Sample delivery and published estimates do not guarantee every customer delivery; Printful remains a separately quoted alternative.",
+      "stop_rule": "Pause public checkout where an unresolved term prevents an accurate promise or funded customer remedy.",
+      "cost_note": "Sample cash is already included in TEST-02's £83.22 conditional allocation. Use the same four evidence hours, not another supplier budget."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-02"
+      ],
+      "evidence": [
+        {
+          "label": "Inkthreadable shipping costs",
+          "url": "https://www.inkthreadable.co.uk/shipping-costs",
+          "type": "supplier documentation"
+        },
+        {
+          "label": "UK distance selling guidance",
+          "url": "https://www.gov.uk/online-and-distance-selling-for-businesses/distance-selling",
+          "type": "official guidance"
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-04",
+    "verdict": "modify",
+    "reason": "The rule is correct and directly affects whether this premium concept has its own reason to buy. Requiring two extra hours for every supporting decision would undo the lean plan.",
+    "changes": [
+      "Use original artwork and actual sample photography.",
+      "Treat made-to-order cancellation exceptions as unconfirmed for this item.",
+      "Place claim and rights review within shared evidence time."
+    ],
+    "final_priority": "now",
+    "experiment_override": {
+      "action": "Check the original motif, photos, copy, materials, delivery and any objective claim against source records and rights; leave absent reviews absent.",
+      "metric": "Zero unresolved material rights or truth gaps in publishable assets.",
+      "guardrail": "Regenerating a competitor image is no automatic permission; made-to-order alone does not establish a personalised-goods cancellation exception.",
+      "stop_rule": "Block the affected public claim or asset until corrected, evidenced or licensed; defer efficacy-led pillows.",
+      "cost_note": "Part of the four shared evidence hours. No purchased art, specialist health-claim review or extra sample budget is funded."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-02"
+      ]
+    }
+  },
+  {
+    "id": "TEST-05",
+    "verdict": "modify",
+    "reason": "Relevant task observations can prevent paying to expose an obvious defect. Five people and six extra hours are neither necessary thresholds nor compatible with the twenty-hour shared envelope.",
+    "changes": [
+      "Cap buyer access, observations and synthesis together at three hours.",
+      "Make five a maximum aspiration, with no funded incentives.",
+      "Remove mandatory participant-count dependencies from creative and event readiness."
+    ],
+    "final_priority": "next",
+    "decision_override": "When authorized, use up to three shared hours for relevant buyer access and task observations; recruit fewer than five if that is what the cap permits.",
+    "experiment_override": {
+      "action": "Ask category buyers to choose a size, explain total cost and delivery, find returns and describe their last comparable purchase and preferred alternative; observe without coaching.",
+      "metric": "Concrete misunderstandings, task failures and purchase objections, including contradictory observations.",
+      "guardrail": "A small convenience sample, compliments and hypothetical willingness to pay do not estimate purchase rates. Supportive friends cannot be the sole positive evidence.",
+      "stop_rule": "Stop at the shared three-hour cap. If buyer access fails, record that uncertainty rather than fabricating a market verdict or extending recruitment.",
+      "cost_note": "Three hours total for access, sessions and synthesis within twenty hours. No incentives are allocated; recruitment requires later authorization."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-20"
+      ]
+    }
+  },
+  {
+    "id": "TEST-06",
+    "verdict": "modify",
+    "reason": "Fixing a consequential observed defect is useful. It must not turn optional usability work into an obligatory multi-round programme or leave the basic page dependent on recruitment.",
+    "changes": [
+      "Treat follow-up as conditional on an actual defect.",
+      "Share page and buyer-observation allocations.",
+      "Allow readiness to be established through internal task checks plus any available buyer evidence."
+    ],
+    "final_priority": "next",
+    "decision_override": "Correct a material factual or task failure when observed, then recheck the affected task within the existing page and observation allowances.",
+    "experiment_override": {
+      "action": "Version one focused fix and recheck price, fit information, selected variant or checkout behaviour that failed.",
+      "metric": "Whether the original concrete error is resolved without introducing another material error.",
+      "guardrail": "Improved comprehension is not measured sales lift; aesthetic preferences do not automatically justify more rounds.",
+      "stop_rule": "Stop optional iteration at the shared cap; unresolved release failures require a revised plan, not a compromised launch.",
+      "cost_note": "Use the five page/measurement hours and, where available, three observation hours. No extra two-hour round."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-05"
+      ]
+    }
+  },
+  {
+    "id": "TEST-07",
+    "verdict": "modify",
+    "reason": "Two truthful concepts are proportionate to £75. The draft assumes footage already exists and places creativity after a compulsory five-person round; neither is warranted.",
+    "changes": [
+      "Fund one real sample shoot in founder time.",
+      "Use at most two concepts, without nine-way desire/format testing.",
+      "Make sample truth and page readiness the dependencies."
+    ],
+    "final_priority": "next",
+    "decision_override": "Make at most two original concepts from one approved sample shoot for the same crew offer.",
+    "experiment_override": {
+      "action": "Capture full garment, measured fit and stitch detail; create understated everyday styling and original-design appeal executions using the actual sample.",
+      "metric": "Delivered impressions, landing visits, checkout progression and reconciled purchases for each execution, with spend and exposure shown.",
+      "guardrail": "Stills or video are execution choices. Unequal platform delivery does not establish a causal creative winner, and AI scenes cannot prove garment quality.",
+      "stop_rule": "Do not add concepts or change the offer inside the first cohort; stop an inaccurate visual before exposure.",
+      "cost_note": "Four shared founder hours for the shoot and at most two concepts. No seeding, paid rights, creator fees or production purchases are included."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-03",
+        "TEST-04",
+        "TEST-20"
+      ]
+    }
+  },
+  {
+    "id": "TEST-08",
+    "verdict": "defer",
+    "reason": "The first cohort cannot support simultaneous price, bundle and creative inference. The generic basket example sacrifices £8.991 contribution and needs about 35.1% more orders per visitor under equal other assumptions merely to offset that loss.",
+    "changes": [
+      "Keep £72 delivered as the sole first offer.",
+      "Defer discounts, gifts and bundle apps.",
+      "Require a real joint use and separately costed comparison after baseline evidence."
+    ],
+    "final_priority": "later",
+    "decision_override": "Defer price and bundle comparisons until a specific baseline objection or paid-use pattern justifies a separately bounded offer test.",
+    "experiment_override": {
+      "action": "If later justified, cost the exact bundle, partial-return behaviour, shared shipping and handling; compare contribution per eligible visitor with the correct control.",
+      "metric": "Actual retained contribution per eligible visitor, supported by basket, acquisition and refund records.",
+      "guardrail": "AOV and multi-unit potential are insufficient; the 35.1% arithmetic hurdle is not an expected lift.",
+      "stop_rule": "Reject an offer that has no credible joint use or cannot meet its declared economic target.",
+      "cost_note": "No bundle product, gift, app or price-test traffic is allocated in the £500 round."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-12",
+        "TEST-15",
+        "TEST-24"
+      ]
+    }
+  },
+  {
+    "id": "TEST-09",
+    "verdict": "modify",
+    "reason": "Measurement and checkout defects can waste the entire diagnostic. They need direct factual/page readiness, not a prerequisite of optional recruitment and a second usability round.",
+    "changes": [
+      "Use one shared measurement preflight.",
+      "Reconcile purchases and refunds without inventing a successful live payment.",
+      "Keep customer consent and privacy configuration part of release readiness."
+    ],
+    "final_priority": "now",
+    "experiment_override": {
+      "action": "When implementation is authorized, walk mobile variant-to-checkout and test-mode purchase/refund reporting; verify GBP value, order ID, receipt and deduplication if both browser/server events are used.",
+      "metric": "Correct order, selected variant and value in store records; expected test events received without duplicates.",
+      "guardrail": "Test mode and synthetic rehearsal do not establish live settlement. Configure tracking for the applicable consent/privacy requirements before buying traffic.",
+      "stop_rule": "Block traffic for unusable checkout, wrong total, missing/duplicated events or unresolved tracking configuration.",
+      "cost_note": "Included in the five shared page/policies/checkout/measurement hours. Any live payment needs separate authorization and its real fees recorded."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-01",
+        "TEST-03",
+        "TEST-04",
+        "TEST-20"
+      ]
+    }
+  },
+  {
+    "id": "TEST-10",
+    "verdict": "modify",
+    "reason": "The attribution rule is sound, but reconciliation should preserve usable direct order evidence rather than treating every attribution gap as a complete demand failure.",
+    "changes": [
+      "Define source and lag rules before delivery.",
+      "Separate platform credit, ledger orders and unknown source.",
+      "Prevent overlapping platform claims from multiplying customers."
+    ],
+    "final_priority": "now",
+    "experiment_override": {
+      "action": "Freeze platform reporting settings and store-source matching rules; preserve order IDs, timestamps, click markers, overlaps and unresolved matches, then update after the declared purchase-lag window.",
+      "metric": "Unique initial acquired paid orders, actual spend, separately reported platform-attributed orders and unresolved source counts.",
+      "guardrail": "Source markers establish association, not incrementality; retain actual retail order evidence even if channel attribution remains unknown.",
+      "stop_rule": "Withhold a channel-CAC conclusion where source reconciliation fails; repair measurement before another paid cohort.",
+      "cost_note": "Uses the shared five setup hours and four campaign/ledger hours. One ledger, no analytics subscription."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-09"
+      ]
+    }
+  },
+  {
+    "id": "TEST-11",
+    "verdict": "modify",
+    "reason": "£100 conflicts with the revised cash plan. The affordable £500 example can fund £75 of diagnostic exposure while protecting £250 and leaving quote headroom; duration and order counts remain uncertain.",
+    "changes": [
+      "Replace £100 with £75 total initial traffic.",
+      "Use a chosen seven-day window with an enforceable total cap.",
+      "Require the predeclared target, maturity rule, source checks and cash ledger before launch."
+    ],
+    "final_priority": "next",
+    "decision_override": "After separate authorization and readiness, cap the first cohort at £75 total traffic or seven calendar days, whichever comes first.",
+    "experiment_override": {
+      "action": "Use one platform, one crew, one £72 delivered offer and page, and at most two declared concepts; verify the platform can enforce this total without drawing on working cash.",
+      "metric": "Primary readout: reconciled initial paid acquired order count and observed acquisition cost, alongside exposure/funnel counts and updated cohort contribution.",
+      "guardrail": "This tests the offer/acquisition package. £75, seven days and ten orders are not promises of delivery, power or platform learning; do not assume any CPC or conversion.",
+      "stop_rule": "Stop at cap/date or immediately for material truth/rights/checkout/events/spending faults or insufficient cash cover. Do not extend to obtain a first purchase.",
+      "cost_note": "£75 total portfolio traffic, not per ad or product. £500 has no second tranche. The £1,000 alternative can later permit at most £175 additional traffic after review."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-07",
+        "TEST-10",
+        "TEST-12",
+        "TEST-13",
+        "TEST-15",
+        "TEST-17"
+      ]
+    }
+  },
+  {
+    "id": "TEST-12",
+    "verdict": "modify",
+    "reason": "The initial-order formula is useful, but the new £5 target silently relaxes the earlier £18 choice. Misaligned retained-order CAC and missing fixed-cost recovery can also make a marginal result appear profitable.",
+    "changes": [
+      "Preserve chosen £18 residual with £8.0338 CAC ceiling; show £5/£0 sensitivities.",
+      "Compare CAC and contribution on the same initial acquired-order basis.",
+      "Separate unit contribution, cash profit and profit after valued founder time."
+    ],
+    "final_priority": "now",
+    "decision_override": "Requote the crew and predeclare a residual target; preserve the prior chosen £18 per initial order as the base scenario until deliberately revised.",
+    "experiment_override": {
+      "action": "Calculate retained receipts less original fees/fulfilment, replacements, all acquisition and labour; retain inherited expected-loss sensitivity for planning and actual cohort costs for results.",
+      "metric": "At inherited inputs: £26.0338 before CAC/fixed costs; £8.0338 CAC ceiling and 8.96 comparable gross ROAS for £18 residual; £21.0338 and 3.42 for £5 sensitivity.",
+      "guardrail": "Targets and 8% refunds/2% replacements are chosen inputs. At 3.39 ROAS the crew leaves £4.7949 after variable costs: positive, below both £18 and £5, and before fixed costs.",
+      "stop_rule": "Do not release spend with unknown material costs or a non-positive acquisition ceiling at the chosen target; a target change requires an explicit pre-cohort decision.",
+      "cost_note": "Economics shares the four evidence hours. Count all acquisition once, founder labour separately from cash, and working reserves as unspent cash."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-03"
+      ],
+      "applications": {
+        "clothing": "Use exact Inkthreadable quote; preserve £18 target/£8.03 ceiling as a chosen base, with £5 and £0 sensitivities.",
+        "physical": "The £29.99/£9 generic model is hypothetical; obtain an exact supplier quote and demand evidence before comparison.",
+        "ai_commerce": "Keep referral traffic and retained contribution separate; free clicks do not prove profit.",
+        "saas": "Measure payment, acquisition and actual delivery/support cost per merchant independently."
+      },
+      "uncertainty": "£18 was a prior planning preference, not a user-confirmed target. Price, costs, tax/payment mix, refund frequency, labour, demand and acquisition are unvalidated."
+    }
+  },
+  {
+    "id": "TEST-13",
+    "verdict": "modify",
+    "reason": "Rejecting the day-three shortcut is justified. Its replacement needs to be written before launch; the draft 'reject' priority and dependence on the completed paid test put this guardrail in the wrong place.",
+    "changes": [
+      "Make the replacement stopping rule a present planning task.",
+      "Use delivered exposure, lag and cumulative spend.",
+      "Allow seven days as scheduling, without treating it as statistical validation."
+    ],
+    "final_priority": "now",
+    "decision_override": "Predeclare cap/date and operational stops; do not use day-two purchase expectations or day-three ROAS as an automatic winner/loser verdict.",
+    "experiment_override": {
+      "action": "Record the £75/seven-day limit, reporting lag and immediate release failures before launch; examine daily operations without increasing the cap.",
+      "metric": "Cumulative delivered exposure, spend, reconciled purchases and cash cover.",
+      "guardrail": "Undelivered spend is an exposure failure; calendar age does not establish demand, mature returns or repeatable acquisition.",
+      "stop_rule": "Stop for an operational breach or cap/date. A lucky day does not release 20% more budget; a no-sale day alone does not settle the offer.",
+      "cost_note": "Within shared campaign/ledger planning time. No automatic spending increment."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-01",
+        "TEST-12"
+      ]
+    }
+  },
+  {
+    "id": "TEST-14",
+    "verdict": "modify",
+    "reason": "The allowance for uncertainty is important, but order-hurdle arithmetic should be explicit and kept separate from power calculations or false confidence intervals on non-independent traffic.",
+    "changes": [
+      "Report exposure quality and raw order counts.",
+      "Label accounting hurdles as arithmetic only.",
+      "Allow an inconclusive result without indefinite test extensions."
+    ],
+    "final_priority": "next",
+    "experiment_override": {
+      "action": "At the cap, report relevant unique visits, paid acquired orders, actual source confidence, costs and unresolved liabilities; state which competing explanations remain.",
+      "metric": "With inherited expected-loss arithmetic, £75 needs three initial orders for variable-cost break-even, four for £5 residual each or ten for £18; these are not sample-size requirements.",
+      "guardrail": "Zero among 100 independent, correctly measured relevant visits is compatible with roughly 3% under the approximate rule of three; correlated traffic and selection can invalidate that illustration.",
+      "stop_rule": "Close the cohort at its cap and choose a specific fix, separately capped repeat or stop; do not buy more observations solely to obtain a neat verdict.",
+      "cost_note": "Readout belongs within the four shared campaign/ledger hours; no extra analysis or traffic allowance."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-10",
+        "TEST-11"
+      ]
+    }
+  },
+  {
+    "id": "TEST-15",
+    "verdict": "modify",
+    "reason": "Recent gross orders overstate evidence while remedies remain possible. A fixed waiting period also cannot eliminate later disputes, and expected refund percentages cannot stand in for cash cover.",
+    "changes": [
+      "Predeclare provisional and updated cohort reporting.",
+      "Match contribution denominator to acquisition denominator.",
+      "Tie cash admission to exposed receipts and unfunded obligations."
+    ],
+    "final_priority": "now",
+    "experiment_override": {
+      "action": "Before traffic, record the actual delivery, cancellation, return-processing and reporting rules; update cohorts through these stages and retain unresolved disputes/remedies separately.",
+      "metric": "Retained receipts minus actual original fees, fulfilment, refunds, replacements, acquisition and variable labour, with initial acquired order count and open liabilities.",
+      "guardrail": "A later chargeback may still occur. An 8% expected refund allowance cannot fund a £72 refund, and an early return-window review is not complete finality.",
+      "stop_rule": "Withhold a final profit claim while material costs are unresolved; pause new order intake if cleared funds cannot meet required obligations.",
+      "cost_note": "Updates share campaign/ledger time. Protected £250 is cash held, never another ad allocation; actual customer service remains payable and its hours/costs are logged."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-10",
+        "TEST-12"
+      ]
+    }
+  },
+  {
+    "id": "TEST-16",
+    "verdict": "modify",
+    "reason": "Replication is the right follow-up to a credible candidate, but the draft makes £250 cumulative traffic appear available in the £500 scenario when it is not.",
+    "changes": [
+      "Keep the same SKU and declared offer/source for replication.",
+      "Permit further £175 only within the separately chosen £1,000 alternative or a new funded plan.",
+      "Require first-cohort review without a magical minimum-order certificate."
+    ],
+    "final_priority": "later",
+    "decision_override": "Consider a separately capped repeat after first-cohort review; the £500 round itself contains no repeat-traffic allocation.",
+    "experiment_override": {
+      "action": "Specify the exact unresolved question and repeat the offer in another dated cohort, rechecking costs, source measurement, cash and customer remedies first.",
+      "metric": "Compatible updated contribution, initial-order CAC, delivery and return outcomes across declared cohorts, with uncertainty reported.",
+      "guardrail": "Two small positive cohorts do not prove stable demand; investigate selected early results and failed tests as part of the portfolio.",
+      "stop_rule": "Do not repeat where the next observation is undefined, acquisition fails the chosen economics, delivery fails or obligations are unfunded.",
+      "cost_note": "The £1,000 alternative permits up to £175 more traffic after the first £75, cumulative maximum £250. Any extra work must fit remaining hours or a separately revised plan."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-14",
+        "TEST-15",
+        "TEST-17",
+        "TEST-24"
+      ]
+    }
+  },
+  {
+    "id": "TEST-17",
+    "verdict": "modify",
+    "reason": "The portfolio ledger is correct but should exist before spend, not depend on completing traffic and return maturity. It must replace inconsistent budgets and avoid deducting advertising twice.",
+    "changes": [
+      "Open one cash, time and liability ledger at planning.",
+      "Use the canonical £500 and alternative £1,000 allocations.",
+      "Count historical failed attempts and existing project spend against the same resources."
+    ],
+    "final_priority": "now",
+    "decision_override": "Maintain one portfolio ledger from the first commitment, including rejected offers, samples, acquisition, fixed costs, consumed labour and cash still held.",
+    "experiment_override": {
+      "action": "Record £83.22 conditional samples, £65 shared shop/domain, £75 traffic, £250 protected cash and £26.78 headroom; reconcile actual commitments and existing spend before release.",
+      "metric": "Actual cash consumed, cash available after obligations, fixed/variable hours, cohort contribution and whole-portfolio economic profit.",
+      "guardrail": "Reserve and headroom are unspent cash; acquisition belongs once. Before accepting an order cover unfunded fulfilments, exposed refunds, remedies, due fees/taxes and return costs using cleared cash.",
+      "stop_rule": "Stop new commitments or order intake when cleared cash cannot cover obligations; never move the reserve into ads to satisfy a platform minimum.",
+      "cost_note": "One £500 cash capacity example, maximum planned zero-order operating spend £223.22 before time. Twenty shared founder hours valued separately; actual support adds recorded cost."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-01"
+      ],
+      "uncertainty": "The budget is unconfirmed. Conditional sample cost, account tax treatment, domain price, settlement timing and actual order liabilities may require less traffic or a revised plan."
+    }
+  },
+  {
+    "id": "TEST-18",
+    "verdict": "modify",
+    "reason": "The rejection of automatic 20% scaling is sound. The replacement should be a later costed expansion decision, not a rejected task on which the first retail review depends.",
+    "changes": [
+      "Separate automatic daily ROAS increases from a justified future expansion.",
+      "Require repeat evidence, marginal economics, capacity and working cash.",
+      "Keep past costs visible without requiring every sunk cost to be recovered before any sensible marginal decision."
+    ],
+    "final_priority": "later",
+    "decision_override": "Reject automatic 20% increases; consider a bounded expansion only after reviewed repeat cohorts and a credible plan to recover ongoing costs and founder time.",
+    "experiment_override": {
+      "action": "Cost a specific next spending increment using updated conversion, costs and uncertainty; stress refunds, supplier capacity, stock, support and cleared cash before release.",
+      "metric": "Incremental retained contribution after all relevant acquisition and servicing costs, with whole-portfolio cash/economic profit reported alongside it.",
+      "guardrail": "A daily gross-ROAS spike is no scale signal. The creator's USD400 is a checkpoint observation, not a universal budget or known full-test cost.",
+      "stop_rule": "Stop the expansion at its own cap or on economic/operating failure; do not expand an unfunded customer obligation.",
+      "cost_note": "Expansion has no allocation in the £500 diagnostic. It requires a separately costed, authorized commitment; £1,000's £250 ceiling is still a test ceiling."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-16",
+        "TEST-17"
+      ]
+    }
+  },
+  {
+    "id": "TEST-19",
+    "verdict": "modify",
+    "reason": "A free theme plus existing AI is sufficient for the first question. Tool restraint should not become opposition to automation that later demonstrably removes cost.",
+    "changes": [
+      "Use Basic monthly plus Dawn and existing AI access.",
+      "Measure net time saving after setup and QA before a paid tool.",
+      "Do not transfer annual equivalents or introductory offers into monthly cash assumptions."
+    ],
+    "final_priority": "now",
+    "experiment_override": {
+      "action": "Prepare one factual page with existing tools and Dawn; if a bottleneck appears, compare the same task manually and with one proposed tool including error correction.",
+      "metric": "Measured founder hours and factual errors, plus cash cost and actual billing commitment.",
+      "guardrail": "Tool-index estimates are leads, not observed sales. An AI builder that saves cost is useful even though it cannot supply quality or demand evidence.",
+      "stop_rule": "Defer any paid app with no named unresolved job or no saving after setup/QA; reprice at checkout before commitment.",
+      "cost_note": "£50 for up to two Basic monthly cycles and £15 domain allowance are shared once. No paid research, builder or bundle app is funded; promotions are not assumed."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-01"
+      ],
+      "evidence": [
+        {
+          "label": "Shopify UK pricing",
+          "url": "https://www.shopify.com/uk/pricing",
+          "type": "platform pricing"
+        },
+        {
+          "label": "Shopify Dawn",
+          "url": "https://themes.shopify.com/themes/dawn/presets/dawn",
+          "type": "platform documentation"
+        }
+      ]
+    }
+  },
+  {
+    "id": "TEST-20",
+    "verdict": "modify",
+    "reason": "Verified facts and original assets are the useful AI input. The actual supplier facts must precede public generation, while a labelled private rehearsal can expose missing facts without pretending the product has been inspected.",
+    "changes": [
+      "Require exact supplier facts and rights before public copy.",
+      "Use a single fact record for page, checkout and later feed checks.",
+      "Count the private rehearsal inside existing hours."
+    ],
+    "final_priority": "now",
+    "experiment_override": {
+      "action": "Draft the product page from dated exact-variant facts, original artwork and approved sample images; inspect every assertion, mobile variant path and displayed total against that record.",
+      "metric": "Material product/price/rights discrepancies found and resolved; complete product-to-refund synthetic rehearsal labelled as such.",
+      "guardrail": "A concept render is not a sample photo or customer proof. Unknowns stay visible in private drafts and block dependent public promises.",
+      "stop_rule": "Block inaccurate claims/images or broken variant totals before publication; stop optional decoration when the shared cap is used.",
+      "cost_note": "The free eight-hour rehearsal uses two evidence hours, five page/measurement hours and one ledger hour within the twenty-hour envelope, not eight additional hours."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-03",
+        "TEST-04",
+        "TEST-19"
+      ]
+    }
+  },
+  {
+    "id": "TEST-21",
+    "verdict": "defer",
+    "reason": "Accurate page facts belong in readiness, but a new SEO experiment would dilute the first £75 paid question. Eligibility, indexing and acquisition need distinct observations and realistic dates.",
+    "changes": [
+      "Keep truthful metadata in the ordinary page build.",
+      "Defer formal organic-channel observation and extra tooling.",
+      "Do not block paid diagnostics on organic orders or ranking."
+    ],
+    "final_priority": "later",
+    "decision_override": "After a genuinely purchasable offer exists, use native indexing and feed diagnostics if a defined organic question warrants separate time.",
+    "experiment_override": {
+      "action": "Record dated index/feed state, errors, organic impressions/clicks and any order evidence using native tools; keep market and page versions explicit.",
+      "metric": "Technical eligibility/factual consistency separately from organic visits and retained order contribution.",
+      "guardrail": "Eligibility does not promise recommendation or sales; sparse early impressions cannot determine underlying demand.",
+      "stop_rule": "Correct factual mismatches promptly; close the channel observation at its declared review rather than endlessly polishing unseen pages.",
+      "cost_note": "No SEO subscription or additional channel experiment is funded in the first twenty hours. Any later allocation is a separate plan."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-09",
+        "TEST-20"
+      ]
+    }
+  },
+  {
+    "id": "TEST-22",
+    "verdict": "defer",
+    "reason": "The evidence distinctions are correct. A scripted model with access to our page answers a different question from production shopping selection and should not become a SaaS claim or prerequisite for the retail test.",
+    "changes": [
+      "Separate synthetic correctness, live inclusion and real referral orders.",
+      "Keep fixed prompts/model/date for any later internal check.",
+      "Defer broad AI visibility tooling and performance promises."
+    ],
+    "final_priority": "later",
+    "experiment_override": {
+      "action": "When separately useful, run a short documented factual check and separately observe production shopping inclusion and actual referral markers; retain each evidence type.",
+      "metric": "Contradictions/omissions under the recorded harness; dated live inclusion observations; reconciled retained referral orders, reported separately.",
+      "guardrail": "Synthetic access proves no indexing, stable ranking, real shopper frequency or incremental purchase effect.",
+      "stop_rule": "Stop a public AI-performance claim unsupported by its actual evidence; do not interpret omission from a few prompts as failed retail demand.",
+      "cost_note": "No bespoke feed integration, model benchmark suite, API spend or AI-ranking product is allocated in the first retail round."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-10",
+        "TEST-21"
+      ]
+    }
+  },
+  {
+    "id": "TEST-23",
+    "verdict": "modify",
+    "reason": "Independent merchant payment is the correct commercial test, but it need not wait for owned-store SEO or AI recommendations. The earlier paid-service route can be assessed independently when immediate profit is the selected objective.",
+    "changes": [
+      "Remove owned-store AI success as a prerequisite.",
+      "Retain a narrow paid merchant job before subscription development.",
+      "Require repeated paid work, buyer access and economical delivery before automation."
+    ],
+    "final_priority": "later",
+    "decision_override": "Keep public SaaS development deferred; if profit-first merchant service is chosen, test one independent paid catalogue job without requiring a retail launch first.",
+    "experiment_override": {
+      "action": "Under a separate authorized plan, inspect a recent merchant incident and native alternatives, offer a bounded paid correction/recheck, and measure payment, delivery time and repeat demand.",
+      "metric": "Independent payment and useful completed work, then repeated paid need and account contribution after selling, access, support and delivery time.",
+      "guardrail": "Owned-store learning, favourable interviews, free audits and synthetic scores establish no external willingness to pay or subscription retention.",
+      "stop_rule": "Stop broad development where the native workflow resolves the job, access is impractical, buyers will not pay or delivery is uneconomical.",
+      "cost_note": "No merchant outreach or paid pilot is authorized or financed by the retail £500. The earlier service-first option needs its own chosen scope and shared portfolio funding."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-01",
+        "TEST-19"
+      ],
+      "uncertainty": "A recurring external merchant problem, qualified buyer access and willingness to pay are unvalidated. This is a separate business hypothesis, not a conclusion from the crew."
+    }
+  },
+  {
+    "id": "TEST-24",
+    "verdict": "modify",
+    "reason": "A first retail review must not wait for deferred SaaS or an expansion it is meant to govern. It should decide the smallest next question using actual cash, uncertainty and complete costs.",
+    "changes": [
+      "Remove TEST-18 and TEST-23 as prerequisites.",
+      "Require the first-cohort readout, liability update and portfolio ledger.",
+      "Choose stop, repair or separately capped repeat before discussing expansion."
+    ],
+    "final_priority": "next",
+    "decision_override": "Review the first cohort using its test card, source/uncertainty readout, updated liabilities and shared portfolio ledger; choose one next move.",
+    "experiment_override": {
+      "action": "State what was actually learned, what remains unknown, whether the chosen target was met, remaining cash/hours and the single next observation that could change the decision.",
+      "metric": "Evidence gained per consumed cash/hour; current obligations; actual unit and whole-portfolio contribution with alternative explanations.",
+      "guardrail": "An inconclusive result is legitimate. Do not relabel a failed £18 target as a successful £5 test after seeing results; revise any target before a new cohort.",
+      "stop_rule": "End new work when no affordable next question exists, readiness fails or obligations consume available cash; fulfill existing customer duties regardless.",
+      "cost_note": "Within the four shared campaign/ledger hours. £500 funds no automatic second traffic tranche, while any £1,000 alternative repeat is capped and separately reviewed."
+    },
+    "full_record_override": {
+      "depends_on": [
+        "TEST-14",
+        "TEST-15",
+        "TEST-17"
+      ]
+    }
+  }
+]

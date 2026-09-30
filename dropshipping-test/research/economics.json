@@ -1,0 +1,417 @@
+{
+  "as_of": "2026-10-01",
+  "currency": "GBP",
+  "status": "scenario calculator inputs and arithmetic; not quotes, forecasts, tax advice, or spending authorization",
+  "assumptions": {
+    "seller_geography": "UK-established seller assumed; unconfirmed",
+    "customer_geography": "UK customers assumed",
+    "vat": "unregistered UK seller assumed; supplier VAT stays in cost; no output VAT modeled",
+    "payment": "Shopify Payments, domestic standard card",
+    "delivery": "price includes standard outbound delivery; no separate delivery charge",
+    "refund_definition": "share of initial orders fully refunded; entire receipt refunded; original processing fee and first fulfillment remain costs; no recovery or reimbursement assumed",
+    "replacement_definition": "separate no-charge replacement share of initial orders; replacement fulfillment cost included",
+    "unmodeled": [
+      "chargebacks",
+      "tax on profit",
+      "input VAT recovery",
+      "cross-border/card conversion costs",
+      "returns recovery",
+      "supplier claims",
+      "discounts outside bundle scenario",
+      "fixed setup labor"
+    ],
+    "denominator": "Expected contribution and acquisition spend use initial paid acquired orders. Retained orders are reported separately. Actual cohort profit uses retained receipts and actual costs. No repeat-purchase value is assumed.",
+    "subscription_tax_note": "Shopify plan and domain lines are allowances; confirm actual invoice, taxes and payment method. The model's 2% + 25p rate is standard domestic online cards, not every card/payment method."
+  },
+  "formulas": {
+    "payment_fee_per_initial_order": "card_percentage * customer_receipt + card_fixed_fee",
+    "expected_net_receipts": "customer_receipt * (1 - full_refund_rate)",
+    "expected_fulfillment": "landed_fulfillment_cost * (1 + replacement_rate)",
+    "contribution_before_CAC_and_fixed_costs": "customer_receipt * (1 - full_refund_rate) - (card_percentage * customer_receipt + card_fixed_fee) - landed_fulfillment_cost * (1 + replacement_rate) - variable_labor",
+    "break_even_roas": "initial gross customer receipt / contribution_before_CAC_and_fixed_costs, only when contribution > 0; fixed costs are unrecovered",
+    "CAC_ceiling_at_profit_floor": "contribution_before_CAC_and_fixed_costs - desired_profit_per_initial_order",
+    "ROAS_at_profit_floor": "customer_receipt / CAC_ceiling_at_profit_floor, only when CAC ceiling > 0",
+    "portfolio_test_cost": "one_shared_store_setup + all product-specific sample/creative/traffic costs + shared tools + valued fixed labor; include stopped/failed products",
+    "bundle_vs_control_delta": "bundle contribution per basket - same-basket control contribution per basket",
+    "portfolio_cash_profit": "retained customer receipts - actual fulfilment and remedies - original processing fees - all acquisition spend - samples and shared fixed cash costs; exclude unspent reserves and unpaid owner time",
+    "portfolio_economic_profit": "portfolio cash profit - valued variable order labour - valued fixed founder labour",
+    "portfolio_economic_ROI": "portfolio economic profit / (actual fulfilment and remedies + original processing fees + all acquisition spend + samples and shared fixed cash + all valued labour), if denominator > 0; unused reserve and headroom excluded",
+    "bundle_required_order_rate_lift_at_equal_visitor_cost": "control contribution per basket / bundle contribution per basket - 1, assuming the stated whole-basket refund and shipping model"
+  },
+  "shopify_uk_basic": {
+    "monthly_billed_monthly_gbp": 25,
+    "monthly_equivalent_billed_yearly_gbp": 19,
+    "shopify_payments_standard_card_percent": 0.02,
+    "shopify_payments_fixed_gbp": 0.25,
+    "third_party_transaction_fee_percent_if_other_gateway_on_basic": 0.02,
+    "note": "Third-party fee and Shopify Payments card fees are different cases; do not stack third-party transaction fee onto Shopify Payments scenario.",
+    "refund_fee_treatment": "original card fee not returned; no additional Shopify Payments fee to process refund"
+  },
+  "generic_single_item_chosen_scenario": {
+    "receipt_gbp": 29.99,
+    "landed_fulfillment_gbp": 9,
+    "full_refund_rate": 0.08,
+    "replacement_rate": 0.02,
+    "variable_labor_gbp": 0.75,
+    "labor_minutes": 3,
+    "labor_rate_gbp_per_hour": 15,
+    "desired_profit_floor_gbp_per_initial_order": 5,
+    "expected_net_receipts_gbp": 27.5908,
+    "payment_fee_gbp": 0.8498,
+    "expected_fulfillment_gbp": 9.18,
+    "contribution_before_CAC_fixed_costs_gbp": 16.811,
+    "break_even_roas": 1.784,
+    "CAC_ceiling_at_profit_floor_gbp": 11.811,
+    "ROAS_at_profit_floor": 2.539,
+    "contribution_after_CAC_15_before_fixed_gbp": 1.811,
+    "chosen_values_warning": "£29.99 price and £9 landed cost are deliberately selected illustrative inputs, not vendor quotes or demand evidence.",
+    "profit_floor_sensitivities": [
+      {
+        "profit_floor_gbp_per_initial_order": 0,
+        "CAC_ceiling_gbp": 16.811,
+        "gross_ROAS_at_floor": 1.7839509844744512,
+        "attainable_at_nonnegative_CAC": true
+      },
+      {
+        "profit_floor_gbp_per_initial_order": 5,
+        "CAC_ceiling_gbp": 11.811,
+        "gross_ROAS_at_floor": 2.5391584116501567,
+        "attainable_at_nonnegative_CAC": true
+      },
+      {
+        "profit_floor_gbp_per_initial_order": 18,
+        "CAC_ceiling_gbp": -1.189,
+        "gross_ROAS_at_floor": null,
+        "attainable_at_nonnegative_CAC": false
+      }
+    ]
+  },
+  "bundle_vs_same_basket_control": {
+    "units": 2,
+    "per_item_control_receipt_gbp": 29.99,
+    "control_basket_receipt_gbp": 59.98,
+    "bundle_basket_receipt_gbp": 49.99,
+    "landed_fulfillment_cost_per_unit_gbp": 9,
+    "full_refund_rate": 0.08,
+    "replacement_rate": 0.02,
+    "variable_labor_per_basket_gbp": 0.75,
+    "control_contribution_before_CAC_fixed_gbp": 34.622,
+    "bundle_contribution_before_CAC_fixed_gbp": 25.631,
+    "bundle_minus_control_gbp": -8.991,
+    "bundle_discount_percent_vs_control": 0.166722,
+    "contribution_loss_percent_vs_control": 0.2597,
+    "interpretation": "Chosen arithmetic only. Bundle requires measured order-rate/units/CAC/handling benefit to offset lower contribution per basket.",
+    "required_order_rate_lift_at_equal_visitor_cost": 0.3507861573875386,
+    "additional_limitations": "Same two units in one basket. No partial returns, shipping consolidation savings or different packing labour are modeled. Required lift is algebra, not forecast or measured uplift."
+  },
+  "existing_embroidered_crew_comparison": {
+    "receipt_gbp": 72,
+    "landed_fulfillment_gbp": 35.31,
+    "full_refund_rate": 0.08,
+    "replacement_rate": 0.02,
+    "variable_labor_gbp": 2.5,
+    "labor_minutes": 10,
+    "labor_rate_gbp_per_hour": 15,
+    "payment_fee_gbp": 1.69,
+    "contribution_before_CAC_fixed_costs_gbp": 26.0338,
+    "break_even_roas": 2.766,
+    "desired_profit_floor_gbp_per_initial_order": 18,
+    "CAC_ceiling_at_profit_floor_gbp": 8.0338,
+    "ROAS_at_profit_floor": 8.962134979710722,
+    "evidence_status": "Inherited catalogue-based scenario, not configured quote or verified sales. £72 willingness to pay, loss rates, order labour and £18/approximately £8 targets are unvalidated planning choices. £5 is a sensitivity, not an authorized override.",
+    "supplier_model": "Inherited Inkthreadable Changer scenario; Printful examples do not validate its cost or service.",
+    "chosen_operating_CAC_target_gbp": 8,
+    "contribution_at_chosen_CAC_target_gbp": 18.0338,
+    "profit_floor_sensitivities": [
+      {
+        "profit_floor_gbp_per_initial_order": 0,
+        "CAC_ceiling_gbp": 26.0338,
+        "gross_ROAS_at_floor": 2.765635443154668,
+        "status": "sensitivity only, not an authorized replacement target"
+      },
+      {
+        "profit_floor_gbp_per_initial_order": 5,
+        "CAC_ceiling_gbp": 21.0338,
+        "gross_ROAS_at_floor": 3.423061928895397,
+        "status": "sensitivity only, not an authorized replacement target"
+      },
+      {
+        "profit_floor_gbp_per_initial_order": 18,
+        "CAC_ceiling_gbp": 8.0338,
+        "gross_ROAS_at_floor": 8.962134979710722,
+        "status": "inherited chosen planning target, not user-confirmed"
+      }
+    ],
+    "stress_price_discount_10_percent_contribution_at_CAC_8_gbp": 11.5538,
+    "stress_refunds_15_percent_replacements_4_percent_contribution_at_CAC_8_gbp": 12.2876
+  },
+  "creator_demo_stress_test": {
+    "reported_campaign_roas": 3.39,
+    "reported_ad_spend_usd": 400,
+    "status": "Creator-reported demonstration claim; not independently audited or a forecast.",
+    "crew_implied_CAC_gbp_at_same_roas": 21.238938053097343,
+    "crew_contribution_after_implied_CAC_before_fixed_costs_gbp": 4.794861946902657,
+    "crew_five_pound_profit_floor_passes": false,
+    "generic_item_implied_CAC_gbp_at_same_roas": 8.8466,
+    "generic_item_contribution_after_implied_CAC_before_fixed_costs_gbp": 7.9644,
+    "generic_item_note": "Arithmetic stress test only; chosen £9 landed cost is not a verified quote.",
+    "product_research_extrapolation": {
+      "method_claimed": "third-party traffic estimate multiplied by creator multiplier and assumed 3% conversion, then multiplied by $77 price",
+      "observed_sales": false,
+      "observed_conversion": false,
+      "interpretation": "hypothetical gross revenue extrapolation, not verified demand, market share, or attainable revenue"
+    },
+    "crew_variable_cost_break_even_passes": true,
+    "crew_inherited_eighteen_pound_profit_floor_passes": false,
+    "interpretation": "At the same hypothetical gross ROAS a one-item crew basket has positive £4.79 marginal contribution. It can be commercially useful if recurring volume recovers fixed cash, valued founder time and failed tests. Neither benchmark transfer nor profitable recurrence is established. USD400 is not £400; using a dimensionless ratio with GBP baskets is not an FX conversion.",
+    "fixed_cash_recovery_after_valued_order_labor_initial_orders": 31,
+    "fixed_cash_and_20_hour_setup_recovery_initial_orders": 94,
+    "same_recovery_plus_100_failed_test_initial_orders": 115,
+    "recovery_limitations": "Assumes unchanged future contribution, no additional recurring charges, no capacity change and expected losses. Counts are arithmetic, not attainable volume or forecasts."
+  },
+  "hypothetical_round_budget_ledgers": {
+    "gbp_500": {
+      "shared_store_and_theme": 0,
+      "samples_allowance_gbp": 83.22,
+      "first_sample_including_provisional_setup_gbp": 47.91,
+      "identical_reorder_gbp": 35.31,
+      "traffic_total_for_all_product_tests_gbp": 75,
+      "first_traffic_tranche_gbp": 75,
+      "later_conditional_traffic_gbp": 0,
+      "shared_tools_allowance_gbp": 0,
+      "shopify_two_months_gbp": 50,
+      "domain_allowance_gbp": 15,
+      "ring_fenced_cash_float_gbp": 250,
+      "uncommitted_headroom_gbp": 26.78,
+      "total_gbp": 500,
+      "single_lead_product_count": 1,
+      "fixed_founder_hours_total": 20,
+      "zero_order_cash_spend_if_all_nonreserve_allocations_used_gbp": 223.22,
+      "notes": "Replacement proposed one-crew capacity scenario, not confirmed funds, a supplier quote, or spending authorization. Basic monthly + Dawn + existing tools. Sample/reorder amount depends on exact configured quote, setup/VAT and delivery. Headroom is held for unresolved costs. Prior portfolio spending reduces remaining capacity; do not add another route budget."
+    },
+    "gbp_1000": {
+      "shared_store_and_theme": 0,
+      "samples_allowance_gbp": 83.22,
+      "first_sample_including_provisional_setup_gbp": 47.91,
+      "identical_reorder_gbp": 35.31,
+      "traffic_total_for_all_product_tests_gbp": 250,
+      "first_traffic_tranche_gbp": 75,
+      "later_conditional_traffic_gbp": 175,
+      "shared_tools_allowance_gbp": 0,
+      "shopify_two_months_gbp": 50,
+      "domain_allowance_gbp": 15,
+      "ring_fenced_cash_float_gbp": 500,
+      "uncommitted_headroom_gbp": 101.78,
+      "total_gbp": 1000,
+      "single_lead_product_count": 1,
+      "fixed_founder_hours_total": 20,
+      "zero_order_cash_spend_if_all_nonreserve_allocations_used_gbp": 398.22,
+      "notes": "Replacement proposed one-crew capacity scenario, not confirmed funds, a supplier quote, or spending authorization. Basic monthly + Dawn + existing tools. Sample/reorder amount depends on exact configured quote, setup/VAT and delivery. Headroom is held for unresolved costs. Prior portfolio spending reduces remaining capacity; do not add another route budget."
+    },
+    "portfolio_rule": "Alternative one-product capacities, not additive budgets. One sample/reorder, shoot, store/domain/tools and 20-hour time envelope. First traffic cap £75; only £1,000 scenario has a further conditional £175. Include every failed attempt, count acquisition once, and protect liabilities before optional spending."
+  },
+  "sources": [
+    {
+      "id": "shopify_uk_pricing",
+      "url": "https://www.shopify.com/uk/pricing",
+      "checked_on": "2026-10-01",
+      "facts": "Basic £25 monthly or £19 monthly equivalent billed yearly; standard online card rate 2% + 25p; Basic third-party transaction fee 2%."
+    },
+    {
+      "id": "shopify_fee_mechanics",
+      "url": "https://help.shopify.com/en/manual/payments/shopify-payments/getting-paid-with-shopify-payments/view-payouts/pay-periods-and-fees",
+      "checked_on": "2026-10-01",
+      "facts": "Shopify Payments uses card rate without Shopify transaction fee; third-party provider means Shopify transaction fee plus provider card rate."
+    },
+    {
+      "id": "shopify_refunds",
+      "url": "https://help.shopify.com/en/manual/payments/shopify-payments/payouts/refunds",
+      "checked_on": "2026-10-01",
+      "facts": "Original card processing fees are not refunded; UK refund may be debited from linked bank account outside payout schedule."
+    },
+    {
+      "id": "hmrc_vat_thresholds",
+      "url": "https://www.gov.uk/how-vat-works/vat-thresholds",
+      "checked_on": "2026-10-01",
+      "facts": "Current UK taxable turnover registration threshold £90,000; circumstances matter."
+    },
+    {
+      "id": "hmrc_overseas_sales",
+      "url": "https://www.gov.uk/government/collections/selling-goods-using-an-online-marketplace-or-direct-to-customers-in-the-uk",
+      "checked_on": "2026-10-01",
+      "facts": "Overseas sellers making taxable UK direct sales may need UK VAT registration regardless of the domestic threshold; goods location and sales route matter."
+    },
+    {
+      "id": "uk_consumer_contracts",
+      "url": "https://www.legislation.gov.uk/uksi/2013/3134",
+      "checked_on": "2026-10-01",
+      "facts": "Distance-sale cancellation/refund rules, including standard delivery reimbursement in relevant cases."
+    },
+    {
+      "id": "prior_unit_economics",
+      "url": "https://silmoon04.github.io/ecommerce-ai-seo-research/profit-playbook/research/unit-economics.md",
+      "checked_on": "2026-09-30",
+      "facts": "Existing £72 crew fulfillment, refund/replacement, card fee and labor planning assumptions."
+    }
+  ],
+  "founder_time_plan": {
+    "total_hours": 20,
+    "hourly_value_gbp": 15,
+    "fixed_labor_value_gbp": 300,
+    "supplier_sample_rights_economics_hours": 4,
+    "page_policies_checkout_measurement_hours": 5,
+    "buyer_access_and_task_observations_hours": 3,
+    "one_shoot_up_to_two_concepts_hours": 4,
+    "campaign_QA_ledger_analysis_hours": 4,
+    "free_rehearsal_included_hours": 8,
+    "free_rehearsal_draws_from": {
+      "supplier_sample_rights_economics_hours": 2,
+      "page_policies_checkout_measurement_hours": 5,
+      "campaign_QA_ledger_analysis_hours": 1
+    },
+    "rule": "No additive per-application, SKU or route allowance. Existing tools and original artwork only. If readiness exceeds the remaining time, stop optional work and revise the same plan. Waiting is calendar time; actual order labour is logged separately and accepted customer obligations remain due."
+  },
+  "working_cash_rule": {
+    "currency": "GBP",
+    "inherited_two_refund_two_replacement_contingency_gbp": 214.62,
+    "two_refund_starting_cover_gbp": 144,
+    "two_replacement_starting_cover_gbp": 70.62,
+    "unfunded_single_crew_gbp": 35.31,
+    "contingency_plus_one_unfunded_crew_gbp": 249.93,
+    "contingency_plus_ten_unfunded_crews_gbp": 567.72,
+    "residual_from_250_after_contingency_and_one_unfunded_gbp": 0.07,
+    "refund_cover_rule": "Greater of £144 or all still-exposed customer receipts not already repaid; adjust when actual obligations differ.",
+    "replacement_cover_rule": "Greater of £70.62 or committed remedy costs; adjust for actual supplier terms.",
+    "required_cleared_cash": "Refund cover + replacement cover + all unfunded fulfilments + due taxes/fees/return-postage and other commitments. Do not count the same paid remedy or already returned receipt twice.",
+    "admission_rule": "Recompute before accepting an order or funding further traffic. Payouts not yet cleared are not cleared cash. The £214.62 is a chosen stress reserve, not a legal liability cap. There is no fixed safe concurrent order count."
+  },
+  "calculator_defaults": {
+    "price": 72,
+    "landed": 35.31,
+    "fee_percent": 2,
+    "fee_fixed": 0.25,
+    "refund_percent": 8,
+    "replacement_percent": 2,
+    "labor": 2.5,
+    "cac": 8,
+    "profit_floor": 18,
+    "test_budget": 500,
+    "products": 1,
+    "sample_per_product": 83.22,
+    "traffic_per_product": 75,
+    "shared_costs": 65,
+    "working_reserve": 250,
+    "hourly_rate": 15,
+    "hours_per_product": 20
+  },
+  "calculator_contract": {
+    "currency": "GBP",
+    "percent_units": "Percentage points: 2 means 2%, 8 means 8%. Economic source rate fields use decimal fractions separately.",
+    "profit_floor_scope": "Contribution after expected variable costs and CAC per initial paid acquired order, before fixed costs and failed tests.",
+    "default_status": "Inherited crew planning hypothesis with prior chosen £18 floor and approximately £8 CAC. Not user-confirmed targets or funds.",
+    "available_headroom_at_defaults": 26.78,
+    "working_reserve_handling": "Included when comparing cash commitments with capacity; excluded from profit and ROI while held. Reclassify costs once actually incurred without double counting.",
+    "products_semantics": "One in the recommended route. Multiproduct calculator changes are sensitivities, not authorization to run parallel offers. Shared costs once, failed product cash/time still included.",
+    "labor_semantics": "labor is variable GBP per initial order. hours_per_product at the recommended single product is the entire shared 20-hour setup/test envelope. Do not add the free rehearsal or individual memo allowances.",
+    "cac_and_traffic_semantics": "traffic_per_product is the capped cohort traffic allocation. cac is a separate unit sensitivity. For a realized cohort, either subtract actual traffic once or allocate it as CAC times initial acquired orders; never subtract both.",
+    "roas_guards": "No ad spend means ROAS is not applicable. M <= 0 means no positive CAC budget. M - floor < 0 means target unattainable even at CAC zero; equality permits CAC zero but no paid traffic.",
+    "economic_roi_definition": "Economic profit divided by consumed cash and valued labour resources, excluding held reserves. Display the formula and avoid presenting ROAS as ROI."
+  },
+  "portfolio_sensitivity": {
+    "status": "Illustrations using expected loss assumptions, not observed small-cohort outcomes or forecasts.",
+    "fixed_cash_excluding_traffic_gbp": 148.22,
+    "traffic_gbp": 75,
+    "valued_fixed_labor_gbp": 300,
+    "rows": [
+      {
+        "initial_paid_orders": 0,
+        "ad_CAC_gbp": null,
+        "unit_contribution_after_ad_CAC_gbp": null,
+        "cash_profit_gbp": -223.22,
+        "economic_profit_gbp": -523.22,
+        "economic_ROI": -1
+      },
+      {
+        "initial_paid_orders": 2,
+        "ad_CAC_gbp": 37.5,
+        "unit_contribution_after_ad_CAC_gbp": -11.4662,
+        "cash_profit_gbp": -166.1524,
+        "economic_profit_gbp": -471.15240000000006,
+        "economic_ROI": -0.7805286793750633
+      },
+      {
+        "initial_paid_orders": 5,
+        "ad_CAC_gbp": 15,
+        "unit_contribution_after_ad_CAC_gbp": 11.0338,
+        "cash_profit_gbp": -80.55100000000002,
+        "economic_profit_gbp": -393.05100000000004,
+        "economic_ROI": -0.542699975560959
+      },
+      {
+        "initial_paid_orders": 10,
+        "ad_CAC_gbp": 7.5,
+        "unit_contribution_after_ad_CAC_gbp": 18.5338,
+        "cash_profit_gbp": 62.11799999999997,
+        "economic_profit_gbp": -262.88200000000006,
+        "economic_ROI": -0.28411014155684433
+      }
+    ],
+    "actual_results_rule": "Replace expected refund and replacement losses with actual retained receipts and costs, leaving unresolved liabilities and later-loss exposure explicit. Include all failed tests."
+  },
+  "diagnostic_caps": [
+    {
+      "traffic_cap_gbp": 75,
+      "modeled_initial_orders_required_at_floor": [
+        {
+          "floor_gbp": 0,
+          "orders": 3
+        },
+        {
+          "floor_gbp": 5,
+          "orders": 4
+        },
+        {
+          "floor_gbp": 18,
+          "orders": 10
+        }
+      ],
+      "interpretation": "Proposed first cap in reviewed route. Counts are arithmetic hurdles, not statistical power."
+    },
+    {
+      "traffic_cap_gbp": 100,
+      "modeled_initial_orders_required_at_floor": [
+        {
+          "floor_gbp": 0,
+          "orders": 4
+        },
+        {
+          "floor_gbp": 5,
+          "orders": 5
+        },
+        {
+          "floor_gbp": 18,
+          "orders": 13
+        }
+      ],
+      "interpretation": "Comparison arithmetic only; not additional allocations in £500 plan."
+    },
+    {
+      "traffic_cap_gbp": 250,
+      "modeled_initial_orders_required_at_floor": [
+        {
+          "floor_gbp": 0,
+          "orders": 10
+        },
+        {
+          "floor_gbp": 5,
+          "orders": 12
+        },
+        {
+          "floor_gbp": 18,
+          "orders": 32
+        }
+      ],
+      "interpretation": "Comparison arithmetic only; not additional allocations in £500 plan."
+    }
+  ]
+}

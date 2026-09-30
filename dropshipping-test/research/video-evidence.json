@@ -1,0 +1,208 @@
+{
+  "research_date": "2026-10-01",
+  "scope": "Critical evidence index for four Perry Xie videos; summarizes creator statements and evidentiary limits. Raw captions remain private under raw/.",
+  "videos": [
+    {
+      "video_id": "b43_Gs64mYM",
+      "title": "how i made $200k in 30 days with shopify stores i built in 10 minutes.. (w/ claude ai)",
+      "creator": "Perry Xie",
+      "url": "https://www.youtube.com/watch?v=b43_Gs64mYM",
+      "published": "2026-09-10",
+      "duration_seconds": 1150,
+      "views_at_capture": 140839,
+      "brief_summary": "Demonstrates a fast AI-assisted Shopify storefront build for a product selected before the video begins. The creator narrates competitor page research, Claude-assisted copy and Liquid customization, then states the product was preselected and directs viewers to his separate research tutorial. It demonstrates a workflow and edited interface, not an independently measured conversion result or the full product-selection method. The title’s $200k/30-day framing differs from the opening’s $197k/50-day and $143k/30-day self-reports.",
+      "evidence_limits": [
+        "Auto-caption transcription may mishear and is not a substitute for exact on-screen text.",
+        "Creator demonstrations, revenue figures, and tool estimates are not independently audited by this review."
+      ]
+    },
+    {
+      "video_id": "5slU3QjvzI8",
+      "title": "here's how i find winning products that print $100k/month (100% hit rate so far lol)",
+      "creator": "Perry Xie",
+      "url": "https://www.youtube.com/watch?v=5slU3QjvzI8",
+      "published": "2026-07-24",
+      "duration_seconds": 1016,
+      "views_at_capture": 12885,
+      "brief_summary": "Explains a discretionary screen: inspect long-running, active ads; assess cost, size/weight, multi-unit purchase potential, problem/market fit and competitor density; estimate a competitor’s revenue using traffic, assumed conversion and price; then consider bundles/free gifts. It demonstrates filters and one product/store example. Its 100% hit-rate title has no sample denominator, and the featured $138k/month figure is an assumption-based estimate rather than verified sales.",
+      "evidence_limits": [
+        "Auto-caption transcription may mishear and is not a substitute for exact on-screen text.",
+        "Creator demonstrations, revenue figures, and tool estimates are not independently audited by this review."
+      ]
+    },
+    {
+      "video_id": "IbObinWjfHg",
+      "title": "Speedrunning a $100k/month shopify store (w/ claude ai) pt.1",
+      "creator": "Perry Xie",
+      "url": "https://www.youtube.com/watch?v=IbObinWjfHg",
+      "published": "2026-08-11",
+      "duration_seconds": 1610,
+      "views_at_capture": 108655,
+      "brief_summary": "Applies the research framework to a grounding-sheet offer and builds a store quickly with AI and Atlas. It adds a 20-day native-ad filter recipe and discusses copying competitor structure, sourcing and page content. The video includes useful caution to substantiate health mechanisms and claims, while its revenue and hit-rate statements remain self-reported. It is a build demonstration; it does not show a full controlled ad test outcome.",
+      "evidence_limits": [
+        "Auto-caption transcription may mishear and is not a substitute for exact on-screen text.",
+        "Creator demonstrations, revenue figures, and tool estimates are not independently audited by this review."
+      ]
+    },
+    {
+      "video_id": "oH2r5KUTRzo",
+      "title": "Speedrunning a $100k/month shopify store (w/ claude ai) pt.2",
+      "creator": "Perry Xie",
+      "url": "https://www.youtube.com/watch?v=oH2r5KUTRzo",
+      "published": "2026-08-22",
+      "duration_seconds": 1915,
+      "views_at_capture": 14955,
+      "brief_summary": "Continues the speedrun series with long-form native ad construction, three desire-based ad sets and nine ad variants, then gives a brief day-one to day-three purchase/ROAS rule and 20% budget adjustment heuristic. A 3.39 ROAS/$400-spend day is presented as an example. The speaker says detailed performance evaluation belongs in another video, so this does not provide a complete or independently verified testing protocol.",
+      "evidence_limits": [
+        "Auto-caption transcription may mishear and is not a substitute for exact on-screen text.",
+        "Creator demonstrations, revenue figures, and tool estimates are not independently audited by this review."
+      ]
+    }
+  ],
+  "claim_audit": [
+    {
+      "id": "A01",
+      "video_id": "b43_Gs64mYM",
+      "time": "00:00",
+      "claim": "Title: “$200k in 30 days”; opening says $197,000 in 50 days for one store and $143,000 in 30 days for another.",
+      "evidence_status": "internally unreconciled",
+      "missing": "The title and opening may describe different stores or windows, but the relationship is not explained; gross/net and source records are absent.",
+      "our_response": "Preserve both as distinct creator claims; do not convert the title into an established result."
+    },
+    {
+      "id": "A02",
+      "video_id": "b43_Gs64mYM",
+      "time": "00:11",
+      "claim": "The showcased process built the stores associated with $197k/50 days and $143k/30 days.",
+      "evidence_status": "self-reported; causal attribution unverified",
+      "missing": "No counterfactual, underlying financial records, store cohort or evidence that the website-building method caused those sales.",
+      "our_response": "Treat the build as a tutorial, not evidence that a ten-minute AI site generates sales."
+    },
+    {
+      "id": "A03",
+      "video_id": "b43_Gs64mYM",
+      "time": "01:38",
+      "claim": "Product was already selected before the store-build demonstration.",
+      "evidence_status": "directly stated in video",
+      "missing": "The selection process is outside this demonstration.",
+      "our_response": "Use the dedicated research video for the filter; don’t claim the main tutorial tested product discovery."
+    },
+    {
+      "id": "A04",
+      "video_id": "5slU3QjvzI8",
+      "time": "00:00",
+      "claim": "“100% hit rate so far” for winning products.",
+      "evidence_status": "unsupported self-reported rate",
+      "missing": "No number of products/stores, definition of hit, failed attempts, observation period or independent record.",
+      "our_response": "Do not infer probability of success or expected value."
+    },
+    {
+      "id": "A05",
+      "video_id": "5slU3QjvzI8",
+      "time": "06:54",
+      "claim": "Filter: US, top two performance tiers, max five ads per brand, image, still running, runtime >=25 days.",
+      "evidence_status": "demonstrated/narrated selection recipe",
+      "missing": "No validation that the tool’s tier or runtime measures profitability; output universe and number inspected are not recorded.",
+      "our_response": "Report as a reproducible filter setup, not a proven winning-product predictor."
+    },
+    {
+      "id": "A06",
+      "video_id": "5slU3QjvzI8",
+      "time": "03:48",
+      "claim": "Product screen values low COGS, small/light shipping, multi-unit potential, real problem and large TAM.",
+      "evidence_status": "stated qualitative heuristics",
+      "missing": "No thresholds, weighting, scoring rule or evidence that each factor is predictive.",
+      "our_response": "Use as prompts for due diligence and compare against actual sourcing/market evidence."
+    },
+    {
+      "id": "A07",
+      "video_id": "5slU3QjvzI8",
+      "time": "11:51 to 13:01",
+      "claim": "Demo reports 105,000 visits across roughly three months, then increases the estimate without validation and chooses 60,000 monthly visits x assumed 3% conversion x $77 price. This implies 1,800 orders and $138,600 monthly revenue, narrated as about $138,000.",
+      "evidence_status": "scenario arithmetic on estimated and assumed inputs; not observed sales",
+      "missing": "The upward traffic adjustment, store-specific conversion, order count and product-price mix are unverified. The spoken revenue figure is approximate; 60,000 x 0.03 x 77 equals $138,600.",
+      "our_response": "Preserve the creator's roughly $138k estimate alongside its assumptions; do not report implied orders as measured orders or revenue as verified sales."
+    },
+    {
+      "id": "A08",
+      "video_id": "5slU3QjvzI8",
+      "time": "13:05",
+      "claim": "Calls product “untapped” after a keyword-based Meta Ad Library check appears to find one relevant seller.",
+      "evidence_status": "narrow observation; conclusion overstated",
+      "missing": "Search term, geography, recall, product synonyms and seller universe are incomplete; one recognized competitor does not measure all competition.",
+      "our_response": "Say few direct matches were noticed in the shown search; avoid market-wide saturation claim."
+    },
+    {
+      "id": "A09",
+      "video_id": "5slU3QjvzI8",
+      "time": "07:27",
+      "claim": "A minimum 25-day runtime is used to infer ads have enough data and may be winners.",
+      "evidence_status": "demonstrated heuristic",
+      "missing": "Ad duration can reflect many causes; no spend, impressions, purchases or profit evidence shown.",
+      "our_response": "Use longevity as a lead for investigation, not success proof."
+    },
+    {
+      "id": "A10",
+      "video_id": "IbObinWjfHg",
+      "time": "02:46",
+      "claim": "In TrendTrack, speedrun part one uses active, minimum 20 days, image, US, English, ad-copy length >=1,000 (called words by the speaker) and ad-rank descending.",
+      "evidence_status": "demonstrated recipe; classification assertion unverified",
+      "missing": "The current filter unit was not independently checked. Length does not establish native format or profit, and 20 days differs from the July tutorial's 25-day recipe. The speedrun explicitly switches from GetHookd/Similarweb to TrendTrack.",
+      "our_response": "Treat this as a historical creator-narrated discovery recipe; verify current units and tool behavior before reproducing it."
+    },
+    {
+      "id": "A11",
+      "video_id": "IbObinWjfHg",
+      "time": "00:12",
+      "claim": "Claims 100% hit rate across many stores, all with $100k+ in first month.",
+      "evidence_status": "unsupported self-reported rate and outcome",
+      "missing": "No denominator, definitions, failures, costs, financial statements or external corroboration.",
+      "our_response": "Do not transfer into a success-rate assumption."
+    },
+    {
+      "id": "A12",
+      "video_id": "oH2r5KUTRzo",
+      "time": "28:31",
+      "claim": "Day 1 purchase optional; day 2 aim for at least one purchase; day 3 seek purchases above break-even ROAS.",
+      "evidence_status": "creator-stated testing heuristic",
+      "missing": "No budget/exposure threshold, attribution, sample size, statistical rationale or definition of break-even margin.",
+      "our_response": "Do not use as a spend authorization or universal cut rule."
+    },
+    {
+      "id": "A13",
+      "video_id": "oH2r5KUTRzo",
+      "time": "29:09",
+      "claim": "Creator reports a day-three snapshot of 3.39 ROAS on $400 ad spend.",
+      "evidence_status": "creator-displayed/self-reported example",
+      "missing": "No independent account export, attribution detail, orders/refunds or contribution calculation. $400 is the cited spend at the displayed day-three checkpoint; the video does not establish it as a daily budget or the total cost of the full test.",
+      "our_response": "Treat as an illustrative platform snapshot, not profit evidence."
+    },
+    {
+      "id": "A14",
+      "video_id": "oH2r5KUTRzo",
+      "time": "29:17",
+      "claim": "Raise campaign budget 20% at midnight above break-even; optionally another 20% if >2x break-even; reduce 20% after a 24h dip.",
+      "evidence_status": "stated operational heuristic",
+      "missing": "No controlled comparison or exact dip threshold; ROAS alone may not capture contribution or delayed refunds.",
+      "our_response": "Only an example of the creator’s operating rule; calculate business-specific break-even first."
+    },
+    {
+      "id": "A15",
+      "video_id": "oH2r5KUTRzo",
+      "time": "30:35",
+      "claim": "Near 30:35 to 30:54, creator gives a rough losing-test summary referencing below-break-even ROAS after days 3 to 5, testing “desire 4” and “desire 5,” no purchases, and says undelivered spend is not a test.",
+      "evidence_status": "partly caption-uncertain and underspecified",
+      "missing": "Some wording is caption-uncertain; no reproducible spend threshold, exact stopping rule or completed test history.",
+      "our_response": "Do not operationalize without source video inspection and a predeclared test plan."
+    },
+    {
+      "id": "A16",
+      "video_id": "b43_Gs64mYM",
+      "time": "00:00",
+      "claim": "Description links TrendTrack discount, Atlas, Rapid Bundles, a private supplier and paid Luxury Tools; other videos also promote tools/Atlas.",
+      "evidence_status": "promotional incentives directly disclosed",
+      "missing": "Affiliate/referral terms and commercial arrangements are not fully established in the reviewed captions/metadata.",
+      "our_response": "Record commercial incentives as context; links alone do not show advice is false."
+    }
+  ]
+}
