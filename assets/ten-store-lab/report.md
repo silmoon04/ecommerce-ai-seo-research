@@ -4,7 +4,7 @@ Checked 1 October 2026. This is preparation evidence, not a forecast of sales.
 
 The actual aggregate ledger records £0 costs, zero paid orders and £0 contribution. No transaction is recorded. Owner setup time is unpriced; production attribution and tracking remain unverified.
 
-Ten local prototypes and storefront samples exist. None has completed all practitioner, human, service or physical checks for a paid release. Market Day is the first rehearsal candidate and can become the first paid candidate only if its gates clear. Recipe Archive is a conditional service challenger. Quiz Host stays in reserve unless hosts prefer its workflow over a free scoring spreadsheet. These are useful test decisions, not sales forecasts.
+Ten local prototypes and storefront samples exist. The earlier Market Day-first paid recommendation is withdrawn. Stop expanding the low-priced digital range and investigate one finished personalised physical gift against one original embroidered garment. The existing concepts are a preparation archive. No replacement is selected for a paid launch. Current reasoning: https://silmoon04.github.io/ecommerce-ai-seo-research/ten-store-lab.html#product-direction .
 
 The verified account records show 10 of 10 actual Agentic accounts with UK region, GBP currency, zero billing checks and no payment method. The native-product records, plus the separately verified Market Day draft, show 10 of 10 products saved as drafts with matching proposed prices. Live merchant payment and delivery are not verified.
 
@@ -294,7 +294,7 @@ Review of implementation repairs:
 - shopify-launch/qa/logic-review-a.md
 - Five reported defects repaired and independently rechecked in the reviewed report.
 
-The 09:00 BST target on 1 October 2026 is a reviewable preparation handover. Paid readiness or sales by that time are not established.
+The requested sales target of 09:00 BST on 1 October 2026 was not achieved. Zero paid orders are recorded.
 
 ## Native theme progress
 

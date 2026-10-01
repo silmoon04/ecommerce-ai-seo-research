@@ -14,7 +14,7 @@
     let count=0;
     for(const p of data.products) {
       const text=[p.brand,p.title,p.audience,p.description,p.reason,...p.includes].join(' ').toLowerCase();
-      const stateMatch=!state||(state==='first'&&['market-day'].includes(p.slug))||(state==='physical'&&['fold-street','route-story','companion-print'].includes(p.slug))||(state==='human'&&['market-day','quiz-host','touchline','swatch-repeat','museum-key','four-bed','recipe-archive'].includes(p.slug));
+      const stateMatch=!state||(state==='physical'&&['fold-street','route-story','companion-print'].includes(p.slug))||(state==='human'&&['market-day','quiz-host','touchline','swatch-repeat','museum-key','four-bed','recipe-archive'].includes(p.slug));
       const visible=(!query||text.includes(query))&&(!category||category===p.category)&&stateMatch;
       document.querySelector(`[data-slug="${p.slug}"]`).hidden=!visible;
       if(visible) count++;
