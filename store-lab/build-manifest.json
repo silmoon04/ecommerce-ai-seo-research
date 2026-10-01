@@ -1,0 +1,9 @@
+{
+  "build": "public_sample",
+  "stores": 10,
+  "full_product_files_included": false,
+  "analytics_network_sink": "none",
+  "checkout": "local_simulation",
+  "native_shopify": "pending",
+  "cost_gbp": 0
+}

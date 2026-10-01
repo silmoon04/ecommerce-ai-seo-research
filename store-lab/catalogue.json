@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "market-day",
+    "brand": "Market Day",
+    "title": "Market Day stall ledger",
+    "price_gbp": 12,
+    "price_status": "proposed, unvalidated",
+    "format": "Digital download: offline HTML tool and printable event sheet",
+    "status": "prototype",
+    "path": "market-day/index.html",
+    "build": "public",
+    "demo": null
+  },
+  {
+    "slug": "museum-key",
+    "brand": "Museum Key",
+    "title": "The last transfer: a printable museum escape game",
+    "price_gbp": 12,
+    "price_status": "proposed, unvalidated",
+    "format": "Eight-page A4 game PDF and printable HTML; separate hints and answer guides",
+    "status": "prototype",
+    "path": "museum-key/index.html",
+    "build": "public",
+    "demo": null
+  },
+  {
+    "slug": "recipe-archive",
+    "brand": "Recipe Archive",
+    "title": "Five recipes, kept together",
+    "price_gbp": 49,
+    "price_status": "proposed, unvalidated",
+    "format": "Manual transcription service hypothesis with printable digital archive",
+    "status": "prototype",
+    "path": "recipe-archive/index.html",
+    "build": "public",
+    "demo": null
+  },
+  {
+    "slug": "quiz-host",
+    "brand": "Quiz Host",
+    "title": "Quiz Host offline score desk",
+    "price_gbp": 8,
+    "price_status": "proposed, unvalidated",
+    "format": "Digital download: offline score tool with projector and print views",
+    "status": "prototype",
+    "path": "quiz-host/index.html",
+    "build": "public",
+    "demo": null
+  },
+  {
+    "slug": "touchline",
+    "brand": "Touchline",
+    "title": "7v7 minute planner and touchline card",
+    "price_gbp": 6,
+    "price_status": "proposed, unvalidated",
+    "format": "Offline HTML tool with JSON and CSV exports and printable card",
+    "status": "prototype",
+    "path": "touchline/index.html",
+    "build": "public",
+    "demo": null
+  },
+  {
+    "slug": "fold-street",
+    "brand": "Fold Street",
+    "title": "Three modern street buildings: printable 28 mm terrain",
+    "price_gbp": 8,
+    "price_status": "proposed, unvalidated",
+    "format": "Five-page A4 PDF plans in low-ink and colour variants, printable SVG nets and two-page HTML assembly guide",
+    "status": "prototype",
+    "path": "fold-street/index.html",
+    "build": "public",
+    "demo": null
+  },
+  {
+    "slug": "route-story",
+    "brand": "Route Story",
+    "title": "Route Story A4 personal route print",
+    "price_gbp": 24.99,
+    "price_status": "proposed, unvalidated",
+    "format": "Proposed delivered unframed A4 physical print with a working local digital preview",
+    "status": "prototype",
+    "path": "route-story/index.html",
+    "build": "public",
+    "demo": null
+  },
+  {
+    "slug": "four-bed",
+    "brand": "Four Bed",
+    "title": "Four Bed offline vegetable plot planner",
+    "price_gbp": 12,
+    "price_status": "proposed, unvalidated",
+    "format": "Offline HTML tool, printable plan and CSV/JSON exports",
+    "status": "prototype",
+    "path": "four-bed/index.html",
+    "build": "public",
+    "demo": null
+  },
+  {
+    "slug": "swatch-repeat",
+    "brand": "Swatch Repeat",
+    "title": "Crochet gauge and repeat notebook",
+    "price_gbp": 8,
+    "price_status": "proposed, unvalidated",
+    "format": "Offline HTML calculator with printable project notes and text/JSON exports",
+    "status": "prototype",
+    "path": "swatch-repeat/index.html",
+    "build": "public",
+    "demo": null
+  },
+  {
+    "slug": "companion-print",
+    "brand": "Companion Print",
+    "title": "A familiar face, kept close",
+    "price_gbp": 24.99,
+    "price_status": "proposed, unvalidated",
+    "format": "A4 unframed physical print hypothesis with local customisation prototype",
+    "status": "prototype",
+    "path": "companion-print/index.html",
+    "build": "public",
+    "demo": null
+  }
+]

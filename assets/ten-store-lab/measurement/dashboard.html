@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Commerce cash ledger</title>
+  <style>
+    :root { color-scheme: light; --ink:#152b48; --paper:#f6f9fc; --line:#b6c6d9; --blue:#235899; --warning:#7c4500; --good:#195a40; }
+    * { box-sizing:border-box; } body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.6 "Segoe UI",Tahoma,sans-serif; }
+    main { max-width:1140px; margin:auto; padding:36px 24px 64px; } header { padding-bottom:20px; border-bottom:3px solid var(--ink); }
+    h1 { font-size:clamp(1.9rem,4vw,2.7rem); line-height:1.2; margin:0 0 12px; letter-spacing:-.025em; } h2 { font-size:1.3rem; margin:28px 0 10px; }
+    p { max-width:76ch; } .controls { display:flex; gap:16px; align-items:center; flex-wrap:wrap; margin:22px 0; } select,button,input { font:inherit; }
+    select,button { border:1px solid var(--blue); border-radius:4px; padding:8px 12px; background:white; color:var(--ink); } button { cursor:pointer; }
+    a { color:var(--blue); } :focus-visible { outline:3px solid #cc7800; outline-offset:3px; } #scope { font-weight:700; color:var(--blue); }
+    .summary { display:grid; grid-template-columns:minmax(250px,1.2fr) minmax(200px,1fr); gap:28px; padding:12px 0 18px; border-bottom:1px solid var(--line); }
+    dl { margin:0; display:grid; grid-template-columns:1fr auto; gap:6px 18px; font-variant-numeric:tabular-nums; } dd { margin:0; font-weight:600; } .balance { font-size:1.2rem; }
+    .table-wrap { overflow:auto; } table { width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap; } th:first-child,td:first-child { text-align:left; } thead { background:#e4edf6; } td.loss { color:#9b2626; }
+    #status { background:#e8f0f8; padding:10px 14px; border-left:4px solid var(--blue); } #error { color:#9b2626; } .note { color:#415b78; font-size:.95rem; }
+    @media(max-width:640px) { main { padding:24px 16px; } .summary { grid-template-columns:1fr; } th,td { padding:9px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header><h1>Commerce cash ledger</h1><p>Ten independent store concepts. Preparation costs £0. A future first pilot has a £200 cap; £75 of that is a reserve allocation.</p></header>
+    <div class="controls"><label for="dataset">Dataset</label><select id="dataset"><option value="actual">Actual: empty preparation ledger</option><option value="simulation">Simulation: duplicate and refund test</option></select><button id="load" type="button">Load dataset</button><label for="upload">Open aggregate JSON locally</label><input id="upload" type="file" accept=".json,application/json"></div>
+    <p id="scope" aria-live="polite">No dataset loaded</p><p id="status">Open this through a local web server or choose an exported summary.json file.</p><p id="error" role="alert"></p>
+    <section class="summary" aria-label="Cash and commercial totals"><dl id="totals"></dl><dl id="budget"></dl></section>
+    <h2>Store aggregates</h2><div class="table-wrap"><table><thead><tr><th scope="col">Store</th><th scope="col">Paid orders</th><th scope="col">Receipts</th><th scope="col">Refunds</th><th scope="col">Fees</th><th scope="col">Contribution</th><th scope="col">After owner time</th></tr></thead><tbody id="stores"></tbody></table></div>
+    <p class="note">Contribution excludes tax collected and includes recorded costs. Unrecorded recurring costs, tax adjustments and future refunds remain unknown. Attribution is unknown; production tracking is not configured or verified.</p>
+    <p class="note">This page reads aggregate exports. Opening a file uses your browser only. It does not upload it, log interactions, set analytics cookies or access order records.</p>
+    <p><a href="exports/model/scenarios.json">View separate illustrative model assumptions</a> · <a href="exports/actual/stores.csv">Download current zero-state CSV</a></p>
+  </main>
+  <script>
+    'use strict';
+    const stores = ['market-day','museum-key','recipe-archive','quiz-host','touchline','fold-street','route-story','four-bed','swatch-repeat','companion-print','shared'];
+    const allowed = ['schema_version','scope','currency','attribution','production_tracking','latest_transaction_utc','latest_transaction_london','stores','totals','budget'];
+    const moneyFields = ['gross_items_gbp','discounts_gbp','shipping_received_gbp','tax_received_gbp','refunds_gbp','tax_refunded_gbp','payment_fees_gbp','costs_gbp','cash_costs_gbp','payables_gbp','owner_labour_gbp','customer_receipts_gbp','net_tax_liability_gbp','net_sales_ex_tax_gbp','contribution_gbp','after_owner_labour_gbp','cash_change_gbp'];
+    const numeric = value => typeof value === 'string' && /^-?(0|[1-9][0-9]*)\.[0-9]{2}$/.test(value);
+    const gbp = value => new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP'}).format(Number(value));
+    function validate(data) {
+      if (!data || Object.keys(data).some(key=>!allowed.includes(key)) || data.schema_version!==1 || !['actual','simulation'].includes(data.scope) || data.currency!=='GBP' || !Array.isArray(data.stores) || data.stores.length!==11) throw new Error('Choose aggregate summary.json from ledger.py; raw ledgers and model files cannot be opened here.');
+      const seen = new Set();
+      for(const row of data.stores) {
+        if(!row || !stores.includes(row.store) || seen.has(row.store) || Object.keys(row).some(key=>!['store','paid_orders','units_sold',...moneyFields].includes(key)) || !Number.isInteger(row.paid_orders) || row.paid_orders<0 || !Number.isInteger(row.units_sold) || row.units_sold<0 || moneyFields.some(key=>!numeric(row[key]))) throw new Error('Invalid aggregate store row.');
+        seen.add(row.store);
+      }
+      if(!data.totals || Object.keys(data.totals).some(key=>!['paid_orders','units_sold',...moneyFields,'cash_balance_gbp','cash_after_liabilities_gbp'].includes(key)) || [...moneyFields,'cash_balance_gbp','cash_after_liabilities_gbp'].some(key=>!numeric(data.totals[key])) || !['paid_orders','units_sold'].every(key=>Number.isInteger(data.totals[key])&&data.totals[key]>=0)) throw new Error('Invalid aggregate totals.');
+      const budgetKeys=['phase','allowed','reasons','authorized_gbp','actual_or_proposed_expenses_gbp','current_paid_expenses_gbp','planned_pilot_envelopes_gbp','protected_cash_gbp','cash_after_liabilities_and_proposal_gbp','reserve_is_expense','pilot_funding_verified'];
+      if(!data.budget || Object.keys(data.budget).some(key=>!budgetKeys.includes(key)) || !['preparation','pilot'].includes(data.budget.phase) || !['authorized_gbp','actual_or_proposed_expenses_gbp','current_paid_expenses_gbp','protected_cash_gbp','cash_after_liabilities_and_proposal_gbp'].every(key=>numeric(data.budget[key])) || typeof data.budget.allowed!=='boolean' || data.budget.reserve_is_expense!==false || typeof data.budget.pilot_funding_verified!=='boolean') throw new Error('Invalid budget summary.');
+      const reasons=['preparation_spend_forbidden','pilot_cap_exceeded','platform_envelope_exceeded','validation_envelope_exceeded','payment_envelope_exceeded','traffic_envelope_exceeded','reserve_release_required','protected_cash_shortfall','insufficient_cash'];
+      const envelopes=['platform','validation','payment','traffic','reserve'];
+      if(!Array.isArray(data.budget.reasons)||data.budget.reasons.some(reason=>!reasons.includes(reason))||!data.budget.planned_pilot_envelopes_gbp||Object.keys(data.budget.planned_pilot_envelopes_gbp).some(key=>!envelopes.includes(key))||!envelopes.every(key=>numeric(data.budget.planned_pilot_envelopes_gbp[key])))throw new Error('Invalid budget details.');
+      if(data.attribution!=='unknown'||data.production_tracking!=='not_configured_or_verified')throw new Error('Unsupported measurement status.');
+      if(data.latest_transaction_utc!==null && (typeof data.latest_transaction_utc!=='string'||!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?Z$/.test(data.latest_transaction_utc)))throw new Error('Invalid transaction timestamp.');
+      if(data.latest_transaction_london!==null && (typeof data.latest_transaction_london!=='string'||!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?\+0[01]:00$/.test(data.latest_transaction_london)))throw new Error('Invalid local timestamp.');
+    }
+    function definitions(target, pairs) {
+      target.replaceChildren();
+      for(const [label,value] of pairs) { const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value;target.append(dt,dd); }
+    }
+    function render(data) {
+      validate(data);
+      document.querySelector('#error').textContent='';
+      document.querySelector('#scope').textContent=data.scope==='simulation'?'Simulation only: synthetic sales and refunds':'Actual ledger: recorded totals';
+      document.querySelector('#status').textContent=data.scope==='simulation'?'These records test accounting and do not establish demand or revenue.':data.totals.paid_orders===0?'No sales have been imported. Actual customers, conversion rates and attribution are unknown.':'Aggregate totals from the selected file. Source records stay private.';
+      definitions(document.querySelector('#totals'),[['Customer receipts',gbp(data.totals.customer_receipts_gbp)],['Refunds',gbp(data.totals.refunds_gbp)],['Contribution',gbp(data.totals.contribution_gbp)],['After owner time',gbp(data.totals.after_owner_labour_gbp)],['Cash balance',gbp(data.totals.cash_balance_gbp)],['Cash after recorded liabilities',gbp(data.totals.cash_after_liabilities_gbp)]]);
+      definitions(document.querySelector('#budget'),[['Phase',data.budget.phase],['Authorised spending',gbp(data.budget.authorized_gbp)],['Recorded cash expenses',gbp(data.budget.current_paid_expenses_gbp)],['Protected cash',gbp(data.budget.protected_cash_gbp)],['Budget check',data.budget.allowed?'Within current limits':'Blocked: check private ledger']]);
+      const table=document.querySelector('#stores');table.replaceChildren();
+      for(const row of data.stores) { const tr=document.createElement('tr');for(const key of ['store','paid_orders','customer_receipts_gbp','refunds_gbp','payment_fees_gbp','contribution_gbp','after_owner_labour_gbp']) { const td=document.createElement('td');td.textContent=key.endsWith('_gbp')?gbp(row[key]):row[key];if(key.endsWith('_gbp')&&Number(row[key])<0)td.className='loss';tr.append(td); } table.append(tr); }
+    }
+    async function load() { try { const response=await fetch('exports/'+document.querySelector('#dataset').value+'/summary.json',{credentials:'omit'});if(!response.ok)throw new Error('Aggregate export unavailable. Open a summary.json file locally.');render(await response.json()); }catch(error){document.querySelector('#error').textContent=error.message;} }
+    document.querySelector('#load').addEventListener('click',load);
+    document.querySelector('#upload').addEventListener('change',async event=>{try{const file=event.target.files[0];if(!file)return;if(file.size>100000)throw new Error('Aggregate file is too large.');let data;try{data=JSON.parse(await file.text());}catch(_){throw new Error('File could not be parsed. Choose an aggregate summary.json export.');}render(data);}catch(error){document.querySelector('#error').textContent=error.message;}});
+    load();
+  </script>
+</body>
+</html>
