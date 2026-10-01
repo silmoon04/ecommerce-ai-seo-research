@@ -296,7 +296,7 @@ Review of implementation repairs:
 
 The 09:00 BST target on 1 October 2026 is a reviewable preparation handover. Paid readiness or sales by that time are not established.
 
-The deployment record reports 3 unpublished themes uploaded out of ten; 0 are confirmed against the latest source. Recorded at 2026-10-01T01:47:11.146698+00:00. Account creation, native products and checkout remain separate checks.
+The deployment record reports 3 unpublished themes uploaded out of ten; 0 are confirmed against the latest source. Recorded at 2026-10-01T02:04:46.888155+00:00. Account creation, native products and checkout remain separate checks.
 
 ## Development-store checkout rehearsal
 
