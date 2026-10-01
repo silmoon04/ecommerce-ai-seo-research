@@ -290,13 +290,39 @@ No product is ready for a paid launch. Four Bed is dropped from this paid shortl
 
 Review of implementation repairs:
 
-- Five recorded implementation findings repaired and independently rechecked. Seven focused regressions and original failure cases pass. Actual dialog interactions belong to the separate browser review.
+- All five findings closed against frozen versions after seven focused regression tests and independent reproductions. No residual critical defect found in that bounded review.
 - shopify-launch/qa/logic-review-a.md
 - Five reported defects repaired and independently rechecked in the reviewed report.
 
 The 09:00 BST target on 1 October 2026 is a reviewable preparation handover. Paid readiness or sales by that time are not established.
 
-The deployment record reports 3 unpublished themes uploaded out of ten; 0 are confirmed against the latest source. Recorded at 2026-10-01T02:04:46.888155+00:00. Account creation, native products and checkout remain separate checks.
+## Native theme progress
+
+Snapshot 2026-10-01T03:20:53.2964530Z: 8 native unpublished themes are recorded, including newly installed Dawn themes. There are 3 confirmed earlier full CLI uploads, 0 latest complete factory-tree uploads, and 0 native home/product updates verified by fresh persisted readback. Installed native drafts, full upload records and manual file edits measure different work.
+
+The frozen local factory uses Dawn 15.4.1. Prepared custom variants retain each native base. The native edits are provisional: editor text matching a pasted file and an earlier save timestamp do not prove the current file persisted. Fresh reopening with clean saved-state confirmation remains pending. No full remote-tree hash is established.
+
+- Market Day: Dawn 15.4.1; native edits provisional; fresh persisted readback pending; 0 files verified by fresh persisted readback. No full remote-tree hash is asserted.
+- Quiz Host: Dawn 16.0.0; native edits provisional; fresh persisted readback pending; 0 files verified by fresh persisted readback. No full remote-tree hash is asserted.
+- Touchline: Dawn 16.0.0; native edits provisional; fresh persisted readback pending; 0 files verified by fresh persisted readback. No full remote-tree hash is asserted.
+- Four Bed: Dawn 16.0.0; base theme recorded; custom update not complete; 0 files verified by fresh persisted readback. No full remote-tree hash is asserted.
+- Recipe Archive: Dawn 15.4.1; native edits provisional; fresh persisted readback pending; 0 files verified by fresh persisted readback. No full remote-tree hash is asserted.
+- Fold Street: Dawn 16.0.0; base theme recorded; custom update not complete; 0 files verified by fresh persisted readback. No full remote-tree hash is asserted.
+- Route Story: Dawn 16.0.0; base theme recorded; custom update not complete; 0 files verified by fresh persisted readback. No full remote-tree hash is asserted.
+- Museum Key: Dawn 15.4.1; native edits provisional; fresh persisted readback pending; 0 files verified by fresh persisted readback. No full remote-tree hash is asserted.
+
+The free Theme Access app is verified installed for Market Day. Credential issuance remains unverified and blocked by the extension interface; no credential or current factory CLI push is established.
+
+Factory and measurement checks:
+
+- The revised image-crop factory build passed all ten fresh Theme Checks against stable source hashes. Native deployment and runtime verification remain pending.
+- The full-page screenshot was too small in native review. The completed factory repair uses a legible full-width top crop and full-image link; per-store native runtime/mobile checks remain pending.
+- Prepared and offline-verified: 20 ledger, 26 payout and 10 JavaScript checks passed. Actual datasets containing paid orders block spending with settlement_reconciliation_required until a verified settlement integration exists. The dashboard independently blocks stale allowed aggregates and labels calculated cash as assuming settlement. Empty actual data and export hashes are unchanged. This is not production, bank-balance or funding verification.
+
+
+## Offline payout reconciliation
+
+A separate offline module can reconcile selected GBP captures, refunds, fees, chargebacks and payout components against bank confirmations. It separates processor activity from confirmed bank transfers and unsettled amounts. It does not calculate profit or a whole-account bank balance, prove funding, or replace the existing aggregate dashboard. Actual paid-order spending checks remain blocked until settlement reconciliation is integrated; the aggregate view also blocks a spending indication for actual paid-order datasets. No real payout or bank record has been imported in the current preparation dataset. Actual paid orders and recorded spending remain zero; production measurement remains unverified.
 
 ## Development-store checkout rehearsal
 
